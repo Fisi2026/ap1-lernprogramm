@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► Schritt 14 auf den anderen zwei PCs (frischer Klon an denselben Pfad; Weiche entfernt dort `origin`) · 16.4 Cloud-Probe bei erster Cloud-Arbeit · `../Training_erstcommit` loeschen (Nutzer) · Minuten-Messung (`gh auth refresh -h github.com -s user`) · Abschnitt-4 Nr. 31/10 Kommentare (optional) · Bump 2.13.2 (zurueckgestellt) · Sichtpruefungen „Kann ich schon“ und Vorlesen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+**Damit offen:** ►► N41 S3: Secret Scanning + Push-Schutz einschalten ([N] oder per `gh api`, Nutzer-OK), CodeQL, Scorecard · Schritt 14 auf den anderen zwei PCs · 16.4 Cloud-Probe · Minuten nachmessen (siehe 285) · `../Training_erstcommit` loeschen (Nutzer) · Bump 2.13.2 (zurueckgestellt) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
 
 ## 4. Die harten Grenzen der Bruecke
 

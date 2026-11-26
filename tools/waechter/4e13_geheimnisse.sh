@@ -2,8 +2,11 @@
 #   (SC2168: gesourct INNERHALB von waechter() in check.sh - `local` gilt dort; N45 W1, BUILD_LOG 155)
 # Teil von check.sh - wird dort ueber `waechter` GESOURCT, nie allein aufgerufen.
   # 4e13) KEIN GEHEIMNIS IM BAUM (neu 28.09.2026, Neupruefung NB2)
-  # ⚠️ ANLASS: das Repo ist privat, GitHub Secret Scanning und Code Scanning sind aus (API 404/403,
+  # ⚠️ ANLASS: das damals private Repo hatte kein GitHub Secret Scanning und kein Code Scanning (API 404/403,
   #    gemessen 28.09.) - bis dahin suchte NIEMAND nach Tokens. `.git/config` trug frueher ein PAT.
+  #    Seit 26.11.2026 ist das Repo oeffentlich (N40 V3); Secret Scanning ist dort noch AUS (gemessen 26.11.,
+  #    `gh api repos/… --jq .security_and_analysis`, N41 S3). Dieser Waechter bleibt auch danach: er sieht
+  #    ein Token schon VOR dem Commit.
   # ►► Gesucht wird in allen verfolgten UND neuen, nicht ignorierten Dateien (`--untracked`), damit
   #    ein Token schon VOR dem Commit auffaellt. Muster: GitHub (klassisch + fein), AWS-Schluessel,
   #    private Schluessel, Anthropic, Slack.

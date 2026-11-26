@@ -403,8 +403,8 @@ jobs:
       # N41 S4 (18.10.2026): Herkunftsbescheinigung (SLSA-Provenance) fuer genau das, was ausgeliefert wird:
       # den Inhalt von v2/ (assets.directory in wrangler.jsonc). Nach dem Deploy und nur, wenn deployt wurde.
       # SHA = v4.2.2, gemessen per git ls-remote. Pruefen: DEPLOY.md, Abschnitt „Herkunft pruefen".
-      # Nur im OEFFENTLICHEN Repo (nach N40 V3): in privaten Repos braucht die Bescheinigung laut Doku
-      # GitHub Enterprise Cloud (angenommen, BUILD_LOG 220) - der Schritt waere sonst rot und mit ihm der Deploy-Job.
+      # Nur im OEFFENTLICHEN Repo (seit 26.11.2026, gemessen: Lauf 45801828839 success): in privaten Repos braucht
+      # die Bescheinigung laut Doku GitHub Enterprise Cloud (BUILD_LOG 220) - der Schritt waere sonst rot und mit ihm der Deploy-Job.
       - name: Herkunft von v2/ bescheinigen
         if: env.CLOUDFLARE_API_TOKEN != '' && !github.event.repository.private
         uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2

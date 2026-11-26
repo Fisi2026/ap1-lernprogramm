@@ -370,7 +370,7 @@ Suchbegriffe: `Fisi2026`, `ap1-lernprogramm`, `fisi2026lernapp`, `github.com/`, 
 | 41 | Pool/Set/Lehrtext/Doku mit Kennzeichnung der K3-Vorlage (neu 25.11.) | Kennzeichnung | **Ä** vor Schritt 6 – ✅ erledigt 26.11. (Schritt 4a, O10) |
 
 **Zahl der Fundstellen:** 41 Zeilen in der Tabelle (**Ä** 8: Nr. 1, 2, 3, 4, 8, 31, 33, 41 · **P** 13 · **–** 20; Stand 25.11., Zeilen 10–12 neu gezählt, 40–41 neu). Keine Datei im App-Code (`neu/src`) und kein Test setzt den Repo-Namen voraus.
-**✅ Umgesetzt 26.11.2026 (Schritt 18, BUILD_LOG 285):** **Ä** Nr. 1, 2, 3, 4, 8, 33 (41 schon in Schritt 4a). Offen bleibt nur Nr. 31 (Kommentar in `4e13_geheimnisse.sh`, optional) und der Kommentar „(nach N40 V3)“ zu Nr. 10.
+**✅ Umgesetzt 26.11.2026 (Schritt 18, BUILD_LOG 285):** **Ä** Nr. 1, 2, 3, 4, 8, 33 (41 schon in Schritt 4a). Nr. 31 und der Kommentar zu Nr. 10 folgten am selben Tag (BUILD_LOG 286).
 
 ## 5. Ergebnisse der Generalprobe (18.10.2026, Stand `1d523d0`, *gemessen*)
 **Nachtrag Fassung V3 (18.10.2026, Stand `14fb4f1` + Probe-Änderung, *gemessen*):** `--probe` jetzt **12/12** (2 grüne, 10 rote Fälle) – neu der Fall `settings_ohne_ignore_ausnahme`: in der Kopie fehlt die `.gitignore`-Zeile `!.claude/settings.json`, `git add -A` lässt die Datei still weg, die Probe meldet „Einstellungen: …". Der Normallauf zeigt zusätzlich „.claude/settings.json im Baum: ja"; Baum **881 Dateien, 16,4 MB, größte 2,7 MB**, Pack 5,32 MiB, Wächter 4e14 grün. Die unten stehenden Zahlen (870 Dateien, 11/11) sind der Stand vom Entwurf.
