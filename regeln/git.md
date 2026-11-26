@@ -85,7 +85,8 @@
 ⛔ **Beleg:** `WebFetch …/app-sw.js` lieferte nach dem Push noch den alten Cache-Namen (das Werkzeug puffert 15 min je URL);
 erst `…/app-sw.js?v=<kurz-sha>` zeigte den neuen Stand. `gh release create` aus der Cloud-Seite: HTTP 403.
 ►► **Live-Beleg immer mit `?v=<commit>`** und gegen `grep -o 'var CACHE = "[^"]*"' v2/app-sw.js` vergleichen ·
-`tools/werkzeug_release.sh` nur ueber die Training Shell.
+`tools/werkzeug_release.sh` nur ueber die Training Shell (seit 26.11.2026 startet es den Workflow `werkzeuge.yml`, der in
+Actions baut und signiert – BUILD_LOG 292).
 
 ### 18.10.2026 – Actions-Minuten: ein Push = voller CI-Lauf (BUILD_LOG 226)
 ⛔ **Beleg:** privates Repo, 2.000 min/Monat; je Push auf main 12 Jobs ≈ 17 abgerechnete min (jeder Job auf volle Minuten aufgerundet,

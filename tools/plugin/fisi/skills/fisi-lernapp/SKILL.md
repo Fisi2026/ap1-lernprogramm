@@ -274,8 +274,9 @@ Gilt für alle drei `fisi`-Skills. Nie im Konto von Hand ändern.
 - [ ] tools/plugin/fisi/skills/<skill>/SKILL.md ändern
 - [ ] Version in tools/plugin/fisi/.claude-plugin/plugin.json erhöhen
 - [ ] python3 tools/plugin/packen.py; bash check.sh doku; Commit, Push
-- [ ] bash tools/werkzeug_release.sh  (baut .plugin und .mcpb, hängt beide ans GitHub-Release) – NUR über die
-      Training Shell: die Cloud-Seite darf keine Releases anlegen (HTTP 403, gemessen 14.10.)
+- [ ] bash tools/werkzeug_release.sh  (startet den Workflow werkzeuge.yml: baut .plugin und .mcpb in GitHub Actions,
+      bescheinigt die Herkunft, hängt alles samt <tag>.sigstore.json ans Release; seit 26.11., BUILD_LOG 292) – über
+      die Training Shell; danach `bash tools/werkzeug_release.sh --pruefe` = „ok … (signiert)“
 - [ ] .plugin per SendUserFile an den Nutzer; er installiert sie in beiden Konten
 - [ ] Cloud-Seite: sha1sum gegen die Startausgabe; tools/plugin/installiert.txt nachziehen
 ```

@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.13.2
+
+- Getippte Antworten: Ein Leerzeichen vor dem Satzzeichen am Ende (z. B. „Router .“) macht eine richtige Antwort nicht mehr falsch.
+
 ## v2.13.1
 
 - „Kann ich schon“ gibt es jetzt auch in der Klausurvorbereitung. Hast du dort alle Fragen deiner Auswahl übersprungen, zeigt die App, wo du sie zurückholst.

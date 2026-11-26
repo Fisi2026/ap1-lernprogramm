@@ -16,12 +16,12 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 2. Stand (aus START_PROMPT.md gezogen)
 
-**APP_VERSION 2.13.1 · app-sw ap1-app-2.13.1 · Pool 1487 Fragen + 9 Fälle · 7 von 7 Suiten GRÜN**
-**LIVE beim Lerner: v2.13.1 · committet auf main: v2.13.1 · PUSH DURCH**
+**APP_VERSION 2.13.2 · app-sw ap1-app-2.13.2 · Pool 1487 Fragen + 9 Fälle · 7 von 7 Suiten GRÜN**
+**LIVE beim Lerner: v2.13.2 · committet auf main: v2.13.2 · PUSH DURCH**
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► Bump 2.13.2 mit CHANGELOG fuer diesen Fix (Nutzer) · Schritt 14 auf den anderen zwei PCs · 16.4 Cloud-Probe · `../Training_erstcommit` loeschen (Nutzer) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+**Damit offen:** ►► Nutzer installiert fisi 1.3.16 in gmail UND web.de, danach `tools/plugin/installiert.txt` · Schritt 14 auf den anderen zwei PCs · 16.4 Cloud-Probe · `../Training_erstcommit` loeschen (Nutzer) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
 
 ## 4. Die harten Grenzen der Bruecke
 

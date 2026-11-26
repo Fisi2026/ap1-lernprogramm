@@ -67,8 +67,8 @@
 # ============
 #
 # ══ DER STAND STEHT IN GENAU DIESEN ZWEI ZEILEN – NIRGENDWO SONST IN DIESER DATEI. ══
-# **APP_VERSION 2.13.1 · app-sw ap1-app-2.13.1 · Pool 1487 Fragen + 9 Fälle · 7 von 7 Suiten GRÜN**
-# **LIVE beim Lerner: v2.13.1 · committet auf main: v2.13.1 · PUSH DURCH**
+# **APP_VERSION 2.13.2 · app-sw ap1-app-2.13.2 · Pool 1487 Fragen + 9 Fälle · 7 von 7 Suiten GRÜN**
+# **LIVE beim Lerner: v2.13.2 · committet auf main: v2.13.2 · PUSH DURCH**
 # ►►► **TRAINING SHELL, `device_bash`, 60-s- und 8190-Zeichen-Deckel, Verknüpfung je Chat:** `regeln/bruecke.md`.
 #   ►► https://ap1-lernprogramm.fisi2026lernapp.workers.dev · Stand-Guard, Tag als Live-Beleg, Bump-Regel: `regeln/git.md`.
 # ►►► **DER NEUBAU `neu/` (React+TS) IST DIE APP** (seit N29, 24.09.; gerechnet wird seit N34 in `neu/src/kern`) – `SCHIENE_NEU.md`, Plan+Entscheide `PLAN_NEUBAU.md`; WIE gebaut, geprüft und ausgeliefert wird: ARBEITSANLEITUNG unter N25 in `PLAN_NEUBAU.md`. Die zwei Standzeilen oben gelten IHM; die alte App liegt nur als Referenz in `referenz/`. **Der nächste Griff steht NUR in der Schlusszeile „Damit offen" des letzten BUILD_LOG-Eintrags.**
