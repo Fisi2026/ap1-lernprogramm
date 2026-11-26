@@ -1,0 +1,38 @@
+name: Scorecard
+
+# N41 S3 (26.11.2026, BUILD_LOG 289): OpenSSF Scorecard woechentlich, Ergebnis als Code-Scanning-Bericht
+# (Reiter Security) und oeffentlich (publish_results, Abzeichen-API von scorecard.dev).
+# ⚠️ Die Repo-Einstellung erlaubt nur GitHub-eigene Actions; `ossf/scorecard-action` steht darum als Muster
+#    `ossf/scorecard-action@*` in der Erlaubt-Liste (selected-actions, patterns_allowed). Die SHA-Pflicht
+#    (`sha_pinning_required`) gilt weiter – das Muster mit `*` ueberlebt Dependabot-Updates des SHA.
+# ⚠️ publish_results verlangt: keine Schreibrechte auf Workflow-Ebene, nur die Actions unten im Job.
+on:
+  schedule:
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  analyse:
+    name: Scorecard-Analyse
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write   # SARIF in Code Scanning hochladen
+      id-token: write          # publish_results: Ergebnis per OIDC signiert an scorecard.dev
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Scorecard
+        uses: ossf/scorecard-action@23f22cd43608bae7a1f1fa2603d7314dee9538a5 # v2.6.0
+        with:
+          results_file: scorecard.sarif
+          results_format: sarif
+          publish_results: true
+      - name: SARIF hochladen
+        uses: github/codeql-action/upload-sarif@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        with:
+          sarif_file: scorecard.sarif
