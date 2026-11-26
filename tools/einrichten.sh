@@ -85,12 +85,17 @@ else
   if (cd .tooling && npm ci --no-fund --no-audit --loglevel=error) >/dev/null 2>&1; then gesetzt ".tooling" "jsdom, ajv, axe-core nach Lockfile"; else offen ".tooling" "npm ci scheiterte"; fi
 fi
 # Inhalt statt Zeitstempel (15.10.2026): git pull machte das Lockfile "neuer" ohne Aenderung -> Fehlalarm.
-if NM_GRUND=$(node tools/lock_passt.js neu 2>&1); then
-  ok "neu/node_modules" "passt zum Lockfile (Inhalt)"
-elif [ $NUR_PRUEFEN = 1 ]; then offen "neu/node_modules" "${NM_GRUND:-weicht ab} - bash tools/einrichten.sh"
-else
-  if (cd neu && npm ci --no-fund --no-audit --loglevel=error >/dev/null 2>&1); then gesetzt "neu/node_modules" "npm ci nach Lockfile"; else offen "neu/node_modules" "npm ci scheiterte"; fi
-fi
+# Wurzel dazu (26.11.2026, BUILD_LOG 286/287): im frischen Klon fehlte ./node_modules (playwright-core fuer die
+# Qualitaets-Ratsche, wrangler) - check.sh war rot, --pruefen meldete trotzdem "nichts offen".
+for NM_DIR in . neu; do
+  NM_NAME="$([ "$NM_DIR" = . ] && echo "Wurzel/node_modules" || echo "$NM_DIR/node_modules")"
+  if NM_GRUND=$(node tools/lock_passt.js "$NM_DIR" 2>&1); then
+    ok "$NM_NAME" "passt zum Lockfile (Inhalt)"
+  elif [ $NUR_PRUEFEN = 1 ]; then offen "$NM_NAME" "${NM_GRUND:-weicht ab} - bash tools/einrichten.sh"
+  else
+    if (cd "$NM_DIR" && npm ci --no-fund --no-audit --loglevel=error >/dev/null 2>&1); then gesetzt "$NM_NAME" "npm ci nach Lockfile"; else offen "$NM_NAME" "npm ci scheiterte"; fi
+  fi
+done
 
 # ---- 5b. Messwerkzeuge fuer tools/qualitaet_ratsche.py (N43 M1, 10.10.2026) ----
 # Geprueft wird die FASSUNG, nicht nur die Anwesenheit: eine andere ruff-Fassung zaehlt anders.
