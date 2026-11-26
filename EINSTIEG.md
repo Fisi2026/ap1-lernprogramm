@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► Nutzer: fisi 1.3.17 in BEIDEN Konten installieren (danach `tools/plugin/installiert.txt`) · Advisor-Probe: Nutzer tippt in einem Sonnet-Chat `/advisor opus`, Hinweiszeile + `/usage` vorher/nachher ablesen, danach `/advisor off` · Schritt 14 auf den anderen zwei PCs · `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+**Damit offen:** ►► web.de: fisi 1.3.17 installieren (Nutzer; web.de stand noch auf 1.3.15), danach `tools/plugin/installiert.txt` · erste Sonnet-Etappe mit `/advisor opus` messen (Plan 299) · Schritt 14 auf den anderen zwei PCs · `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
 
 ## 4. Die harten Grenzen der Bruecke
 
