@@ -1,0 +1,188 @@
+[
+  {
+    "id": "M03-930",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "OSI-Modell & Protokolle",
+    "gebiet": "A3",
+    "typ": "mtf",
+    "schwierigkeit": 2,
+    "frage": "Bewerte die folgenden Aussagen zum OSI-Modell und zu Netzwerkprotokollen jeweils als wahr oder falsch.",
+    "verweis": "Modul 03, Abschnitt 3.2 – Netzwerkprotokolle und OSI-Modell",
+    "erklaerungKurz": "Das OSI-Modell hat 7 Schichten; IP liegt auf Schicht 3 (Vermittlung). TCP ist verbindungsorientiert und bestätigt Empfang – verbindungslos ist UDP.",
+    "erklaerungLang": "Die drei richtigen Aussagen sind Grundwissen, die falsche verwechselt TCP mit UDP – die häufigste Verwechslung im ganzen Themenfeld.\n• Sieben Schichten: 1 Bitübertragung, 2 Sicherung, 3 Vermittlung, 4 Transport, 5 Sitzung, 6 Darstellung, 7 Anwendung. Merkhilfe von unten: Please Do Not Throw Salami Pizza Away.\n• IP auf Schicht 3: Die Vermittlungsschicht ist für Adressierung und Wegewahl zwischen Netzen zuständig – genau das leistet IP. Router arbeiten deshalb auf Schicht 3, Switches auf Schicht 2.\n• TCP ist verbindungsORIENTIERT: Es baut über den Drei-Wege-Handshake eine Verbindung auf, numeriert Segmente, bestätigt Empfang und überträgt Verlorenes erneut. Verbindungslos und ohne Bestätigung ist UDP – dafür schneller und ohne Verzögerung durch Wiederholungen.\n• Schicht 1 überträgt die Bits physisch: Spannungspegel im Kupferkabel, Lichtimpulse in der Faser, Funksignale im WLAN. Sie kennt keine Adressen, nur Signale.\nMerke: TCP bestätigt, UDP feuert und vergisst – wer das trennt, hat die halbe Transportschicht verstanden.",
+    "aussagen": [
+      {
+        "text": "Das OSI-Referenzmodell besteht aus sieben Schichten.",
+        "wahr": true
+      },
+      {
+        "text": "Das Internet Protocol (IP) arbeitet auf der Vermittlungsschicht (Schicht 3).",
+        "wahr": true
+      },
+      {
+        "text": "TCP ist ein verbindungsloses Protokoll, das keine Empfangsbestätigungen versendet.",
+        "wahr": false
+      },
+      {
+        "text": "Die Bitübertragungsschicht (Schicht 1) ist für die physische Übertragung der Bits über das Medium zuständig.",
+        "wahr": true
+      }
+    ]
+  },
+  {
+    "id": "M03-931",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mtf",
+    "schwierigkeit": 2,
+    "frage": "Bewerte die folgenden Aussagen zu Hardware-Komponenten jeweils als wahr oder falsch.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Hardwareprodukte und Kenngrößen",
+    "erklaerungKurz": "SSDs haben keine mechanischen Teile, RAM ist flüchtig. Die abgegebene Leistung eines Netzteils wird in Watt (W) angegeben, nicht in Volt. 64-Bit-CPUs adressieren weit mehr als 4 GiB.",
+    "erklaerungLang": "Drei Aussagen beschreiben Bauart und Verhalten korrekt, die falsche verwechselt eine Einheit.\n• SSD ohne mechanische Teile: Sie speichert in Flash-Zellen. Das macht sie stoßfest, lautlos und schnell im Zugriff, weil kein Schreib-Lese-Kopf positioniert werden muss. Die HDD hat rotierende Scheiben und bewegliche Köpfe.\n• RAM ist flüchtig: Ohne Strom verliert er seinen Inhalt. Deshalb muss vor dem Ausschalten alles Wichtige auf einen nichtflüchtigen Datenträger geschrieben werden.\n• Netzteilleistung in WATT, nicht Volt: Volt ist die Spannung, Ampere der Strom, Watt das Produkt aus beiden – und nur Watt beschreibt, wie viel Leistung das Netzteil abgeben kann. Ein 650-W-Netzteil liefert 650 Watt, nicht 650 Volt.\n• 64-Bit-CPU: Die 4-GiB-Grenze ist eine 32-Bit-Grenze (2 hoch 32 Byte). Mit 64 Bit adressierbaren Speicherstellen liegt die theoretische Grenze bei 16 Exbibyte, praktisch begrenzt durch Chipsatz und Betriebssystem.\nMerke: Volt ist Spannung, Watt ist Leistung – bei Netzteilen zählt Watt.",
+    "aussagen": [
+      {
+        "text": "Eine SSD besitzt im Gegensatz zur klassischen HDD keine beweglichen mechanischen Teile.",
+        "wahr": true
+      },
+      {
+        "text": "Der Arbeitsspeicher (RAM) ist ein flüchtiger Speicher, dessen Inhalt beim Ausschalten verloren geht.",
+        "wahr": true
+      },
+      {
+        "text": "Die abgegebene Leistung eines Netzteils wird üblicherweise in Volt (V) angegeben.",
+        "wahr": false
+      },
+      {
+        "text": "Ein 64-Bit-Prozessor kann mehr als 4 GiB Arbeitsspeicher adressieren.",
+        "wahr": true
+      }
+    ]
+  },
+  {
+    "id": "M04-920",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mtf",
+    "schwierigkeit": 2,
+    "frage": "Bewerte die folgenden Aussagen zu DHCP und DNS jeweils als wahr oder falsch.",
+    "erklaerungKurz": "DHCP vergibt IP-Adresse, Subnetzmaske und Gateway; DNS löst Namen zu IP-Adressen auf (Port 53). Ein DHCP-Lease hat eine begrenzte Laufzeit und wird erneuert.",
+    "erklaerungLang": "Die drei richtigen Aussagen beschreiben Aufgabe und Port der beiden Dienste, die falsche behauptet ein unbefristetes Lease.\n• DHCP vergibt automatisch IP-Adresse, Subnetzmaske, Standardgateway und meist auch die DNS-Server. Ohne DHCP müsste jedes Gerät von Hand konfiguriert werden.\n• DNS löst Namen zu IP-Adressen auf – ohne diesen Dienst müsste man Adressen statt Namen eintippen. Standard-Port ist 53, für Anfragen üblicherweise über UDP, für Zonentransfers und große Antworten über TCP.\n• Ein DHCP-Lease ist immer BEFRISTET. Der Client erneuert es üblicherweise nach der Hälfte der Laufzeit (T1) und versucht es spätestens bei 87,5 Prozent bei einem beliebigen Server (T2). Der Grund: Adressen von Geräten, die das Netz verlassen haben, müssen zurück in den Pool.\n• Praktische Folge: Ein zu langes Lease lässt den Pool volllaufen, ein zu kurzes erzeugt unnötigen Broadcast-Verkehr.\nMerke: DHCP verleiht Adressen auf Zeit, DNS übersetzt Namen – und 53 ist der Port, den man auswendig kennt.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP-DORA-Ablauf und Lease-Management",
+    "aussagen": [
+      {
+        "text": "DHCP weist Clients automatisch IP-Adresse, Subnetzmaske und Gateway zu.",
+        "wahr": true
+      },
+      {
+        "text": "DNS löst Domainnamen in zugehörige IP-Adressen auf.",
+        "wahr": true
+      },
+      {
+        "text": "Ein per DHCP vergebenes Lease ist zeitlich unbegrenzt gültig und muss nie erneuert werden.",
+        "wahr": false
+      },
+      {
+        "text": "Der Standard-Port des DNS-Dienstes ist 53.",
+        "wahr": true
+      }
+    ]
+  },
+  {
+    "id": "M06-940",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "DSGVO & Datenschutz",
+    "gebiet": "A3",
+    "typ": "mtf",
+    "schwierigkeit": 3,
+    "frage": "Bewerte die folgenden Aussagen zur Datenschutz-Grundverordnung (DSGVO) jeweils als wahr oder falsch.",
+    "erklaerungKurz": "Meldung an die Aufsichtsbehörde möglichst binnen 72 Stunden (Art. 33). Nach dem Marktortprinzip (Art. 3) gilt die DSGVO auch für Stellen außerhalb der EU, die EU-Betroffene verarbeiten. Auskunftsrecht (Art. 15) und Rechtsgrundlage (Art. 6) sind Pflicht.",
+    "erklaerungLang": "Drei Aussagen treffen zu, die falsche schränkt den Geltungsbereich zu Unrecht auf die EU ein.\n• 72 Stunden: Nach Art. 33 DSGVO ist eine meldepflichtige Datenschutzverletzung der Aufsichtsbehörde möglichst binnen 72 Stunden nach Bekanntwerden zu melden. Ist ein hohes Risiko für die Betroffenen zu erwarten, sind zusätzlich diese zu informieren (Art. 34).\n• Marktortprinzip (Art. 3): Die DSGVO gilt auch für Verantwortliche OHNE Sitz in der EU, sobald sie Daten von Personen in der EU verarbeiten, um ihnen Waren oder Dienste anzubieten oder ihr Verhalten zu beobachten. Genau deshalb betrifft sie außereuropäische Anbieter.\n• Auskunftsrecht (Art. 15): Betroffene können erfahren, welche Daten zu ihnen gespeichert sind, woher sie kommen und an wen sie weitergegeben werden.\n• Rechtsgrundlage (Art. 6): Jede Verarbeitung braucht einen Erlaubnistatbestand – Einwilligung, Vertragserfüllung, rechtliche Verpflichtung, berechtigtes Interesse und weitere. Ohne Rechtsgrundlage ist die Verarbeitung verboten, auch wenn niemand widerspricht.\nMerke: Die DSGVO folgt dem Markt, nicht dem Firmensitz – und ohne Rechtsgrundlage geht gar nichts.",
+    "verweis": "Modul 06, Abschnitt 6.1 Datenschutzgesetze DSGVO",
+    "aussagen": [
+      {
+        "text": "Eine meldepflichtige Verletzung des Schutzes personenbezogener Daten ist der Aufsichtsbehörde möglichst binnen 72 Stunden nach Bekanntwerden zu melden.",
+        "wahr": true
+      },
+      {
+        "text": "Die DSGVO gilt ausschließlich für Unternehmen mit Sitz innerhalb der EU.",
+        "wahr": false
+      },
+      {
+        "text": "Betroffene Personen haben ein Recht auf Auskunft über die zu ihrer Person gespeicherten Daten.",
+        "wahr": true
+      },
+      {
+        "text": "Die Verarbeitung personenbezogener Daten benötigt stets eine Rechtsgrundlage, etwa eine Einwilligung oder ein berechtigtes Interesse.",
+        "wahr": true
+      }
+    ]
+  },
+  {
+    "id": "M06-941",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Passwörter & Authentifizierung",
+    "gebiet": "A3",
+    "typ": "mtf",
+    "schwierigkeit": 2,
+    "frage": "Bewerte die folgenden Aussagen zu Passwörtern und Authentifizierung jeweils als wahr oder falsch.",
+    "erklaerungKurz": "2FA kombiniert zwei Faktor-Kategorien (z. B. Wissen + Besitz). Passwörter gehören gesalzen gehasht gespeichert, nie im Klartext. Ein Salt schützt vor Rainbow Tables; längere Passwörter vergrößern den Schlüsselraum.",
+    "erklaerungLang": "Drei Aussagen sind Stand der Technik, die falsche beschreibt einen schweren Fehler.\n• Zwei-Faktor-Authentifizierung verlangt Faktoren aus VERSCHIEDENEN Kategorien: Wissen (Passwort, PIN), Besitz (Token, Smartphone, Karte), Sein (Fingerabdruck, Gesicht). Zwei Passwörter sind kein zweiter Faktor, weil beide aus derselben Kategorie stammen.\n• Klartextspeicherung ist nie zulässig. Passwörter gehören gehasht in die Datenbank, und zwar mit einem für diesen Zweck gebauten, langsamen Verfahren wie bcrypt, scrypt oder Argon2 – nicht mit schnellen Hashes wie MD5 oder SHA-1.\n• Ein Salt ist ein pro Passwort neuer Zufallswert, der vor dem Hashen angehängt wird. Er macht vorberechnete Tabellen (Rainbow Tables) wertlos, weil derselbe Klartext bei jedem Nutzer einen anderen Hash ergibt.\n• Länge schlägt Komplexität: Jedes zusätzliche Zeichen vervielfacht den Suchraum um die Zeichensatzgröße. Eine lange Passphrase ist deshalb stärker und leichter zu merken als ein kurzes Sonderzeichenkonstrukt.\nMerke: Gesalzen, langsam gehasht, nie im Klartext – und der zweite Faktor muss aus einer anderen Kategorie kommen.",
+    "verweis": "Modul 06, Abschnitt 6.1 und 6.4 – IT-Sicherheitsrichtlinien und Authentifizierung",
+    "aussagen": [
+      {
+        "text": "Bei der Zwei-Faktor-Authentifizierung werden zwei Faktoren aus unterschiedlichen Kategorien (z. B. Wissen und Besitz) kombiniert.",
+        "wahr": true
+      },
+      {
+        "text": "Passwörter sollten zur schnellen Prüfung im Klartext in der Datenbank gespeichert werden.",
+        "wahr": false
+      },
+      {
+        "text": "Ein Salt erschwert Angriffe mit vorberechneten Hash-Tabellen (Rainbow Tables).",
+        "wahr": true
+      },
+      {
+        "text": "Bei sonst gleichen Bedingungen erhöht ein längeres Passwort die Anzahl möglicher Kombinationen.",
+        "wahr": true
+      }
+    ]
+  },
+  {
+    "id": "M07-930",
+    "pruefungsteil": "AP1",
+    "modul": "M07",
+    "thema": "SLA & Servicevertrag",
+    "gebiet": "A5",
+    "typ": "mtf",
+    "schwierigkeit": 3,
+    "frage": "Bewerte die folgenden Aussagen zu Service-Level-Agreements (SLA) jeweils als wahr oder falsch.",
+    "erklaerungKurz": "SLAs definieren messbare Kennzahlen (z. B. Verfügbarkeit, Reaktionszeit). 99,9 % erlaubt mehr Ausfallzeit pro Jahr als 99,99 %. Reaktions- und Wiederherstellungszeit sind verschieden, und das SLA ist Bestandteil des schriftlichen Vertrags.",
+    "erklaerungLang": "Zwei Aussagen treffen zu, zwei nicht – und die Verfügbarkeitsrechnung ist die, die in Prüfungen am häufigsten kippt.\n• Ein SLA hält MESSBARE Zusagen fest: Verfügbarkeit in Prozent, Reaktionszeit, Wiederherstellungszeit, Servicezeiten und die Folgen einer Verletzung. Unmessbare Formulierungen wie „schnellstmöglich\" sind kein Service Level.\n• Verfügbarkeit: 99,9 Prozent erlauben rund 8 Stunden 46 Minuten Ausfall pro Jahr, 99,99 Prozent nur etwa 53 Minuten. Je mehr Neunen, desto WENIGER Ausfallzeit – und desto teurer der Betrieb.\n• Reaktionszeit ist die Frist, bis der Dienstleister mit der Bearbeitung BEGINNT. Wiederherstellungszeit ist die Frist, bis die Störung BEHOBEN ist. Beide werden getrennt vereinbart, weil ein Dienstleister den Beginn zusagen kann, das Ende aber von der Ursache abhängt.\n• Ein SLA ist Vertragsbestandteil und gehört schriftlich in den Servicevertrag – sonst ist im Streitfall nichts nachweisbar.\nMerke: Mehr Neunen heißt weniger Ausfall, und Reaktion ist der Beginn, nicht das Ende.",
+    "verweis": "Modul 07, Abschnitt 7.1 SLA & Servicevertrag",
+    "aussagen": [
+      {
+        "text": "Ein SLA legt messbare Kennzahlen wie Verfügbarkeit oder Reaktionszeit fest.",
+        "wahr": true
+      },
+      {
+        "text": "Eine zugesicherte Verfügbarkeit von 99,9 % erlaubt rechnerisch mehr Ausfallzeit pro Jahr als 99,99 %.",
+        "wahr": true
+      },
+      {
+        "text": "Reaktionszeit und Wiederherstellungszeit bezeichnen im SLA stets exakt denselben Zeitwert.",
+        "wahr": false
+      },
+      {
+        "text": "SLAs werden ausschließlich mündlich vereinbart und sind nicht Bestandteil des schriftlichen Vertrags.",
+        "wahr": false
+      }
+    ]
+  }
+]

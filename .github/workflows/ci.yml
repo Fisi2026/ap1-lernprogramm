@@ -1,0 +1,412 @@
+name: CI
+
+# Vollständige Prüfsuite (bash check.sh) bei jedem Push auf main und jedem Pull Request.
+# Reproduziert lokal: ubuntu + node + jsdom/ajv nach /tmp (dort sucht check.sh), python3 (Drift-Guard).
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Audit 26.09.2026 (AUD-A1): ein Lauf von Hand (`gh workflow run CI --ref main`) prueft und liefert aus,
+  # ohne einen Commit zu brauchen – z. B. nach dem Einrichten der Cloudflare-Secrets.
+  workflow_dispatch:
+
+# ⛔ 26.09.2026 (Pruefbericht, GitHub "Secure use reference", OpenSSF Scorecard):
+#    * Kein Recht als Vorgabe – jeder Job nennt, was er braucht (nur `release` darf schreiben).
+#    * Actions am vollen Commit-SHA (ein Tag laesst sich umhaengen); die Version steht im
+#      Kommentar, Dependabot (.github/dependabot.yml) haelt beide aktuell.
+#    * checkout ohne gespeicherte Anmeldedaten (`persist-credentials: false`).
+permissions: {}
+
+jobs:
+  # ⚠️ ENTWURF N42 B5 (18.10.2026, tools/ci_b5_entwurf.md): `check.sh` laeuft nicht mehr in EINEM Job, sondern in fuenf
+  #    parallelen (`bash check.sh teil <name>`) plus Sammel-Job `check`, der das alte Urteil bildet. Die Teile
+  #    zusammen tun GENAU das, was `bash check.sh` (voll) tut - Beweis lokal im Bericht. Jeder Job installiert nur,
+  #    was sein Teil braucht (npm ci ist durch den Cache billig).
+  pruefung:
+    name: check.sh teil pruefung (Vorpruefungen, Waechter, 4f ohne Umbau)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: |
+            neu/package-lock.json
+            package-lock.json
+
+      - name: Install test dependencies (ajv fuer Vorpruefungen)
+        working-directory: .tooling
+        run: npm ci --no-fund --no-audit --loglevel=error
+      - name: Install neu/ dependencies (4f_qualitaet, 4f_architektur)
+        working-directory: neu
+        run: npm ci --no-fund --no-audit --loglevel=error
+      - name: Messwerkzeuge nach tools/requirements-werkzeuge.txt (lizard, ruff, shellcheck)
+        run: |
+          python3 -m venv --system-site-packages "$RUNNER_TEMP/wz"
+          "$RUNNER_TEMP/wz/bin/pip" install --quiet --disable-pip-version-check --require-hashes -r tools/requirements-werkzeuge.txt
+          echo "$RUNNER_TEMP/wz/bin" >> "$GITHUB_PATH"
+      - name: Betriebswerkzeuge nach Lockfile (playwright-core-Typen fuer die tsc-Ratsche)
+        run: npm ci --no-fund --no-audit --loglevel=error
+
+      - name: check.sh teil pruefung
+        run: bash check.sh teil pruefung
+
+  suiten:
+    name: check.sh teil suiten (jsdom-Suiten)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: |
+            neu/package-lock.json
+            package-lock.json
+
+      - name: Install test dependencies (jsdom, ajv, axe-core)
+        working-directory: .tooling
+        run: npm ci --no-fund --no-audit --loglevel=error
+
+      - name: check.sh teil suiten
+        run: bash check.sh teil suiten
+
+  # N42 (18.10.2026): vitest in drei Shards (GEMESSEN: ein Job 6:17, mit Coverage 2 Kerne 416 s; drei Haeppchen 182/132/132 s +
+  #    Merge 3 s, Coverage und Testzahl identisch). Jeder Shard laeuft mit Coverage, aber OHNE Schwellen (ein Shard sieht nur einen
+  #    Teil), und legt seinen Blob ab; `tests-merge` fuehrt sie zusammen und prueft die Schwellen aus neu/vitest.config.ts.
+  #    Nur GitHub-eigene Actions, am vollen SHA (git ls-remote, 18.10.2026: upload-artifact v7.0.2, download-artifact v8.0.2).
+  tests:
+    name: check.sh teil tests (vitest Shard ${{ matrix.shard }}/3)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: |
+            neu/package-lock.json
+            package-lock.json
+
+      - name: Install test dependencies (ajv)
+        working-directory: .tooling
+        run: npm ci --no-fund --no-audit --loglevel=error
+      - name: Install neu/ dependencies
+        working-directory: neu
+        run: npm ci --no-fund --no-audit --loglevel=error
+
+      # CI=true (setzt der Runner) schaltet Coverage ein; VITEST_SHARD schaltet die Schwellen im Shard aus (tools/umbau_laeufe.sh).
+      - name: check.sh teil tests (Shard)
+        env:
+          VITEST_SHARD: ${{ matrix.shard }}/3
+        run: bash check.sh teil tests
+
+      - name: Blob des Shards ablegen
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: vitest-blob-${{ matrix.shard }}
+          path: _to_delete/helfer/vitest-blob/blob-${{ matrix.shard }}-3.json
+          if-no-files-found: error
+          retention-days: 1
+
+  tests-merge:
+    name: check.sh teil tests (Merge, Schwellen)
+    needs: tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: |
+            neu/package-lock.json
+            package-lock.json
+
+      - name: Install test dependencies (ajv)
+        working-directory: .tooling
+        run: npm ci --no-fund --no-audit --loglevel=error
+      - name: Install neu/ dependencies
+        working-directory: neu
+        run: npm ci --no-fund --no-audit --loglevel=error
+
+      - name: Blobs der Shards holen
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: vitest-blob-*
+          merge-multiple: true
+          path: _to_delete/helfer/vitest-blob
+
+      # Schwellen aus neu/vitest.config.ts greifen hier (CI=true -> Coverage an); fehlt ein Blob, ist der Schritt rot.
+      - name: check.sh teil tests-merge
+        env:
+          VITEST_MERGE_N: '3'
+        run: bash check.sh teil tests-merge
+
+  bau:
+    name: check.sh teil bau (tsc, oxlint, Bau, v2/-Drift)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: |
+            neu/package-lock.json
+            package-lock.json
+
+      - name: Install test dependencies (ajv)
+        working-directory: .tooling
+        run: npm ci --no-fund --no-audit --loglevel=error
+      - name: Install neu/ dependencies
+        working-directory: neu
+        run: npm ci --no-fund --no-audit --loglevel=error
+
+      - name: check.sh teil bau
+        run: bash check.sh teil bau
+
+  # Audit 26.09.2026 (AUD-B4): v2/ mit den Koepfen aus _headers (scharfe CSP) im echten Chrome –
+  # jeder Bereich, drei Bildfragen, offline, 0 CSP-Verstoesse. Chrome ist auf ubuntu-latest vorinstalliert.
+  rauch:
+    name: Rauchtest im echten Browser
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: |
+            neu/package-lock.json
+            package-lock.json
+
+      - name: Betriebswerkzeuge nach Lockfile (playwright-core)
+        run: npm ci --no-fund --no-audit --loglevel=error
+
+      - name: Rauchtest im echten Browser
+        env:
+          PW_KANAL: chrome
+        run: node tools/sichtpruefung/rauch.js
+
+  # Sammel-Job = das alte Urteil „ALLES GRÜN". Name und Schluessel `check` bleiben, damit `release`/`deploy` (needs: check)
+  # und eine etwaige Branch-Schutz-Regel auf „check.sh (voll)" unveraendert greifen. `if: always()`: ein roter oder
+  # uebersprungener Teil macht ihn ROT (ein uebersprungener Job waere sonst „gruen" - die Falle aus R2a).
+  check:
+    name: check.sh (voll)
+    needs: [pruefung, suiten, tests, tests-merge, bau, rauch]
+    if: always()
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Urteil bilden
+        env:
+          ERGEBNISSE: ${{ join(needs.*.result, ' ') }}
+        run: |
+          echo "Teil-Ergebnisse: $ERGEBNISSE"
+          n=0
+          for r in $ERGEBNISSE; do n=$((n+1)); [ "$r" = "success" ] || { echo "::error::Teil nicht gruen ($r)"; exit 1; }; done
+          [ "$n" -eq 6 ] || { echo "::error::erwartet 6 Teile (pruefung, suiten, tests samt Shards, tests-merge, bau, rauch), gezaehlt $n"; exit 1; }
+          echo "ALLES GRÜN"
+
+  # Komplettpruefung 09.10.2026 (ND4, OpenSSF Scorecard „SAST"): Semgrep CE mit festen Regeln
+  # (tools/semgrep/scan.sh - Regeln an einem Commit von semgrep-rules, Auswahl in regeln.txt).
+  # Parallel zu `check`; Release und Deploy warten auf beide.
+  semgrep:
+    name: Semgrep (statische Sicherheitsanalyse)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # N41 S5: --require-hashes mit gehashter Datei (aus requirements.in + overrides.txt per tools/semgrep/erzeugen.sh,
+      # uv --generate-hashes) - pip bricht ab, sobald ein Paket nicht zu seinem Hash passt. --no-deps wegen der Overrides.
+      - name: Semgrep nach requirements.txt (venv, mit Hashes)
+        run: |
+          python3 -m venv "$RUNNER_TEMP/sg"
+          "$RUNNER_TEMP/sg/bin/pip" install --quiet --disable-pip-version-check --require-hashes --no-deps -r tools/semgrep/requirements.txt
+          echo "$RUNNER_TEMP/sg/bin" >> "$GITHUB_PATH"
+
+      - name: Scan (rot bei jedem Fund)
+        run: bash tools/semgrep/scan.sh
+
+  release:
+    name: Tag + Release bei Version-Bump
+    needs: [check, semgrep]          # nur nach GRÜNEM check.sh UND Semgrep – nie ein Tag auf rotem Stand
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write                # nötig für Tag + Release
+    steps:
+      # checkout@v6 legt persist-credentials unter $RUNNER_TEMP statt in die lokale Git-Config.
+      # Fuer diesen Job folgenlos: Tags werden nur lokal gelesen, das Release laeuft ueber
+      # gh + GH_TOKEN aus den Secrets, es wird nicht gepusht.
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0             # volle Historie + Tags (Bump-Erkennung)
+
+      - name: Version aus neu/package.json lesen
+        id: ver
+        run: |
+          set -euo pipefail
+          # N29 Teil 2 (E41): die einzige Quelle der Version ist neu/package.json
+          VERSION="$(grep -oE '^  "version": "[0-9]+\.[0-9]+\.[0-9]+"' neu/package.json \
+                     | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)"
+          if [ -z "$VERSION" ]; then
+            echo "::error::version in neu/package.json nicht gefunden (Single Source of Truth)."; exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION"    >> "$GITHUB_OUTPUT"
+          echo "Gefundene Version: $VERSION"
+
+      - name: Prüfen, ob Tag schon existiert
+        id: tagcheck
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.ver.outputs.tag }}"
+          if git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "Tag $TAG existiert bereits – kein Version-Bump, Release wird übersprungen."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "Tag $TAG fehlt – Version-Bump erkannt."
+          fi
+
+      - name: CHANGELOG-Auszug extrahieren (blockierend)
+        if: steps.tagcheck.outputs.exists == 'false'
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.ver.outputs.version }}"
+          # Abschnitt "## vX.Y.Z" bis zur nächsten "## "-Überschrift
+          awk -v v="## v$VERSION" '$0==v{f=1;next} f&&/^## /{exit} f{print}' CHANGELOG.md \
+            | sed -e '/./,$!d' > release_notes.md
+          if [ ! -s release_notes.md ]; then
+            echo "::error::Kein CHANGELOG.md-Abschnitt '## v$VERSION' gefunden. Version-Bump IMMER mit CHANGELOG-Eintrag."
+            exit 1
+          fi
+          echo "--- Release-Notes ---"; cat release_notes.md
+
+      - name: Tag + GitHub-Release anlegen
+        if: steps.tagcheck.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.ver.outputs.tag }}"
+          gh release create "$TAG" \
+            --target "$GITHUB_SHA" \
+            --title "$TAG" \
+            --notes-file release_notes.md
+          echo "Release $TAG angelegt."
+
+  # ⛔ Audit 26.09.2026 (AUD-A1): AUSGELIEFERT WIRD NUR NOCH NACH GRUENEM check.sh.
+  #    Vorher baute Cloudflare bei JEDEM Push selbst (Git-Anbindung) – parallel zur CI, auch rot.
+  #    Voraussetzung (DEPLOY.md): Secrets CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID, und die
+  #    Git-Anbindung in Cloudflare ist GETRENNT. Fehlt das Token, wird uebersprungen (Warnung, kein Rot).
+  deploy:
+    name: Deploy zu Cloudflare (nach gruenem check.sh)
+    needs: [check, semgrep]
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write                # N41 S4: OIDC-Token fuer die Herkunftsbescheinigung (nur dieser Job)
+      attestations: write            # N41 S4: Bescheinigung ablegen
+    concurrency:
+      group: deploy-main
+      cancel-in-progress: false
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      WRANGLER_SEND_METRICS: "false"
+    steps:
+      - name: Ohne Token kein Deploy
+        if: env.CLOUDFLARE_API_TOKEN == ''
+        run: echo "::warning::CLOUDFLARE_API_TOKEN fehlt - Deploy uebersprungen (DEPLOY.md, Abschnitt Deploy)."
+
+      - name: Checkout
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: wrangler nach Lockfile
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npm ci --no-fund --no-audit --loglevel=error
+
+      # Migrationen VOR dem Code: ein neuer Worker darf sich auf das neue Schema verlassen.
+      # Bereits eingespielte Migrationen ueberspringt wrangler selbst.
+      - name: D1-Migrationen einspielen
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npx wrangler d1 migrations apply ap1-meldungen --remote
+
+      - name: Worker + v2/ ausliefern
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npx wrangler deploy
+
+      # N41 S4 (18.10.2026): Herkunftsbescheinigung (SLSA-Provenance) fuer genau das, was ausgeliefert wird:
+      # den Inhalt von v2/ (assets.directory in wrangler.jsonc). Nach dem Deploy und nur, wenn deployt wurde.
+      # SHA = v4.2.2, gemessen per git ls-remote. Pruefen: DEPLOY.md, Abschnitt „Herkunft pruefen".
+      # Nur im OEFFENTLICHEN Repo (nach N40 V3): in privaten Repos braucht die Bescheinigung laut Doku
+      # GitHub Enterprise Cloud (angenommen, BUILD_LOG 220) - der Schritt waere sonst rot und mit ihm der Deploy-Job.
+      - name: Herkunft von v2/ bescheinigen
+        if: env.CLOUDFLARE_API_TOKEN != '' && !github.event.repository.private
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: 'v2/**'

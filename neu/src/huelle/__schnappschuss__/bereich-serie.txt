@@ -1,0 +1,25 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie" [current=page]
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Tagesserie" [Ebene 1]
+  heading "Kundenbedarfe ermitteln" [Ebene 2]
+  img "Schwierigkeit 1 von 4"
+  button "Zum gezielten Wiederholen markieren"
+  button "⚑ Frage melden"
+  button "Ich hab's überlegt – Optionen zeigen"
+  button "Kann ich schon"
+  button "Nächste Frage" [gesperrt]

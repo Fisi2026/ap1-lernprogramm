@@ -1,0 +1,467 @@
+{
+ "tools/abschnitt.py:40": {
+  "typen": [
+   "int"
+  ],
+  "grund": "ende = len(z) oder Index aus range (Z. 31-37), start aus enumerate (Z. 24), mx = int(...) oder 400 (Z. 20) - Differenz von int"
+ },
+ "tools/apply_batch.py:86": {
+  "typen": [
+   "int",
+   "str"
+  ],
+  "grund": "fehler(nr, msg): alle 24 Aufrufe haben laut AST ein int-Literal als nr; msg ist ein str-Literal, f-String, .format- oder %-Ausdruck"
+ },
+ "tools/apply_batch.py:197": {
+  "typen": [
+   "wert",
+   "int",
+   "int"
+  ],
+  "grund": "i aus q.get('id') nach json.load; r = len(opt[li]) (Z. 194), d = max(len(o) ...) (Z. 195)"
+ },
+ "tools/apply_batch.py:203": {
+  "typen": [
+   "wert",
+   "int",
+   "int",
+   "float",
+   "zahl",
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "i wie Z. 197; r, d int (len); d / r ist echte Division -> float; MAX_FAKTOR aus JSON (int oder float); r + 1 int; int(...) int"
+ },
+ "tools/archiv/make_screenshots.py:187": {
+  "typen": [
+   "str",
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "os.path.basename(p) str; im.width/im.height (PIL) und os.path.getsize int"
+ },
+ "tools/archiv/migration/mig_m09_etappeA.py:46": {
+  "typen": [
+   "int"
+  ],
+  "grund": "start: alle sechs band()-Aufrufe mit int-Literal (301 ... 361); i aus enumerate"
+ },
+ "tools/archiv/migration/mig_m09_etappeA.py:93": {
+  "typen": [
+   "int"
+  ],
+  "grund": "start = i; i ist der Zeichenzaehler (i = 0, i += 1)"
+ },
+ "tools/archiv/migration/mig_m09_etappeB.py:79": {
+  "typen": [
+   "int"
+  ],
+  "grund": "start = i; i ist der Zeichenzaehler (i = 0, i += 1)"
+ },
+ "tools/archiv/r3_2_gantt.py:66": {
+  "typen": [
+   "int",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; hoehe = gridbot + 34 aus int"
+ },
+ "tools/archiv/r3_2_gantt.py:79": {
+  "typen": [
+   "int",
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; x = tx(t) int, breite = (bis - t + 1) * DAY, gridbot - TOP"
+ },
+ "tools/archiv/r3_2_gantt.py:81": {
+  "typen": [
+   "int",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; x + breite // 2, woche Zaehler"
+ },
+ "tools/archiv/r3_2_gantt.py:88": {
+  "typen": [
+   "int",
+   "int",
+   "int",
+   "int",
+   "str"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; x = tx(d), d aus range; Farbe str-Literal"
+ },
+ "tools/archiv/r3_2_gantt.py:91": {
+  "typen": [
+   "int",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; x + DAY // 2, d aus range"
+ },
+ "tools/archiv/r3_2_gantt.py:93": {
+  "typen": [
+   "int",
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; rechts = tx(tage + 1)"
+ },
+ "tools/archiv/r3_2_gantt.py:106": {
+  "typen": [
+   "str",
+   "str",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int"
+ },
+ "tools/archiv/r3_2_gantt.py:108": {
+  "typen": [
+   "str",
+   "str",
+   "float",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; textbreite() = len(s) * CHAR_W * fontsize, CHAR_W float"
+ },
+ "tools/archiv/r3_2_gantt.py:113": {
+  "typen": [
+   "int",
+   "int",
+   "int",
+   "int",
+   "str",
+   "str"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; tx(start), y, dauer * DAY; BAR_FILL/BAR_STROKE str"
+ },
+ "tools/archiv/r3_2_gantt.py:119": {
+  "typen": [
+   "int",
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; cx = tx(tende + 1), cy aus int-Arithmetik (BARH // 2)"
+ },
+ "tools/archiv/r3_2_gantt.py:121": {
+  "typen": [
+   "int",
+   "int",
+   "str",
+   "str",
+   "int",
+   "int"
+  ],
+  "grund": "gantt(): fid/titel/name str-Literale, alle zeilen-Listen laut AST (str, int, int), meilenstein ('...', 14), tage = TAGE = 20; Konstanten VBW/TOP/X0/DAY/NAMEX/ROW0/PITCH/BARH int; MS_FILL/MS_STROKE str"
+ },
+ "tools/befunde_index.py:158": {
+  "typen": [
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "nummern = sorted(int(n) ...) (Z. 154): len/min/max davon int"
+ },
+ "tools/befunde_index.py:200": {
+  "typen": [
+   "int",
+   "str",
+   "wert"
+  ],
+  "grund": "n aus nummern (int); datei = os.path.basename (Z. 139); stich or '—' (saeubern() oder Literal)"
+ },
+ "tools/befunde_index.py:219": {
+  "typen": [
+   "int"
+  ],
+  "grund": "x aus luecken = [n for n in range(...)] (Z. 155)"
+ },
+ "tools/befunde_index.py:224": {
+  "typen": [
+   "int",
+   "str"
+  ],
+  "grund": "x wie Z. 219; zweites Argument: 'nur in ' + wo oder str-Literal"
+ },
+ "tools/css_skala.py:236": {
+  "typen": [
+   "int",
+   "str",
+   "str",
+   "str",
+   "str",
+   "float"
+  ],
+  "grund": "Tupel aus umbauen() Z. 118: zeile_von() = lo + 1, titel aus GRUPPEN (str-Literal), eig/pm.group(0) Regex-Gruppen, name aus SKALA (str-Literal), ab = abs(wert - px) mit px = float(...)"
+ },
+ "tools/css_skala.py:241": {
+  "typen": [
+   "int",
+   "str",
+   "str",
+   "str",
+   "int",
+   "float"
+  ],
+  "grund": "Tupel aus umbauen() Z. 116: wie Z. 236, ziel = SKALA-Wert (int-Literal)"
+ },
+ "tools/deploy_inhalt.py:138": {
+  "typen": [
+   "int",
+   "int",
+   "float"
+  ],
+  "grund": "len(...) int; kb() = sum(...) / 1024.0 float (Z. 133)"
+ },
+ "tools/deploy_inhalt.py:140": {
+  "typen": [
+   "int",
+   "float"
+  ],
+  "grund": "len(...) int; kb() float (Z. 133)"
+ },
+ "tools/deploy_inhalt.py:142": {
+  "typen": [
+   "int",
+   "float"
+  ],
+  "grund": "len(...) int; kb() float (Z. 133)"
+ },
+ "tools/deploy_inhalt.py:149": {
+  "typen": [
+   "float",
+   "str",
+   "int"
+  ],
+  "grund": "kb() float; kopf = n.split('/')[0] + '/' oder '(Wurzel)' (Z. 145); len int"
+ },
+ "tools/e3_gegenprobe.py:147": {
+  "typen": [
+   "int",
+   "str",
+   "str"
+  ],
+  "grund": "Tupel (len(v), w, v) aus Z. 136; w = Wort aus worte() (str), w[:20] str; ids = ', '.join(...)"
+ },
+ "tools/e3_gegenprobe.py:287": {
+  "typen": [
+   "str",
+   "int",
+   "str",
+   "str",
+   "str"
+  ],
+  "grund": "treffer-Tupel Z. 262/269/277: name = basename, zeilennr = count + 1, ziel = m.group(1), grund str, satz = ' '.join(...), satz[:70] str"
+ },
+ "tools/firmen_umlaut_setzen.py:87": {
+  "typen": [
+   "int",
+   "str",
+   "str"
+  ],
+  "grund": "n = 0 + str.count (Z. 74-79); alt/neu laufen in lade_auftrag() durch norm() = s.replace -> str"
+ },
+ "tools/firmen_umlaut_setzen.py:88": {
+  "typen": [
+   "int",
+   "int"
+  ],
+  "grund": "gesamt Summe von int; len(geaendert)"
+ },
+ "tools/gebiete_stand.py:120": {
+  "typen": [
+   "str",
+   "str",
+   "str",
+   "int",
+   "str"
+  ],
+  "grund": "code/teil/name aus GEBIETE (str-Tripel laut AST); n = Counter.get(code, 0) int; ant str"
+ },
+ "tools/gebiete_stand.py:121": {
+  "typen": [
+   "int"
+  ],
+  "grund": "nenner = sum der Counter-Werte (+= 1) - int"
+ },
+ "tools/gebiete_stand.py:127": {
+  "typen": [
+   "wert",
+   "int"
+  ],
+  "grund": "(k, v) aus Counter.items(): k = f.get('pruefungsteil') (JSON-Wert), v int"
+ },
+ "tools/gebiete_stand.py:146": {
+  "typen": [
+   "str",
+   "str",
+   "str",
+   "int"
+  ],
+  "grund": "code/namen/teil aus GEBIETE bzw. Literal 'M9'/'Klausurvorbereitung'/'M09'; Counter.get int"
+ },
+ "tools/gebiete_stand.py:151": {
+  "typen": [
+   "wert",
+   "wert",
+   "int"
+  ],
+  "grund": "(thema, modul) = (f.get('thema'), f.get('modul')) JSON-Werte; n Counter-Wert int"
+ },
+ "tools/gebiete_stand.py:175": {
+  "typen": [
+   "wert",
+   "int"
+  ],
+  "grund": "kv aus Counter.items() - genau 2-Tupel (JSON-Wert, int)",
+  "stern": true
+ },
+ "tools/gebiete_stand.py:179": {
+  "typen": [
+   "wert",
+   "int"
+  ],
+  "grund": "kv aus Counter.items() - genau 2-Tupel (JSON-Wert, int)",
+  "stern": true
+ },
+ "tools/gebiete_stand.py:201": {
+  "typen": [
+   "str",
+   "str",
+   "int"
+  ],
+  "grund": "code aus GEBIETE; sp[4] Element von str.split; Counter.get int"
+ },
+ "tools/katalog/katalog_parse.py:481": {
+  "typen": [
+   "str",
+   "int",
+   "int",
+   "int",
+   "str"
+  ],
+  "grund": "a.teil aus argparse choices=sorted(TEILE) (str-Schluessel); len int; n/m = sum(len(...)) int; letztes: Ergebnis von Z. 482 oder 'OK'"
+ },
+ "tools/katalog/katalog_parse.py:482": {
+  "typen": [
+   "int"
+  ],
+  "grund": "len(f)"
+ },
+ "tools/opt_ersatz.py:135": {
+  "typen": [
+   "ganz",
+   "int",
+   "int"
+  ],
+  "grund": "index lief als Listenindex opt[index] (Z. 132) - int oder bool, daher {:d}; len(...) int"
+ },
+ "tools/opt_ersatz.py:168": {
+  "typen": [
+   "wert",
+   "int",
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "fid aus aenderungen; r = L[li], d = max(...) mit L = [len(o) ...]; r + 1, int(...) int"
+ },
+ "tools/opt_ersatz.py:173": {
+  "typen": [
+   "wert",
+   "int",
+   "int",
+   "float",
+   "int",
+   "int"
+  ],
+  "grund": "wie Z. 168; d / r echte Division -> float"
+ },
+ "tools/poolzugang.py:19": {
+  "typen": [
+   "str",
+   "int",
+   "str"
+  ],
+  "grund": "art: einzige Aufrufer _lies('fragen'/'faelle'); r.returncode int; .decode().strip() str"
+ },
+ "tools/rohe_elemente.py:84": {
+  "typen": [
+   "int",
+   "int",
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "len(...) und n = 0 + 1 je Datei (Z. 47/58)"
+ },
+ "tools/rohe_elemente.py:86": {
+  "typen": [
+   "str",
+   "int",
+   "str"
+  ],
+  "grund": "f in gemeldet = (rel(p), z, e) (Z. 81): rel() str, z = count + 1 int, e = m.group(1) str",
+  "stern": true
+ },
+ "tools/rohe_elemente.py:131": {
+  "typen": [
+   "str",
+   "int",
+   "int",
+   "str"
+  ],
+  "grund": "Literal; ist aus pruefe() = 0/1/2 (alle return-Zweige int); soll und name aus den Literal-Faellen"
+ },
+ "tools/rotiere.py:80": {
+  "typen": [
+   "wert",
+   "ganz",
+   "ganz"
+  ],
+  "grund": "quelle aus spec (JSON-Wert); b['von']/b['bis'] liefen vorher als Slice-Index (Z. 77) - int oder bool, daher {:d}"
+ },
+ "tools/rotiere.py:90": {
+  "typen": [
+   "int",
+   "int"
+  ],
+  "grund": "len(bl); sum(b['bis'] - b['von'] + 1 ...) aus Slice-tauglichen Werten - int"
+ },
+ "tools/sabotage_vt.py:89": {
+  "typen": [
+   "int",
+   "int",
+   "int"
+  ],
+  "grund": "rc, fehl, ges aus vitest(): r.returncode, int(...) bzw. 0 (Z. 51-53)"
+ },
+ "tools/sabotage_vt.py:91": {
+  "typen": [
+   "int"
+  ],
+  "grund": "ges aus vitest() (int)"
+ },
+ "tools/sabotage_vt.py:112": {
+  "typen": [
+   "int"
+  ],
+  "grund": "ges aus vitest() (int)"
+ },
+ "tools/sabotage_vt.py:114": {
+  "typen": [
+   "int"
+  ],
+  "grund": "rc aus vitest() = r.returncode"
+ },
+ "tools/sabotage_vt.py:115": {
+  "typen": [
+   "int",
+   "int"
+  ],
+  "grund": "fehl, ges aus vitest() (int)"
+ }
+}

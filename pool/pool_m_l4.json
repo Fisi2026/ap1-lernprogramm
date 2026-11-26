@@ -1,0 +1,577 @@
+[
+  {
+    "id": "M01-990",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Netzplan & Puffer",
+    "gebiet": "A5",
+    "typ": "hotspot",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Ein Vorgang der Ebsdorfergrunder Projektservice GmbH hat im Netzplan folgende Werte: FAZ = 5 Tage, Dauer = 4 Tage, SAZ = 7 Tage. Berechne den Gesamtpuffer (GP) und klicke das Feld mit dem richtigen Wert an.",
+    "svg": "<svg viewBox='0 0 300 150' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><text x='150' y='22' text-anchor='middle'>Vorgang: FAZ=5, Dauer=4, SAZ=7</text><text x='150' y='42' text-anchor='middle'>Gesucht: Gesamtpuffer GP</text><rect x='10' y='70' width='64' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='42' y='100' text-anchor='middle'>GP = 0</text><rect x='84' y='70' width='64' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='116' y='100' text-anchor='middle'>GP = 2</text><rect x='158' y='70' width='64' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='190' y='100' text-anchor='middle'>GP = 4</text><rect x='232' y='70' width='64' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='264' y='100' text-anchor='middle'>GP = 7</text></svg>",
+    "zonen": [
+      {
+        "x": 10,
+        "y": 70,
+        "w": 64,
+        "h": 50,
+        "richtig": false,
+        "label": "GP = 0"
+      },
+      {
+        "x": 84,
+        "y": 70,
+        "w": 64,
+        "h": 50,
+        "richtig": true,
+        "label": "GP = 2"
+      },
+      {
+        "x": 158,
+        "y": 70,
+        "w": 64,
+        "h": 50,
+        "richtig": false,
+        "label": "GP = 4"
+      },
+      {
+        "x": 232,
+        "y": 70,
+        "w": 64,
+        "h": 50,
+        "richtig": false,
+        "label": "GP = 7"
+      }
+    ],
+    "erklaerungKurz": "Der Gesamtpuffer ergibt sich aus GP = SAZ − FAZ = 7 − 5 = 2 Tage.",
+    "erklaerungLang": "Der Gesamtpuffer (GP) eines Vorgangs berechnet sich als GP = SAZ − FAZ = 7 − 5 = 2 Tage. Zur Kontrolle: FEZ = FAZ + Dauer = 5 + 4 = 9, SEZ = SAZ + Dauer = 7 + 4 = 11, also GP = SEZ − FEZ = 11 − 9 = 2 Tage (beide Rechenwege liefern denselben Wert). Der Gesamtpuffer gibt an, um wie viele Tage sich ein Vorgang verschieben darf, ohne den Projektendtermin zu gefährden.",
+    "verweis": "Modul 01, Abschnitt 1.1 – Netzplantechnik: Pufferberechnung"
+  },
+  {
+    "id": "M01-991",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Netzplan & Puffer",
+    "gebiet": "A5",
+    "typ": "hotspot",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Vorgang 'Serverkonfiguration' bei der Weimarer Serverbetreuung GmbH: FAZ = 8 Tage, Dauer = 6 Tage, Gesamtpuffer GP = 3 Tage. Berechne den spätesten Anfangszeitpunkt (SAZ) und klicke das richtige Feld an.",
+    "svg": "<svg viewBox='0 0 260 230' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><text x='130' y='20' text-anchor='middle'>FAZ = 8, Dauer = 6, GP = 3</text><text x='130' y='40' text-anchor='middle'>Gesucht: spätester Anfangszeitpunkt SAZ</text><rect x='15' y='60' width='230' height='34' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='82' text-anchor='middle'>SAZ = 8</text><rect x='15' y='100' width='230' height='34' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='122' text-anchor='middle'>SAZ = 11</text><rect x='15' y='140' width='230' height='34' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='162' text-anchor='middle'>SAZ = 14</text><rect x='15' y='180' width='230' height='34' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='202' text-anchor='middle'>SAZ = 17</text></svg>",
+    "zonen": [
+      {
+        "x": 15,
+        "y": 60,
+        "w": 230,
+        "h": 34,
+        "richtig": false,
+        "label": "SAZ = 8"
+      },
+      {
+        "x": 15,
+        "y": 100,
+        "w": 230,
+        "h": 34,
+        "richtig": true,
+        "label": "SAZ = 11"
+      },
+      {
+        "x": 15,
+        "y": 140,
+        "w": 230,
+        "h": 34,
+        "richtig": false,
+        "label": "SAZ = 14"
+      },
+      {
+        "x": 15,
+        "y": 180,
+        "w": 230,
+        "h": 34,
+        "richtig": false,
+        "label": "SAZ = 17"
+      }
+    ],
+    "erklaerungKurz": "SAZ = FAZ + GP = 8 + 3 = 11 Tage.",
+    "erklaerungLang": "Aus der Definition des Gesamtpuffers GP = SAZ − FAZ folgt umgestellt SAZ = FAZ + GP = 8 + 3 = 11 Tage. Zur Kontrolle: FEZ = FAZ + Dauer = 8 + 6 = 14, SEZ = SAZ + Dauer = 11 + 6 = 17, also GP = SEZ − FEZ = 17 − 14 = 3 Tage – stimmt mit der Vorgabe überein.",
+    "verweis": "Modul 01, Abschnitt 1.1 – Netzplantechnik: Pufferberechnung"
+  },
+  {
+    "id": "M01-992",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Netzplan & Puffer",
+    "gebiet": "A5",
+    "typ": "beschriftung",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Im dargestellten Netzplan der Cappeler Bauprojekte GmbH sind vier Vorgänge mit ihren Dauern angegeben (A=4 Tage, B=6 Tage, C=3 Tage, D=2 Tage). Auf A folgen B und C, D folgt auf B und C. Berechne für jeden Vorgang den Gesamtpuffer und ordne den nummerierten Vorgängen den passenden Status zu.",
+    "svg": "<svg viewBox='0 0 300 190' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><line x1='85' y1='90' x2='130' y2='45' stroke='#2A2F39' stroke-width='1.5'/><line x1='85' y1='105' x2='130' y2='150' stroke='#2A2F39' stroke-width='1.5'/><line x1='200' y1='45' x2='235' y2='90' stroke='#2A2F39' stroke-width='1.5'/><line x1='200' y1='150' x2='235' y2='105' stroke='#2A2F39' stroke-width='1.5'/><rect x='15' y='70' width='70' height='50' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='50' y='90' text-anchor='middle' font-weight='bold' fill='#69707D'>1</text><text x='50' y='108' text-anchor='middle' font-size='11'>A - 4 Tage</text><rect x='130' y='15' width='70' height='50' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='165' y='35' text-anchor='middle' font-weight='bold' fill='#69707D'>2</text><text x='165' y='53' text-anchor='middle' font-size='11'>B - 6 Tage</text><rect x='130' y='125' width='70' height='50' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='165' y='145' text-anchor='middle' font-weight='bold' fill='#69707D'>3</text><text x='165' y='163' text-anchor='middle' font-size='11'>C - 3 Tage</text><rect x='235' y='70' width='60' height='50' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='265' y='90' text-anchor='middle' font-weight='bold' fill='#69707D'>4</text><text x='265' y='108' text-anchor='middle' font-size='11'>D - 2 Tage</text></svg>",
+    "ziele": [
+      {
+        "nr": 1,
+        "loesung": "A – kritisch (GP=0)"
+      },
+      {
+        "nr": 2,
+        "loesung": "B – kritisch (GP=0)"
+      },
+      {
+        "nr": 3,
+        "loesung": "C – nicht kritisch (GP=3)"
+      },
+      {
+        "nr": 4,
+        "loesung": "D – kritisch (GP=0)"
+      }
+    ],
+    "labels": [
+      "A – kritisch (GP=0)",
+      "B – kritisch (GP=0)",
+      "C – nicht kritisch (GP=3)",
+      "D – kritisch (GP=0)",
+      "B – nicht kritisch (GP=2)",
+      "A – nicht kritisch (GP=1)",
+      "C – kritisch (GP=1)",
+      "D – nicht kritisch (GP=2)"
+    ],
+    "erklaerungKurz": "Kritischer Pfad A-B-D (GP=0 bei allen dreien); Vorgang C hat einen Gesamtpuffer von 3 Tagen und ist nicht kritisch.",
+    "erklaerungLang": "Vorwärtsrechnung: FAZ_A=0, FEZ_A=0+4=4. FAZ_B=4 (nach A), FEZ_B=4+6=10. FAZ_C=4 (nach A), FEZ_C=4+3=7. FAZ_D=max(FEZ_B,FEZ_C)=max(10,7)=10, FEZ_D=10+2=12 (Projektdauer). Rückwärtsrechnung: SEZ_D=12, SAZ_D=12−2=10. SEZ_B=SAZ_D=10, SAZ_B=10−6=4. SEZ_C=SAZ_D=10, SAZ_C=10−3=7. SEZ_A=min(SAZ_B,SAZ_C)=min(4,7)=4, SAZ_A=4−4=0. Gesamtpuffer: GP_A=SAZ_A−FAZ_A=0, GP_B=SAZ_B−FAZ_B=4−4=0, GP_C=SAZ_C−FAZ_C=7−4=3, GP_D=SAZ_D−FAZ_D=10−10=0. Der kritische Pfad A-B-D hat GP=0 und bestimmt mit 4+6+2=12 Tagen die Projektdauer; C liegt mit 3 Tagen Puffer nicht auf dem kritischen Pfad.",
+    "verweis": "Modul 01, Abschnitt 1.1 – Netzplantechnik: Vorwärts-/Rückwärtsrechnung und kritischer Pfad"
+  },
+  {
+    "id": "M03-990",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "beschriftung",
+    "schwierigkeit": 2,
+    "frage": "Bei der Kirchhainer Gebäudetechnik GmbH verbindet die strukturierte Verkabelung Standortverteiler, Gebäudeverteiler, Etagenverteiler und Anschlussdose. Ordne den drei nummerierten Verkabelungsstrecken den richtigen Bereich zu.",
+    "svg": "<svg viewBox='0 0 260 300' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='30' y='10' width='200' height='40' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='34' text-anchor='middle'>Standortverteiler</text><line x1='130' y1='50' x2='130' y2='90' stroke='#2A2F39' stroke-width='1.5'/><text x='150' y='74' font-weight='bold' fill='#69707D'>1</text><rect x='30' y='90' width='200' height='40' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='114' text-anchor='middle'>Gebäudeverteiler</text><line x1='130' y1='130' x2='130' y2='170' stroke='#2A2F39' stroke-width='1.5'/><text x='150' y='154' font-weight='bold' fill='#69707D'>2</text><rect x='30' y='170' width='200' height='40' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='194' text-anchor='middle'>Etagenverteiler</text><line x1='130' y1='210' x2='130' y2='250' stroke='#2A2F39' stroke-width='1.5'/><text x='150' y='234' font-weight='bold' fill='#69707D'>3</text><rect x='30' y='250' width='200' height='40' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='274' text-anchor='middle'>Anschlussdose</text></svg>",
+    "ziele": [
+      {
+        "nr": 1,
+        "loesung": "Primärbereich"
+      },
+      {
+        "nr": 2,
+        "loesung": "Sekundärbereich"
+      },
+      {
+        "nr": 3,
+        "loesung": "Tertiärbereich"
+      }
+    ],
+    "labels": [
+      "Primärbereich",
+      "Sekundärbereich",
+      "Tertiärbereich",
+      "Rangierbereich",
+      "Anschlussbereich"
+    ],
+    "erklaerungKurz": "Primärbereich: Standort-/Geländeverkabelung zwischen Gebäuden. Sekundärbereich: Steigbereich innerhalb eines Gebäudes. Tertiärbereich: Etagenverkabelung bis zur Anschlussdose.",
+    "erklaerungLang": "Die strukturierte Verkabelung nach EN 50173 gliedert sich in drei Bereiche: Der Primärbereich (Geländeverkabelung) verbindet den Standortverteiler mit den Gebäudeverteilern verschiedener Gebäude, meist mit Lichtwellenleitern über größere Distanzen. Der Sekundärbereich (Steigbereich, Gebäudeverkabelung) verbindet den Gebäudeverteiler mit den Etagenverteilern innerhalb eines Gebäudes. Der Tertiärbereich (Etagenverkabelung, horizontale Verkabelung) führt vom Etagenverteiler zur Anschlussdose am Arbeitsplatz, üblicherweise mit Kupferkabeln (max. 90 m fest verlegt).",
+    "verweis": "Modul 03, Abschnitt 3.1 – Strukturierte Verkabelung (Primär-, Sekundär-, Tertiärbereich)"
+  },
+  {
+    "id": "M03-991",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "beschriftung",
+    "schwierigkeit": 2,
+    "frage": "Ein Arbeitsplatz-PC bei der Wohrataler Verwaltungsservice GmbH ist über strukturierte Verkabelung mit dem Etagenverteiler verbunden. Benenne die drei Stationen der Verkabelungsstrecke in der richtigen Reihenfolge (1 = arbeitsplatznah).",
+    "svg": "<svg viewBox='0 0 300 140' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='10' y='45' width='80' height='44' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='50' y='72' text-anchor='middle' font-weight='bold' fill='#69707D'>1</text><line x1='90' y1='67' x2='110' y2='67' stroke='#2A2F39' stroke-width='1.5'/><rect x='110' y='45' width='80' height='44' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='150' y='72' text-anchor='middle' font-weight='bold' fill='#69707D'>2</text><line x1='190' y1='67' x2='210' y2='67' stroke='#2A2F39' stroke-width='1.5'/><rect x='210' y='45' width='80' height='44' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='250' y='72' text-anchor='middle' font-weight='bold' fill='#69707D'>3</text></svg>",
+    "ziele": [
+      {
+        "nr": 1,
+        "loesung": "Anschlussdose"
+      },
+      {
+        "nr": 2,
+        "loesung": "Patchpanel"
+      },
+      {
+        "nr": 3,
+        "loesung": "Switch"
+      }
+    ],
+    "labels": [
+      "Anschlussdose",
+      "Patchpanel",
+      "Switch",
+      "Router",
+      "Medienkonverter"
+    ],
+    "erklaerungKurz": "Die Strecke verläuft von der Anschlussdose (TO) über ein festverlegtes Kabel zum Patchpanel im Etagenverteiler und von dort per Patchkabel zum Switch.",
+    "erklaerungLang": "Die horizontale Verkabelung beginnt an der Anschlussdose (Telecommunications Outlet) am Arbeitsplatz. Von dort führt ein fest verlegtes Kabel (max. 90 m) zum Patchpanel im Etagenverteiler, wo die Kabel sauber terminiert und über Patchkabel flexibel auf die Ports der aktiven Komponenten geschaltet werden können. Ein Patchkabel verbindet das Patchpanel schließlich mit dem Switch, der als aktive Netzwerkkomponente die Signale auswertet und weiterleitet. Die Gesamtlänge des Kanals (inkl. Patchkabel) darf 100 m nicht überschreiten.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Verkabelungsstrecke vom Arbeitsplatz zum aktiven Gerät"
+  },
+  {
+    "id": "M03-992",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "hotspot",
+    "schwierigkeit": 2,
+    "frage": "Zwei Etagenverteiler auf dem Werksgelände der Rauschenberger Industriepark GmbH sollen über eine Strecke von 250 Metern verbunden werden. Welches Übertragungsmedium muss eingesetzt werden?",
+    "svg": "<svg viewBox='0 0 300 150' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='11'><text x='150' y='25' text-anchor='middle'>Strecke: 250 m zwischen zwei Etagenverteilern</text><rect x='10' y='60' width='65' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='42' y='90' text-anchor='middle'>Cat 6a UTP</text><rect x='85' y='60' width='65' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='117' y='90' text-anchor='middle'>Cat 5e UTP</text><rect x='160' y='60' width='65' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='90' text-anchor='middle'>Koaxial</text><rect x='235' y='60' width='65' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='267' y='90' text-anchor='middle'>LWL</text></svg>",
+    "zonen": [
+      {
+        "x": 10,
+        "y": 60,
+        "w": 65,
+        "h": 50,
+        "richtig": false,
+        "label": "Cat 6a UTP"
+      },
+      {
+        "x": 85,
+        "y": 60,
+        "w": 65,
+        "h": 50,
+        "richtig": false,
+        "label": "Cat 5e UTP"
+      },
+      {
+        "x": 160,
+        "y": 60,
+        "w": 65,
+        "h": 50,
+        "richtig": false,
+        "label": "Koaxial"
+      },
+      {
+        "x": 235,
+        "y": 60,
+        "w": 65,
+        "h": 50,
+        "richtig": true,
+        "label": "LWL"
+      }
+    ],
+    "erklaerungKurz": "Twisted-Pair-Kupferkabel (Cat 5e/6a) sind auf max. 100 m Segmentlänge begrenzt, Koaxialkabel ist in der strukturierten Verkabelung nicht mehr vorgesehen. Bei 250 m ist ein Lichtwellenleiter (LWL) erforderlich.",
+    "erklaerungLang": "Twisted-Pair-Verkabelung (Cat 5e/6a) ist nach Norm auf eine maximale Segmentlänge von 100 m begrenzt (90 m festverlegt + 10 m Patchkabel), da die Signaldämpfung darüber zu hoch wird. Koaxialkabel ist in der modernen strukturierten Verkabelung nicht mehr vorgesehen. Für die geforderte Strecke von 250 m zwischen zwei Verteilern muss daher ein Lichtwellenleiter (LWL) eingesetzt werden, der je nach Fasertyp (Multimode/Singlemode) Reichweiten von mehreren hundert Metern bis zu vielen Kilometern erlaubt und zudem unempfindlich gegen elektromagnetische Störungen ist – auf einem Werksgelände mit Metallverarbeitung ein zusätzlicher Vorteil.",
+    "verweis": "Modul 03, Abschnitt 3.3 – Übertragungsmedien und Reichweiten"
+  },
+  {
+    "id": "M03-993",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "beschriftung",
+    "schwierigkeit": 2,
+    "frage": "Im 19-Zoll-Serverschrank der Burgwalder Rechenzentrum GmbH sind vier Baugruppen von oben nach unten eingebaut. Benenne die Komponenten anhand ihrer typischen Einbauposition (schwere Geräte unten, Verkabelung oben).",
+    "svg": "<svg viewBox='0 0 200 340' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='10' y='10' width='180' height='320' fill='none' stroke='#2A2F39' stroke-width='1.5' rx='4'/><rect x='20' y='20' width='160' height='60' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='100' y='55' text-anchor='middle' font-weight='bold' fill='#69707D'>1</text><rect x='20' y='90' width='160' height='60' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='100' y='125' text-anchor='middle' font-weight='bold' fill='#69707D'>2</text><rect x='20' y='160' width='160' height='100' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='100' y='215' text-anchor='middle' font-weight='bold' fill='#69707D'>3</text><rect x='20' y='270' width='160' height='60' fill='#fff' stroke='#2A2F39' stroke-width='2' rx='4'/><text x='100' y='305' text-anchor='middle' font-weight='bold' fill='#69707D'>4</text></svg>",
+    "ziele": [
+      {
+        "nr": 1,
+        "loesung": "Patchpanel"
+      },
+      {
+        "nr": 2,
+        "loesung": "Switch"
+      },
+      {
+        "nr": 3,
+        "loesung": "Server"
+      },
+      {
+        "nr": 4,
+        "loesung": "USV (unterbrechungsfreie Stromversorgung)"
+      }
+    ],
+    "labels": [
+      "Patchpanel",
+      "Switch",
+      "Server",
+      "USV (unterbrechungsfreie Stromversorgung)",
+      "Router",
+      "Kabelkanal"
+    ],
+    "erklaerungKurz": "Übliche Rack-Reihenfolge von oben nach unten: Patchpanel (Kabelmanagement), Switch, Server, USV – schwere Geräte wie die USV werden aus Stabilitätsgründen unten eingebaut.",
+    "erklaerungLang": "Beim Aufbau eines 19-Zoll-Serverschranks wird üblicherweise das Patchpanel oben eingebaut, da hier die meisten Kabel von der Etagenverkabelung ankommen und ein guter Zugang für Kabelmanagement wichtig ist. Darunter folgt der Switch, der die Ports des Patchpanels aktiv verbindet – kurze Patchkabel-Wege sind vorteilhaft. Server werden mittig platziert, da sie regelmäßig gewartet werden müssen. Die USV wird aus Gründen der Statik und des Schwerpunkts ganz unten eingebaut, da sie durch die Batterien meist das schwerste Element im Rack ist und ein tiefer Schwerpunkt die Standsicherheit erhöht.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Aufbau eines 19-Zoll-Racks"
+  },
+  {
+    "id": "M03-994",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "hotspot",
+    "schwierigkeit": 3,
+    "frage": "Ein 19-Zoll-Serverschrank der Münchhausener Netzwerktechnik GmbH hat eine nutzbare Höhe von 42 Höheneinheiten (HE). Bereits verbaut sind: 1 Patchpanel (2 HE), 2 Switches (je 1 HE), 1 Server (4 HE) und 1 USV (3 HE). Wie viele Höheneinheiten (HE) sind noch frei? Klicke das richtige Feld an.",
+    "svg": "<svg viewBox='0 0 300 150' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='11'><text x='150' y='25' text-anchor='middle'>Serverschrank: 42 HE nutzbar – wie viele HE frei?</text><rect x='10' y='60' width='65' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='42' y='90' text-anchor='middle'>11 HE</text><rect x='85' y='60' width='65' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='117' y='90' text-anchor='middle'>31 HE</text><rect x='160' y='60' width='65' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='90' text-anchor='middle'>34 HE</text><rect x='235' y='60' width='65' height='50' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='267' y='90' text-anchor='middle'>42 HE</text></svg>",
+    "zonen": [
+      {
+        "x": 10,
+        "y": 60,
+        "w": 65,
+        "h": 50,
+        "richtig": false,
+        "label": "11 HE"
+      },
+      {
+        "x": 85,
+        "y": 60,
+        "w": 65,
+        "h": 50,
+        "richtig": true,
+        "label": "31 HE"
+      },
+      {
+        "x": 160,
+        "y": 60,
+        "w": 65,
+        "h": 50,
+        "richtig": false,
+        "label": "34 HE"
+      },
+      {
+        "x": 235,
+        "y": 60,
+        "w": 65,
+        "h": 50,
+        "richtig": false,
+        "label": "42 HE"
+      }
+    ],
+    "erklaerungKurz": "Belegt: 2+1+1+4+3 = 11 HE. Frei: 42 − 11 = 31 HE.",
+    "erklaerungLang": "Eine Höheneinheit (HE) entspricht 1,75 Zoll bzw. 4,45 cm Einbauhöhe im 19-Zoll-Rack. Die belegte Höhe ergibt sich aus der Summe aller verbauten Geräte: Patchpanel 2 HE + 2 Switches à 1 HE (=2 HE) + Server 4 HE + USV 3 HE = 2+2+4+3 = 11 HE. Bei einer nutzbaren Gesamthöhe von 42 HE verbleiben somit 42 − 11 = 31 HE frei für zukünftige Erweiterungen.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Höheneinheiten (HE) im 19-Zoll-Rack"
+  },
+  {
+    "id": "M02-950",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Die Lahntaler Lagertechnik GmbH erhält folgende E-Mail von ihrem Lieferanten: \"Due to supply chain disruptions, the delivery of your steel components order #4521 is delayed by two weeks. We apologize for the inconvenience and will notify you immediately once the shipment leaves our facility. Thank you for your patience.\" – Wann werden die Stahlkomponenten voraussichtlich ankommen?",
+    "optionen": [
+      "Zwei Wochen später als ursprünglich geplant",
+      "Sofort nach Versand aus der Fabrik",
+      "Innerhalb von 48 Stunden",
+      "Erst nach Bestätigung durch die Lahntaler GmbH"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die E-Mail verspricht, den Versand zu melden, gibt aber kein konkretes Ankunftsdatum an.",
+      "Es wird nur von einer Verzögerung von zwei Wochen gesprochen, nicht von sofortigem Versand.",
+      "Nichts im Text deutet auf eine Bestätigungspflicht hin."
+    ],
+    "erklaerungKurz": "\"delayed by two weeks\" bedeutet, dass die Lieferung zwei Wochen später ankommt als geplant.",
+    "erklaerungLang": "Verzögerungsangaben (\"delayed by X\") sind zentrale Informationen in Lieferantenkommunikation. \"Immediately\" in diesem Kontext bezieht sich auf die Benachrichtigung des Versands, nicht auf die Ankunft. Englische Geschäftskommunikation erfordert präzises Verständnis von Zeitangaben.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-951",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Cölber Cloudbetreuung GmbH erhält diese Ankündigung: \"Scheduled Maintenance Window: Our ERP system will be unavailable on Saturday, July 20, 10:00 PM to 2:00 AM Sunday for critical database updates. Customers will not be able to place orders during this period. We recommend completing all orders by 9:00 PM Saturday. System backups are performed every Friday automatically.\" – Welche Aussagen sind korrekt? (Mehrfachauswahl)",
+    "optionen": [
+      "Das ERP-System ist am Samstag ab 22:00 Uhr nicht erreichbar.",
+      "Es wird empfohlen, alle Bestellungen bis Samstag 21:00 Uhr abzuschließen.",
+      "Backup-Prozesse laufen automatisch jeden Freitag.",
+      "Alle Bestellungen müssen bis 22:00 Uhr Samstag aufgegeben sein.",
+      "Die Wartung findet am Sonntagvormittag statt."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Der Text sagt \"by 9:00 PM Saturday\" (bis 21:00 Uhr), nicht 22:00 Uhr.",
+      "Die Wartung läuft von Samstag 22:00 Uhr bis Sonntag 2:00 Uhr nachts (\"10:00 PM to 2:00 AM\"), nicht am Sonntagvormittag."
+    ],
+    "erklaerungKurz": "Das System ist ab Samstag 22:00 Uhr nicht erreichbar (\"unavailable... 10:00 PM\"), empfohlen wird Bestellabschluss bis 21:00 Uhr (\"by 9:00 PM\"), Backups laufen automatisch jeden Freitag.",
+    "erklaerungLang": "Wartungsfenster-Ankündigungen verlangen genaues Lesen der Uhrzeiten. \"10:00 PM\" ist 22:00 Uhr, \"2:00 AM\" ist 2:00 Uhr nachts – das Fenster dauert also genau vier Stunden und reicht über Mitternacht in den Sonntag hinein. Davon zu trennen ist die Empfehlung \"by 9:00 PM Saturday\": Bestellschluss ist 21:00 Uhr, eine Stunde vor der Abschaltung. Wer \"10:00 PM\" mit 21:00 Uhr verwechselt, verschiebt beide Zeiten. Die automatischen Backups (\"every Friday\") sind davon unabhängig und laufen weiter.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-952",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "In einer Softwarelizenz findet die Wetterauer Lizenzberatung GmbH folgende Klausel: \"This license grants you a non-exclusive, non-transferable right to use the software on a single computer. You may not sublicense, rent, lease, transfer, assign, or sell this license to any other party without written consent of the vendor.\" – Was ist gemäß Lizenztext NICHT erlaubt?",
+    "optionen": [
+      "Die Lizenz an eine andere Partei weiterzugeben ohne schriftliche Genehmigung des Anbieters",
+      "Die Software auf genau einem einzelnen Computer zu nutzen, wie im Text beschrieben",
+      "Die Lizenz für sich exklusiv, also unter Ausschluss anderer Nutzer, zu beanspruchen",
+      "Den Anbieter vorab schriftlich um seine Zustimmung zur Weitergabe der Lizenz an einen Dritten zu bitten"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Genau das räumt die Lizenz ein: \"right to use the software on a single computer\" – das ist erlaubt.",
+      "Gefragt ist, was der Text VERBIETET. \"non-exclusive\" spricht kein Verbot aus – es hält nur fest, dass dem Nutzer keine Ausschließlichkeit eingeräumt wird.",
+      "Das ist der vom Lizenztext vorgesehene Weg: Mit schriftlicher Zustimmung des Anbieters wäre eine Weitergabe möglich – verboten ist sie nur ohne diese Zustimmung."
+    ],
+    "erklaerungKurz": "\"non-transferable right\" und \"without written consent... may not... transfer\" bedeuten, dass die Weitergabe ohne Genehmigung verboten ist.",
+    "erklaerungLang": "Lizenztexte arbeiten mit festen Wendungen, die einzeln gelesen werden müssen. \"non-exclusive\" = nicht ausschließlich: Der Anbieter darf dieselbe Software auch an andere lizenzieren – über Rechte des Nutzers sagt das nichts. \"non-transferable\" = nicht übertragbar: Die Lizenz darf nicht an Dritte weitergegeben werden. \"without written consent of the vendor\" = ohne schriftliche Zustimmung des Anbieters; die ganze Aufzählung \"sublicense, rent, lease, transfer, assign, or sell\" steht unter genau diesem Vorbehalt. \"on a single computer\" begrenzt die Nutzung auf einen Rechner je Lizenz – für mehrere Rechner braucht es mehrere Lizenzen.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-953",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Amöneburger Datendienste GmbH lädt ihre Daten in die Cloud. Der SLA-Vertrag enthält: \"Service Availability Guarantee: 99.9% uptime per calendar month, measured between 6:00 AM and 6:00 PM Monday through Friday. Excluded from this guarantee: scheduled maintenance, force majeure events, and network issues outside our data center.\" – Für welchen Zeitraum gilt die 99,9%-Verfügbarkeit?",
+    "optionen": [
+      "Nur für Werktage von 6:00 bis 18:00 Uhr",
+      "Für alle 7 Tage der Woche, rund um die Uhr",
+      "Für Wochentage, ohne geplante Wartungen",
+      "Für jeden Monatstag, außer bei Katastrophen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die SLA ist bewusst auf Werktage und Geschäftszeiten begrenzt (\"Monday through Friday\", \"6:00 AM and 6:00 PM\").",
+      "Richtig ist, dass Wartungen ausgenommen sind, aber die Verfügbarkeit ist auf die genannten Zeiten begrenzt.",
+      "Die SLA ist explizit NICHT rund um die Uhr gültig."
+    ],
+    "erklaerungKurz": "\"99.9% uptime... measured between 6:00 AM and 6:00 PM Monday through Friday\" – die Garantie gilt nur an Werktagen während Geschäftszeiten.",
+    "erklaerungLang": "Cloud-SLAs (Service Level Agreements) definieren Verfügbarkeitszusagen oft differenziert nach Zeit und Ausnahmefällen. \"Monday through Friday\" schließt Wochenenden aus, \"6:00 AM to 6:00 PM\" schließt Nächte aus. \"Excluded from this guarantee\" sind Wartungen und höhere Gewalt – das sind Ausnahmen von der 99,9%-Zusage, nicht Bedingungen dafür. Ein häufiger Fehler: SLAs als rund-um-die-Uhr zu interpretieren, wenn sie zeitlich begrenzt sind.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-954",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mehrfach",
+    "schwierigkeit": 2,
+    "frage": "Die Stadtallendorfer Anwendungsbetreuung GmbH erhält einen Changelog: \"Version 3.2.1 (Released June 2026): Fixed critical bug in invoice module causing data corruption. Updated payment gateway integration. Improved error logging. Known issues: Reports export may timeout with large datasets. UI responsiveness on mobile devices needs optimization. Download: [link]\" – Welche Aussagen stimmen? (Mehrfachauswahl)",
+    "optionen": [
+      "Version 3.2.1 wurde im Juni 2026 veröffentlicht.",
+      "Ein kritischer Fehler im Rechnungsmodul wurde behoben.",
+      "Die Payment-Gateway-Integration wurde aktualisiert.",
+      "Der Export von Reports funktioniert in allen Fällen fehlerfrei.",
+      "Auf mobilen Geräten ist die Benutzeroberfläche noch nicht vollständig optimiert."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Der Changelog nennt unter \"Known issues\": \"Reports export may timeout with large datasets\" – bei großen Datenmengen kann es Timeouts geben.",
+      ""
+    ],
+    "erklaerungKurz": "Die ersten drei Punkte sind direkt im Text genannt. \"Known issues\" listet Optimierungsbedarf für mobil auf; Timeouts beim Report-Export sind ein bekanntes Problem.",
+    "erklaerungLang": "Changelogs folgen typischen Mustern: Versionsnummer, Release-Datum, Bugfixes, Updates, Known Issues. \"May timeout\" = mögliches Problem, nicht bestätigt, aber bekannt. \"Needs optimization\" = noch nicht optimiert. Das Verständnis solcher technischen Ankündigungen ist zentral für IT-Profis.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-955",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Ein Support-Ticket zu einem Druckersystem bei Neustädter Druckservice GmbH enthält: \"Customer escalated the issue due to unresolved problem for 5 days. Printer offline, no error log available. Suggested action: Power cycle the device for 30 seconds and check if firmware is current. If issue persists after restart, we will escalate to level 3 support.\" – Wie soll der Kunde zunächst reagieren?",
+    "optionen": [
+      "Das Gerät für 30 Sekunden neu starten und prüfen, ob die Firmware aktuell ist",
+      "Sofort den Level-3-Support des Herstellers kontaktieren",
+      "Das Fehlerprotokoll auswerten, um die Ursache der Störung zu diagnostizieren",
+      "Den Drucker dauerhaft ausschalten und umgehend durch ein neues Gerät ersetzen lassen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Level 3 Support wird nur kontaktiert, wenn das Problem nach dem Neustart weiterbesteht (\"if issue persists after restart\").",
+      "Das Ticket sagt explizit: \"no error log available\" – es gibt kein Fehlerprotokoll.",
+      "Ein Austausch ist nicht erwähnt; der Support schlägt erst einfache Maßnahmen vor."
+    ],
+    "erklaerungKurz": "\"Suggested action: Power cycle the device for 30 seconds and check if firmware is current\" – das ist der erste Schritt.",
+    "erklaerungLang": "Support-Tickets folgen Eskalationsstufen: Level 1 = einfache Maßnahmen (Neustart, Firmware-Check), Level 2/3 = tiefere Diagnose. \"If issue persists after restart, we will escalate\" = erst testen, dann eskalieren. Das ist die übliche Logik im IT-Support.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-956",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Schröcker Lagerlogistik GmbH erhält ein Datenblatt (Datasheet) zu einem neuen Lagerautomaten: \"Specifications: Storage capacity 2,000 units. Maximum throughput 150 picks per hour. Power consumption 2.5 kW. Operating temperature range -5°C to 45°C. Warranty: 24 months parts and labor. Availability: Ready for shipment within 4 weeks.\" – Welche Aussagen sind korrekt? (Mehrfachauswahl)",
+    "optionen": [
+      "Der Automat kann maximal 150 Artikel pro Stunde entnehmen.",
+      "Die Betriebstemperatur liegt zwischen -5°C und 45°C.",
+      "Die Garantie deckt Teile und Arbeit für zwei Jahre ab.",
+      "Der Automat ist innerhalb von 4 Wochen versandfertig.",
+      "Der Stromverbrauch liegt unter 2 Kilowatt."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Der Text sagt 2.5 kW (2,5 Kilowatt), nicht unter 2 kW."
+    ],
+    "erklaerungKurz": "\"150 picks per hour\", \"Operating temperature range -5°C to 45°C\", \"24 months parts and labor\", \"Ready for shipment within 4 weeks\" (= innerhalb von 4 Wochen) – alles korrekt außer dem Stromverbrauch (2,5 kW, nicht unter 2 kW).",
+    "erklaerungLang": "Datenblätter (Datasheets) sind technische Spezifikationen. \"Throughput\" = Leistung pro Stunde, \"Operating temperature range\" = Betriebstemperaturbereich, \"Warranty ... parts and labor\" = Garantie für Teile und Arbeit (Full-Service-Garantie), \"within 4 weeks\" = innerhalb von 4 Wochen (minimal). \"2.5 kW\" ist nicht \"unter 2 kW\".",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-957",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Kirtorfer Sicherheitsberatung GmbH erhält folgende E-Mail von einem Sicherheitsdienstleister: \"URGENT: Employees in your organization have been targeted by phishing emails claiming to be from our IT department. Do NOT open attachments or click links from unexpected emails. If you have already opened a suspicious email, please report it immediately to [email] and change your password. These emails are fake and may contain malware.\" – Was sollen die Mitarbeiter NICHT tun?",
+    "optionen": [
+      "Anhänge öffnen oder auf Links in unerwarteten E-Mails klicken",
+      "Verdächtige E-Mails dem IT-Department melden",
+      "Ihr Passwort ändern, falls sie eine verdächtige E-Mail geöffnet haben",
+      "Mit dem Sicherheitsdienstleister kommunizieren"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Verdächtige E-Mails SOLLTEN gemeldet werden (\"please report it immediately\").",
+      "Passwortänderung wird EMPFOHLEN bei verdächtigen E-Mails (\"change your password\").",
+      "Kommunikation mit dem Sicherheitsdienstleister ist erwünscht."
+    ],
+    "erklaerungKurz": "\"Do NOT open attachments or click links from unexpected emails\" – das ist die zentrale Warnung.",
+    "erklaerungLang": "Phishing-Warnungen folgen einem Schema: Identifikation der Bedrohung, Verhaltensregel (nicht öffnen), Reaktion bei Verdacht (melden, Passwort wechseln). \"Do NOT\" ist die Standardformulierung für Sicherheitsanweisungen. Mitarbeiter müssen verdächtige E-Mails aktiv melden, nicht ignorieren.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  }
+]

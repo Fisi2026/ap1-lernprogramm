@@ -1,0 +1,15 @@
+{
+  "lizard_ccn_ueber_15": 0,
+  "lizard_ccn_ueber_20": 0,
+  "lizard_nloc_ueber_50": 2,
+  "lizard_nloc_ueber_80": 0,
+  "knip_dateien": 0,
+  "knip_exporte": 0,
+  "knip_typen": 0,
+  "knip_pakete": 0,
+  "ruff": 0,
+  "ruff_s": 0,
+  "shellcheck": 0,
+  "tsc_tools": 0,
+  "no_unsafe": 338
+}

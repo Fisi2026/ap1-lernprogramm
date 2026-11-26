@@ -1,0 +1,86 @@
+# ⛔ SEIT N29 (24.09.2026, E45): NUR NOCH SICHERHEITSNETZ, KEIN KRITERIUM MEHR.
+#    Cloudflare liefert nur assets.directory aus (wrangler.jsonc: ./v2) - diese Datei wirkt erst,
+#    falls dort je wieder "." steht (dann haelt sie .git/config fern). Kein Werkzeug liest sie;
+#    "Wirkung beim Lerner" misst tools/ungepusht.py aus wrangler.jsonc (E44).
+# Wird von Cloudflare Wrangler beim Deploy gelesen: diese Pfade NICHT ausliefern.
+# Sicherheit: .git enthaelt u.a. das Token in .git/config -> niemals hochladen.
+.git
+.git/**
+.git_broken_old
+.git_broken_old/**
+.wrangler
+.wrangler/**
+# N20b (17.09.2026): Worker-Konfiguration und lokale Geheimnisse nie ausliefern
+wrangler.jsonc
+wrangler.toml
+.dev.vars
+.dev.vars*
+.github
+.github/**
+*.env
+*.sh
+*.py
+tests
+tests/**
+tools
+tools/**
+prompts
+prompts/**
+*.md
+backup_*.zip
+*.pdf
+
+# ══════════ 07.09.2026: DAS LOCH IM MUSTER ══════════
+# Die Zeilen darueber schliessen Skripte, Tests, Werkzeuge und Doku aus - alles, was die App
+# nicht braucht. `pool/` und die uebrigen Eingabedateien standen nie hier, obwohl sie zur selben
+# Klasse gehoeren. Gemessen mit `tools/deploy_inhalt.py`: von 6018 KB Deploy waren 2871 KB von
+# der App nicht erreichbar, allein 2432 KB davon `pool/*.json`.
+#
+# ⚠️ BELEG, DASS DAS GEFAHRLOS IST - dreifach gefuehrt, nicht geschaetzt:
+#   1. `lernprogramm_ap1.html` bindet ihre Teile ueber FESTE Tags ein (15x <script src>,
+#      styles.css, Manifest, Icons). Nichts wird zusammengesetzt.
+#   2. Der gesamte App-Code enthaelt KEIN `fetch`, KEIN `XMLHttpRequest`, KEIN dynamisches
+#      `import` und kein berechnetes `.src =`. Der einzige `fetch` steht in `sw.js` und
+#      beantwortet nur Anfragen, die der Browser ohnehin stellt.
+#   3. Der Volltext aller 27 App-Dateien (3063 KB, inklusive fragen.js) wurde gegen jeden der
+#      37 Namen gehalten. Einziger Treffer: die Zeichenfolge `pool/` in den KOPFKOMMENTAREN von
+#      `fragen.js` und `faelle.js` („automatisch gebaut aus pool/pool_m*.json") - ein Kommentar,
+#      kein Verweis.
+#
+# ⛔ `.assetsignore` SCHLIESST SICH SELBST NICHT AUS. Absicht: Wrangler liest die Datei beim
+#    Deploy; eine Datei, die sich selbst ausschliesst, ist ein unnoetiger Sonderfall fuer 0,3 KB.
+
+# Quelldateien der Fragen. `build_fragen.py` macht daraus fragen.js und faelle.js - NUR die
+# laedt die App. Der Pool lag bis hierher doppelt auf dem Server.
+pool
+pool/**
+# Eingabedateien einer frueheren Importrunde (M09 Unterricht), dieselbe Klasse.
+batches_m09
+batches_m09/**
+# Datendateien der WAECHTER: check.sh und die Suiten lesen sie, die App nie.
+begriffe_belegt.json
+inhaltstraeger.json
+laengen_ausnahmen.json
+zitate_belegt.json
+# Reste und Arbeitsumgebung: ein .pyc aus der Zeit vor dem .gitignore-Eintrag, das Windows-
+# Hilfsskript und die git-Konfiguration.
+__pycache__
+__pycache__/**
+*.pyc
+*.bat
+.gitignore
+.gitattributes
+
+# Impeccable-Skills fuer den Agenten (10.09.2026). Die App braucht sie nie; 17 MB samt einer
+# Windows-.exe haetten sonst auf dem Server gelegen. Dieselbe Klasse wie tools/ und tests/.
+.claude
+.claude/**
+
+# ══════════ 17.09.2026: DER NEUBAU WIRD PARALLEL AUSGELIEFERT ══════════
+# Die QUELLE des Umbaus bleibt ausgeschlossen - sie ist Eingabe, wie pool/ und tools/.
+# Ausgeliefert wird nur sein BAUERGEBNIS, und das liegt in `v2/` im Wurzelordner
+# (Nutzer-Entscheid E2 vom 16.09.2026: erst parallel, dann umschalten).
+# ⚠️ `v2/` steht bewusst NICHT in dieser Datei - es SOLL hochgeladen werden.
+# ⛔ Die alte App bleibt, was unter / laeuft. Erreichbar ist der Neubau unter /v2/.
+neu
+neu/**

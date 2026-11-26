@@ -1,0 +1,10 @@
+{
+  "permissions": { "allow": [
+    "Bash(bash tools/postfach.sh:*)",
+    "Bash(gh pr comment 1 --repo Fisi2026/ap1-postfach:*)",
+    "Bash(gh pr comment 2 --repo Fisi2026/ap1-postfach:*)",
+    "Bash(bash tools/gitc.sh push origin main)"
+  ] },
+  "hooks": { "SessionStart": [ { "hooks": [ { "type": "command",
+    "command": "bash \"$CLAUDE_PROJECT_DIR/tools/postfach.sh\" start", "timeout": 30 } ] } ] }
+}

@@ -1,0 +1,310 @@
+[
+  {
+    "id": "M03-934",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "OSI-Modell & Protokolle",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "freitext": true,
+    "frage": "Im TCP/IP-Modell überträgt das Protokoll ___ verbindungsorientiert und bestätigt zugestellte Segmente, während ___ verbindungslos und ohne Empfangsbestätigung arbeitet. Die automatische Vergabe von IP-Adressen im lokalen Netz übernimmt der Dienst ___.",
+    "verweis": "Modul 03, Abschnitt 3.2 – Netzwerkprotokolle und OSI-Modell",
+    "erklaerungKurz": "TCP ist verbindungsorientiert mit Empfangsbestätigung, UDP verbindungslos ohne Bestätigung; DHCP vergibt IP-Adressen automatisch.",
+    "erklaerungLang": "Die drei Lücken decken die zwei Transportprotokolle und einen Netzdienst ab.\n• TCP ist verbindungsorientiert: Drei-Wege-Handshake, Segmentnummern, Empfangsbestätigungen und Neuübertragung bei Verlust. Es garantiert Vollständigkeit und Reihenfolge – auf Kosten von Verzögerung.\n• UDP ist verbindungslos und bestätigt nichts. Das ist kein Mangel, sondern Absicht: Bei Sprache, Video oder DNS-Anfragen ist ein zu spät nachgeliefertes Paket wertloser als ein fehlendes.\n• ICMP ist der Distraktor bei der ersten Lücke – es transportiert keine Nutzdaten, sondern Steuer- und Fehlermeldungen (ping, Traceroute, „Ziel nicht erreichbar\").\n• DHCP vergibt IP-Adressen automatisch. Zur Abgrenzung der Distraktoren: DNS löst NAMEN auf, NAT übersetzt Adressen zwischen privatem und öffentlichem Netz, ARP ermittelt zu einer IP-Adresse die MAC-Adresse.\nMerke: TCP bestätigt, UDP nicht – und Adressen vergibt DHCP, Namen löst DNS.",
+    "luecken": [
+      {
+        "optionen": [
+          "TCP",
+          "UDP",
+          "ICMP",
+          "IP"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "UDP",
+          "TCP",
+          "ARP",
+          "HTTP"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "DHCP",
+          "DNS",
+          "NAT",
+          "ARP"
+        ],
+        "loesung": 0
+      }
+    ]
+  },
+  {
+    "id": "M06-943",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Passwörter & Authentifizierung",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "freitext": true,
+    "frage": "Bei der ___-Authentifizierung sind mindestens zwei unabhängige Faktoren nötig, etwa Wissen und Besitz. Passwörter sollten nicht im Klartext, sondern als ___ gespeichert werden. Ein zufälliger Wert, der vor dem Hashen angehängt wird, heißt ___.",
+    "erklaerungKurz": "Zwei-Faktor-Authentifizierung kombiniert zwei unabhängige Faktoren; Passwörter werden als Hashwert gespeichert, ein Salt schützt zusätzlich gegen Rainbow-Table-Angriffe.",
+    "erklaerungLang": "Die drei Lücken beschreiben, wie eine Anmeldung nach heutigem Stand gesichert wird.\n• Zwei-Faktor-Authentifizierung: zwei Faktoren aus VERSCHIEDENEN Kategorien – Wissen (Passwort), Besitz (Token, Smartphone), Sein (Fingerabdruck). Ein-Faktor ist der Normalfall mit Passwort allein; Single-Sign-on ist etwas anderes, nämlich eine Anmeldung für mehrere Dienste.\n• Hashwert statt Klartext: Ein Hash ist eine Einwegfunktion – aus dem Hash lässt sich das Passwort nicht zurückrechnen. Wird die Datenbank gestohlen, sind die Passwörter nicht unmittelbar verwertbar.\n• Salt: ein pro Passwort neuer Zufallswert, der vor dem Hashen angehängt wird. Er macht Rainbow Tables wertlos, weil derselbe Klartext bei jedem Nutzer einen anderen Hash ergibt.\n• Zur Abgrenzung: Ein Pepper ist ein GEHEIMER, für alle Passwörter gleicher Zusatzwert, der getrennt von der Datenbank liegt – eine ergänzende Maßnahme, nicht das Gefragte. Ein Token ist ein Besitzfaktor.\nMerke: Zwei Kategorien beim Faktor, Einwegfunktion beim Speichern, Zufallswert pro Nutzer beim Salt.",
+    "verweis": "Modul 06, Abschnitt 6.1 und 6.4 – IT-Sicherheitsrichtlinien und Authentifizierung",
+    "luecken": [
+      {
+        "optionen": [
+          "Zwei-Faktor",
+          "Ein-Faktor",
+          "Single-Sign-on",
+          "Zwei-Passwort"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Mehr-Faktor",
+          "Multi-Faktor",
+          "2FA"
+        ]
+      },
+      {
+        "optionen": [
+          "Hashwert",
+          "Klartext",
+          "Cookie",
+          "Base64-Kodierung"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Hash"
+        ]
+      },
+      {
+        "optionen": [
+          "Salt",
+          "Pepper",
+          "Token",
+          "Prüfsumme"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Salz"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "M04-922",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Programmiersprachen, Kontrollstrukturen & Systemgrundlagen",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "freitext": true,
+    "frage": "Eine ___ wiederholt Anweisungen, solange eine Bedingung erfüllt ist. Für eine im Voraus bekannte Anzahl von Durchläufen nimmt man in C und Java das Schlüsselwort ___. Eine ___ steuert den Programmablauf abhängig von einer Bedingung.",
+    "erklaerungKurz": "Schleifen wiederholen Anweisungen; die for-Schleife passt zu einer bekannten Anzahl Durchläufe; eine Verzweigung (if) steuert den Ablauf abhängig von einer Bedingung.",
+    "erklaerungLang": "Die drei Lücken benennen die zwei Grundbausteine jeder Programmablaufsteuerung.\n• Schleife: wiederholt Anweisungen, solange eine Bedingung erfüllt ist. Sie ist eine Kontrollstruktur, keine Funktion (die bündelt Code zur Wiederverwendung) und keine Variable (die speichert einen Wert).\n• for-Schleife bei BEKANNTER Anzahl: Sie führt Zählvariable, Abbruchbedingung und Schrittweite in einem Kopf zusammen – ideal, wenn die Zahl der Durchläufe vorab feststeht oder sich aus einer Länge ergibt.\n• while eignet sich, wenn die Zahl der Durchläufe UNBEKANNT ist (bis eine Eingabe gültig ist). do-while unterscheidet sich dadurch, dass der Rumpf mindestens einmal läuft, weil erst danach geprüft wird.\n• Verzweigung: steuert den Ablauf abhängig von einer Bedingung – if, else if, else oder switch. Eine Zuweisung setzt nur einen Wert, eine Deklaration legt eine Variable an.\nMerke: Schleife wiederholt, Verzweigung entscheidet – for bei bekannter, while bei unbekannter Anzahl.",
+    "verweis": "Modul 04, Abschnitt 4.6 – Kontrollstrukturen",
+    "luecken": [
+      {
+        "optionen": [
+          "Schleife",
+          "Funktion",
+          "Variable",
+          "Klasse"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Wiederholung"
+        ]
+      },
+      {
+        "optionen": [
+          "for",
+          "while",
+          "do-while",
+          "if"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Zählschleife"
+        ]
+      },
+      {
+        "optionen": [
+          "Verzweigung",
+          "Zuweisung",
+          "Deklaration",
+          "Konstante"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Selektion",
+          "Bedingung",
+          "if-Anweisung"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "M01-955",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Netzplan & Puffer",
+    "gebiet": "A5",
+    "typ": "dropdown",
+    "schwierigkeit": 3,
+    "freitext": true,
+    "frage": "Im Netzplan heißt die längste Kette von Vorgängen, die keine Verzögerung verträgt, der ___ Pfad. Der Spielraum, um den ein Vorgang verschoben werden kann, ohne das Projektende zu gefährden, ist der ___. Er ergibt sich als Differenz aus spätester und frühester ___.",
+    "erklaerungKurz": "Der kritische Pfad hat keinen Puffer; der Gesamtpuffer ist der Verschiebespielraum eines Vorgangs und ergibt sich aus der Differenz von spätester und frühester Lage (SAZ − FAZ).",
+    "erklaerungLang": "Die drei Lücken hängen zusammen: Der kritische Pfad ist definiert über den Puffer, und der Puffer über die Lage.\n• Kritischer Pfad: die LÄNGSTE Kette von Vorgängen durch den Netzplan. Seine Länge ist die Projektdauer, und genau deshalb hat jeder Vorgang darauf einen Puffer von null.\n• ⚠️ Der häufigste Fehler ist „kürzeste\": Der kürzeste Weg ist irrelevant, weil das Projekt erst fertig ist, wenn auch die längste Kette durch ist.\n• Gesamtpuffer: der Spielraum, um den ein Vorgang verschoben oder verlängert werden darf, ohne dass sich das Projektende verschiebt.\n• Berechnung über die LAGE, nicht die Dauer: GP = SAZ − FAZ, gleichwertig SEZ − FEZ. Die Dauer steht auf beiden Seiten der Differenz und fällt heraus – deshalb ist „Dauer\" hier falsch.\n• Praktische Folge: Ein Vorgang mit Puffer null ist kritisch. Wer Termine retten will, muss auf dem kritischen Pfad ansetzen; Puffer auf anderen Ketten helfen dem Endtermin nicht.\nMerke: Längste Kette, Puffer null – und der Puffer ist eine Differenz von Zeitpunkten, nicht von Dauern.",
+    "verweis": "Modul 01, Abschnitt 1.1 – Netzplantechnik: Pufferberechnung",
+    "luecken": [
+      {
+        "optionen": [
+          "kritische",
+          "kürzeste",
+          "parallele",
+          "optionale"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "kritischer"
+        ]
+      },
+      {
+        "optionen": [
+          "Puffer",
+          "Meilenstein",
+          "Vorgang",
+          "Zeitplan"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Gesamtpuffer",
+          "Zeitpuffer"
+        ]
+      },
+      {
+        "optionen": [
+          "Lage",
+          "Dauer",
+          "Anzahl",
+          "Reihenfolge"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Anfangslage",
+          "Anfangszeit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "M07-932",
+    "pruefungsteil": "AP1",
+    "modul": "M07",
+    "thema": "SLA & Servicevertrag",
+    "gebiet": "A5",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "freitext": true,
+    "frage": "Ein ___ legt messbare Leistungskennzahlen zwischen Anbieter und Kunde fest. Die maximale Zeit bis zum Beginn der Störungsbearbeitung heißt ___. Die zugesicherte prozentuale Betriebsbereitschaft eines Systems ist die ___.",
+    "erklaerungKurz": "Ein SLA (Service Level Agreement) vereinbart messbare Service-Kennzahlen; die Reaktionszeit ist die Zeit bis zum Bearbeitungsbeginn, die Verfügbarkeit die zugesicherte Betriebsbereitschaft in Prozent.",
+    "erklaerungLang": "Die drei Lücken benennen das Dokument und seine zwei wichtigsten Kennzahlen.\n• SLA (Service Level Agreement): die Vereinbarung zwischen Anbieter und Kunde über messbare Servicekennzahlen. Zur Abgrenzung: Ein OLA regelt dasselbe INTERN zwischen Abteilungen desselben Hauses, ein KPI ist eine einzelne Kennzahl, nicht die Vereinbarung.\n• Reaktionszeit: die Frist, bis der Dienstleister mit der Bearbeitung BEGINNT. Sie ist nicht die Wiederherstellungszeit – die läuft bis zur Behebung der Störung. Beide werden getrennt vereinbart, weil der Beginn zusagbar ist, das Ende von der Ursache abhängt.\n• Verfügbarkeit: die zugesicherte Betriebsbereitschaft in Prozent der Servicezeit. 99,9 Prozent lassen rund 8 Stunden 46 Minuten Ausfall pro Jahr zu, 99,99 Prozent nur etwa 53 Minuten.\n• Zuverlässigkeit und Auslastung sind andere Größen: Zuverlässigkeit beschreibt die Ausfallfreiheit über die Zeit (etwa als MTBF), Auslastung den Grad der Beanspruchung.\nMerke: SLA ist die Vereinbarung, Reaktionszeit der Beginn, Verfügbarkeit der Prozentsatz.",
+    "verweis": "Modul 07, Abschnitt 7.1 SLA & Servicevertrag",
+    "luecken": [
+      {
+        "optionen": [
+          "SLA",
+          "OLA",
+          "KPI",
+          "NDA"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Service Level Agreement"
+        ]
+      },
+      {
+        "optionen": [
+          "Reaktionszeit",
+          "Wiederherstellungszeit",
+          "Betriebszeit",
+          "Laufzeit"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "Verfügbarkeit",
+          "Zuverlässigkeit",
+          "Auslastung",
+          "Bandbreite"
+        ],
+        "loesung": 0
+      }
+    ]
+  },
+  {
+    "id": "M05-952",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "freitext": true,
+    "frage": "Der PDCA-Zyklus beginnt mit der Phase ___, in der Ziele und Maßnahmen festgelegt werden. In der Phase ___ werden die Ergebnisse mit den Zielen verglichen. Das Grundprinzip der ständigen schrittweisen Verbesserung heißt ___.",
+    "erklaerungKurz": "PDCA: Plan (planen), Do, Check (Ergebnisse mit den Zielen vergleichen), Act; das Prinzip der ständigen Verbesserung ist der KVP (Kaizen).",
+    "erklaerungLang": "Die drei Lücken bilden Reihenfolge und Grundprinzip des Verbesserungszyklus ab.\n• Plan ist die erste Phase: Ist-Zustand aufnehmen, Ursachen erheben, Ziele und Maßnahmen festlegen. Ohne ein hier definiertes MESSBARES Ziel hat die Check-Phase später nichts, womit sie vergleichen könnte.\n• Check ist die Bewertungsphase: Das Ergebnis der Erprobung wird an den Zielen aus der Plan-Phase gemessen. Do dagegen ist die Erprobung selbst, und Act zieht die Konsequenz.\n• KVP heißt kontinuierlicher Verbesserungsprozess, japanisch Kaizen – das Prinzip der vielen kleinen Schritte statt des einen großen Umbaus.\n• Zur Abgrenzung der Distraktoren: QM ist das übergeordnete Qualitätsmanagement, in dessen Rahmen KVP eines der Werkzeuge ist. Ein SLA ist eine Vereinbarung über Servicekennzahlen und hat mit dem Zyklus nichts zu tun.\nMerke: Plan setzt das Ziel, Check hält das Ergebnis dagegen – und KVP ist das Prinzip der kleinen Schritte.",
+    "verweis": "Modul 05, Abschnitt 5.2 – PDCA-Zyklus und KVP",
+    "luecken": [
+      {
+        "optionen": [
+          "Plan",
+          "Do",
+          "Act",
+          "Check",
+          "Define"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Planen"
+        ]
+      },
+      {
+        "optionen": [
+          "Check",
+          "Do",
+          "Plan",
+          "Act",
+          "Review"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "Prüfen",
+          "Überprüfen"
+        ]
+      },
+      {
+        "optionen": [
+          "KVP",
+          "QM",
+          "SLA",
+          "ITIL",
+          "DSGVO"
+        ],
+        "loesung": 0,
+        "akzeptiert": [
+          "kontinuierlicher Verbesserungsprozess",
+          "Kaizen"
+        ]
+      }
+    ]
+  }
+]

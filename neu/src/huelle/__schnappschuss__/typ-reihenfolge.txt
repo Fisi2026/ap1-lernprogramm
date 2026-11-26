@@ -1,0 +1,48 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Einzelne Frage" [Ebene 1]
+  heading "Einzelne Frage" [Ebene 2]
+  img "Schwierigkeit 2 von 4"
+  button "Zum gezielten Wiederholen markieren"
+  button "⚑ Frage melden"
+  checkbox "Diese Bedienhilfe nicht mehr zeigen" [checked=false]
+  list
+    listitem
+      group "Schritt 1 verschieben"
+        button "Schritt 1 nach oben" [gesperrt]
+        button "Schritt 1 nach unten"
+    listitem
+      group "Schritt 2 verschieben"
+        button "Schritt 2 nach oben"
+        button "Schritt 2 nach unten"
+    listitem
+      group "Schritt 3 verschieben"
+        button "Schritt 3 nach oben"
+        button "Schritt 3 nach unten"
+    listitem
+      group "Schritt 4 verschieben"
+        button "Schritt 4 nach oben"
+        button "Schritt 4 nach unten"
+    listitem
+      group "Schritt 5 verschieben"
+        button "Schritt 5 nach oben"
+        button "Schritt 5 nach unten" [gesperrt]
+  button "Lösung prüfen" [gesperrt]
+  button "Aufgeben"
+  button "Zur Startseite"
+  button "Normal weiterüben"

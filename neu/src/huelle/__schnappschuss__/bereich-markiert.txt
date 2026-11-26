@@ -1,0 +1,25 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen" [current=page]
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Markierte Fragen" [Ebene 1]
+  button "Markierte üben (1)"
+  heading "Übersicht" [Ebene 2]
+  list
+    listitem
+      button "Frage M01-001 öffnen"
+      button "Markierung M01-001 entfernen"
+  heading "Übersprungen (0)" [Ebene 2]

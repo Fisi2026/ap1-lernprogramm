@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+<meta charset="utf-8">
+<title>AP1-Trainer — Karteikasten, shadcn dark</title>
+<style>
+  /* ============================================================================
+     shadcn/ui — Basis "neutral", nur .dark. Werte 1:1 aus ui.shadcn.com/docs/theming
+     bzw. r/colors/neutral.json übernommen, nicht nachempfunden.
+     Kein React, kein Tailwind, kein Build: nur die Token-Schicht und die Grammatik.
+     ============================================================================ */
+  .dark{
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    /* shadcn liefert kein success-Token. Abgeleitet in derselben oklch-Grammatik
+       wie --destructive (gleiche Helligkeit, gleiche Chroma-Ordnung). */
+    --success: oklch(0.704 0.14 155);
+    --radius: 0.625rem;
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+  }
+  :root{
+    --s1:4px;--s2:6px;--s3:8px;--s4:10px;--s5:12px;--s6:14px;--s7:16px;--s8:20px;--s9:24px;--s10:32px;
+    --t-mikro:.75rem; --t-klein:.8125rem; --t-ui:.875rem; --t-text:.9375rem;
+    --t-gross:1.0625rem; --t-schirm:1.5rem;
+    --f-ui: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --f-mess: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Consolas, monospace;
+    --dauer:150ms; --kurve:cubic-bezier(.4,0,.2,1);
+  }
+  *{box-sizing:border-box}
+  html{color-scheme:dark}
+  body{
+    margin:0; background:var(--background); color:var(--foreground); font-family:var(--f-ui);
+    font-size:var(--t-text); line-height:1.5; -webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums;
+  }
+  ::selection{background:oklch(0.985 0 0 / 18%)}
+  :focus-visible{outline:none; box-shadow:0 0 0 3px oklch(0.556 0 0 / 50%); border-radius:var(--radius-md)}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--secondary); border-radius:99px; border:2px solid var(--background)}
+  ::-webkit-scrollbar-track{background:transparent}
+
+  .app{display:grid; grid-template-columns:56px 1fr; height:100vh; overflow:hidden}
+  main{display:grid; grid-template-rows:auto auto minmax(0,1fr); min-height:0}
+
+  /* ---------- Sidebar (shadcn: eigene Fläche, 1px Rahmen, kein Schatten) ---------- */
+  .rail{background:var(--sidebar); border-right:1px solid var(--sidebar-border);
+        display:flex; flex-direction:column; align-items:center; padding:var(--s5) 0; gap:2px}
+  .marke{width:32px;height:32px;flex:none;margin-bottom:var(--s7);display:grid;place-items:center;
+        border-radius:var(--radius-md);background:var(--primary);color:var(--primary-foreground);
+        font-weight:700;font-size:var(--t-ui);letter-spacing:-.03em}
+  .rail button{width:40px;height:36px;border:0;background:transparent;color:var(--muted-foreground);
+        border-radius:var(--radius-md);cursor:pointer;display:grid;place-items:center;
+        transition:background var(--dauer) var(--kurve),color var(--dauer) var(--kurve)}
+  .rail button:hover{background:var(--sidebar-accent);color:var(--sidebar-foreground)}
+  .rail button[aria-current="page"]{background:var(--sidebar-accent);color:var(--sidebar-foreground)}
+  .rail svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.75;
+        stroke-linecap:round;stroke-linejoin:round}
+  .rail .luecke{height:var(--s5)}
+  .rail .schub{margin-top:auto}
+
+  /* ---------- Kopf ---------- */
+  .kopf{display:flex;align-items:center;justify-content:space-between;gap:var(--s9);
+        padding:var(--s8) var(--s9) var(--s6);border-bottom:1px solid var(--border)}
+  .titelzeile{display:flex;align-items:baseline;gap:var(--s5);min-width:0}
+  h1{margin:0;font-size:var(--t-schirm);line-height:1.2;letter-spacing:-.02em;font-weight:600}
+  .titelzeile p{margin:0;color:var(--muted-foreground);font-size:var(--t-ui);
+        white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .messschiene{display:flex;align-items:center;gap:var(--s8);flex:none}
+  .mess{display:flex;flex-direction:column;gap:1px}
+  .mess b{font-size:var(--t-gross);font-weight:600;letter-spacing:-.02em;line-height:1.25}
+  .mess span{font-size:var(--t-mikro);color:var(--muted-foreground);white-space:nowrap}
+  .mess.warn b{color:var(--destructive)}
+  .trenner{width:1px;align-self:stretch;background:var(--border)}
+
+  /* ---------- Tabs (shadcn Tabs: gefüllte Leiste, aktiver Reiter als erhöhte Fläche) ---------- */
+  .band{display:block;padding:var(--s6) var(--s9) 0}
+  .tabs{display:flex;align-items:center;gap:2px;background:var(--muted);border-radius:var(--radius-lg);
+        padding:var(--s1);flex:1;min-width:0}
+  .reiter{flex:1;min-width:0;border:0;background:transparent;color:var(--muted-foreground);
+        border-radius:var(--radius-md);padding:var(--s2) var(--s5) var(--s3);cursor:pointer;font:inherit;
+        font-size:var(--t-klein);text-align:left;
+        transition:background var(--dauer) var(--kurve),color var(--dauer) var(--kurve)}
+  .reiter:hover{color:var(--foreground)}
+  .reiter[aria-selected="true"]{background:var(--background);color:var(--foreground);font-weight:500;
+        box-shadow:0 1px 2px oklch(0 0 0 / 35%)}
+  .reiter .kuerzel{font-family:var(--f-mess);font-size:.6875rem;letter-spacing:.04em;display:block;
+        color:var(--muted-foreground)}
+  .reiter[aria-selected="true"] .kuerzel{color:var(--foreground)}
+  .reiter .name{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .fuellung{display:block;height:2px;background:oklch(1 0 0 / 12%);border-radius:99px;margin-top:var(--s2);overflow:hidden}
+  .fuellung i{display:block;height:100%;background:var(--chart-2);border-radius:99px}
+  .reiter[aria-selected="true"] .fuellung i{background:var(--chart-1)}
+  .fuellung.schwach i{background:var(--destructive)}
+
+  .badge{display:inline-flex;align-items:center;gap:var(--s2);border:1px solid var(--border);
+        background:transparent;color:var(--foreground);border-radius:99px;
+        padding:var(--s2) var(--s5);font:inherit;font-size:var(--t-klein);cursor:pointer;flex:none;
+        transition:background var(--dauer) var(--kurve)}
+  .badge:hover{background:var(--accent)}
+  .badge b{color:var(--destructive)}
+
+  /* ---------- Karte ---------- */
+  .buehne{padding:var(--s6) var(--s9) var(--s9);display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0}
+  .karte{background:var(--card);color:var(--card-foreground);border:1px solid var(--border);
+        border-radius:var(--radius-lg);display:grid;grid-template-rows:auto minmax(0,1fr);
+        min-height:0;overflow:hidden}
+  .karte-kopf{display:flex;align-items:center;justify-content:space-between;gap:var(--s7);
+        padding:var(--s5) var(--s8);border-bottom:1px solid var(--border)}
+  .wo{display:flex;align-items:center;gap:var(--s5);font-size:var(--t-klein);color:var(--muted-foreground)}
+  .wo .id{font-family:var(--f-mess);color:var(--foreground)}
+  .stufe{display:inline-flex;gap:3px;align-items:center}
+  .stufe i{width:5px;height:5px;border-radius:99px;background:transparent;
+        box-shadow:inset 0 0 0 1px var(--input);display:block}
+  .stufe i.an{background:var(--chart-1);box-shadow:none}
+  .karte-leib{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);min-height:0}
+  .frage{padding:var(--s9);border-right:1px solid var(--border);display:grid;
+        grid-template-rows:auto auto minmax(0,1fr) auto;min-height:0;overflow:auto}
+  .marken{display:flex;flex-wrap:wrap;gap:var(--s2);margin:0 0 var(--s7)}
+  .marken span{font-size:var(--t-mikro);color:var(--muted-foreground);background:var(--secondary);
+        border-radius:var(--radius-sm);padding:2px var(--s3)}
+  .frage>p.text{margin:0;font-size:var(--t-gross);line-height:1.6;max-width:62ch}
+  .rueckseite{border-top:1px solid var(--border);padding-top:var(--s6);color:var(--muted-foreground);
+        max-width:56ch}
+  .rueckseite b{display:block;font-size:var(--t-mikro);letter-spacing:.06em;text-transform:uppercase;
+        color:var(--muted-foreground);font-weight:500;margin-bottom:var(--s2)}
+  .rueckseite p{margin:0;font-size:var(--t-klein);line-height:1.55}
+
+  .antworten{padding:var(--s9);display:flex;flex-direction:column;gap:var(--s3);min-height:0;overflow:auto}
+  .opt{display:flex;gap:var(--s5);align-items:flex-start;text-align:left;width:100%;
+        border:1px solid var(--border);background:transparent;color:var(--foreground);
+        border-radius:var(--radius-md);padding:var(--s5) var(--s7);cursor:pointer;font:inherit;
+        font-size:var(--t-text);line-height:1.5;
+        transition:background var(--dauer) var(--kurve),border-color var(--dauer) var(--kurve)}
+  .opt:hover{background:var(--accent)}
+  .opt .taste{flex:none;width:20px;height:20px;border-radius:var(--radius-sm);border:1px solid var(--input);
+        display:grid;place-items:center;font-family:var(--f-mess);font-size:var(--t-mikro);
+        color:var(--muted-foreground);margin-top:2px}
+  .opt.gewaehlt{border-color:var(--ring);background:var(--accent)}
+  .opt.gewaehlt .taste{background:var(--primary);border-color:var(--primary);
+        color:var(--primary-foreground);font-weight:600}
+  .schluss{display:flex;align-items:center;gap:var(--s3);margin-top:var(--s3)}
+  .knopf{border:1px solid transparent;border-radius:var(--radius-md);padding:var(--s4) var(--s7);
+        font:inherit;font-weight:500;font-size:var(--t-ui);cursor:pointer;
+        background:var(--primary);color:var(--primary-foreground);
+        transition:opacity var(--dauer) var(--kurve)}
+  .knopf:hover{opacity:.9}
+  .knopf.zweit{background:var(--secondary);color:var(--secondary-foreground)}
+  .knopf.zweit:hover{background:oklch(0.32 0 0)}
+  .tastatur{margin-top:auto;padding-top:var(--s7);border-top:1px solid var(--border);
+        display:flex;flex-wrap:wrap;gap:var(--s5) var(--s8);font-size:var(--t-mikro);
+        color:var(--muted-foreground)}
+  .tastatur span{display:flex;align-items:center;gap:var(--s2)}
+  kbd{font-family:var(--f-mess);font-size:.6875rem;border:1px solid var(--input);
+        border-radius:var(--radius-sm);padding:1px var(--s2);color:var(--foreground);
+        background:var(--secondary);min-width:18px;text-align:center;display:inline-block}
+
+  .fuss{display:flex;align-items:center;justify-content:space-between;gap:var(--s7);
+        padding-top:var(--s6);font-size:var(--t-klein);color:var(--muted-foreground)}
+  .fuss button{border:1px solid var(--border);background:transparent;color:var(--foreground);
+        border-radius:var(--radius-md);padding:var(--s2) var(--s5);font:inherit;
+        font-size:var(--t-klein);cursor:pointer;transition:background var(--dauer) var(--kurve)}
+  .fuss button:hover{background:var(--accent)}
+  .lauf{display:flex;align-items:center;gap:var(--s5)}
+  .strecke{width:200px;height:6px;background:var(--secondary);border-radius:99px;overflow:hidden}
+  .strecke i{display:block;height:100%;width:38.7%;background:var(--chart-1)}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  }
+  @media (max-width:1100px){
+    .karte-leib{grid-template-columns:1fr}
+    .frage{border-right:0;border-bottom:1px solid var(--border)}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <nav class="rail" aria-label="Bereiche">
+    <div class="marke" aria-hidden="true">A1</div>
+    <button aria-current="page" title="Üben">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="15" height="13" rx="2"/><path d="M7 5V3.5M11 5V3.5M18 8h2.5a1 1 0 0 1 1 1v9"/><path d="M7 10h7M7 13.5h4.5"/></svg>
+    </button>
+    <button title="Fehler-Deck">
+      <svg viewBox="0 0 24 24"><path d="M4 7.5 12 4l8 3.5-8 3.5z"/><path d="M4 12.2 12 15.7l8-3.5M4 16.6 12 20l8-3.4"/></svg>
+    </button>
+    <button title="Prüfungssimulation">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 13V9.4M9.5 3.5h5"/></svg>
+    </button>
+    <div class="luecke"></div>
+    <button title="Rechen-Generator">
+      <svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M8.5 8h7M8.5 12h2M13.5 12h2M8.5 16h2M13.5 16h2"/></svg>
+    </button>
+    <button title="Netzplan">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="4" width="6" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M9 6.5h6M6 9v4.5h6M18 9v4.5h-6"/></svg>
+    </button>
+    <button title="Gantt">
+      <svg viewBox="0 0 24 24"><path d="M4 6h9M4 12h13M4 18h6" stroke-width="2.4"/></svg>
+    </button>
+    <div class="luecke"></div>
+    <button title="Glossar">
+      <svg viewBox="0 0 24 24"><path d="M5 4.5h9a3 3 0 0 1 3 3v12a2.5 2.5 0 0 0-2.5-2.5H5z"/><path d="M17 7.5h2v12h-2"/></svg>
+    </button>
+    <button title="Spickzettel">
+      <svg viewBox="0 0 24 24"><path d="M6 3.5h8l5 5v12H6z"/><path d="M14 3.5v5h5M9 13h6M9 16.5h4"/></svg>
+    </button>
+    <button title="Statistik">
+      <svg viewBox="0 0 24 24"><path d="M4 19.5h16"/><rect x="6" y="11" width="3.4" height="6"/><rect x="11.3" y="6.5" width="3.4" height="10.5"/><rect x="16.6" y="13.5" width="3.4" height="3.5"/></svg>
+    </button>
+    <button class="schub" title="Einstellungen">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3v2.2M20.5 12h-2.2M5.7 12H3.5M18 6l-1.6 1.6M7.6 16.4 6 18M18 18l-1.6-1.6M7.6 7.6 6 6"/></svg>
+    </button>
+  </nav>
+
+  <main>
+    <header class="kopf">
+      <div class="titelzeile">
+        <h1>Üben</h1>
+        <p>Fach A5 — Leistungserbringung &amp; Auftragsabschluss</p>
+      </div>
+      <div class="messschiene">
+        <div class="mess"><b>12/20</b><span>heute</span></div>
+        <div class="trenner"></div>
+        <div class="mess"><b>71 %</b><span>Trefferquote</span></div>
+        <div class="trenner"></div>
+        <div class="mess warn"><b>8</b><span>Fehler-Deck fällig</span></div>
+        <div class="trenner"></div>
+        <div class="mess"><b>412</b><span>Tage bis AP1</span></div>
+        <button class="badge">Fehler-Deck <b>8</b></button>
+      </div>
+    </header>
+
+    <div class="band">
+      <div class="tabs" role="tablist" aria-label="Gebiete">
+        <button class="reiter" role="tab" aria-selected="false">
+          <span class="kuerzel">A1</span><span class="name">Projektmanagement</span>
+          <span class="fuellung"><i style="width:64%"></i></span></button>
+        <button class="reiter" role="tab" aria-selected="false">
+          <span class="kuerzel">A2</span><span class="name">Kundenberatung</span>
+          <span class="fuellung"><i style="width:81%"></i></span></button>
+        <button class="reiter" role="tab" aria-selected="false">
+          <span class="kuerzel">A3</span><span class="name">IT-Systeme</span>
+          <span class="fuellung schwach"><i style="width:29%"></i></span></button>
+        <button class="reiter" role="tab" aria-selected="false">
+          <span class="kuerzel">A4</span><span class="name">IT-Lösungen</span>
+          <span class="fuellung"><i style="width:52%"></i></span></button>
+        <button class="reiter" role="tab" aria-selected="true">
+          <span class="kuerzel">A5</span><span class="name">Leistungserbringung</span>
+          <span class="fuellung"><i style="width:47%"></i></span></button>
+        <button class="reiter" role="tab" aria-selected="false">
+          <span class="kuerzel">A6</span><span class="name">Qualitätssicherung</span>
+          <span class="fuellung"><i style="width:73%"></i></span></button>
+        <button class="reiter" role="tab" aria-selected="false">
+          <span class="kuerzel">A7</span><span class="name">IT-Sicherheit</span>
+          <span class="fuellung schwach"><i style="width:34%"></i></span></button>
+        <button class="reiter" role="tab" aria-selected="false">
+          <span class="kuerzel">A8</span><span class="name">Wirtschaft</span>
+          <span class="fuellung"><i style="width:58%"></i></span></button>
+      </div>
+    </div>
+
+    <div class="buehne">
+      <article class="karte">
+        <div class="karte-kopf">
+          <div class="wo"><span class="id">M01-010</span><span>Ticketsystem &amp; Support-Level</span></div>
+          <div class="wo">
+            <span>Stufe</span>
+            <span class="stufe" title="Schwierigkeit 2 von 3"><i class="an"></i><i class="an"></i><i></i></span>
+            <span>Karte 118 von 305</span>
+          </div>
+        </div>
+
+        <div class="karte-leib">
+          <div class="frage">
+            <p class="marken"><span>Mehrfachauswahl</span><span>zuletzt falsch am 02.09.</span></p>
+            <p class="text">Ein Benutzer kann nicht auf sein E-Mail-Konto zugreifen. Das ist ein
+               kritisches Problem für die Geschäftskommunikation. Nach 10&nbsp;Minuten
+               First-Level-Support (L1) hat der Helpdesk festgestellt, dass ein komplexes
+               Authentifizierungs-Problem (Single Sign-On Integration) vorliegt. Ist eine
+               Eskalation zu L2 jetzt gerechtfertigt?</p>
+            <div></div>
+            <div class="rueckseite">
+              <b>Rückseite</b>
+              <p>Nach dem Prüfen kippt die Karte: Erklärung, warum die anderen drei nicht stimmen,
+                 und der Merksatz fürs Fehler-Deck.</p>
+            </div>
+          </div>
+
+          <div class="antworten">
+            <button class="opt"><span class="taste">A</span>
+              Nein, L1 sollte weiter recherchieren, bis das Problem ohne fremde Hilfe gelöst ist</button>
+            <button class="opt gewaehlt"><span class="taste">B</span>
+              Ja, da das Problem über L1-Basis-Troubleshooting hinausgeht und Spezialwissen erfordert</button>
+            <button class="opt"><span class="taste">C</span>
+              Nein, Authentifizierung ist häufig, L1 sollte die Anleitung aus der Wissensdatenbank nutzen</button>
+            <button class="opt"><span class="taste">D</span>
+              Ja, aber erst nach mindestens zwei Stunden eigener Arbeit durch den First-Level-Support</button>
+            <div class="schluss">
+              <button class="knopf">Lösung prüfen</button>
+              <button class="knopf zweit">Später prüfen</button>
+            </div>
+            <div class="tastatur">
+              <span><kbd>A</kbd><kbd>B</kbd><kbd>C</kbd><kbd>D</kbd> wählen</span>
+              <span><kbd>Enter</kbd> prüfen</span>
+              <span><kbd>→</kbd> überspringen</span>
+              <span><kbd>M</kbd> später prüfen</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="fuss">
+        <button>← Zurück</button>
+        <div class="lauf">
+          <span>118 von 305 im Fach A5</span>
+          <span class="strecke"><i></i></span>
+          <span>39 %</span>
+        </div>
+        <button>Überspringen →</button>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

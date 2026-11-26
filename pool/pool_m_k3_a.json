@@ -1,0 +1,997 @@
+[
+  {
+    "id": "M04-564",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Die Hollmann Gerätebau GmbH betreibt ihren DHCP-Server 192.168.30.10 im Server-VLAN 30. Die Arbeitsplätze der Entwicklung liegen in VLAN 10 (192.168.10.0/24, Gateway 192.168.10.1 auf dem Core-Switch). Ohne weitere Einstellung erhalten sie keine Adresse. Erklären Sie, warum das so ist und was die Einstellung „ip helper-address 192.168.30.10“ auf der VLAN-10-Schnittstelle des Core-Switches bewirkt. (4 Aussagen, je Aussage 1 Punkt)",
+    "musterloesung": "1. Der Client kennt beim Start weder eigene Adresse noch Server – deshalb sendet er DHCP-Discover als Broadcast (Ziel 255.255.255.255, UDP-Port 67 zum Server, Antwort an Port 68).\n2. Broadcasts bleiben in ihrer Broadcast-Domäne – Router bzw. die Layer-3-Schnittstelle des Core-Switches leiten sie nicht in VLAN 30 weiter, also erreicht die Anfrage den Server nie.\n3. Mit ip helper-address arbeitet die VLAN-10-Schnittstelle als DHCP-Relay-Agent – sie nimmt den Broadcast an und schickt ihn als Unicast an 192.168.30.10 weiter.\n4. Der Relay trägt seine eigene Adresse 192.168.10.1 als Gateway-Adresse (giaddr) ein – daran erkennt der Server, dass er aus dem Bereich für 192.168.10.0/24 vergeben muss; die Antwort läuft über den Relay zurück.",
+    "erklaerungKurz": "DHCP-Discover ist ein Broadcast, und Broadcasts enden an der VLAN-Grenze. Der Relay-Agent (ip helper-address) leitet die Anfrage als Unicast zum Server und nennt ihm das Netz des Clients.",
+    "erklaerungLang": "Die Aufgabe prüft, ob du die Ursache (Broadcast an der VLAN-Grenze) und die Lösung (Relay) zusammen begründen kannst.\n• DHCP nutzt UDP: der Server hört auf Port 67, der Client auf Port 68.\n• Discover geht an 255.255.255.255, weil der Client noch keine Adresse und keinen Server kennt.\n• Ein VLAN ist eine eigene Broadcast-Domäne; die Layer-3-Schnittstelle routet Unicasts, aber keine Broadcasts.\n• Der Relay-Agent macht aus dem Broadcast einen Unicast an den Server und trägt seine Schnittstellenadresse als giaddr ein.\n• Am giaddr wählt der Server den passenden Bereich – ein Server kann so alle VLANs versorgen.\nMerke: Ein DHCP-Server je VLAN oder ein Relay je VLAN-Schnittstelle – ohne eins von beiden bleibt der Client ohne Adresse.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Broadcast",
+          "Broadcasts",
+          "Rundruf"
+        ],
+        [
+          "Relay",
+          "Relay-Agent",
+          "Weiterleitung",
+          "weiterleiten",
+          "ip helper"
+        ],
+        [
+          "Unicast",
+          "gezielt",
+          "direkt an den Server"
+        ]
+      ],
+      "kuer": [
+        "UDP",
+        "67",
+        "68",
+        "giaddr",
+        "Router",
+        "Broadcast-Domäne",
+        "VLAN 30"
+      ]
+    }
+  },
+  {
+    "id": "M04-565",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 4,
+    "frage": "Bei der Hollmann Gerätebau GmbH vergibt bisher ein einziger DHCP-Server (192.168.30.10) alle Adressen, die Lease-Zeit beträgt 8 Stunden. Die Geschäftsleitung fragt: „Was passiert, wenn dieser Server am Freitagmittag ausfällt, und wie verhindern wir das künftig mit einem zweiten Server 192.168.30.11?“ Beantworten Sie die Frage in 5 Aussagen mit Begründung (je Aussage 1 Punkt).",
+    "musterloesung": "1. Neue oder neu gestartete Geräte erhalten sofort keine Adresse mehr – ihr Discover bleibt unbeantwortet, Windows setzt eine APIPA-Adresse 169.254.x.x und der Client ist praktisch offline.\n2. Laufende Geräte arbeiten zunächst weiter – ihre Lease ist noch gültig; sie versuchen bei 50 % (T1, nach 4 h) und bei 87,5 % (T2, nach 7 h) vergeblich zu verlängern und verlieren die Adresse spätestens 8 h nach der letzten Erneuerung.\n3. Die Lease-Zeit ist damit die Frist für die Reparatur – eine längere Lease verschafft mehr Zeit, verlängert aber auch die Zeit, bis geänderte Optionen bei allen Clients ankommen.\n4. Split-Scope 80/20: beide Server kennen denselben Bereich, Server 1 vergibt 80 %, Server 2 die übrigen 20 % (der Rest ist jeweils ausgeschlossen) – keine Doppelvergabe, aber ohne Abgleich der Leases.\n5. DHCP-Failover: beide Server teilen sich den Bereich und gleichen die Lease-Datenbank ab – im Lastenausgleich vergeben beide gleichzeitig, im Hot-Standby springt der zweite erst beim Ausfall ein.",
+    "erklaerungKurz": "Ausfall: neue Clients sofort ohne Adresse, laufende bis Lease-Ende. Abhilfe: Split-Scope 80/20 (ohne Abgleich) oder Failover (Abgleich, Lastenausgleich oder Hot-Standby).",
+    "erklaerungLang": "Entscheidend ist die Lease: Sie bestimmt, wie lange ein Ausfall unbemerkt bleibt.\n• Lease 8 h: Erneuerung ab 4 h (T1, Unicast an den eigenen Server), ab 7 h an jeden Server (T2, Broadcast).\n• Ein Client, der um 11:30 erneuert hat, fällt bei Ausfall um 12:00 erst um 19:30 aus – ein neues Notebook sofort.\n• Split-Scope: zwei Server, getrennte Teilbereiche (80/20) – einfach, aber der kleine Teil reicht nur für wenige Clients.\n• Failover: ein gemeinsamer Bereich mit abgeglichenen Leases – Lastenausgleich (beide aktiv) oder Hot-Standby (einer wartet).\nMerke: Die Lease-Zeit überbrückt einen Ausfall nur für Geräte, die schon eine Adresse haben – neue Geräte trifft er sofort.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Lease",
+          "Lease-Zeit",
+          "Leasedauer",
+          "Ablauf"
+        ],
+        [
+          "Split-Scope",
+          "80/20",
+          "80 %",
+          "aufteilen",
+          "Aufteilung"
+        ],
+        [
+          "Failover",
+          "Hot-Standby",
+          "Lastenausgleich",
+          "Load Balancing"
+        ]
+      ],
+      "kuer": [
+        "APIPA",
+        "169.254",
+        "T1",
+        "T2",
+        "50 %",
+        "87,5 %",
+        "Abgleich",
+        "Synchronisation"
+      ]
+    }
+  },
+  {
+    "id": "M04-566",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "In der Verwaltung der Hollmann Gerätebau GmbH (VLAN 20) erhalten einzelne Arbeitsplätze plötzlich Adressen aus 192.168.0.0/24 mit dem Gateway 192.168.0.1, andere weiterhin 192.168.20.x. Ein Mitarbeiter hat einen privaten WLAN-Router an seine Netzwerkdose angeschlossen. Erklären Sie den Vorfall und eine Schutzmaßnahme am Switch. (4 Aussagen, je Aussage 1 Punkt)",
+    "musterloesung": "1. Der private Router arbeitet als Rogue-DHCP-Server – ein nicht autorisierter DHCP-Server im Netz, der auf Discover-Anfragen ebenfalls antwortet.\n2. Der Client nimmt das erste Angebot (Offer) an – deshalb hängt es vom Zufall der Antwortzeit ab, welcher Arbeitsplatz welche Adresse bekommt.\n3. Die Folgen sind Ausfall und Sicherheitsrisiko – mit falschem Gateway erreichen die Clients die Server nicht mehr, und ein Angreifer könnte als Gateway den Verkehr mitlesen (Man-in-the-Middle).\n4. Gegenmaßnahme DHCP-Snooping auf den Switches – nur als vertrauenswürdig (trusted) markierte Ports, z. B. der Uplink zum Core, dürfen DHCP-Antworten senden; Offer/Ack von Client-Ports werden verworfen.",
+    "erklaerungKurz": "Ein fremder DHCP-Server (Rogue-DHCP) beantwortet Discover schneller als der echte. DHCP-Snooping lässt DHCP-Antworten nur über vertrauenswürdige Switch-Ports zu.",
+    "erklaerungLang": "Zwei DHCP-Server in einer Broadcast-Domäne konkurrieren – der Client fragt nicht nach, wer berechtigt ist.\n• Der Discover-Broadcast erreicht jeden DHCP-Server im VLAN, auch den privaten Router.\n• Der Client nimmt in der Regel das zuerst eintreffende Offer.\n• Falsches Gateway oder falscher DNS-Server leiten den Verkehr um – Ausfall oder Mitlesen.\n• DHCP-Snooping unterscheidet trusted (Uplink, Serverport) und untrusted (Arbeitsplatzdosen) und führt eine Bindungstabelle aus MAC, IP, Port und VLAN.\nMerke: Gegen Rogue-DHCP hilft DHCP-Snooping am Switch: Antworten nur von trusted Ports.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Rogue",
+          "Rogue-DHCP",
+          "fremder DHCP-Server",
+          "nicht autorisiert",
+          "unberechtigt"
+        ],
+        [
+          "Snooping",
+          "DHCP-Snooping"
+        ],
+        [
+          "trusted",
+          "vertrauenswürdig",
+          "vertrauenswürdige"
+        ]
+      ],
+      "kuer": [
+        "Offer",
+        "Gateway",
+        "Man-in-the-Middle",
+        "untrusted",
+        "Uplink",
+        "Bindungstabelle"
+      ]
+    }
+  },
+  {
+    "id": "M04-567",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Ein Mess-Rechner der Fertigung (VLAN 40) der Hollmann Gerätebau GmbH zeigt nach „ipconfig /all“: DHCP aktiviert: Ja · Autokonfiguration IPv4-Adresse: 169.254.71.12 · Subnetzmaske: 255.255.0.0 · Standardgateway: (leer) · DHCP-Server: (fehlt). Deuten Sie die Ausgabe und beschreiben Sie das weitere Vorgehen am Client mit „ipconfig /release“ und „ipconfig /renew“. (4 Aussagen, je 1 Punkt)",
+    "musterloesung": "1. Die Adresse 169.254.x.x/16 ist eine APIPA-Adresse – Windows hat sie selbst vergeben, weil auf das Discover kein DHCP-Server geantwortet hat.\n2. Ohne Gateway und DHCP-Server-Eintrag erreicht der Rechner nur andere 169.254-Geräte – er ist vom übrigen Netz und den Servern in VLAN 30 abgeschnitten.\n3. ipconfig /release gibt eine vorhandene Lease frei und ipconfig /renew startet die Anfrage neu – damit prüft man nach Kabeltausch oder Korrektur, ob jetzt ein Server antwortet.\n4. Bleibt es nach /renew bei 169.254.x.x, liegt die Ursache außerhalb des Clients – Kabel bzw. Switchport, falsches VLAN am Port, fehlender Relay (ip helper) für VLAN 40 oder ausgefallener DHCP-Server.",
+    "erklaerungKurz": "169.254.x.x = APIPA, kein DHCP-Server hat geantwortet. /release und /renew wiederholen die Anfrage; bleibt 169.254, liegt der Fehler auf dem Weg zum Server (Port, VLAN, Relay, Server).",
+    "erklaerungLang": "Die Ausgabe von ipconfig /all ist ein Befund, keine Konfiguration.\n• „Autokonfiguration IPv4-Adresse“ statt „IPv4-Adresse“ zeigt: die Adresse stammt nicht vom DHCP-Server.\n• Ein fehlender DHCP-Server-Eintrag bestätigt das – es gibt keine Lease.\n• /release meldet eine Lease ab (DHCP-Release), /renew fordert eine neue an bzw. verlängert sie.\n• Funktionieren andere Rechner in VLAN 40, liegt es am Port oder Kabel; fallen alle in VLAN 40 aus, am Relay oder Bereich.\nMerke: 169.254 heißt: DHCP hat nicht geantwortet – erst den Weg zum Server prüfen, dann den Server.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb – Fehlersuche am Client",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "APIPA",
+          "169.254",
+          "Autokonfiguration",
+          "Link-Local"
+        ],
+        [
+          "release",
+          "freigeben",
+          "gibt frei"
+        ],
+        [
+          "renew",
+          "erneuern",
+          "neu anfordern",
+          "erneut anfordern"
+        ]
+      ],
+      "kuer": [
+        "kein DHCP-Server",
+        "Gateway",
+        "Kabel",
+        "VLAN",
+        "Relay",
+        "Switchport"
+      ]
+    }
+  },
+  {
+    "id": "M04-568",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "frage": "Für das Fertigungs-VLAN 40 (192.168.40.0/24, Gateway 192.168.40.1) der Hollmann Gerätebau GmbH wird auf dem DHCP-Server ein Bereich angelegt: Bereich 192.168.40.100–192.168.40.199, Lease 8 Stunden, zwei Netzwerkdrucker sollen immer dieselbe Adresse behalten. Erklären Sie die Begriffe Bereich (Scope), Ausschluss, Reservierung und DHCP-Option am Beispiel. (4 Aussagen, je 1 Punkt)",
+    "musterloesung": "1. Der Bereich (Scope) ist der Adresspool eines Netzes – hier vergibt der Server 192.168.40.100 bis .199 an Clients in VLAN 40, also 100 Adressen.\n2. Ein Ausschluss nimmt Adressen innerhalb des Bereichs von der Vergabe aus – z. B. weil ein Gerät dort statisch eingetragen ist und sonst ein Adresskonflikt entstünde.\n3. Eine Reservierung bindet eine feste Adresse an die MAC-Adresse eines Geräts – der Drucker bekommt per DHCP immer dieselbe Adresse und bleibt trotzdem zentral verwaltet.\n4. DHCP-Optionen liefern weitere Einstellungen mit – Option 003 das Standardgateway 192.168.40.1, Option 006 den DNS-Server, Option 015 den DNS-Domänennamen.",
+    "erklaerungKurz": "Scope = Adresspool je Netz · Ausschluss = Adresse im Pool, die nicht vergeben wird · Reservierung = feste Adresse je MAC · Optionen = Gateway (003), DNS (006), Domäne (015).",
+    "erklaerungLang": "Vier Begriffe, die im DHCP-Server jede Konfiguration bestimmen.\n• Je Netz bzw. VLAN gibt es einen Bereich; der Relay sorgt dafür, dass der Server den richtigen wählt.\n• Ausschlüsse schützen statisch vergebene Adressen vor Doppelvergabe.\n• Reservierungen eignen sich für Drucker und Messgeräte: feste Adresse, aber zentral gepflegt.\n• Ohne Option 003 hat der Client zwar eine Adresse, erreicht aber kein anderes Netz.\nMerke: Reservierung = fest per MAC aus dem DHCP; Ausschluss = gar nicht aus dem DHCP.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Bereich",
+          "Scope",
+          "Adresspool",
+          "Pool"
+        ],
+        [
+          "Ausschluss",
+          "ausgeschlossen",
+          "Ausnahme"
+        ],
+        [
+          "Reservierung",
+          "reserviert"
+        ],
+        [
+          "MAC",
+          "MAC-Adresse",
+          "Hardwareadresse"
+        ]
+      ],
+      "kuer": [
+        "Option",
+        "003",
+        "006",
+        "015",
+        "Gateway",
+        "DNS",
+        "Adresskonflikt"
+      ]
+    }
+  },
+  {
+    "id": "M04-569",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 1,
+    "frage": "Über welches Transportprotokoll und welche Ports läuft DHCP (IPv4)?",
+    "optionen": [
+      "UDP – Server Port 67, Client Port 68",
+      "TCP – Server Port 67, Client Port 68",
+      "UDP – Server Port 53, Client Port 1024",
+      "TCP – Server Port 547, Client Port 546"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "DHCP verwendet kein TCP – der Client hat noch keine Adresse für einen Verbindungsaufbau.",
+      "Port 53 gehört zu DNS, nicht zu DHCP.",
+      "546/547 sind die Ports von DHCPv6, und auch dort läuft es über UDP."
+    ],
+    "erklaerungKurz": "DHCP nutzt UDP: Server lauscht auf 67, Client auf 68 (die Ports stammen von BOOTP).",
+    "erklaerungLang": "DHCP braucht ein verbindungsloses Protokoll, weil der Client anfangs keine eigene Adresse hat.\n• UDP kommt ohne Verbindungsaufbau aus und kann Broadcasts senden.\n• Server: UDP 67 (bootps), Client: UDP 68 (bootpc).\n• DHCPv6 nutzt UDP 547 (Server) und 546 (Client).\nMerke: DHCP = UDP 67/68 – DNS = 53.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-570",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Ein Client in VLAN 10 sendet DHCP-Discover, der DHCP-Server steht in VLAN 30. Warum kommt die Anfrage ohne zusätzliche Konfiguration nicht beim Server an?",
+    "optionen": [
+      "Discover ist ein Broadcast, und Layer-3-Geräte leiten Broadcasts nicht weiter",
+      "Discover ist ein Unicast an das Gateway, das DHCP-Pakete grundsätzlich verwirft",
+      "Der Switch blockiert UDP-Port 67 in jedem VLAN, solange kein DNS-Eintrag existiert",
+      "Der Client kennt die MAC-Adresse des Servers nicht und bricht die Anfrage dann ab"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Discover geht nicht an das Gateway, sondern an 255.255.255.255.",
+      "Ein Switch filtert DHCP nicht über DNS-Einträge; Port 67 ist nicht gesperrt.",
+      "Der Client braucht keine Server-MAC – er sendet an die Broadcast-MAC FF:FF:FF:FF:FF:FF."
+    ],
+    "erklaerungKurz": "Discover geht als Broadcast hinaus; Router und Layer-3-Switch begrenzen die Broadcast-Domäne. Abhilfe: DHCP-Relay (ip helper-address).",
+    "erklaerungLang": "Ein VLAN ist eine eigene Broadcast-Domäne.\n• Der Client hat noch keine Adresse und kennt keinen Server – also Broadcast an 255.255.255.255.\n• Layer-3-Schnittstellen routen Unicasts zwischen VLANs, Broadcasts aber nicht.\n• Der Relay-Agent auf der VLAN-Schnittstelle leitet die Anfrage als Unicast an den Server.\nMerke: Broadcast endet an der Layer-3-Grenze – deshalb Relay oder ein DHCP-Server je VLAN.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-571",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordnen Sie die DHCP-Optionen ihrem Inhalt zu.",
+    "paare": [
+      [
+        "Option 003",
+        "Router (Standardgateway), z. B. 192.168.40.1"
+      ],
+      [
+        "Option 006",
+        "DNS-Server, z. B. 192.168.30.10"
+      ],
+      [
+        "Option 015",
+        "DNS-Domänenname, z. B. firma.local"
+      ],
+      [
+        "Option 051",
+        "Lease-Zeit in Sekunden, z. B. 28800 für 8 Stunden"
+      ]
+    ],
+    "extra": [
+      "WINS-Server, z. B. 192.168.30.11",
+      "Zeitserver (NTP), z. B. 192.168.30.12"
+    ],
+    "erklaerungKurz": "003 = Router/Gateway, 006 = DNS-Server, 015 = Domänenname, 051 = Lease-Zeit.",
+    "erklaerungLang": "Neben der Adresse und der Subnetzmaske liefert DHCP weitere Einstellungen als nummerierte Optionen.\n• 003 Router: ohne Gateway erreicht der Client kein anderes Netz.\n• 006 DNS-Server: ohne ihn funktionieren Namen nicht, Adressen schon.\n• 015 Domänenname: wird an kurze Rechnernamen angehängt.\n• 051 Lease-Zeit: 8 Stunden sind 8 × 3600 = 28800 Sekunden.\nMerke: 003 Gateway, 006 DNS – die zwei Optionen, die fast jeder Bereich braucht.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-572",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Die Lease-Zeit bei der Hollmann Gerätebau GmbH beträgt 8 Stunden. Ein Client hat seine Lease um 07:00 Uhr erhalten, der DHCP-Server ist seit 08:00 Uhr ausgefallen. Ab wann versucht der Client, die Lease bei einem beliebigen DHCP-Server per Broadcast zu verlängern?",
+    "optionen": [
+      "um 14:00 Uhr – nach 87,5 % der Lease (T2)",
+      "um 11:00 Uhr – nach 50 % der Lease (T1)",
+      "um 15:00 Uhr – erst beim Ablauf der Lease-Zeit",
+      "um 08:00 Uhr – sofort beim Serverausfall"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Bei T1 (50 %) fragt der Client per Unicast nur seinen eigenen Server.",
+      "Bei Ablauf ist die Adresse verloren – der Broadcast-Versuch kam vorher.",
+      "Der Client merkt den Ausfall nicht, er fragt erst bei T1 nach."
+    ],
+    "erklaerungKurz": "T2 = 87,5 % von 8 h = 7 h → 07:00 + 7 h = 14:00 Uhr. Ab dann Rebinding per Broadcast an jeden Server.",
+    "erklaerungLang": "Die Erneuerung läuft in zwei Stufen.\n• T1 = 50 % = 4 h → 11:00 Uhr: Unicast-Request an den eigenen Server (Renewing).\n• T2 = 87,5 % = 7 h → 14:00 Uhr: Broadcast-Request an jeden Server (Rebinding).\n• Ablauf 15:00 Uhr: ohne Antwort verliert der Client die Adresse und startet neu (Windows: APIPA).\nMerke: T1 halbe Lease beim eigenen Server, T2 7/8 bei jedem Server.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-573",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mtf",
+    "schwierigkeit": 3,
+    "frage": "Die Hollmann Gerätebau GmbH vergibt Adressen mit 8 Stunden Lease. Um 12:00 Uhr fällt der einzige DHCP-Server für 5 Stunden aus. Bewerten Sie die Aussagen.",
+    "aussagen": [
+      {
+        "text": "Ein Notebook, das um 12:30 Uhr neu ans Netz geht, erhält keine Adresse vom Server und setzt sich eine 169.254-Adresse.",
+        "wahr": true
+      },
+      {
+        "text": "Ein Rechner, der seine Lease um 11:00 Uhr erneuert hat, behält seine Adresse bis zum Ende des Ausfalls.",
+        "wahr": true
+      },
+      {
+        "text": "Ein Rechner, der seine Lease um 11:30 Uhr erneuert hat, versucht um 15:30 Uhr vergeblich, sie beim eigenen Server zu verlängern.",
+        "wahr": true
+      },
+      {
+        "text": "Alle Rechner verlieren beim Serverausfall um 12:00 Uhr sofort ihre Adresse.",
+        "wahr": false
+      },
+      {
+        "text": "Eine Lease-Zeit von nur 1 Stunde hätte die Auswirkungen des Ausfalls verringert.",
+        "wahr": false
+      }
+    ],
+    "erklaerungKurz": "Laufende Leases bleiben bis zu ihrem Ende gültig; nur neue Geräte trifft der Ausfall sofort. Eine kürzere Lease verschärft den Ausfall.",
+    "erklaerungLang": "Die Lease-Zeit ist die Frist, die ein Serverausfall überbrückt.\n• Neues Gerät 12:30: Discover ohne Antwort → APIPA 169.254.x.x.\n• Erneuert um 11:00: gültig bis 19:00 – der Ausfall endet um 17:00, also kein Verlust.\n• Erneuert um 11:30: T1 nach 4 h = 15:30 – der Server ist noch aus, der Unicast-Request bleibt unbeantwortet.\n• Mit 1 h Lease wären fast alle Clients schon nach einer Stunde ohne Adresse.\nMerke: Lange Lease = mehr Puffer bei Serverausfall, kurze Lease = schnellere Änderungen.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-574",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Die Hollmann Gerätebau GmbH setzt für VLAN 20 (Bereich 192.168.20.100–192.168.20.199) zwei DHCP-Server im Split-Scope 80/20 ein. Welche Aufteilung ist richtig?",
+    "optionen": [
+      "Server 1 vergibt .100–.179, Server 2 vergibt .180–.199",
+      "Server 1 vergibt .100–.199, Server 2 ebenfalls .100–.199",
+      "Server 1 vergibt .100–.119, Server 2 vergibt .120–.199",
+      "Server 1 vergibt .100–.180, Server 2 vergibt .180–.199"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Ohne Abgleich vergeben beide dieselben Adressen – Adresskonflikte.",
+      "Das ist 20/80: der Hauptserver hätte nur 20 Adressen.",
+      "Die Adresse .180 läge in beiden Teilbereichen und könnte doppelt vergeben werden."
+    ],
+    "erklaerungKurz": "100 Adressen, 80 % = 80 Adressen (.100–.179) auf Server 1, 20 % = 20 Adressen (.180–.199) auf Server 2 – ohne Überschneidung.",
+    "erklaerungLang": "Beim Split-Scope legen beide Server denselben Bereich an und schließen jeweils den Teil des anderen aus.\n• Server 1: Ausschluss .180–.199, vergibt also .100–.179 (80 Adressen).\n• Server 2: Ausschluss .100–.179, vergibt also .180–.199 (20 Adressen).\n• Die Server gleichen sich nicht ab – deshalb dürfen sich die Teile nicht überschneiden.\n• Fällt Server 1 aus, reichen 20 Adressen nur für einen Teil der Clients.\nMerke: Split-Scope 80/20: getrennte Teilbereiche, keine Überschneidung, kein Abgleich.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-575",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 3,
+    "frage": "Ordnen Sie die Verfahren zur DHCP-Ausfallsicherheit ihrer Arbeitsweise zu.",
+    "paare": [
+      [
+        "Split-Scope 80/20",
+        "Zwei Server, getrennte Teilbereiche, kein Abgleich der Leases"
+      ],
+      [
+        "Failover – Lastenausgleich",
+        "Beide Server vergeben gleichzeitig aus einem gemeinsamen, abgeglichenen Bereich"
+      ],
+      [
+        "Failover – Hot-Standby",
+        "Ein Server vergibt, der Partner übernimmt erst bei dessen Ausfall"
+      ],
+      [
+        "Ein Server mit langer Lease",
+        "Kein zweiter Server; laufende Clients überbrücken den Ausfall bis zum Lease-Ende"
+      ]
+    ],
+    "extra": [
+      "Zwei Server vergeben unabhängig aus demselben Bereich, ohne Abgleich"
+    ],
+    "erklaerungKurz": "Split-Scope teilt den Bereich ohne Abgleich; Failover gleicht ab – Lastenausgleich (beide aktiv) oder Hot-Standby (einer wartet).",
+    "erklaerungLang": "Drei Wege, den DHCP-Dienst gegen den Ausfall eines Servers abzusichern – und ein Notbehelf.\n• Split-Scope: einfach, auch mit verschiedenen Produkten möglich; der kleine Teil reicht nur begrenzt.\n• Failover-Lastenausgleich: beide Server teilen sich die Clients, die Lease-Datenbank wird synchronisiert.\n• Failover-Hot-Standby: aktiver und passiver Partner, typisch bei einem Reserve-Server an einem zweiten Standort.\n• Lange Lease ist keine Redundanz, verschafft aber Zeit für die Reparatur.\nMerke: Failover = gemeinsamer Bereich mit Abgleich; Split-Scope = geteilter Bereich ohne Abgleich.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-576",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Der Netzwerkdrucker der Verwaltung soll per DHCP immer dieselbe Adresse 192.168.20.150 erhalten. Welche Einstellung am DHCP-Server ist dafür richtig?",
+    "optionen": [
+      "Eine Reservierung, die 192.168.20.150 an die MAC-Adresse des Druckers bindet",
+      "Ein Ausschluss für 192.168.20.150, damit nur der Drucker diese Adresse bekommt",
+      "Eine Lease-Zeit von unbegrenzt für den ganzen Bereich 192.168.20.100–.199",
+      "Die Option 003 mit der Adresse 192.168.20.150 im Bereich des VLAN 20"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Ein Ausschluss nimmt die Adresse aus der Vergabe – der Drucker bekäme sie dann gerade nicht per DHCP.",
+      "Eine unbegrenzte Lease bindet keine Adresse an ein bestimmtes Gerät.",
+      "Option 003 setzt das Standardgateway für alle Clients, nicht die Adresse des Druckers."
+    ],
+    "erklaerungKurz": "Reservierung = feste Adresse für eine bestimmte MAC-Adresse, vergeben vom DHCP-Server.",
+    "erklaerungLang": "Drucker brauchen eine gleichbleibende Adresse, weil Clients sie über diese Adresse ansprechen.\n• Reservierung: der Server erkennt den Drucker an seiner MAC-Adresse und gibt immer dieselbe Adresse.\n• Vorteil gegenüber statisch: Gateway und DNS ändern sich zentral mit.\n• Ausschluss: die Adresse wird vom Server nie vergeben – passend für statisch eingetragene Geräte.\nMerke: Fest per DHCP = Reservierung (MAC); fest ohne DHCP = statisch plus Ausschluss.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-577",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "fehlersuche",
+    "schwierigkeit": 3,
+    "frage": "Für das Fertigungs-VLAN 40 (192.168.40.0/24, Gateway auf dem Core-Switch 192.168.40.1) wurde ein DHCP-Bereich angelegt. Danach erreichen die Mess-Rechner zwar einander, aber keinen Server in VLAN 30. Klicke die fehlerhafte Zeile an.",
+    "zeilen": [
+      "Bereich: 192.168.40.100 – 192.168.40.199",
+      "Subnetzmaske: 255.255.255.0",
+      "Option 003 Router: 192.168.30.1",
+      "Option 006 DNS-Server: 192.168.30.10",
+      "Lease-Zeit: 8 Stunden"
+    ],
+    "fehlerZeile": 2,
+    "erklaerungKurz": "Das Gateway muss im eigenen Netz liegen: für VLAN 40 ist es 192.168.40.1, nicht die Gateway-Adresse von VLAN 30.",
+    "erklaerungLang": "Ein Client kann nur ein Gateway in seinem eigenen Netz direkt erreichen.\n• 192.168.30.1 liegt außerhalb von 192.168.40.0/24 – der Client kann es nicht per ARP auflösen.\n• Im selben VLAN klappt die Kommunikation, weil dafür kein Gateway nötig ist.\n• Der DNS-Server darf in einem anderen Netz liegen, er wird über das Gateway erreicht.\n• Richtig: Option 003 Router 192.168.40.1.\nMerke: Option 003 = Gateway im EIGENEN Netz des Bereichs.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-578",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein Rechner der Verwaltung (VLAN 20) der Hollmann Gerätebau GmbH zeigt bei „ipconfig /all“: IPv4-Adresse 192.168.0.23 · Standardgateway 192.168.0.1 · DHCP-Server 192.168.0.1. Was ist die wahrscheinlichste Ursache?",
+    "optionen": [
+      "Ein fremdes Gerät im VLAN arbeitet als zusätzlicher, nicht autorisierter DHCP-Server",
+      "Der DHCP-Server 192.168.30.10 ist ausgefallen und hat vorher eine Ersatzadresse vergeben",
+      "Die Lease ist abgelaufen, und Windows hat sich selbst eine Adresse gesetzt",
+      "Der Relay auf dem Core-Switch hat den Bereich für VLAN 20 falsch ausgewählt"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Ein ausgefallener Server vergibt gar nichts – der Client erhielte 169.254.x.x.",
+      "Eine selbst gesetzte Adresse wäre 169.254.x.x ohne DHCP-Server-Eintrag.",
+      "Der Relay meldet sich mit 192.168.20.1 – eine Antwort aus 192.168.0.0/24 kann so nicht entstehen."
+    ],
+    "erklaerungKurz": "Der DHCP-Server 192.168.0.1 gehört nicht zur Firma – typisch für einen eingesteckten privaten Router (Rogue-DHCP).",
+    "erklaerungLang": "Der Eintrag „DHCP-Server“ in ipconfig /all zeigt, wer die Adresse vergeben hat.\n• Der richtige Server wäre 192.168.30.10 (über den Relay).\n• 192.168.0.1 ist die typische Adresse eines Heimrouters.\n• Abhilfe: Gerät suchen und entfernen, dauerhaft DHCP-Snooping auf den Access-Switches.\nMerke: Fremder DHCP-Server im ipconfig = Rogue-DHCP.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb – Fehlersuche am Client"
+  },
+  {
+    "id": "M04-579",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Auf dem Access-Switch der Fertigung wird DHCP-Snooping aktiviert. Welcher Port muss als vertrauenswürdig (trusted) markiert werden?",
+    "optionen": [
+      "Der Uplink-Port zum Core-Switch, über den der Relay antwortet",
+      "Jeder Port, an dem ein Mess-Rechner oder Drucker angeschlossen ist",
+      "Nur der Port, an dem zuletzt ein Discover empfangen wurde",
+      "Kein Port – trusted Ports schalten das Snooping wieder aus"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Client-Ports bleiben untrusted – sonst könnte dort wieder ein fremder Server antworten.",
+      "Trusted wird fest eingestellt, nicht nach dem letzten Discover.",
+      "Ohne trusted Port kämen auch die echten Antworten nicht durch."
+    ],
+    "erklaerungKurz": "Trusted ist nur der Port in Richtung des echten DHCP-Servers bzw. Relays – hier der Uplink zum Core.",
+    "erklaerungLang": "DHCP-Snooping filtert DHCP-Antworten (Offer, Ack) nach Ports.\n• Trusted: Uplink zum Core-Switch, Serverports – dort dürfen Antworten herein.\n• Untrusted: alle Endgeräte-Ports – dort sind nur Anfragen erlaubt.\n• Der Switch merkt sich vergebene Adressen in einer Bindungstabelle (MAC, IP, Port, VLAN).\nMerke: Trusted = Richtung echter DHCP-Server; alles andere untrusted.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-580",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "reihenfolge",
+    "schwierigkeit": 3,
+    "frage": "Bringen Sie die Stationen einer DHCP-Lease ohne erreichbaren Server in die richtige zeitliche Reihenfolge.",
+    "schritte": [
+      "Acknowledge: der Client erhält Adresse und Lease-Zeit",
+      "Bei 50 % der Lease (T1): Request per Unicast an den eigenen Server",
+      "Bei 87,5 % der Lease (T2): Request per Broadcast an jeden Server",
+      "Lease-Ende: der Client gibt die Adresse auf",
+      "Neues Discover bleibt ohne Antwort: Windows setzt 169.254.x.x (APIPA)"
+    ],
+    "erklaerungKurz": "Ack → T1 (Unicast, 50 %) → T2 (Broadcast, 87,5 %) → Lease-Ende → Discover ohne Antwort → APIPA.",
+    "erklaerungLang": "So verliert ein Client bei dauerhaft fehlendem Server seine Adresse.\n• Renewing ab T1: Der Client fragt zuerst seinen bekannten Server direkt.\n• Rebinding ab T2: jeder DHCP-Server darf jetzt verlängern.\n• Nach Lease-Ende beginnt der Client wieder mit Discover.\n• Antwortet niemand, vergibt Windows eine APIPA-Adresse.\nMerke: Erst Unicast, dann Broadcast, dann APIPA.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-581",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Bei der Hollmann Gerätebau GmbH soll jedes Gerät seine Adresse auf dem passenden Weg erhalten. Ordnen Sie zu.",
+    "paare": [
+      [
+        "DHCP-Server 192.168.30.10",
+        "Statisch konfiguriert – er kann sich nicht selbst eine Adresse vergeben"
+      ],
+      [
+        "Netzwerkdrucker in VLAN 40",
+        "DHCP-Reservierung – feste Adresse, zentral verwaltet"
+      ],
+      [
+        "Büro-Rechner in der Verwaltung",
+        "Dynamisch aus dem Bereich .100–.199"
+      ],
+      [
+        "Gateway-Schnittstelle 192.168.20.1 auf dem Core-Switch",
+        "Statisch – Clients müssen das Gateway unter fester Adresse finden"
+      ]
+    ],
+    "extra": [
+      "APIPA – Adresse aus 169.254.0.0/16, weil kein DHCP-Server antwortet"
+    ],
+    "erklaerungKurz": "Infrastruktur (DHCP-Server, Gateway) statisch, Drucker per Reservierung, Arbeitsplätze dynamisch.",
+    "erklaerungLang": "Statisch oder dynamisch ist eine Frage der Rolle des Geräts.\n• Statisch: Server, Router und Switch-Schnittstellen – sie müssen auch ohne DHCP erreichbar sein.\n• Reservierung: Geräte mit fester Adresse, die trotzdem zentral gepflegt werden sollen (Drucker).\n• Dynamisch: Arbeitsplätze und Notebooks – wenig Aufwand, keine Doppelvergabe.\n• Statische Adressen liegen außerhalb des Bereichs oder werden ausgeschlossen.\nMerke: Wer gefunden werden muss, hat eine feste Adresse – statisch oder reserviert.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-582",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 3,
+    "frage": "Der Core-Switch der Hollmann Gerätebau GmbH empfängt in VLAN 40 ein DHCP-Discover als ___. Mit „ip helper-address 192.168.30.10“ arbeitet seine VLAN-40-Schnittstelle als ___ und schickt die Anfrage als ___ an den Server. Dabei trägt sie die Adresse ___ als Gateway-Adresse ein, damit der Server den richtigen Bereich wählt.",
+    "luecken": [
+      {
+        "optionen": [
+          "Unicast",
+          "Broadcast",
+          "Multicast",
+          "Anycast"
+        ],
+        "loesung": 1
+      },
+      {
+        "optionen": [
+          "DHCP-Relay-Agent",
+          "DNS-Forwarder",
+          "Proxy-Server",
+          "DHCP-Snooping"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "Broadcast",
+          "Multicast",
+          "Unicast",
+          "Flooding"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "192.168.30.10",
+          "192.168.40.1",
+          "255.255.255.255",
+          "0.0.0.0"
+        ],
+        "loesung": 1
+      }
+    ],
+    "erklaerungKurz": "Broadcast rein, Unicast raus: der Relay-Agent leitet weiter und trägt seine eigene Adresse 192.168.40.1 (giaddr) ein.",
+    "erklaerungLang": "Der Relay-Agent verbindet die Broadcast-Welt des Clients mit dem gerouteten Netz.\n• Discover kommt als Broadcast an der VLAN-40-Schnittstelle an.\n• ip helper-address macht die Schnittstelle zum Relay-Agent.\n• Weitergeleitet wird per Unicast an 192.168.30.10.\n• giaddr = 192.168.40.1 sagt dem Server: Bereich 192.168.40.0/24.\nMerke: Relay: Broadcast annehmen, Unicast weitergeben, eigene Schnittstelle als giaddr eintragen.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-583",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein Notebook zeigt 169.254.40.9. Der Support führt „ipconfig /release“ und danach „ipconfig /renew“ aus; /renew meldet nach einiger Zeit einen Fehler, die Adresse bleibt 169.254.40.9. Welche Schlussfolgerung ist richtig?",
+    "optionen": [
+      "Der Client erreicht keinen DHCP-Server – Kabel, Port, VLAN oder Relay prüfen",
+      "Der DNS-Server ist ausgefallen – deshalb kann der Client keine Adresse beziehen",
+      "Die Lease ist noch gültig – /renew darf vor Ablauf nichts ändern",
+      "Die Subnetzmaske ist falsch – /renew scheitert, bis sie korrigiert ist"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "DHCP funktioniert ohne DNS; eine Adresse würde der Client trotzdem erhalten.",
+      "Mit 169.254.x.x gibt es keine gültige Lease; /renew fordert dann eine neue an.",
+      "169.254.x.x mit fehlschlagendem /renew zeigt: Der Client erreicht keinen DHCP-Server; an der Maske liegt das nicht."
+    ],
+    "erklaerungKurz": "Bleibt nach /renew 169.254.x.x, hat kein DHCP-Server geantwortet – Fehler auf dem Weg zum Server oder am Server.",
+    "erklaerungLang": "/release und /renew sind die Client-Werkzeuge der DHCP-Fehlersuche.\n• /release gibt die Lease frei (DHCP-Release).\n• /renew startet eine neue Anfrage; ohne Antwort folgt eine Fehlermeldung.\n• Prüfreihenfolge: Kabel und Link, Switchport und VLAN, Relay, DHCP-Server und freie Adressen im Bereich.\nMerke: /renew ohne Erfolg = kein DHCP-Server erreichbar.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb – Fehlersuche am Client"
+  },
+  {
+    "id": "M04-584",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Ein Administrator überlegt, die Lease-Zeit von 8 Stunden auf 8 Tage zu erhöhen. Welche Aussage trifft zu?",
+    "optionen": [
+      "Clients überbrücken einen Serverausfall länger, Änderungen erreichen sie später",
+      "Clients erhalten schneller eine neue Adresse, wenn sie den Raum wechseln",
+      "Der Bereich läuft seltener voll, weil Adressen schneller frei werden",
+      "Die Clients erneuern ihre Lease deutlich häufiger und erzeugen dadurch mehr DHCP-Verkehr"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Mit längerer Lease ändert sich daran nichts – ein neues Netz löst ohnehin ein neues Discover aus.",
+      "Umgekehrt: lange Leases halten Adressen abgemeldeter Geräte länger fest.",
+      "Umgekehrt: längere Lease bedeutet seltenere Erneuerung und weniger Verkehr."
+    ],
+    "erklaerungKurz": "Lange Lease: weniger Verkehr, mehr Puffer bei Ausfall – aber Adressen bleiben länger belegt und Optionen ändern sich langsamer.",
+    "erklaerungLang": "Die Lease-Zeit ist ein Abwägen.\n• Lang: wenig DHCP-Verkehr, Ausfall des Servers wird länger überbrückt.\n• Lang: Adressen abgemeldeter Geräte bleiben belegt; geänderte Optionen (z. B. neuer DNS-Server) kommen erst bei der Erneuerung an.\n• Kurz: geeignet für Gäste-WLAN mit vielen wechselnden Geräten.\nMerke: Lange Lease = stabil und träge; kurze Lease = beweglich und gesprächig.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-585",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Auf welcher OSI-Schicht ist das Protokoll DHCP einzuordnen?",
+    "optionen": [
+      "Schicht 7 (Anwendung) – es nutzt UDP auf Schicht 4",
+      "Schicht 3 (Vermittlung) – es vergibt ja IP-Adressen",
+      "Schicht 2 (Sicherung) – es arbeitet mit MAC-Adressen",
+      "Schicht 4 (Transport) – es nutzt die Ports 67 und 68"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Dass DHCP Adressen der Schicht 3 verteilt, macht es nicht zu einem Schicht-3-Protokoll.",
+      "DHCP trägt zwar die Client-MAC in der Nachricht, ist aber kein Schicht-2-Protokoll.",
+      "Ports gehören zu UDP; DHCP selbst liegt darüber."
+    ],
+    "erklaerungKurz": "DHCP ist ein Anwendungsprotokoll (Schicht 7), transportiert über UDP (Schicht 4) und IP (Schicht 3).",
+    "erklaerungLang": "Ein Protokoll wird nach seiner eigenen Funktion eingeordnet, nicht nach dem Inhalt, den es überträgt.\n• DHCP-Nachrichten stecken in UDP-Segmenten (Ports 67/68).\n• UDP steckt in IP-Paketen, auch wenn der Client noch 0.0.0.0 als Absender nutzt.\n• Vergleich: ARP liegt zwischen Schicht 2 und 3, DNS wie DHCP auf Schicht 7.\nMerke: DHCP: Schicht 7 über UDP.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-586",
+    "pruefungsteil": "AP2",
+    "modul": "M04",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein Client erhält seine IPv6-Adresse ohne DHCPv6-Server: Der Router teilt per Router Advertisement das Präfix mit, den Rest bildet der Client selbst. Wie heißt dieses Verfahren?",
+    "optionen": [
+      "SLAAC – Stateless Address Autoconfiguration",
+      "APIPA – Automatic Private IP Addressing",
+      "Stateful DHCPv6 – Adressvergabe durch den Server",
+      "DHCP-Relay – Weiterleitung durch den Router"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "APIPA ist die IPv4-Notadresse 169.254.x.x, wenn kein DHCP antwortet.",
+      "Beim stateful DHCPv6 vergibt und speichert der Server die Adressen.",
+      "Ein Relay leitet DHCP-Anfragen weiter, vergibt aber selbst keine Adressen."
+    ],
+    "erklaerungKurz": "SLAAC: Präfix vom Router (Router Advertisement), Interface-ID bildet der Client selbst – ohne Server, der Adressen speichert.",
+    "erklaerungLang": "IPv6 kennt drei Wege zur automatischen Adresse.\n• SLAAC: Präfix aus dem Router Advertisement (ICMPv6), Interface-ID selbst gebildet.\n• Stateless DHCPv6: Adresse per SLAAC, Zusatzinfos wie DNS-Server vom DHCPv6-Server.\n• Stateful DHCPv6: der Server vergibt und verwaltet die Adressen (UDP 546/547).\nMerke: SLAAC = ohne Server-Zustand; stateful DHCPv6 = Server führt Buch.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb – DHCPv6 und SLAAC"
+  },
+  {
+    "id": "M04-587",
+    "pruefungsteil": "AP2",
+    "modul": "M04",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mtf",
+    "schwierigkeit": 3,
+    "frage": "Bewerten Sie die Aussagen zu DHCPv6 und zur zustandslosen automatischen Adresskonfiguration (Stateless Address Autoconfiguration).",
+    "aussagen": [
+      {
+        "text": "DHCPv6 nutzt UDP-Port 546 auf dem Client und 547 auf dem Server.",
+        "wahr": true
+      },
+      {
+        "text": "Beim stateful DHCPv6 speichert der Server, welcher Client welche Adresse hat.",
+        "wahr": true
+      },
+      {
+        "text": "Bei SLAAC erfährt der Client das Präfix aus dem Router Advertisement des Routers.",
+        "wahr": true
+      },
+      {
+        "text": "Ein IPv6-Client nutzt wie bei IPv4 eine Broadcast-Adresse, um den DHCPv6-Server zu finden.",
+        "wahr": false
+      },
+      {
+        "text": "Bei SLAAC vergibt der Router jedem Client eine vollständige Adresse aus einer Tabelle.",
+        "wahr": false
+      }
+    ],
+    "erklaerungKurz": "DHCPv6: UDP 546/547, Multicast statt Broadcast. SLAAC: Präfix vom Router, Interface-ID vom Client.",
+    "erklaerungLang": "IPv6 hat keine Broadcasts mehr.\n• DHCPv6-Clients senden an die Multicast-Adresse ff02::1:2 (alle DHCP-Server und -Relays).\n• Stateful DHCPv6 führt Buch über Adressen, ähnlich wie DHCP bei IPv4.\n• SLAAC: der Router nennt nur das Präfix, der Client bildet die Interface-ID selbst.\nMerke: IPv6: Multicast statt Broadcast – und SLAAC braucht keinen Server mit Adresstabelle.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb – DHCPv6 und SLAAC"
+  },
+  {
+    "id": "M04-588",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Ein Mitarbeiter fragt, warum der Dateiserver eine feste Adresse hat, sein Arbeitsplatz aber eine per DHCP. Welche Begründung ist richtig?",
+    "optionen": [
+      "Der Server muss unter gleicher Adresse erreichbar sein; Arbeitsplätze nicht",
+      "Statische Adressen sind schneller, deshalb erhalten sie nur besonders wichtige Geräte",
+      "DHCP kann nur Adressen an Geräte mit Windows-Betriebssystem vergeben",
+      "Arbeitsplätze dürfen aus Datenschutzgründen keine feste Adresse haben"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die Art der Vergabe ändert nichts an der Übertragungsgeschwindigkeit.",
+      "DHCP ist herstellerunabhängig; Linux, Drucker und Telefone nutzen es ebenso.",
+      "Es gibt kein solches Verbot; feste Adressen sind nur aufwendiger zu pflegen."
+    ],
+    "erklaerungKurz": "Dienste müssen unter fester Adresse erreichbar sein; Clients nicht – für sie spart DHCP Arbeit und vermeidet Doppelvergabe.",
+    "erklaerungLang": "Statisch und dynamisch haben jeweils ihren Platz.\n• Statisch: Server, Gateway, Switches – Clients und DNS-Einträge verweisen auf diese Adressen.\n• Dynamisch: zentrale Pflege, keine Tippfehler, keine Doppelvergabe, Optionen ändern sich zentral.\n• Mittelweg: Reservierung für Drucker.\nMerke: Wer Dienste anbietet, bekommt eine feste Adresse.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-589",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "„ipconfig /all“ zeigt auf einem Rechner der Hollmann Gerätebau GmbH: Lease erhalten: 24.11.2026 08:00 · Lease läuft ab: 24.11.2026 16:00. Wann versucht der Rechner zum ersten Mal, die Lease bei seinem DHCP-Server zu verlängern?",
+    "optionen": [
+      "um 12:00 Uhr – nach der Hälfte der Lease-Zeit",
+      "um 15:00 Uhr – nach 87,5 % der Lease-Zeit",
+      "um 16:00 Uhr – erst wenn die Lease abläuft",
+      "um 08:00 Uhr am Folgetag – beim nächsten Start"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Bei 87,5 % (T2) fragt der Client schon jeden beliebigen Server – das ist der zweite Versuch.",
+      "Bis zum Ablauf zu warten wäre zu spät; dann ist die Adresse weg.",
+      "Der Client erneuert während des Betriebs, nicht erst beim Neustart."
+    ],
+    "erklaerungKurz": "Lease 08:00–16:00 = 8 h; T1 = 50 % = 4 h → 12:00 Uhr, Unicast-Request an den eigenen Server.",
+    "erklaerungLang": "Die Zeitstempel in ipconfig /all reichen, um T1 und T2 auszurechnen.\n• Dauer: 16:00 − 08:00 = 8 h.\n• T1 = 4 h → 12:00 (Renewing, eigener Server).\n• T2 = 7 h → 15:00 (Rebinding, jeder Server).\nMerke: Erster Verlängerungsversuch bei halber Lease.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb – Fehlersuche am Client"
+  },
+  {
+    "id": "M04-590",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "konsole",
+    "schwierigkeit": 2,
+    "frage": "Ein Mess-Rechner der Fertigung hat nach einem Kabeltausch noch eine alte Adresse. Führe die Arbeitsschritte an der Windows-Konsole aus.",
+    "aufgaben": [
+      {
+        "prompt": "Gib die aktuelle DHCP-Lease des Rechners frei.",
+        "akzeptiert": [
+          "ipconfig /release"
+        ]
+      },
+      {
+        "prompt": "Fordere beim DHCP-Server eine neue Adresse an.",
+        "akzeptiert": [
+          "ipconfig /renew"
+        ]
+      },
+      {
+        "prompt": "Zeige die vollständige Konfiguration mit DHCP-Server, Lease-Zeiten und DNS-Server an.",
+        "akzeptiert": [
+          "ipconfig /all"
+        ]
+      }
+    ],
+    "erklaerungKurz": "/release gibt die Lease frei, /renew fordert eine neue an, /all zeigt das Ergebnis mit DHCP-Server und Lease-Zeiten.",
+    "erklaerungLang": "Diese drei Befehle sind das Client-Werkzeug der DHCP-Fehlersuche.\n• ipconfig /release: DHCP-Release an den Server, die Adresse wird freigegeben.\n• ipconfig /renew: neue Anfrage; ohne Antwort bleibt bzw. entsteht 169.254.x.x.\n• ipconfig /all: zeigt DHCP aktiviert, DHCP-Server, Lease erhalten und Lease läuft ab.\nMerke: release – renew – all: freigeben, neu holen, nachsehen.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb – Fehlersuche am Client"
+  },
+  {
+    "id": "M04-591",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "bild",
+    "schwierigkeit": 3,
+    "frage": "Im abgebildeten Netz erhalten die Geräte in VLAN 10 und VLAN 40 keine Adresse vom DHCP-Server. Auf welchem Gerät wird der DHCP-Relay (ip helper-address 192.168.30.10) eingerichtet?",
+    "unterTyp": "mc",
+    "svg": "<svg viewBox='0 0 560 300' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><style>.k{fill:#e8f4f8;stroke:#333;stroke-width:2}.c{fill:#fff4d6;stroke:#333;stroke-width:2}.l{text-anchor:middle;dominant-baseline:middle;fill:#1b1f27}.v{stroke:#333;stroke-width:2}</style><text x='280' y='18' class='l' font-weight='bold' font-size='14'>Netz der Hollmann Gerätebau GmbH (Ausschnitt)</text><line class='v' x1='280' y1='95' x2='100' y2='165'/><line class='v' x1='280' y1='95' x2='280' y2='165'/><line class='v' x1='280' y1='95' x2='460' y2='165'/><line class='v' x1='100' y1='195' x2='100' y2='240'/><line class='v' x1='280' y1='195' x2='280' y2='240'/><line class='v' x1='460' y1='195' x2='460' y2='240'/><rect class='c' x='190' y='45' width='180' height='50' rx='4'/><text x='280' y='62' class='l'>(A) Core-Switch Layer 3</text><text x='280' y='80' class='l' font-size='11'>Gateways .10.1 / .30.1 / .40.1</text><rect class='k' x='20' y='165' width='160' height='30' rx='4'/><text x='100' y='180' class='l'>(B) Access-Switch Entw.</text><rect class='k' x='200' y='165' width='160' height='30' rx='4'/><text x='280' y='180' class='l'>(C) Access-Switch Server</text><rect class='k' x='380' y='165' width='160' height='30' rx='4'/><text x='460' y='180' class='l'>(D) Access-Switch Fert.</text><rect class='k' x='20' y='240' width='160' height='40' rx='4'/><text x='100' y='253' class='l'>Arbeitsplätze</text><text x='100' y='269' class='l' font-size='11'>VLAN 10</text><rect class='k' x='200' y='240' width='160' height='40' rx='4'/><text x='280' y='253' class='l'>(E) DHCP-Server</text><text x='280' y='269' class='l' font-size='11'>VLAN 30, 192.168.30.10</text><rect class='k' x='380' y='240' width='160' height='40' rx='4'/><text x='460' y='253' class='l'>Mess-Rechner</text><text x='460' y='269' class='l' font-size='11'>VLAN 40</text></svg>",
+    "optionen": [
+      "(A) auf dem Core-Switch, je VLAN-Schnittstelle 10 und 40",
+      "(B) und (D) auf den Access-Switches der beiden VLANs",
+      "(E) auf dem DHCP-Server selbst, als zusätzlicher Dienst",
+      "(C) auf dem Access-Switch, an dem der Server angeschlossen ist"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Layer-2-Access-Switches routen nicht; der Broadcast erreicht ohnehin das Gateway auf dem Core.",
+      "Der Server bekommt die Anfrage gerade nicht – der Relay muss im Netz des Clients sitzen.",
+      "Dieser Switch liegt in VLAN 30; die Broadcasts aus VLAN 10 und 40 erreichen ihn nicht."
+    ],
+    "erklaerungKurz": "Der Relay gehört auf die Layer-3-Schnittstelle im VLAN des Clients – hier die Gateway-Schnittstellen des Core-Switches für VLAN 10 und 40.",
+    "erklaerungLang": "Der Relay muss den Broadcast des Clients noch sehen können und zugleich routen.\n• Der Broadcast endet an der Gateway-Schnittstelle des VLAN auf dem Core-Switch.\n• Dort wird er als Unicast an 192.168.30.10 weitergeleitet.\n• VLAN 30 braucht keinen Relay – Server und Clients liegen dort im selben Netz.\nMerke: Relay = auf dem Gateway jedes Client-VLANs ohne eigenen DHCP-Server.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-592",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Die Hollmann Gerätebau GmbH hat die Fertigung neu verkabelt. Seitdem melden alle Mess-Rechner in VLAN 40: kein Zugriff auf die Server. In der Verwaltung (VLAN 20) funktioniert alles. Du übernimmst das Ticket im 2nd Level.",
+    "schritt1": {
+      "frage": "Ein Mess-Rechner zeigt in ipconfig /all die Adresse 169.254.88.4. Was folgt daraus?",
+      "optionen": [
+        "Er hat keine Antwort von einem DHCP-Server erhalten",
+        "Er hat eine gültige Adresse aus dem Bereich von VLAN 40",
+        "Sein DNS-Server ist falsch eingetragen worden"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Alle Rechner in VLAN 40 sind betroffen, VLAN 20 nicht; der DHCP-Server läuft. Wo liegt die wahrscheinlichste Ursache?",
+      "optionen": [
+        "Auf der VLAN-40-Schnittstelle des Core fehlt ip helper-address",
+        "Der DHCP-Server ist für VLAN 40 zu weit entfernt, weil DHCP nur über einen Switch hinweg reicht",
+        "Auf dem Access-Switch ist DHCP-Snooping für VLAN 40 deaktiviert"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: 169.254.x.x (APIPA) setzt Windows selbst, wenn kein DHCP-Server antwortet.",
+      "Der Bereich für VLAN 40 ist 192.168.40.100–.199 – 169.254 gehört nicht dazu.",
+      "Ein falscher DNS-Server ändert nichts an der Adresse; das Problem liegt eine Stufe früher."
+    ],
+    "erklaerungKurz": "APIPA in einem ganzen VLAN bei laufendem Server zeigt auf den Weg dorthin: Nach dem Umbau fehlt der Relay (ip helper-address) für VLAN 40.",
+    "erklaerungLang": "Die Kette übt das Eingrenzen: erst den Client deuten, dann das Fehlerbild über mehrere Clients.\n• 169.254.x.x heißt: Discover ohne Antwort.\n• Betrifft es ein ganzes VLAN, ist kein einzelner Client schuld.\n• Funktioniert ein anderes VLAN mit demselben Server, läuft der Server.\n• Bleibt: der Weg vom VLAN 40 zum Server – Relay auf der Gateway-Schnittstelle 192.168.40.1.\nMerke: Ein VLAN ohne Adressen, andere VLANs gesund: zuerst den Relay prüfen.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-593",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 4,
+    "frage": "Die Hollmann Gerätebau GmbH will den DHCP-Dienst ausfallsicher machen. Bisher vergibt nur der Server 192.168.30.10 alle Adressen mit 8 Stunden Lease. Die IT stellt einen zweiten Server 192.168.30.11 bereit.",
+    "schritt1": {
+      "frage": "Der erste Server fällt aus. Wen trifft das sofort?",
+      "optionen": [
+        "Neu gestartete Geräte – laufende behalten ihre Lease",
+        "Alle Geräte – sie verlieren sofort ihre Adressen",
+        "Nur Geräte, deren Lease gerade bei T1 (halbe Laufzeit) verlängert werden soll"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Beide Server sollen gleichzeitig vergeben und ihre Leases abgleichen. Welches Verfahren passt?",
+      "optionen": [
+        "DHCP-Failover im Modus Lastenausgleich",
+        "DHCP-Relay auf beide Server mit gemeinsamem Bereich",
+        "DHCP-Failover im Modus Hot-Standby"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: laufende Clients behalten ihre Adresse bis zum Ende der Lease, neue bekommen keine.",
+      "Eine gültige Lease bleibt auch ohne Server bestehen – der Ausfall wirkt verzögert.",
+      "Bei T1 scheitert die Verlängerung zwar, die Lease gilt aber bis zu ihrem Ablauf weiter – sofort betroffen sind nur neu startende Geräte."
+    ],
+    "erklaerungKurz": "Ausfall trifft zuerst neue Geräte. Gleichzeitige Vergabe mit Abgleich = Failover-Lastenausgleich; Hot-Standby hält den Partner zurück, Split-Scope gleicht nicht ab.",
+    "erklaerungLang": "Die Kette verbindet die Wirkung der Lease mit der Wahl des Verfahrens.\n• Lease 8 h: laufende Clients halten bis zu 8 h durch, neue Clients sofort ohne Adresse.\n• Failover-Lastenausgleich: beide aktiv, gemeinsamer Bereich, Leases synchronisiert.\n• Failover-Hot-Standby: der zweite wartet und springt erst beim Ausfall ein.\n• Split-Scope 80/20: zwei getrennte Teilbereiche ohne Abgleich.\nMerke: Beide aktiv mit Abgleich = Lastenausgleich; einer wartet = Hot-Standby.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  },
+  {
+    "id": "M04-594",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "DHCP & Netzwerkdienste",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Im Ticketsystem der Hollmann Gerätebau GmbH gehen morgens mehrere Meldungen aus der Verwaltung (VLAN 20) ein: „Kein Zugriff auf das NAS.“ Andere Kollegen im selben Raum arbeiten normal.",
+    "schritt1": {
+      "frage": "ipconfig /all zeigt bei den Betroffenen: Gateway 192.168.0.1, DHCP-Server 192.168.0.1. Was liegt vor?",
+      "optionen": [
+        "Ein fremdes Gerät vergibt als Rogue-DHCP Adressen",
+        "Der Relay hat für VLAN 20 den falschen Bereich gewählt",
+        "Die Lease der Betroffenen ist schon abgelaufen"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Das Gerät ist entfernt. Welche Maßnahme verhindert das künftig dauerhaft?",
+      "optionen": [
+        "DHCP-Snooping, nur der Uplink zum Core ist trusted",
+        "Die Lease-Zeit für VLAN 20 auf 1 Stunde senken",
+        "Einen zweiten DHCP-Server im Split-Scope 80/20 aufstellen"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: 192.168.0.1 ist kein Server der Firma – ein eingesteckter Router beantwortet die Discover-Broadcasts.",
+      "Der Relay meldet sich mit 192.168.20.1; Antworten aus 192.168.0.0/24 kann er nicht erzeugen.",
+      "Nach Ablauf der Lease ohne Server stünde 169.254.x.x da, kein Gateway 192.168.0.1."
+    ],
+    "erklaerungKurz": "Fremder DHCP-Server = Rogue-DHCP. Dauerhafter Schutz: DHCP-Snooping am Access-Switch, Antworten nur über den trusted Uplink.",
+    "erklaerungLang": "Rogue-DHCP fällt im ipconfig am fremden DHCP-Server-Eintrag auf.\n• Nur ein Teil der Clients ist betroffen – der fremde Server antwortete schneller.\n• Sofortmaßnahme: Gerät suchen (Switchport, MAC-Tabelle) und entfernen, Clients mit /release und /renew neu versorgen.\n• Dauerhaft: DHCP-Snooping; eine kürzere Lease oder ein zweiter Server ändern am Angriffsweg nichts.\nMerke: Rogue-DHCP erkennen am DHCP-Server-Eintrag, verhindern mit DHCP-Snooping.",
+    "verweis": "Modul 04, Abschnitt 4.5: DHCP im Betrieb (Relay, Bereich, Ausfallsicherheit)"
+  }
+]

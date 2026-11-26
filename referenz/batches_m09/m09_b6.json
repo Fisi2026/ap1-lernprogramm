@@ -1,0 +1,401 @@
+[
+ {
+  "id": "M09-108",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Rechtsformen",
+  "typ": "szenario2",
+  "schwierigkeit": 3,
+  "frage": "Zwei ehemalige Rhaus-Metall-Mitarbeiterinnen, Frau Keller und Herr Bosch, wollen sich mit einer eigenen Konstruktions-Werkstatt selbstständig machen. Sie haben zusammen 15.000 € Startkapital, wollen ihre Haftung unbedingt auf die Einlage beschränken, können aber die 25.000 € Stammkapital einer GmbH nicht aufbringen.",
+  "schritt1": {
+   "frage": "Welche Rechtsform passt zu ihrer Situation am besten?",
+   "optionen": [
+    "UG (haftungsbeschränkt) – haftungsbeschränkt bereits ab 1 € Stammkapital gründbar",
+    "GbR – einfache Gründung ohne besondere Kapitalvorgaben",
+    "OHG – bewährte Rechtsform für zwei Gründungspartner"
+   ],
+   "loesungIndex": 0
+  },
+  "schritt2": {
+   "frage": "Was müssen Keller und Bosch bei der UG zusätzlich beachten?",
+   "optionen": [
+    "Sie müssen jährlich 25 % des Jahresüberschusses als Rücklage bilden, bis das Stammkapital einer GmbH (25.000 €) erreicht ist",
+    "Sie haften trotz UG unbeschränkt mit ihrem gesamten Privatvermögen",
+    "Die UG muss nach spätestens einem Jahr verpflichtend in eine GmbH umgewandelt werden"
+   ],
+   "loesungIndex": 0
+  },
+  "feedback1": [
+   "Richtig: Die UG (haftungsbeschränkt) ist bereits ab 1 € Stammkapital gründbar und beschränkt die Haftung auf das Gesellschaftsvermögen – passend für wenig Startkapital bei gewünschter Haftungsbeschränkung.",
+   "Falsch: Bei der GbR haften die Gesellschafter unbeschränkt und persönlich mit ihrem Privatvermögen – genau das wollten Keller und Bosch vermeiden.",
+   "Falsch: Bei der OHG haften alle Gesellschafter unbeschränkt, persönlich und solidarisch – eine Haftungsbeschränkung ist damit nicht möglich."
+  ],
+  "erklaerungKurz": "Die UG (haftungsbeschränkt) passt bei wenig Kapital und gewünschter Haftungsbeschränkung; sie muss aber 25 % des Jahresüberschusses zurücklegen, bis das GmbH-Stammkapital von 25.000 € erreicht ist.",
+  "erklaerungLang": "Da Keller und Bosch nur 15.000 € Startkapital haben und trotzdem ihre Haftung beschränken wollen, scheidet die GmbH (Mindeststammkapital 25.000 €) ebenso aus wie GbR und OHG, bei denen die Gesellschafter unbeschränkt persönlich haften. Die UG (haftungsbeschränkt) ist bereits ab 1 € Stammkapital gründbar und beschränkt die Haftung auf das Gesellschaftsvermögen. Im Gegenzug schreibt das Gesetz vor, dass die UG jährlich 25 % ihres Jahresüberschusses als gesetzliche Rücklage bildet, bis das Stammkapital rechnerisch die GmbH-Grenze von 25.000 € erreicht.",
+  "verweis": "Unser Unterricht – Rechtsformen"
+ },
+ {
+  "id": "M09-117",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Handlungsvollmachten & Prokura",
+  "typ": "szenario2",
+  "schwierigkeit": 3,
+  "frage": "Verkaufsleiter Herr Thoma besitzt bei der Rhaus-Metall-GmbH eine Generalhandlungsvollmacht (Zeichnung „i.V.“). Ohne Rücksprache unterschreibt er einen Kreditvertrag über 50.000 € für die Anschaffung neuer Fertigungsmaschinen.",
+  "schritt1": {
+   "frage": "Durfte Herr Thoma den Kreditvertrag mit seiner Generalhandlungsvollmacht unterschreiben?",
+   "optionen": [
+    "Nein – Kreditgeschäfte erfordern nach § 54 II HGB eine ausdrückliche besondere Befugnis, die eine normale Handlungsvollmacht nicht abdeckt",
+    "Ja – eine Generalhandlungsvollmacht deckt alle gewöhnlichen und außergewöhnlichen Geschäfte des Unternehmens ab",
+    "Ja – weil Herr Thoma dafür als Handlungsbevollmächtigter im Handelsregister eingetragen ist"
+   ],
+   "loesungIndex": 0
+  },
+  "schritt2": {
+   "frage": "Wie hätte der Kreditvertrag rechtswirksam abgeschlossen werden können?",
+   "optionen": [
+    "Nur mit einer ausdrücklichen besonderen Befugnis des Betriebsinhabers für Kreditgeschäfte (§ 54 II HGB)",
+    "Es reicht, wenn die Geschäftsführung den Vertrag nachträglich stillschweigend nicht beanstandet",
+    "Handlungsvollmachten gelten automatisch auch für Kredite, solange der Betrag unter 100.000 € liegt"
+   ],
+   "loesungIndex": 0
+  },
+  "feedback1": [
+   "Richtig: § 54 II HGB nimmt Kredit-, Wechsel-, Prozess- und Grundstücksgeschäfte ausdrücklich aus der normalen Handlungsvollmacht aus – dafür ist eine besondere Befugnis nötig.",
+   "Falsch: Auch eine General-Handlungsvollmacht deckt nur die gewöhnlichen Geschäfte des Betriebs ab; Kreditgeschäfte gehören zu den Ausnahmen nach § 54 II HGB.",
+   "Falsch: Die Handlungsvollmacht ist – anders als die Prokura – gar nicht eintragungsfähig; eine Registereintragung existiert für Herrn Thoma nicht."
+  ],
+  "erklaerungKurz": "Eine (General-)Handlungsvollmacht deckt nur gewöhnliche Geschäfte ab; für Kredit-, Wechsel-, Prozess- und Grundstücksgeschäfte ist nach § 54 II HGB eine ausdrückliche besondere Befugnis erforderlich.",
+  "erklaerungLang": "Die Handlungsvollmacht nach § 54 HGB berechtigt – je nach Art (General-, Art-, Einzelvollmacht) – zu den gewöhnlichen Geschäften des jeweiligen Handelsgewerbes. § 54 II HGB nimmt jedoch ausdrücklich Kredit-, Wechsel-, Prozess- und Grundstücksgeschäfte aus; für diese braucht es eine besondere, ausdrücklich erteilte Befugnis des Betriebsinhabers. Herr Thoma durfte den Kreditvertrag daher nicht allein aufgrund seiner Generalhandlungsvollmacht unterschreiben. Zusätzlich gilt: Die Handlungsvollmacht ist – anders als die Prokura – nicht ins Handelsregister eintragungsfähig, sie wird nur durch Zeichnung „i.V.“ nach außen erkennbar.",
+  "verweis": "Unser Unterricht – Handlungsvollmachten & Prokura"
+ },
+ {
+  "id": "M09-147",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "szenario2",
+  "schwierigkeit": 4,
+  "frage": "Auszubildender Lukas Dornbach befindet sich im 3. Monat seiner Ausbildung bei der Rhaus-Metall-GmbH. Der Ausbilder ist mit seinen Leistungen unzufrieden und möchte das Ausbildungsverhältnis sofort beenden. Im Ausbildungsvertrag ist die höchstzulässige Probezeit von 4 Monaten vereinbart.",
+  "schritt1": {
+   "frage": "Kann die Rhaus-Metall-GmbH das Ausbildungsverhältnis in dieser Phase kündigen?",
+   "optionen": [
+    "Ja – innerhalb der Probezeit (1 bis 4 Monate) kann jederzeit fristlos und ohne Angabe von Gründen gekündigt werden",
+    "Nein – eine Kündigung ist grundsätzlich erst nach Ablauf der gesamten Ausbildungszeit möglich",
+    "Nur mit einer Kündigungsfrist von vier Wochen, wie es nach der Probezeit üblich ist"
+   ],
+   "loesungIndex": 0
+  },
+  "schritt2": {
+   "frage": "Welche Formvorschrift muss der Betrieb trotzdem einhalten?",
+   "optionen": [
+    "Die Kündigung muss schriftlich erfolgen",
+    "Die Kündigung kann formlos mündlich erfolgen, da es in der Probezeit keine Formvorschriften gibt",
+    "Die Kündigung muss vorab von der zuständigen IHK genehmigt werden"
+   ],
+   "loesungIndex": 0
+  },
+  "feedback1": [
+   "Richtig: § 20/§ 22 BBiG erlauben in der Probezeit (mind. 1, höchstens 4 Monate) beiden Seiten die jederzeitige fristlose Kündigung ohne Angabe von Gründen.",
+   "Falsch: Genau in der Probezeit ist die Kündigung besonders erleichtert – sie muss nicht bis zum Ausbildungsende warten.",
+   "Falsch: Die vierwöchige Frist gilt nur für die Kündigung durch den Auszubildenden nach der Probezeit bei Berufsaufgabe/-wechsel, nicht während der Probezeit."
+  ],
+  "erklaerungKurz": "In der Probezeit (§ 20 BBiG: 1–4 Monate) kann nach § 22 I BBiG jederzeit fristlos und ohne Grund gekündigt werden – die Kündigung muss aber schriftlich erfolgen.",
+  "erklaerungLang": "Lukas Dornbach befindet sich im 3. Monat und damit noch in der Probezeit (§ 20 BBiG: mindestens 1, höchstens 4 Monate). Nach § 22 I BBiG kann während der Probezeit jede Seite das Ausbildungsverhältnis jederzeit fristlos und ohne Angabe von Gründen kündigen. Eine Wartezeit bis zum Ausbildungsende oder eine vierwöchige Frist – die nur für die Kündigung des Azubis nach der Probezeit bei Berufsaufgabe/-wechsel gilt – ist hier nicht einschlägig. Unabhängig von der erleichterten Kündigungsmöglichkeit schreibt § 22 IV BBiG vor, dass jede Kündigung schriftlich erfolgen muss.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-148",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "szenario2",
+  "schwierigkeit": 4,
+  "frage": "Auszubildende Jasmin Kestler (18 Jahre, seit 8 Monaten in Ausbildung bei der Rhaus-Metall-GmbH, Probezeit längst abgelaufen) erscheint seit zwei Wochen unentschuldigt weder im Betrieb noch in der Berufsschule. Mehrere schriftliche Abmahnungen blieben ohne Reaktion.",
+  "schritt1": {
+   "frage": "Welche Kündigungsmöglichkeit hat die Rhaus-Metall-GmbH jetzt?",
+   "optionen": [
+    "Fristlose Kündigung aus wichtigem Grund – nach der Probezeit ist das für den Betrieb die einzige Kündigungsmöglichkeit",
+    "Kündigung mit vierwöchiger Frist, wie bei jedem anderen Arbeitsverhältnis auch",
+    "Der Betrieb muss zunächst die gesetzlichen Vertreter von Jasmin um Erlaubnis zur Kündigung bitten"
+   ],
+   "loesungIndex": 0
+  },
+  "schritt2": {
+   "frage": "Was zählt hier als „wichtiger Grund“ für die fristlose Kündigung?",
+   "optionen": [
+    "Das beharrliche, unentschuldigte Fernbleiben trotz Abmahnung – eine schwere Verletzung der Pflichten aus § 13 BBiG (u. a. Berufsschulbesuch, Weisungen folgen)",
+    "Eine einmalige Verspätung von 10 Minuten am Ausbildungsplatz",
+    "Eine einzelne schlechte Klassenarbeitsnote in der Berufsschule"
+   ],
+   "loesungIndex": 0
+  },
+  "feedback1": [
+   "Richtig: Nach der Probezeit kann der Ausbildende nach § 22 II BBiG nur noch fristlos aus wichtigem Grund kündigen; die vierwöchige Frist steht ausschließlich dem Azubi bei Berufsaufgabe/-wechsel zu.",
+   "Falsch: Eine ordentliche Kündigung mit Frist durch den Betrieb sieht das BBiG nach der Probezeit gerade nicht vor.",
+   "Falsch: Jasmin ist volljährig (18 Jahre) – die Beteiligung gesetzlicher Vertreter betrifft nur minderjährige Auszubildende."
+  ],
+  "erklaerungKurz": "Nach der Probezeit kann der Betrieb nach § 22 II BBiG nur noch fristlos aus wichtigem Grund kündigen; beharrliches unentschuldigtes Fernbleiben trotz Abmahnung verletzt die Pflichten aus § 13 BBiG schwer und rechtfertigt dies.",
+  "erklaerungLang": "Da Jasmins Probezeit bereits abgelaufen ist, greift § 22 II BBiG: Der Ausbildende kann das Ausbildungsverhältnis nur noch fristlos aus wichtigem Grund kündigen. Eine ordentliche Kündigung mit vierwöchiger Frist steht ausschließlich dem Auszubildenden bei Aufgabe oder Wechsel des Berufs zu, nicht dem Betrieb. Das wiederholte, unentschuldigte Fernbleiben von Betrieb und Berufsschule trotz mehrfacher Abmahnung verletzt die Pflichten aus § 13 BBiG (u. a. Lernpflicht, Weisungen befolgen, Berufsschulbesuch) so schwerwiegend, dass ein wichtiger Grund vorliegt. Da Jasmin bereits 18 Jahre alt ist, spielt eine Beteiligung gesetzlicher Vertreter hier keine Rolle.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-149",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "szenario2",
+  "schwierigkeit": 4,
+  "frage": "Der 16-jährige Tim Vogelsang beginnt seine Ausbildung bei der Rhaus-Metall-GmbH.",
+  "schritt1": {
+   "frage": "Wer muss den Ausbildungsvertrag zusätzlich zu Tim unterschreiben?",
+   "optionen": [
+    "Zusätzlich seine gesetzlichen Vertreter (in der Regel die Eltern), da Tim minderjährig ist",
+    "Niemand zusätzlich – mit 16 Jahren ist Tim für den Abschluss eines Ausbildungsvertrags voll geschäftsfähig",
+    "Nur ein Ausbildungsberater der zuständigen IHK als Zeuge"
+   ],
+   "loesungIndex": 0
+  },
+  "schritt2": {
+   "frage": "Der Betrieb möchte Tim nach der Probezeit kündigen. An wen muss sich die Kündigung richten?",
+   "optionen": [
+    "An die gesetzlichen Vertreter – bei Minderjährigen erfolgt die Kündigung an bzw. von den gesetzlichen Vertretern",
+    "Ausschließlich direkt an Tim persönlich, unabhängig von seinem Alter",
+    "An die Berufsschule, die Tims Eltern dann informieren muss"
+   ],
+   "loesungIndex": 0
+  },
+  "feedback1": [
+   "Richtig: Da Tim minderjährig ist, müssen nach § 11 BBiG auch seine gesetzlichen Vertreter den Ausbildungsvertrag unterschreiben.",
+   "Falsch: Minderjährige sind nicht voll geschäftsfähig; bei ihnen unterschreiben zusätzlich die gesetzlichen Vertreter.",
+   "Falsch: Eine Mitwirkung der IHK als Vertragspartei oder Zeuge beim Vertragsschluss selbst ist nicht vorgesehen."
+  ],
+  "erklaerungKurz": "Bei minderjährigen Auszubildenden unterschreiben nach § 11 BBiG zusätzlich die gesetzlichen Vertreter den Ausbildungsvertrag; auch eine spätere Kündigung erfolgt an bzw. von den gesetzlichen Vertretern.",
+  "erklaerungLang": "Tim ist mit 16 Jahren minderjährig und nicht voll geschäftsfähig. Nach § 11 BBiG müssen deshalb zusätzlich zu Tim auch seine gesetzlichen Vertreter, in der Regel die Eltern, den Ausbildungsvertrag unterschreiben. Diese Beteiligung der gesetzlichen Vertreter zieht sich durch das gesamte Ausbildungsverhältnis: Auch eine spätere Kündigung nach § 22 BBiG muss bei minderjährigen Auszubildenden an die bzw. von den gesetzlichen Vertretern gerichtet werden, nicht nur an Tim persönlich. Eine Mitwirkung der IHK am eigentlichen Vertragsabschluss ist im BBiG nicht vorgesehen; sie ist lediglich für die spätere Eintragung des Vertrags zuständig.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-014",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Aufgabenanalyse & -synthese",
+  "typ": "fehlersuche",
+  "schwierigkeit": 3,
+  "frage": "Ein Auszubildender beschreibt der Rhaus-Metall-GmbH die Vorgehensweise bei der Aufbauorganisation. Klicke die fehlerhafte Zeile an.",
+  "zeilen": [
+   "Die Aufgabenanalyse zerlegt die Gesamtaufgabe des Unternehmens in Teilaufgaben und weiter in Elementaraufgaben.",
+   "Die Aufgabensynthese bündelt die zuvor analysierten Aufgaben wieder zu sinnvollen Stellen und Abteilungen.",
+   "Bei der Rhaus-Metall-GmbH wird zuerst synthetisiert und erst danach analysiert, weil sich so die Stellenbildung schneller ergibt.",
+   "Ergebnis der Aufgabensynthese ist die Bildung von Stellen, die jeweils einem Aufgabenträger zugeordnet werden.",
+   "Die richtige Reihenfolge lautet: Gesamtaufgabe → Teilaufgaben → Elementaraufgaben → Stellenbildung."
+  ],
+  "fehlerZeile": 2,
+  "erklaerungKurz": "Die Reihenfolge ist immer erst Aufgabenanalyse (Zerlegen), dann Aufgabensynthese (Bündeln zu Stellen) – nicht umgekehrt.",
+  "erklaerungLang": "Aufgabenanalyse und Aufgabensynthese bauen zwingend aufeinander auf: Zuerst wird die Gesamtaufgabe des Unternehmens in Teil- und Elementaraufgaben zerlegt (Aufgabenanalyse), erst danach können diese Elementaraufgaben sinnvoll zu Stellen gebündelt werden (Aufgabensynthese). Eine Synthese ohne vorherige Analyse hätte keine Aufgaben, die gebündelt werden könnten. Die fehlerhafte Zeile behauptet fälschlich die umgekehrte Reihenfolge; korrekt ist: Gesamtaufgabe → Analyse in Teil-/Elementaraufgaben → Synthese zu Stellen.",
+  "verweis": "Unser Unterricht – Aufgabenanalyse & -synthese"
+ },
+ {
+  "id": "M09-072",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "fehlersuche",
+  "schwierigkeit": 3,
+  "frage": "Ein Kollege bei der Rhaus-Metall-GmbH hat die Vorwärtsrechnung für drei aufeinanderfolgende Netzplan-Vorgänge (A → B → C) durchgeführt. Klicke die Zeile mit dem Rechenfehler an.",
+  "zeilen": [
+   "Vorgang A: FAZ = 0, Dauer = 4 Tage, FEZ = 0 + 4 = 4",
+   "Vorgang B: FAZ = 4 (Nachfolger von A), Dauer = 6 Tage, FEZ = 4 + 6 = 10",
+   "Vorgang C: FAZ = 10 (Nachfolger von B), Dauer = 3 Tage, FEZ = 10 + 3 = 14",
+   "Die Gesamtprojektdauer (FEZ des letzten Vorgangs C) beträgt 13 Tage"
+  ],
+  "fehlerZeile": 2,
+  "erklaerungKurz": "FEZ = FAZ + Dauer: für Vorgang C ist 10 + 3 = 13, nicht 14 – die Zeile rechnet falsch.",
+  "erklaerungLang": "Nach der Vorwärtsrechnung gilt für jeden Vorgang FEZ = FAZ + Dauer, und die FAZ eines Nachfolgers entspricht der FEZ seines Vorgängers (bei nur einem Vorgänger). Vorgang A: FAZ 0 + Dauer 4 = FEZ 4 (korrekt). Vorgang B: FAZ 4 (= FEZ von A) + Dauer 6 = FEZ 10 (korrekt). Vorgang C: FAZ 10 (= FEZ von B) + Dauer 3 müsste FEZ 13 ergeben, die Zeile nennt aber fälschlich 14. Die letzte Zeile bestätigt mit 13 Tagen sogar die korrekte Gesamtprojektdauer, wodurch der Rechenfehler in Zeile 3 (10 + 3 = 14) offensichtlich wird.",
+  "verweis": "Unser Unterricht – Netzplantechnik"
+ },
+ {
+  "id": "M09-087",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kaufmannseigenschaft",
+  "typ": "fehlersuche",
+  "schwierigkeit": 2,
+  "frage": "Ein Auszubildender fasst die Kaufmannsarten nach HGB zusammen. Klicke die fehlerhafte Zeile an.",
+  "zeilen": [
+   "Der Istkaufmann (§ 1 HGB) betreibt ein Handelsgewerbe, das nach Art und Umfang einen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert.",
+   "Der Kannkaufmann (§ 2 HGB) betreibt ein Kleingewerbe und kann sich freiwillig ins Handelsregister eintragen lassen; die Eintragung wirkt konstitutiv.",
+   "Der Formkaufmann (§ 6 HGB) ist kraft seiner Rechtsform Kaufmann, zum Beispiel als GmbH oder AG, unabhängig von Art und Umfang des Betriebs.",
+   "Die Eintragung des Istkaufmanns ins Handelsregister wirkt konstitutiv, das heißt, er wird erst durch die Eintragung zum Kaufmann.",
+   "Die Rhaus-Metall-GmbH ist als GmbH ein Formkaufmann nach § 6 HGB."
+  ],
+  "fehlerZeile": 3,
+  "erklaerungKurz": "Die Eintragung des Istkaufmanns ist deklaratorisch (nur bestätigend) – er ist bereits durch sein Handelsgewerbe Kaufmann, nicht erst durch die Eintragung.",
+  "erklaerungLang": "Der Istkaufmann nach § 1 HGB wird Kaufmann kraft Betreibens eines Handelsgewerbes, das nach Art und Umfang einen kaufmännisch eingerichteten Geschäftsbetrieb erfordert – die Handelsregistereintragung wirkt hier nur deklaratorisch, also bestätigend, nicht rechtsbegründend. Konstitutiv, also rechtsbegründend, wirkt die Eintragung dagegen beim Kannkaufmann (§ 2 HGB): Erst mit der freiwilligen Eintragung wird er zum Kaufmann. Die vierte Zeile verwechselt diese beiden Wirkungen und behauptet fälschlich eine konstitutive Wirkung beim Istkaufmann.",
+  "verweis": "Unser Unterricht – Kaufmannseigenschaft"
+ },
+ {
+  "id": "M09-144",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "fehlersuche",
+  "schwierigkeit": 3,
+  "frage": "Im Entwurf eines Ausbildungsvertrags der Rhaus-Metall-GmbH stehen folgende Klauseln. Klicke die Klausel an, die gegen das BBiG verstößt.",
+  "zeilen": [
+   "Die Probezeit beträgt 3 Monate.",
+   "Der Auszubildende erhält eine angemessene Vergütung, die mindestens jährlich ansteigt.",
+   "Der Ausbildungsbetrieb stellt die erforderlichen Ausbildungsmittel kostenlos zur Verfügung.",
+   "Der Ausbildungsbetrieb kann den Auszubildenden auch nach der Probezeit jederzeit fristlos und ohne Angabe von Gründen kündigen.",
+   "Der Auszubildende wird zum Besuch der Berufsschule angehalten und dafür freigestellt."
+  ],
+  "fehlerZeile": 3,
+  "erklaerungKurz": "Nach der Probezeit ist eine fristlose Kündigung durch den Betrieb nur noch aus wichtigem Grund möglich – nicht mehr „jederzeit und ohne Angabe von Gründen“ wie in der Probezeit.",
+  "erklaerungLang": "§ 20 BBiG erlaubt eine Probezeit von 1 bis 4 Monaten; die vereinbarten 3 Monate sind zulässig. Vergütung (§ 17), kostenlose Ausbildungsmittel (§ 14) und die Freistellung für die Berufsschule (§ 14/§ 15) sind ebenfalls korrekt wiedergegeben. Die vierte Klausel verstößt jedoch gegen § 22 II BBiG: Nach Ablauf der Probezeit kann der Ausbildende nur noch fristlos aus wichtigem Grund kündigen, nicht mehr jederzeit und ohne Grund – dieses erleichterte Kündigungsrecht gilt ausschließlich während der Probezeit (§ 22 I BBiG).",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-145",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "fehlersuche",
+  "schwierigkeit": 4,
+  "frage": "Der Wochenplan eines 17-jährigen Auszubildenden der Rhaus-Metall-GmbH wird geprüft. Klicke die Zeile an, die gegen das JArbSchG verstößt.",
+  "zeilen": [
+   "Montag: 8 Stunden Arbeitszeit plus 60 Minuten Pause (Pause zählt nicht zur Arbeitszeit).",
+   "Dienstag: 8 Stunden Arbeitszeit plus 60 Minuten Pause.",
+   "Mittwoch: 9 Stunden Arbeitszeit plus 60 Minuten Pause.",
+   "Donnerstag: 8 Stunden Arbeitszeit plus 60 Minuten Pause.",
+   "Freitag: 8 Stunden Arbeitszeit plus 60 Minuten Pause.",
+   "Samstag und Sonntag sind arbeitsfrei (5-Tage-Woche nach § 13 JArbSchG)."
+  ],
+  "fehlerZeile": 2,
+  "erklaerungKurz": "§ 8 JArbSchG erlaubt für Jugendliche höchstens 8 Stunden Arbeitszeit pro Tag – die 9 Stunden am Mittwoch überschreiten dieses Höchstmaß.",
+  "erklaerungLang": "Für Jugendliche (15 bis unter 18 Jahre) begrenzt § 8 JArbSchG die tägliche Arbeitszeit auf höchstens 8 Stunden und die wöchentliche auf höchstens 40 Stunden. Montag, Dienstag, Donnerstag und Freitag halten mit je 8 Stunden dieses Tageslimit ein; die vorgeschriebene Pause von 60 Minuten ist bei über 6 Stunden Arbeitszeit nach § 11 JArbSchG korrekt angesetzt, und die freien Wochenendtage entsprechen der 5-Tage-Woche nach § 13 JArbSchG. Die Mittwochs-Zeile mit 9 Stunden verstößt jedoch gegen § 8 JArbSchG, da die tägliche Höchstarbeitszeit von 8 Stunden überschritten wird.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-086",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kaufmannseigenschaft",
+  "typ": "konsole",
+  "schwierigkeit": 1,
+  "frage": "Ein Kleingewerbetreibender lässt sich freiwillig ins Handelsregister eintragen, obwohl er dazu nicht verpflichtet ist. Tippe den passenden Fachbegriff ein (keinen Konsolenbefehl – gemeint ist die Bezeichnung dieser Kaufmannsart).",
+  "aufgaben": [
+   {
+    "prompt": "Wie heißt diese Kaufmannsart?",
+    "akzeptiert": [
+     "Kannkaufmann",
+     "kannkaufmann",
+     "Kann-Kaufmann",
+     "kann-kaufmann"
+    ]
+   }
+  ],
+  "erklaerungKurz": "Der Kannkaufmann (§ 2 HGB) betreibt ein Kleingewerbe und kann sich freiwillig eintragen lassen; die Eintragung wirkt konstitutiv.",
+  "erklaerungLang": "Wer ein Kleingewerbe betreibt, das nach Art und Umfang keinen kaufmännisch eingerichteten Geschäftsbetrieb erfordert, ist zunächst kein Kaufmann kraft Gesetzes. Nach § 2 HGB kann er sich aber freiwillig ins Handelsregister eintragen lassen und wird dadurch zum Kannkaufmann. Anders als beim Istkaufmann wirkt diese Eintragung konstitutiv, das heißt, erst durch die Eintragung entsteht die Kaufmannseigenschaft.",
+  "verweis": "Unser Unterricht – Kaufmannseigenschaft"
+ },
+ {
+  "id": "M09-097",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Die Firma",
+  "typ": "konsole",
+  "schwierigkeit": 1,
+  "frage": "Die Rhaus-Metall-GmbH wird ins Handelsregister eingetragen. Tippe den Fachbegriff für die Registerabteilung ein, in der Kapitalgesellschaften wie die GmbH geführt werden (kein Konsolenbefehl, sondern die Bezeichnung der Abteilung/Registerart).",
+  "aufgaben": [
+   {
+    "prompt": "Welche Handelsregister-Abteilung bzw. Registerart ist zuständig?",
+    "akzeptiert": [
+     "Abteilung B",
+     "abteilung b",
+     "Abt. B",
+     "abt. b",
+     "HRB",
+     "hrb"
+    ]
+   }
+  ],
+  "erklaerungKurz": "Kapitalgesellschaften wie GmbH und AG werden in Abteilung B (Registerart HRB) des Handelsregisters geführt.",
+  "erklaerungLang": "Das Handelsregister gliedert sich in zwei Abteilungen: Abteilung A für Einzelkaufleute (e.K.) und Personengesellschaften (OHG, KG), Abteilung B für Kapitalgesellschaften wie GmbH und AG. Die Rhaus-Metall-GmbH wird daher in Abteilung B geführt, erkennbar an der Registerart HRB (Handelsregister B) vor der Registernummer.",
+  "verweis": "Unser Unterricht – Die Firma"
+ },
+ {
+  "id": "M09-107",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Rechtsformen",
+  "typ": "konsole",
+  "schwierigkeit": 1,
+  "frage": "Herr Albrecht betreibt allein ein Handelsgewerbe im Sinne des § 1 HGB, haftet unbeschränkt mit seinem gesamten Vermögen und hat keine Mitgesellschafter. Tippe den Fachbegriff ein, unter dem er ins Handelsregister eingetragen wird (kein Konsolenbefehl, sondern die Rechtsform-Bezeichnung bzw. Abkürzung).",
+  "aufgaben": [
+   {
+    "prompt": "Wie lautet die Bezeichnung dieser Rechtsform?",
+    "akzeptiert": [
+     "e.K.",
+     "e.k.",
+     "eK",
+     "ek",
+     "eingetragener Kaufmann",
+     "Eingetragener Kaufmann"
+    ]
+   }
+  ],
+  "erklaerungKurz": "Ein einzelner Istkaufmann wird als e.K. (eingetragener Kaufmann) ins Handelsregister (Abteilung A) eingetragen und haftet unbeschränkt mit seinem gesamten Vermögen.",
+  "erklaerungLang": "Wer allein ein Handelsgewerbe nach § 1 HGB betreibt, ist Istkaufmann und wird als e.K. (eingetragener Kaufmann) in Abteilung A des Handelsregisters geführt. Es gibt nur einen Inhaber, der unbeschränkt und persönlich mit seinem gesamten Vermögen haftet – Mitgesellschafter oder ein Mindestkapital sind bei dieser Rechtsform nicht vorgeschrieben.",
+  "verweis": "Unser Unterricht – Rechtsformen"
+ },
+ {
+  "id": "M09-116",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Handlungsvollmachten & Prokura",
+  "typ": "konsole",
+  "schwierigkeit": 1,
+  "frage": "Ein Mitarbeiter der Rhaus-Metall-GmbH darf ausschließlich Bestellungen von Rohstahl abwickeln – für alle anderen Geschäfte hat er keine Befugnis. Tippe den Fachbegriff für diese Vollmachtsart ein (kein Konsolenbefehl, sondern die Bezeichnung der Vollmacht).",
+  "aufgaben": [
+   {
+    "prompt": "Wie heißt diese Vollmachtsart?",
+    "akzeptiert": [
+     "Arthandlungsvollmacht",
+     "arthandlungsvollmacht",
+     "Art-Handlungsvollmacht",
+     "art-handlungsvollmacht",
+     "Artvollmacht",
+     "artvollmacht",
+     "Art-Vollmacht",
+     "art-vollmacht"
+    ]
+   }
+  ],
+  "erklaerungKurz": "Eine Vollmacht, die auf eine bestimmte Geschäftsart (hier: Rohstahl-Bestellungen) beschränkt ist, heißt Art-Handlungsvollmacht.",
+  "erklaerungLang": "Die Handlungsvollmacht nach § 54 HGB kennt drei Ausprägungen: die Generalhandlungsvollmacht (alle gewöhnlichen Geschäfte), die Art-Handlungsvollmacht (eine bestimmte Geschäftsart, z. B. nur Rohstoffbestellungen) und die Einzelhandlungsvollmacht (nur ein einzelnes Geschäft). Da der Mitarbeiter ausschließlich Rohstahl-Bestellungen abwickeln darf, handelt es sich um eine Art-Handlungsvollmacht.",
+  "verweis": "Unser Unterricht – Handlungsvollmachten & Prokura"
+ },
+ {
+  "id": "M09-142",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "konsole",
+  "schwierigkeit": 1,
+  "frage": "Der neue Ausbildungsvertrag der Rhaus-Metall-GmbH muss unverzüglich eingetragen werden. Tippe den Fachbegriff für die zuständige Stelle ein (kein Konsolenbefehl, sondern die Bezeichnung der zuständigen Stelle für Industrie und Handel).",
+  "aufgaben": [
+   {
+    "prompt": "Welche Stelle ist für die Eintragung des Ausbildungsvertrags zuständig?",
+    "akzeptiert": [
+     "IHK",
+     "ihk",
+     "Industrie- und Handelskammer",
+     "industrie- und handelskammer",
+     "Industrie-und Handelskammer"
+    ]
+   }
+  ],
+  "erklaerungKurz": "Für Industrie und Handel ist die IHK (Industrie- und Handelskammer) als zuständige Stelle für die Eintragung von Ausbildungsverträgen zuständig.",
+  "erklaerungLang": "Nach §§ 34–36 BBiG führt die zuständige Stelle ein Verzeichnis der Ausbildungsverhältnisse; der Ausbildende muss die Eintragung unverzüglich beantragen. Für Betriebe aus Industrie und Handel – wie die Rhaus-Metall-GmbH – ist diese zuständige Stelle die IHK (Industrie- und Handelskammer). Die IHK übernimmt zudem die Ausbildungsberatung, überwacht die Eignung von Ausbildungsstätten und Ausbildern und ist für Zwischen- und Abschlussprüfung sowie Schlichtung zuständig.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ }
+]

@@ -1,0 +1,21 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Meldungen aller Lerner" [Ebene 1]
+  form
+    eingabe:password "Schlüssel"
+    button "Öffnen" [gesperrt]

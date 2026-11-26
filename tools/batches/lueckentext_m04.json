@@ -1,0 +1,21 @@
+[
+ {
+  "id": "M04-121",
+  "pruefungsteil": "AP1",
+  "modul": "M04",
+  "thema": "IP-Adressierung",
+  "gebiet": "A3",
+  "typ": "lueckentext",
+  "schwierigkeit": 2,
+  "frage": "Eine IPv4-Adresse besteht aus vier Oktetten und zerfällt in zwei Teile: den ___ und den ___. Wo die Grenze zwischen beiden liegt, sagt die Subnetzmaske oder kurz die ___-Notation, etwa /24. Der größte für private Netze reservierte Bereich beginnt bei ___ und umfasst rund 16,7 Millionen Adressen.",
+  "luecken": [
+   ["Netzanteil", "netzanteil", "Netzwerkanteil", "Netz-Anteil"],
+   ["Hostanteil", "hostanteil", "Host-Anteil", "Geräteanteil"],
+   ["CIDR", "cidr"],
+   ["10.0.0.0", "10.0.0.0/8"]
+  ],
+  "erklaerungKurz": "IPv4 = Netzanteil + Hostanteil, Grenze über Subnetzmaske/CIDR; größter privater Bereich 10.0.0.0/8.",
+  "erklaerungLang": "Die Aufteilung entscheidet, welche Adressen im selben Netz liegen und wann ein Router gebraucht wird.\n• Der Netzanteil ist bei allen Geräten eines Netzes gleich, der Hostanteil unterscheidet sie – deshalb kann man aus zwei Adressen und der Maske ablesen, ob sie sich direkt erreichen.\n• Die drei privaten Bereiche sind 10.0.0.0/8, 172.16.0.0/12 und 192.168.0.0/16; sie werden im Internet nicht geroutet und brauchen für den Weg nach außen NAT.\n• 169.254.x.x ist KEIN privater Bereich in diesem Sinne, sondern die APIPA-Adresse, die ein Client sich selbst gibt, wenn kein DHCP-Server antwortet.\nMerke: /8 heißt acht Bit Netzanteil – je kleiner die Zahl, desto größer das Netz.",
+  "verweis": "Modul 04, Abschnitt 4.1 – IP-Adressierung"
+ }
+]

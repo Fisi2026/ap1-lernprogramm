@@ -1,0 +1,20 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation" [current=page]
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Prüfungssimulation" [Ebene 1]
+  spinbutton "Aufgaben insgesamt"
+  button "Prüfung starten"

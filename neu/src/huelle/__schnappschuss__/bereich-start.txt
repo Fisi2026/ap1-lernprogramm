@@ -1,0 +1,33 @@
+navigation "Bereiche"
+  button "Startseite" [current=page]
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Start" [Ebene 1]
+  navigation "Kacheln"
+    button "ÜbenAdaptives Training über alle Themen – mit Fehler-Deck-Einstreuung."
+    button "heute offenTagesserie: schwächstes GebietKundenbedarfe ermitteln – 5 …"
+    button "1Markiert ★Deine per ★ markierten Fragen gezielt wiederholen."
+    button "1Fehler-DeckWiedervorlage falsch beantworteter Fragen (1/3/7-Tage-Rhy…"
+    button "PrüfungssimulationAP1-Format: 4 Aufgaben, 100 Punkte, auf Zeit – inkl…"
+    button "Rechen-GeneratorÜbertragungszeit, Subnetting, Zahlensysteme, Datenmen…"
+    button "Netzplan-TrainingInteraktive Netzpläne: FAZ, FEZ, SAZ, SEZ und Puffer…"
+    button "Gantt-TrainingBalkenplan/Terminplanung: Start- und End-Tage selbst be…"
+    button "GlossarBegriffslexikon aus allen Erklär-Fragen."
+    button "SpickzettelFormeln & Zusammenfassungen aller Module."
+    button "StatistikStärken, Schwächen und Verlauf im Detail."
+    button "EinstellungenTagesziel, Prüfungsdatum, Prüfungsteil, Meldungen."
+  button "Dein Stand" [expanded=true]
+  button "Mehr Statistik anzeigen"

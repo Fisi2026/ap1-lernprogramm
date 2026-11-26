@@ -1,0 +1,17 @@
+{
+ "quelle": "BUILD_LOG.md",
+ "archiv": "BUILD_LOG_ARCHIV.md",
+ "ueberschrift": "## ROTATION 2026-09-17 (3) – alles bis vor den Eintrag zu Release v1.29.0 (N20b)",
+ "bloecke": [
+  {
+   "von": 3,
+   "bis": 5,
+   "ersatz": "# ROTIERT AM 2026-09-17 (dreimal): Alles bis VOR die Etappe **N20b** (Release **v1.29.0**) steht in\n# BUILD_LOG_ARCHIV.md. Diese Datei fuehrt N20b, den Release-Eintrag v1.29.0 und alles, was SEITHER auf\n# main liegt, aber noch nicht beim Lerner ist."
+  },
+  {
+   "von": 16,
+   "bis": 52,
+   "ersatz": ""
+  }
+ ]
+}

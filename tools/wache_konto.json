@@ -1,0 +1,36 @@
+{
+ "konten": {
+  "gmail": {
+   "kurse": {
+    "sitzung": {
+     "prozent_je_1000": 0.171,
+     "datum": "2026-10-11 13:06",
+     "chat": "2026-10-11 11:05",
+     "grund": "gemessen aus 2 Ablesungen: 22.0 Prozentpunkte je 128643 Tokens"
+    },
+    "woche": {
+     "prozent_je_1000": 0.0311,
+     "datum": "2026-10-11 13:06",
+     "chat": "2026-10-11 11:05",
+     "grund": "gemessen aus 2 Ablesungen: 4.0 Prozentpunkte je 128643 Tokens"
+    }
+   }
+  },
+  "web.de": {
+   "kurse": {
+    "sitzung": {
+     "prozent_je_1000": 0.1358,
+     "datum": "2026-10-09 23:05",
+     "chat": "2026-10-09 22:13",
+     "grund": "gemessen aus 2 Ablesungen: 6.0 Prozentpunkte je 44191 Tokens"
+    },
+    "woche": {
+     "prozent_je_1000": 0.0453,
+     "datum": "2026-10-09 23:05",
+     "chat": "2026-10-09 22:13",
+     "grund": "OBERGRENZE aus 2 Ablesungen: nur 1.0 Prozentpunkte je 44191 Tokens - Rundung +-0,5 je Ablesung, gerechnet mit 2.0 Punkten"
+    }
+   }
+  }
+ }
+}

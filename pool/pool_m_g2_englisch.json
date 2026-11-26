@@ -1,0 +1,176 @@
+[
+  {
+    "id": "M02-958",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Die Marburger Netzwerkservice GmbH erhält vom Hersteller ihrer Switches folgende Mitteilung: \"End-of-Life Notice: Effective 31 March 2027, the RM-Series 4000 switch will reach End of Sale. Security updates will continue until 31 March 2030 (End of Support). After that date, no further firmware, security patches or technical assistance will be provided. Customers are advised to migrate to the RM-Series 6000 before the End of Support date.\" – Welche Aussage entspricht dem englischen Text?",
+    "optionen": [
+      "Ab dem 31.03.2027 wird das Gerät nicht mehr verkauft; Sicherheitsupdates gibt es aber noch bis zum 31.03.2030.",
+      "Ab dem 31.03.2027 entfallen sofort auch alle Sicherheitsupdates und der technische Support des Herstellers.",
+      "Bis zum 31.03.2030 wird das Gerät weiterhin verkauft; erst danach beginnt der Zeitraum mit Support.",
+      "Der Hersteller empfiehlt, erst nach dem 31.03.2030 auf die RM-Series 6000 zu wechseln, also nach dem End of Support."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: „End of Sale\" (31.03.2027) beendet nur den Verkauf. Sicherheitsupdates laufen laut Text bis zum „End of Support\" am 31.03.2030 weiter.",
+      "Falsch: Der Text kehrt die Reihenfolge um – End of Sale kommt zuerst (2027), End of Support danach (2030).",
+      "Falsch: „migrate … before the End of Support date\" heißt vor diesem Datum, nicht danach."
+    ],
+    "erklaerungKurz": "End of Sale = Verkaufsende (31.03.2027), End of Support = Ende von Updates und Unterstützung (31.03.2030). Der Wechsel soll VOR dem End-of-Support-Datum erfolgen.",
+    "erklaerungLang": "End-of-Life-Ankündigungen arbeiten mit mehreren Stichtagen, die man sauber auseinanderhalten muss. „End of Sale\" bedeutet: Das Produkt ist ab diesem Datum nicht mehr neu zu beziehen; vorhandene Geräte laufen weiter. „End of Support\" (auch „End of Service Life\") ist der spätere, betrieblich kritische Termin – ab dann gibt es keine Firmware, keine Sicherheitspatches und keinen technischen Support mehr. Ein Gerät ohne Sicherheitspatches im produktiven Netz ist ein dauerhaftes Risiko, deshalb die Empfehlung „migrate … before the End of Support date\". Für die Praxis heißt das: Nach einer solchen Mitteilung wird die Ablösung geplant und budgetiert, solange noch drei Jahre Zeit sind – nicht erst, wenn der Support ausläuft.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-959",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Ein Lieferant der Gladenbacher Sportartikel GmbH stellt seine Rücksendebedingungen bereit: \"Returns Policy (RMA): Before returning any item, you must request an RMA number via our support portal. Returns received without a valid RMA number will be refused. Items must be returned in their original packaging within 14 days of RMA issuance. Shipping costs are borne by the customer unless the return is due to a defect covered by the warranty. Refunds are issued within 10 business days after inspection.\" – Welche Aussagen entsprechen dem englischen Text? (Mehrfachauswahl)",
+    "optionen": [
+      "Vor jeder Rücksendung muss über das Support-Portal eine RMA-Nummer angefordert werden.",
+      "Rücksendungen ohne gültige RMA-Nummer werden zurückgewiesen.",
+      "Die Ware ist innerhalb von 14 Tagen nach Ausstellung der RMA-Nummer in der Originalverpackung zurückzusenden.",
+      "Die Versandkosten trägt in jedem Fall der Lieferant.",
+      "Die Erstattung erfolgt innerhalb von 10 Werktagen nach Wareneingang, also noch vor der Prüfung."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Falsch: „Shipping costs are borne by the customer unless the return is due to a defect covered by the warranty\" – der Kunde zahlt, AUSSER es liegt ein Garantiefall vor.",
+      "Falsch: „within 10 business days after inspection\" – die Frist beginnt erst nach der Prüfung der Ware, nicht mit dem Wareneingang."
+    ],
+    "erklaerungKurz": "RMA-Nummer vorab anfordern, sonst Zurückweisung; 14 Tage ab Ausstellung, Originalverpackung; Versandkosten trägt der Kunde außer im Garantiefall; Erstattung binnen 10 Werktagen NACH der Prüfung.",
+    "erklaerungLang": "RMA steht für „Return Merchandise Authorization\" – die vorherige Freigabe einer Rücksendung. Zwei Textstellen entscheiden hier über richtig und falsch. Erstens „unless\": „Shipping costs are borne by the customer unless …\" formuliert eine Ausnahme, keine generelle Kostenübernahme durch den Lieferanten – wer „unless\" überliest, dreht die Aussage um. Zweitens „after inspection\": Der Fristbeginn für die Erstattung ist die Prüfung, nicht der Wareneingang; zwischen beidem können Tage liegen. Beachtenswert außerdem „business days\" = Werktage, nicht Kalendertage, und „within 14 days of RMA issuance\" – die Frist läuft ab Ausstellung der Nummer, nicht ab Rechnungs- oder Lieferdatum.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-960",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Die Biedenkopfer Anlagenhandel GmbH erhält eine Angebotsanfrage eines Kunden: \"Request for Quotation (RFQ) – Ref. RFQ-2026-118. Please submit your quotation for 25 industrial access points, including installation, by 15 August 2026, 12:00 CEST. Quotations must be valid for 90 days and state prices in EUR excluding VAT. Delivery is required no later than 30 September 2026. Late submissions will not be considered.\" – Welche Aussage entspricht dem englischen Text?",
+    "optionen": [
+      "Das Angebot muss bis zum 15.08.2026, 12:00 Uhr vorliegen, 90 Tage bindend sein und Preise in EUR ohne Umsatzsteuer ausweisen.",
+      "Die Preise sind in EUR einschließlich Umsatzsteuer anzugeben, und die Bindefrist beträgt lediglich 30 Tage.",
+      "Verspätet eingehende Angebote werden nachrangig berücksichtigt, solange sie noch vor dem geforderten Liefertermin eintreffen und bindend sind.",
+      "Die Lieferung darf frühestens am 30.09.2026 erfolgen, ein früherer Termin ist ausgeschlossen."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: „excluding VAT\" heißt ohne Umsatzsteuer, und die Bindefrist beträgt laut Text 90 Tage („valid for 90 days\").",
+      "Falsch: „Late submissions will not be considered\" – verspätete Angebote werden gar nicht berücksichtigt, auch nicht nachrangig.",
+      "Falsch: „no later than\" heißt spätestens, nicht frühestens – der 30.09.2026 ist der letztmögliche Liefertermin."
+    ],
+    "erklaerungKurz": "Abgabefrist 15.08.2026 12:00 CEST, Bindefrist 90 Tage, Preise in EUR ohne Umsatzsteuer, Lieferung spätestens 30.09.2026; verspätete Angebote werden nicht berücksichtigt.",
+    "erklaerungLang": "Bei einer Request for Quotation entscheiden Formalien oft über den Zuschlag. Drei Wendungen sind hier zentral: „excluding VAT\" = ohne Umsatzsteuer (das Gegenstück ist „including VAT\"); „valid for 90 days\" = Bindefrist, also der Zeitraum, in dem der Anbieter an sein Angebot gebunden bleibt; und „no later than\" = spätestens. Besonders die Verwechslung von „no later than\" (spätestens) mit „not before\" (frühestens) ist ein klassischer Übersetzungsfehler mit direkten vertraglichen Folgen. „Late submissions will not be considered\" bedeutet Ausschluss – ein um zehn Minuten verspätetes Angebot wird nicht gewertet, unabhängig von seiner Qualität.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-961",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Aus dem Monitoring der Dautphetaler Monitoringservice GmbH läuft folgender Bericht ein: \"Incident Report #4471 – Severity: High. At 02:14 UTC, the monitoring system detected repeated failed login attempts on the file server from a single external IP address. The account 'svc-backup' was locked after 5 failed attempts. No successful authentication was recorded. The source IP has been blocked at the firewall. Root cause analysis is still pending. Affected users: none.\" – Welche Aussagen entsprechen dem englischen Text? (Mehrfachauswahl)",
+    "optionen": [
+      "Es wurden wiederholt fehlgeschlagene Anmeldeversuche von einer einzelnen externen IP-Adresse festgestellt.",
+      "Das Konto „svc-backup\" wurde nach fünf Fehlversuchen gesperrt.",
+      "Eine erfolgreiche Anmeldung wurde nicht verzeichnet.",
+      "Die Ursachenanalyse ist bereits abgeschlossen.",
+      "Es sind mehrere Benutzer betroffen; deshalb wurde der Vorfall als „High\" eingestuft."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Falsch: „Root cause analysis is still pending\" – die Ursachenanalyse steht noch aus.",
+      "Falsch: „Affected users: none\" – es ist kein Benutzer betroffen. Die Einstufung „High\" ergibt sich aus dem Angriffsversuch auf ein Dienstkonto, nicht aus betroffenen Nutzern."
+    ],
+    "erklaerungKurz": "Wiederholte Fehlanmeldungen von einer externen IP, Konto nach 5 Versuchen gesperrt, keine erfolgreiche Anmeldung. Die Ursachenanalyse steht noch aus („pending\"), betroffene Nutzer: keine („none\").",
+    "erklaerungLang": "Incident Reports sind knapp und arbeiten mit festen Wendungen, die genau gelesen werden müssen. „still pending\" heißt: noch offen, noch nicht erledigt – wer es als „abgeschlossen\" liest, kehrt die Aussage um. „Affected users: none\" ist eine Null-Meldung, keine Mengenangabe. Fachlich zeigt der Bericht einen abgewehrten Angriff: Die Kontosperre nach fünf Fehlversuchen (Account Lockout) hat gegriffen, es gab keine erfolgreiche Authentifizierung („No successful authentication was recorded\"), und die Quell-IP ist an der Firewall blockiert. Die hohe Einstufung ist trotzdem berechtigt, weil ein Dienstkonto gezielt angegriffen wurde – solche Konten haben oft weitreichende Rechte. Beachtenswert ist auch die Zeitangabe „02:14 UTC\": Für eine deutsche Zeitschiene muss sie umgerechnet werden (im Sommer UTC+2).",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-962",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Im Handbuch eines neuen Schaltschrank-Geräts der Breidenbacher Schaltanlagenbau GmbH steht: \"WARNING: Risk of electric shock. Disconnect the device from the mains supply before removing the cover. Wait at least five minutes for the capacitors to discharge. Servicing must be carried out by qualified personnel only. Failure to follow these instructions may result in serious injury or death. CAUTION: Do not obstruct the ventilation openings; a minimum clearance of 10 cm must be maintained on all sides.\" – Welches Vorgehen entspricht dem englischen Text?",
+    "optionen": [
+      "Gerät vor dem Abnehmen der Abdeckung vom Netz trennen, mindestens fünf Minuten bis zur Entladung der Kondensatoren warten, Arbeiten nur durch qualifiziertes Personal ausführen lassen.",
+      "Die Abdeckung darf im laufenden Betrieb abgenommen werden, solange die Kondensatoren nicht berührt und keine Kabel gelöst werden.",
+      "Nach dem Trennen vom Netz kann sofort weitergearbeitet werden; die genannten fünf Minuten beziehen sich allein auf die Belüftung des Gehäuses und nicht auf die Entladung der Kondensatoren.",
+      "Ein Mindestabstand von 10 cm ist nur an der Rückseite des Geräts einzuhalten; an den übrigen Seiten genügt der Einbau ohne Freiraum."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: „Disconnect the device from the mains supply before removing the cover\" – das Gerät muss vor dem Öffnen spannungsfrei sein.",
+      "Falsch: „Wait at least five minutes for the capacitors to discharge\" – die Wartezeit gilt der Entladung der Kondensatoren, nicht der Belüftung. Kondensatoren können auch nach dem Trennen noch gefährliche Spannung führen.",
+      "Falsch: „on all sides\" heißt an allen Seiten, nicht nur hinten."
+    ],
+    "erklaerungKurz": "Netztrennung vor dem Öffnen, mindestens fünf Minuten Wartezeit für die Kondensatorentladung, Servicearbeiten nur durch qualifiziertes Personal, 10 cm Freiraum an ALLEN Seiten.",
+    "erklaerungLang": "Sicherheitshinweise in englischen Handbüchern sind gestuft: „WARNING\" warnt vor Gefahren für Personen (hier bis hin zu „serious injury or death\"), „CAUTION\" vor Sach- oder leichteren Schäden, „NOTICE\" enthält reine Hinweise. Die Rangfolge zu kennen hilft bei der Einordnung, welche Anweisung unbedingt einzuhalten ist. Fachlich wichtig ist die Wartezeit: Kondensatoren in Netzteilen speichern Ladung und können auch nach dem Trennen vom Netz noch gefährliche Spannungen führen – deshalb „wait at least five minutes\". „Qualified personnel\" meint eine Elektrofachkraft; als Fachinformatiker öffnet man solche Geräte nicht selbst. „On all sides\" bezieht den geforderten Freiraum von 10 cm auf alle Seiten – ein häufiger Planungsfehler beim Einbau in enge Schränke, der zu Überhitzung führt.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  },
+  {
+    "id": "M02-963",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Englische Fachtexte",
+    "gebiet": "A1",
+    "typ": "mehrfach",
+    "schwierigkeit": 2,
+    "frage": "Ein englischsprachiger Dienstleister der Angelburger Beratungsdienste GmbH stellt folgenden Datenschutzhinweis bereit: \"Privacy Notice: We process your personal data to fulfil our contract with you and to comply with legal obligations. Data is retained for 10 years as required by commercial law. You have the right to request access to, rectification of, or erasure of your data. We do not sell your data to third parties. Data may be transferred to processors acting on our behalf, who are bound by a data processing agreement.\" – Welche Aussagen entsprechen dem englischen Text? (Mehrfachauswahl)",
+    "optionen": [
+      "Die Daten werden verarbeitet, um den Vertrag zu erfüllen und gesetzliche Pflichten einzuhalten.",
+      "Es besteht ein Recht auf Auskunft, Berichtigung und Löschung der eigenen Daten.",
+      "Daten dürfen an Auftragsverarbeiter weitergegeben werden, die durch einen Auftragsverarbeitungsvertrag gebunden sind.",
+      "Die Daten werden nach zwei Jahren gelöscht.",
+      "Die Daten dürfen an Dritte verkauft werden, sofern diese ihren Sitz in der EU haben."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Falsch: „Data is retained for 10 years as required by commercial law\" – die Aufbewahrungsfrist beträgt zehn Jahre, nicht zwei.",
+      "Falsch: „We do not sell your data to third parties\" – ein Verkauf ist ausgeschlossen, ohne Einschränkung auf bestimmte Länder."
+    ],
+    "erklaerungKurz": "Rechtsgrundlagen sind Vertragserfüllung und gesetzliche Pflichten; Aufbewahrung 10 Jahre; Betroffenenrechte auf Auskunft, Berichtigung und Löschung; kein Verkauf an Dritte; Weitergabe an Auftragsverarbeiter mit Vertrag ist zulässig.",
+    "erklaerungLang": "Der englische Datenschutzhinweis nutzt die Standardbegriffe der DSGVO in ihrer englischen Fassung: „access\" = Auskunft (Art. 15), „rectification\" = Berichtigung (Art. 16), „erasure\" = Löschung (Art. 17). „Processor\" ist der Auftragsverarbeiter, „data processing agreement\" der Auftragsverarbeitungsvertrag nach Art. 28 – die Weitergabe an solche Dienstleister ist zulässig und kein Widerspruch zu „we do not sell your data\". Wichtig ist der Unterschied zwischen Weitergabe zur Verarbeitung im Auftrag und Verkauf an Dritte. Die Aufbewahrung von zehn Jahren „as required by commercial law\" spiegelt die handelsrechtlichen Aufbewahrungsfristen wider; sie steht dem Löschrecht nicht entgegen, solange die gesetzliche Pflicht besteht.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Interpretation englischsprachiger Texte"
+  }
+]

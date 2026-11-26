@@ -1,0 +1,61 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Einzelne Frage" [Ebene 1]
+  heading "Einzelne Frage" [Ebene 2]
+  img "Schwierigkeit 2 von 4"
+  button "Zum gezielten Wiederholen markieren"
+  button "⚑ Frage melden"
+  table
+    row "Scrum (agil) Wasserfall (klassisch)"
+      columnheader
+      columnheader "Scrum (agil)"
+      columnheader "Wasserfall (klassisch)"
+    row "Feste, sequenzielle Phasen Feste, sequenzielle Phasen — Scrum (agil) …"
+      columnheader "Feste, sequenzielle Phasen"
+      cell "Feste, sequenzielle Phasen — Scrum (agil)"
+        checkbox "Feste, sequenzielle Phasen — Scrum (agil)" [checked=false]
+      cell "Feste, sequenzielle Phasen — Wasserfall (klassisch)"
+        checkbox "Feste, sequenzielle Phasen — Wasserfall (klassisch)" [checked=false]
+    row "Sprints mit inkrementellen Ergebnissen Sprints mit inkrementellen Erg…"
+      columnheader "Sprints mit inkrementellen Ergebnissen"
+      cell "Sprints mit inkrementellen Ergebnissen — Scrum (agil)"
+        checkbox "Sprints mit inkrementellen Ergebnissen — Scrum (agil)" [checked=false]
+      cell "Sprints mit inkrementellen Ergebnissen — Wasserfall (klassisch)"
+        checkbox "Sprints mit inkrementellen Ergebnissen — Wasserfall (klassisch)" [checked=false]
+    row "Anforderungen zu Projektbeginn vollständig festgelegt Anforderungen z…"
+      columnheader "Anforderungen zu Projektbeginn vollständig festgelegt"
+      cell "Anforderungen zu Projektbeginn vollständig festgelegt — Scrum (agil)"
+        checkbox "Anforderungen zu Projektbeginn vollständig festgelegt — Scrum (agil)" [checked=false]
+      cell "Anforderungen zu Projektbeginn vollständig festgelegt — Wasserfall (k…"
+        checkbox "Anforderungen zu Projektbeginn vollständig festgelegt — Wasserfall (k…" [checked=false]
+    row "Daily Standup und Product Backlog Daily Standup und Product Backlog —…"
+      columnheader "Daily Standup und Product Backlog"
+      cell "Daily Standup und Product Backlog — Scrum (agil)"
+        checkbox "Daily Standup und Product Backlog — Scrum (agil)" [checked=false]
+      cell "Daily Standup und Product Backlog — Wasserfall (klassisch)"
+        checkbox "Daily Standup und Product Backlog — Wasserfall (klassisch)" [checked=false]
+    row "Rollen: Product Owner & Scrum Master Rollen: Product Owner & Scrum Ma…"
+      columnheader "Rollen: Product Owner & Scrum Master"
+      cell "Rollen: Product Owner & Scrum Master — Scrum (agil)"
+        checkbox "Rollen: Product Owner & Scrum Master — Scrum (agil)" [checked=false]
+      cell "Rollen: Product Owner & Scrum Master — Wasserfall (klassisch)"
+        checkbox "Rollen: Product Owner & Scrum Master — Wasserfall (klassisch)" [checked=false]
+  button "Lösung prüfen" [gesperrt]
+  button "Aufgeben"
+  button "Zur Startseite"
+  button "Normal weiterüben"

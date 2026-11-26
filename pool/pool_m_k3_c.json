@@ -1,0 +1,1011 @@
+[
+  {
+    "id": "M03-840",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "frage": "Ein Unternehmen möchte die Abteilungen Entwicklung und Verwaltung logisch voneinander trennen. Alle VLANs werden auf einem zentralen Layer-3-Switch eingerichtet.\n• VLAN 10: Entwicklung – 192.168.10.0/24\n• VLAN 20: Verwaltung – 192.168.20.0/24\n• VLAN 30: Server – 192.168.30.0/24\n\n3.1 (2 Punkte)\nErklären Sie, warum ein gewöhnlicher Layer-2-Switch ohne zusätzliche Routingfunktion nicht zwischen den VLANs vermitteln kann.",
+    "musterloesung": "• Jedes VLAN ist eine eigene Broadcastdomäne mit eigenem IP-Netz (hier drei /24-Netze) – Verkehr von VLAN 10 nach VLAN 30 ist also Verkehr zwischen verschiedenen Netzen. (1 P.)\n• Ein Layer-2-Switch arbeitet nur mit MAC-Adressen (OSI-Schicht 2) und leitet Frames nur innerhalb desselben VLANs weiter; zwischen Netzen muss anhand der IP-Adresse geroutet werden (Schicht 3) – das kann nur ein Router oder Layer-3-Switch. (1 P.)",
+    "erklaerungKurz": "VLANs sind getrennte Broadcastdomänen und damit getrennte IP-Netze. Zwischen Netzen vermittelt nur Routing auf Schicht 3; ein Layer-2-Switch kennt nur MAC-Adressen.",
+    "erklaerungLang": "Ein VLAN trennt ein physisches Netz logisch in eigene Broadcastdomänen – jede mit eigenem IP-Netz.\n• Innerhalb eines VLANs stellt der Switch Frames anhand der Ziel-MAC-Adresse zu (Schicht 2).\n• Ein Frame aus VLAN 10 wird nie an einen Port von VLAN 30 weitergeleitet – genau das ist die Trennung.\n• Für den Weg in ein anderes Netz braucht es eine Routingentscheidung anhand der Ziel-IP-Adresse (Schicht 3): Router oder Layer-3-Switch.\nMerke: VLAN = eigenes Netz; zwischen Netzen wird geroutet, nicht geswitcht.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Broadcastdomäne",
+          "Broadcast-Domäne",
+          "eigenes IP-Netz",
+          "eigenes Subnetz"
+        ],
+        [
+          "MAC-Adresse",
+          "OSI-Schicht 2",
+          "Sicherungsschicht"
+        ],
+        [
+          "IP-Adresse",
+          "Schicht 3",
+          "geroutet",
+          "Layer-3-Switch",
+          "Layer 3"
+        ]
+      ],
+      "kuer": [
+        "IP-Adresse",
+        "Layer-3-Switch",
+        "eigenes Netz",
+        "VLAN-Grenze"
+      ]
+    }
+  },
+  {
+    "id": "M03-841",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "frage": "Ein Unternehmen möchte die Abteilungen Entwicklung und Verwaltung logisch voneinander trennen. Alle VLANs werden auf einem zentralen Layer-3-Switch eingerichtet.\n• VLAN 10: Entwicklung – 192.168.10.0/24\n• VLAN 20: Verwaltung – 192.168.20.0/24\n• VLAN 30: Server – 192.168.30.0/24\n\n3.2 (2 Punkte, je Porttyp 1 Punkt)\nErläutern Sie den Unterschied zwischen einem Access-Port und einem Trunk-Port.",
+    "musterloesung": "• Access-Port: gehört genau einem VLAN an und verbindet ein Endgerät (PC, Drucker). Die Frames zum Endgerät gehen ungetaggt (untagged) – das Endgerät merkt nichts vom VLAN, die Zuordnung legt der Port fest. (1 P.)\n• Trunk-Port: überträgt mehrere VLANs über eine einzige Leitung, z. B. zwischen zwei Switches oder vom Access-Switch zum Layer-3-Switch. Jeder Frame trägt dort ein VLAN-Tag nach IEEE 802.1Q (tagged), damit die Gegenstelle die VLAN-Zugehörigkeit erkennt. (1 P.)",
+    "erklaerungKurz": "Access-Port: ein VLAN, Endgerät, ungetaggt. Trunk-Port: mehrere VLANs über eine Leitung, jeder Frame mit 802.1Q-Tag.",
+    "erklaerungLang": "Access- und Trunk-Port unterscheiden sich darin, wie viele VLANs sie tragen und ob die Frames gekennzeichnet sind.\n• Access-Port: genau ein VLAN, typisch für Endgeräte; die Frames sind ungetaggt.\n• Trunk-Port: mehrere VLANs, typisch zwischen Switches oder zum Router; jeder Frame trägt ein 4-Byte-Tag nach IEEE 802.1Q mit der VLAN-ID.\n• Ohne Tag könnte der empfangende Switch auf einer gemeinsamen Leitung nicht erkennen, in welches VLAN ein Frame gehört.\nMerke: Access = ein VLAN, untagged · Trunk = viele VLANs, tagged.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Access-Port",
+          "Access Port",
+          "Accessport"
+        ],
+        [
+          "Trunk-Port",
+          "Trunk Port",
+          "Trunk"
+        ],
+        [
+          "Tag",
+          "tagged",
+          "getaggt",
+          "802.1Q"
+        ]
+      ],
+      "kuer": [
+        "ungetaggt",
+        "untagged",
+        "ein VLAN",
+        "mehrere VLANs",
+        "Endgerät"
+      ]
+    }
+  },
+  {
+    "id": "M03-842",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Ein Unternehmen möchte die Abteilungen Entwicklung und Verwaltung logisch voneinander trennen. Alle VLANs werden auf einem zentralen Layer-3-Switch eingerichtet.\n• VLAN 10: Entwicklung – 192.168.10.0/24\n• VLAN 20: Verwaltung – 192.168.20.0/24\n• VLAN 30: Server – 192.168.30.0/24\n\n3.3 (3 Punkte: MAC-Adresse, IP-Adresse und Routing je 1 Punkt)\nBeschreiben Sie den Weg eines Datenpakets von einem Client in VLAN 10 zu einem Server in VLAN 30. Gehen Sie dabei auf MAC-Adresse, IP-Adresse und Routing ein.",
+    "musterloesung": "• IP-Adresse: Der Client vergleicht die Ziel-IP-Adresse (192.168.30.x) mit seinem eigenen Netz (Subnetzmaske /24) – sie liegt in einem fremden Netz, also schickt er das Paket an sein Standardgateway, die VLAN-10-Schnittstelle des Layer-3-Switches (z. B. 192.168.10.1). Quell- und Ziel-IP-Adresse bleiben auf dem ganzen Weg gleich. (1 P.)\n• MAC-Adresse: Per ARP ermittelt der Client die MAC-Adresse des Gateways; der Frame trägt als Ziel-MAC die Gateway-MAC, nicht die des Servers. Beim Weiterleiten setzt der Layer-3-Switch einen neuen Frame mit eigener Quell-MAC und der Server-MAC als Ziel (per ARP im VLAN 30 ermittelt). (1 P.)\n• Routing: Der Layer-3-Switch liest die Ziel-IP-Adresse, findet in seiner Routingtabelle das direkt angeschlossene Netz 192.168.30.0/24 (VLAN 30) und leitet das Paket über diese Schnittstelle in VLAN 30 zum Server weiter. (1 P.)",
+    "erklaerungKurz": "Client erkennt fremdes Netz → Standardgateway (SVI VLAN 10). Ziel-MAC = Gateway, Ziel-IP = Server. Der Layer-3-Switch routet laut Routingtabelle ins VLAN 30 und setzt neue MAC-Adressen; die IP-Adressen bleiben.",
+    "erklaerungLang": "Der Weg zwischen zwei VLANs ist ein gerouteter Weg über das Gateway.\n• Der Client prüft mit der Subnetzmaske, ob das Ziel im eigenen Netz liegt – hier nicht, also geht der Frame an das Standardgateway.\n• Im Frame steht die MAC-Adresse des Gateways (per ARP), im Paket die IP-Adresse des Servers.\n• Der Layer-3-Switch entscheidet anhand der Ziel-IP-Adresse und seiner Routingtabelle; 192.168.30.0/24 ist direkt angeschlossen.\n• Für den nächsten Abschnitt baut er einen neuen Frame: Quell-MAC = eigene VLAN-30-Schnittstelle, Ziel-MAC = Server.\nMerke: MAC-Adressen gelten je Abschnitt, IP-Adressen gelten Ende zu Ende.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Standardgateway",
+          "Gateway",
+          "Default-Gateway"
+        ],
+        [
+          "MAC-Adresse",
+          "MAC"
+        ],
+        [
+          "Routingtabelle",
+          "Routing",
+          "routet",
+          "geroutet"
+        ]
+      ],
+      "kuer": [
+        "ARP",
+        "Ziel-IP",
+        "Subnetzmaske",
+        "VLAN 30",
+        "Layer-3-Switch"
+      ]
+    }
+  },
+  {
+    "id": "M03-843",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 4,
+    "frage": "Ein Unternehmen möchte die Abteilungen Entwicklung und Verwaltung logisch voneinander trennen. Alle VLANs werden auf einem zentralen Layer-3-Switch eingerichtet.\n• VLAN 10: Entwicklung – 192.168.10.0/24\n• VLAN 20: Verwaltung – 192.168.20.0/24\n• VLAN 30: Server – 192.168.30.0/24\n\n3.4 (6 Punkte, je Ursache und je Prüfmaßnahme 1 Punkt)\nNennen Sie drei mögliche Ursachen und je eine passende Prüfmaßnahme für folgenden Fehler: Zwei Rechner im selben VLAN können miteinander kommunizieren, aber keine Verbindung zu einem anderen VLAN aufbauen.",
+    "musterloesung": "• Ursache: Am PC fehlt das Standardgateway oder es ist falsch eingetragen (z. B. 192.168.10.254 statt 192.168.10.1). Prüfung: mit ipconfig /all die Gateway-Adresse ablesen und das Gateway anpingen. (2 P.)\n• Ursache: Das Inter-VLAN-Routing auf dem Layer-3-Switch fehlt – die VLAN-Schnittstelle (SVI) ist nicht angelegt, abgeschaltet oder IP-Routing ist nicht eingeschaltet. Prüfung: Schnittstellenstatus und Routingtabelle des Layer-3-Switches anzeigen (z. B. show ip interface brief, show ip route). (2 P.)\n• Ursache: Das VLAN ist auf dem Trunk zwischen Access-Switch und Layer-3-Switch nicht erlaubt (oder der Uplink ist als Access-Port eingerichtet). Prüfung: die Trunk-Konfiguration und die erlaubten VLANs am Uplink kontrollieren (z. B. show interfaces trunk). (2 P.)\n• Ebenfalls richtig: eine Zugriffsregel (ACL/Firewall) zwischen den VLANs sperrt den Verkehr – Regelwerk und Trefferzähler lesen; eine falsche Subnetzmaske lässt den PC das Ziel im eigenen Netz vermuten – Maske mit ipconfig prüfen; tracert zeigt, an welcher Station der Weg endet.",
+    "erklaerungKurz": "Gleiches VLAN geht, anderes nicht → der Fehler liegt am Übergang zwischen den Netzen: Gateway am PC, SVI/Routing am Layer-3-Switch, VLAN auf dem Trunk oder eine sperrende Regel.",
+    "erklaerungLang": "Wenn die Kommunikation im eigenen VLAN funktioniert, sind Kabel, Access-Port und IP-Adresse grundsätzlich in Ordnung – gestört ist der Weg ins andere Netz.\n• Gateway am Client: ohne richtiges Standardgateway erreicht der PC kein fremdes Netz (ipconfig /all, ping auf das Gateway).\n• Routing am Layer-3-Switch: jede VLAN-Schnittstelle (SVI) muss angelegt und aktiv sein, IP-Routing eingeschaltet (Schnittstellenstatus, Routingtabelle).\n• Trunk: das VLAN muss auf dem Uplink zum Layer-3-Switch erlaubt sein (Trunk-Übersicht).\n• Regeln: eine ACL oder Firewall zwischen den VLANs kann den Verkehr absichtlich sperren (Regelwerk lesen).\nMerke: Erst den Weg bis zum Gateway prüfen (ping), dann das Routing, dann die Regeln.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Standardgateway",
+          "Gateway"
+        ],
+        [
+          "SVI",
+          "VLAN-Schnittstelle",
+          "Routingtabelle",
+          "Inter-VLAN-Routing"
+        ],
+        [
+          "Trunk",
+          "Trunk-Port",
+          "erlaubte VLANs",
+          "allowed"
+        ]
+      ],
+      "kuer": [
+        "ipconfig",
+        "ping",
+        "ACL",
+        "tracert",
+        "Subnetzmaske",
+        "show"
+      ]
+    }
+  },
+  {
+    "id": "M03-844",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH hängen ein Verwaltungsrechner (VLAN 20, 192.168.20.0/24) und ein Etikettendrucker der Fertigung (VLAN 40, 192.168.40.0/24) am selben Layer-2-Access-Switch. Der Rechner erreicht den Drucker nur über den Core-Switch. Warum kann der Access-Switch die Frames nicht direkt zustellen?",
+    "optionen": [
+      "Die VLANs sind getrennte Broadcastdomänen und IP-Netze; dazwischen muss auf Schicht 3 geroutet werden",
+      "Der Access-Switch kennt die MAC-Adresse des Druckers nicht, weil Drucker keine eigene MAC-Adresse senden",
+      "Der Access-Switch müsste dafür die IP-Adressen beider Netze in seiner MAC-Adresstabelle speichern können",
+      "Frames zwischen zwei Access-Ports desselben Switches werden grundsätzlich über den Trunk zum Core geschickt"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Jedes Netzwerkgerät hat eine MAC-Adresse; der Switch lernt sie wie jede andere. Das Problem ist die VLAN-Grenze.",
+      "Die MAC-Adresstabelle enthält MAC-Adressen und Ports, keine IP-Adressen – ein Layer-2-Switch wertet IP-Adressen gar nicht aus.",
+      "Im selben VLAN stellt der Switch Frames zwischen zwei Access-Ports direkt zu; nur der VLAN-Wechsel braucht den Weg über den Core."
+    ],
+    "erklaerungKurz": "VLAN 20 und VLAN 40 sind zwei Netze. Ein Layer-2-Switch vermittelt nur innerhalb eines VLANs; der Übergang braucht Routing auf dem Core (Layer-3-Switch).",
+    "erklaerungLang": "Zwei Geräte am selben Switch können trotzdem in verschiedenen Netzen liegen.\n• Jedes VLAN bildet eine eigene Broadcastdomäne und hat ein eigenes IP-Netz.\n• Der Access-Switch arbeitet auf Schicht 2 und leitet Frames nur innerhalb des VLANs weiter.\n• Der PC schickt den Frame an sein Gateway 192.168.20.1 (SVI auf dem Core); der Core routet ins VLAN 40.\nMerke: Gleicher Switch heißt nicht gleiches Netz – zwischen VLANs wird geroutet.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-845",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordnen Sie jedem Begriff aus dem VLAN-Plan der Hollmann Gerätebau GmbH seine Bedeutung zu.",
+    "paare": [
+      [
+        "Access-Port",
+        "Gehört genau einem VLAN an und verbindet ein Endgerät; Frames gehen ungetaggt"
+      ],
+      [
+        "Trunk-Port",
+        "Überträgt mehrere VLANs über eine Leitung, z. B. vom Access-Switch zum Core"
+      ],
+      [
+        "VLAN-Tag nach IEEE 802.1Q",
+        "4-Byte-Feld im Ethernet-Frame mit der 12-Bit-VLAN-ID"
+      ],
+      [
+        "Natives VLAN",
+        "VLAN, dessen Frames auf dem Trunk ohne Tag übertragen werden"
+      ],
+      [
+        "SVI (Switch Virtual Interface)",
+        "Virtuelle Schnittstelle je VLAN auf dem Layer-3-Switch, dient als Standardgateway"
+      ]
+    ],
+    "extra": [
+      "Bündelt mehrere physische Ports zu einer logischen Leitung"
+    ],
+    "erklaerungKurz": "Access-Port = ein VLAN, untagged · Trunk-Port = mehrere VLANs, tagged · 802.1Q-Tag = 4 Byte mit VLAN-ID · natives VLAN = untagged auf dem Trunk · SVI = Gateway je VLAN auf dem Layer-3-Switch.",
+    "erklaerungLang": "Die fünf Begriffe beschreiben, wie VLANs über Switches verteilt und geroutet werden.\n• Endgeräte hängen an Access-Ports, Switches untereinander an Trunk-Ports.\n• Auf dem Trunk kennzeichnet das 802.1Q-Tag jeden Frame mit seiner VLAN-ID – außer im nativen VLAN, das ungetaggt läuft.\n• Die SVI ist die IP-Adresse des Layer-3-Switches im jeweiligen VLAN, bei Hollmann z. B. 192.168.10.1 für VLAN 10.\nMerke: Tag auf dem Trunk, kein Tag zum Endgerät – und das Gateway jedes VLANs ist seine SVI.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-846",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "reihenfolge",
+    "schwierigkeit": 3,
+    "frage": "Ein Entwicklungsrechner der Hollmann Gerätebau GmbH (VLAN 10, 192.168.10.57) öffnet eine Datei auf dem NAS (VLAN 30, 192.168.30.20). Bringen Sie die Schritte des Paketwegs in die richtige Reihenfolge.",
+    "schritte": [
+      "Der PC stellt mit seiner Subnetzmaske fest, dass 192.168.30.20 nicht im eigenen Netz liegt",
+      "Der PC ermittelt per ARP die MAC-Adresse seines Standardgateways 192.168.10.1",
+      "Der PC sendet den Frame an die Gateway-MAC; Ziel-IP-Adresse ist die von NAS1",
+      "Der Core-Switch findet 192.168.30.0/24 in seiner Routingtabelle als direkt angeschlossenes Netz",
+      "Der Core-Switch ermittelt per ARP im VLAN 30 die MAC-Adresse von NAS1",
+      "Der Core-Switch sendet einen neuen Frame mit eigener Quell-MAC an NAS1"
+    ],
+    "erklaerungKurz": "Netz prüfen → ARP auf das Gateway → Frame an Gateway-MAC → Routingtabelle → ARP auf das Ziel → neuer Frame ins VLAN 30.",
+    "erklaerungLang": "Der Paketweg zwischen zwei VLANs folgt immer derselben Logik.\n• Zuerst entscheidet der Client mit der Subnetzmaske, ob er direkt zustellen kann – hier nicht.\n• Dann braucht er die MAC-Adresse des Gateways (ARP) und schickt den Frame dorthin.\n• Der Core-Switch routet anhand der Ziel-IP-Adresse und braucht für den letzten Abschnitt die MAC-Adresse des Ziels.\n• Die IP-Adressen bleiben gleich, die MAC-Adressen werden je Abschnitt neu gesetzt.\nMerke: Erst entscheiden, dann auflösen, dann senden – auf jedem Abschnitt neu.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-847",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH erreichen sich zwei Rechner der Verwaltung (VLAN 20), aber keiner von beiden erreicht das NAS (192.168.30.20) in VLAN 30 (Test mit ping auf die IP-Adresse). Welche Ursachen kommen in Frage? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Auf den PCs ist ein falsches Standardgateway eingetragen",
+      "Die SVI für VLAN 20 auf dem Core-Switch ist abgeschaltet",
+      "VLAN 20 ist auf dem Trunk zum Core-Switch nicht erlaubt",
+      "Der Switch-Port eines der beiden PCs ist auf 100 Mbit/s statt 1 Gbit/s ausgehandelt",
+      "Auf den PCs ist ein falscher DNS-Server eingetragen"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Eine geringere Übertragungsrate verlangsamt, verhindert die Verbindung aber nicht.",
+      "Für einen ping auf eine IP-Adresse wird kein DNS gebraucht; DNS löst nur Namen auf."
+    ],
+    "erklaerungKurz": "Im eigenen VLAN klappt es, also sind Kabel und Port in Ordnung. Fehler am Übergang: Gateway am PC, SVI auf dem Core, VLAN auf dem Trunk.",
+    "erklaerungLang": "Das Fehlerbild grenzt die Ursache auf den Weg in andere Netze ein.\n• Ein falsches Gateway lässt Pakete in fremde Netze ins Leere laufen.\n• Ohne aktive SVI gibt es für VLAN 20 kein Gateway auf dem Core.\n• Fehlt VLAN 20 auf dem Trunk, erreichen die Frames den Core gar nicht – lokal am Access-Switch funktioniert es trotzdem.\n• Kabel und DNS scheiden aus: das eine würde alles stören, das andere spielt beim ping auf eine IP-Adresse keine Rolle.\nMerke: Was im eigenen VLAN geht, schließt Schicht 1 aus.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-848",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "zuordnung",
+    "schwierigkeit": 3,
+    "frage": "Ordnen Sie jeder Ursache für das Fehlerbild „im eigenen VLAN erreichbar, in anderen VLANs nicht“ die passende Prüfmaßnahme zu.",
+    "paare": [
+      [
+        "Falsches Standardgateway am PC",
+        "Mit ipconfig /all die Gateway-Adresse ablesen und mit der SVI-Adresse vergleichen"
+      ],
+      [
+        "SVI auf dem Layer-3-Switch abgeschaltet",
+        "Schnittstellenstatus der VLAN-Schnittstellen am Layer-3-Switch anzeigen"
+      ],
+      [
+        "VLAN auf dem Uplink nicht erlaubt",
+        "Trunk-Übersicht mit den erlaubten VLANs am Uplink-Port lesen"
+      ],
+      [
+        "Zugriffsregel sperrt den Verkehr",
+        "Regelwerk (ACL) zwischen den VLANs und dessen Trefferzähler lesen"
+      ],
+      [
+        "Unklar, an welcher Station der Weg endet",
+        "Mit tracert die Stationen bis zum Ziel verfolgen"
+      ]
+    ],
+    "extra": [
+      "Mit ping 127.0.0.1 den eigenen Netzwerkstack des PCs prüfen"
+    ],
+    "erklaerungKurz": "Gateway → ipconfig /all · SVI → Schnittstellenstatus · Trunk → erlaubte VLANs · Regel → ACL lesen · unbekannte Stelle → tracert.",
+    "erklaerungLang": "Zu jeder Ursache gehört eine Prüfung, die genau diese Ursache bestätigt oder ausschließt.\n• Am Client: ipconfig /all zeigt Adresse, Maske und Gateway.\n• Am Layer-3-Switch: Schnittstellenstatus (SVI aktiv?) und Routingtabelle.\n• Am Trunk: welche VLANs dürfen über den Uplink?\n• Bei Regeln: welche ACL-Zeile trifft – der Trefferzähler zeigt es.\n• tracert zeigt die letzte erreichte Station und grenzt die Fehlerstelle ein.\nMerke: Eine Prüfmaßnahme ist gut, wenn ihr Ergebnis die Ursache bestätigt oder ausschließt.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-849",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH öffnet ein Entwicklungsrechner (VLAN 10, 192.168.10.57, Gateway 192.168.10.1) eine Zeichnung auf dem NAS (VLAN 30, 192.168.30.20). Die Gateways aller VLANs sind SVIs auf dem Core-Switch (Layer 3).",
+    "schritt1": {
+      "frage": "An welche Ziel-MAC-Adresse schickt der PC den ersten Frame?",
+      "optionen": [
+        "An die MAC-Adresse der SVI für VLAN 10 auf dem Core-Switch",
+        "An die MAC-Adresse von NAS1, weil NAS1 das eigentliche Ziel ist",
+        "An die Broadcast-MAC, damit der Core-Switch den Frame weiterleitet"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Was ändert der Core-Switch, wenn er das Paket in VLAN 30 an NAS1 weiterleitet?",
+      "optionen": [
+        "Er setzt neue Quell- und Ziel-MAC-Adressen; die IP-Adressen bleiben gleich",
+        "Er ersetzt die Quell-IP-Adresse des PCs durch seine eigene Adresse 192.168.30.1",
+        "Nichts am Frame – er tauscht nur das VLAN-Tag von 10 auf 30 und gibt ihn weiter"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: NAS1 liegt in einem anderen Netz. Der PC schickt den Frame deshalb an sein Standardgateway – die SVI für VLAN 10 – und ermittelt dessen MAC-Adresse per ARP.",
+      "Falsch: Die MAC-Adresse eines Geräts in einem anderen Netz kann der PC per ARP gar nicht erfragen; ARP-Broadcasts bleiben im eigenen VLAN.",
+      "Falsch: Ein Broadcast bleibt in der eigenen Broadcastdomäne. Nutzdaten schickt der PC gezielt an die MAC-Adresse des Gateways."
+    ],
+    "erklaerungKurz": "Erster Abschnitt: Ziel-MAC = SVI VLAN 10, Ziel-IP = NAS1. Der Core routet und baut einen neuen Frame mit eigener Quell-MAC und NAS1-MAC; die IP-Adressen bleiben.",
+    "erklaerungLang": "Beim Weg zwischen VLANs gelten MAC-Adressen nur je Abschnitt, IP-Adressen Ende zu Ende.\n• Abschnitt 1 (VLAN 10): Quell-MAC = PC, Ziel-MAC = SVI VLAN 10; Quell-IP 192.168.10.57, Ziel-IP 192.168.30.20.\n• Der Core-Switch liest die Ziel-IP-Adresse und routet laut Routingtabelle in das direkt angeschlossene Netz 192.168.30.0/24.\n• Abschnitt 2 (VLAN 30): Quell-MAC = SVI VLAN 30, Ziel-MAC = NAS1 (per ARP); die IP-Adressen sind unverändert.\n• Eine Adressübersetzung (NAT) findet intern nicht statt.\nMerke: Router und Layer-3-Switch tauschen die MAC-Adressen, nicht die IP-Adressen.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-850",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "szenario2",
+    "schwierigkeit": 4,
+    "frage": "Bei der Hollmann Gerätebau GmbH wurde heute Morgen der Uplink des Access-Switches Fertigung am Core-Switch neu eingerichtet. Seitdem erreichen sich die Messrechner in VLAN 40 untereinander, aber keinen Server in VLAN 30. ipconfig /all zeigt auf einem Messrechner 192.168.40.123/24, Gateway 192.168.40.1 – die Adressen stammen noch aus der laufenden Lease (8 h).",
+    "schritt1": {
+      "frage": "Ein ping auf 192.168.40.1 scheitert. Wo liegt der Fehler am wahrscheinlichsten?",
+      "optionen": [
+        "Auf dem Weg vom Access-Switch zur SVI für VLAN 40 auf dem Core-Switch",
+        "In der IP-Konfiguration der Mess-PCs, weil das Gateway falsch eingetragen ist",
+        "Beim DHCP-Server, weil er für VLAN 40 heute keine Leases mehr vergibt"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Die Trunk-Übersicht des Core-Switches zeigt für den Uplink zur Fertigung: erlaubte VLANs 10, 20, 30, 99. Welche Maßnahme behebt den Fehler?",
+      "optionen": [
+        "VLAN 40 auf dem Trunk-Port des Uplinks zusätzlich erlauben",
+        "Den Uplink zum Access-Port umstellen und ihm VLAN 40 zuweisen",
+        "Auf dem Core-Switch eine zweite SVI mit 192.168.40.254 anlegen"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Die PC-Konfiguration passt zum Plan, und das eigene VLAN funktioniert. Wenn schon das Gateway nicht antwortet, endet der Weg zwischen Access-Switch und Core – genau dort wurde heute geändert.",
+      "Falsch: ipconfig /all zeigt das richtige Gateway 192.168.40.1 laut Plan. Die PC-Seite ist in Ordnung.",
+      "Falsch: Die PCs haben gültige Adressen aus der laufenden Lease. DHCP erklärt nicht, warum das Gateway nicht antwortet."
+    ],
+    "erklaerungKurz": "PC-Konfiguration richtig, eigenes VLAN geht, Gateway antwortet nicht → Weg Access-Switch–Core gestört. VLAN 40 fehlt auf dem Trunk; Maßnahme: VLAN 40 auf dem Uplink erlauben.",
+    "erklaerungLang": "Die Fehlersuche geht vom Client zum Gateway und grenzt den Abschnitt ein.\n• ipconfig /all bestätigt Adresse, Maske und Gateway laut Plan – die PC-Seite ist richtig.\n• Der ping auf das Gateway scheitert: die Frames aus VLAN 40 kommen nicht bis zur SVI.\n• Die Trunk-Übersicht zeigt die Ursache: VLAN 40 fehlt in der Liste der erlaubten VLANs.\n• Ein Access-Port als Uplink trüge nur noch VLAN 40 und schnitte das Management-VLAN 99 ab; eine zweite SVI ändert am Trunk nichts.\n• Achtung: Ohne VLAN 40 auf dem Trunk erreicht auch kein DHCP-Request den Relay auf der SVI – spätestens nach Ablauf der Lease hätten die Mess-PCs APIPA-Adressen (169.254.x.x).\nMerke: Was im eigenen VLAN geht und am Gateway endet, liegt meist am Trunk oder an der SVI.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-851",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "bild",
+    "schwierigkeit": 4,
+    "frage": "Der Plan zeigt das Netz der Hollmann Gerätebau GmbH. Die Messrechner der Fertigung erreichen sich untereinander, beziehen aber keine Adresse vom DHCP-Server (ipconfig zeigt 169.254.x.x) und erreichen keinen Server. Welche Ursache zeigt der Plan?",
+    "svg": "<svg viewBox='0 0 720 400' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif'><rect width='720' height='400' fill='#fdfdf5' stroke='#ccc'/><text x='360' y='24' text-anchor='middle' font-size='15' font-weight='bold'>VLAN-Plan Hollmann Gerätebau GmbH (Auszug)</text><rect x='230' y='42' width='260' height='92' rx='8' fill='#e8f0fe' stroke='#2A4B8D' stroke-width='2'/><text x='360' y='62' text-anchor='middle' font-size='13' font-weight='bold'>Core-Switch (Layer 3)</text><text x='245' y='82' font-size='11'>SVI VLAN 10: 192.168.10.1</text><text x='245' y='97' font-size='11'>SVI VLAN 20: 192.168.20.1</text><text x='245' y='112' font-size='11'>SVI VLAN 30: 192.168.30.1</text><text x='245' y='127' font-size='11'>SVI VLAN 40: 192.168.40.1</text><line x1='280' y1='134' x2='95' y2='250' stroke='#2A4B8D' stroke-width='3'/><line x1='330' y1='134' x2='275' y2='250' stroke='#2A4B8D' stroke-width='3'/><line x1='390' y1='134' x2='455' y2='250' stroke='#2A4B8D' stroke-width='3'/><line x1='440' y1='134' x2='630' y2='250' stroke='#2A4B8D' stroke-width='3'/><rect x='137' y='172' width='100' height='38' rx='4' fill='#fff' stroke='#888'/><text x='187' y='188' text-anchor='middle' font-size='11'>Trunk tagged:</text><text x='187' y='203' text-anchor='middle' font-size='11'>20, 99</text><rect x='252' y='172' width='100' height='38' rx='4' fill='#fff' stroke='#888'/><text x='302' y='188' text-anchor='middle' font-size='11'>Trunk tagged:</text><text x='302' y='203' text-anchor='middle' font-size='11'>10, 99</text><rect x='372' y='172' width='100' height='38' rx='4' fill='#fff' stroke='#888'/><text x='422' y='188' text-anchor='middle' font-size='11'>Trunk tagged:</text><text x='422' y='203' text-anchor='middle' font-size='11'>20, 99</text><rect x='485' y='172' width='100' height='38' rx='4' fill='#fff' stroke='#888'/><text x='535' y='188' text-anchor='middle' font-size='11'>Trunk tagged:</text><text x='535' y='203' text-anchor='middle' font-size='11'>30, 99</text><rect x='20' y='250' width='150' height='44' rx='6' fill='#eef7ee' stroke='#3a7a3a' stroke-width='2'/><text x='95' y='268' text-anchor='middle' font-size='12' font-weight='bold'>Access-Switch</text><text x='95' y='284' text-anchor='middle' font-size='12'>Verwaltung</text><rect x='200' y='250' width='150' height='44' rx='6' fill='#eef7ee' stroke='#3a7a3a' stroke-width='2'/><text x='275' y='268' text-anchor='middle' font-size='12' font-weight='bold'>Access-Switch</text><text x='275' y='284' text-anchor='middle' font-size='12'>Entwicklung</text><rect x='380' y='250' width='150' height='44' rx='6' fill='#eef7ee' stroke='#3a7a3a' stroke-width='2'/><text x='455' y='268' text-anchor='middle' font-size='12' font-weight='bold'>Access-Switch</text><text x='455' y='284' text-anchor='middle' font-size='12'>Fertigung</text><rect x='555' y='250' width='150' height='44' rx='6' fill='#eef7ee' stroke='#3a7a3a' stroke-width='2'/><text x='630' y='268' text-anchor='middle' font-size='12' font-weight='bold'>Access-Switch</text><text x='630' y='284' text-anchor='middle' font-size='12'>Serverraum</text><line x1='95' y1='294' x2='95' y2='330' stroke='#555' stroke-width='2'/><line x1='275' y1='294' x2='275' y2='330' stroke='#555' stroke-width='2'/><line x1='455' y1='294' x2='455' y2='330' stroke='#555' stroke-width='2'/><line x1='630' y1='294' x2='630' y2='330' stroke='#555' stroke-width='2'/><text x='95' y='346' text-anchor='middle' font-size='11'>Büro-PCs</text><text x='95' y='361' text-anchor='middle' font-size='11'>Access-Ports VLAN 20</text><text x='275' y='346' text-anchor='middle' font-size='11'>CAD-PCs</text><text x='275' y='361' text-anchor='middle' font-size='11'>Access-Ports VLAN 10</text><text x='455' y='346' text-anchor='middle' font-size='11'>Mess-PCs, Drucker</text><text x='455' y='361' text-anchor='middle' font-size='11'>Access-Ports VLAN 40</text><text x='630' y='346' text-anchor='middle' font-size='11'>DHCP1, NAS1</text><text x='630' y='361' text-anchor='middle' font-size='11'>Access-Ports VLAN 30</text><text x='20' y='390' font-size='11' fill='#333'>Dicke Linien = Trunk (IEEE 802.1Q) · dünne Linien = Access-Ports · VLAN 99 = Management</text></svg>",
+    "unterTyp": "mc",
+    "optionen": [
+      "Auf dem Trunk zur Fertigung ist VLAN 40 nicht erlaubt",
+      "Für VLAN 40 fehlt auf dem Core-Switch die SVI als Gateway-Adresse",
+      "Die Ports der Mess-PCs sind Trunks statt Access-Ports",
+      "Der DHCP-Server in VLAN 30 ist aus VLAN 40 nie erreichbar"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die SVI VLAN 40 (192.168.40.1) steht im Core-Switch – sie ist vorhanden.",
+      "Der Plan zeigt Access-Ports in VLAN 40; untereinander funktioniert die Kommunikation ja.",
+      "Über das DHCP-Relay auf der SVI erreichen Anfragen aus jedem VLAN den Server in VLAN 30 – sofern die Frames bis zum Core kommen."
+    ],
+    "erklaerungKurz": "Der Trunk zur Fertigung trägt nur VLAN 20 und 99 (vermutlich vom Verwaltungs-Uplink kopiert). Frames aus VLAN 40 erreichen den Core nie – kein Gateway, kein DHCP-Relay, darum APIPA.",
+    "erklaerungLang": "Der Plan verrät den Fehler am Beschriftungskasten des Fertigungs-Trunks.\n• Die Access-Ports der Mess-PCs liegen in VLAN 40; im eigenen VLAN funktioniert alles.\n• Der Trunk zum Core erlaubt aber nur VLAN 20 und 99 – VLAN 40 fehlt.\n• Damit erreichen weder DHCP-Anfragen noch Pakete an das Gateway die SVI 192.168.40.1.\n• Ohne DHCP-Antwort vergibt Windows sich eine APIPA-Adresse aus 169.254.0.0/16.\nMerke: Jedes VLAN, das ein Access-Switch hat, muss auf seinem Trunk zum Core erlaubt sein.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-852",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Die Hollmann Gerätebau GmbH vergleicht zwei Wege für das Inter-VLAN-Routing: eine Schnittstelle je VLAN direkt auf dem Core-Switch oder einen externen Router mit nur einem Trunk-Anschluss und Unterschnittstellen je VLAN (Router-on-a-Stick). Welcher Vorteil spricht für die Schnittstellen direkt auf dem Core-Switch?",
+    "optionen": [
+      "Der Core-Switch routet intern, der ganze Verkehr zwischen VLANs muss nicht über eine Leitung zum Router",
+      "Die SVI-Lösung braucht kein VLAN-Tagging, weil der Core-Switch alle VLANs auch ohne Tags unterscheidet",
+      "Bei der SVI-Lösung können die Clients auf ein Standardgateway verzichten, weil der Switch dann selbst routet",
+      "Nur mit SVIs lassen sich die VLANs voneinander trennen, beim Router-on-a-Stick sehen sich alle VLANs"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Zu den Access-Switches laufen weiterhin Trunks mit 802.1Q-Tags; die SVI ändert daran nichts.",
+      "Die SVI IST das Standardgateway – die Clients brauchen es weiterhin (z. B. 192.168.10.1).",
+      "Beide Lösungen trennen die VLANs gleich gut; der Unterschied liegt in Leistung und Engpass."
+    ],
+    "erklaerungKurz": "Beim Router-on-a-Stick läuft jeder Verkehr zwischen VLANs zweimal über die eine Trunk-Leitung zum Router (Engpass). Der Layer-3-Switch routet intern in Hardware.",
+    "erklaerungLang": "Beide Lösungen leisten Inter-VLAN-Routing – sie unterscheiden sich im Aufbau.\n• Router-on-a-Stick: ein Router-Anschluss als Trunk, je VLAN eine Unterschnittstelle mit der Gateway-Adresse; jedes Paket läuft hin und zurück über dieselbe Leitung.\n• SVI: je VLAN eine virtuelle Schnittstelle auf dem Layer-3-Switch; geroutet wird intern mit voller Switch-Leistung.\n• Router-on-a-Stick ist günstig für kleine Netze ohne Layer-3-Switch.\nMerke: SVI = Routing im Switch · Router-on-a-Stick = Routing über eine Trunk-Leitung.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-853",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Auf dem Trunk zwischen zwei Switches ist VLAN 1 als natives VLAN eingestellt, außerdem laufen VLAN 10 und VLAN 20 darüber. Wie werden die Frames aus VLAN 1 auf diesem Trunk übertragen?",
+    "optionen": [
+      "Ohne Tag; der Empfänger ordnet ungetaggte Frames seinem nativen VLAN zu",
+      "Mit Tag 1, damit der Empfänger sie von den Frames aus VLAN 10 und 20 trennt",
+      "Gar nicht, weil das native VLAN nur auf Access-Ports und nie auf Trunks gilt",
+      "Mit Tag 0, weil im Tag des nativen VLANs immer die VLAN-Nummer 0 steht"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Gerade das native VLAN ist die Ausnahme: seine Frames gehen ohne Tag über den Trunk.",
+      "Das native VLAN ist eine Einstellung des Trunks – es legt fest, wohin ungetaggte Frames gehören.",
+      "Die VLAN-Nummer 0 ist reserviert; Frames des nativen VLANs tragen gar kein Tag."
+    ],
+    "erklaerungKurz": "Frames des nativen VLANs laufen auf dem Trunk ungetaggt. Der Empfänger steckt jeden ungetaggten Frame in sein natives VLAN – darum muss es auf beiden Seiten gleich eingestellt sein.",
+    "erklaerungLang": "Das native VLAN regelt den Sonderfall „Frame ohne Tag auf dem Trunk“.\n• Alle anderen VLANs (hier 10 und 20) tragen auf dem Trunk ein 802.1Q-Tag.\n• Ungetaggte Frames ordnet der empfangende Switch seinem nativen VLAN zu.\n• Stimmt das native VLAN an beiden Enden nicht überein, landen Frames im falschen VLAN.\n• Sicherheitsempfehlung: ein ungenutztes VLAN als natives VLAN wählen, nicht VLAN 1.\nMerke: Natives VLAN = das eine VLAN ohne Tag auf dem Trunk – an beiden Enden gleich.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-854",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "OSI-Modell & Protokolle",
+    "gebiet": "A3",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 3,
+    "frage": "Auf welcher OSI-Schicht arbeitet das jeweilige Gerät bzw. Protokoll? Kreuze an (ein Gerät kann mehrere Schichten haben).",
+    "zeilen": [
+      "Hub",
+      "Switch",
+      "Router",
+      "Layer-3-Switch",
+      "ARP (Address Resolution Protocol)",
+      "Spanning Tree Protocol",
+      "DHCP (Dynamic Host Configuration Protocol)"
+    ],
+    "spalten": [
+      "Bitübertragung (L1)",
+      "Sicherung (L2)",
+      "Vermittlung (L3)",
+      "Anwendung (L7)"
+    ],
+    "loesung": [
+      [
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        true
+      ]
+    ],
+    "erklaerungKurz": "Hub L1 · Switch L2 · Router L3 · Layer-3-Switch L2 und L3 · ARP L2 (liefert die MAC-Adresse) · Spanning Tree L2 (zwischen Switches) · DHCP L7 (Anwendungsprotokoll über UDP).",
+    "erklaerungLang": "Eingeordnet wird danach, womit das Gerät oder Protokoll arbeitet.\n• Hub: verteilt nur Signale (L1); Switch: MAC-Adressen (L2); Router: IP-Adressen (L3).\n• Der Layer-3-Switch switcht innerhalb der VLANs (L2) und routet zwischen ihnen (L3).\n• ARP ermittelt zur IP-Adresse die MAC-Adresse für die Zustellung auf Schicht 2.\n• Spanning Tree verhindert Schleifen zwischen Switches und arbeitet auf Schicht 2.\n• DHCP ist ein Anwendungsprotokoll (Schicht 7), transportiert über UDP 67/68.\nMerke: Signal L1 · MAC L2 · IP L3 · Dienst L7.",
+    "verweis": "Modul 03, Abschnitt 3.2 – OSI-Modell und Protokolle"
+  },
+  {
+    "id": "M03-855",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Das 802.1Q-Tag eines VLAN-Frames ist ___ lang. Die VLAN-Kennung darin umfasst ___ Bit; nutzbar sind die VLAN-Nummern 1 bis ___.",
+    "luecken": [
+      {
+        "optionen": [
+          "4 Byte",
+          "2 Byte",
+          "8 Byte",
+          "12 Byte"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "12",
+          "8",
+          "16",
+          "10"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "4094",
+          "4096",
+          "1024",
+          "255"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "802.1Q-Tag: 4 Byte im Ethernet-Header, VLAN-ID 12 Bit = 4096 Werte; 0 und 4095 sind reserviert, nutzbar 1–4094.",
+    "erklaerungLang": "Das 802.1Q-Tag wird auf dem Trunk in den Ethernet-Frame eingefügt.\n• Länge: 4 Byte, zwischen Quell-MAC-Adresse und Typfeld.\n• Darin steht die VLAN-ID mit 12 Bit: 2^12 = 4096 Werte.\n• Die Werte 0 und 4095 sind reserviert, nutzbar sind also 1 bis 4094.\nMerke: 4 Byte Tag, 12 Bit ID, 4094 VLANs.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M03-856",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein Paket läuft vom Rechner über zwei Router zu einem Webserver in einem anderen Netz. Welche Angaben bleiben auf dem ganzen Weg gleich?",
+    "optionen": [
+      "Quell- und Ziel-IP-Adresse; die MAC-Adressen setzt jeder Router für den nächsten Abschnitt neu",
+      "Quell- und Ziel-MAC-Adresse; die IP-Adressen tauscht jeder Router gegen die des nächsten Routers",
+      "Alle vier Adressen, denn Router lesen nur die Adressen und schicken den Frame unverändert weiter",
+      "Nur die Ziel-MAC-Adresse, weil sie das Endgerät eindeutig kennzeichnet; die IP-Adressen ändern sich"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Genau umgekehrt: die IP-Adressen gelten Ende zu Ende, die MAC-Adressen nur im jeweiligen Netzabschnitt.",
+      "Ein Router packt den Frame aus und baut für den nächsten Abschnitt einen neuen Frame mit neuen MAC-Adressen.",
+      "Die MAC-Adresse des Ziels ist dem PC gar nicht bekannt – er adressiert den Frame an sein Gateway."
+    ],
+    "erklaerungKurz": "IP-Adressen gelten Ende zu Ende (ohne NAT unverändert), MAC-Adressen nur je Abschnitt – jeder Router setzt neue Quell- und Ziel-MAC.",
+    "erklaerungLang": "Schicht 2 und Schicht 3 haben verschiedene Reichweiten.\n• Die MAC-Adresse adressiert das nächste Gerät im selben Netz (Schicht 2).\n• Die IP-Adresse adressiert das Endziel über alle Netze hinweg (Schicht 3).\n• Jeder Router entfernt den alten Frame, entscheidet anhand der Ziel-IP und baut einen neuen Frame mit eigener Quell-MAC und der MAC des nächsten Hops.\n• Ausnahme: NAT am Internetzugang ersetzt die private Quell-IP-Adresse.\nMerke: MAC von Hop zu Hop, IP von Ende zu Ende.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Switch und Router im Detail"
+  },
+  {
+    "id": "M06-620",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "IDS/IPS",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "frage": "Ein Unternehmen stellt fest, dass Mitarbeiter teilweise unverschlüsselte Verbindungen nutzen und dass mehrere Abteilungen auf sensible Daten anderer Abteilungen zugreifen können.\n\n7.1 (4 Punkte, je Maßnahme 1 Punkt)\nErläutern Sie Funktion und Einsatzzweck der folgenden Sicherheitsmaßnahmen:\n• Firewall\n• VLAN\n• VPN\n• IDS",
+    "musterloesung": "• Firewall: prüft den Datenverkehr zwischen Netzen anhand eines Regelwerks (Adressen, Ports, Verbindungszustand) und lässt nur ausdrücklich Erlaubtes durch – Zweck: die Netzgrenze (Internet, DMZ, interne Netze) schützen und unerwünschte Zugriffe blockieren. (1 P.)\n• VLAN: teilt ein physisches Netz an denselben Switches logisch in getrennte virtuelle Netze – Zweck: Abteilungen voneinander trennen, sodass z. B. die Verwaltung nicht direkt auf Daten der Entwicklung zugreift; Übergänge zwischen den VLANs sind nur kontrolliert und mit Regeln erlaubt. (1 P.)\n• VPN: baut über ein öffentliches Netz (Internet, Hotel-WLAN) eine Verbindung auf, deren Daten verschlüsselt und deren Gegenstellen authentifiziert sind – Zweck: abhörsicherer Zugang für den Außendienst oder zwischen Standorten, statt unverschlüsselter Verbindungen. (1 P.)\n• IDS (Intrusion Detection System): überwacht den Netzverkehr passiv, z. B. an einem Spiegelport, auf Angriffsmuster (Signaturen) und Auffälligkeiten (Anomalien) und schlägt Alarm – Zweck: Angriffe erkennen und melden; selbst blockiert es nicht (das tut ein IPS). (1 P.)",
+    "erklaerungKurz": "Firewall filtert nach Regeln · VLAN trennt Netze logisch · VPN verschlüsselt im Tunnel · IDS erkennt und meldet Angriffe.",
+    "erklaerungLang": "Die vier Maßnahmen setzen an verschiedenen Stellen an und ergänzen sich.\n• Firewall: Regelwerk an der Netzgrenze; Grundsatz „alles verbieten, was nicht erlaubt ist“ (Deny by Default).\n• VLAN: logische Trennung im eigenen Netz – gegen den Zugriff einer Abteilung auf Daten einer anderen.\n• VPN: Verschlüsselung und Authentifizierung auf dem Transportweg – gegen unverschlüsselte Verbindungen über fremde Netze.\n• IDS: Erkennung und Alarm, passiv; ein IPS sitzt dagegen im Datenstrom (inline) und kann blockieren.\nMerke: Firewall filtert, VLAN trennt, VPN verschlüsselt, IDS meldet.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Angriffserkennung: IDS und IPS (AP2)",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Regelwerk",
+          "Regeln",
+          "filtert",
+          "Filter"
+        ],
+        [
+          "logisch",
+          "getrennt",
+          "trennt",
+          "Trennung",
+          "Segmentierung"
+        ],
+        [
+          "verschlüsselt",
+          "Verschlüsselung",
+          "Tunnel"
+        ],
+        [
+          "erkennt",
+          "Erkennung",
+          "Angriffserkennung",
+          "überwacht",
+          "Alarm"
+        ]
+      ],
+      "kuer": [
+        "Netzgrenze",
+        "Abteilungen",
+        "Außendienst",
+        "passiv",
+        "Spiegelport",
+        "Signaturen"
+      ]
+    }
+  },
+  {
+    "id": "M06-621",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "IDS/IPS",
+    "gebiet": "B2",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordnen Sie jeder Sicherheitsmaßnahme der Hollmann Gerätebau GmbH ihre Funktion zu.",
+    "paare": [
+      [
+        "Firewall",
+        "Filtert den Verkehr zwischen Netzen nach einem Regelwerk aus Adressen, Ports und Zuständen"
+      ],
+      [
+        "VLAN",
+        "Trennt Abteilungen logisch in eigene Broadcastdomänen auf denselben Switches"
+      ],
+      [
+        "VPN",
+        "Verbindet den Außendienst über das Internet durch einen verschlüsselten Tunnel"
+      ],
+      [
+        "IDS",
+        "Wertet am Spiegelport eine Kopie des Verkehrs aus und meldet Angriffsmuster"
+      ],
+      [
+        "IPS",
+        "Sitzt im Datenstrom und verwirft erkannte Angriffe sofort selbst"
+      ]
+    ],
+    "extra": [
+      "Vergibt Benutzerrechte nach dem Need-to-know-Prinzip"
+    ],
+    "erklaerungKurz": "Firewall filtert · VLAN trennt · VPN verschlüsselt den Weg · IDS meldet (passiv) · IPS blockiert (inline).",
+    "erklaerungLang": "Die Maßnahmen unterscheiden sich darin, ob sie trennen, filtern, verschlüsseln oder erkennen.\n• Firewall und VLAN begrenzen, wer wen erreicht – die Firewall nach Regeln, das VLAN durch Netztrennung.\n• Das VPN schützt die Vertraulichkeit auf dem Weg durch fremde Netze.\n• IDS und IPS erkennen Angriffe; nur das IPS greift selbst ein, weil es im Datenstrom liegt.\nMerke: Erkennen (IDS) ist nicht verhindern (IPS).",
+    "verweis": "Modul 06, Abschnitt 6.4 – Angriffserkennung: IDS und IPS (AP2)"
+  },
+  {
+    "id": "M06-622",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "IDS/IPS",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH hängen bisher alle Arbeitsplätze in einem gemeinsamen Netz; die Verwaltung kann auf die Konstruktionsdaten der Entwicklung zugreifen. Welche Maßnahme unterbindet das auf Netzebene am wirksamsten?",
+    "optionen": [
+      "Verwaltung und Entwicklung in eigene VLANs legen und den Übergang am Core-Switch per Regelwerk (ACL) beschränken",
+      "Ein IDS am Spiegelport des Core-Switches einrichten, das jeden Zugriff der Verwaltung auf die Entwicklung erkennt",
+      "Für alle internen Verbindungen ein VPN einrichten, damit die Konstruktionsdaten nur noch verschlüsselt übertragen werden",
+      "Die Firewall am Internetzugang verschärfen, sodass nur noch HTTPS-Verbindungen aus dem Unternehmen hinausgelassen werden"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Ein IDS erkennt und meldet nur – den Zugriff selbst lässt es weiterhin zu.",
+      "Verschlüsselung schützt vor Mitlesen auf dem Weg, trennt aber nicht, WER zugreifen darf.",
+      "Die Perimeter-Firewall sieht internen Verkehr zwischen den Abteilungen gar nicht."
+    ],
+    "erklaerungKurz": "Getrennte VLANs machen Verwaltung und Entwicklung zu getrennten Netzen; Regeln am Layer-3-Übergang legen fest, welcher Verkehr erlaubt ist.",
+    "erklaerungLang": "Gegen Zugriffe zwischen Abteilungen hilft Segmentierung mit kontrolliertem Übergang.\n• VLANs trennen die Abteilungen auf Schicht 2; ohne Routing erreichen sie sich gar nicht.\n• Am Core-Switch (SVIs) bestimmt ein Regelwerk (ACL), welche Verbindungen doch erlaubt sind, z. B. zum gemeinsamen NAS.\n• IDS, VPN und Internet-Firewall lösen andere Probleme: Erkennen, Vertraulichkeit unterwegs, Schutz nach außen.\nMerke: Trennen (VLAN) plus Regeln am Übergang (ACL) – das ist Netzsegmentierung.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Netzwerk-Firewalls und DMZ (AP2)"
+  },
+  {
+    "id": "M06-623",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "IDS/IPS",
+    "gebiet": "B2",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Das IDS der Hollmann Gerätebau GmbH hängt am Spiegelport des Core-Switches. Nachts meldet es einen Portscan aus dem Internet auf den Webserver in der DMZ, danach Anmeldeversuche mit vielen Passwörtern.",
+    "schritt1": {
+      "frage": "Was hat das IDS in dieser Situation getan?",
+      "optionen": [
+        "Es hat die Angriffe anhand ihrer Muster erkannt und Alarm gegeben",
+        "Es hat die Pakete des Angreifers verworfen und seine Adresse gesperrt",
+        "Es hat die Verbindung zum Webserver verschlüsselt und so geschützt"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Die IT will solche Angriffe künftig automatisch stoppen. Welche Ergänzung leistet das?",
+      "optionen": [
+        "Ein IPS inline zwischen Firewall und DMZ, das erkannte Angriffe sofort verwirft",
+        "Ein zweites IDS an einem weiteren Spiegelport, damit kein Paket unbemerkt bleibt",
+        "Ein VPN für den Webserver, damit Besucher nur noch verschlüsselt zugreifen können"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Ein IDS am Spiegelport bekommt nur eine Kopie des Verkehrs. Es erkennt Signaturen und Anomalien und meldet sie – eingreifen kann es nicht.",
+      "Falsch: Verwerfen kann nur ein System, das im Datenstrom liegt (IPS oder Firewall). Am Spiegelport sieht das IDS nur Kopien.",
+      "Falsch: Verschlüsseln gehört nicht zu den Aufgaben eines IDS – es überwacht und meldet."
+    ],
+    "erklaerungKurz": "IDS = passiv am Spiegelport, erkennt und meldet. Automatisch stoppen kann nur ein IPS inline im Datenstrom (oder eine NGFW mit IPS-Funktion).",
+    "erklaerungLang": "IDS und IPS nutzen dieselbe Erkennung, unterscheiden sich aber in ihrer Lage im Netz.\n• IDS (Intrusion Detection System): bekommt am Spiegelport eine Kopie, erkennt Angriffsmuster und schlägt Alarm.\n• IPS (Intrusion Prevention System): liegt inline zwischen zwei Netzen; jedes Paket läuft durch, erkannte Angriffe werden verworfen.\n• Preis des IPS: Fehlalarme blockieren echten Verkehr, und fällt es aus, steht die Verbindung.\n• Ein VPN schützt Verbindungen vor Mitlesen, nicht vor Angriffen auf einen öffentlichen Webserver.\nMerke: IDS meldet, IPS handelt.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Angriffserkennung: IDS und IPS (AP2)"
+  },
+  {
+    "id": "M06-624",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Härtung & Zugriffskontrolle",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Die 8 Außendienstmitarbeitenden der Hollmann Gerätebau GmbH greifen aus Hotels und Kundennetzen auf Dateien vom NAS (192.168.30.20) zu. Bisher läuft das über eine unverschlüsselte Freigabe, die die Firewall ins Internet weiterleitet.",
+    "schritt1": {
+      "frage": "Welche Lösung schützt diese Zugriffe sinnvoll?",
+      "optionen": [
+        "Ein VPN-Zugang (Remote Access) auf der Firewall; die Freigabe ist nur noch durch den Tunnel erreichbar",
+        "Die Freigabe bleibt im Internet erreichbar, bekommt aber ein längeres Passwort und einen anderen TCP-Port",
+        "Ein IDS am Spiegelport, das jeden Zugriff aus dem Internet auf NAS1 erkennt und an die IT meldet"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Was leistet der VPN-Tunnel für die Daten unterwegs?",
+      "optionen": [
+        "Er verschlüsselt sie und prüft die Gegenstelle, sodass Dritte nichts mitlesen oder verändern",
+        "Er beschleunigt die Übertragung, weil der Tunnel einen eigenen, deutlich kürzeren Weg durchs Netz nimmt",
+        "Er schützt NAS1 vor Schadsoftware, weil im Tunnel jede Datei auf Viren geprüft wird"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Mit einem Remote-Access-VPN (End-to-Site) wählt sich das Notebook verschlüsselt in das Firmennetz ein; die Portweiterleitung ins Internet entfällt.",
+      "Falsch: Ein anderer Port und ein längeres Passwort ändern nichts daran, dass die Daten unverschlüsselt durch fremde Netze laufen.",
+      "Falsch: Ein IDS meldet nur. Die Verbindung bliebe offen und unverschlüsselt."
+    ],
+    "erklaerungKurz": "Remote-Access-VPN auf der Firewall: Die Freigabe ist nur noch intern erreichbar; der Tunnel verschlüsselt und authentifiziert jede Verbindung des Außendiensts.",
+    "erklaerungLang": "Ein VPN löst das Problem „unverschlüsselt über fremde Netze“.\n• Remote Access (End-to-Site): ein einzelnes Gerät verbindet sich mit dem Firmennetz, z. B. das Notebook im Hotel mit der Firewall.\n• Im Tunnel sind die Daten verschlüsselt (Vertraulichkeit) und gegen Veränderung gesichert (Integrität); die Gegenstellen authentifizieren sich.\n• Die Portweiterleitung der Freigabe ins Internet entfällt – die Angriffsfläche sinkt.\n• Ein VPN prüft keine Inhalte auf Schadsoftware und macht die Leitung nicht schneller.\nMerke: VPN = verschlüsselter Tunnel durch ein unsicheres Netz.",
+    "verweis": "Modul 04, Abschnitt 4.5 – VPN (Virtual Private Network)"
+  },
+  {
+    "id": "M06-625",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Härtung & Zugriffskontrolle",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Die Hollmann Gerätebau GmbH ersetzt unverschlüsselte Protokolle. Ordnen Sie jedem unsicheren Protokoll seinen sicheren Ersatz zu.",
+    "paare": [
+      [
+        "Telnet (Fernzugriff auf die Switch-Konsole)",
+        "SSH – verschlüsselte Konsole, Port 22"
+      ],
+      [
+        "HTTP (Weboberfläche der USV-Netzwerkkarte)",
+        "HTTPS – HTTP über TLS, Port 443"
+      ],
+      [
+        "FTP (Dateiübertragung zum Webserver)",
+        "SFTP – Dateiübertragung über SSH"
+      ],
+      [
+        "POP3 (E-Mail-Abruf)",
+        "POP3S – POP3 über TLS, Port 995"
+      ]
+    ],
+    "extra": [
+      "SNMPv3 – Netzwerküberwachung mit Authentifizierung und Verschlüsselung"
+    ],
+    "erklaerungKurz": "Telnet → SSH · HTTP → HTTPS · FTP → SFTP · POP3 → POP3S. Die alten Protokolle übertragen Passwörter und Daten im Klartext.",
+    "erklaerungLang": "Telnet, HTTP, FTP und POP3 übertragen alles im Klartext – auch Benutzername und Passwort.\n• SSH ersetzt Telnet für die Konsole von Switches, Routern und Servern.\n• HTTPS ist HTTP mit TLS-Verschlüsselung; der Server weist sich mit einem Zertifikat aus.\n• SFTP überträgt Dateien durch eine SSH-Verbindung (nicht zu verwechseln mit FTPS = FTP über TLS).\n• POP3S und IMAPS sichern den E-Mail-Abruf mit TLS.\nMerke: Klartext-Protokoll raus, Variante mit SSH oder TLS rein.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Verschlüsselungstechniken und Zertifikate"
+  },
+  {
+    "id": "M06-626",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Härtung & Zugriffskontrolle",
+    "gebiet": "A3",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 3,
+    "frage": "Auf welcher OSI-Schicht setzt die jeweilige Sicherheitsmaßnahme an? Kreuze an (eine Maßnahme kann mehrere Schichten betreffen).",
+    "zeilen": [
+      "VLAN-Trennung",
+      "Port-Security (MAC-Filter am Switch-Port)",
+      "Paketfilter-Firewall (Adressen und Ports)",
+      "IPsec-VPN",
+      "TLS (bei HTTPS)",
+      "Proxy-Firewall (Application-Level-Gateway)"
+    ],
+    "spalten": [
+      "Schicht 2",
+      "Schicht 3",
+      "Schicht 4",
+      "Schicht 6",
+      "Schicht 7"
+    ],
+    "loesung": [
+      [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        true
+      ]
+    ],
+    "erklaerungKurz": "VLAN und Port-Security: Schicht 2 · Paketfilter: Schicht 3 (IP) und 4 (Port) · IPsec: Schicht 3 · TLS: Schicht 6 · Proxy-Firewall: Schicht 7.",
+    "erklaerungLang": "Eine Maßnahme gehört zu der Schicht, deren Informationen sie auswertet oder schützt.\n• MAC-Adressen und VLAN-Zuordnung sind Schicht 2 – daher VLAN-Trennung und Port-Security.\n• Ein Paketfilter liest IP-Adressen (Schicht 3) und Portnummern (Schicht 4).\n• IPsec verschlüsselt IP-Pakete (Schicht 3); TLS verschlüsselt die Daten der Anwendung (in der Prüfung Schicht 6).\n• Ein Application-Level-Gateway versteht das Anwendungsprotokoll, z. B. HTTP (Schicht 7).\nMerke: Je höher die Schicht, desto mehr vom Inhalt sieht die Maßnahme.",
+    "verweis": "Modul 03, Abschnitt 3.2 – OSI-Modell und Protokolle"
+  },
+  {
+    "id": "M06-627",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Härtung & Zugriffskontrolle",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Zwischen den VLANs der Hollmann Gerätebau GmbH gilt dieses Regelwerk, geprüft von oben nach unten (erste passende Regel gilt): 1. Erlaube TCP von 192.168.20.0/24 zu 192.168.30.20 Port 445 · 2. Verweigere alles von 192.168.20.0/24 zu 192.168.10.0/24 · 3. Erlaube TCP von 192.168.10.0/24 zu beliebig Port 443 · 4. Verweigere alles. Welche Verbindung wird erlaubt?",
+    "optionen": [
+      "Verwaltungs-PC 192.168.20.15 zu NAS1 192.168.30.20, TCP-Port 445",
+      "Entwicklungs-PC 192.168.10.57 zu NAS1 192.168.30.20, TCP-Port 445",
+      "Verwaltungs-PC 192.168.20.15 zu CAD-PC 192.168.10.57, TCP-Port 443",
+      "Verwaltungs-PC 192.168.20.15 zu einem Webserver im Internet, TCP-Port 443"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Regel 1 gilt nur für Absender aus 192.168.20.0/24, Regel 3 nur für Port 443 – es greift Regel 4 (verweigern).",
+      "Regel 2 trifft zuerst: alles aus der Verwaltung in das Entwicklungsnetz wird verweigert.",
+      "Regel 3 erlaubt Port 443 nur für Absender aus 192.168.10.0/24; für die Verwaltung greift Regel 4."
+    ],
+    "erklaerungKurz": "Nur Regel 1 passt auf 192.168.20.15 → 192.168.30.20:445 und erlaubt. Alle anderen Fälle laufen in Regel 2 oder in die Schlussregel 4 (Deny by Default).",
+    "erklaerungLang": "Ein Regelwerk wird von oben nach unten gelesen; die erste passende Regel entscheidet.\n• Verwaltung → NAS1 Port 445: Regel 1 passt genau – erlaubt.\n• Entwicklung → NAS1 Port 445: Regel 1 (falsches Quellnetz), Regel 2 (falsches Quellnetz), Regel 3 (falscher Port) passen nicht – Regel 4 verweigert.\n• Verwaltung → Entwicklung: Regel 2 verweigert, egal welcher Port.\n• Verwaltung → Internet Port 443: Regel 3 gilt nur für das Entwicklungsnetz – Regel 4 verweigert.\nMerke: Erste passende Regel gilt; am Ende steht „alles verweigern“.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Netzwerk-Firewalls und DMZ (AP2)"
+  },
+  {
+    "id": "M06-628",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Verschlüsselung & Signaturen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Warum arbeitet TLS bei HTTPS mit einem hybriden Verfahren statt nur mit asymmetrischer Verschlüsselung?",
+    "optionen": [
+      "Asymmetrische Verfahren sind zu langsam für große Datenmengen; sie sichern nur den Schlüsselaustausch, die Daten verschlüsselt AES",
+      "Asymmetrische Verfahren sind unsicher, darum wird der Schlüsselaustausch symmetrisch und die eigentlichen Daten asymmetrisch verschlüsselt",
+      "Hybride Verfahren brauchen kein Zertifikat, weil der symmetrische Sitzungsschlüssel den Server bereits eindeutig ausweist",
+      "Der Browser kennt den privaten Schlüssel des Servers nicht und muss deshalb jede Nachricht zusätzlich symmetrisch verschlüsseln"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Genau umgekehrt: asymmetrisch für den Schlüsselaustausch, symmetrisch für die Daten – und asymmetrisch ist nicht unsicher, nur langsam.",
+      "Das Zertifikat bleibt nötig: es bindet den öffentlichen Schlüssel an den Server. Ein Sitzungsschlüssel weist niemanden aus.",
+      "Den privaten Schlüssel des Servers kennt nie jemand anderes – das ist gewollt und kein Grund für das hybride Verfahren."
+    ],
+    "erklaerungKurz": "Hybrid = asymmetrisch (z. B. RSA/ECDHE) für Authentifizierung und Schlüsselaustausch, symmetrisch (AES) für die Nutzdaten, weil das viel schneller ist.",
+    "erklaerungLang": "Das hybride Verfahren kombiniert die Stärken beider Verfahren.\n• Asymmetrisch: löst das Schlüsselverteilungsproblem und erlaubt mit dem Zertifikat die Authentifizierung des Servers, ist aber rechenaufwendig.\n• Symmetrisch: sehr schnell, braucht aber einen gemeinsamen geheimen Schlüssel.\n• TLS vereinbart deshalb zuerst asymmetrisch gesichert einen Sitzungsschlüssel und verschlüsselt danach alle Daten symmetrisch mit AES.\nMerke: Asymmetrisch für den Schlüssel, symmetrisch für die Daten.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Verschlüsselungstechniken und Zertifikate"
+  },
+  {
+    "id": "M06-629",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Verschlüsselung & Signaturen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Der Webserver der Hollmann Gerätebau GmbH in der DMZ weist sich mit einem Zertifikat aus. Was bestätigt dieses Zertifikat dem Browser?",
+    "optionen": [
+      "Dass der öffentliche Schlüssel zum Server gehört – bestätigt durch die Signatur einer Zertifizierungsstelle",
+      "Dass der Server frei von Schadsoftware ist – geprüft durch die Zertifizierungsstelle bei der Ausstellung des Zertifikats",
+      "Dass die Verbindung schnell genug ist – gemessen durch den Browser beim Prüfen der Zertifikatskette",
+      "Dass der Server ständig erreichbar ist – vertraglich zugesichert durch die Zertifizierungsstelle"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die Zertifizierungsstelle (CA) prüft die Identität des Antragstellers, nicht die Sauberkeit des Servers.",
+      "Ein Zertifikat sagt nichts über die Geschwindigkeit; es bestätigt eine Identität.",
+      "Verfügbarkeit sichert ein Zertifikat nicht zu; es bestätigt nur, wem der Schlüssel gehört."
+    ],
+    "erklaerungKurz": "Ein Zertifikat bindet einen öffentlichen Schlüssel an eine Identität (z. B. den Servernamen). Die Zertifizierungsstelle (CA) bestätigt das mit ihrer digitalen Signatur.",
+    "erklaerungLang": "Ohne Zertifikat könnte jeder Angreifer einen eigenen öffentlichen Schlüssel als den des Servers ausgeben.\n• Das Zertifikat enthält Servername, öffentlichen Schlüssel und Gültigkeitszeitraum.\n• Die Zertifizierungsstelle (CA) signiert es mit ihrem privaten Schlüssel.\n• Der Browser prüft die Signatur mit dem öffentlichen Schlüssel der CA, die er als vertrauenswürdig kennt.\nMerke: Zertifikat = beglaubigter öffentlicher Schlüssel.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Hashwerte, Zertifikate, digitale Signaturen"
+  },
+  {
+    "id": "M06-630",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "IDS/IPS",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Die Hollmann Gerätebau GmbH will Webzugriffe der Beschäftigten auf ihren Inhalt prüfen: Downloads auf Schadcode untersuchen und bestimmte Seitenkategorien sperren. Welche Firewall-Art leistet das, und auf welcher OSI-Schicht arbeitet sie?",
+    "optionen": [
+      "Ein Application-Level-Gateway (Proxy-Firewall), das HTTP versteht – Schicht 7",
+      "Ein zustandsloser Paketfilter, der Adressen und Ports prüft – Schicht 3 und 4",
+      "Eine Stateful Inspection Firewall mit ihrer Verbindungstabelle – Schicht 3 und 4",
+      "Ein IDS am Spiegelport, das die Downloads mitliest und meldet – Schicht 2"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Ein Paketfilter sieht nur IP-Adressen und Ports, nicht den Inhalt eines Downloads.",
+      "Die Verbindungstabelle kennt Zustände von Verbindungen, aber nicht den Inhalt der übertragenen Daten.",
+      "Ein IDS am Spiegelport sieht nur Kopien und kann nichts sperren."
+    ],
+    "erklaerungKurz": "Inhalte prüfen kann nur eine Firewall, die das Anwendungsprotokoll versteht: das Application-Level-Gateway (Proxy) auf Schicht 7 – oder eine NGFW mit Deep Packet Inspection.",
+    "erklaerungLang": "Die Firewall-Arten unterscheiden sich darin, wie tief sie in den Verkehr schauen.\n• Paketfilter: IP-Adressen und Ports (Schicht 3/4), jedes Paket einzeln.\n• Stateful Inspection: zusätzlich der Verbindungszustand (Schicht 3/4).\n• Application-Level-Gateway (Proxy): baut eigene Verbindungen auf und prüft den Inhalt des Anwendungsprotokolls (Schicht 7).\n• Eine NGFW verbindet das mit Anwendungserkennung und oft einem IPS.\nMerke: Inhalt prüfen heißt Schicht 7.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Netzwerk-Firewalls und DMZ (AP2)"
+  }
+]

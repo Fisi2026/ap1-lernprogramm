@@ -1,0 +1,41 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen" [current=page]
+main
+  banner
+    heading "Einstellungen" [Ebene 1]
+  heading "Prüfung" [Ebene 2]
+  eingabe:date "Datum der AP1"
+  spinbutton "Dauer in Minuten"
+  heading "Üben" [Ebene 2]
+  spinbutton "Fragen pro Tag"
+  radiogroup "Prüfungsteil"
+    radio "Beide" [checked=true]
+    radio "Nur AP1" [checked=false]
+    radio "Nur AP2" [checked=false]
+  switch "Prüfungsnah gewichten" [checked=true]
+  switch "Abruf-Übung" [checked=true]
+  heading "Anzeige und Hilfe" [Ebene 2]
+  switch "Begriffs-Tooltips im Fragetext" [checked=true]
+  switch "Inhaltliche Bildbeschreibungen" [checked=false]
+  button "Bedienhilfen wieder einblenden" [gesperrt]
+  heading "Gemeldete Fragen" [Ebene 2]
+  button "Meldungen aller Lerner öffnen"
+  heading "Speicher" [Ebene 2]
+  button "Lernstand speichern"
+  button "Lernstand laden …"
+  eingabe:file "Lernstand-Datei wählen"
+  heading "Datenschutz" [Ebene 2]
+  link "joergwinterberg@web.de"

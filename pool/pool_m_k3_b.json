@@ -1,0 +1,1287 @@
+[
+  {
+    "id": "M03-776",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 1A: Ein mittelständisches Unternehmen betreibt einen zentralen Serverraum. Dort befinden sich: zwei Core-Switches, vier Access-Switches, zwei physische Server, ein zentrales NAS-System, eine Firewall, eine zentrale USV. Die beiden Core-Switches sind redundant miteinander verbunden. Beide hängen aber an derselben USV. Nach einem Stromausfall von etwa 15 Minuten treten folgende Probleme auf: Beide Core-Switches fallen gleichzeitig aus. Die Server sind nicht mehr erreichbar. Die USV hat die Systeme nicht ordnungsgemäß heruntergefahren. Ein Mitarbeiter berichtet, dass die letzte Datensicherung fünf Tage zurückliegt. 1A.1 Fehleranalyse (3 Punkte): Erklären Sie, warum trotz redundanter Core-Switches kein ausreichender Schutz vor einem vollständigen Netzwerkausfall besteht. Verwenden Sie dabei die Begriffe Single Point of Failure, Redundanz und gemeinsame Stromversorgung.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• Redundanz: Die beiden Core-Switches sind doppelt vorhanden und redundant verbunden. Das schützt nur vor dem Ausfall EINES Switches (Defekt, Wartung), weil dann der zweite dessen Aufgabe übernimmt.\n• Gemeinsame Stromversorgung: Beide Core-Switches hängen an derselben USV. Ist deren Akku nach etwa 15 Minuten leer, verlieren beide gleichzeitig den Strom – dieselbe Ursache trifft beide redundanten Geräte, die Redundanz wirkt nicht.\n• Single Point of Failure: Die zentrale USV ist eine einzelne Komponente, deren Ausfall das gesamte Netz ausfallen lässt. Die Redundanz muss deshalb auch die Stromversorgung umfassen (zweite USV bzw. getrennte Stromkreise, Geräte mit zwei Netzteilen).",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Single Point of Failure",
+          "SPOF",
+          "einzelne Fehlerquelle"
+        ],
+        [
+          "gleichzeitig",
+          "zugleich"
+        ],
+        [
+          "gemeinsame Stromversorgung",
+          "derselben USV",
+          "dieselbe USV",
+          "gemeinsamen USV"
+        ],
+        [
+          "redundant",
+          "Redundanz",
+          "doppelt"
+        ]
+      ],
+      "kuer": [
+        "gleichzeitig",
+        "Akku",
+        "zweite USV",
+        "Stromkreis",
+        "Netzteil"
+      ]
+    },
+    "erklaerungKurz": "Die Core-Switches sind redundant, ihre gemeinsame USV aber nicht: Sie ist der Single Point of Failure, dessen Ausfall beide Switches gleichzeitig abschaltet.",
+    "erklaerungLang": "Redundanz schützt nur gegen Ursachen, die nicht alle doppelten Komponenten zugleich treffen.\n• Redundanz: Zwei Core-Switches fangen den Defekt EINES Switches ab – der zweite übernimmt.\n• Gemeinsame Stromversorgung: Beide hängen an derselben USV; ist deren Akku leer, verlieren beide zugleich den Strom.\n• Single Point of Failure: Die eine USV ist die Komponente, deren Ausfall das ganze Netz stilllegt.\n• Abhilfe: zweite USV bzw. getrennte Stromkreise, Geräte mit zwei Netzteilen (A/B-Einspeisung).\nMerke: Redundanz ist nur so stark wie ihre gemeinsamen Abhängigkeiten.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-777",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 1A: Ein mittelständisches Unternehmen betreibt einen zentralen Serverraum. Dort befinden sich: zwei Core-Switches, vier Access-Switches, zwei physische Server, ein zentrales NAS-System, eine Firewall, eine zentrale USV. Die beiden Core-Switches sind redundant miteinander verbunden. Beide hängen aber an derselben USV. Nach einem Stromausfall von etwa 15 Minuten treten folgende Probleme auf: Beide Core-Switches fallen gleichzeitig aus. Die Server sind nicht mehr erreichbar. Die USV hat die Systeme nicht ordnungsgemäß heruntergefahren. Ein Mitarbeiter berichtet, dass die letzte Datensicherung fünf Tage zurückliegt. 1A.2 USV-Konzept (4 Punkte, je Aspekt mit Begründung 1 Punkt): Entwickeln Sie ein Konzept, mit dem die Stromversorgung im Serverraum verbessert wird. Gehen Sie auf die folgenden vier Aspekte ein und begründen Sie jeweils Ihre Entscheidung: Aufgabe einer USV, Überbrückungszeit, automatisches Herunterfahren der Server, redundante Stromversorgung.",
+    "musterloesung": "Erwartete Aussagen (je Aspekt mit Begründung 1 Punkt):\n• Aufgabe einer USV: Sie überbrückt Stromausfälle sowie Spannungsschwankungen sofort und unterbrechungsfrei aus Akkus. Begründung: Server und Netzwerk laufen ohne Absturz weiter, offene Dateien und Datenbanken werden nicht beschädigt.\n• Überbrückungszeit: Die Akkukapazität wird so gewählt, dass die Laufzeit unter der tatsächlichen Last mindestens bis zum vollständigen, kontrollierten Herunterfahren reicht (mit Reserve, ggf. bis zum Anlauf eines Notstromaggregats). Begründung: Im Szenario war der Akku nach etwa 15 Minuten leer, bevor die Systeme sicher aus waren.\n• Automatisches Herunterfahren: Die USV meldet den Stromausfall über ihre Netzwerkkarte (oder USB) an eine Shutdown-Software auf den Servern, die bei einer festgelegten Restlaufzeit geordnet herunterfährt. Begründung: verhindert Datenverlust und defekte Dateisysteme, auch wenn niemand vor Ort ist.\n• Redundante Stromversorgung: Server und Core-Switches mit zwei Netzteilen an zwei getrennten USVs bzw. Stromkreisen (A/B-Einspeisung). Begründung: Die eine zentrale USV ist sonst ein Single Point of Failure.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Akku",
+          "Batterie",
+          "überbrückt",
+          "unterbrechungsfrei"
+        ],
+        [
+          "Überbrückungszeit",
+          "Laufzeit",
+          "Autonomiezeit"
+        ],
+        [
+          "herunterfahren",
+          "Shutdown"
+        ],
+        [
+          "zwei Netzteile",
+          "redundante Netzteile",
+          "zweite USV",
+          "getrennte Stromkreise",
+          "A/B"
+        ]
+      ],
+      "kuer": [
+        "Netzwerkkarte",
+        "Restlaufzeit",
+        "Single Point of Failure",
+        "Notstromaggregat",
+        "Datenverlust"
+      ]
+    },
+    "erklaerungKurz": "Ein USV-Konzept klärt Aufgabe (sofort aus Akku überbrücken), Überbrückungszeit (bis zum sicheren Herunterfahren), automatisches Herunterfahren per Signal an die Server und eine redundante Einspeisung ohne Single Point of Failure.",
+    "erklaerungLang": "Im Szenario versagte die USV an drei Stellen: zu kurze Laufzeit, kein Herunterfahren, nur eine USV.\n• Aufgabe: Die USV überbrückt Ausfälle und Schwankungen sofort aus Akkus, sodass nichts abstürzt.\n• Überbrückungszeit: hängt von Last und Akkukapazität ab und muss das Herunterfahren mit Reserve abdecken.\n• Herunterfahren: Die USV meldet per Netzwerkkarte oder USB an eine Shutdown-Software auf den Servern.\n• Redundanz: zwei USVs oder Stromkreise, Geräte mit zwei Netzteilen – je eines an jeder Quelle.\nMerke: Eine USV schützt nur, wenn sie lange genug hält UND die Server rechtzeitig sauber herunterfährt.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-778",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Aufgabe 1A: Ein mittelständisches Unternehmen betreibt einen zentralen Serverraum. Dort befinden sich: zwei Core-Switches, vier Access-Switches, zwei physische Server, ein zentrales NAS-System, eine Firewall, eine zentrale USV. Die beiden Core-Switches sind redundant miteinander verbunden. Beide hängen aber an derselben USV. Nach einem Stromausfall von etwa 15 Minuten treten folgende Probleme auf: Beide Core-Switches fallen gleichzeitig aus. Die Server sind nicht mehr erreichbar. Die USV hat die Systeme nicht ordnungsgemäß heruntergefahren. Ein Mitarbeiter berichtet, dass die letzte Datensicherung fünf Tage zurückliegt. 1A.3 Dimensionierung einer USV (3 Punkte: a, b und c je 1 Punkt): Berechnen Sie die Leistung, die die USV mindestens liefern muss. Nutzen Sie dafür die folgende Tabelle. Die USV soll zusätzlich eine Leistungsreserve von 25 % bieten. Komponente – Leistungsaufnahme: Server 1 – 450 W; Server 2 – 550 W; Core-Switch 1 – 80 W; Core-Switch 2 – 80 W; Access-Switch 1 bis 4 – je 40 W; Firewall – 60 W; NAS – 180 W. a) Berechnen Sie die gesamte Leistungsaufnahme. b) Berechnen Sie die Mindestleistung der USV inklusive Leistungsreserve. c) Begründen Sie, warum die berechnete Leistung allein noch nicht ausreicht, um eine USV auszuwählen.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• a) Gesamte Leistungsaufnahme: 450 W + 550 W + 80 W + 80 W + 4 × 40 W + 60 W + 180 W = 1560 W.\n• b) Mindestleistung mit 25 % Reserve: 1560 W × 1,25 = 1950 W.\n• c) Die Leistung allein reicht nicht: USVs werden in Voltampere (VA, Scheinleistung) angegeben, die Watt müssen über den Leistungsfaktor umgerechnet werden (z. B. 1950 W ÷ 0,9 ≈ 2167 VA). Außerdem entscheiden die geforderte Überbrückungszeit (Akkukapazität), die Bauart (für Server eine Online-USV/VFI) und die Schnittstelle zum automatischen Herunterfahren über die Auswahl.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "1560",
+          "1.560"
+        ],
+        [
+          "1950",
+          "1.950"
+        ],
+        [
+          "VA",
+          "Voltampere",
+          "Scheinleistung",
+          "Leistungsfaktor",
+          "Überbrückungszeit",
+          "Akkukapazität"
+        ]
+      ],
+      "kuer": [
+        "1,25",
+        "Leistungsfaktor",
+        "Überbrückungszeit",
+        "Online",
+        "Bauart"
+      ]
+    },
+    "erklaerungKurz": "Summe 1560 W, mit 25 % Reserve 1950 W. Für die Auswahl fehlen noch die Scheinleistung in VA (Leistungsfaktor), die nötige Überbrückungszeit und die Bauart.",
+    "erklaerungLang": "Gerechnet wird in zwei Schritten, dann kommt die Auswahl.\n• a) 450 + 550 + 80 + 80 + 4 × 40 + 60 + 180 = 1560 W – die vier Access-Switches nicht vergessen.\n• b) 1560 W × 1,25 = 1950 W.\n• c) USVs werden in VA angegeben; über den Leistungsfaktor umrechnen (bei 0,9: 1950 W ÷ 0,9 ≈ 2167 VA).\n• c) Außerdem bestimmen Akkukapazität (Überbrückungszeit), Bauart (Online-USV für Server) und Anschlüsse die Wahl.\nMerke: Watt sagt, wie viel Last – nicht, wie lange und in welcher Qualität die USV sie trägt.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-779",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 1B: Ein Unternehmen betreibt einen zentralen Serverraum. Dort befinden sich zwei Core-Switches, an die insgesamt vier Access-Switches angeschlossen sind. Während einer Wartung fällt einer der beiden Core-Switches aus. Danach verlieren drei Abteilungen ihre Netzwerkverbindung. Die Geschäftsführung fordert eine Lösung, bei der der Ausfall einer zentralen Netzwerkkomponente möglichst keine Auswirkungen auf den Geschäftsbetrieb hat. 1B.2 (3 Punkte, je Aspekt 1 Punkt): Entwickeln Sie ein technisches Konzept, mit dem der Ausfall eines Core-Switches abgefangen werden kann. Berücksichtigen Sie dabei: physische Netzwerkverbindungen, redundante Komponenten, automatische Umschaltung.",
+    "musterloesung": "Erwartete Aussagen (je Aspekt 1 Punkt):\n• Physische Netzwerkverbindungen: Jeder Access-Switch wird mit je einer Leitung an BEIDE Core-Switches angeschlossen (Dual-Homing), die Core-Switches untereinander über mindestens zwei Leitungen, gebündelt per Link Aggregation (LACP). Begründung: Fällt ein Core-Switch oder eine Leitung aus, bleibt für jede Abteilung ein Weg – heute verlieren drei Abteilungen die Verbindung, weil ihre Access-Switches nur an einem Core hängen.\n• Redundante Komponenten: zwei gleichwertige Core-Switches, die jeweils die gesamte Last allein tragen können (ggf. als Stack), mit redundanten Netzteilen. Begründung: Kein einzelnes Gerät ist ein Single Point of Failure.\n• Automatische Umschaltung: Spanning Tree (RSTP) aktiviert den blockierten Ersatzweg selbsttätig, LACP verteilt auf die verbleibenden Leitungen, ein Gateway-Redundanzprotokoll (VRRP/HSRP) übergibt die Gateway-Adresse an den zweiten Core-Switch. Begründung: Umschaltung in Sekunden ohne Eingriff des Administrators.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "beide Core-Switches",
+          "beiden Core-Switches",
+          "zwei Uplinks",
+          "Dual-Homing",
+          "jeden Core-Switch"
+        ],
+        [
+          "zweiter Core-Switch",
+          "zwei Core-Switches",
+          "redundante Komponenten",
+          "Stack",
+          "redundante Netzteile"
+        ],
+        [
+          "Spanning Tree",
+          "RSTP",
+          "STP",
+          "VRRP",
+          "HSRP",
+          "automatisch"
+        ]
+      ],
+      "kuer": [
+        "LACP",
+        "Link Aggregation",
+        "Single Point of Failure",
+        "Gateway",
+        "Netzteil"
+      ]
+    },
+    "erklaerungKurz": "Jeder Access-Switch bekommt je einen Uplink zu beiden Core-Switches, die Core-Switches sind gleichwertig und untereinander mehrfach verbunden, und Spanning Tree, Link-Bündelung und Gateway-Redundanz schalten automatisch um.",
+    "erklaerungLang": "Redundanz braucht drei Ebenen: Wege, Geräte und eine Umschaltung ohne Handarbeit.\n• Wege: Dual-Homing – jeder Access-Switch hängt an BEIDEN Core-Switches; die Cores verbindet ein Leitungsbündel.\n• Geräte: zwei Core-Switches, von denen jeder die volle Last allein trägt, mit redundanten Netzteilen.\n• Umschaltung: Spanning Tree gibt blockierte Ersatzwege frei, LACP nutzt die verbleibenden Leitungen.\n• Gateway: VRRP bzw. HSRP lässt den zweiten Core-Switch die Gateway-Adresse übernehmen.\nMerke: Ohne zweiten Uplink je Access-Switch nützt der zweite Core-Switch nichts.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-780",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "frage": "Aufgabe 1B: Ein Unternehmen betreibt einen zentralen Serverraum. Dort befinden sich zwei Core-Switches, an die insgesamt vier Access-Switches angeschlossen sind. Während einer Wartung fällt einer der beiden Core-Switches aus. Danach verlieren drei Abteilungen ihre Netzwerkverbindung. Die Geschäftsführung fordert eine Lösung, bei der der Ausfall einer zentralen Netzwerkkomponente möglichst keine Auswirkungen auf den Geschäftsbetrieb hat. 1B.3 (2 Punkte: Bewertung 1 Punkt, Verbesserung 1 Punkt): Bewerten Sie die folgende Lösung hinsichtlich der Ausfallsicherheit und schlagen Sie eine Verbesserung vor: Bei der Umsetzung stellt sich heraus, dass beide Core-Switches über dieselbe Stromversorgung betrieben werden.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• Bewertung: Die Lösung ist hinsichtlich der Ausfallsicherheit unzureichend. Die gemeinsame Stromversorgung ist ein Single Point of Failure – fällt sie aus, fallen beide Core-Switches gleichzeitig aus, und die Redundanz der Switches ist wirkungslos.\n• Verbesserung: Die Stromversorgung ebenfalls redundant auslegen – die Core-Switches an zwei getrennte Stromkreise bzw. zwei USVs anschließen (A/B-Einspeisung), idealerweise jeder Switch mit zwei Netzteilen, je eines an jeder Quelle.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "unzureichend",
+          "nicht ausreichend",
+          "ungenügend",
+          "mangelhaft"
+        ],
+        [
+          "Single Point of Failure",
+          "SPOF",
+          "gleichzeitig"
+        ],
+        [
+          "zwei USV",
+          "zweite USV",
+          "getrennte Stromkreise",
+          "zwei Netzteile",
+          "redundante Stromversorgung",
+          "A/B"
+        ]
+      ],
+      "kuer": [
+        "unzureichend",
+        "wirkungslos",
+        "Netzteil",
+        "Stromkreis"
+      ]
+    },
+    "erklaerungKurz": "Unzureichend: Die gemeinsame Stromversorgung ist ein Single Point of Failure. Verbesserung: getrennte Stromkreise bzw. zwei USVs, jeder Core-Switch mit zwei Netzteilen an beiden Quellen.",
+    "erklaerungLang": "Die Bewertung hängt an einer Frage: Gibt es eine Ursache, die beide redundanten Geräte zugleich trifft?\n• Bewertung: ja – fällt die gemeinsame Stromversorgung aus, fallen beide Core-Switches gleichzeitig aus.\n• Damit ist die Redundanz der Switches wirkungslos, die Stromversorgung ist der Single Point of Failure.\n• Verbesserung: zwei getrennte Stromkreise oder zwei USVs (A/B-Einspeisung), jedes Gerät mit zwei Netzteilen.\nMerke: Redundante Geräte brauchen auch redundante Versorgung.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-781",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 1B: Ein Unternehmen betreibt einen zentralen Serverraum. Dort befinden sich zwei Core-Switches, an die insgesamt vier Access-Switches angeschlossen sind. Während einer Wartung fällt einer der beiden Core-Switches aus. Danach verlieren drei Abteilungen ihre Netzwerkverbindung. Die Geschäftsführung fordert eine Lösung, bei der der Ausfall einer zentralen Netzwerkkomponente möglichst keine Auswirkungen auf den Geschäftsbetrieb hat. 1B.4 (3 Punkte: Problem, Protokoll und Aufgabe je 1 Punkt): Erklären Sie, warum redundante Netzwerkverbindungen ohne Schleifenvermeidung zu Problemen führen. Nennen Sie ein geeignetes Protokoll und beschreiben Sie dessen Aufgabe.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• Problem: Redundante Verbindungen zwischen Switches bilden eine Schleife (Loop). Broadcasts werden an alle Ports weitergeleitet und kreisen endlos, weil Ethernet-Frames keine Lebensdauer (TTL) haben – es entsteht ein Broadcast-Sturm; zusätzlich springt dieselbe MAC-Adresse zwischen den Ports (MAC-Flattern), das Netz wird unbrauchbar.\n• Protokoll: Spanning Tree Protocol (STP, IEEE 802.1D) bzw. Rapid Spanning Tree (RSTP).\n• Aufgabe: STP erkennt die Schleifen und blockiert redundante Ports logisch, sodass ein schleifenfreier Baum entsteht. Fällt eine aktive Verbindung aus, gibt STP den blockierten Port automatisch frei.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Schleife",
+          "Loop",
+          "Schleifen"
+        ],
+        [
+          "Broadcast-Sturm",
+          "Broadcaststurm",
+          "Broadcast Storm",
+          "kreisen"
+        ],
+        [
+          "Spanning Tree",
+          "STP",
+          "RSTP"
+        ],
+        [
+          "blockiert",
+          "blockieren",
+          "abschalten",
+          "deaktiviert"
+        ]
+      ],
+      "kuer": [
+        "MAC-Flattern",
+        "TTL",
+        "802.1D",
+        "schleifenfrei",
+        "automatisch"
+      ]
+    },
+    "erklaerungKurz": "Redundante Leitungen bilden Schleifen: Broadcasts kreisen endlos (Broadcast-Sturm), MAC-Tabellen flattern. Das Spanning Tree Protocol blockiert redundante Ports logisch und gibt sie bei Ausfall frei.",
+    "erklaerungLang": "Switches leiten Broadcasts an alle Ports weiter – in einer Schleife kommen sie immer wieder an.\n• Problem: Ethernet-Frames haben keine Lebensdauer (TTL); sie kreisen und vervielfachen sich – Broadcast-Sturm.\n• Folge: Dieselbe MAC-Adresse taucht an wechselnden Ports auf (MAC-Flattern), das Netz ist überlastet.\n• Protokoll: Spanning Tree (STP, IEEE 802.1D) bzw. Rapid Spanning Tree (RSTP).\n• Aufgabe: Es blockiert redundante Ports logisch zu einem schleifenfreien Baum und gibt sie bei Ausfall frei.\nMerke: Redundante Kabel ja – aber nur mit Spanning Tree.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-782",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Bei der Hollmann Gerätebau GmbH sind die beiden Core-Switches im Serverraum über zwei Leitungen verbunden, und jeder Access-Switch hat zu jedem Core-Switch eine Leitung. Beide Core-Switches hängen an der einzigen USV des Serverraums. Welche Komponente ist in diesem Aufbau der Single Point of Failure?",
+    "optionen": [
+      "Die zentrale USV, weil ihr Ausfall beide Core-Switches zugleich abschaltet",
+      "Jeder einzelne Core-Switch, weil an ihm alle Access-Switches gemeinsam hängen",
+      "Das Management-VLAN, weil ohne es keine Frames zwischen den Switches fließen",
+      "Jeder Access-Switch, weil sein Ausfall das gesamte Firmennetz lahmlegt"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Jeder Access-Switch hat Leitungen zu BEIDEN Core-Switches – fällt einer aus, übernimmt der andere.",
+      "Das Management-VLAN dient nur der Verwaltung der Switches; die Nutzdaten laufen in den Daten-VLANs weiter.",
+      "Ein Access-Switch versorgt nur seine Abteilung; die übrigen arbeiten weiter."
+    ],
+    "erklaerungKurz": "Die zentrale USV: Ihr Ausfall schaltet beide Core-Switches zugleich ab. Wege und Switches sind dagegen doppelt vorhanden.",
+    "erklaerungLang": "Ein Single Point of Failure ist eine Komponente ohne Ersatz, deren Ausfall das Ganze stoppt.\n• Core-Switches: doppelt vorhanden, jeder Access-Switch erreicht beide – kein SPOF.\n• Core-Verbindung: zwei Leitungen – eine darf ausfallen.\n• Access-Switch: sein Ausfall trifft nur seine Abteilung, nicht das ganze Netz.\n• USV: nur einmal vorhanden, versorgt beide Cores – ihr Ausfall legt alles lahm.\nMerke: Suche die Komponente, an der alle redundanten Teile gemeinsam hängen.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-783",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "lueckentext",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Die Ostwald Laborbedarf GmbH plant eine USV für ihren Serverraum: zwei Server mit je 350 W, zwei Core-Switches mit je 75 W, vier Access-Switches mit je 30 W, eine Firewall mit 50 W und ein NAS mit 180 W. Die gesamte Leistungsaufnahme beträgt ___ W. Mit 25 % Reserve muss die USV mindestens ___ W liefern. Bei einem Leistungsfaktor von 0,8 entspricht das einer Scheinleistung von ___ Voltampere.",
+    "luecken": [
+      [
+        "1200",
+        "1200 W",
+        "1.200"
+      ],
+      [
+        "1500",
+        "1500 W",
+        "1.500"
+      ],
+      [
+        "1875",
+        "1875 VA",
+        "1.875"
+      ]
+    ],
+    "erklaerungKurz": "700 + 150 + 120 + 50 + 180 = 1200 W; × 1,25 = 1500 W; 1500 W ÷ 0,8 = 1875 VA.",
+    "erklaerungLang": "Die USV-Rechnung hat drei Schritte: Summe, Reserve, Umrechnung in Scheinleistung.\n• Summe: 2 × 350 + 2 × 75 + 4 × 30 + 50 + 180 = 700 + 150 + 120 + 50 + 180 = 1200 W.\n• Reserve: 1200 W × 1,25 = 1500 W.\n• Scheinleistung: Watt ÷ Leistungsfaktor = 1500 ÷ 0,8 = 1875 VA – die VA-Zahl ist immer die größere.\nMerke: VA = W ÷ Leistungsfaktor.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-784",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mehrfach",
+    "schwierigkeit": 2,
+    "frage": "Die USV der Hollmann Gerätebau GmbH hat bei einem Stromausfall die Server nicht heruntergefahren, bevor nach 15 Minuten der Akku leer war. Welche Maßnahmen gehören in ein verbessertes USV-Konzept? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Eine Shutdown-Software auf den Servern, die die Meldung der USV-Netzwerkkarte auswertet",
+      "Die Überbrückungszeit an Last und Dauer des Herunterfahrens der Server ausrichten",
+      "Server und Core-Switches mit zwei Netzteilen an zwei getrennte USVs anschließen",
+      "Die USV durch ein Notstromaggregat ersetzen, das bei Stromausfall sofort Strom liefert",
+      "Die Akkus nur alle fünf Jahre prüfen, damit sie durch Tests nicht verschleißen",
+      "Alle Arbeitsplatzrechner ebenfalls an die zentrale USV im Serverraum hängen"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "erklaerungKurz": "Shutdown-Software mit Signal der USV, eine an Last und Herunterfahrzeit angepasste Überbrückungszeit und eine zweite USV für Geräte mit zwei Netzteilen.",
+    "erklaerungLang": "Ein USV-Konzept muss Laufzeit, Herunterfahren und Redundanz abdecken.\n• Shutdown-Software: wertet die Meldung der USV-Netzwerkkarte aus und fährt rechtzeitig herunter.\n• Überbrückungszeit: nach Last und benötigter Zeit zum Herunterfahren bemessen.\n• Zweite USV: Geräte mit zwei Netzteilen an zwei Quellen beseitigen den Single Point of Failure.\n• Falsch: Ein Notstromaggregat braucht Anlaufzeit, Akkus müssen regelmäßig getestet werden, Arbeitsplätze überlasten die Server-USV.\nMerke: Laufzeit, Herunterfahren, Redundanz – die drei Säulen des USV-Konzepts.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-785",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Ein Administrator hat für einen Serverraum eine Last von 1950 W berechnet und will eine USV mit der Angabe 2000 Voltampere (Scheinleistung) kaufen. Der Hersteller nennt einen Leistungsfaktor von 0,8. Wie ist der Kauf zu bewerten?",
+    "optionen": [
+      "Ungeeignet: 2000 Voltampere × 0,8 ergeben nur 1600 W Wirkleistung",
+      "Geeignet: Voltampere und Watt sind bei Akkus ein und dieselbe Größe",
+      "Geeignet: 2000 Voltampere ÷ 0,8 ergeben 2500 W, also genug Reserve",
+      "Ungeeignet: Eine USV darf grundsätzlich nur halb ausgelastet werden"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Bei Wechselstrom unterscheiden sich Schein- und Wirkleistung um den Leistungsfaktor.",
+      "Umgekehrt gerechnet: Die Wirkleistung ist KLEINER als die Scheinleistung.",
+      "Eine Reserve ist sinnvoll, eine Pflicht zur halben Auslastung gibt es nicht."
+    ],
+    "erklaerungKurz": "Wirkleistung = Scheinleistung × Leistungsfaktor = 2000 × 0,8 = 1600 W – zu wenig für 1950 W.",
+    "erklaerungLang": "Auf USVs steht meist die Scheinleistung in Voltampere, die Last wird in Watt gerechnet.\n• Umrechnung: W = VA × Leistungsfaktor, also 2000 VA × 0,8 = 1600 W.\n• 1600 W < 1950 W: Die USV wäre überlastet.\n• Nötig wären mindestens 1950 W ÷ 0,8 ≈ 2438 VA.\nMerke: Die VA-Angabe ist immer größer als die nutzbare Leistung in Watt.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-786",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "zuordnung",
+    "schwierigkeit": 3,
+    "frage": "Ordnen Sie jeder Bauart der unterbrechungsfreien Stromversorgung ihre Arbeitsweise zu.",
+    "paare": [
+      [
+        "Offline-USV (VFD)",
+        "Last hängt direkt am Netz; erst bei Ausfall wird mit kurzer Umschaltzeit auf Akku geschaltet"
+      ],
+      [
+        "Line-Interactive-USV (VI)",
+        "Netzbetrieb mit Spannungsregelung; gleicht Über- und Unterspannung aus"
+      ],
+      [
+        "Online-USV (VFI)",
+        "Doppelwandler: Strom läuft ständig über Gleich- und Wechselrichter, ohne Umschaltzeit"
+      ],
+      [
+        "Notstromaggregat",
+        "Generator, der nach einer Anlaufzeit auch stundenlange Ausfälle überbrückt"
+      ]
+    ],
+    "extra": [
+      "Überspannungsschutz – leitet Spannungsspitzen ab, hat aber keinen Akku"
+    ],
+    "erklaerungKurz": "Offline (VFD) schaltet erst bei Ausfall um, Line-Interactive (VI) regelt zusätzlich die Spannung, Online (VFI) wandelt dauernd doppelt und hat keine Umschaltzeit; ein Notstromaggregat überbrückt lange Ausfälle nach Anlauf.",
+    "erklaerungLang": "Die Bauarten unterscheiden sich darin, wie stark die Last vom Stromnetz entkoppelt ist.\n• Offline-USV (VFD): Last am Netz, bei Ausfall Umschaltung auf Akku (wenige Millisekunden) – Arbeitsplätze.\n• Line-Interactive (VI): wie Offline, gleicht aber Über- und Unterspannung aus – kleine Server.\n• Online-USV (VFI, Doppelwandler): Last hängt dauernd am Wechselrichter, keine Umschaltzeit – Serverraum.\n• Notstromaggregat: Generator mit Anlaufzeit, wird mit einer USV kombiniert.\nMerke: Für Server die Online-USV (VFI) – sie hat keine Umschaltzeit.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-787",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH fällt während einer Wartung Core-Switch 1 aus. Jeder Access-Switch hat je eine Leitung zu beiden Core-Switches, und auf allen Switches läuft das Spanning Tree Protocol. Was sorgt dafür, dass die Abteilungen ohne Eingriff weiterarbeiten können?",
+    "optionen": [
+      "Spanning Tree gibt den bisher blockierten Uplink zum Core-Switch 2 automatisch frei",
+      "Die Access-Switches bauen über ihre zwei Uplinks gezielt eine Schleife zum Ersatzweg auf",
+      "Die Access-Switches lernen die MAC-Adressen über VRRP neu und schalten so auf Core-Switch 2 um",
+      "Die USV überbrückt den Ausfall, bis Core-Switch 1 nach der Wartung wieder läuft"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Eine Schleife ist genau das, was Spanning Tree verhindert – sie würde das Netz lahmlegen.",
+      "VRRP stellt eine virtuelle Gateway-Adresse bereit; den Weg zwischen den Switches gibt Spanning Tree frei.",
+      "Die USV hilft bei Stromausfall, nicht bei einem abgeschalteten oder defekten Switch."
+    ],
+    "erklaerungKurz": "Spanning Tree hatte die Uplinks zum zweiten Core-Switch blockiert und gibt sie nach dem Ausfall automatisch frei.",
+    "erklaerungLang": "Doppelte Uplinks sind im Normalbetrieb teilweise blockiert, damit keine Schleife entsteht.\n• Fällt Core-Switch 1 aus, berechnet Spanning Tree den Baum neu und gibt den Ersatzweg frei.\n• Mit RSTP dauert das wenige Sekunden, ohne Eingriff des Administrators.\n• Umstecken per Hand wäre gerade keine automatische Umschaltung.\nMerke: Spanning Tree = Ersatzweg liegt bereit, ist blockiert und wird im Fehlerfall frei.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-788",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Die Hollmann Gerätebau GmbH will den Single Point of Failure ihrer einzigen USV im Serverraum beseitigen. Beide Core-Switches haben je zwei Netzteile. Welche Lösung ist am besten geeignet?",
+    "optionen": [
+      "Je Core-Switch ein Netzteil an die bisherige USV und eines an eine zweite USV",
+      "Eine zweite USV in Reihe hinter die bisherige, beide Core-Switches daran",
+      "Einen Core-Switch an die USV, den anderen ohne Schutz direkt an das Stromnetz",
+      "Die USV gegen ein Modell mit doppelter Leistung tauschen, sonst nichts verändern"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "In Reihe hängt alles weiter an der ersten USV: Fällt sie aus, ist auch die zweite ohne Strom – der Single Point of Failure bleibt.",
+      "Bei Stromausfall fällt dieser Switch sofort aus; Redundanz besteht nur gegen den USV-Defekt.",
+      "Mehr Leistung ändert nichts daran, dass es nur EINE USV gibt."
+    ],
+    "erklaerungKurz": "Eine zweite USV: Jeder Core-Switch bekommt ein Netzteil an USV A und eines an USV B (A/B-Einspeisung).",
+    "erklaerungLang": "Redundante Netzteile helfen nur, wenn sie an verschiedenen Quellen hängen.\n• A/B-Einspeisung: Fällt eine USV aus, versorgt die andere weiter.\n• Beide Netzteile an derselben USV: schützt gegen Netzteildefekt, nicht gegen USV-Ausfall.\n• Ein Switch ohne USV: übersteht keinen Stromausfall, also keine echte Redundanz.\n• Größere USV: bleibt eine einzelne Komponente.\nMerke: Zwei Netzteile + zwei Quellen = echte Stromredundanz.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-789",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Ein Auszubildender verbindet zwei Switches zusätzlich mit einem zweiten Kabel, damit die Verbindung redundant ist. Das Spanning Tree Protocol ist auf beiden Switches abgeschaltet. Kurz darauf ist das Netz fast vollständig ausgelastet. Was ist die Ursache?",
+    "optionen": [
+      "Broadcasts kreisen in der Schleife endlos, weil Ethernet-Frames keine Lebensdauer haben",
+      "Die zwei Kabel verdoppeln die Datenrate, und die Endgeräte senden deshalb doppelt so viel",
+      "Die Switches vergeben dieselbe IP-Adresse doppelt, sodass Adresskonflikte entstehen",
+      "Das zweite Kabel erzeugt Kollisionen, weil Switches grundsätzlich nur Halbduplex können"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Endgeräte senden nicht mehr, nur weil zwischen den Switches ein Kabel hinzukommt.",
+      "Switches vergeben keine IP-Adressen; das wäre Aufgabe von DHCP.",
+      "Switches arbeiten im Vollduplex ohne Kollisionen; das Problem ist die Schleife."
+    ],
+    "erklaerungKurz": "Es ist eine Schleife entstanden: Broadcasts kreisen endlos, weil Ethernet-Frames keine Lebensdauer haben – ein Broadcast-Sturm.",
+    "erklaerungLang": "Ohne Spanning Tree wird jede zweite Verbindung zwischen Switches zur Schleife.\n• Ein Broadcast geht über Kabel 1 hin und über Kabel 2 zurück – und immer weiter.\n• Jeder Switch vervielfacht ihn an alle Ports: Broadcast-Sturm, Netz ausgelastet.\n• Switches arbeiten im Vollduplex; Adresskonflikte entstehen auf Schicht 3, nicht durch Kabel.\nMerke: Schleife + kein Spanning Tree = Broadcast-Sturm.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-790",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "zuordnung",
+    "schwierigkeit": 3,
+    "frage": "Ordnen Sie jedem Redundanzverfahren im Netzwerk seine Aufgabe zu.",
+    "paare": [
+      [
+        "Spanning Tree (STP/RSTP)",
+        "verhindert Schleifen, indem redundante Switch-Ports logisch blockiert werden"
+      ],
+      [
+        "Link Aggregation (LACP)",
+        "bündelt mehrere physische Leitungen zu einer logischen Verbindung"
+      ],
+      [
+        "Stacking",
+        "lässt mehrere Switches gemeinsam wie ein logisches Gerät arbeiten"
+      ],
+      [
+        "VRRP/HSRP",
+        "stellt eine virtuelle Gateway-Adresse bereit, die ein zweites Gerät übernimmt"
+      ],
+      [
+        "Redundante Netzteile",
+        "versorgen ein Gerät weiter, wenn ein Netzteil oder Stromkreis ausfällt"
+      ]
+    ],
+    "extra": [
+      "teilt ein physisches Netz in mehrere logische Broadcastdomänen auf"
+    ],
+    "erklaerungKurz": "Spanning Tree verhindert Schleifen, LACP bündelt Leitungen, Stacking macht mehrere Switches zu einem, VRRP/HSRP sichert das Gateway, redundante Netzteile sichern die Stromzufuhr eines Geräts.",
+    "erklaerungLang": "Jedes Verfahren schützt eine andere Ebene des Netzes.\n• Spanning Tree (STP/RSTP): Schleifenvermeidung durch logisch blockierte Ports.\n• Link Aggregation (LACP): mehrere Leitungen als eine – mehr Bandbreite und Ausfallschutz einer Leitung.\n• Stacking: mehrere Switches als ein Gerät mit gemeinsamer Verwaltung.\n• VRRP/HSRP: virtuelle Gateway-Adresse, die ein zweiter Router bzw. L3-Switch übernimmt.\n• Redundante Netzteile: Gerät läuft weiter, wenn ein Netzteil oder ein Stromkreis ausfällt.\nMerke: Wege (STP, LACP), Geräte (Stack), Gateway (VRRP), Strom (Netzteile).",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-791",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH ist 192.168.10.1 das Standardgateway von VLAN 10. Die Adresse liegt bisher fest auf Core-Switch 1. Fällt er aus, erreichen die Rechner der Entwicklung keine anderen Netze mehr, obwohl Core-Switch 2 läuft. Was löst das Problem?",
+    "optionen": [
+      "Ein Gateway-Redundanzprotokoll wie VRRP, bei dem Core-Switch 2 die Adresse übernimmt",
+      "Ein zweites Gateway 192.168.10.2, das die Rechner bei jedem Paket abwechselnd verwenden",
+      "Spanning Tree, das nach dem Ausfall die Gateway-Adresse auf Core-Switch 2 weiterreicht",
+      "Eine kürzere Lease-Zeit im DHCP, damit die Rechner schneller ein neues Gateway erhalten"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Ein Client nutzt genau ein Standardgateway; ein Wechsel je Paket ist nicht vorgesehen.",
+      "Spanning Tree arbeitet auf Schicht 2 mit Ports, nicht mit IP-Adressen.",
+      "Ohne zweites aktives Gateway bekäme der Client nur dieselbe, tote Adresse erneut."
+    ],
+    "erklaerungKurz": "Ein Gateway-Redundanzprotokoll wie VRRP oder HSRP: Beide Core-Switches teilen sich eine virtuelle Gateway-Adresse, die bei Ausfall Core-Switch 2 übernimmt.",
+    "erklaerungLang": "Die Clients kennen nur EINE Gateway-Adresse – sie muss auf einem anderen Gerät weiterleben.\n• VRRP/HSRP: 192.168.10.1 wird virtuell; aktiv ist Core 1, Core 2 übernimmt bei Ausfall.\n• Clients merken nichts, ihre Konfiguration bleibt gleich.\n• Spanning Tree schaltet Wege auf Schicht 2 um, keine Gateway-Adressen.\n• Eine kürzere Lease-Zeit hilft nicht, solange es kein zweites Gateway gibt.\nMerke: Gateway-Redundanz = virtuelle IP, die zwischen zwei Geräten wandert.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-792",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Die USV der Hollmann Gerätebau GmbH hat eine Netzwerkkarte im Management-VLAN 99. Bei einem langen Stromausfall liefen die Server weiter, bis der Akku leer war, und gingen dann hart aus. Was fehlte am wahrscheinlichsten?",
+    "optionen": [
+      "Eine Shutdown-Software auf den Servern, die das Signal der USV empfängt und auswertet",
+      "Eine größere Batterie, damit die Server auch einen sehr langen Stromausfall überstehen",
+      "Ein Überspannungsschutz in der Steckdosenleiste zwischen der USV und den beiden Servern",
+      "Eine eigene USV je Server, damit sich die Server nicht den Akku einer USV teilen müssen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Auch ein großer Akku ist irgendwann leer; ohne Herunterfahren gehen die Server dann hart aus.",
+      "Überspannungsschutz verhindert Schäden durch Spitzen, fährt aber nichts herunter.",
+      "Mehrere USVs ohne Shutdown-Signal enden genauso mit einem harten Ausschalten."
+    ],
+    "erklaerungKurz": "Eine Shutdown-Software (Agent) auf den Servern, die das Signal der USV-Netzwerkkarte empfängt und rechtzeitig herunterfährt.",
+    "erklaerungLang": "Die USV kann nur melden – herunterfahren muss das Betriebssystem des Servers.\n• Die Netzwerkkarte der USV sendet Stromausfall und Restlaufzeit ins Netz.\n• Eine Shutdown-Software auf jedem Server wertet das aus und fährt bei Schwellwert herunter.\n• Ein größerer Akku verschiebt das Problem nur – irgendwann ist auch er leer.\nMerke: USV + Netzwerkkarte + Agent auf dem Server = automatisches Herunterfahren.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-793",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH fällt der Strom für 20 Minuten aus. Nach etwa 15 Minuten ist der Akku der einzigen USV leer: Beide Core-Switches gehen gleichzeitig aus, obwohl sie redundant über zwei Leitungen verbunden sind.",
+    "schritt1": {
+      "frage": "Warum hat die Redundanz der Core-Switches den Ausfall nicht verhindert?",
+      "optionen": [
+        "Beide hängen an derselben USV – sie ist ein Single Point of Failure",
+        "Die zwei Leitungen waren zu langsam, um im Fehlerfall schnell genug umzuschalten",
+        "Die Access-Switches hatten keine eigene USV"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Welche Maßnahme beseitigt die Ursache?",
+      "optionen": [
+        "Eine zweite USV; jeder Core-Switch bekommt ein Netzteil an jeder USV",
+        "Die Core-Switches mit Netzteilen höherer Leistung ausstatten",
+        "Die Server zuerst herunterfahren lassen"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Beide redundanten Switches hängen an derselben Quelle. Ist sie leer, fallen beide zugleich aus.",
+      "Falsch: Die Leitungen waren gar nicht das Problem – beide Switches hatten keinen Strom mehr.",
+      "Falsch: Selbst mit eigener USV der Access-Switches wären die Core-Switches ausgefallen."
+    ],
+    "erklaerungKurz": "Die gemeinsame USV ist der Single Point of Failure. Abhilfe: zweite USV, jeder Core-Switch mit je einem Netzteil an jeder USV.",
+    "erklaerungLang": "Redundanz scheitert, wenn eine gemeinsame Abhängigkeit alle Kopien zugleich trifft.\n• Ursache: Beide Core-Switches hängen an derselben USV – ein Single Point of Failure.\n• Die zwei Leitungen schützen nur vor dem Ausfall einer Leitung, nicht vor Stromausfall.\n• Abhilfe: zweite USV und A/B-Einspeisung über die zwei Netzteile jedes Core-Switches.\n• Ergänzend: Shutdown-Software, damit die Server vor Akku-Ende sauber herunterfahren.\nMerke: Erst die gemeinsame Abhängigkeit finden, dann sie verdoppeln.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-794",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Die IT der Hollmann Gerätebau GmbH schließt den Access-Switch der Fertigung zusätzlich an Core-Switch 2 an. Auf diesem Access-Switch ist das Spanning Tree Protocol versehentlich abgeschaltet. Minuten später ist das ganze Netz durch Dauerlast lahmgelegt.",
+    "schritt1": {
+      "frage": "Was ist passiert?",
+      "optionen": [
+        "Es ist eine Schleife entstanden; Broadcasts kreisen und vervielfachen sich",
+        "Der zweite Uplink hat die Bandbreite halbiert, weil sich beide Leitungen einen Port teilen",
+        "Die MAC-Tabelle wurde abgeschaltet"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Wie wird die Redundanz richtig umgesetzt?",
+      "optionen": [
+        "Spanning Tree einschalten, damit ein Uplink blockiert und bei Ausfall frei wird",
+        "Den zweiten Uplink dauerhaft abziehen und ihn erst im Notfall per Hand wieder einstecken lassen",
+        "Beide Uplinks des Access-Switches per Link Aggregation zum Core-Switch 2 bündeln"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Zwei Wege zwischen denselben Switches ergeben ohne Spanning Tree eine Schleife – Broadcast-Sturm.",
+      "Falsch: Jeder Uplink hat seinen eigenen Port; Bandbreite wird nicht geteilt.",
+      "Falsch: Die MAC-Tabelle lässt sich nicht abschalten; sie flattert nur durch die Schleife."
+    ],
+    "erklaerungKurz": "Der zweite Uplink hat eine Schleife gebildet, Broadcasts kreisen (Broadcast-Sturm). Spanning Tree einschalten: Ein Uplink wird blockiert und erst bei Ausfall frei.",
+    "erklaerungLang": "Ein zweiter Uplink ohne Spanning Tree ist eine Schleife.\n• Access – Core 1 – Core 2 – Access: Broadcasts laufen im Kreis und vervielfachen sich.\n• MAC-Tabellen flattern, die Last steigt bis zum Stillstand.\n• Spanning Tree blockiert einen der beiden Uplinks logisch und gibt ihn frei, wenn der andere ausfällt.\nMerke: Redundanter Uplink nur mit Spanning Tree.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M03-795",
+    "pruefungsteil": "AP2",
+    "modul": "M03",
+    "thema": "Netzwerktopologien",
+    "gebiet": "B2",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Die beiden Core-Switches der Hollmann Gerätebau GmbH sind über zwei Leitungen verbunden, die per ___ zu einer logischen Verbindung gebündelt sind. Fällt eine der beiden Leitungen aus, ___.",
+    "luecken": [
+      {
+        "optionen": [
+          "LACP",
+          "Spanning Tree",
+          "VRRP",
+          "Stacking"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "läuft der Verkehr über die verbleibende Leitung weiter",
+          "bricht die Verbindung bis zu einem Neustart ab",
+          "entsteht eine Schleife zwischen den Switches",
+          "muss die zweite Leitung erst per Hand aktiviert werden"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "Link Aggregation (LACP) bündelt die Leitungen; fällt eine aus, läuft der Verkehr über die verbleibende weiter.",
+    "erklaerungLang": "Link Aggregation fasst mehrere Ports zu einem logischen Kanal zusammen.\n• Vorteil 1: Die Bandbreite addiert sich (2 × 10 Gbit/s).\n• Vorteil 2: Fällt eine Leitung aus, läuft die Verbindung mit weniger Bandbreite weiter.\n• Spanning Tree sieht das Bündel als EINE Verbindung und blockiert nichts davon.\nMerke: LACP = Leitungen bündeln, mehr Bandbreite und Ausfallschutz.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Netzwerkredundanz und USV"
+  },
+  {
+    "id": "M06-543",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 1A: Ein mittelständisches Unternehmen betreibt einen zentralen Serverraum. Dort befinden sich: zwei Core-Switches, vier Access-Switches, zwei physische Server, ein zentrales NAS-System, eine Firewall, eine zentrale USV. Die beiden Core-Switches sind redundant miteinander verbunden. Beide hängen aber an derselben USV. Nach einem Stromausfall von etwa 15 Minuten treten folgende Probleme auf: Beide Core-Switches fallen gleichzeitig aus. Die Server sind nicht mehr erreichbar. Die USV hat die Systeme nicht ordnungsgemäß heruntergefahren. Ein Mitarbeiter berichtet, dass die letzte Datensicherung fünf Tage zurückliegt. 1A.4 Wiederherstellungsziele (4 Punkte: zwei Begriffe und zwei Zuordnungen je 1 Punkt): Erklären Sie die Begriffe Recovery Point Objective (RPO) und Recovery Time Objective (RTO). Ordnen Sie danach die beiden Anforderungen der Geschäftsführung dem passenden Begriff zu. Anforderungen der Geschäftsführung: Im Katastrophenfall dürfen höchstens die Daten der letzten Stunde verloren gehen. Die wichtigsten IT-Systeme müssen innerhalb von vier Stunden wieder verfügbar sein.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• Recovery Point Objective (RPO): der maximal tolerierbare Datenverlust, ausgedrückt als Zeitspanne zwischen der letzten Sicherung und dem Ausfall. Er bestimmt, wie häufig gesichert werden muss.\n• Recovery Time Objective (RTO): die maximal tolerierbare Ausfallzeit, also die Zeit vom Ausfall bis zum Wiederanlauf der Systeme. Er bestimmt, wie schnell Wiederherstellung und Ersatz funktionieren müssen.\n• „Höchstens die Daten der letzten Stunde dürfen verloren gehen“ → RPO = 1 Stunde (mindestens stündlich sichern bzw. Snapshots).\n• „Die wichtigsten IT-Systeme müssen innerhalb von vier Stunden wieder verfügbar sein“ → RTO = 4 Stunden.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Datenverlust",
+          "Daten verloren",
+          "verlorene Daten"
+        ],
+        [
+          "Ausfallzeit",
+          "Wiederanlauf",
+          "wieder verfügbar",
+          "Wiederherstellungszeit"
+        ],
+        [
+          "RPO",
+          "Recovery Point"
+        ],
+        [
+          "RTO",
+          "Recovery Time"
+        ]
+      ],
+      "kuer": [
+        "letzte Sicherung",
+        "stündlich",
+        "vier Stunden",
+        "eine Stunde",
+        "Snapshot"
+      ]
+    },
+    "erklaerungKurz": "RPO = maximal tolerierbarer Datenverlust (Zeit seit letzter Sicherung) → „Daten der letzten Stunde“. RTO = maximal tolerierbare Ausfallzeit bis zum Wiederanlauf → „innerhalb von vier Stunden“.",
+    "erklaerungLang": "Die beiden Ziele blicken vom Ausfallzeitpunkt in entgegengesetzte Richtungen.\n• RPO (Point): zurück – wie alt darf die letzte Sicherung höchstens sein? Bestimmt den Sicherungstakt.\n• RTO (Time): nach vorn – wie lange darf der Ausfall dauern? Bestimmt Restore-Verfahren und Ersatzhardware.\n• „Daten der letzten Stunde“ → RPO 1 h; „in vier Stunden verfügbar“ → RTO 4 h.\n• Im Szenario lag die letzte Sicherung fünf Tage zurück – das RPO wäre um ein Vielfaches verfehlt.\nMerke: Point = wie viel Daten weg, Time = wie lange Stillstand.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Wiederherstellungsziele, Generationenprinzip und Snapshots"
+  },
+  {
+    "id": "M06-544",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 1A: Ein mittelständisches Unternehmen betreibt einen zentralen Serverraum. Dort befinden sich: zwei Core-Switches, vier Access-Switches, zwei physische Server, ein zentrales NAS-System, eine Firewall, eine zentrale USV. Die beiden Core-Switches sind redundant miteinander verbunden. Beide hängen aber an derselben USV. Nach einem Stromausfall von etwa 15 Minuten treten folgende Probleme auf: Beide Core-Switches fallen gleichzeitig aus. Die Server sind nicht mehr erreichbar. Die USV hat die Systeme nicht ordnungsgemäß heruntergefahren. Ein Mitarbeiter berichtet, dass die letzte Datensicherung fünf Tage zurückliegt. 1A.5 Datensicherung und Wiederherstellung (5 Punkte: a 3 Punkte, b 2 Punkte): a) Erläutern Sie den Unterschied zwischen einer vollständigen, einer inkrementellen und einer differenziellen Datensicherung. b) Schlagen Sie eine Backup-Strategie vor, die die Anforderungen aus 1A.4 erfüllt, und begründen Sie Ihren Vorschlag. Zusatz: 3-2-1-Regel sowie Vorteile des Großvater-Vater-Sohn-Prinzips erläutern. (Anforderungen aus 1A.4: höchstens die Daten der letzten Stunde dürfen verloren gehen; die wichtigsten Systeme müssen innerhalb von vier Stunden wieder verfügbar sein.)",
+    "musterloesung": "Erwartete Aussagen (a: je Sicherungsart 1 Punkt, b: Vorschlag und Begründung je 1 Punkt):\n• Vollständige Sicherung: sichert jedes Mal den gesamten Datenbestand – größter Speicher- und Zeitbedarf, aber die Wiederherstellung braucht nur diese eine Sicherung.\n• Inkrementelle Sicherung: sichert nur die Änderungen seit der letzten Sicherung (gleich welcher Art) – kleinste und schnellste Sicherung, die Wiederherstellung braucht aber die Vollsicherung plus ALLE Inkremente in der richtigen Reihenfolge.\n• Differenzielle Sicherung: sichert alle Änderungen seit der letzten Vollsicherung – wächst von Tag zu Tag, die Wiederherstellung braucht nur die Vollsicherung plus die letzte Differenz.\n• Vorschlag (b): wöchentlich eine Vollsicherung, täglich differenziell oder inkrementell und zusätzlich stündlich Snapshots bzw. stündliche inkrementelle Sicherungen der wichtigen Daten (erfüllt RPO 1 h); Sicherung auf ein schnell zurückspielbares Ziel (NAS/Disk), dokumentierter und regelmäßig getesteter Restore-Ablauf (erfüllt RTO 4 h).\n• Begründung mit 3-2-1-Regel und Großvater-Vater-Sohn: drei Kopien auf zwei Medientypen, eine davon außer Haus bzw. offline – schützt gegen Brand, Diebstahl und Ransomware. Die Rotation nach Großvater-Vater-Sohn (Sohn täglich, Vater wöchentlich, Großvater monatlich) hält mehrere Generationen bei überschaubarer Medienzahl vor; ein unbemerkt beschädigter Stand lässt sich aus einer älteren Generation zurückholen.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Vollsicherung",
+          "vollständige Sicherung",
+          "Vollbackup",
+          "gesamten Datenbestand"
+        ],
+        [
+          "inkrementell",
+          "inkrementelle"
+        ],
+        [
+          "differenziell",
+          "differenzielle"
+        ],
+        [
+          "3-2-1",
+          "drei Kopien",
+          "321",
+          "Großvater",
+          "Generationenprinzip"
+        ]
+      ],
+      "kuer": [
+        "stündlich",
+        "Snapshot",
+        "Restore-Test",
+        "außer Haus",
+        "offline",
+        "Ransomware"
+      ]
+    },
+    "erklaerungKurz": "Voll = alles, inkrementell = seit letzter Sicherung, differenziell = seit letzter Vollsicherung. Strategie: Vollsicherung wöchentlich, täglich Zwischensicherungen, stündliche Snapshots (RPO 1 h), getesteter schneller Restore (RTO 4 h), 3-2-1 mit Offline-Kopie, Rotation nach Großvater-Vater-Sohn.",
+    "erklaerungLang": "Sicherungsart, Takt und Aufbewahrung zusammen ergeben die Strategie.\n• Voll: größter Bedarf, einfachster Restore. Inkrementell: kleinste Sicherung, Restore mit allen Inkrementen.\n• Differenziell: wächst bis zur nächsten Vollsicherung, Restore mit Voll + letzter Differenz.\n• RPO 1 h verlangt einen Stundentakt (Snapshots oder stündlich inkrementell), RTO 4 h einen schnellen, geprobten Restore.\n• 3-2-1: drei Kopien, zwei Medientypen, eine außer Haus – schützt auch vor Brand und Ransomware.\n• Großvater-Vater-Sohn: tägliche, wöchentliche, monatliche Generationen; ältere Stände bleiben erreichbar.\nMerke: Takt aus dem RPO, Verfahren aus dem RTO, Aufbewahrung aus 3-2-1 und Generationenprinzip.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Wiederherstellungsziele, Generationenprinzip und Snapshots"
+  },
+  {
+    "id": "M06-545",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "rechner": true,
+    "frage": "Aufgabe 5: Ein Unternehmen betreibt einen Dateiserver mit vier Festplatten zu je 4 TB. Die Geschäftsführung möchte die Ausfallsicherheit erhöhen. 5.1 (4 Punkte, je RAID-Level 1 Punkt): Berechnen Sie die nutzbare Speicherkapazität für die folgenden RAID-Konfigurationen: RAID 0 mit vier Festplatten, RAID 1 mit zwei der vier Festplatten, RAID 5 mit vier Festplatten, RAID 10 mit vier Festplatten.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• RAID 0 mit vier Platten: 4 × 4 TB = 16 TB – Striping ohne Redundanz, die volle Kapazität ist nutzbar.\n• RAID 1 mit zwei Platten: 4 TB – Spiegelung, die zweite Platte enthält eine identische Kopie.\n• RAID 5 mit vier Platten: (4 − 1) × 4 TB = 12 TB – die Kapazität einer Platte wird für die verteilte Parität gebraucht.\n• RAID 10 mit vier Platten: 16 TB ÷ 2 = 8 TB – zwei gespiegelte Paare, die Hälfte geht für die Spiegelung ab.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "16 TB",
+          "16"
+        ],
+        [
+          "12 TB",
+          "12"
+        ],
+        [
+          "8 TB",
+          "8"
+        ]
+      ],
+      "kuer": [
+        "Striping",
+        "Spiegelung",
+        "Parität",
+        "n − 1",
+        "Hälfte"
+      ]
+    },
+    "erklaerungKurz": "RAID 0: 16 TB · RAID 1 (zwei Platten): 4 TB · RAID 5: 12 TB · RAID 10: 8 TB.",
+    "erklaerungLang": "Die Nettokapazität ist der Rohspeicher minus dem, was die Redundanz kostet.\n• RAID 0: 4 × 4 TB = 16 TB – Striping, keine Redundanz.\n• RAID 1 aus zwei Platten: 4 TB – die zweite Platte ist die Spiegelkopie.\n• RAID 5: (4 − 1) × 4 TB = 12 TB – eine Plattenkapazität für die Parität.\n• RAID 10: 16 TB ÷ 2 = 8 TB – zwei gespiegelte Paare.\nMerke: RAID 0 = n, RAID 5 = n − 1, RAID 6 = n − 2, RAID 1/10 = die Hälfte.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-546",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 5: Ein Unternehmen betreibt einen Dateiserver mit vier Festplatten zu je 4 TB. Die Geschäftsführung möchte die Ausfallsicherheit erhöhen. 5.2 (3 Punkte, je Kriterium 1 Punkt): Vergleichen Sie RAID 5 und RAID 10 hinsichtlich: Ausfallsicherheit, Schreibleistung, Wiederherstellungszeit nach einem Festplattenausfall.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• Ausfallsicherheit: RAID 5 verkraftet genau einen Plattenausfall. RAID 10 verkraftet einen Ausfall sicher, einen zweiten nur, wenn er im anderen Spiegelpaar liegt – fallen beide Platten eines Paares aus, sind die Daten verloren.\n• Schreibleistung: RAID 10 ist schneller, weil es die Daten nur doppelt schreibt. RAID 5 muss bei jedem Schreibvorgang die Parität lesen und neu berechnen (Write Penalty).\n• Wiederherstellungszeit: RAID 10 ist schneller wieder redundant, weil der Rebuild nur die Spiegelplatte kopiert. RAID 5 muss alle übrigen Platten vollständig lesen und die fehlenden Daten aus der Parität berechnen – das dauert länger und belastet alle Platten (Risiko eines zweiten Ausfalls).",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Parität",
+          "Paritätsberechnung",
+          "Write Penalty"
+        ],
+        [
+          "Spiegel",
+          "Spiegelung",
+          "gespiegelt",
+          "Spiegelpaar"
+        ],
+        [
+          "Rebuild",
+          "Wiederherstellung",
+          "wiederhergestellt"
+        ]
+      ],
+      "kuer": [
+        "einen Ausfall",
+        "Spiegelpaar",
+        "doppelt",
+        "Write Penalty",
+        "kopiert"
+      ]
+    },
+    "erklaerungKurz": "Beide verkraften sicher einen Ausfall (RAID 10 mit Glück einen je Spiegelpaar); RAID 10 schreibt schneller (keine Parität) und ist nach einem Ausfall schneller wiederhergestellt (nur Spiegel kopieren).",
+    "erklaerungLang": "Der Unterschied kommt aus dem Verfahren: Parität (RAID 5) gegen Spiegelung (RAID 10).\n• Ausfallsicherheit: RAID 5 genau ein Ausfall; RAID 10 einer sicher, ein zweiter nur im anderen Paar.\n• Schreibleistung: RAID 5 muss Parität lesen und neu berechnen (Write Penalty), RAID 10 schreibt nur doppelt.\n• Rebuild: RAID 10 kopiert eine Spiegelplatte; RAID 5 liest alle übrigen Platten und rechnet – länger und belastender.\n• Dafür hat RAID 5 mehr Nettokapazität (75 % statt 50 % bei vier Platten).\nMerke: RAID 10 = schnell und robust, RAID 5 = mehr Platz.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-547",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "erklaeren",
+    "schwierigkeit": 4,
+    "frage": "Aufgabe 5: Ein Unternehmen betreibt einen Dateiserver mit vier Festplatten zu je 4 TB. Die Geschäftsführung möchte die Ausfallsicherheit erhöhen. Zusatz: Sind RAID 0+1 und RAID 10 das Gleiche? Begründen Sie Ihre Entscheidung.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• Entscheidung: Nein, sie sind nicht das Gleiche. Beide kombinieren Striping und Spiegelung, brauchen mindestens vier Platten und haben 50 % Nettokapazität – aber in umgekehrter Reihenfolge.\n• RAID 0+1: Zuerst werden zwei Stripesets (RAID 0) gebildet, die dann gespiegelt werden (RAID 1). Fällt eine Platte aus, ist ihr ganzer Stripesatz ausgefallen; danach führt jeder Ausfall im anderen Satz zum Totalverlust (bei vier Platten 2 von 3 möglichen Fällen).\n• RAID 10 (1+0): Zuerst werden Spiegelpaare (RAID 1) gebildet, über die dann gestriped wird (RAID 0). Ein Ausfall betrifft nur sein Paar; tödlich ist nur noch der Ausfall des Spiegelpartners (1 von 3 Fällen), und der Rebuild kopiert nur eine Platte. RAID 10 ist deshalb ausfallsicherer und wird in der Praxis bevorzugt.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "nicht das Gleiche",
+          "nicht gleich",
+          "Nein",
+          "unterschiedlich",
+          "verschieden"
+        ],
+        [
+          "Stripeset",
+          "Stripesets",
+          "Stripesatz",
+          "erst Striping",
+          "zuerst Striping"
+        ],
+        [
+          "Spiegelpaar",
+          "Spiegelpaare",
+          "erst Spiegelung",
+          "zuerst gespiegelt",
+          "Spiegelpartner"
+        ]
+      ],
+      "kuer": [
+        "Reihenfolge",
+        "ausfallsicherer",
+        "Rebuild",
+        "50 %",
+        "vier Platten"
+      ]
+    },
+    "erklaerungKurz": "Nein: RAID 0+1 spiegelt zwei Stripesets, RAID 10 verbindet Spiegelpaare per Striping. Kapazität gleich, aber RAID 10 übersteht einen zweiten Ausfall öfter und baut schneller neu auf.",
+    "erklaerungLang": "Gleiche Zutaten, andere Reihenfolge – und damit ein anderes Ausfallverhalten.\n• RAID 0+1: erst Striping (zwei RAID-0-Sätze), dann Spiegelung der beiden Sätze.\n• RAID 10 (1+0): erst Spiegelpaare (RAID 1), dann Striping über die Paare.\n• Nach einem Ausfall: bei 0+1 ist der ganze Stripesatz weg – 2 der 3 übrigen Platten wären tödlich; bei 10 nur der Partner (1 von 3).\n• Rebuild: RAID 10 kopiert eine Platte, RAID 0+1 den ganzen Stripesatz.\nMerke: Erst spiegeln, dann stripen (RAID 10) ist robuster.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-548",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Die Geschäftsführung der Hollmann Gerätebau GmbH legt fest: Höchstens die Daten der letzten Stunde dürfen verloren gehen – das ist das ___. Nach einem Ausfall muss das Warenwirtschaftssystem nach spätestens vier Stunden wieder laufen – das ist das ___.",
+    "luecken": [
+      {
+        "optionen": [
+          "Recovery Point Objective",
+          "Recovery Time Objective",
+          "Service Level Agreement",
+          "Generationenprinzip"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "Recovery Point Objective",
+          "Recovery Time Objective",
+          "Service Level Agreement",
+          "Generationenprinzip"
+        ],
+        "loesung": 1
+      }
+    ],
+    "erklaerungKurz": "Datenverlust höchstens 1 Stunde = Recovery Point Objective (RPO); Wiederanlauf in 4 Stunden = Recovery Time Objective (RTO).",
+    "erklaerungLang": "Beide Ziele gehören in jedes Backup-Konzept.\n• RPO: Wie viele Daten dürfen höchstens verloren gehen? Daraus folgt der Sicherungstakt.\n• RTO: Wie lange darf das System höchstens stehen? Daraus folgt das Restore-Verfahren.\n• Ein SLA ist ein Vertrag, in dem solche Werte stehen können – kein Fachbegriff für den einzelnen Wert.\nMerke: RPO = Daten, RTO = Zeit bis zum Wiederanlauf.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Wiederherstellungsziele, Generationenprinzip und Snapshots"
+  },
+  {
+    "id": "M06-549",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Das NAS der Hollmann Gerätebau GmbH wird jede Nacht um 22 Uhr gesichert. Die Geschäftsführung verlangt ein RPO von einer Stunde. Wie ist die Lage zu bewerten?",
+    "optionen": [
+      "Nicht erfüllt: Fällt das NAS um 21 Uhr aus, fehlen bis zu 23 Stunden Daten",
+      "Erfüllt: Täglich zu sichern genügt, wenn der Restore unter einer Stunde dauert",
+      "Erfüllt: Das RAID 5 des NAS sichert die Daten zwischen den Sicherungen fortlaufend ab",
+      "Nicht erfüllt: Für ein RPO von einer Stunde sind nur Vollsicherungen zulässig"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die Dauer des Restores ist das RTO; das RPO betrifft den Abstand der Sicherungen.",
+      "RAID ist kein Backup – gelöschte oder verschlüsselte Daten sind auf allen Platten weg.",
+      "Die Sicherungsart ist frei wählbar; entscheidend ist der Takt (z. B. stündlich inkrementell)."
+    ],
+    "erklaerungKurz": "Nicht erfüllt: Fällt das NAS kurz vor der nächsten Sicherung aus, fehlen fast 24 Stunden Daten – erlaubt ist eine.",
+    "erklaerungLang": "Das RPO ist der größte erlaubte Abstand zwischen letzter Sicherung und Ausfall.\n• Bei täglicher Sicherung um 22 Uhr kann der Verlust bis knapp 24 Stunden betragen (Ausfall um 21:59 Uhr).\n• Für ein RPO von 1 h braucht es mindestens stündliche Sicherungen oder Snapshots.\n• Die Wiederherstellungsdauer ist das RTO – ein anderes Ziel.\n• RAID schützt vor Plattenausfall, nicht vor Datenverlust durch Löschen oder Ransomware.\nMerke: Sicherungstakt ≤ RPO.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Wiederherstellungsziele, Generationenprinzip und Snapshots"
+  },
+  {
+    "id": "M06-550",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Für die Hollmann Gerätebau GmbH gilt: RPO eine Stunde, RTO vier Stunden. Welche Bausteine passen in eine Backup-Strategie, die beides erfüllt? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Stündliche Snapshots oder inkrementelle Sicherungen der wichtigen Daten",
+      "Eine Kopie außer Haus oder offline, damit Brand oder Ransomware nicht alle Stände treffen",
+      "Regelmäßige, dokumentierte Restore-Tests, die die Wiederherstellungszeit messen",
+      "Eine Vollsicherung einmal im Monat, weil sie die kürzeste Wiederherstellung bietet",
+      "Ein zweites RAID im selben Serverraum anstelle einer getrennten Sicherung",
+      "Sicherungen ausschließlich auf das NAS1, das dauerhaft im Netz eingebunden ist"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "erklaerungKurz": "Stündliche Snapshots bzw. Inkremente (RPO), eine Kopie offline oder außer Haus (3-2-1) und geprobte, gemessene Restores (RTO).",
+    "erklaerungLang": "Jede Anforderung braucht ihren eigenen Baustein.\n• RPO 1 h: stündlich sichern – Snapshots oder inkrementelle Sicherungen.\n• RTO 4 h: Restore muss geübt und seine Dauer gemessen sein.\n• 3-2-1: eine Kopie getrennt vom Netz bzw. außer Haus gegen Brand und Ransomware.\n• Falsch: monatliche Vollsicherung verletzt das RPO; ein zweites RAID oder ein dauerhaft eingebundenes NAS ist keine getrennte Sicherung.\nMerke: Takt, Trennung, Test.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Wiederherstellungsziele, Generationenprinzip und Snapshots"
+  },
+  {
+    "id": "M06-551",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "lueckentext",
+    "schwierigkeit": 2,
+    "rechner": true,
+    "frage": "Das NAS der Hollmann Gerätebau GmbH hat vier Platten zu je 4 TB und läuft als RAID 5. Netto stehen damit ___ TB zur Verfügung. Die IT stellt auf RAID 6 um: Dann bleiben ___ TB, dafür verkraftet das NAS ___ gleichzeitige Plattenausfälle.",
+    "luecken": [
+      [
+        "12",
+        "12 TB"
+      ],
+      [
+        "8",
+        "8 TB"
+      ],
+      [
+        "2",
+        "zwei",
+        "2 Platten"
+      ]
+    ],
+    "erklaerungKurz": "RAID 5: (4 − 1) × 4 TB = 12 TB. RAID 6: (4 − 2) × 4 TB = 8 TB, verkraftet zwei Ausfälle.",
+    "erklaerungLang": "RAID 6 tauscht eine weitere Plattenkapazität gegen einen zweiten erlaubten Ausfall.\n• RAID 5: eine Parität → (n − 1) × 4 TB = 12 TB, ein Ausfall.\n• RAID 6: doppelte Parität → (n − 2) × 4 TB = 8 TB, zwei Ausfälle.\n• RAID 6 braucht mindestens vier Platten – hier genau erfüllt.\nMerke: RAID 6 = n − 2 Platten netto, zwei Ausfälle.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-552",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "lueckentext",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Ein Dateiserver hat sechs Festplatten zu je 3 TB. Als RAID 0 stehen netto ___ TB zur Verfügung, als RAID 5 ___ TB, als RAID 6 ___ TB und als RAID 10 ___ TB.",
+    "luecken": [
+      [
+        "18",
+        "18 TB"
+      ],
+      [
+        "15",
+        "15 TB"
+      ],
+      [
+        "12",
+        "12 TB"
+      ],
+      [
+        "9",
+        "9 TB"
+      ]
+    ],
+    "erklaerungKurz": "RAID 0: 18 TB · RAID 5: 15 TB · RAID 6: 12 TB · RAID 10: 9 TB.",
+    "erklaerungLang": "Erst den Rohspeicher bilden (6 × 3 TB = 18 TB), dann den Redundanzanteil abziehen.\n• RAID 0: 18 TB, keine Redundanz.\n• RAID 5: (6 − 1) × 3 TB = 15 TB.\n• RAID 6: (6 − 2) × 3 TB = 12 TB.\n• RAID 10: 18 TB ÷ 2 = 9 TB (drei Spiegelpaare).\nMerke: Mehr Platten senken den Paritätsanteil, nicht aber den Spiegelanteil.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-553",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "In einem RAID 5 und in einem RAID 10 aus je vier gleichen Platten fällt jeweils eine Platte aus. Warum ist der Rebuild beim RAID 10 in der Regel schneller abgeschlossen?",
+    "optionen": [
+      "Er kopiert nur die Daten der Spiegelplatte und muss keine Parität berechnen",
+      "Er nutzt eine Hot Spare, die es beim RAID 5 grundsätzlich nicht geben kann",
+      "Er stellt die Daten aus dem letzten Backup her und nicht aus den übrigen Platten",
+      "Er liest alle übrigen Platten gleichzeitig und berechnet daraus die XOR-Werte"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Hot Spares sind bei RAID 5 ebenso üblich; sie verkürzen die Wartezeit, nicht den Rebuild selbst.",
+      "Ein Rebuild nutzt Spiegel oder Parität – das Backup kommt nur bei Totalverlust zum Einsatz.",
+      "Genau das ist der aufwendige RAID-5-Rebuild; RAID 10 kopiert nur."
+    ],
+    "erklaerungKurz": "Beim RAID 10 wird nur die Spiegelplatte auf die Ersatzplatte kopiert; RAID 5 muss alle Platten lesen und die Daten aus der Parität berechnen.",
+    "erklaerungLang": "Der Rebuild-Aufwand hängt vom Redundanzverfahren ab.\n• RAID 10: Kopie der einen Spiegelplatte – nur zwei Platten beteiligt.\n• RAID 5: alle übrigen Platten werden vollständig gelesen, die Daten per XOR berechnet.\n• Hot Spares gibt es bei beiden Levels; das Backup wird beim Rebuild nicht gebraucht.\nMerke: Spiegel kopieren ist schneller als Parität rechnen.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-554",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Ein RAID 0+1 und ein RAID 10 bestehen aus je vier Platten. In beiden fällt eine Platte aus. Wie unterscheidet sich die Lage danach?",
+    "optionen": [
+      "Bei RAID 0+1 ist der ganze Stripesatz ausgefallen; zwei der drei übrigen Platten wären beim nächsten Ausfall tödlich",
+      "Bei RAID 10 ist das ganze Array ausgefallen, während bei RAID 0+1 der zweite Spiegel noch vollständig und sicher weiterläuft",
+      "Es gibt keinen Unterschied, weil beide Verfahren dieselben Platten zu denselben Paaren verbinden",
+      "Bei RAID 0+1 ist nur die eine Platte ausgefallen; jede der drei übrigen Platten dürfte noch ausfallen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Bei RAID 10 fällt nur eine Platte eines Spiegelpaares aus; das Array läuft weiter.",
+      "Die Reihenfolge ist umgekehrt: Spiegelpaare (10) gegen gespiegelte Stripesätze (0+1).",
+      "Bei RAID 0+1 ist mit einer Platte ihr ganzer Stripesatz außer Betrieb."
+    ],
+    "erklaerungKurz": "Bei RAID 0+1 fällt mit einer Platte der ganze Stripesatz aus; zwei der drei übrigen Platten wären beim nächsten Ausfall tödlich. Bei RAID 10 ist es nur der Spiegelpartner (eine von drei).",
+    "erklaerungLang": "Die Reihenfolge von Spiegeln und Striping entscheidet über den zweiten Ausfall.\n• RAID 0+1: Stripesatz A (2 Platten) ist mit der ersten Platte komplett weg, Satz B trägt alles.\n• Fällt danach eine der beiden Platten von Satz B aus, ist alles verloren – 2 von 3 Fällen.\n• RAID 10: nur der Partner der ausgefallenen Platte ist kritisch – 1 von 3 Fällen.\nMerke: RAID 10 übersteht einen zweiten Ausfall doppelt so oft wie RAID 0+1.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-555",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Aussagen zu RAID 0+1 und RAID 10 aus je vier Platten treffen zu? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Beide haben eine Nettokapazität von 50 % des Rohspeichers",
+      "RAID 0+1 spiegelt zwei Stripesätze, RAID 10 verbindet Spiegelpaare per Striping",
+      "RAID 10 übersteht einen zweiten Plattenausfall häufiger als RAID 0+1",
+      "RAID 0+1 und RAID 10 berechnen beide eine verteilte Parität",
+      "RAID 0+1 verkraftet zwei beliebige Plattenausfälle ohne Datenverlust"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "erklaerungKurz": "Beide haben 50 % Nettokapazität; RAID 0+1 spiegelt Stripesätze, RAID 10 stripet über Spiegelpaare und übersteht einen zweiten Ausfall öfter.",
+    "erklaerungLang": "RAID 0+1 und RAID 10 kombinieren dieselben Verfahren in umgekehrter Reihenfolge.\n• Kapazität: bei beiden die Hälfte des Rohspeichers.\n• Aufbau: 0+1 = gespiegelte Stripesätze, 10 = gestripte Spiegelpaare.\n• Zweiter Ausfall: bei RAID 10 nur tödlich, wenn er den Partner trifft – deshalb robuster.\n• Keines von beiden nutzt Parität; zwei beliebige Ausfälle verkraftet keines sicher.\nMerke: Gleiche Kapazität, unterschiedliche Ausfallsicherheit.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-556",
+    "pruefungsteil": "AP2",
+    "modul": "M06",
+    "thema": "RAID-Systeme",
+    "gebiet": "B2",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Das NAS der Hollmann Gerätebau GmbH (vier Platten zu je 4 TB, RAID 5) meldet am Freitagnachmittag „degraded“: Platte 3 ist ausgefallen. Eine Ersatzplatte liegt nicht im Haus, die Lieferung dauert bis Dienstag.",
+    "schritt1": {
+      "frage": "Wie ist die Lage einzuschätzen?",
+      "optionen": [
+        "Alles ist noch lesbar, aber ohne Redundanz: ein zweiter Ausfall kostet alle Daten",
+        "Die Daten auf Platte 3 sind verloren, die übrigen Daten bleiben weiterhin doppelt gesichert",
+        "Kein Risiko, RAID 5 verkraftet zwei Ausfälle"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Was hätte die Zeit ohne Redundanz am wirksamsten verkürzt?",
+      "optionen": [
+        "Eine Hot Spare, auf die der Controller den Rebuild sofort startet",
+        "Eine fünfte Platte, die als zusätzliche Datenplatte in den RAID-5-Verbund aufgenommen ist",
+        "Ein tägliches Backup des NAS auf ein externes Laufwerk"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Parität und übrige Platten liefern noch alle Daten, eine weitere Reserve gibt es aber nicht.",
+      "Falsch: Die Daten von Platte 3 werden aus der Parität berechnet; doppelt gesichert ist jetzt nichts mehr.",
+      "Falsch: Zwei Ausfälle verkraftet erst RAID 6."
+    ],
+    "erklaerungKurz": "Degraded heißt: alles lesbar, aber ohne Redundanz bis Dienstag. Eine Hot Spare hätte den Rebuild sofort automatisch gestartet und die ungeschützte Zeit auf die Rebuild-Dauer verkürzt.",
+    "erklaerungLang": "Im Zustand degraded läuft RAID 5 ohne Netz.\n• Die fehlenden Daten werden laufend aus Parität und übrigen Platten berechnet – nichts ist verloren.\n• Ein zweiter Ausfall vor Ende des Rebuilds kostet alle Daten.\n• Hot Spare: steht bereit, der Rebuild beginnt ohne Warten auf Lieferung oder Personal.\n• Bis dahin: aktuelles Backup sicherstellen, Last gering halten.\nMerke: Hot Spare verkürzt die Zeit ohne Redundanz.",
+    "verweis": "Modul 06, Abschnitt 6.4 – RAID-Systeme (AP2)"
+  },
+  {
+    "id": "M06-557",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH verschlüsselt eine Ransomware über das Netz alle Freigaben – auch den Sicherungsordner auf dem NAS, in den die nächtliche Sicherung schreibt. Eine weitere Kopie gibt es nicht.",
+    "schritt1": {
+      "frage": "Warum hat die Sicherung nicht geschützt?",
+      "optionen": [
+        "Sie war ständig über das Netz erreichbar und wurde mit verschlüsselt",
+        "Die Sicherung war inkrementell und damit grundsätzlich nicht wiederherstellbar",
+        "Das NAS hatte kein RAID 6"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Welche Verbesserung folgt der 3-2-1-Regel?",
+      "optionen": [
+        "Eine weitere Kopie auf anderem Medium, offline oder außer Haus",
+        "Eine zweite Sicherung auf eine weitere Freigabe desselben NAS, ebenfalls jede Nacht",
+        "Täglich eine Vollsicherung"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Was über das Netz beschreibbar ist, kann die Ransomware auch verschlüsseln.",
+      "Falsch: Inkrementelle Sicherungen sind mit der Vollsicherung wiederherstellbar – das war nicht das Problem.",
+      "Falsch: RAID schützt vor Plattenausfall; verschlüsselte Daten sind auf allen Platten verschlüsselt."
+    ],
+    "erklaerungKurz": "Die Sicherung war online erreichbar und wurde mit verschlüsselt. Nach der 3-2-1-Regel gehört eine Kopie auf ein anderes Medium, offline oder außer Haus.",
+    "erklaerungLang": "Eine Sicherung, die der Angreifer erreicht, ist kein Schutz vor Ransomware.\n• Ursache: Das Sicherungsziel war dauerhaft als Freigabe eingebunden.\n• 3-2-1: drei Kopien, zwei Medientypen, eine außer Haus – ergänzt um eine Offline-Kopie (Air-Gap).\n• Eine zweite Freigabe auf demselben NAS hätte dasselbe Schicksal.\nMerke: Mindestens eine Kopie muss für das Netz unerreichbar sein.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Datensicherung und Backup-Verfahren"
+  },
+  {
+    "id": "M06-558",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Die Hollmann Gerätebau GmbH führt für ihre Bandsicherung das Großvater-Vater-Sohn-Prinzip ein. Welche Beschreibung trifft zu?",
+    "optionen": [
+      "Tägliche, wöchentliche und monatliche Sicherungen werden in eigenen Mediensätzen rotiert",
+      "Drei Kopien liegen auf zwei Medientypen, davon eine außer Haus an einem anderen Firmenstandort",
+      "Jede Sicherung überschreibt die vorherige, damit stets nur der jüngste Stand vorliegt",
+      "Die Daten werden auf drei gespiegelte Platten verteilt, die gemeinsam ein RAID bilden"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Das beschreibt die 3-2-1-Regel, nicht das Generationenprinzip.",
+      "Genau das verhindert das Prinzip – es hält mehrere Generationen vor.",
+      "RAID ist kein Sicherungsverfahren und hat mit Generationen nichts zu tun."
+    ],
+    "erklaerungKurz": "Tägliche (Sohn), wöchentliche (Vater) und monatliche (Großvater) Sicherungen werden in eigenen Mediensätzen rotiert – so bleiben mehrere Generationen erhalten.",
+    "erklaerungLang": "Das Generationenprinzip regelt, wie lange welche Sicherung aufbewahrt wird.\n• Sohn: tägliche Sicherungen, Medien nach einer Woche wiederverwendet.\n• Vater: wöchentliche Sicherung, Medien nach einem Monat wiederverwendet.\n• Großvater: monatliche Sicherung, lange aufbewahrt (z. B. ein Jahr).\n• Vorteil: auch ein Stand von vor Wochen lässt sich zurückholen, mit überschaubarer Medienzahl.\nMerke: Generationenprinzip = Aufbewahrung, 3-2-1 = Verteilung der Kopien.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Wiederherstellungsziele, Generationenprinzip und Snapshots"
+  },
+  {
+    "id": "M06-559",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Der Administrator der Hollmann Gerätebau GmbH meint: „Wir machen stündlich Snapshots auf dem NAS – eine Sicherung auf ein anderes Gerät brauchen wir nicht.“ Wie ist das zu bewerten?",
+    "optionen": [
+      "Falsch: Snapshots liegen auf demselben System und gehen bei dessen Ausfall mit verloren",
+      "Richtig: Ein Snapshot ist eine vollständige Kopie auf einem zweiten, unabhängigen Datenträger",
+      "Richtig: Snapshots erfüllen die 3-2-1-Regel, weil sie mehrere Generationen vorhalten",
+      "Falsch: Snapshots sind nur für Datenbanken zulässig und nicht für Dateifreigaben gedacht"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Ein Snapshot liegt auf demselben Speicher und enthält oft nur die Änderungen.",
+      "3-2-1 verlangt zwei Medientypen und eine Kopie außer Haus – das leisten Snapshots nicht.",
+      "Snapshots funktionieren für Dateifreigaben ebenso; ihr Problem ist der gemeinsame Speicher."
+    ],
+    "erklaerungKurz": "Falsch: Snapshots liegen auf demselben System. Fällt es aus oder wird es verschlüsselt, sind sie mit weg; sie ergänzen ein Backup, ersetzen es nicht.",
+    "erklaerungLang": "Ein Snapshot friert den Zustand eines Datenträgers ein und speichert danach nur Änderungen.\n• Vorteil: in Sekunden erstellt, schneller Rückgriff auf ältere Stände – gut für ein kurzes RPO.\n• Nachteil: Er liegt auf demselben Speicher; Defekt, Brand oder Ransomware treffen ihn mit.\n• Ein Backup ist eine Kopie auf ein anderes Medium bzw. einen anderen Ort.\nMerke: Snapshot = schneller Rückgriff, Backup = getrennte Kopie.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Wiederherstellungsziele, Generationenprinzip und Snapshots"
+  },
+  {
+    "id": "M06-560",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Backup & Verfügbarkeit",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordnen Sie jedem Sicherungsziel die passende Eigenschaft zu.",
+    "paare": [
+      [
+        "Bandlaufwerk (Tape)",
+        "günstig je Terabyte, entnehmbar und offline lagerbar, Restore eher langsam"
+      ],
+      [
+        "NAS im eigenen Netz",
+        "schneller Restore, aber online erreichbar und damit durch Ransomware gefährdet"
+      ],
+      [
+        "Cloud-Speicher",
+        "automatisch außer Haus, Restore abhängig von der Internetbandbreite"
+      ],
+      [
+        "Externe USB-Festplatte im Wechsel",
+        "einfach offline zu lagern, aber abhängig vom manuellen Wechsel"
+      ]
+    ],
+    "extra": [
+      "liegt auf demselben Datenträger wie das Original, Restore sofort möglich"
+    ],
+    "erklaerungKurz": "Band: günstig und offline lagerbar; NAS: schneller Restore, aber online gefährdet; Cloud: automatisch außer Haus, Restore bandbreitenabhängig; USB-Festplatte im Wechsel: einfach offline, aber abhängig vom manuellen Wechsel.",
+    "erklaerungLang": "Kein Medium kann alles – deshalb verlangt die 3-2-1-Regel zwei Medientypen.\n• Band (Tape): günstig je Terabyte, entnehmbar, lange haltbar; Restore langsamer.\n• NAS: schnell, aber dauerhaft im Netz – Ransomware erreicht es.\n• Cloud: automatisch außer Haus; Restore großer Datenmengen dauert über die Internetleitung.\n• USB-Festplatte im Wechsel: offline, wenn abgesteckt – Fehlerquelle ist der Mensch.\nMerke: Schnell (NAS) + offline (Band/USB) + außer Haus (Cloud/Band) kombinieren.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Datensicherung und Backup-Verfahren"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "quelle": "START_PROMPT.md",
+  "archiv": "START_PROMPT_ARCHIV.md",
+  "ueberschrift": "## ROTATION 2026-09-10 (2) - die Waechter-Faelle vom 27.07./04.09./06.09. verbatim, Regeln bleiben im Kopf",
+  "bloecke": [
+    {
+      "von": 412,
+      "bis": 437,
+      "ersatz": "# ⚠️ **DIE WÄCHTER SIND KLÜGER ALS ICH – SIE HABEN AM 27.07. FÜNFMAL RECHT BEHALTEN.** Wer beim\n#   Schreiben neuer Fragen einen Wächter anschlagen sieht, **verdächtigt NICHT zuerst den Wächter**;\n#   alle Fälle waren echte Fehler von mir. **Die Fälle stehen verbatim im Archiv, die Regeln hier:**\n#   * **Nie das Gebiet raten – `apply_batch.py` sagt es** (viermal falsch vermutet, u. a.\n#     „Netzwerkkomponenten & Medien\" und „Netzplan & Puffer\").\n#   * **`test_matrix` hat drei INHALTLICHE Wächter:** konkrete Zahl je Element · kein Beispielmotiv\n#     in mehr als 3 Matrix-Fragen · Kurzerklärung greift eine Zahl aus den Elementen auf.\n#   * **`schluesselbegriffe` ist ein OBJEKT** `{pflicht:[[...]], kuer:[...]}`, und `pflicht` verlangt\n#     String ODER Liste mit **mindestens zwei** Synonymen. `apply_batch` prüft nur den ÄUSSEREN\n#     Feldtyp. ►► **Nach JEDEM Hand-Eingriff in eine Pool-Datei `validate_schema`.**\n#   * ⛔ **`.assetsignore` SCHLIESST `*.json` NICHT AUS — EINE .json IM WURZELORDNER GEHT AN DEN\n#     LERNER** (06.09.). **Arbeitsdateien nach `tools/`**, nie in den Wurzelordner – und **den\n#     Ungepusht-Guard nach jedem Commit LESEN**, nicht nur laufen lassen; er hat es gefunden.\n#   * **Pool-Datei von Hand geändert → so zurückschreiben, wie `apply_batch` schreibt:**\n#     `json.dump(..., ensure_ascii=False, indent=2)` + `sort(key=id)` + Schluss-Newline\n#     (`indent=1` machte aus einer Feldkorrektur 12485 geänderte Zeilen).\n#   * **Der Abkürzungs-Wächter liest NUR `f.frage`** – Spaltenköpfe nicht. Zwei Wege: ins Lexikon\n#     (Nutzer-Entscheid nötig!) oder im Fragetext ausschreiben.\n"
+    }
+  ]
+}

@@ -1,0 +1,1138 @@
+[
+ {
+  "id": "M09-056",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Gantt-Diagramm",
+  "typ": "rechenassistent",
+  "schwierigkeit": 2,
+  "frage": "Im Gantt-Diagramm der Rhaus-Metall-GmbH sind drei Vorgaenge geplant: Vorgang 1 dauert {dauer1} Tage. Vorgang 2 beginnt bereits {ueberlappung} Tage vor dem Ende von Vorgang 1 (Ueberlappung) und dauert {dauer2} Tage. Vorgang 3 beginnt erst, wenn Vorgang 2 abgeschlossen ist, und dauert {dauer3} Tage. Berechne die Gesamtprojektdauer.",
+  "schritte": [
+   {
+    "text": "Berechne den Starttag von Vorgang 2 (Dauer Vorgang 1 minus Ueberlappung).",
+    "einheit": "Tag",
+    "formel": "dauer1-ueberlappung"
+   },
+   {
+    "text": "Berechne das Ende von Vorgang 2 (Start Vorgang 2 + Dauer Vorgang 2).",
+    "einheit": "Tag",
+    "formel": "s1+dauer2"
+   },
+   {
+    "text": "Berechne die Gesamtprojektdauer (Ende Vorgang 2 + Dauer Vorgang 3, da Vorgang 3 erst danach beginnt).",
+    "einheit": "Tage",
+    "formel": "s2+dauer3"
+   }
+  ],
+  "erklaerungKurz": "Bei ueberlappenden Vorgaengen wird die Ueberlappung von der Summe der Einzeldauern abgezogen; nachfolgende, nicht ueberlappende Vorgaenge werden addiert.",
+  "erklaerungLang": "Vorgang 2 beginnt nicht erst nach Vorgang 1, sondern schon {ueberlappung} Tage vor dessen Ende - der Start liegt also bei {dauer1} - {ueberlappung} = {s1} Tagen. Vorgang 2 dauert {dauer2} Tage und endet daher bei {s1} + {dauer2} = {s2} Tagen. Vorgang 3 beginnt erst, wenn Vorgang 2 fertig ist, und dauert {dauer3} Tage, sodass sich die Gesamtprojektdauer auf {s2} + {dauer3} = {s3} Tage belaeuft. Ueberlappungen im Gantt-Diagramm verkuerzen die Gesamtdauer gegenueber einer rein sequenziellen Planung.",
+  "verweis": "Unser Unterricht – Gantt-Diagramm",
+  "variablen": {
+   "dauer1": {
+    "min": 8,
+    "max": 14,
+    "schritt": 1
+   },
+   "dauer2": {
+    "min": 6,
+    "max": 10,
+    "schritt": 1
+   },
+   "ueberlappung": {
+    "min": 1,
+    "max": 4,
+    "schritt": 1
+   },
+   "dauer3": {
+    "min": 3,
+    "max": 7,
+    "schritt": 1
+   }
+  }
+ },
+ {
+  "id": "M09-066",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "rechenassistent",
+  "schwierigkeit": 2,
+  "frage": "Ein Netzplan der Rhaus-Metall-GmbH besteht aus den Vorgaengen A, B und C, die streng nacheinander ausgefuehrt werden (A -> B -> C). Vorgang A dauert {dauerA} Tage, Vorgang B {dauerB} Tage und Vorgang C {dauerC} Tage. Vorgang A beginnt bei FAZ = 0. Berechne die fruehesten Endzeiten (FEZ) der Vorgaenge.",
+  "schritte": [
+   {
+    "text": "Berechne FEZ von A (FAZ 0 + Dauer A).",
+    "einheit": "Tag",
+    "formel": "dauerA"
+   },
+   {
+    "text": "Berechne FEZ von B (FEZ A + Dauer B).",
+    "einheit": "Tag",
+    "formel": "s1+dauerB"
+   },
+   {
+    "text": "Berechne FEZ von C (FEZ B + Dauer C) - zugleich die Projektdauer.",
+    "einheit": "Tag",
+    "formel": "s2+dauerC"
+   }
+  ],
+  "erklaerungKurz": "Bei einer reinen Kettenfolge A->B->C ergibt sich FEZ jedes Vorgangs aus FEZ des Vorgaengers plus eigener Dauer; FAZ eines Vorgangs entspricht FEZ des Vorgaengers.",
+  "erklaerungLang": "FAZ von A ist 0, daher FEZ_A = 0 + {dauerA} = {s1} Tage. FAZ von B entspricht FEZ_A, also FEZ_B = {s1} + {dauerB} = {s2} Tage. FAZ von C entspricht FEZ_B, also FEZ_C = {s2} + {dauerC} = {s3} Tage. Da A, B und C nacheinander liegen, ist FEZ_C zugleich die Projektdauer von {s3} Tagen, und der gesamte Netzplan bildet einen einzigen kritischen Pfad (GP = 0 bei allen Vorgaengen).",
+  "verweis": "Unser Unterricht – Netzplantechnik",
+  "variablen": {
+   "dauerA": {
+    "min": 2,
+    "max": 6,
+    "schritt": 1
+   },
+   "dauerB": {
+    "min": 3,
+    "max": 7,
+    "schritt": 1
+   },
+   "dauerC": {
+    "min": 2,
+    "max": 5,
+    "schritt": 1
+   }
+  }
+ },
+ {
+  "id": "M09-067",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "rechenassistent",
+  "schwierigkeit": 3,
+  "frage": "Im Netzplan der Rhaus-Metall-GmbH beginnt Vorgang A mit einer Dauer von {dauerA} Tagen (FAZ = 0). Danach verzweigt sich der Netzplan in die beiden parallelen Vorgaenge B (Dauer {dauerB} Tage) und C (Dauer {dauerC} Tage), die beide direkt nach A beginnen und spaeter wieder zusammengefuehrt werden. Berechne die fruehesten Endzeiten von B und C sowie den Gesamtpuffer (GP) von Vorgang B.",
+  "schritte": [
+   {
+    "text": "Berechne FEZ von A (FAZ 0 + Dauer A).",
+    "einheit": "Tag",
+    "formel": "dauerA"
+   },
+   {
+    "text": "Berechne FEZ von B (FEZ A + Dauer B).",
+    "einheit": "Tag",
+    "formel": "s1+dauerB"
+   },
+   {
+    "text": "Berechne FEZ von C (FEZ A + Dauer C).",
+    "einheit": "Tag",
+    "formel": "s1+dauerC"
+   },
+   {
+    "text": "Berechne den Gesamtpuffer (GP) von Vorgang B (FEZ C minus FEZ B, da C der laengere/kritische Pfad ist und B sich daher verzoegern darf).",
+    "einheit": "Tage",
+    "formel": "s3-s2"
+   }
+  ],
+  "erklaerungKurz": "Da B und C beide direkt nach A beginnen und erst spaeter zusammengefuehrt werden, bestimmt der laengere Pfad (hier C) die spaeteste zulaessige Endzeit von B; die Differenz FEZ_C minus FEZ_B ergibt den Gesamtpuffer von B.",
+  "erklaerungLang": "FEZ_A = {dauerA} = {s1} Tage. FEZ_B = {s1} + {dauerB} = {s2} Tage, FEZ_C = {s1} + {dauerC} = {s3} Tage. Da {dauerC} groesser als {dauerB} ist, ist C der kritische (laengere) Pfad - B muss spaetestens zum Zeitpunkt FEZ_C fertig sein, damit der nachfolgende Vorgang nicht verzoegert wird. Der Gesamtpuffer von B betraegt daher GP_B = SAZ_B - FAZ_B = FEZ_C - FEZ_B = {s3} - {s2} = {s4} Tage. Vorgang C selbst liegt auf dem kritischen Pfad und hat GP = 0.",
+  "verweis": "Unser Unterricht – Netzplantechnik",
+  "variablen": {
+   "dauerA": {
+    "min": 2,
+    "max": 5,
+    "schritt": 1
+   },
+   "dauerB": {
+    "min": 2,
+    "max": 5,
+    "schritt": 1
+   },
+   "dauerC": {
+    "min": 7,
+    "max": 11,
+    "schritt": 1
+   }
+  }
+ },
+ {
+  "id": "M09-068",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "rechenassistent",
+  "schwierigkeit": 4,
+  "frage": "Der Netzplan eines Projekts der Rhaus-Metall-GmbH enthaelt zwei parallele Pfade vom Start bis zum Projektende: Pfad 1 besteht aus den Vorgaengen A1 (Dauer {a1} Tage) und A2 (Dauer {a2} Tage), Pfad 2 aus den Vorgaengen B1 (Dauer {b1} Tage) und B2 (Dauer {b2} Tage). Berechne die Dauer beider Pfade, die Gesamtprojektdauer sowie den Puffer des nicht-kritischen Pfades.",
+  "schritte": [
+   {
+    "text": "Berechne die Dauer von Pfad 1 (A1 + A2).",
+    "einheit": "Tage",
+    "formel": "a1+a2"
+   },
+   {
+    "text": "Berechne die Dauer von Pfad 2 (B1 + B2).",
+    "einheit": "Tage",
+    "formel": "b1+b2"
+   },
+   {
+    "text": "Bestimme die Gesamtprojektdauer (Dauer des kritischen, also laengeren Pfades).",
+    "einheit": "Tage",
+    "formel": "s1"
+   },
+   {
+    "text": "Berechne den Puffer des nicht-kritischen Pfades (Pfad 1 minus Pfad 2).",
+    "einheit": "Tage",
+    "formel": "s1-s2"
+   }
+  ],
+  "erklaerungKurz": "Die Projektdauer entspricht der Summe des laengeren Pfades (kritischer Pfad); der kuerzere Pfad hat einen Puffer in Hoehe der Differenz beider Pfadsummen.",
+  "erklaerungLang": "Pfad 1 dauert {a1} + {a2} = {s1} Tage, Pfad 2 dauert {b1} + {b2} = {s2} Tage. Mit den vorgegebenen Wertebereichen ist Pfad 1 immer mindestens so lang wie Pfad 2, also ist Pfad 1 der kritische Pfad und bestimmt mit {s3} Tagen die Gesamtprojektdauer (Gesamtdauer = Maximum der Pfadsummen). Pfad 2 hat dadurch einen Puffer von {s1} - {s2} = {s4} Tagen, den er ausschoepfen kann, ohne das Projektende zu verzoegern. Pfad 1 selbst hat GP = 0.",
+  "verweis": "Unser Unterricht – Netzplantechnik",
+  "variablen": {
+   "a1": {
+    "min": 6,
+    "max": 9,
+    "schritt": 1
+   },
+   "a2": {
+    "min": 6,
+    "max": 9,
+    "schritt": 1
+   },
+   "b1": {
+    "min": 2,
+    "max": 4,
+    "schritt": 1
+   },
+   "b2": {
+    "min": 2,
+    "max": 4,
+    "schritt": 1
+   }
+  }
+ },
+ {
+  "id": "M09-140",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "rechenassistent",
+  "schwierigkeit": 3,
+  "frage": "Ein 17-jaehriger Auszubildender der Rhaus-Metall-GmbH arbeitet in einer Woche an 5 Werktagen (Montag bis Freitag) jeweils {std1}, {std2}, {std3}, {std4} und {std5} Stunden. Berechne die tatsaechliche Wochenarbeitszeit und pruefe, ob die gesetzliche Hoechstgrenze fuer Jugendliche nach Paragraf 8 JArbSchG (40 Stunden/Woche) eingehalten wird.",
+  "schritte": [
+   {
+    "text": "Berechne die tatsaechliche Wochenarbeitszeit (Summe der Tagesstunden Mo-Fr).",
+    "einheit": "Stunden",
+    "formel": "std1+std2+std3+std4+std5"
+   },
+   {
+    "text": "Berechne die Differenz zur gesetzlichen Hoechstgrenze (40 Std. minus tatsaechliche Wochenarbeitszeit). Ein positiver Wert oder 0 bedeutet zulaessig, ein negativer Wert bedeutet eine unzulaessige Ueberschreitung.",
+    "einheit": "Stunden",
+    "formel": "40-s1"
+   }
+  ],
+  "erklaerungKurz": "Paragraf 8 JArbSchG begrenzt die Arbeitszeit Jugendlicher auf 40 Stunden/Woche; die Differenz zur Hoechstgrenze zeigt als Zahl, ob die Woche zulaessig ist (0 oder positiv) oder die Grenze ueberschritten wird (negativ).",
+  "erklaerungLang": "Die tatsaechliche Wochenarbeitszeit ergibt sich aus der Summe der fuenf Tagesstunden: {std1} + {std2} + {std3} + {std4} + {std5} = {s1} Stunden. Nach Paragraf 8 JArbSchG duerfen Jugendliche hoechstens 8 Stunden taeglich und 40 Stunden woechentlich beschaeftigt werden. Die Differenz 40 - {s1} = {s2} Stunden zeigt, ob diese Grenze eingehalten wird: Ist der Wert 0 oder positiv, ist die Woche zulaessig; ist er negativ, wird die 40-Stunden-Grenze um den entsprechenden Betrag ueberschritten und der Wochenplan verstoesst gegen das JArbSchG.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)",
+  "variablen": {
+   "std1": {
+    "min": 5,
+    "max": 9,
+    "schritt": 1
+   },
+   "std2": {
+    "min": 5,
+    "max": 9,
+    "schritt": 1
+   },
+   "std3": {
+    "min": 5,
+    "max": 9,
+    "schritt": 1
+   },
+   "std4": {
+    "min": 5,
+    "max": 9,
+    "schritt": 1
+   },
+   "std5": {
+    "min": 5,
+    "max": 9,
+    "schritt": 1
+   }
+  }
+ },
+ {
+  "id": "M09-006",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Wertschöpfung",
+  "typ": "kalkulation",
+  "schwierigkeit": 2,
+  "frage": "Die Rhaus-Metall-GmbH gliedert sich in drei Sparten. Vervollstaendige die Tabelle: Berechne die Wertschoepfung je Sparte (Umsatz minus Vorleistungen) sowie die Summenzeile.",
+  "kopf": [
+   "Sparte",
+   "Umsatz (EUR)",
+   "Vorleistungen (EUR)",
+   "Wertschöpfung (EUR)"
+  ],
+  "zeilen": [
+   [
+    {
+     "v": "Stahlbau"
+    },
+    {
+     "v": "250.000"
+    },
+    {
+     "v": "150.000"
+    },
+    {
+     "loesung": [
+      "100.000",
+      "100000"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Metallverarbeitung"
+    },
+    {
+     "v": "180.000"
+    },
+    {
+     "v": "120.000"
+    },
+    {
+     "loesung": [
+      "60.000",
+      "60000"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Service"
+    },
+    {
+     "v": "90.000"
+    },
+    {
+     "v": "50.000"
+    },
+    {
+     "loesung": [
+      "40.000",
+      "40000"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Summe"
+    },
+    {
+     "loesung": [
+      "520.000",
+      "520000"
+     ]
+    },
+    {
+     "loesung": [
+      "320.000",
+      "320000"
+     ]
+    },
+    {
+     "loesung": [
+      "200.000",
+      "200000"
+     ]
+    }
+   ]
+  ],
+  "erklaerungKurz": "Wertschöpfung je Sparte = Umsatz minus Vorleistungen; die Summenzeile ergibt sich aus der Addition aller Sparten (bzw. der Summe der Wertschöpfungen).",
+  "erklaerungLang": "Stahlbau: 250.000 - 150.000 = 100.000 EUR. Metallverarbeitung: 180.000 - 120.000 = 60.000 EUR. Service: 90.000 - 50.000 = 40.000 EUR. Die Summenzeile addiert die Spalten: Umsatz 250.000+180.000+90.000 = 520.000 EUR, Vorleistungen 150.000+120.000+50.000 = 320.000 EUR, Wertschöpfung 100.000+60.000+40.000 = 200.000 EUR (kontrollrechnung: 520.000-320.000 = 200.000 EUR).",
+  "verweis": "Unser Unterricht – Wertschöpfung"
+ },
+ {
+  "id": "M09-069",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "kalkulation",
+  "schwierigkeit": 3,
+  "frage": "Ein Netzplan der Rhaus-Metall-GmbH besteht aus vier Vorgaengen: A ist der Startvorgang. B und C folgen beide direkt auf A (parallel). D folgt erst, wenn sowohl B als auch C abgeschlossen sind. Vervollstaendige die Tabelle mit FAZ, FEZ, SAZ, SEZ und GP je Vorgang.",
+  "kopf": [
+   "Vorgang",
+   "Dauer",
+   "FAZ",
+   "FEZ",
+   "SAZ",
+   "SEZ",
+   "GP"
+  ],
+  "zeilen": [
+   [
+    {
+     "v": "A"
+    },
+    {
+     "v": "3"
+    },
+    {
+     "loesung": [
+      "0"
+     ]
+    },
+    {
+     "loesung": [
+      "3"
+     ]
+    },
+    {
+     "loesung": [
+      "0"
+     ]
+    },
+    {
+     "loesung": [
+      "3"
+     ]
+    },
+    {
+     "loesung": [
+      "0"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "B"
+    },
+    {
+     "v": "4"
+    },
+    {
+     "loesung": [
+      "3"
+     ]
+    },
+    {
+     "loesung": [
+      "7"
+     ]
+    },
+    {
+     "loesung": [
+      "5"
+     ]
+    },
+    {
+     "loesung": [
+      "9"
+     ]
+    },
+    {
+     "loesung": [
+      "2"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "C"
+    },
+    {
+     "v": "6"
+    },
+    {
+     "loesung": [
+      "3"
+     ]
+    },
+    {
+     "loesung": [
+      "9"
+     ]
+    },
+    {
+     "loesung": [
+      "3"
+     ]
+    },
+    {
+     "loesung": [
+      "9"
+     ]
+    },
+    {
+     "loesung": [
+      "0"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "D"
+    },
+    {
+     "v": "2"
+    },
+    {
+     "loesung": [
+      "9"
+     ]
+    },
+    {
+     "loesung": [
+      "11"
+     ]
+    },
+    {
+     "loesung": [
+      "9"
+     ]
+    },
+    {
+     "loesung": [
+      "11"
+     ]
+    },
+    {
+     "loesung": [
+      "0"
+     ]
+    }
+   ]
+  ],
+  "erklaerungKurz": "Vorwaertsrechnung: FEZ = FAZ + Dauer, FAZ des Nachfolgers = groesster FEZ der Vorgaenger. Rueckwaertsrechnung: SAZ = SEZ - Dauer, SEZ des Vorgaengers = kleinste SAZ der Nachfolger. GP = SAZ - FAZ; kritischer Pfad hat GP = 0.",
+  "erklaerungLang": "Vorwaerts: FAZ_A=0, FEZ_A=0+3=3. FAZ_B=FAZ_C=3 (beide nach A). FEZ_B=3+4=7, FEZ_C=3+6=9. FAZ_D=max(7,9)=9, FEZ_D=9+2=11 (Projektdauer). Rueckwaerts: SEZ_D=11 (Projektende), SAZ_D=11-2=9. SEZ_C=SAZ_D=9, SAZ_C=9-6=3, GP_C=3-3=0 (kritisch). SEZ_B=SAZ_D=9, SAZ_B=9-4=5, GP_B=5-3=2 (Puffer). SEZ_A=min(SAZ_B,SAZ_C)=min(5,3)=3, SAZ_A=3-3=0, GP_A=0. Der kritische Pfad ist A-C-D mit GP=0 durchgehend; B hat einen Puffer von 2 Tagen.",
+  "verweis": "Unser Unterricht – Netzplantechnik"
+ },
+ {
+  "id": "M09-127",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "kalkulation",
+  "schwierigkeit": 4,
+  "frage": "Die Rhaus-Metall-GmbH vergleicht zwei Angebote fuer Stahlprofile mittels Bezugskalkulation. Vervollstaendige die Tabelle (Listenpreis - Rabatt = Zieleinkaufspreis - Skonto = Bareinkaufspreis + Bezugskosten = Bezugspreis) und ermittle, welcher Lieferant guenstiger ist.",
+  "kopf": [
+   "Position",
+   "Lieferant A (EUR)",
+   "Lieferant B (EUR)"
+  ],
+  "zeilen": [
+   [
+    {
+     "v": "Listenpreis"
+    },
+    {
+     "v": "8.000,00"
+    },
+    {
+     "v": "7.500,00"
+    }
+   ],
+   [
+    {
+     "v": "- Rabatt (A 25 % / B 20 %)"
+    },
+    {
+     "loesung": [
+      "2.000,00",
+      "2000,00",
+      "2000"
+     ]
+    },
+    {
+     "loesung": [
+      "1.500,00",
+      "1500,00",
+      "1500"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "= Zieleinkaufspreis"
+    },
+    {
+     "loesung": [
+      "6.000,00",
+      "6000,00",
+      "6000"
+     ]
+    },
+    {
+     "loesung": [
+      "6.000,00",
+      "6000,00",
+      "6000"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "- Skonto (je 2 %)"
+    },
+    {
+     "loesung": [
+      "120,00",
+      "120"
+     ]
+    },
+    {
+     "loesung": [
+      "120,00",
+      "120"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "= Bareinkaufspreis"
+    },
+    {
+     "loesung": [
+      "5.880,00",
+      "5880,00",
+      "5880"
+     ]
+    },
+    {
+     "loesung": [
+      "5.880,00",
+      "5880,00",
+      "5880"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "+ Bezugskosten"
+    },
+    {
+     "v": "220,00"
+    },
+    {
+     "v": "300,00"
+    }
+   ],
+   [
+    {
+     "v": "= Bezugspreis"
+    },
+    {
+     "loesung": [
+      "6.100,00",
+      "6100,00",
+      "6100"
+     ]
+    },
+    {
+     "loesung": [
+      "6.180,00",
+      "6180,00",
+      "6180"
+     ]
+    }
+   ]
+  ],
+  "erklaerungKurz": "Bezugskalkulation: vom Listenpreis wird der Rabatt abgezogen (Zieleinkaufspreis), davon das Skonto (Bareinkaufspreis), dann werden die Bezugskosten addiert (Bezugspreis). Der niedrigere Bezugspreis kennzeichnet den quantitativ guenstigeren Lieferanten.",
+  "erklaerungLang": "Lieferant A: 8.000,00 - 25 % (2.000,00) = 6.000,00 Zieleinkaufspreis; davon 2 % Skonto (120,00) = 5.880,00 Bareinkaufspreis; plus 220,00 Bezugskosten = 6.100,00 EUR Bezugspreis. Lieferant B: 7.500,00 - 20 % (1.500,00) = 6.000,00 Zieleinkaufspreis; davon 2 % Skonto (120,00) = 5.880,00 Bareinkaufspreis; plus 300,00 Bezugskosten = 6.180,00 EUR Bezugspreis. Da 6.100,00 EUR < 6.180,00 EUR ist, ist Lieferant A quantitativ um 80,00 EUR guenstiger.",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot"
+ },
+ {
+  "id": "M09-128",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "kalkulation",
+  "schwierigkeit": 4,
+  "frage": "Zusaetzlich zur Bezugskalkulation (Bezugspreis Lieferant A = 6.100,00 EUR, Lieferant B = 6.180,00 EUR) fuehrt die Rhaus-Metall-GmbH eine Nutzwertanalyse mit den Kriterien Preis, Qualitaet, Lieferzeit und Service durch. Vervollstaendige die Teilnutzwerte (Gewichtung x Punkte), die Summenzeile und die Empfehlung.",
+  "kopf": [
+   "Kriterium",
+   "Gewichtung",
+   "Punkte A",
+   "Teilnutzwert A",
+   "Punkte B",
+   "Teilnutzwert B"
+  ],
+  "zeilen": [
+   [
+    {
+     "v": "Preis"
+    },
+    {
+     "v": "0,40"
+    },
+    {
+     "v": "8"
+    },
+    {
+     "loesung": [
+      "3,2",
+      "3.2"
+     ]
+    },
+    {
+     "v": "6"
+    },
+    {
+     "loesung": [
+      "2,4",
+      "2.4"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Qualität"
+    },
+    {
+     "v": "0,30"
+    },
+    {
+     "v": "6"
+    },
+    {
+     "loesung": [
+      "1,8",
+      "1.8"
+     ]
+    },
+    {
+     "v": "9"
+    },
+    {
+     "loesung": [
+      "2,7",
+      "2.7"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Lieferzeit"
+    },
+    {
+     "v": "0,20"
+    },
+    {
+     "v": "7"
+    },
+    {
+     "loesung": [
+      "1,4",
+      "1.4"
+     ]
+    },
+    {
+     "v": "8"
+    },
+    {
+     "loesung": [
+      "1,6",
+      "1.6"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Service"
+    },
+    {
+     "v": "0,10"
+    },
+    {
+     "v": "5"
+    },
+    {
+     "loesung": [
+      "0,5",
+      "0.5"
+     ]
+    },
+    {
+     "v": "7"
+    },
+    {
+     "loesung": [
+      "0,7",
+      "0.7"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Summe"
+    },
+    {
+     "v": "1,00"
+    },
+    {
+     "v": "–"
+    },
+    {
+     "loesung": [
+      "6,9",
+      "6.9"
+     ]
+    },
+    {
+     "v": "–"
+    },
+    {
+     "loesung": [
+      "7,4",
+      "7.4"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Empfehlung"
+    },
+    {
+     "v": "–"
+    },
+    {
+     "v": "–"
+    },
+    {
+     "v": "–"
+    },
+    {
+     "v": "–"
+    },
+    {
+     "loesung": [
+      "Lieferant B",
+      "B",
+      "Anbieter B"
+     ]
+    }
+   ]
+  ],
+  "erklaerungKurz": "Teilnutzwert = Gewichtung x Punkte; die Nutzwertsumme je Anbieter ergibt sich aus der Addition aller Teilnutzwerte. Trotz hoeherem Bezugspreis erhaelt Lieferant B wegen besserer Qualitaet/Lieferzeit/Service den hoeheren Gesamtnutzwert und wird empfohlen.",
+  "erklaerungLang": "Lieferant A: 0,40x8=3,2 (Preis) + 0,30x6=1,8 (Qualitaet) + 0,20x7=1,4 (Lieferzeit) + 0,10x5=0,5 (Service) = 6,9 Punkte. Lieferant B: 0,40x6=2,4 + 0,30x9=2,7 + 0,20x8=1,6 + 0,10x7=0,7 = 7,4 Punkte. Obwohl Lieferant A den niedrigeren Bezugspreis hat (6.100,00 EUR gegenueber 6.180,00 EUR), erreicht Lieferant B durch bessere Qualitaets-, Lieferzeit- und Servicewerte den hoeheren Gesamtnutzwert (7,4 gegenueber 6,9). Der qualitative Vergleich (Nutzwertanalyse) fuehrt daher zur Empfehlung von Lieferant B, obwohl der quantitative Vergleich (Bezugskalkulation) Lieferant A als guenstiger ausweist.",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot"
+ },
+ {
+  "id": "M09-141",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "kalkulation",
+  "schwierigkeit": 3,
+  "frage": "Die Rhaus-Metall-GmbH zahlt im 1. Ausbildungsjahr eine Verguetung von 850,00 EUR monatlich. Nach Paragraf 17 BBiG muss die Verguetung mindestens jaehrlich ansteigen; sie erhoeht sich hier in jedem weiteren Ausbildungsjahr um 80,00 EUR. Vervollstaendige die Tabelle: Monatsverguetung je Jahr, Jahressumme (Monatsverguetung x 12) und die Gesamtsumme ueber 3 Jahre.",
+  "kopf": [
+   "Ausbildungsjahr",
+   "Monatsvergütung (EUR)",
+   "Jahressumme (EUR)"
+  ],
+  "zeilen": [
+   [
+    {
+     "v": "1. Jahr"
+    },
+    {
+     "v": "850,00"
+    },
+    {
+     "loesung": [
+      "10.200,00",
+      "10200,00",
+      "10200"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "2. Jahr"
+    },
+    {
+     "loesung": [
+      "930,00",
+      "930"
+     ]
+    },
+    {
+     "loesung": [
+      "11.160,00",
+      "11160,00",
+      "11160"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "3. Jahr"
+    },
+    {
+     "loesung": [
+      "1.010,00",
+      "1010,00",
+      "1010"
+     ]
+    },
+    {
+     "loesung": [
+      "12.120,00",
+      "12120,00",
+      "12120"
+     ]
+    }
+   ],
+   [
+    {
+     "v": "Summe (3 Jahre)"
+    },
+    {
+     "v": "–"
+    },
+    {
+     "loesung": [
+      "33.480,00",
+      "33480,00",
+      "33480"
+     ]
+    }
+   ]
+  ],
+  "erklaerungKurz": "Monatsverguetung steigt jaehrlich um 80,00 EUR (Mindestanforderung Paragraf 17 BBiG). Jahressumme = Monatsverguetung x 12. Gesamtsumme = Addition der drei Jahressummen.",
+  "erklaerungLang": "1. Jahr: 850,00 EUR x 12 = 10.200,00 EUR. 2. Jahr: 850,00+80,00=930,00 EUR x 12 = 11.160,00 EUR. 3. Jahr: 930,00+80,00=1.010,00 EUR x 12 = 12.120,00 EUR. Gesamtsumme ueber 3 Jahre: 10.200,00+11.160,00+12.120,00 = 33.480,00 EUR. Die jaehrliche Steigerung erfuellt die Mindestanforderung aus Paragraf 17 BBiG, wonach die Verguetung mindestens jaehrlich ansteigen muss.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-007",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Wertschöpfung",
+  "typ": "trace",
+  "schwierigkeit": 2,
+  "frage": "Ein Bauteil der Rhaus-Metall-GmbH durchlaeuft drei Fertigungsstufen. Trage fuer jede Stufe den Verkaufswert, die gesamten Vorleistungen und die daraus entstehende Wertschoepfung ein.",
+  "code": [
+   "Stufe 1 (Rohmaterial -> Halbzeug): zugekaufte Vorleistung 20.000 EUR, Verkaufswert 35.000 EUR",
+   "Stufe 2 (Halbzeug -> Bauteil): Vorleistung = Verkaufswert Stufe 1 (Zukauf) + zusaetzliche Vorleistung 10.000 EUR, Verkaufswert 60.000 EUR",
+   "Stufe 3 (Bauteil -> Endprodukt): Vorleistung = Verkaufswert Stufe 2 (Zukauf) + zusaetzliche Vorleistung 15.000 EUR, Verkaufswert 100.000 EUR"
+  ],
+  "spalten": [
+   "Stufe",
+   "Verkaufswert (EUR)",
+   "Vorleistungen gesamt (EUR)",
+   "Wertschöpfung (EUR)"
+  ],
+  "zeilen": [
+   [
+    "Stufe 1",
+    "35.000",
+    "20.000",
+    "15.000"
+   ],
+   [
+    "Stufe 2",
+    "60.000",
+    "45.000",
+    "15.000"
+   ],
+   [
+    "Stufe 3",
+    "100.000",
+    "75.000",
+    "25.000"
+   ]
+  ],
+  "erklaerungKurz": "Wertschöpfung je Stufe = Verkaufswert minus Vorleistungen. In Stufe 2/3 zaehlt der Verkaufswert der Vorstufe als zugekaufte Vorleistung hinzu.",
+  "erklaerungLang": "Stufe 1: Vorleistung 20.000 EUR (Rohmaterial), Verkaufswert 35.000 EUR, Wertschöpfung 35.000-20.000=15.000 EUR. Stufe 2: Vorleistung = 35.000 EUR (Zukauf aus Stufe 1) + 10.000 EUR = 45.000 EUR, Verkaufswert 60.000 EUR, Wertschöpfung 60.000-45.000=15.000 EUR. Stufe 3: Vorleistung = 60.000 EUR (Zukauf aus Stufe 2) + 15.000 EUR = 75.000 EUR, Verkaufswert 100.000 EUR, Wertschöpfung 100.000-75.000=25.000 EUR. Kumuliert ergibt sich 15.000+15.000+25.000=55.000 EUR, was dem Endverkaufswert (100.000 EUR) abzueglich aller wirklich von aussen bezogenen Vorleistungen (20.000+10.000+15.000=45.000 EUR) entspricht.",
+  "verweis": "Unser Unterricht – Wertschöpfung"
+ },
+ {
+  "id": "M09-057",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Gantt-Diagramm",
+  "typ": "trace",
+  "schwierigkeit": 3,
+  "frage": "Ein Gantt-Diagramm der Rhaus-Metall-GmbH plant drei Vorgaenge. Trage je Woche ein, welcher Vorgang in dieser Woche abgeschlossen wird, und die verbleibende Restdauer bis zum Projektende (Woche 6).",
+  "code": [
+   "Vorgang A: Start Woche 1, Dauer 2 Wochen (Woche 1-2)",
+   "Vorgang B: Start Woche 2, Dauer 3 Wochen (Woche 2-4, ueberlappt mit A in Woche 2)",
+   "Vorgang C: Start Woche 4, Dauer 3 Wochen (Woche 4-6, beginnt erst nach Ende von B)"
+  ],
+  "spalten": [
+   "Woche",
+   "fertige Vorgänge",
+   "Restdauer (Wochen)"
+  ],
+  "zeilen": [
+   [
+    "1",
+    "–",
+    "5"
+   ],
+   [
+    "2",
+    "A",
+    "4"
+   ],
+   [
+    "3",
+    "–",
+    "3"
+   ],
+   [
+    "4",
+    "B",
+    "2"
+   ],
+   [
+    "5",
+    "–",
+    "1"
+   ],
+   [
+    "6",
+    "C",
+    "0"
+   ]
+  ],
+  "erklaerungKurz": "Ein Vorgang gilt als fertig am Ende der Woche, in der seine Dauer ablaeuft. Die Restdauer ergibt sich aus Projektende (Woche 6) minus aktueller Woche.",
+  "erklaerungLang": "Vorgang A laeuft Woche 1-2 und ist am Ende von Woche 2 fertig. Vorgang B beginnt bereits in Woche 2 (Ueberlappung mit A) und laeuft bis Woche 4, ist also am Ende von Woche 4 fertig. Vorgang C beginnt erst nach Ende von B in Woche 4 und laeuft bis Woche 6, ist also am Ende von Woche 6 fertig. Die Restdauer in Woche n betraegt 6-n: Woche 1 -> 5, Woche 2 -> 4, Woche 3 -> 3, Woche 4 -> 2, Woche 5 -> 1, Woche 6 -> 0. In den Wochen 1, 3 und 5 wird kein Vorgang neu abgeschlossen.",
+  "verweis": "Unser Unterricht – Gantt-Diagramm"
+ },
+ {
+  "id": "M09-070",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "trace",
+  "schwierigkeit": 3,
+  "frage": "Ein Netzplan der Rhaus-Metall-GmbH besteht aus vier Vorgaengen. Fuehre die Vorwaertsrechnung durch und trage FAZ und FEZ je Vorgang ein.",
+  "code": [
+   "Vorgang A: Dauer 2, kein Vorgaenger (Start, FAZ 0)",
+   "Vorgang B: Dauer 5, Vorgaenger A",
+   "Vorgang C: Dauer 3, Vorgaenger A",
+   "Vorgang D: Dauer 4, Vorgaenger B und C (beide muessen fertig sein)"
+  ],
+  "spalten": [
+   "Vorgang",
+   "FAZ",
+   "FEZ"
+  ],
+  "zeilen": [
+   [
+    "A",
+    "0",
+    "2"
+   ],
+   [
+    "B",
+    "2",
+    "7"
+   ],
+   [
+    "C",
+    "2",
+    "5"
+   ],
+   [
+    "D",
+    "7",
+    "11"
+   ]
+  ],
+  "erklaerungKurz": "FEZ = FAZ + Dauer. FAZ eines Vorgangs mit mehreren Vorgaengern ist der groesste FEZ-Wert aller Vorgaenger.",
+  "erklaerungLang": "FAZ_A=0, FEZ_A=0+2=2. B und C folgen beide auf A: FAZ_B=FAZ_C=2. FEZ_B=2+5=7, FEZ_C=2+3=5. D folgt auf B UND C, daher FAZ_D=max(FEZ_B,FEZ_C)=max(7,5)=7. FEZ_D=7+4=11. Die Projektdauer betraegt somit 11 Zeiteinheiten, und der Pfad A-B-D ist mit 11 Einheiten der laengste (kritische) Pfad.",
+  "verweis": "Unser Unterricht – Netzplantechnik"
+ },
+ {
+  "id": "M09-071",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "trace",
+  "schwierigkeit": 4,
+  "frage": "Fuer denselben Netzplan der Rhaus-Metall-GmbH (Vorwaertsrechnung bereits bekannt) fuehre nun die Rueckwaertsrechnung durch und trage SAZ, SEZ und GP je Vorgang ein.",
+  "code": [
+   "Vorgang A: Dauer 2, FAZ 0, FEZ 2 (kein Vorgaenger)",
+   "Vorgang B: Dauer 5, FAZ 2, FEZ 7 (Vorgaenger A)",
+   "Vorgang C: Dauer 3, FAZ 2, FEZ 5 (Vorgaenger A)",
+   "Vorgang D: Dauer 4, FAZ 7, FEZ 11 (Vorgaenger B und C, Projektende)"
+  ],
+  "spalten": [
+   "Vorgang",
+   "SAZ",
+   "SEZ",
+   "GP"
+  ],
+  "zeilen": [
+   [
+    "A",
+    "0",
+    "2",
+    "0"
+   ],
+   [
+    "B",
+    "2",
+    "7",
+    "0"
+   ],
+   [
+    "C",
+    "4",
+    "7",
+    "2"
+   ],
+   [
+    "D",
+    "7",
+    "11",
+    "0"
+   ]
+  ],
+  "erklaerungKurz": "SAZ = SEZ - Dauer. SEZ eines Vorgangs mit mehreren Nachfolgern ist der kleinste SAZ-Wert aller Nachfolger. GP = SAZ - FAZ; ein GP von 0 kennzeichnet den kritischen Pfad.",
+  "erklaerungLang": "SEZ_D=FEZ_D=11 (Projektende), SAZ_D=11-4=7, GP_D=7-7=0. D hat nur die Vorgaenger B und C, also SEZ_B=SEZ_C=SAZ_D=7. SAZ_B=7-5=2, GP_B=2-2=0 (kritisch). SAZ_C=7-3=4, GP_C=4-2=2 (Puffer von 2). SEZ_A=min(SAZ_B,SAZ_C)=min(2,4)=2, SAZ_A=2-2=0, GP_A=0-0=0. Der kritische Pfad ist A-B-D (GP=0 durchgehend); Vorgang C hat einen Gesamtpuffer von 2 Zeiteinheiten.",
+  "verweis": "Unser Unterricht – Netzplantechnik"
+ },
+ {
+  "id": "M09-143",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "trace",
+  "schwierigkeit": 4,
+  "frage": "Verfolge den folgenden Ausbildungsfall der Rhaus-Metall-GmbH und trage zu jedem Ereignis das Datum bzw. die Frist sowie die rechtliche Einordnung ein.",
+  "code": [
+   "Fall: Lara Bergmann beginnt ihre Ausbildung bei der Rhaus-Metall-GmbH am 01.08.2026.",
+   "Im Ausbildungsvertrag ist die Probezeit mit 4 Monaten vereinbart (Paragraf 20 BBiG erlaubt 1 bis 4 Monate).",
+   "Am 28.11.2026 will der Ausbildungsbetrieb das Ausbildungsverhaeltnis fristlos und ohne Angabe von Gruenden kuendigen."
+  ],
+  "spalten": [
+   "Ereignis",
+   "Datum/Frist",
+   "Rechtliche Einordnung"
+  ],
+  "zeilen": [
+   [
+    "Vertragsbeginn",
+    "01.08.2026",
+    "Beginn der Probezeit (Paragraf 20 BBiG)"
+   ],
+   [
+    "Probezeitende",
+    "30.11.2026",
+    "letzter Tag der vereinbarten 4-monatigen Probezeit"
+   ],
+   [
+    "letzter Tag fuer fristlose Kündigung ohne Grund",
+    "30.11.2026",
+    "nach Ablauf nur noch Kündigung aus wichtigem Grund oder durch den Azubi mit 4 Wochen Frist (Paragraf 22 BBiG)"
+   ],
+   [
+    "Kündigung am 28.11.2026",
+    "zulässig",
+    "liegt noch innerhalb der Probezeit (vor dem 30.11.2026), daher fristlos und ohne Angabe von Gründen möglich"
+   ]
+  ],
+  "erklaerungKurz": "Die Probezeit von 4 Monaten ab 01.08.2026 endet am 30.11.2026. Innerhalb der Probezeit kann jederzeit fristlos und ohne Grund gekuendigt werden (Paragraf 22 Abs. 1 BBiG); danach nur noch aus wichtigem Grund oder mit 4-Wochen-Frist durch den Azubi.",
+  "erklaerungLang": "Die Probezeit beginnt mit Vertragsbeginn am 01.08.2026 und dauert 4 volle Kalendermonate, also bis einschliesslich 30.11.2026. Waehrend dieser Zeit kann das Ausbildungsverhaeltnis von beiden Seiten jederzeit fristlos und ohne Angabe von Gruenden gekuendigt werden (Paragraf 22 Abs. 1 BBiG). Die Kuendigung am 28.11.2026 faellt noch in diesen Zeitraum, ist also fristlos und ohne Begruendung zulaessig. Nach dem 30.11.2026 waere eine Kuendigung durch den Betrieb nur noch aus wichtigem Grund moeglich, eine Kuendigung durch die Auszubildende nur noch mit 4 Wochen Frist bei Aufgabe oder Wechsel der Ausbildung (Paragraf 22 Abs. 2 BBiG).",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ }
+]

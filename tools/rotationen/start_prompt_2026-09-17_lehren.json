@@ -1,0 +1,22 @@
+{
+ "quelle": "START_PROMPT.md",
+ "archiv": "LEHREN.md",
+ "ueberschrift": "## Ausgelagert aus START_PROMPT.md am 2026-09-17 (verbatim, rotiere.py)",
+ "bloecke": [
+  {
+   "von": 185,
+   "bis": 208,
+   "ersatz": "# ► **ZWEI EXTERNE MASSSTÄBE (Prüfungskatalog vor Lehrbuch, Nenner benennen) → `LEHREN.md`.**\n#   ⛔ Pflicht vor JEDER Ergänzung aus Katalog oder Buch und vor jeder Mengenaussage."
+  },
+  {
+   "von": 249,
+   "bis": 274,
+   "ersatz": "# ► **POOL-ARBEIT: Verfahren je Modul, Korrekturskripte, Verweis- und Toleranzregeln → `LEHREN.md`.**\n#   ⛔ Pflicht vor jeder Pool-Runde. Kurz: NIE `json.load`/`json.dump` auf Pool-Dateien."
+  },
+  {
+   "von": 351,
+   "bis": 452,
+   "ersatz": "# ⛔⛔ **DIE LEHREN STEHEN VERBATIM IN `LEHREN.md` (ausgelagert 17.09.2026, Nutzer-Entscheid).**\n#   Sie gelten unverändert – sie werden nur nicht mehr in JEDEM Chat gelesen, sondern **vor dem\n#   Griff, den sie betreffen.** Diese Tabelle ist die Pflicht (`check.sh` prüft, dass jede Datei existiert):\n#   PFLICHT: Pool-Datei, Frage, Verweis, Lehrtext oder Spickzettel anfassen → `LEHREN.md` (Teil A + B)\n#   PFLICHT: einen Wächter, eine Prüfung, eine Gegenprobe oder ein Messwerkzeug bauen/ändern → `LEHREN.md`\n#   PFLICHT: eine Kennzahl, Quote oder Mengenaussage melden → `LEHREN.md`\n#   PFLICHT: ein Python-Skript, das Projektdateien schreibt → `LEHREN.md`\n#   PFLICHT: ein Mess- oder Hilfsskript schreiben wollen → `WERKZEUGE.md` (es gibt es meist schon)\n#   PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `PLAN_NEUBAU.md`\n#   PFLICHT: Agenten einsetzen, Ausgaben kürzen, Tooling-Fallstricke → `TASKLIST.md`\n#   ⚠️ **Im Zweifel lesen.** Eine Lehre, die man nicht gelesen hat, wird wiederholt – belegt fünfmal."
+  }
+ ]
+}

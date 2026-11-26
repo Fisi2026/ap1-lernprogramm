@@ -1,0 +1,90 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Einzelne Frage" [Ebene 1]
+  heading "Einzelne Frage" [Ebene 2]
+  img "Schwierigkeit 3 von 4"
+  button "Zum gezielten Wiederholen markieren"
+  button "Begriff: Netzplan"
+  button "⚑ Frage melden"
+  checkbox "Diese Bedienhilfe nicht mehr zeigen" [checked=false]
+  table
+    row "Vorgang Dauer FAZ FEZ SAZ SEZ GP"
+      columnheader "Vorgang"
+      columnheader "Dauer"
+      columnheader "FAZ"
+      columnheader "FEZ"
+      columnheader "SAZ"
+      columnheader "SEZ"
+      columnheader "GP"
+    row "A 3"
+      cell "A"
+      cell "3"
+      cell
+        textbox "FAZ, Zelle 1"
+      cell
+        textbox "FEZ, Zelle 1"
+      cell
+        textbox "SAZ, Zelle 1"
+      cell
+        textbox "SEZ, Zelle 1"
+      cell
+        textbox "GP, Zelle 1"
+    row "B 4"
+      cell "B"
+      cell "4"
+      cell
+        textbox "FAZ, Zelle 2"
+      cell
+        textbox "FEZ, Zelle 2"
+      cell
+        textbox "SAZ, Zelle 2"
+      cell
+        textbox "SEZ, Zelle 2"
+      cell
+        textbox "GP, Zelle 2"
+    row "C 6"
+      cell "C"
+      cell "6"
+      cell
+        textbox "FAZ, Zelle 3"
+      cell
+        textbox "FEZ, Zelle 3"
+      cell
+        textbox "SAZ, Zelle 3"
+      cell
+        textbox "SEZ, Zelle 3"
+      cell
+        textbox "GP, Zelle 3"
+    row "D 2"
+      cell "D"
+      cell "2"
+      cell
+        textbox "FAZ, Zelle 4"
+      cell
+        textbox "FEZ, Zelle 4"
+      cell
+        textbox "SAZ, Zelle 4"
+      cell
+        textbox "SEZ, Zelle 4"
+      cell
+        textbox "GP, Zelle 4"
+  button "Lösung prüfen" [gesperrt]
+  button "Aufgeben"
+  button "Taschenrechner"
+  button "Zur Startseite"
+  button "Normal weiterüben"

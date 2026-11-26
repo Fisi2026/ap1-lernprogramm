@@ -1,0 +1,38 @@
+[
+ {
+  "id": "M06-312",
+  "pruefungsteil": "AP1",
+  "modul": "M06",
+  "thema": "TOM & Rechtsgrundlagen",
+  "gebiet": "A3",
+  "typ": "lueckentext",
+  "schwierigkeit": 2,
+  "frage": "Art. ___ DSGVO verpflichtet dazu, angemessene Schutzmaßnahmen umzusetzen; sie zerfallen in zwei Gruppen. Eine Netzwerk-Segmentierung mit DMZ gehört zu den ___ Maßnahmen, ein Berechtigungskonzept nach dem Prinzip der minimalen Rechte dagegen zu den ___ Maßnahmen.",
+  "luecken": [
+   ["32"],
+   ["technischen", "technische", "technisch"],
+   ["organisatorischen", "organisatorische", "organisatorisch"]
+  ],
+  "erklaerungKurz": "Art. 32 DSGVO verlangt TOM: technische Maßnahmen wirken am System, organisatorische an Regeln und Menschen.",
+  "erklaerungLang": "Die Trennung fragt danach, woran die Maßnahme ansetzt – am System oder an der Organisation.\n• Technisch sind Verschlüsselung, Virenschutz, Firewall, Backup und Netzwerk-Segmentierung: sie wirken auch dann, wenn niemand hinsieht.\n• Organisatorisch sind Richtlinien, Schulungen, Berechtigungskonzepte sowie Zutritts- und Zugriffskontrolle: sie wirken über Regeln und über das Verhalten der Beschäftigten.\n• Beide Gruppen ersetzen einander nicht – eine Passwort-Policy ohne technische Durchsetzung bleibt eine Bitte, und Verschlüsselung ohne Schlüsselverwaltung ist ein Risiko.\nMerke: Art. 32 verlangt beides, weil jede Gruppe allein eine offene Flanke lässt.",
+  "verweis": "Modul 06, Abschnitt 6.1 – Technische und organisatorische Maßnahmen (TOM)"
+ },
+ {
+  "id": "M06-313",
+  "pruefungsteil": "AP1",
+  "modul": "M06",
+  "thema": "IT-Sicherheit und Datenschutz-Vorfall",
+  "gebiet": "A3",
+  "typ": "lueckentext",
+  "schwierigkeit": 3,
+  "frage": "Nach einer Verletzung des Schutzes personenbezogener Daten ist die Aufsichtsbehörde unverzüglich, möglichst binnen ___ Stunden zu benachrichtigen; die Rechtsgrundlage dafür ist Art. ___ DSGVO. Die Frist beginnt mit dem ___ der Verletzung, nicht mit dem Zeitpunkt des Vorfalls selbst.",
+  "luecken": [
+   ["72"],
+   ["33"],
+   ["Bekanntwerden", "bekanntwerden", "Bekanntwerdens", "Kenntnisnahme"]
+  ],
+  "erklaerungKurz": "Meldung an die Aufsichtsbehörde binnen 72 Stunden nach Bekanntwerden, Art. 33 DSGVO.",
+  "erklaerungLang": "Der Fristbeginn ist der Punkt, an dem in der Prüfung die meisten Punkte verloren gehen.\n• Gezählt wird ab Bekanntwerden – ein Vorfall, der drei Wochen unbemerkt lief, löst die Frist erst mit seiner Entdeckung aus.\n• Die 72 Stunden sind die Obergrenze, nicht die Vorgabe: „unverzüglich“ steht davor, eine Meldung nach 60 Stunden ohne Grund für die Verzögerung ist bereits angreifbar.\n• Betroffene Personen sind nach Art. 34 zusätzlich zu benachrichtigen, wenn ein hohes Risiko für ihre Rechte besteht – das ist eine zweite, eigene Pflicht.\nMerke: Verschweigen ist der teuerste Fehler; je später die Meldung, desto größer der Schaden.",
+  "verweis": "Modul 06, Abschnitt 6.1 – Meldepflicht bei einer Datenschutzverletzung"
+ }
+]

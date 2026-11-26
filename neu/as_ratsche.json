@@ -1,0 +1,4 @@
+{
+  "grenze": 21,
+  "anmerkung": "N37 U4 (E60), seit N38 Q1 (30.09.2026): UNSICHERE as-Umwandlungen im App-Code von neu/src laut oxlint typescript/no-unsafe-type-assertion, gezaehlt von tools/as_ratsche.py. Darf nur sinken."
+}

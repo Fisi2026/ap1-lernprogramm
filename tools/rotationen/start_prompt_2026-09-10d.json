@@ -1,0 +1,22 @@
+{
+  "quelle": "START_PROMPT.md",
+  "archiv": "START_PROMPT_ARCHIV.md",
+  "ueberschrift": "## ROTATION 2026-09-10 (4) - Hinweisgrenze erreicht, drei erledigte Bloecke verdichtet",
+  "bloecke": [
+    {
+      "von": 73,
+      "bis": 75,
+      "ersatz": "# ✅ **TRENNSCHÄRFE-RUNDE DURCH (09.09.): 52 → 30 → 2.** Nicht nachprüfen. Zwei Lehren im Archiv:\n#   **die Kür ist die zweite Hälfte der Schwelle** · **ein Pflichtbegriff wirkt über seinen STAMM**.\n"
+    },
+    {
+      "von": 238,
+      "bis": 239,
+      "ersatz": "# ✅ **`lueckentext` AUSGEBAUT (09.09.): 6 → 12** – acht AP1-Themen standen auf null. **Nicht nachprüfen.**\n"
+    },
+    {
+      "von": 293,
+      "bis": 296,
+      "ersatz": "#   1. ✅ **ALLE 96 BILDFRAGEN GERENDERT UND ANGESEHEN (07.09.)** – `BEFUNDE_BILDFRAGEN.md` §3.\n#      ⛔⛔ **Alle vier SVG-Wächter waren dabei grün – sie prüfen nie, ob das Bild die Frage\n#      BEANTWORTET.** ►► **WER EINE BILDFRAGE PRÜFT, RENDERT SIE** (`tools/svg_bilder.py --id <ID>`).\n"
+    }
+  ]
+}

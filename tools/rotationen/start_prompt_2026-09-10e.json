@@ -1,0 +1,17 @@
+{
+  "quelle": "START_PROMPT.md",
+  "archiv": "START_PROMPT_ARCHIV.md",
+  "ueberschrift": "## ROTATION 2026-09-10 (5) - zwei Rezepte verdichtet, Herleitung ins Archiv",
+  "bloecke": [
+    {
+      "von": 269,
+      "bis": 272,
+      "ersatz": "#   ⚠️ **KORREKTURSKRIPTE: NIE über `json.load`/`json.dump`** – das formatiert die Pool-Datei um.\n#      **Rezept (Volltext im Archiv):** Block von ID bis zur nächsten ID abgrenzen, alten Wert auf\n#      **genau eine** Fundstelle prüfen, `json.loads` als Syntaxprobe VOR dem Schreiben, vorher sichern.\n"
+    },
+    {
+      "von": 273,
+      "bis": 276,
+      "ersatz": "#   ⚠️ **ZEICHEN-NORMALISIERUNG PER REGEX IST ERST FERTIG, WENN DER DIFF SIE BESTÄTIGT.**\n#      ⛔ **In `rechenassistent`-Fragen ist das Minus INNERHALB von `{…}` FORMELSYNTAX** und darf nie\n#      ersetzt werden. `test_rechner` fängt das.\n"
+    }
+  ]
+}

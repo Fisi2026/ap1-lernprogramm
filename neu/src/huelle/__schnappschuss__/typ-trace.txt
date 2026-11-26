@@ -1,0 +1,68 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Einzelne Frage" [Ebene 1]
+  heading "Einzelne Frage" [Ebene 2]
+  img "Schwierigkeit 4 von 4"
+  button "Zum gezielten Wiederholen markieren"
+  button "Begriff: Netzplan"
+  button "⚑ Frage melden"
+  checkbox "Diese Bedienhilfe nicht mehr zeigen" [checked=false]
+  table
+    row "Vorgang FAZ FEZ"
+      columnheader "Vorgang"
+      columnheader "FAZ"
+      columnheader "FEZ"
+    row
+      cell
+        textbox "Vorgang, Zelle 1"
+      cell
+        textbox "FAZ, Zelle 1"
+      cell
+        textbox "FEZ, Zelle 1"
+    row
+      cell
+        textbox "Vorgang, Zelle 2"
+      cell
+        textbox "FAZ, Zelle 2"
+      cell
+        textbox "FEZ, Zelle 2"
+    row
+      cell
+        textbox "Vorgang, Zelle 3"
+      cell
+        textbox "FAZ, Zelle 3"
+      cell
+        textbox "FEZ, Zelle 3"
+    row
+      cell
+        textbox "Vorgang, Zelle 4"
+      cell
+        textbox "FAZ, Zelle 4"
+      cell
+        textbox "FEZ, Zelle 4"
+    row
+      cell
+        textbox "Vorgang, Zelle 5"
+      cell
+        textbox "FAZ, Zelle 5"
+      cell
+        textbox "FEZ, Zelle 5"
+  button "Lösung prüfen" [gesperrt]
+  button "Aufgeben"
+  button "Zur Startseite"
+  button "Normal weiterüben"

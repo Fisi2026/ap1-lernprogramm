@@ -1,0 +1,3 @@
+# Semgrep CE fuer die CI (tools/semgrep/scan.sh). Exakt gepinnt, von Hand gehoben (Dependabot-Versions-PRs sind aus).
+# requirements.txt daraus mit: bash tools/semgrep/erzeugen.sh --upgrade-package semgrep  (Hand-Pins: overrides.txt)
+semgrep==1.187.0

@@ -1,0 +1,762 @@
+[
+ {
+  "id": "M09-021",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Leitungssysteme",
+  "typ": "zuordnung",
+  "schwierigkeit": 1,
+  "frage": "Ordnen Sie die vier Leitungssysteme ihren charakteristischen Merkmalen zu.",
+  "paare": [
+   [
+    "Klare Befehlswege, ein Vorgesetzter, lange Dienstwege",
+    "Einlinienorganisation"
+   ],
+   [
+    "Fachautorität neben Hierarchie, kurze Dienstwege, Kompetenzkonflikte möglich",
+    "Mehrlinienorganisation"
+   ],
+   [
+    "Stäbe beraten ohne Weisungsbefugnis",
+    "Stablinienorganisation"
+   ],
+   [
+    "Zwei Dimensionen der Unterstellung, hohe Flexibilität, Konfliktpotenzial",
+    "Matrixorganisation"
+   ]
+  ],
+  "erklaerungKurz": "Einlinien: ein Chef, klare Wege. Mehrlinie: mehrere Vorgesetzte (Fachkompetenz). Stablinie: Berater ohne Macht. Matrix: zwei Dimensionen (Projekt + Funktion).",
+  "erklaerungLang": "Die Einlinienorganisation ist hierarchisch einfach und klar: jeder hat genau einen Vorgesetzten, aber die Wege sind lang. In der Mehrlinienorganisation berichten Mitarbeiter mehreren Spezialisten, was schneller ist, aber zu Konflikten führt. Die Stablinienorganisation kombiniert beide: der Stab (z. B. IT-Sicherheit) berät, kann aber nicht befehlen. Die Matrixorganisation (z. B. Projektmanagement + Fachabteilungen) bietet maximale Flexibilität, erfordert aber starkes Management der Konflikte.",
+  "verweis": "Unser Unterricht – Leitungssysteme"
+ },
+ {
+  "id": "M09-032",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Führungsstile",
+  "typ": "zuordnung",
+  "schwierigkeit": 1,
+  "frage": "Ordnen Sie die Führungsstile ihren typischen Merkmalen und Situationen zu.",
+  "paare": [
+   [
+    "Schnelle Entscheidungen, klare Anweisungen, Demotivation durch Bevormundung",
+    "Autoritärer Führungsstil"
+   ],
+   [
+    "Beteiligung der Mitarbeiter, höhere Motivation, zeitaufwendiger",
+    "Kooperativer Führungsstil"
+   ],
+   [
+    "Volle Freiheit für die Mitarbeiter, Gefahr der Orientierungslosigkeit",
+    "Laissez-faire-Stil"
+   ],
+   [
+    "Kombination aus allen Stilen je nach Situation und Mitarbeiterkompetenz",
+    "Situativer Führungsstil"
+   ]
+  ],
+  "erklaerungKurz": "Autoritär = schnell, aber demotivierend. Kooperativ = motivierend, aber langwierig. Laissez-faire = Freiheit, aber Chaos ohne klare Linie. Situativ = flexibel anpassen.",
+  "erklaerungLang": "Der autoritäre Stil funktioniert bei Krise oder unerfahrenen Teams (schnelle Entscheidungen), führt aber zu Frustration. Der kooperative Stil ist in stabilen Verhältnissen mit kompetenten Mitarbeitern optimal (Motivation + Kreativität). Laissez-faire braucht selbstorganisierte Teams, sonst droht Chaos. Professionelle Führung wählt situativ: Eine Junior-Mitarbeiterin braucht mehr Anleitung, ein erfahrener Projektleiter kann eigenverantwortlich arbeiten.",
+  "verweis": "Unser Unterricht – Führungsstile"
+ },
+ {
+  "id": "M09-041",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Managementtechniken",
+  "typ": "zuordnung",
+  "schwierigkeit": 2,
+  "frage": "Ordnen Sie die Managementtechniken ihren Definitionen und Beispielen zu.",
+  "paare": [
+   [
+    "Führen durch Zielvereinbarung, Mitarbeiter mitgestalten die Ziele",
+    "Management by Objectives (MbO)"
+   ],
+   [
+    "Eingriff des Managers nur bei Abweichungen, Normalfall wird delegiert",
+    "Management by Exception (MbE)"
+   ],
+   [
+    "Aufgabe + Kompetenz + Verantwortung an Mitarbeiter übertragen",
+    "Management by Delegation (MbD)"
+   ],
+   [
+    "Matrix: wichtig/dringend → sofort; wichtig/nicht dringend → terminieren; dringend/unwichtig → delegieren",
+    "Eisenhower-Prinzip"
+   ]
+  ],
+  "erklaerungKurz": "MbO = gemeinsame Ziele. MbE = nur bei Problemen eingreifen. MbD = Aufgaben verteilen. Eisenhower = Prioritäten nach Wichtigkeit/Dringlichkeit setzen.",
+  "erklaerungLang": "MbO motiviert, weil Mitarbeiter ihre Ziele selbst mitgestalten und wissen, worauf es ankommt. MbE reduziert Mikromanagement: der Manager schaut nur, wenn Abweichungen auftreten. MbD bedeutet echte Vertrauenskultur: Mitarbeiter bekommen nicht nur Aufgaben, sondern auch die Befugnis und Verantwortung. Das Eisenhower-Prinzip priorisiert täglich: Serverausfälle (wichtig+dringend) sofort selbst, Konzepte (wichtig, nicht dringend) vormerken, Routine (dringend, unwichtig) delegieren.",
+  "verweis": "Unser Unterricht – Managementtechniken"
+ },
+ {
+  "id": "M09-103",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Rechtsformen",
+  "typ": "zuordnung",
+  "schwierigkeit": 1,
+  "frage": "Ordnen Sie die Rechtsformen ihren Leitungsorganen zu.",
+  "paare": [
+   [
+    "Einzelner Geschäftsführer, von den Gesellschaftern ernannt",
+    "GmbH"
+   ],
+   [
+    "Mindestens zwei Gesellschafter, die alle unbeschränkt persönlich haften",
+    "Offene Handelsgesellschaft (OHG)"
+   ],
+   [
+    "Vorstand leitet, Aufsichtsrat überwacht, Hauptversammlung der Aktionäre",
+    "Aktiengesellschaft (AG)"
+   ],
+   [
+    "Alleiniger Unternehmer, volle persönliche Haftung",
+    "Einzelunternehmer (e.K.)"
+   ],
+   [
+    "Komplementär (persönliche Haftung) + Kommanditist (begrenzte Haftung)",
+    "Kommanditgesellschaft (KG)"
+   ]
+  ],
+  "erklaerungKurz": "e.K.: allein, volle Haftung. OHG: Gesellschafter, alle unbeschränkt. KG: Komplementär + Kommanditist. GmbH: Geschäftsführer. AG: Vorstand, Aufsichtsrat, Hauptversammlung.",
+  "erklaerungLang": "Jede Rechtsform hat eine charakteristische Leitungsstruktur. Der Einzelunternehmer entscheidet allein und haftet vollständig. In der OHG sind alle Gesellschafter gleichberechtigt und haften unbegrenzt. In der KG gibt es Komplementäre (wie OHG) und Kommanditisten (stille Gesellschafter mit begrenzter Haftung). Die GmbH wird durch einen oder mehrere Geschäftsführer geleitet, die Gesellschafter haften nicht persönlich. Die AG (wie die Rhaus-Metall-GmbH bei großer Expansion) hat Vorstand und Aufsichtsrat – eine Doppelspitze für Kontrollinteressen.",
+  "verweis": "Unser Unterricht – Rechtsformen"
+ },
+ {
+  "id": "M09-112",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Handlungsvollmachten & Prokura",
+  "typ": "zuordnung",
+  "schwierigkeit": 2,
+  "frage": "Ordnen Sie die folgenden Geschäfte der richtigen Bevollmächtigung zu (darf Prokurist / nur mit Sondervollmacht / darf nicht).",
+  "paare": [
+   [
+    "Kauf von Rohstoffen für die Produktion",
+    "darf Prokurist"
+   ],
+   [
+    "Verkauf des Fabrikgrundstücks",
+    "nur mit Sondervollmacht"
+   ],
+   [
+    "Kreditaufnahme für Betriebsmittel",
+    "darf Prokurist"
+   ],
+   [
+    "Einstellung von Mitarbeitern im operativen Betrieb",
+    "darf Prokurist"
+   ],
+   [
+    "Veräußerung der Firma als Ganzes (Grundlagengeschäft)",
+    "darf nicht"
+   ]
+  ],
+  "erklaerungKurz": "Prokura deckt alle gewöhnlichen UND außergewöhnlichen Geschäfte des Handelsgewerbes ab – auch Kredite und Personal. Grundstücke nur mit Sondervollmacht (§ 49 II HGB); Grundlagengeschäfte wie die Firmenveräußerung nie.",
+  "erklaerungLang": "Die Prokura nach §48 HGB umfasst alle laufenden Handelsgeschäfte: Kauf/Verkauf von Waren, Personalentscheidungen im Rahmen der Betriebsgröße. Nicht erlaubt sind große Vermögensveräußerungen (Immobilien, Fahrzeuge über Wert) und strategische Entscheidungen (Gründung von Töchtern). Kredite sind grenzwertig – normalerweise braucht man eine ausdrückliche Sondervollmacht. Die Prokurist bei Rhaus-Metall kann Stahlbleche kaufen, Schweißer einstellen, aber nicht die Fabrik verkaufen.",
+  "verweis": "Unser Unterricht – Handlungsvollmachten & Prokura"
+ },
+ {
+  "id": "M09-003",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Wertschöpfung",
+  "typ": "reihenfolge",
+  "schwierigkeit": 1,
+  "frage": "Bringe die Stufen der Wertschöpfungskette der Rhaus-Metall-GmbH in die richtige Reihenfolge.",
+  "schritte": [
+   "Beschaffung: Rohstoffe (Stahl, Blech) vom Lieferanten einkaufen",
+   "Lagerung: Material in der Fabrik einlagern und Lagerverwaltung durchführen",
+   "Produktion: Rohmaterial in Fertigerzeugnisse umwandeln (Stanzen, Schweißen, Lackieren)",
+   "Qualitätskontrolle: Fertige Teile prüfen und freigeben",
+   "Vertrieb und Absatz: Produkte an Kunden verkaufen und liefern"
+  ],
+  "erklaerungKurz": "Wertschöpfung folgt dem klassischen Schema: erst beschaffen, dann lagern, dann produzieren, dann prüfen, dann verkaufen.",
+  "erklaerungLang": "Die Wertschöpfungskette zeigt die Wertvernichtung und Wertsteigerung Stufe für Stufe. Rhaus-Metall kauft Stahl ein (Beschaffung), lagert es (Lagerlogistik), verarbeitet es in Stanzereimaschinen zu Karosserieteilen (Produktion), prüft Toleranzen und Oberflächengüte (Qualität), und verkauft die Teile an Autobauer (Vertrieb). Der Wert des Endprodukts ergibt sich aus Rohstoffwert + Bearbeitungswert + Gewinn.",
+  "verweis": "Unser Unterricht – Wertschöpfung"
+ },
+ {
+  "id": "M09-012",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Aufgabenanalyse & -synthese",
+  "typ": "reihenfolge",
+  "schwierigkeit": 1,
+  "frage": "Bringe die Schritte der Aufgabenanalyse und Aufgabensynthese in die richtige Reihenfolge.",
+  "schritte": [
+   "Gesamtaufgabe definieren (z. B. ‚Kundenauftrag abwickeln')",
+   "Zerlegung in Teilaufgaben durchführen (Analyse: Anfrage, Angebot, Produktion, Lieferung)",
+   "Weiterzerlegung in Elementaraufgaben (z. B. ‚Anfrage beantworten' → ‚Mail schreiben', ‚Preis kalkulieren', ‚Termin prüfen')",
+   "Bündelung zu Stellen/Positionen durchführen (Synthese: Sachbearbeiter, Kalkulator, Logistiker)",
+   "Organigramm mit Instanzen, Abteilungen und Aufgabenzuordnung erstellen"
+  ],
+  "erklaerungKurz": "Analyse = zerlegen (top-down). Synthese = bündeln (bottom-up). Ergebnis: klare Stellenaufteilung mit definierten Aufgaben.",
+  "erklaerungLang": "Aufgabenanalyse (-synthese) ist die Grundlage der Organisationsgestaltung. Man startet mit der Gesamtaufgabe, zerlegt schrittweise in immer kleinere Aufgaben (bis zu den Elementaraufgaben, die eine Person erledigt), und ordnet diese dann zu Stellen zusammen. So entsteht die Stellenbeschreibung. Bei Rhaus-Metall: ‚Kundenauftrag abwickeln' wird zerlegt in Verkauf (Anfrage, Angebot), Produktion (Fertigung), Qualität (Prüfung), Versand (Lieferung). Jede Stelle bekommt ihre Aufgaben klar definiert.",
+  "verweis": "Unser Unterricht – Aufgabenanalyse & -synthese"
+ },
+ {
+  "id": "M09-061",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "reihenfolge",
+  "schwierigkeit": 2,
+  "frage": "Bringe die Schritte der Netzplanberechnung in die richtige Reihenfolge.",
+  "schritte": [
+   "Vorgangsliste mit Abhängigkeiten erstellen (welcher Vorgang hängt von welchem ab)",
+   "Vorwärtsrechnung durchführen (Früheste Anfangszeit FAZ und Früheste Endzeit FEZ ermitteln)",
+   "Rückwärtsrechnung durchführen (Späteste Anfangszeit SAZ und Späteste Endzeit SEZ ermitteln)",
+   "Gesamtpuffer und freien Puffer berechnen (GP = SAZ − FAZ)",
+   "Kritischen Pfad identifizieren (Vorgänge mit Puffer = 0)"
+  ],
+  "erklaerungKurz": "Netzplan-Rechnung: erst Abhängigkeiten klären, vorwärts rechnen (Frühzeiten), rückwärts rechnen (Spätzeiten), Puffer, kritischer Pfad.",
+  "erklaerungLang": "Der kritische Pfad bestimmt die Projektdauer – jede Verzögerung dort verschiebt das Projektende. Die Rückwärtsrechnung startet mit der geplanten Fertigstellung und berechnet, wann Vorgänge spätestens beginnen müssen. Der Puffer zeigt, wieviel Verzögerung noch möglich ist ohne Konsequenzen. Vorgänge mit Puffer = 0 sind kritisch und brauchen enge Überwachung.",
+  "verweis": "Unser Unterricht – Netzplantechnik"
+ },
+ {
+  "id": "M09-121",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "reihenfolge",
+  "schwierigkeit": 1,
+  "frage": "Bringe die Schritte der Abwicklung eines Kundenauftrags in die richtige Reihenfolge.",
+  "schritte": [
+   "Anfrage eingehend analysieren und bei Bedarf nachfragen",
+   "Bestandsaufnahme: Verfügbarkeit von Material und Kapazität prüfen",
+   "Verhaltensmaßnahmen in Verkaufssituationen: Einwände klären, Nutzen des Produkts vermitteln",
+   "Beschaffungsplanung: Material/Lieferanten/Preise für das Angebot ermitteln",
+   "Angebot erstellen (mit Fristen, Bedingungen, Preis)",
+   "Angebotsvergleich mit Konkurrenz durchführen und bewerten"
+  ],
+  "erklaerungKurz": "Ablauf: Anfrage → Bestandsaufnahme → Verkaufsverhalten → Beschaffungsplanung → Angebot → Vergleich.",
+  "erklaerungLang": "Die Anfrage des Kunden ist der Startpunkt. Man prüft sofort (schnelle Reaktion!), ob man das Produkt und die Menge liefern kann, und klärt offene Punkte ab. Dann wird intern geklärt, wie man das realisiert: Bestand oder Produktion, eigene Fertigung oder Zukauf? Im Verkaufsgespräch werden Einwände geklärt (‚Ist das Material robust genug?', ‚Warum ist der Preis so hoch?'). Danach wird geplant, wie man die Teile beschafft, und ein konkretes, verbindliches Angebot erstellt. Am Ende wird der Angebotspreis mit Konkurrenten verglichen und bewertet (Qualität, Liefertreue, Service).",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot"
+ },
+ {
+  "id": "M09-137",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "reihenfolge",
+  "schwierigkeit": 2,
+  "frage": "Bringe die rechtlichen Schritte zur Gründung eines gültigen Ausbildungsverhältnisses in die richtige Reihenfolge.",
+  "schritte": [
+   "Ausbildungsvertrag zwischen Azubi, Betrieb und (bei Minderjährigen) gesetzliche Vertreter abschließen",
+   "Vertrag bei der zuständigen Stelle (IHK) zur Eintragung anmelden",
+   "Probezeit beginnt (§20 BBiG: mindestens 1 Monat, höchstens 4 Monate)",
+   "Zwischen- und Abschlussprüfungen durchführen",
+   "Nach bestandener Prüfung: Ausbildung endet mit Bekanntgabe des Ergebnisses"
+  ],
+  "erklaerungKurz": "Ablauf: Vertrag schließen → IHK-Eintragung → Probezeit → Prüfungen → erfolgreicher Abschluss.",
+  "erklaerungLang": "Der schriftliche Ausbildungsvertrag (§11 BBiG) ist die Grundlage; Minderjährige brauchen die Unterschrift der Eltern. Danach muss der Betrieb den Vertrag unverzüglich bei der IHK zur Eintragung anmelden (§34 BBiG); ohne Eintragung ist das Verhältnis fraglich. Dann folgt die Probezeit (1–4 Monate): beide Seiten können jederzeit fristlos kündigen. Danach gelten die §22-Regeln: nur aus wichtigem Grund oder durch Azubi mit 4-Wochen-Frist. Nach der Ausbildungsdauer folgt die Abschlussprüfung; wird sie bestanden, endet das Verhältnis mit der Bekanntgabe (§21 BBiG).",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-033",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Führungsstile",
+  "typ": "matrix",
+  "schwierigkeit": 2,
+  "frage": "Ordne die Szenen in das Führungsstil-Verhaltensgitter ein (Aufgabenorientierung horizontal, Mitarbeiterorientierung vertikal).",
+  "xAchse": "Aufgabenorientierung:  links niedrig  →  rechts hoch",
+  "yAchse": "Mitarbeiterorientierung:  oben hoch  →  unten niedrig",
+  "quadranten": [
+   "Glacéhandschuh-Stil: Beziehung hoch, Aufgabe niedrig",
+   "Team-Stil: Aufgabe UND Mitarbeiter hoch",
+   "Überlebens-Stil: beides niedrig (Dienst nach Vorschrift)",
+   "Befehl-Gehorsam-Stil: Aufgabe hoch, Beziehung niedrig"
+  ],
+  "elemente": [
+   {
+    "text": "Die Teamleiterin fragt täglich nach dem Befinden, vermeidet aber jede Leistungsvorgabe.",
+    "quadrant": 0
+   },
+   {
+    "text": "Der Schichtleiter erklärt die Ziele klar, hört Einwände an und entscheidet gemeinsam mit dem Team.",
+    "quadrant": 1
+   },
+   {
+    "text": "Der Gruppenleiter kümmert sich weder um Termine noch um sein Team – Hauptsache, der Tag vergeht.",
+    "quadrant": 2
+   },
+   {
+    "text": "Der Geschäftsführer gibt minutiöse Anweisungen und kontrolliert eng, ohne nach Vorschlägen zu fragen.",
+    "quadrant": 3
+   }
+  ],
+  "erklaerungKurz": "Verhaltensgitter (Blake/Mouton): oben links nur Beziehung, oben rechts Team-Stil (Ideal), unten links Dienst nach Vorschrift, unten rechts nur Aufgabe.",
+  "erklaerungLang": "Das Verhaltensgitter (Blake & Mouton) misst zwei Dimensionen: Aufgabenorientierung (wie sehr der Chef das Ergebnis vorschreibt) und Mitarbeiterorientierung (wie sehr er Pflege und Entwicklung investiert). Der direktive Chef (rechts unten) sagt ‚Tun Sie das bis 17:00!', fragt nicht. Der kooperative Chef (rechts oben) sagt ‚Wir brauchen das bis 17:00, wie könnten wir vorgehen?'. Der delegierende Chef (links oben) sagt ‚Das Ziel ist bekannt, ihr entscheidet wie'. Der beziehungsorientierte Chef ohne Fokus (links unten) ist beliebt, aber manchmal unproduktiv. Rhaus-Metall braucht situativ alle Typen: Bei einer Krise (Server down) direktiv, in stabilen Zeiten eher kooperativ.",
+  "verweis": "Unser Unterricht – Führungsstile"
+ },
+ {
+  "id": "M09-034",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Führungsstile",
+  "typ": "matrix",
+  "schwierigkeit": 3,
+  "frage": "Situatives Führen: Ordne die vier Mitarbeiter-Situationen in das Raster ein (Fachkompetenz waagerecht, Engagement/Motivation senkrecht). Wähle je Situation das passende Führungsverhalten.",
+  "xAchse": "Fachkompetenz:  links niedrig  →  rechts hoch",
+  "yAchse": "Engagement/Motivation:  oben hoch  →  unten niedrig",
+  "quadranten": [
+   "Überzeugen/Anleiten: viel Anleitung + viel Unterstützung",
+   "Delegieren: Verantwortung voll übergeben",
+   "Anweisen: klare Vorgaben, enge Kontrolle",
+   "Beteiligen: unterstützen, gemeinsam entscheiden"
+  ],
+  "elemente": [
+   {
+    "text": "Neuer, hochmotivierter Azubi ohne jede Erfahrung an der Kantbank.",
+    "quadrant": 0
+   },
+   {
+    "text": "Erfahrene, engagierte Abteilungsleiterin, die ihr Ressort seit Jahren sicher führt.",
+    "quadrant": 1
+   },
+   {
+    "text": "Praktikant, der weder die Abläufe kennt noch Interesse zeigt.",
+    "quadrant": 2
+   },
+   {
+    "text": "Langjähriger CNC-Techniker, fachlich top, aber nach abgelehnter Beförderung demotiviert.",
+    "quadrant": 3
+   }
+  ],
+  "erklaerungKurz": "Situatives Führen: wenig Kompetenz + viel Motivation → anleiten/überzeugen; beides hoch → delegieren; beides niedrig → anweisen; hohe Kompetenz + wenig Motivation → beteiligen und motivieren.",
+  "erklaerungLang": "Das Kontinuum nach Tannenbaum & Schmidt zeigt, dass Führung nicht binär (stark/schwach) ist, sondern entlang mehrerer Dimensionen verläuft. Bei Notfall (Serverausfall) ist autoritäre Anweisung richtig: schnelle Lösung geht vor Partizipation. Mit Junior-Mitarbeitern: erklären und fragen zulassen, dann anweisen. Mit kompetenten Teams: klare Ziele, aber freie Hand bei der Umsetzung. Mit sehr kompetenten und motivierten Leuten (z. B. R&D-Manager): vollständige Delegation. Rhaus-Metall als mittelständischer Betrieb nutzt eher die mittleren Positionen (erklären, Grenzen setzen, Delegation).",
+  "verweis": "Unser Unterricht – Führungsstile"
+ },
+ {
+  "id": "M09-042",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Managementtechniken",
+  "typ": "matrix",
+  "schwierigkeit": 1,
+  "frage": "Ordne die vier Aufgaben in die Eisenhower-Matrix ein (Wichtigkeit senkrecht, Dringlichkeit waagerecht).",
+  "xAchse": "Dringlichkeit:  links niedrig  →  rechts hoch",
+  "yAchse": "Wichtigkeit:  oben hoch  →  unten niedrig",
+  "quadranten": [
+   "Terminieren / einplanen",
+   "Sofort selbst erledigen (Crisis & Notfall)",
+   "Weglassen / Papierkorb",
+   "Delegieren"
+  ],
+  "elemente": [
+   {
+    "text": "Der wichtige Lieferkontakt ist unzufrieden – sofort anrufen und klären.",
+    "quadrant": 1
+   },
+   {
+    "text": "Eine Schulung zur neuen Fertigungsmaschine steht an (wichtig, aber noch ein Monat Zeit).",
+    "quadrant": 0
+   },
+   {
+    "text": "Ein Mitarbeiter sortiert alte Akten um (weder wichtig noch dringend).",
+    "quadrant": 2
+   },
+   {
+    "text": "Routinemäßige Putzarbeit im Büro (dringend, aber ein Kollege kann das).",
+    "quadrant": 3
+   }
+  ],
+  "erklaerungKurz": "Matrix: wichtig+dringend = sofort selbst; wichtig+nicht dringend = planen; unwichtig+dringend = delegieren; beides nein = weglassen.",
+  "erklaerungLang": "Das Eisenhower-Prinzip verhindert, dass Chef nur reaktiv arbeiten (nur Dringliches) oder nebensächliche Aufgaben verschwenden Zeit. Ein verärgrerter Großkunde ist dringend und wichtig – muss der Chef sofort persönlich kümmern. Schulung ist wichtig, aber zeitlich ausreichend – in den Kalender eintragen. Akten sortieren ist weder wichtig noch dringend – Papierkorb. Putzarbeit ist dringend (sieht man), aber nicht strategisch wichtig – ein Pflichtenheft für die Reinigungskraft.",
+  "verweis": "Unser Unterricht – Managementtechniken"
+ },
+ {
+  "id": "M09-043",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Managementtechniken",
+  "typ": "matrix",
+  "schwierigkeit": 2,
+  "frage": "Ordne die sechs Alltagsaufgaben der Rhaus-Metall-GmbH in die Eisenhower-Matrix ein.",
+  "xAchse": "Dringlichkeit:  links niedrig  →  rechts hoch",
+  "yAchse": "Wichtigkeit:  oben hoch  →  unten niedrig",
+  "quadranten": [
+   "Terminieren",
+   "Sofort selbst",
+   "Weglassen",
+   "Delegieren"
+  ],
+  "elemente": [
+   {
+    "text": "Ein langjähriger Kunde meldet sich: ‚Der letzte Auftrag ist nicht angekommen' (Wichtig, Dringend).",
+    "quadrant": 1
+   },
+   {
+    "text": "Die neue Fertigungsmaschine soll bis Frühjahr bestellt werden; Planung läuft seit Wochen (Wichtig, nicht dringend).",
+    "quadrant": 0
+   },
+   {
+    "text": "Das Marketing hat einen Flyer-Entwurf; Freigabe läuft. Der Chef kann ihn an die Abteilung zurück mit Feedback (Nicht wichtig, dringend).",
+    "quadrant": 3
+   },
+   {
+    "text": "Die alte Besucherliste der Handelsmesse von 2023 soll sortiert werden (Nicht wichtig, nicht dringend).",
+    "quadrant": 2
+   },
+   {
+    "text": "Strategie 2027: neue Märkte, Produkte. Zunächst nur Grundkonzept (Wichtig, aber langfristig).",
+    "quadrant": 0
+   },
+   {
+    "text": "Email-Abonnement aktualisieren; Admin kann das (Nicht wichtig, aber verwaltet werden).",
+    "quadrant": 3
+   }
+  ],
+  "erklaerungKurz": "Eisenhower-Priorisierung auf Rhaus-Metall-Szenen: Kundenprobleme sofort, Investitionen planen, Routine delegieren, Nebensächliches weglassen.",
+  "erklaerungLang": "Der verärgerte Stammkunde geht vor alles (Gewinn, Beziehung, Reputation). Die Maschinenbestellung ist strategisch wichtig (Ertrag, Modernisierung), aber nicht diese Woche dringend – ins Projektportfolio. Der Flyer-Feedback ist administrativ, aber zeitkritisch – delegieren an Marketing/Grafikteam (der Chef muss nicht jedes Word-Dokument lesen). Die Messeliste von 2023 ist irrelevant – löschen. Die Zukunftsstrategie ist extrem wichtig, aber langfristig – ein bewusster Planungstermin (Klausurtagung). Admin-Aufgaben (Abos, Listen) → Assistent/IT.",
+  "verweis": "Unser Unterricht – Managementtechniken"
+ },
+ {
+  "id": "M09-044",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Managementtechniken",
+  "typ": "matrix",
+  "schwierigkeit": 3,
+  "frage": "Will-Skill-Raster: Ordne die vier Mitarbeiter der Rhaus-Metall-GmbH dem passenden Führungsverhalten zu (Können waagerecht, Wollen senkrecht).",
+  "xAchse": "Können (Skill):  links niedrig  →  rechts hoch",
+  "yAchse": "Wollen (Will):  oben hoch  →  unten niedrig",
+  "quadranten": [
+   "Qualifizieren/Fördern (will, kann noch nicht)",
+   "Delegieren – Management by Delegation (will und kann)",
+   "Eng anleiten und kontrollieren (kann nicht, will nicht)",
+   "Motivieren – z. B. über Zielvereinbarung/MbO (kann, will nicht)"
+  ],
+  "elemente": [
+   {
+    "text": "Auszubildende im 1. Jahr, sehr eifrig, beherrscht die Schweißverfahren noch nicht.",
+    "quadrant": 0
+   },
+   {
+    "text": "Meister mit 15 Jahren Erfahrung, brennt für sein Projektteam.",
+    "quadrant": 1
+   },
+   {
+    "text": "Aushilfe, die Anweisungen ignoriert und die Maschinen nicht kennt.",
+    "quadrant": 2
+   },
+   {
+    "text": "Sehr erfahrener Konstrukteur, der seit Monaten lustlos Dienst nach Vorschrift macht.",
+    "quadrant": 3
+   }
+  ],
+  "erklaerungKurz": "Will-Skill: will+kann nicht → qualifizieren; will+kann → delegieren (MbD); will nicht+kann nicht → eng führen; kann+will nicht → motivieren, z. B. mit Zielvereinbarungen (MbO).",
+  "erklaerungLang": "MbO (Management by Objectives) funktioniert mit häufiger Kontrolle bei unsicheren Mitarbeitern (Junior-Projektmanager, neuen Aufgaben). Mit erfahrenen Leuten vereinbart man Ziele, vertraut aber und prüft nur das Ergebnis. MbD (Management by Delegation) geht weiter: die Aufgabe, Befugnisse und Verantwortung liegen vollständig beim Mitarbeiter; der Chef mischt sich nicht ein solange das Ergebnis stimmt. MbE (Management by Exception) ist die reifste Form: Prozesse laufen, Chef ist nur im Notfall involviert (z. B. KPIs rot, Störung). Bei Rhaus-Metall: Juniors bekommen Ziele mit Coaching (MbO+Kontrolle), etablierte Schichtleiter arbeiten nach MbO+Vertrauen, der Meister hat volle Verantwortung für seinen Kundenauftrag (MbD), der IT-Betrieb läuft nach MbE.",
+  "verweis": "Unser Unterricht – Managementtechniken"
+ },
+ {
+  "id": "M09-024",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Leitungssysteme",
+  "typ": "kreuztabelle",
+  "schwierigkeit": 2,
+  "frage": "Kreuze an, welche Eigenschaften auf welche Leitungssysteme zutreffen.",
+  "erklaerungKurz": "Einlinie: klar, aber lange Wege. Mehrlinie: schnell, aber Konflikte. Stablinie: klar + beraten. Matrix: flexibel, aber komplex.",
+  "zeilen": [
+   "Klare Befehlswege",
+   "Kurze Dienstwege",
+   "Mehrfachunterstellung möglich",
+   "Fachkompetenz neben Hierarchie",
+   "Potenzial für Konflikte",
+   "Berater ohne Weisungsbefugnis"
+  ],
+  "spalten": [
+   "Einlinienorganisation",
+   "Mehrlinienorganisation",
+   "Stablinienorganisation",
+   "Matrixorganisation"
+  ],
+  "loesung": [
+   [
+    true,
+    false,
+    true,
+    false
+   ],
+   [
+    false,
+    true,
+    false,
+    true
+   ],
+   [
+    false,
+    true,
+    false,
+    true
+   ],
+   [
+    false,
+    true,
+    false,
+    true
+   ],
+   [
+    false,
+    true,
+    false,
+    true
+   ],
+   [
+    false,
+    false,
+    true,
+    false
+   ]
+  ],
+  "verweis": "Unser Unterricht – Leitungssysteme",
+  "erklaerungLang": "Das Einliniensystem hat genau einen Vorgesetzten je Stelle: klare Befehlswege, aber lange Dienstwege. Das Mehrliniensystem erlaubt mehrere Fachvorgesetzte: kurze Wege und Fachkompetenz, dafür Mehrfachunterstellung und Konfliktpotenzial. Die Stablinie ergänzt die klare Linie um beratende Stäbe ohne Weisungsbefugnis. Die Matrix kombiniert zwei Weisungsdimensionen (z. B. Funktion und Projekt): flexibel, aber mit Mehrfachunterstellung und Konfliktpotenzial – klare eindeutige Befehlswege gibt es dort nicht."
+ },
+ {
+  "id": "M09-105",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Rechtsformen",
+  "typ": "kreuztabelle",
+  "schwierigkeit": 2,
+  "frage": "Kreuze an, welche Eigenschaften auf welche Rechtsformen zutreffen.",
+  "erklaerungKurz": "e.K./OHG/KG: volle persönliche Haftung (KG: Komplementär). GmbH/AG: juristische Personen mit Mindestkapital. Alle Kaufleute stehen im Handelsregister; OHG und KG brauchen mindestens zwei Gründer.",
+  "zeilen": [
+   "Juristische Person (eigenständiges Subjekt)",
+   "Mindestkapital erforderlich",
+   "Persönliche volle Haftung der Inhaber",
+   "Haftung begrenzt auf Vermögen der Gesellschaft",
+   "Eintragung ins Handelsregister erforderlich",
+   "Mindestens zwei Personen sind zur Gründung erforderlich"
+  ],
+  "spalten": [
+   "Einzelunternehmer (e.K.)",
+   "OHG",
+   "KG",
+   "GmbH",
+   "AG"
+  ],
+  "loesung": [
+   [
+    false,
+    false,
+    false,
+    true,
+    true
+   ],
+   [
+    false,
+    false,
+    false,
+    true,
+    true
+   ],
+   [
+    true,
+    true,
+    true,
+    false,
+    false
+   ],
+   [
+    false,
+    false,
+    false,
+    true,
+    true
+   ],
+   [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   [
+    false,
+    true,
+    true,
+    false,
+    false
+   ]
+  ],
+  "verweis": "Unser Unterricht – Rechtsformen",
+  "erklaerungLang": "e.K., OHG und KG sind Personenunternehmen: keine juristische Person, kein Mindestkapital, persönliche Haftung (bei der KG nur der Komplementär unbeschränkt). GmbH und AG sind juristische Personen mit Mindestkapital (25.000 bzw. 50.000 Euro) und auf das Gesellschaftsvermögen begrenzter Haftung. Alle Kaufleute stehen im Handelsregister – der e.K. heißt gerade deshalb 'eingetragener Kaufmann'. OHG und KG brauchen mindestens zwei Gründer, e.K., GmbH und AG sind auch allein gründbar (Ein-Personen-GmbH/-AG)."
+ },
+ {
+  "id": "M09-106",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Rechtsformen",
+  "typ": "kreuztabelle",
+  "schwierigkeit": 3,
+  "frage": "Kreuze an, welche Haftungs- und Gewinnverteilungsregeln auf die Rechtsformen zutreffen.",
+  "erklaerungKurz": "e.K.: voller Gewinn, volle Haftung. OHG: Verteilung unter unbeschränkt haftenden Gesellschaftern. KG: Kommanditist haftet nur mit Einlage. GmbH: Ausschüttung an Gesellschafter. AG: Dividende je Aktie.",
+  "zeilen": [
+   "Geschäftsführer / Gesellschafter privat haftbar",
+   "Gesellschafter haften nicht persönlich",
+   "Gewinne gehen zu 100% an den Unternehmer",
+   "Gewinne werden unter Gesellschaftern verteilt (nach Vereinbarung oder Gesetz)",
+   "Kommanditist haftet nur mit eingelegtem Kapital",
+   "Der Gewinn wird als Dividende je Aktie ausgeschüttet"
+  ],
+  "spalten": [
+   "e.K.",
+   "OHG",
+   "KG",
+   "GmbH",
+   "AG"
+  ],
+  "loesung": [
+   [
+    true,
+    true,
+    true,
+    false,
+    false
+   ],
+   [
+    false,
+    false,
+    false,
+    true,
+    true
+   ],
+   [
+    true,
+    false,
+    false,
+    false,
+    false
+   ],
+   [
+    false,
+    true,
+    true,
+    true,
+    true
+   ],
+   [
+    false,
+    false,
+    true,
+    false,
+    false
+   ],
+   [
+    false,
+    false,
+    false,
+    false,
+    true
+   ]
+  ],
+  "verweis": "Unser Unterricht – Rechtsformen",
+  "erklaerungLang": "Beim e.K. gehört der volle Gewinn dem Inhaber, der dafür unbeschränkt haftet. In der OHG wird der Gewinn nach Gesellschaftsvertrag bzw. HGB unter den unbeschränkt haftenden Gesellschaftern verteilt. In der KG haftet der Kommanditist nur mit seiner Einlage und erhält seinen vertraglichen Gewinnanteil. Bei GmbH und AG haften die Gesellschafter nicht persönlich; die GmbH schüttet an die Gesellschafter aus, die AG zahlt eine Dividende je Aktie."
+ },
+ {
+  "id": "M09-114",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Handlungsvollmachten & Prokura",
+  "typ": "kreuztabelle",
+  "schwierigkeit": 3,
+  "frage": "Kreuze an, welche Geschäfte die jeweilige Vollmacht abdeckt.",
+  "erklaerungKurz": "Handlungsvollmacht: nur gewöhnliche Geschäfte; Kredite u. Ä. erst mit besonderer Befugnis (§ 54 II). Prokura: auch außergewöhnliche Geschäfte inkl. Kredite; Grundstücke nur mit Sondervollmacht (§ 49 II); Grundlagengeschäfte nie.",
+  "zeilen": [
+   "Gewöhnliche, branchenübliche Geschäfte (z. B. Rohstoffeinkauf)",
+   "Außergewöhnliche Geschäfte des Handelsgewerbes",
+   "Kreditaufnahme (Darlehen)",
+   "Grundstücke veräußern oder belasten",
+   "Die Firma veräußern / den Betrieb einstellen (Grundlagengeschäft)"
+  ],
+  "spalten": [
+   "Generalhandlungsvollmacht (§ 54 HGB)",
+   "Prokura (§§ 48–49 HGB)"
+  ],
+  "loesung": [
+   [
+    true,
+    true
+   ],
+   [
+    false,
+    true
+   ],
+   [
+    false,
+    true
+   ],
+   [
+    false,
+    false
+   ],
+   [
+    false,
+    false
+   ]
+  ],
+  "verweis": "Unser Unterricht – Handlungsvollmachten & Prokura",
+  "erklaerungLang": "Die Generalhandlungsvollmacht (§ 54 HGB) deckt nur die gewöhnlichen, branchenüblichen Geschäfte ab; für Kredite, Wechsel, Prozesse und Grundstücke braucht der Handlungsbevollmächtigte eine besondere Befugnis (§ 54 II). Die Prokura (§§ 48–49 HGB) umfasst auch außergewöhnliche Geschäfte einschließlich Kreditaufnahme. Grundstücke veräußern oder belasten darf auch der Prokurist nur mit Sondervollmacht (§ 49 II); Grundlagengeschäfte wie die Veräußerung der Firma sind beiden Vollmachten entzogen."
+ },
+ {
+  "id": "M09-136",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "kreuztabelle",
+  "schwierigkeit": 2,
+  "frage": "Kreuze an, welche Aufgaben die jeweilige zuständige Stelle im dualen System erfüllt.",
+  "erklaerungKurz": "IHK: Eintragung, Prüfungen, Ausbildungsberater, Schlichtung. Berufsschule: schulischer Teil, Rahmenlehrplan. Gewerbeaufsicht: Jugendarbeitsschutz, Arbeitsschutz.",
+  "zeilen": [
+   "Eintragung des Ausbildungsvertrags",
+   "Durchführung von Zwischen- und Abschlussprüfungen",
+   "Schulischer Unterricht nach Rahmenlehrplan",
+   "Kontrolle der Jugendarbeitsschutz-Regelungen",
+   "Beratung des Betriebs zur Eignung der Ausbildungsstätte",
+   "Schlichtung bei Konflikten"
+  ],
+  "spalten": [
+   "IHK (zuständige Stelle)",
+   "Berufsschule",
+   "Gewerbeaufsichtsamt"
+  ],
+  "loesung": [
+   [
+    true,
+    false,
+    false
+   ],
+   [
+    true,
+    false,
+    false
+   ],
+   [
+    false,
+    true,
+    false
+   ],
+   [
+    false,
+    false,
+    true
+   ],
+   [
+    true,
+    false,
+    false
+   ],
+   [
+    true,
+    false,
+    false
+   ]
+  ],
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)",
+  "erklaerungLang": "Die IHK ist die 'zuständige Stelle' nach BBiG: Sie trägt den Ausbildungsvertrag in das Verzeichnis ein, überwacht mit Ausbildungsberatern die Eignung der Ausbildungsstätte, organisiert Zwischen- und Abschlussprüfung und schlichtet bei Streitigkeiten. Die Berufsschule verantwortet den schulischen Teil des dualen Systems nach Rahmenlehrplan. Das Gewerbeaufsichtsamt überwacht den Jugendarbeitsschutz (JArbSchG)."
+ }
+]

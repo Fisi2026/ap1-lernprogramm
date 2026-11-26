@@ -1,0 +1,222 @@
+[
+ {
+  "id": "M09-008",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Wertschöpfung",
+  "typ": "baukasten",
+  "schwierigkeit": 1,
+  "frage": "Setze die Wertschöpfungskette der Rhaus-Metall-GmbH aus den Bausteinen zusammen. Felder 1–3: Kernprozesse in Flussrichtung; Feld 4: der Unterstützungsprozess, der Server und Software betreut.",
+  "geruest": [
+   "Kernprozesse:  [1]  →  [2]  →  [3]",
+   "Unterstützungsprozess (Server & Software): [4]"
+  ],
+  "ziele": [
+   {
+    "nr": 1,
+    "loesung": "Beschaffung"
+   },
+   {
+    "nr": 2,
+    "loesung": "Produktion"
+   },
+   {
+    "nr": 3,
+    "loesung": "Absatz"
+   },
+   {
+    "nr": 4,
+    "loesung": "IT"
+   }
+  ],
+  "bausteine": [
+   "Beschaffung",
+   "Produktion",
+   "Absatz",
+   "IT",
+   "Jahresabschluss",
+   "Betriebsausflug"
+  ],
+  "erklaerungKurz": "Kernprozesse: Beschaffung → Produktion → Absatz. Die IT ist Unterstützungsprozess – sie schafft keinen Produktwert, hält aber die Kernprozesse am Laufen.",
+  "erklaerungLang": "Die Wertschöpfungskette beschreibt den Fluss vom Einkauf der Vorleistungen über die Leistungserstellung bis zum Verkauf: Beschaffung → Produktion → Absatz. Unterstützungsprozesse wie IT, Personal oder Verwaltung tragen indirekt bei. Jahresabschluss und Betriebsausflug sind keine Stufen der Wertschöpfungskette.",
+  "verweis": "Unser Unterricht – Wertschöpfung"
+ },
+ {
+  "id": "M09-027",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Leitungssysteme",
+  "typ": "baukasten",
+  "schwierigkeit": 1,
+  "frage": "Baue das Organigramm der Rhaus-Metall-GmbH (Stabliniensystem) zusammen: Ordne jeder Ebene die passende Stelle zu.",
+  "geruest": [
+   "Ebene 1 – oberste Leitung: [1]",
+   "Ebene 2 – leitet die Fertigung, hat Weisungsbefugnis: [2]",
+   "Neben Ebene 1 – berät die Leitung, KEINE Weisungsbefugnis: [3]",
+   "Ebene 3 – führt die Arbeit aus: [4]"
+  ],
+  "ziele": [
+   {
+    "nr": 1,
+    "loesung": "Geschäftsführung"
+   },
+   {
+    "nr": 2,
+    "loesung": "Abteilungsleitung Produktion"
+   },
+   {
+    "nr": 3,
+    "loesung": "Stabsstelle Controlling"
+   },
+   {
+    "nr": 4,
+    "loesung": "Maschinenbediener"
+   }
+  ],
+  "bausteine": [
+   "Geschäftsführung",
+   "Abteilungsleitung Produktion",
+   "Stabsstelle Controlling",
+   "Maschinenbediener",
+   "Hauptversammlung",
+   "Aufsichtsrat"
+  ],
+  "erklaerungKurz": "Instanzen (Geschäftsführung, Abteilungsleitung) haben Weisungsbefugnis, die Stabsstelle berät nur, ausführende Stellen setzen um. Hauptversammlung und Aufsichtsrat sind AG-Organe und gehören nicht in dieses GmbH-Organigramm.",
+  "erklaerungLang": "Im Stabliniensystem bleibt die klare Linie des Einliniensystems erhalten; Stäbe (z. B. Controlling) sind Instanzen zugeordnet, bereiten Entscheidungen vor, dürfen aber keine Weisungen erteilen. Die Weisungskette läuft Geschäftsführung → Abteilungsleitung → ausführende Stelle.",
+  "verweis": "Unser Unterricht – Leitungssysteme"
+ },
+ {
+  "id": "M09-073",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Netzplantechnik",
+  "typ": "baukasten",
+  "schwierigkeit": 2,
+  "frage": "Vervollständige die Netzplan-Formeln, indem du die passenden Bausteine einsetzt.",
+  "geruest": [
+   "Vorwärtsrechnung:  FEZ = [1] + Dauer",
+   "Rückwärtsrechnung:  SEZ = SAZ + [2]",
+   "Gesamtpuffer:  GP = [3] − FAZ",
+   "Kritischer Pfad: alle Vorgänge mit GP = [4]"
+  ],
+  "ziele": [
+   {
+    "nr": 1,
+    "loesung": "FAZ"
+   },
+   {
+    "nr": 2,
+    "loesung": "Dauer"
+   },
+   {
+    "nr": 3,
+    "loesung": "SAZ"
+   },
+   {
+    "nr": 4,
+    "loesung": "0"
+   }
+  ],
+  "bausteine": [
+   "FAZ",
+   "Dauer",
+   "SAZ",
+   "0",
+   "FEZ",
+   "1"
+  ],
+  "erklaerungKurz": "FEZ = FAZ + Dauer (vorwärts), SEZ = SAZ + Dauer (rückwärts), GP = SAZ − FAZ; auf dem kritischen Pfad ist der Gesamtpuffer 0.",
+  "erklaerungLang": "Die Vorwärtsrechnung liefert die frühesten Zeitpunkte (FAZ/FEZ), die Rückwärtsrechnung die spätesten (SAZ/SEZ). Der Gesamtpuffer GP = SAZ − FAZ (gleichwertig SEZ − FEZ) gibt an, wie weit sich ein Vorgang verschieben darf, ohne das Projektende zu gefährden. Vorgänge ohne Puffer (GP = 0) bilden den kritischen Pfad und bestimmen die Projektdauer.",
+  "verweis": "Unser Unterricht – Netzplantechnik"
+ },
+ {
+  "id": "M09-129",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "baukasten",
+  "schwierigkeit": 3,
+  "frage": "Die Rhaus-Metall-GmbH benötigt neun Büro-PCs und schreibt eine Anfrage an einen Händler. Setze die Anfrage aus den passenden Bausteinen zusammen (Inhalte nach Lehrbuch: Grund, Bedarf nach Menge und Qualität, Konditionen, Liefertermin).",
+  "geruest": [
+   "Sehr geehrte Damen und Herren,",
+   "Einleitung – warum wir schreiben: [1]",
+   "Was wir benötigen (Menge und Qualität): [2]",
+   "Welche Konditionen wir erfragen: [3]",
+   "Zeitliche Vorgabe: [4]",
+   "Mit freundlichen Grüßen – Rhaus-Metall-GmbH"
+  ],
+  "ziele": [
+   {
+    "nr": 1,
+    "loesung": "für die Ausstattung unserer neuen Büroarbeitsplätze suchen wir einen Lieferanten."
+   },
+   {
+    "nr": 2,
+    "loesung": "Wir benötigen neun Büro-PCs (16 GB RAM, 512 GB SSD, 27-Zoll-Monitor)."
+   },
+   {
+    "nr": 3,
+    "loesung": "Bitte nennen Sie uns Ihre Preise sowie Ihre Lieferungs- und Zahlungsbedingungen."
+   },
+   {
+    "nr": 4,
+    "loesung": "Die Lieferung sollte bis zum 15.09. erfolgen."
+   }
+  ],
+  "bausteine": [
+   "für die Ausstattung unserer neuen Büroarbeitsplätze suchen wir einen Lieferanten.",
+   "Wir benötigen neun Büro-PCs (16 GB RAM, 512 GB SSD, 27-Zoll-Monitor).",
+   "Bitte nennen Sie uns Ihre Preise sowie Ihre Lieferungs- und Zahlungsbedingungen.",
+   "Die Lieferung sollte bis zum 15.09. erfolgen.",
+   "Hiermit bestellen wir verbindlich neun Büro-PCs zum Listenpreis.",
+   "Wir mahnen die ausstehende Lieferung an und setzen eine Nachfrist."
+  ],
+  "erklaerungKurz": "Eine Anfrage nennt den Grund, den Bedarf nach Menge und Qualität, erfragt Preise und Lieferungs-/Zahlungsbedingungen und nennt ggf. den Liefertermin. Sie ist unverbindlich – eine verbindliche Bestellung oder Mahnung gehört nicht hinein.",
+  "erklaerungLang": "Nach dem Lehrbuch (Beschaffungsplanung, W10c) enthält die Anfrage: den Grund der Anfrage, die benötigte Hardware nach Quantität und Qualität, die Frage nach Preisen sowie Lieferungs- und Zahlungsbedingungen und ggf. den gewünschten Liefertermin. Es sollten mindestens drei Anfragen an verschiedene Anbieter verschickt werden; rechtlich ist die Anfrage unverbindlich und bekundet nur ein Kaufinteresse (W10e).",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot"
+ },
+ {
+  "id": "M09-146",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "baukasten",
+  "schwierigkeit": 2,
+  "frage": "Vervollständige die Niederschrift des Ausbildungsvertrags nach § 11 BBiG: Ordne jedem Themenfeld den vorgeschriebenen Vertragsbestandteil zu. Zwei Bausteine sind unzulässig und bleiben übrig.",
+  "geruest": [
+   "Zeitlicher Rahmen: [1]",
+   "Geld: [2]",
+   "Erholung: [3]",
+   "Ende des Verhältnisses: [4]"
+  ],
+  "ziele": [
+   {
+    "nr": 1,
+    "loesung": "Beginn und Dauer der Berufsausbildung"
+   },
+   {
+    "nr": 2,
+    "loesung": "Zahlung und Höhe der Vergütung"
+   },
+   {
+    "nr": 3,
+    "loesung": "Dauer des Urlaubs"
+   },
+   {
+    "nr": 4,
+    "loesung": "Voraussetzungen der Kündigung"
+   }
+  ],
+  "bausteine": [
+   "Beginn und Dauer der Berufsausbildung",
+   "Zahlung und Höhe der Vergütung",
+   "Dauer des Urlaubs",
+   "Voraussetzungen der Kündigung",
+   "Pflicht, nach der Ausbildung drei Jahre im Betrieb zu bleiben",
+   "Vertragsstrafe bei vorzeitiger Kündigung durch den Azubi"
+  ],
+  "erklaerungKurz": "§ 11 BBiG schreibt u. a. Beginn/Dauer, Vergütung, Urlaub und Kündigungsvoraussetzungen vor. Bindungs- und Vertragsstrafenklauseln zulasten des Azubis sind nichtig (§ 12 BBiG).",
+  "erklaerungLang": "Die Niederschrift muss nach § 11 BBiG u. a. enthalten: Art, sachliche und zeitliche Gliederung und Ziel der Ausbildung, Beginn und Dauer, tägliche Ausbildungszeit, Probezeit, Vergütung, Urlaub und Kündigungsvoraussetzungen. Vereinbarungen, die den Azubi nach der Ausbildung binden oder ihm Vertragsstrafen auferlegen, sind nach § 12 BBiG nichtig – die beiden übrigen Bausteine dürften gar nicht im Vertrag stehen.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ }
+]

@@ -1,0 +1,62 @@
+{
+  "quelle": "START_PROMPT.md",
+  "archiv": "START_PROMPT_ARCHIV.md",
+  "ueberschrift": "## ROTATION 2026-09-10 - Kopf war auf 600 von 600 Zeilen (Hinweisgrenze erreicht)",
+  "bloecke": [
+    {
+      "von": 64,
+      "bis": 69,
+      "ersatz": "# ► **E3 (185 `verweis`-Ziele), DIE DOPPELTE FRAGE UND DIE M09-AUFLÖSUNG SIND DURCH** (24./25.08.,\n#   04.08.) – Volltext im Archiv. **Was weiter gilt:** `KLAUSUR_TERMIN` in `app_state.js` ist die\n#   EINZIGE Quelle des Termins (`null` = keine Countdown-Zeile) · **wer M09 anfasst, ändert\n#   `tests/_m09fixture.js`, nicht die Suiten einzeln** · ⚠️ **eine Frage kann redundant und trotzdem\n#   Bestand sein – vor jeder Löschung fragen „was hängt daran\".**\n"
+    },
+    {
+      "von": 74,
+      "bis": 77,
+      "ersatz": "# ✅ **TRENNSCHÄRFE-RUNDE DURCH (09.09.): 52 → 30 → 2.** Nicht nachprüfen. Zwei Lehren (Archiv,\n#   `BUILD_LOG` 09.09.): **die Kür ist die zweite Hälfte der Schwelle** · **ein Pflichtbegriff wirkt\n#   über seinen STAMM** (`Zeitbox`→`zeit`) – Mehrwort scharf, kurze Stämme stumpf.\n"
+    },
+    {
+      "von": 108,
+      "bis": 118,
+      "ersatz": "#   **SCHRITT 2: Q1–Q3 SIND DURCH; DIE EINE OFFENE ETAPPE IST W1 (Abschnitt 3).** Protokolle:\n#      `BEFUNDE_*.md`, `PLAENE_ARCHIV.md`, Archiv. **Nicht neu anfangen, nicht nachpruefen.**\n#      ⛔ **Der Wächter für den Widerspruch Lehrtext ↔ Pool ist am 06./07.09. als G2 GEMESSEN UND\n#      VERWORFEN.** Nicht erneut vorschlagen. ⚠️ **A4 IST NICHT MEHR KNAPP** (09.09. nachgerechnet)\n#      – ⛔ **Zahl NICHT hier**: erzeugter Block in `SORTIERUNG_PRUEFUNGSORDNUNG.md`,\n#      nachrechnen mit `tools/gebiete_stand.py`.\n"
+    },
+    {
+      "von": 141,
+      "bis": 142,
+      "ersatz": "# ✅ **ZURÜCK-KNOPF IN M09 IST GEBAUT (30.07.).** Die sechs Sperren nur in `unterrichtZiehe()`,\n#   beim Blättern NICHT fortschreiben. Einzelheiten: Archiv.\n"
+    },
+    {
+      "von": 147,
+      "bis": 148,
+      "ersatz": "# ► **ETAPPE 3 (M01–M03, M07, M08) UND DER POOLWEITE LAENGENGRIFF SIND DURCH** – **nicht nachpruefen** (`ETAPPE3_M0X_BEFUNDE.md`).\n"
+    },
+    {
+      "von": 223,
+      "bis": 232,
+      "ersatz": "# ⛔⛔ **DIESE SIEBEN SIND GEMESSEN – NICHT WIEDERHOLEN, NICHT ERNEUT VORSCHLAGEN** (Herleitungen:\n#   Archiv, `BEFUNDE_*.md`): **1.** die 96 `svg`-Fragen (07.09.) · **2.** Katalog-Abdeckung und\n#   `--streng` (07.09.) · **3.** der Wächter Lehrtext↔Pool (07.09. verworfen, ~200 Ausnahmen nötig) ·\n#   **4.** ein Dubletten-Filter über Wortüberlappung (09.09. verworfen – **er misst Vokabular, nicht\n#   Aussage**; das kann nur `gradeTeilpunkte`, und `test_freitext` tut es an allen 15006 Paaren) ·\n#   **5.** „A4 ist knapp\" (09.09. widerlegt) · **6.** der Stufe-4-Vorrat (09.09.: kein Ausbau nötig,\n#   `BEFUNDE_LERNFLUSS.md` 4b) · **7.** **die Modul-Abweichung der Lernfluss-Probe** (10.09.: M08\n#   −5,9 Punkte sind der SOLLWERT der Relevanzgewichtung – Gegenprobe `--ohne-relevanz` → ±0,3).\n"
+    },
+    {
+      "von": 233,
+      "bis": 235,
+      "ersatz": "# ✅ **`lueckentext` AUSGEBAUT (09.09.): 6 → 12** – acht AP1-Themen standen auf null frei\n#   abrufenden Aufgaben. **Nicht nachprüfen.**\n"
+    },
+    {
+      "von": 236,
+      "bis": 247,
+      "ersatz": "# ►►► **DIE FÜNF LEHREN DES 07.09. GELTEN WEITER – WORTLAUT UND HERLEITUNG: ARCHIV; Rezepte und\n#   Zahlen: `BEFUNDE_LERNUNTERLAGE.md` (B136–B138).** Kurz: **1.** Was ein Werkzeug nicht\n#   AUSDRUCKT, ist nicht geprüft – auch wenn es die Zahl nennt. **2.** Lehrtext gegen die\n#   MUSTERLÖSUNG schreiben, nicht gegen den Fragetext. **3.** Wer einen fehlenden Begriff nachträgt,\n#   prüft die Nachbarn desselben Themas mit. **4.** **Jeder neue Filter braucht Gegenproben mit\n#   bekannter Antwort VOR dem ersten Urteil.** **5.** „Der Begriff steht in einem anderen Abschnitt\"\n#   ≠ „der Verweis ist falsch\". ⛔⛔ Ein Wächter daraus ist am 07.09. gemessen und VERWORFEN – nicht\n#   erneut vorschlagen. ✅ **M08 hat ABSICHTLICH keine Kursdatei** (24.08.) – wer dort misst, misst einen Entscheid.\n"
+    },
+    {
+      "von": 294,
+      "bis": 298,
+      "ersatz": "#   1. ✅ **SICHTPRÜFUNGEN ERLEDIGT (07.09.): ALLE 96 BILDFRAGEN GERENDERT UND ANGESEHEN**\n#      (`BEFUNDE_BILDFRAGEN.md` §3). ⛔⛔ **Alle vier SVG-Wächter waren dabei grün – sie prüfen nie,\n#      ob das Bild die Frage BEANTWORTET.** ►► **WER EINE BILDFRAGE PRÜFT, RENDERT SIE**\n#      (`python3 tools/svg_bilder.py --id <ID>`; ⚠️ ggf. `pip3 install cairosvg`).\n"
+    },
+    {
+      "von": 301,
+      "bis": 305,
+      "ersatz": "#   ► ✅ **37 FIRMENNAMEN AUF UMLAUTE GEZOGEN (25.08.).** Messen `pool_query.js firmen` (liest\n#      `fragen.js`, NICHT `faelle.js`), setzen `tools/firmen_umlaut_setzen.py`; `check.sh` 4e3\n#      meldet jeden Rückfall als FEHLER. ⚠️ Ausnahmen stehen sichtbar im Werkzeug.\n"
+    },
+    {
+      "von": 316,
+      "bis": 319,
+      "ersatz": "# **NUTZER-ENTSCHEIDE VOM 27./28.07.2026 – NICHT ERNEUT VORTRAGEN.** Volltext im Archiv. Kurz:\n#   „IHK-Standard\" = **DIN 69901** · Eisenhower im Feinthema Risiko & Stakeholder · Umlaute auch in\n#   Firmennamen · Längengriff abgeschlossen · CI auf `@v6` · Positionsverweise als Inhaltszitat.\n"
+    }
+  ]
+}

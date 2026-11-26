@@ -1,0 +1,3 @@
+{
+ "tools/e3_gegenprobe.py:188": {"typen": ["str", "int", "int", "int"], "stern": true, "grund": "m = Schluessel von jeM = e[0][:3] mit e[0] = f['id'] (Pool-Schema tools/schema/frage.schema.json: id ist string, Pattern M0x-nnn; check.sh 1c prueft per ajv) - Slice von str; jeM-Werte sind [0,0,0] mit += 1 (Z. 185/186) - drei int"}
+}

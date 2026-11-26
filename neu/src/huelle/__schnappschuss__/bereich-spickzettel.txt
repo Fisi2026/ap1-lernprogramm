@@ -1,0 +1,38 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel" [current=page]
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Spickzettel" [Ebene 1]
+  searchbox "Im Spickzettel suchen"
+  heading "AP1-Spickzettel – Die wichtigsten Fakten, Formeln und Merksätze" [Ebene 2]
+    button "AP1-Spickzettel – Die wichtigsten Fakten, Formeln und Merksätze" [expanded=true]
+  region "AP1-Spickzettel – Die wichtigsten Fakten, Formeln und Merksätze"
+  heading "Modul 01 – Projektmanagement" [Ebene 2]
+    button "Modul 01 – Projektmanagement"
+  heading "Modul 02 – Kundenberatung, Kommunikation, Marketing" [Ebene 2]
+    button "Modul 02 – Kundenberatung, Kommunikation, Marketing"
+  heading "Modul 03 – IT-Systeme, Hardware, Wirtschaftlichkeit" [Ebene 2]
+    button "Modul 03 – IT-Systeme, Hardware, Wirtschaftlichkeit"
+  heading "Modul 04 – IT-Lösungen, Software, Programmierung" [Ebene 2]
+    button "Modul 04 – IT-Lösungen, Software, Programmierung"
+  heading "Modul 05 – Qualitätssicherung" [Ebene 2]
+    button "Modul 05 – Qualitätssicherung"
+  heading "Modul 06 – IT-Sicherheit und Datenschutz" [Ebene 2]
+    button "Modul 06 – IT-Sicherheit und Datenschutz"
+  heading "Modul 07 – Leistungserbringung und Auftragsabschluss" [Ebene 2]
+    button "Modul 07 – Leistungserbringung und Auftragsabschluss"
+  heading "Die 10 häufigsten Rechenaufgaben-Typen der AP1" [Ebene 2]
+    button "Die 10 häufigsten Rechenaufgaben-Typen der AP1"

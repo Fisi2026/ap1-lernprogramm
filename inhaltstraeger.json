@@ -1,0 +1,59 @@
+{
+ "_zweck": "Welche inhaltliche Pruefung liest welchen Inhaltstraeger - und wo bewusst nicht. Gelesen wird die Datei von tools/pool_query.js (Kommando 'abdeckung') und von check.sh Block 4e7.",
+
+ "_anlass": "Am 28.08.2026 trat FUENFMAL derselbe Fehler auf: eine Pruefung meldet gruen ueber ein Gebiet, das sie nicht betritt. (1) pool_query.js las faelle.js nicht - der BITV-Fehler stand neben 'ok BITV: 0'. (2) test_didaktik.js las faelle.js nicht - dort hatten 10 von 14 mc-Aufgaben den Laengen-Tell. (3) apply_batch.py kann pool_faelle.json gar nicht lesen. (4) KEIN inhaltlicher Waechter las die 5207 Zeilen Lernunterlagen - dort standen Pay-per-Use und GPL falsch, beides Fehler, die im Pool bereits korrigiert waren. (5) Der begriffe-Waechter kannte GPL nicht, obwohl der Fehler am selben Tag in FALL-01 korrigiert wurde - vier weitere Fundstellen blieben unsichtbar.",
+
+ "_regel": "JEDE ZELLE MUSS AUSGEFUELLT SEIN. Wer einen Inhaltstraeger anlegt oder eine inhaltliche Pruefung baut, traegt jede Kombination ein - entweder 'gelesen' oder 'nein: <Grund>'. Eine fehlende Zelle ist ein FEHLER, kein Hinweis. Grund: Eine Luecke, die niemand ausspricht, faellt niemandem auf.",
+
+ "_warnung": "'gelesen' ist eine PRUEFBARE BEHAUPTUNG, keine Notiz. Das Kommando 'abdeckung' zaehlt nach, ob der Bestand, den die Pruefung liest, tatsaechlich Eintraege mit dem id_muster des Traegers enthaelt. Wer eine Zelle auf 'gelesen' setzt, ohne den Lader zu aendern, bekommt einen Fehler.",
+
+ "_grenze": "Die Matrix prueft ABDECKUNG, nicht Qualitaet. Dass eine Pruefung einen Traeger liest, sagt nichts darueber, ob sie darin das Richtige sucht. Der begriffe-Waechter las den Fragenpool die ganze Zeit - und kannte GPL trotzdem nicht.",
+
+ "bestaende": {
+  "F": "nur die Fragen (pool_m*.json) - strukturelle Kommandos (idcheck, freeids, coverage, themen, typen, duenn, stufe, zufall)",
+  "B": "Fragen + Fall-Teilaufgaben - Laengen- und Verweispruefungen",
+  "T": "Fragen + Fall-Teilaufgaben + Lernunterlagen - alle Textpruefungen"
+ },
+
+ "traeger": [
+  { "name": "pool_m*.json",     "id_muster": "^M0\\d-\\d{3}$",     "art": "Fragenpool (seit N29 Teil 2 direkt, ueber tools/pool_laden.js)" },
+  { "name": "pool_faelle.json", "id_muster": "^FALL-\\d\\d-t\\d$", "art": "Fall-Teilaufgaben (seit N29 Teil 2 direkt, ueber tools/pool_laden.js)" },
+  { "name": "lernunterlagen",   "id_muster": "^(0\\d|99)#",        "art": "0*.md und 99_Spickzettel.md, je Abschnitt ein Eintrag" },
+  { "name": "tabellen/abkuerzungen.ts",  "id_muster": null,                 "art": "Abkuerzungsverzeichnis, eigene Struktur (kurz/lang/def/kat)" },
+  { "name": "tabellen/spickzettel.ts",   "id_muster": null,                 "art": "erzeugt von tools/build_spick.py aus 99_Spickzettel.md (neu/src/kern/tabellen/, seit N34 T6b)" }
+ ],
+
+ "matrix": {
+  "pool_m*.json": {
+   "begriffe": "gelesen", "zitate": "gelesen", "firmen": "gelesen",
+   "laengen": "gelesen", "verweise": "gelesen"
+  },
+  "pool_faelle.json": {
+   "begriffe": "gelesen", "zitate": "gelesen", "firmen": "gelesen",
+   "laengen": "gelesen", "verweise": "gelesen"
+  },
+  "lernunterlagen": {
+   "begriffe": "gelesen", "zitate": "gelesen", "firmen": "gelesen",
+   "laengen": "nein: Lehrtext hat keine Antwortoptionen - es gibt nichts zu messen",
+   "verweise": "nein: die Lernunterlagen SIND das Verweisziel. Dass ein verwiesener Abschnitt existiert, prueft tools/e3_gegenprobe.py"
+  },
+  "tabellen/abkuerzungen.ts": {
+   "begriffe": "nein: neu/src/kern/tabellen/daten.gleichheit.test.ts prueft Form und Eindeutigkeit jedes Eintrags (seit N34 T6c)",
+   "zitate": "nein: enthaelt keine Gesetzestexte, nur Kurz/Lang/Definition",
+   "firmen": "nein: enthaelt keine Beispielfirmen",
+   "laengen": "nein: keine Antwortoptionen",
+   "verweise": "nein: keine Abschnittsverweise"
+  },
+  "tabellen/spickzettel.ts": {
+   "begriffe": "nein: erzeugt aus 99_Spickzettel.md, ueber den Traeger lernunterlagen abgedeckt",
+   "zitate": "nein: erzeugt aus 99_Spickzettel.md, ueber den Traeger lernunterlagen abgedeckt",
+   "firmen": "nein: erzeugt aus 99_Spickzettel.md, ueber den Traeger lernunterlagen abgedeckt",
+   "laengen": "nein: keine Antwortoptionen",
+   "verweise": "nein: keine Abschnittsverweise"
+  }
+ },
+
+ "pruefungen": {
+  "begriffe": "T", "zitate": "T", "firmen": "T", "laengen": "B", "verweise": "B"
+ }
+}

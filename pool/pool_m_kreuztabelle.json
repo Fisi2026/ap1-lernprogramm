@@ -1,0 +1,279 @@
+[
+  {
+    "id": "M03-932",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "OSI-Modell & Protokolle",
+    "gebiet": "A3",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 2,
+    "frage": "Ordne jedes Protokoll seiner OSI-Schicht zu – kreuze die zutreffende Schicht an.",
+    "verweis": "Modul 03, Abschnitt 3.2 – Netzwerkprotokolle und OSI-Modell",
+    "erklaerungKurz": "IP liegt auf Schicht 3 (Vermittlung), TCP und UDP auf Schicht 4 (Transport), HTTP und DNS auf Schicht 7 (Anwendung).",
+    "erklaerungLang": "Die Zuordnung von Protokollen zu Schichten ist Prüfungsstoff, der sich über die Aufgabe der jeweiligen Schicht erschließen lässt.\n• IP auf Schicht 3 (Vermittlung): Es adressiert Netze und Hosts und entscheidet über den Weg. Alles, was mit Routing und IP-Adressen zu tun hat, liegt hier.\n• TCP und UDP auf Schicht 4 (Transport): Sie adressieren nicht Geräte, sondern PROZESSE – über Portnummern. TCP verbindungsorientiert mit Bestätigung, UDP verbindungslos ohne.\n• HTTP und DNS auf Schicht 7 (Anwendung): Sie definieren, was die Daten BEDEUTEN – eine Webseitenanfrage, eine Namensauflösung. Sie nutzen die Transportschicht, ohne sich um Wegewahl zu kümmern.\n• Nützliche Prüffrage: Adressiert das Protokoll ein Netz (L3), einen Prozess (L4) oder einen Inhalt (L7)?\n• Achtung bei DNS: Es ist ein Anwendungsprotokoll, obwohl es für andere Anwendungen arbeitet – die Schicht richtet sich nach der eigenen Aufgabe, nicht nach dem Nutzer.\nMerke: IP kennt Adressen, TCP und UDP kennen Ports, HTTP und DNS kennen Inhalte.",
+    "zeilen": [
+      "IP",
+      "TCP",
+      "HTTP",
+      "UDP",
+      "DNS"
+    ],
+    "spalten": [
+      "Vermittlung (L3)",
+      "Transport (L4)",
+      "Anwendung (L7)"
+    ],
+    "loesung": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        true
+      ],
+      [
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        true
+      ]
+    ]
+  },
+  {
+    "id": "M03-933",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 2,
+    "frage": "Auf welcher OSI-Schicht arbeitet die jeweilige Netzwerkkomponente? Kreuze an.",
+    "verweis": "Modul 03, Abschnitt 3.1 und 3.2 – Netzwerkkomponenten und ihre OSI-Schichten",
+    "erklaerungKurz": "Hub und Repeater arbeiten auf Schicht 1 (Bitübertragung), der Switch auf Schicht 2 (MAC-Adressen), der Router auf Schicht 3 (IP-Adressen).",
+    "erklaerungLang": "Netzwerkkomponenten lassen sich danach einordnen, WORAUF sie beim Weiterleiten schauen.\n• Hub und Repeater auf Schicht 1: Sie verstärken und verteilen Signale, ohne den Inhalt zu lesen. Ein Hub schickt jedes Signal an alle Ports – daher Kollisionen und geteilte Bandbreite.\n• Switch auf Schicht 2: Er liest MAC-Adressen, führt eine Adresstabelle und leitet gezielt an den richtigen Port weiter. Das trennt Kollisionsdomänen und gibt jedem Port die volle Bandbreite.\n• Router auf Schicht 3: Er liest IP-Adressen und verbindet verschiedene NETZE. Er trennt damit auch Broadcast-Domänen, was der Switch nicht tut.\n• Die Faustregel: Schicht 1 verstärkt, Schicht 2 verteilt innerhalb eines Netzes, Schicht 3 verbindet Netze.\nMerke: Signal ohne Adresse ist L1, MAC-Adresse ist L2, IP-Adresse ist L3.",
+    "zeilen": [
+      "Hub",
+      "Switch",
+      "Router",
+      "Repeater"
+    ],
+    "spalten": [
+      "Bitübertragung (L1)",
+      "Sicherung (L2)",
+      "Vermittlung (L3)"
+    ],
+    "loesung": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        true
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ]
+  },
+  {
+    "id": "M06-942",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Schutzziele (CIA)",
+    "gebiet": "A3",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 2,
+    "frage": "Welches Schutzziel wird durch die jeweilige Maßnahme primär geschützt? Kreuze an.",
+    "erklaerungKurz": "Verschlüsselung und Zugriffsberechtigungen sichern die Vertraulichkeit, Signaturen/Hashwerte die Integrität, redundante Server die Verfügbarkeit.",
+    "erklaerungLang": "Jede Maßnahme lässt sich einem der drei Schutzziele zuordnen, wenn man fragt: Was wäre der Schaden, wenn sie fehlt?\n• Verschlüsselung schützt die VERTRAULICHKEIT: Ohne sie könnte ein Unbefugter mitlesen. Sie verhindert nicht, dass Daten verändert werden – dafür braucht es zusätzlich Integritätsschutz.\n• Zugriffsberechtigungen nach Need-to-know schützen ebenfalls die Vertraulichkeit: Wer die Daten nicht braucht, sieht sie nicht.\n• Digitale Signatur und Hashwert schützen die INTEGRITÄT: Sie machen jede nachträgliche Änderung erkennbar. Die Signatur belegt zusätzlich die Herkunft.\n• Redundante Server, Cluster und RAID schützen die VERFÜGBARKEIT: Fällt eine Komponente aus, übernimmt die andere. ⚠️ RAID ist kein Backup – es schützt gegen Hardwareausfall, nicht gegen Löschen oder Verschlüsselungstrojaner.\n• Die drei Ziele stehen teils im Konflikt: Starke Verschlüsselung kann die Verfügbarkeit gefährden, wenn der Schlüssel verloren geht.\nMerke: Vertraulichkeit heißt nicht lesbar, Integrität heißt nicht unbemerkt änderbar, Verfügbarkeit heißt erreichbar.",
+    "verweis": "Modul 06, Abschnitt 6.1 CIA-Schutzziele",
+    "zeilen": [
+      "Datenverschlüsselung",
+      "Redundante Server (Cluster/RAID)",
+      "Digitale Signatur / Hashwert",
+      "Zugriffsberechtigungen (Need-to-know)"
+    ],
+    "spalten": [
+      "Vertraulichkeit",
+      "Integrität",
+      "Verfügbarkeit"
+    ],
+    "loesung": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true
+      ],
+      [
+        false,
+        true,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ]
+  },
+  {
+    "id": "M07-931",
+    "pruefungsteil": "AP1",
+    "modul": "M07",
+    "thema": "Vertragsarten",
+    "gebiet": "A5",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 3,
+    "frage": "Welche Vertragsart passt zum jeweiligen Fall? Kreuze an.",
+    "erklaerungKurz": "Kaufvertrag = Übereignung einer Sache; Werkvertrag = geschuldeter Erfolg (lauffähige Software, funktionierende Reparatur); Dienstvertrag = Tätigkeit nach Aufwand ohne Erfolgsgarantie.",
+    "erklaerungLang": "Die Vertragsart entscheidet sich an einer einzigen Frage: Was ist geschuldet – eine Sache, ein Erfolg oder eine Tätigkeit?\n• Kaufvertrag (§ 433 BGB): Geschuldet ist die Übereignung einer Sache. Die Lieferung von 10 Notebooks ist der Standardfall – der Verkäufer muss übergeben und Eigentum verschaffen.\n• Werkvertrag (§ 631 BGB): Geschuldet ist ein ERFOLG. Die Individualsoftware muss lauffähig sein, der Drucker nach der Reparatur funktionieren. Bleibt der Erfolg aus, gibt es keinen Vergütungsanspruch – und es folgt eine Abnahme.\n• Dienstvertrag (§ 611 BGB): Geschuldet ist die TÄTIGKEIT, nicht ihr Ergebnis. Laufende IT-Betreuung nach Aufwand wird bezahlt, auch wenn eine Störung nicht behoben werden konnte.\n• Der praktische Unterschied liegt im Risiko: Beim Werkvertrag trägt es der Auftragnehmer, beim Dienstvertrag der Auftraggeber. Deshalb ist die Einordnung im Streitfall die erste Frage.\n• Prüfsatz für die Klausur: Steht im Sachverhalt „garantiert\", „funktionsfähig\" oder „fertiggestellt\", ist es Werkvertrag; steht dort „nach Aufwand\" oder „laufende Betreuung\", ist es Dienstvertrag.\nMerke: Sache = Kauf, Erfolg = Werk, Tätigkeit = Dienst.",
+    "verweis": "Modul 07, Abschnitt 7.1 – Übersichtstabelle aller Vertragsarten",
+    "zeilen": [
+      "Lieferung von 10 Notebooks",
+      "Erstellung einer lauffähigen Individualsoftware (Erfolg geschuldet)",
+      "Laufende IT-Betreuung nach Aufwand (kein Erfolg geschuldet)",
+      "Reparatur eines Druckers mit garantierter Funktion"
+    ],
+    "spalten": [
+      "Kaufvertrag",
+      "Werkvertrag",
+      "Dienstvertrag"
+    ],
+    "loesung": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        true
+      ],
+      [
+        false,
+        true,
+        false
+      ]
+    ]
+  },
+  {
+    "id": "M01-954",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Scrum & Wasserfall",
+    "gebiet": "A1",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 2,
+    "frage": "Ordne jedes Merkmal dem passenden Vorgehensmodell zu.",
+    "erklaerungKurz": "Wasserfall arbeitet in festen, aufeinanderfolgenden Phasen mit vorab vollständig fixierten Anforderungen; Scrum liefert inkrementell in Sprints mit Rollen wie Product Owner und Scrum Master.",
+    "erklaerungLang": "Die Tabelle trennt zwei Grundhaltungen: Wasserfall plant vorab vollständig, Scrum lernt unterwegs.\n• Feste, sequenzielle Phasen sind das Kennzeichen des Wasserfalls: Analyse, Entwurf, Umsetzung, Test, Abnahme – jede Phase endet mit einem Dokument, erst danach beginnt die nächste.\n• Anforderungen vorab vollständig festgelegt: ebenfalls Wasserfall. Das funktioniert, wenn das Ziel stabil ist (Bauprojekt, Zertifizierung), und scheitert, wenn sich Anforderungen während der Laufzeit ändern.\n• Sprints mit inkrementellen Ergebnissen sind Scrum: Nach jedem Sprint von zwei bis vier Wochen steht etwas Benutzbares, an dem sich die weitere Planung ausrichtet.\n• Daily Standup und Product Backlog sind Scrum-Artefakte beziehungsweise -Termine; das Backlog wird laufend neu priorisiert statt einmal festgeschrieben.\n• Product Owner und Scrum Master sind Scrum-Rollen: Der Product Owner verantwortet das WAS und die Priorisierung, der Scrum Master das WIE des Prozesses. Einen Projektleiter im klassischen Sinn gibt es in Scrum nicht.\nMerke: Wasserfall legt am Anfang alles fest, Scrum legt am Anfang nur die nächsten Wochen fest.",
+    "verweis": "Modul 01, Abschnitt 1.1 – Wasserfallmodell vs. SCRUM",
+    "zeilen": [
+      "Feste, sequenzielle Phasen",
+      "Sprints mit inkrementellen Ergebnissen",
+      "Anforderungen zu Projektbeginn vollständig festgelegt",
+      "Daily Standup und Product Backlog",
+      "Rollen: Product Owner & Scrum Master"
+    ],
+    "spalten": [
+      "Scrum (agil)",
+      "Wasserfall (klassisch)"
+    ],
+    "loesung": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ]
+  },
+  {
+    "id": "M04-921",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Lizenzen & Urheberrecht",
+    "gebiet": "A2",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 2,
+    "frage": "Ordne jede Software bzw. Lizenz dem passenden Lizenztyp zu.",
+    "erklaerungKurz": "GPL und Apache License 2.0 sind Open-Source-Lizenzen; Microsoft Windows und Adobe Photoshop sind proprietäre, kommerzielle Software.",
+    "erklaerungLang": "Der Unterschied liegt nicht im Preis, sondern in den Rechten, die der Nutzer am Quellcode erhält.\n• GPL: Open Source mit Copyleft. Wer GPL-Code verändert und weitergibt, muss den Quellcode unter derselben Lizenz offenlegen. Das ist der Grund, warum GPL-Code in geschlossenen Produkten heikel ist.\n• Apache License 2.0: ebenfalls Open Source, aber permissiv – der Code darf auch in proprietären Produkten verwendet werden, solange Lizenz- und Urheberhinweise erhalten bleiben. Zusätzlich enthält sie eine ausdrückliche Patentklausel.\n• Microsoft Windows und Adobe Photoshop: proprietär. Der Quellcode bleibt geschlossen, der Kunde erwirbt ein Nutzungsrecht nach den Bedingungen des Herstellers – bei Photoshop im Abonnement, also zeitlich befristet.\n• Wichtige Abgrenzung: Open Source heißt nicht kostenlos und proprietär nicht zwingend kostenpflichtig. Freeware ist kostenlos, aber ohne Quellcode – also proprietär.\nMerke: Entscheidend ist der Zugang zum Quellcode und das Recht zur Weitergabe, nicht der Kaufpreis.",
+    "verweis": "Modul 04, Abschnitt 4.4: Lizenzmodelle und Urheberrecht",
+    "zeilen": [
+      "GPL (GNU General Public License)",
+      "Microsoft Windows",
+      "Apache License 2.0",
+      "Adobe Photoshop (Abo)"
+    ],
+    "spalten": [
+      "Open-Source / frei",
+      "Proprietär / kommerziell"
+    ],
+    "loesung": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ]
+  }
+]

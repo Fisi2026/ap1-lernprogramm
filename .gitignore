@@ -1,0 +1,87 @@
+backup_*.zip
+*.pdf
+node_modules/
+# 26.09.2026: Manifest und Lockfile der Pruefwerkzeuge liegen im Repo (CI baut nach Lockfile)
+.tooling/*
+!.tooling/package.json
+!.tooling/package-lock.json
+
+*.tmp
+
+.git_broken_old/
+*.tmp
+
+# Fremd-/Temp-Archive der Sandbox (Zufallsnamen, gehoeren nicht zum Projekt)
+zigbePZQ
+ziOrM0Wa
+
+# Generierte Befund-Logs der Helfer-Skripte (ci2.sh / diagnose.bat) – nicht ins Repo
+ci_log.txt
+diagnose_log.txt
+
+# Arbeitsdoku, bleibt lokal
+ABSTIMMUNG_R3.md
+
+# Python-Zwischenstaende der tools/-Skripte
+__pycache__/
+*.pyc
+
+# FB-R3/Sonder-Task „Sortierung nach Prüfungsordnung" (2026-07-23): Referenz-Artefakte im
+# Projektordner, damit sie ein neuer Chat findet. Binär/Vorschau NICHT ins Repo (die git-freundliche
+# Referenz ist SORTIERUNG_PRUEFUNGSORDNUNG.md; die Zuordnung selbst ist Single Source in logik.js).
+*.xlsx
+themenauswahl_preview.html
+onboarding_preview.html
+erklaerung_preview.html
+erklaerung_preview_m02.html
+erklaerung_preview_m04.html
+erklaerung_preview_m05.html
+erklaerung_preview_m06.html
+erklaerung_preview_m07.html
+erklaerung_preview_m08.html
+befunde_korrekturen.html
+punkt9_kandidaten.html
+punkt9_sortierung.html
+m06_304_ecdhe_sichtpruefung.html
+m04_korrekturen.html
+etappe5_a4_ausbau.html
+
+# Prüfbericht 26.07.2026 – Analyse-Artefakt, gehört nicht ins Repo
+PRUEFBERICHT_*.md
+
+# _to_delete/ – Ablage fuer Dateien, die auf dem Mount nicht geloescht werden koennen
+# (git hinterlaesst dort index.lock, HEAD.lock und tmp_obj_* mit "Operation not permitted";
+# der einzige Behelf ohne Loeschrecht ist `mv` nach hier). Gehoert nie ins Repo.
+_to_delete/
+
+# Kontaktboegen der SVG-Pruefung (Etappe V) – rein lokal, nie ins Repo
+.svgpruefung/
+
+# Impeccable (10.09.2026, `npx impeccable install --project --providers=claude`).
+# 17 MB, darunter eine Windows-.exe - gehoert nicht ins Repo, wird bei Bedarf neu installiert.
+# Ausnahme seit 18.10.2026: .claude/settings.json (Postfach-Freigaben + Start-Haken, regeln/bruecke.md).
+.claude/*
+!.claude/settings.json
+# Ablage der Cowork-App, kein Projektinhalt.
+Claude outputs/
+
+# Umbau auf React+TS (10.09.2026). Quelle wird versioniert, Bauergebnis und
+# Abhaengigkeiten nicht: node_modules ist oben schon ausgeschlossen.
+# ⚠️ `neu/dist/` gibt es seit dem 17.09.2026 nicht mehr — gebaut wird nach `v2/` im
+# Wurzelordner, und das MUSS mitcommittet werden (Cloudflare liefert den Wurzelordner
+# aus und baut selbst nichts). `v2/` steht deshalb bewusst NICHT hier.
+neu/dist/
+neu/node_modules/
+neu/.vite/
+
+# wrangler (N20b)
+.wrangler
+.dev.vars*
+
+# erzeugt von tools/training-shell/einspielen.sh, kein Quelltext
+tools/training-shell/*.mcpb
+
+# N43 M3: Stryker (Sicherung und Berichte)
+neu/.stryker-tmp/
+neu/stryker-setup-*.js
+neu/.stryker-laeuft

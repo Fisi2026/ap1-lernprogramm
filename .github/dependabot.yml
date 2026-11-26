@@ -1,0 +1,51 @@
+# Dependabot (Pruefbericht 26.09.2026, OWASP A03:2025, OpenSSF Scorecard "Dependency-Update-Tool").
+# ⛔ Er oeffnet nur Pull Requests; gemergt wird nichts von allein. Die CI (check.sh voll) laeuft
+#    auf jedem PR. Gruppiert, damit es EIN PR je Woche und Oekosystem bleibt.
+# ►► `github-actions` haelt auch die SHA-Pins in .github/workflows/ci.yml aktuell (Kommentar = Version).
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /neu
+    schedule: { interval: weekly, day: monday }
+    # Nutzer-Entscheid 09.10.2026 (N39 A3, BUILD_LOG 108): Versions-PRs fuer neu/ aus - sie werden immer
+    # rot, weil v2/ (eingecheckte Bauausgabe) nicht mitgebaut wird. Sicherheits-PRs kommen weiter als Signal;
+    # aktualisiert wird lokal: npm update -> vite build -> git add -A v2 -> check.sh.
+    open-pull-requests-limit: 0
+    groups:
+      neu-alle: { patterns: ["*"], update-types: ["minor", "patch"] }
+    # Nutzer-Entscheid 28.09.2026 (BUILD_LOG 84): keine Major-Spruenge fuer @types/node - Laufzeit ist
+    # Node 24 (CI + PC); Typen folgen der Laufzeit, nicht umgekehrt. (Die Sperre fuer typescript fiel mit
+    # dem Umstieg auf TS 7, BUILD_LOG 86.)
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+  - package-ecosystem: npm
+    directory: /.tooling
+    schedule: { interval: weekly, day: monday }
+    groups:
+      tooling-alle: { patterns: ["*"] }
+    # 23.11.2026 (BUILD_LOG 232, gemessen): typescript 7 (native, ohne JS-Compiler-API) legt dependency-cruiser lahm -
+    # `python3 tools/architektur.py --probe` faellt mit TS 7.0.2 auf 0/6, mit 6.0.3 6/6 (PR #30 rot). Erst heben,
+    # wenn dependency-cruiser TS 7 unterstuetzt.
+    ignore:
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+  # Audit 26.09.2026 (AUD-B1): Betriebswerkzeuge im Wurzel-package.json (wrangler, playwright-core).
+  - package-ecosystem: npm
+    directory: /
+    schedule: { interval: weekly, day: monday }
+    groups:
+      betrieb-alle: { patterns: ["*"] }
+  # Komplettpruefung 09.10.2026 (ND4): Semgrep-Version fuer den CI-Job `semgrep`.
+  - package-ecosystem: pip
+    directory: /tools/semgrep
+    schedule: { interval: weekly, day: monday }
+    # 23.11.2026 (BUILD_LOG 232): Versions-PRs aus - requirements.in ist absichtlich nicht aufloesbar (mcp 1.30.0 per
+    # Hand-Pin gegen semgreps mcp==1.29.0, CVE-2026-59951), darum scheiterte JEDER Lauf seit 19.10. (dependency_file_not_resolvable).
+    # Sicherheitsalarme kommen weiter; Semgrep wird von Hand gehoben (tools/semgrep/erzeugen.sh, Hand-Pins in overrides.txt).
+    open-pull-requests-limit: 0
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly, day: monday }
+    groups:
+      actions-alle: { patterns: ["*"] }

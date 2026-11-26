@@ -1,0 +1,46 @@
+# ══════════ ZEILENENDEN – GILT FUER ALLES ══════════
+# ⛔⛔ ANLASS 10.09.2026: `core.autocrlf` steht auf dem Windows-Rechner auf `true`, und KEINE Datei
+#    hatte ein `text`/`eol`-Attribut. Gemessen mit `git ls-files --eol`: 282 Dateien liegen im
+#    Index mit LF, 6 sind binaer (5 PNG, 1 .pyc) – im Arbeitsbaum ebenfalls LF, aber NUR, weil sie
+#    dort geschrieben und nie ausgecheckt wurden. **Beim ersten `git checkout`, `reset` oder Clone
+#    haette Git sie alle auf CRLF umgeschrieben.**
+# ⛔ DAS WAERE NICHT KOSMETIK GEWESEN, SONDERN ZWEI ECHTE SCHAEDEN:
+#    1. **Die 13 `*.sh` waeren tot.** Git Bash bricht bei CRLF mit `$'\r': command not found` ab –
+#       `check.sh`, `suite.sh`, `prueflauf.sh`, `gitc.sh`. Nach einem Clone laeuft KEIN Pruefwerkzeug
+#       mehr, und die Fehlermeldung zeigt nicht auf die Ursache.
+#    2. **`fragen.js` waere mit 2,4 MB CRLF ausgeliefert worden** und der Drift-Guard dauerhaft rot –
+#       mit exakt der Meldung, die am 10.09. schon einmal ein Fehlalarm war (BUILD_LOG 10.09. (2)).
+# ⚠️ DIE ZEILE UNTEN IST EINE NULL-DIFF-AENDERUNG, und das ist gemessen, nicht angenommen: der Index
+#    liegt bereits vollstaendig auf LF (siehe oben). Sie wirkt ausschliesslich auf kuenftige
+#    Checkouts. `text=auto` laesst die sechs Binaerdateien unberuehrt.
+# ⚠️ BEWUSST OHNE AUSNAHME FUER `*.bat`: `push_von_hier.bat` liegt heute mit LF im Baum und tut
+#    seinen Dienst. Ein `eol=crlf` waere die native Form – aber es wuerde eine funktionierende
+#    Datei anfassen. **Wer das aendert, misst vorher, ob cmd.exe stolpert.**
+* text=auto eol=lf
+
+# Generierte Pool-Bauartefakte: versioniert, aber ohne Textdiff.
+#
+# WARUM: `fragen.js` (2,2 MB) und `faelle.js` entstehen aus `pool/*.json` per `build_fragen.py`.
+# Sie MUESSEN im Repo liegen – die App laedt sie direkt, es gibt keinen Build-Schritt beim
+# Ausliefern. Folge bis zum 28.07.2026: Jede Pool-Aenderung erschien ZWEIMAL im Diff, einmal in
+# der Quelle und einmal identisch im Erzeugnis (gemessen: 62/62, 37/37, 17/17 Zeilen).
+# Das verdoppelt die Review-Flaeche, ohne eine einzige zusaetzliche Information zu liefern.
+#
+# `-diff` blendet nur die DARSTELLUNG aus. Nicht betroffen sind: Versionierung, Inhalt,
+# `git add`, der Drift-Guard in check.sh (der vergleicht die Dateien selbst, nicht ihren Diff)
+# und die CI. Wer den Diff doch sehen will: `git diff --text -- fragen.js`.
+#
+# ⚠️ DIE QUELLE IST IMMER `pool/*.json`. fragen.js/faelle.js NIE direkt editieren – das meldet
+#    der Drift-Guard, und zwar zu Recht.
+#
+# ⚠️ GEPRUEFT 28.07.2026, WEIL ES EINEN FEHLALARM HAETTE GEBEN KOENNEN: TASKLIST behandelt
+#    "binary file matches" auf einer .js/.md als Warnsignal fuer NUL-Bytes. Ein kuenstlich als
+#    binaer markiertes fragen.js koennte genau dieses Signal ausloesen – dann waere die Abkuerzung
+#    schlimmer als der Zustand davor. Gemessen:
+#      * `git grep -c "M07-014" -- fragen.js`  ->  "fragen.js:1", KEIN "binary file matches"
+#        (git grep entscheidet ueber NUL-Bytes, nicht ueber das diff-Attribut)
+#      * normales `grep`, `python`, `node` sind ohnehin unberuehrt – Skripte lesen die Datei direkt
+#      * kein Werkzeug im Projekt ruft `git grep` auf (geprueft ueber check.sh, tools/*.sh, *.py)
+#      * NUL-Bytes in fragen.js: 0
+#    Sichtbar wird `-diff` nur bei `git diff`/`git log -p`: dort steht jetzt
+#    "Bin 2263665 -> 2263675 bytes" statt tausender Zeilen. Genau das war das Ziel.

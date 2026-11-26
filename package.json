@@ -1,0 +1,9 @@
+{
+  "name": "ap1-lernprogramm-betrieb",
+  "private": true,
+  "description": "Nur Betrieb: wrangler (Deploy, D1-Migrationen) und playwright-core (Rauchtest tools/sichtpruefung/rauch.js) - Audit 26.09.2026, AUD-B1/B4. Die App lebt in neu/.",
+  "devDependencies": {
+    "playwright-core": "1.65.1",
+    "wrangler": "4.166.0"
+  }
+}

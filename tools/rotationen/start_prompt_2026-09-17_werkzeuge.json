@@ -1,0 +1,12 @@
+{
+ "quelle": "START_PROMPT.md",
+ "archiv": "WERKZEUGE.md",
+ "ueberschrift": "## Ausgelagert aus START_PROMPT.md am 2026-09-17 (verbatim, rotiere.py)",
+ "bloecke": [
+  {
+   "von": 368,
+   "bis": 463,
+   "ersatz": "# ⛔ **DIE WERKZEUGLISTE STEHT VERBATIM IN `WERKZEUGE.md`** (ausgelagert 17.09.2026). **Vor jedem neuen\n#   Mess- oder Hilfsskript dort nachsehen.** Die fünf, die jeder Chat braucht:\n#   `bash tools/suite.sh <name>` (Einzelsuite) · `bash check.sh` (voller Lauf, im Hintergrund) ·\n#   `bash tools/gitc.sh <git-args>` (git ohne Sperren) · `node tools/pool_query.js` (ohne Argument =\n#   Kommandoverzeichnis) · `python3 tools/rotiere.py <spec>` (Steuerdatei rotieren, Gegenprobe drin)."
+  }
+ ]
+}

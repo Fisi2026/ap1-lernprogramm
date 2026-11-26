@@ -1,0 +1,1091 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ap1-lernprogramm/frage.schema.json",
+  "title": "AP1-Lernprogramm – Frage",
+  "type": "object",
+  "required": [
+    "id",
+    "pruefungsteil",
+    "modul",
+    "thema",
+    "gebiet",
+    "typ",
+    "schwierigkeit",
+    "frage",
+    "erklaerungKurz"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^M0[1-9]-\\d{3}$"
+    },
+    "pruefungsteil": {
+      "enum": [
+        "AP1",
+        "AP2"
+      ]
+    },
+    "modul": {
+      "type": "string",
+      "pattern": "^M0[1-9]$"
+    },
+    "thema": {
+      "type": "string",
+      "minLength": 1
+    },
+    "gebiet": {
+      "enum": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "B1",
+        "B2",
+        "B3",
+        "M9"
+      ]
+    },
+    "typ": {
+      "enum": [
+        "mc",
+        "freitext",
+        "lueckentext",
+        "zuordnung",
+        "bild",
+        "erklaeren",
+        "mehrfach",
+        "mtf",
+        "kreuztabelle",
+        "szenario2",
+        "reihenfolge",
+        "dropdown",
+        "hotspot",
+        "fehlersuche",
+        "rechenassistent",
+        "matrix",
+        "beschriftung",
+        "trace",
+        "konsole",
+        "kalkulation",
+        "baukasten"
+      ]
+    },
+    "schwierigkeit": {
+      "enum": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "frage": {
+      "type": "string",
+      "minLength": 1
+    },
+    "erklaerungKurz": {
+      "type": "string",
+      "minLength": 1
+    },
+    "erklaerungLang": {
+      "type": "string"
+    },
+    "verweis": {
+      "type": "string"
+    },
+    "rechner": {
+      "type": "boolean"
+    },
+    "varianten": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "required": [
+        "typ",
+        "optionen",
+        "loesungIndex",
+        "distraktorErklaerungen"
+      ],
+      "properties": {
+        "typ": {
+          "const": "mc"
+        },
+        "optionen": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "loesungIndex": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "distraktorErklaerungen": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "optionen",
+        "loesungIndizes"
+      ],
+      "properties": {
+        "typ": {
+          "const": "mehrfach"
+        },
+        "optionen": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "loesungIndizes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "distraktorErklaerungen": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "aussagen"
+      ],
+      "properties": {
+        "typ": {
+          "const": "mtf"
+        },
+        "aussagen": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "text",
+              "wahr"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "wahr": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "zeilen",
+        "spalten",
+        "loesung"
+      ],
+      "properties": {
+        "typ": {
+          "const": "kreuztabelle"
+        },
+        "zeilen": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "spalten": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "loesung": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "schritt1",
+        "schritt2",
+        "feedback1"
+      ],
+      "properties": {
+        "typ": {
+          "const": "szenario2"
+        },
+        "schritt1": {
+          "type": "object",
+          "required": [
+            "frage",
+            "optionen",
+            "loesungIndex"
+          ],
+          "properties": {
+            "frage": {
+              "type": "string",
+              "minLength": 1
+            },
+            "optionen": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "loesungIndex": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "schritt2": {
+          "type": "object",
+          "required": [
+            "frage",
+            "optionen",
+            "loesungIndex"
+          ],
+          "properties": {
+            "frage": {
+              "type": "string",
+              "minLength": 1
+            },
+            "optionen": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "loesungIndex": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "feedback1": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "schritte"
+      ],
+      "properties": {
+        "typ": {
+          "const": "reihenfolge"
+        },
+        "schritte": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "luecken"
+      ],
+      "properties": {
+        "typ": {
+          "const": "dropdown"
+        },
+        "luecken": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "optionen",
+              "loesung"
+            ],
+            "properties": {
+              "optionen": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "loesung": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "akzeptiert": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        },
+        "freitext": {
+          "type": "boolean"
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "luecken"
+      ],
+      "properties": {
+        "typ": {
+          "const": "lueckentext"
+        },
+        "luecken": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "paare"
+      ],
+      "properties": {
+        "typ": {
+          "const": "zuordnung"
+        },
+        "paare": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "extra": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "svg",
+        "zonen"
+      ],
+      "properties": {
+        "typ": {
+          "const": "hotspot"
+        },
+        "svg": {
+          "type": "string",
+          "pattern": "<svg"
+        },
+        "zonen": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h"
+            ],
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "w": {
+                "type": "number"
+              },
+              "h": {
+                "type": "number"
+              },
+              "richtig": {
+                "type": "boolean"
+              },
+              "label": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "zeilen",
+        "fehlerZeile"
+      ],
+      "properties": {
+        "typ": {
+          "const": "fehlersuche"
+        },
+        "zeilen": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        "fehlerZeile": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "schritte"
+      ],
+      "properties": {
+        "typ": {
+          "const": "rechenassistent"
+        },
+        "schritte": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "loesung": {
+                "type": "array",
+                "minItems": 1
+              },
+              "formel": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dezimalen": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 6
+              }
+            }
+          }
+        },
+        "variablen": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "min",
+              "max"
+            ],
+            "properties": {
+              "min": {
+                "type": "number"
+              },
+              "max": {
+                "type": "number"
+              },
+              "schritt": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "variablen"
+          ],
+          "properties": {
+            "schritte": {
+              "type": "array",
+              "items": {
+                "required": [
+                  "formel"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "not": {
+            "required": [
+              "variablen"
+            ]
+          },
+          "properties": {
+            "schritte": {
+              "type": "array",
+              "items": {
+                "required": [
+                  "loesung"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "required": [
+        "typ",
+        "quadranten",
+        "elemente"
+      ],
+      "properties": {
+        "typ": {
+          "const": "matrix"
+        },
+        "quadranten": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "elemente": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "text",
+              "quadrant"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "quadrant": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              }
+            }
+          }
+        },
+        "xAchse": {
+          "type": "string"
+        },
+        "yAchse": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "svg",
+        "ziele",
+        "labels"
+      ],
+      "properties": {
+        "typ": {
+          "const": "beschriftung"
+        },
+        "svg": {
+          "type": "string",
+          "pattern": "<svg"
+        },
+        "ziele": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "loesung"
+            ],
+            "properties": {
+              "loesung": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "labels": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "code",
+        "spalten",
+        "zeilen"
+      ],
+      "properties": {
+        "typ": {
+          "const": "trace"
+        },
+        "code": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "spalten": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "zeilen": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "aufgaben"
+      ],
+      "properties": {
+        "typ": {
+          "const": "konsole"
+        },
+        "aufgaben": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "prompt",
+              "akzeptiert"
+            ],
+            "properties": {
+              "prompt": {
+                "type": "string",
+                "minLength": 1
+              },
+              "akzeptiert": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "kopf",
+        "zeilen"
+      ],
+      "properties": {
+        "typ": {
+          "const": "kalkulation"
+        },
+        "kopf": {
+          "type": "array",
+          "minItems": 1
+        },
+        "zeilen": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "geruest",
+        "ziele",
+        "bausteine"
+      ],
+      "properties": {
+        "typ": {
+          "const": "baukasten"
+        },
+        "geruest": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "ziele": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "loesung"
+            ],
+            "properties": {
+              "loesung": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "bausteine": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "musterloesung"
+      ],
+      "properties": {
+        "typ": {
+          "const": "freitext"
+        },
+        "musterloesung": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schluesselbegriffe": {
+          "type": "object",
+          "required": [
+            "pflicht"
+          ],
+          "properties": {
+            "pflicht": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                ]
+              }
+            },
+            "kuer": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "musterloesung"
+      ],
+      "properties": {
+        "typ": {
+          "const": "erklaeren"
+        },
+        "musterloesung": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schluesselbegriffe": {
+          "type": "object",
+          "required": [
+            "pflicht"
+          ],
+          "properties": {
+            "pflicht": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                ]
+              }
+            },
+            "kuer": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "svg",
+        "unterTyp",
+        "optionen",
+        "loesungIndex"
+      ],
+      "properties": {
+        "typ": {
+          "const": "bild"
+        },
+        "svg": {
+          "type": "string",
+          "pattern": "<svg"
+        },
+        "unterTyp": {
+          "const": "mc"
+        },
+        "optionen": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "loesungIndex": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "distraktorErklaerungen": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "svg",
+        "unterTyp",
+        "luecken"
+      ],
+      "properties": {
+        "typ": {
+          "const": "bild"
+        },
+        "svg": {
+          "type": "string",
+          "pattern": "<svg"
+        },
+        "unterTyp": {
+          "const": "dropdown"
+        },
+        "luecken": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "optionen",
+              "loesung"
+            ],
+            "properties": {
+              "optionen": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "loesung": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "akzeptiert": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "required": [
+        "typ",
+        "svg",
+        "unterTyp",
+        "luecken"
+      ],
+      "properties": {
+        "typ": {
+          "const": "bild"
+        },
+        "svg": {
+          "type": "string",
+          "pattern": "<svg"
+        },
+        "unterTyp": {
+          "const": "lueckentext"
+        },
+        "luecken": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

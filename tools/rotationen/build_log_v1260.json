@@ -1,0 +1,12 @@
+{
+ "quelle": "BUILD_LOG.md",
+ "archiv": "BUILD_LOG_ARCHIV.md",
+ "ueberschrift": "## ROTATION 2026-09-10 – alles bis einschliesslich Release v1.26.0",
+ "bloecke": [
+  {
+   "von": 16,
+   "bis": 939,
+   "ersatz": ""
+  }
+ ]
+}

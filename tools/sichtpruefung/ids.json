@@ -1,0 +1,22 @@
+{
+"mc": "M01-001",
+"dropdown": "M01-003",
+"zuordnung": "M01-005",
+"freitext": "M01-007",
+"erklaeren": "M01-012",
+"trace": "M01-050",
+"matrix": "M01-051",
+"mehrfach": "M01-401",
+"reihenfolge": "M01-431",
+"rechenassistent": "M01-500",
+"kalkulation": "M01-503",
+"fehlersuche": "M01-504",
+"baukasten": "M01-505",
+"szenario2": "M01-506",
+"lueckentext": "M02-207",
+"konsole": "M04-052",
+"kreuztabelle": "M06-052",
+"mtf": "M07-217",
+"hotspot": "M01-471",
+"beschriftung": "M01-511"
+}

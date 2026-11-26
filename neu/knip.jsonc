@@ -1,0 +1,12 @@
+// N44 C2 (14.10.2026, BUILD_LOG 171): knip auf 0.
+// * sw/*.js laedt sw/plugin.ts per Pfad (vite.config.ts), nicht per import -> Einstieg.
+// * json-schema-to-typescript benutzt tools/build_schema.js ausserhalb von neu/.
+// * components/ui (shadcn) ist die Ausnahmeliste aus PLAN N43: ungenutzte Bausteine bleiben liegen.
+// * N43 M3: Stryker (stryker.config.json) laedt den vitest-Runner als Plugin, die Konfig vitest.stryker.config.ts per Pfad.
+// * werkzeug/as_probe/probe.ts ist die Probe der Ratsche - absichtlich unbenutzt, dort herausgerechnet.
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["sw/vorlage.js", "sw/abschalten.js", "vitest.stryker.config.ts"],
+  "ignoreDependencies": ["json-schema-to-typescript", "@stryker-mutator/vitest-runner"],
+  "ignoreIssues": { "src/components/ui/**": ["exports", "types"] }
+}

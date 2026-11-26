@@ -1,0 +1,11 @@
+{
+  "_zweck": "NACHTRAG zur ersten Runde vom selben Tag. Die erste Messung kannte als Rechtsform nur GmbH/AG/KG/OHG/SE/e.K. und uebersah damit AoeR, eG und gGmbH.",
+  "_wie_gefunden": "NICHT vom Werkzeug, sondern beim Nachlesen der fuenf Bezugskalkulations-Ausreisser: dort stand 'Bad Kissinger Kurverwaltung AoeR' im Fragetext. Die Rechtsformliste in 'pool_query.js firmen' ist seither erweitert, damit der Waechter den Fall selbst faengt.",
+  "_ortsnamen": "Beide Ortsnamen bewusst nachgeschlagen, weil ein falsch geschriebener Ort teurer ist als die Umschrift: Amoeneburg ist die hessische Stadt Amoeneburg (korrekt mit oe-Umlaut), Suederelbe der Hamburger Raum (korrekt mit ue-Umlaut). Gegenbeispiele, die NICHT angefasst werden: Uetersen, Uelzen, Oelde, Itzehoer, Lohraer.",
+  "ersetzungen": [
+    ["Bad Kissinger Kurverwaltung AoeR",   "Bad Kissinger Kurverwaltung AöR"],
+    ["Kaltensundheim Sparkasse AoeR",      "Kaltensundheim Sparkasse AöR"],
+    ["Suederelbe Wohnungsgenossenschaft",  "Süderelbe Wohnungsgenossenschaft"],
+    ["Amoeneburger Bildungszentrum",       "Amöneburger Bildungszentrum"]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "//": "N43 M4 (BUILD_LOG 152), seit N45 W3 (BUILD_LOG 169) mit strict: Typpruefung der JS-Werkzeuge - Zahl tsc_tools in tools/qualitaet_ratsche.py. archiv/ ausgenommen wie bei ruff.",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "types": ["node"],
+    "typeRoots": ["../neu/node_modules/@types"],
+    "paths": { "jsdom": ["../.tooling/node_modules/jsdom"] },
+    "skipLibCheck": true
+  },
+  "include": ["**/*.js"],
+  "exclude": ["**/node_modules/**", "ratsche_probe/**", "archiv/**"]
+}

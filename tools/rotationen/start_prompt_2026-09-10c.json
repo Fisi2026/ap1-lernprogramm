@@ -1,0 +1,27 @@
+{
+  "quelle": "START_PROMPT.md",
+  "archiv": "START_PROMPT_ARCHIV.md",
+  "ueberschrift": "## ROTATION 2026-09-10 (3) - Herleitungen aus Abschnitt 3 und 6, Regeln bleiben im Kopf",
+  "bloecke": [
+    {
+      "von": 242,
+      "bis": 244,
+      "ersatz": "#   ⚠️ **M04-317 bleibt ein Fehlalarm** (DHCP-Option). ⛔⛔ **EINE MESSUNG GILT FÜR DAS GEMESSENE** –\n#   „Lernunterlage ohne belegte Lücke (34/34)\" galt den VERWEISZIELEN, nicht dem Inhalt.\n"
+    },
+    {
+      "von": 255,
+      "bis": 258,
+      "ersatz": "#   ✅ **Startlast gemessen: drei Viertel sind `fragen.js`** – die Poolgröße kostet Übertragung,\n#      keine Rechenzeit. ⛔ Zahl NICHT hier; **der Gerätewert bleibt offen und wird NICHT\n#      nachgefragt** (27.07.). ✅ **GEBIETSVERTEILUNG: `tools/gebiete_stand.py`**, Block in\n#      `SORTIERUNG_PRUEFUNGSORDNUNG.md`, 4e2b3.\n"
+    },
+    {
+      "von": 396,
+      "bis": 398,
+      "ersatz": "# ⚠️⚠️ **EIN WERKZEUG, DAS AM ERSTEN TAG GEBAUT WIRD, IST AM ERSTEN TAG NOCH NICHT GEPRÜFT** –\n#   `pool_query.js verweise` las „WCAG 2.1\" als Abschnitt 2.1 und hätte neun richtige Verweise\n#   „repariert\". **Ein neues Messwerkzeug erst an einem Fall prüfen, dessen Antwort man kennt.**\n"
+    },
+    {
+      "von": 402,
+      "bis": 407,
+      "ersatz": "# ⚠️ **EINE VERSIONSANGABE IN DER DOKU IST EIN MESSWERT VON DAMALS, KEIN ZUSTAND** – **vor dem\n#   Umsetzen eines notierten Versionssprungs die Release-Seite aufrufen** (`WebSearch`/`WebFetch`).\n# ⚠️ **EIN REPORT, DESSEN URTEIL MAN SUCHEN MUSS, IST EIN HALBER REPORT.** `ci2.sh` zeigte einen\n#   grünen Bot-Lauf auf einem PR-Branch, während main rot war. **„Der letzte Lauf\" ist nicht „der\n#   Lauf meines Pushes\"** – maßgeblich ist die URTEIL-Zeile auf Branch main.\n"
+    }
+  ]
+}

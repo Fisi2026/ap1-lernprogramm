@@ -1,0 +1,232 @@
+[
+  {
+    "id": "M03-907",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mehrfach",
+    "schwierigkeit": 4,
+    "frage": "In der Konstruktionsabteilung der Steffenberger Konstruktionstechnik GmbH soll ein bisheriger Büro-PC (integrierte Grafikeinheit, 8 GB RAM, SATA-SSD, Netzteil knapp bemessen) für die Arbeit mit großen 3D-CAD-Baugruppen ertüchtigt werden. Welche der folgenden Maßnahmen sind fachlich begründet? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Dedizierte Grafikkarte mit eigenem Grafikspeicher einsetzen, weil die integrierte Grafikeinheit sich den Arbeitsspeicher mit der CPU teilt und für große 3D-Modelle zu wenig Grafikleistung bietet",
+      "Arbeitsspeicher auf mindestens 32 GB erweitern, weil große Baugruppen sonst auf den Massenspeicher ausgelagert werden und die Auslagerung das System spürbar ausbremst",
+      "SATA-SSD durch eine NVMe-SSD ersetzen, weil SATA III bei etwa 600 MB/s begrenzt ist und NVMe über PCIe deutlich höhere Übertragungsraten erreicht",
+      "Das vorhandene Netzteil unverändert übernehmen, weil eine dedizierte Grafikkarte die Leistungsaufnahme des Systems nicht verändert",
+      "Ein Netzteil mit ausreichender Leistungsreserve einplanen, weil eine dedizierte Grafikkarte die Leistungsaufnahme des Systems deutlich erhöht",
+      "Den Prozessor im UEFI übertakten, weil die integrierte Grafikeinheit dadurch eigenen Grafikspeicher erhält"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Falsch: Eine dedizierte Grafikkarte hat eine eigene, oft erhebliche Leistungsaufnahme und benötigt in der Regel zusätzliche Stromanschlüsse – das Netzteil muss dafür ausgelegt sein.",
+      "",
+      "Übertakten ändert nichts daran, dass die integrierte Grafik den Arbeitsspeicher mitbenutzt; eigenen Grafikspeicher hat nur eine dedizierte Karte."
+    ],
+    "erklaerungKurz": "CAD ist gleichzeitig grafik-, speicher- und I/O-intensiv: dedizierte GPU mit eigenem Grafikspeicher, mehr RAM, NVMe statt SATA – und ein Netzteil, das die höhere Leistungsaufnahme trägt.",
+    "erklaerungLang": "Eine integrierte Grafikeinheit nutzt einen Teil des Systemarbeitsspeichers als Grafikspeicher und konkurriert dabei mit der CPU um Speicherbandbreite; für große 3D-Baugruppen reicht das nicht. Zu wenig Arbeitsspeicher führt zum Auslagern auf den Massenspeicher, was um Größenordnungen langsamer ist als RAM-Zugriffe. SATA III begrenzt auf 6 Gbit/s brutto (etwa 600 MB/s), während NVMe-SSDs über PCIe ein Vielfaches erreichen – beim Laden großer Modelldateien spürbar. Wer eine dedizierte Grafikkarte nachrüstet, muss die zusätzliche Leistungsaufnahme beim Netzteil einplanen (Reserve, passende Anschlüsse). Das Absenken der Auflösung verringert dagegen nur den Aufwand für die Bildausgabe und ersetzt keine Aufrüstung.",
+    "verweis": "Modul 03, Abschnitt 3.1, Hardwareprodukte (Grafik, Speicher, Datenspeicher, Netzteil)"
+  },
+  {
+    "id": "M03-908",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Berechnungen: Energie",
+    "gebiet": "A2",
+    "typ": "rechenassistent",
+    "schwierigkeit": 4,
+    "frage": "Die Bad Endbacher Serverdienste GmbH ersetzt im Serverraum {anzahlAlt} Altserver mit je {wattAlt} W Leistungsaufnahme durch {anzahlNeu} neue Server mit je {wattNeu} W. Alle Geräte laufen im Dauerbetrieb (8.760 Betriebsstunden pro Jahr). Der Strompreis beträgt {preisCent/100|2} EUR/kWh, die Investition in die neuen Server {invest} EUR. Nach wie vielen Jahren hat sich die Investition allein über die eingesparten Stromkosten bezahlt gemacht (auf eine Nachkommastelle)?",
+    "schritte": [
+      {
+        "text": "Berechne die gesamte Leistungsaufnahme des Altbestands (Anzahl x Leistung je Gerät).",
+        "einheit": "W",
+        "formel": "anzahlAlt*wattAlt"
+      },
+      {
+        "text": "Berechne die gesamte Leistungsaufnahme der neuen Server (Anzahl x Leistung je Gerät).",
+        "einheit": "W",
+        "formel": "anzahlNeu*wattNeu"
+      },
+      {
+        "text": "Berechne die pro Jahr eingesparte elektrische Energie (Leistungsdifferenz in kW x 8.760 h).",
+        "einheit": "kWh",
+        "formel": "(s1-s2)/1000*8760"
+      },
+      {
+        "text": "Berechne die jährliche Stromkostenersparnis (eingesparte Energie x Strompreis).",
+        "einheit": "EUR",
+        "formel": "s3*preisCent/100"
+      },
+      {
+        "text": "Berechne die Amortisationszeit (Investition / jährliche Kostenersparnis).",
+        "einheit": "Jahre",
+        "formel": "invest/s4",
+        "dezimalen": 1
+      }
+    ],
+    "erklaerungKurz": "Leistungsdifferenz x Betriebsstunden = eingesparte Energie; mal Strompreis = jährliche Ersparnis; Investition geteilt durch die jährliche Ersparnis = Amortisationszeit.",
+    "erklaerungLang": "Schritt 1: {anzahlAlt} x {wattAlt} W = {s1} W. Schritt 2: {anzahlNeu} x {wattNeu} W = {s2} W. Schritt 3: Die Leistungsdifferenz beträgt {s1} W - {s2} W = {s1-s2} W = {(s1-s2)/1000|2} kW; im Dauerbetrieb ergibt das {(s1-s2)/1000|2} kW × 8.760 h = {s3} kWh pro Jahr. Schritt 4: {s3} kWh x {preisCent/100|2} EUR/kWh = {s4} EUR pro Jahr. Schritt 5: {invest} EUR / {s4} EUR/Jahr = {s5|1} Jahre. Erst nach dieser Zeit trägt sich die Investition allein aus der Stromersparnis; Kühlbedarf, Wartung und Lizenzkosten sind dabei noch nicht berücksichtigt und würden die Rechnung in der Praxis zugunsten der Modernisierung verschieben.",
+    "verweis": "Modul 03, Abschnitt 3.3, Strom, Spannung, Leistung und Energiekosten",
+    "variablen": {
+      "anzahlAlt": {
+        "min": 6,
+        "max": 12,
+        "schritt": 2
+      },
+      "wattAlt": {
+        "min": 150,
+        "max": 300,
+        "schritt": 10
+      },
+      "anzahlNeu": {
+        "min": 3,
+        "max": 5,
+        "schritt": 1
+      },
+      "wattNeu": {
+        "min": 100,
+        "max": 160,
+        "schritt": 10
+      },
+      "preisCent": {
+        "min": 22,
+        "max": 35,
+        "schritt": 1
+      },
+      "invest": {
+        "min": 4000,
+        "max": 16000,
+        "schritt": 500
+      }
+    }
+  },
+  {
+    "id": "M05-962",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "mtf",
+    "schwierigkeit": 4,
+    "frage": "Nach einer Häufung von Störungsmeldungen startet der IT-Support der Lohraer Supportzentrum GmbH einen Verbesserungszyklus nach PDCA. Bewerte die folgenden Aussagen zu diesem konkreten Vorgehen jeweils als wahr oder falsch.",
+    "erklaerungKurz": "Plan = Ziel und Maßnahmen festlegen, Do = im kleinen Rahmen erproben, Check = Wirkung an den vorher festgelegten Kennzahlen messen, Act = Bewährtes standardisieren bzw. bei Misserfolg neu planen. Der Zyklus endet nicht mit einem erfolgreichen Check.",
+    "erklaerungLang": "Der Fall prüft nicht die vier Buchstaben, sondern die Zuordnung konkreter Handlungen – und zwei verbreitete Denkfehler.\n• Plan: Hier entsteht das messbare Ziel. „Erstlösungsquote von 55 auf 70 Prozent in sechs Monaten\" nennt Ausgangswert, Zielwert und Termin – ohne diese drei Angaben hätte die Check-Phase keinen Vergleichsmaßstab.\n• Do: Die Erprobung in EINEM Team ist der Kern der Do-Phase. Sie ist bewusst begrenzt, damit ein Fehlschlag nicht den ganzen Support trifft.\n• Der erste Denkfehler: Ein erfolgreicher Check beendet den Zyklus NICHT. Erst die Act-Phase schreibt das Bewährte als Standard fest – ohne sie bleibt die Verbesserung ein Einzelversuch, der nach dem Pilotteam wieder verschwindet.\n• Act hat zwei Ausgänge: standardisieren bei Erfolg, oder mit den gewonnenen Erkenntnissen zurück in die Plan-Phase. Deshalb ist PDCA ein Kreis und keine Linie.\n• Der zweite Denkfehler: KVP setzt auf kleine Schritte, aber nicht auf ungemessene. Gerade weil jeder Schritt klein ist, lässt sich seine Wirkung nur an Kennzahlen erkennen – ohne Messung fehlt die Grundlage für die nächste Runde.\nMerke: Ohne Act wird aus dem Pilotprojekt kein Standard, und ohne Messung aus KVP ein Bauchgefühl.",
+    "aussagen": [
+      {
+        "text": "Die Festlegung des Ziels „Erstlösungsquote innerhalb von sechs Monaten von 55 % auf 70 % steigern\" gehört in die Plan-Phase.",
+        "wahr": true
+      },
+      {
+        "text": "Die Erprobung der neuen Wissensdatenbank zunächst nur in einem Support-Team ist der Do-Phase zuzuordnen.",
+        "wahr": true
+      },
+      {
+        "text": "Weil die Zielwerte im Check erreicht wurden, ist der Zyklus abgeschlossen; eine Act-Phase entfällt dann.",
+        "wahr": false
+      },
+      {
+        "text": "Die verbindliche Festschreibung der bewährten Lösung als Arbeitsanweisung für alle Support-Teams gehört zur Act-Phase.",
+        "wahr": true
+      },
+      {
+        "text": "Da KVP auf viele kleine Verbesserungsschritte setzt, kann auf eine Messung der Wirkung verzichtet werden.",
+        "wahr": false
+      }
+    ],
+    "verweis": "Modul 05, Abschnitt 5.2, PDCA-Zyklus und kontinuierlicher Verbesserungsprozess"
+  },
+  {
+    "id": "M05-963",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Beim Abnahmetest einer neuen Arbeitsplatzumgebung fällt auf: Ein Testfall ist im Testprotokoll als „bestanden\" eingetragen, obwohl das dokumentierte Ist-Ergebnis vom Soll-Ergebnis abweicht. Im Bemerkungsfeld steht „Abweichung unkritisch, mündlich mit dem Kunden geklärt\". Wie ist fachlich korrekt damit umzugehen?",
+    "optionen": [
+      "Der Eintrag bleibt unverändert, weil der Kunde der Abweichung mündlich zugestimmt hat. Das Testprotokoll wird ohnehin nur intern verwendet und dient allein der eigenen Übersicht; eine Änderung würde den Abschluss unnötig verzögern.",
+      "Der Testfall wird als „nicht bestanden\" gewertet, die Abweichung als Mangel dokumentiert und entweder behoben oder mit schriftlicher Freigabe des Auftraggebers als geänderte Sollvorgabe festgeschrieben.",
+      "Das Soll-Ergebnis wird nachträglich an das gemessene Ist-Ergebnis angepasst, damit Testfall und Protokoll übereinstimmen. Der Testfall gilt damit als bestanden und die Abnahme kann ohne Rückfragen abgeschlossen werden.",
+      "Der Testfall wird ersatzlos aus dem Protokoll entfernt, weil er zu keinem eindeutigen Ergebnis geführt hat. Ein Testfall, dessen Bewertung strittig ist, hat in einem Abnahmeprotokoll nichts zu suchen und verfälscht die Gesamtquote."
+    ],
+    "loesungIndex": 1,
+    "distraktorErklaerungen": [
+      "Falsch: Ein Testprotokoll ist Nachweisdokument für die Abnahme und dient als Grundlage bei späteren Mängelansprüchen. Eine mündliche Absprache ist im Streitfall nicht belegbar.",
+      "",
+      "Falsch: Das Soll-Ergebnis stammt aus den vereinbarten Anforderungen. Wird es nachträglich an das Ist angepasst, verliert der Test seine Aussagekraft – jeder Test wäre dann per Definition bestanden.",
+      "Falsch: Das Ergebnis war eindeutig – es wich vom Soll ab. Das Entfernen des Testfalls vernichtet einen Nachweis und lässt die zugehörige Anforderung ungeprüft."
+    ],
+    "erklaerungKurz": "Soll ungleich Ist bedeutet „nicht bestanden\". Die Abweichung wird als Mangel dokumentiert und behoben – oder die geänderte Sollvorgabe wird schriftlich vom Auftraggeber freigegeben.",
+    "erklaerungLang": "Ein Testprotokoll hält je Testfall Vorbedingung, Testschritte, Soll-Ergebnis, Ist-Ergebnis und Bewertung fest. Die Bewertung folgt zwingend dem Vergleich von Soll und Ist – ein „bestanden\" trotz Abweichung macht das Protokoll als Nachweis wertlos. Bei der Abnahme nach § 640 BGB ist das Protokoll die zentrale Grundlage dafür, welche Leistungen vertragsgemäß erbracht wurden; Mängel sollten dort vorbehalten werden. Fachlich korrekt ist deshalb: Bewertung „nicht bestanden\", Abweichung als Mangel dokumentieren, dann entweder nachbessern und erneut testen oder – wenn die Abweichung tatsächlich akzeptabel ist – die Anforderung schriftlich ändern und den Testfall mit neuem Soll erneut durchführen. Nachträgliche Anpassungen des Solls an das Ist oder das Löschen unbequemer Testfälle sind Dokumentationsfehler.",
+    "verweis": "Modul 05, Abschnitt 5.2, Testprotokoll und Abnahme"
+  },
+  {
+    "id": "M06-973",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Passwörter & Authentifizierung",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 4,
+    "frage": "Die Fronhausener Finanzservice GmbH überarbeitet ihre Authentifizierungsrichtlinie. Welche der folgenden Festlegungen entsprechen dem aktuellen Stand der Technik? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Lange Passphrasen zulassen und die Mindestlänge anheben, statt vor allem viele verschiedene Zeichenklassen zu erzwingen",
+      "Einen verpflichtenden Passwortwechsel alle 30 Tage vorschreiben, auch ohne konkreten Anlass oder einen Verdacht auf Kompromittierung",
+      "Für alle Fernzugriffe einen zweiten Faktor verpflichtend machen, zum Beispiel eine TOTP-App oder einen FIDO2-Sicherheitsschlüssel",
+      "Passwörter serverseitig ausschließlich als Hashwert mit individuellem Salt und einem bewusst rechenintensiven Verfahren (etwa Argon2 oder bcrypt) speichern",
+      "Neue Passwörter gegen eine Liste bekannter, bereits kompromittierter Passwörter prüfen und Treffer ablehnen",
+      "Passwörter zusätzlich rückholbar hinterlegen, damit der Support sie den Beschäftigten am Telefon bei Bedarf nennen kann"
+    ],
+    "loesungIndizes": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Das BSI empfiehlt im IT-Grundschutz keinen anlasslosen regelmäßigen Wechsel mehr. Häufige Zwangswechsel führen zu vorhersehbaren Mustern wie „Sommer2026!\". Gewechselt wird bei Verdacht auf Kompromittierung.",
+      "",
+      "",
+      "",
+      "Falsch: Rückholbare Speicherung setzt voraus, dass das Passwort im Klartext rekonstruierbar ist. Damit ist es bei einem Einbruch für Angreifer verwertbar, und der Support kann sich als Nutzer ausgeben. Korrekt ist ein Zurücksetzen mit Zwang zur Neuvergabe."
+    ],
+    "erklaerungKurz": "Länge vor Komplexität, kein anlassloser Zwangswechsel, zweiter Faktor bei Fernzugriff, gesalzene Hashes mit langsamem Verfahren, Abgleich gegen bekannte Leak-Passwörter – und niemals rückholbare Speicherung.",
+    "erklaerungLang": "Die Empfehlungen haben sich gegenüber älteren Richtlinien deutlich verschoben. Länge schlägt Komplexität: Eine lange Passphrase ist schwerer zu erraten und leichter zu merken als ein kurzes Passwort mit erzwungenen Sonderzeichen. Der anlasslose Wechselzwang ist entfallen, weil er nachweislich zu leicht ableitbaren Varianten führt; gewechselt wird bei Verdacht auf Kompromittierung. Ein zweiter Faktor entwertet ein gestohlenes Passwort allein – besonders wichtig bei Zugriffen von außen. Serverseitig dürfen Passwörter nie im Klartext oder rückholbar verschlüsselt liegen, sondern nur als Hash mit individuellem Salt und einem bewusst langsamen Verfahren wie Argon2 oder bcrypt, damit Angreifer aus einer erbeuteten Datenbank nicht massenhaft Passwörter zurückrechnen können. Der Abgleich gegen Listen bereits geleakter Passwörter verhindert, dass ein formal regelkonformes, aber längst bekanntes Passwort gewählt wird.",
+    "verweis": "Modul 06, Abschnitt 6.1 und 6.4 – IT-Sicherheitsrichtlinien und Authentifizierung"
+  },
+  {
+    "id": "M04-928",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Lastenheft & Pflichtenheft",
+    "gebiet": "A1",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Mitten in der Umsetzung stellt das Projektteam fest: Eine vom Kunden im Lastenheft geforderte Funktion ist im abgestimmten Pflichtenheft überhaupt nicht abgebildet. Wie ist fachlich korrekt vorzugehen?",
+    "optionen": [
+      "Die Funktion ist ohne weitere Vereinbarung und ohne Mehrkosten umzusetzen, weil das Lastenheft dem Pflichtenheft immer vorgeht und der Auftraggeber sich jederzeit auf seine ursprünglich formulierte Anforderung berufen kann, unabhängig vom später abgestimmten Leistungsumfang.",
+      "Die Lücke zwischen geforderter Anforderung und zugesagter Realisierung wird dokumentiert und mit dem Auftraggeber bewertet; soll die Funktion realisiert werden, wird dies über eine Änderung des Pflichtenhefts mit Auswirkung auf Aufwand, Termin und Preis vereinbart.",
+      "Die Funktion entfällt endgültig, weil ausschließlich das Pflichtenheft verbindlich ist und Änderungen daran nach der beiderseitigen Abstimmung ausgeschlossen sind.",
+      "Das Team ergänzt die Funktion still während der laufenden Umsetzung, weil kleinere Nachbesserungen am vereinbarten Umfang keiner gesonderten Vereinbarung bedürfen."
+    ],
+    "loesungIndex": 1,
+    "distraktorErklaerungen": [
+      "Falsch: Verbindlich ist, was im abgestimmten Pflichtenheft zugesagt wurde. Das Lastenheft beschreibt die Forderung des Auftraggebers, begründet aber für sich allein keinen Anspruch auf kostenfreie Zusatzleistung.",
+      "",
+      "Falsch: Ein Pflichtenheft ist änderbar – über einen vereinbarten Änderungsprozess. Eine im Lastenheft geforderte Funktion einfach entfallen zu lassen, ohne sie mit dem Auftraggeber zu klären, gefährdet die Abnahme.",
+      "Falsch: Nicht vereinbarte Zusatzleistungen verschieben Aufwand und Termine unbemerkt, sind nicht vergütet und nicht dokumentiert. Im Streitfall existiert für die Funktion weder eine Anforderung noch ein Testfall."
+    ],
+    "erklaerungKurz": "Abweichungen zwischen Lastenheft und Pflichtenheft sind zu dokumentieren und mit dem Auftraggeber zu klären; eine Realisierung erfolgt über eine vereinbarte Änderung des Pflichtenhefts inklusive Auswirkung auf Aufwand, Termin und Preis.",
+    "erklaerungLang": "Das Lastenheft beschreibt aus Sicht des Auftraggebers das „Was\" und „Wofür\", das Pflichtenheft die vom Auftragnehmer zugesagte Umsetzung („Wie\") und wird nach Abstimmung zur maßgeblichen Leistungsbeschreibung. Fehlt eine Lastenheft-Anforderung im Pflichtenheft, liegt entweder ein Übertragungsfehler oder eine bewusste, aber nicht dokumentierte Abgrenzung vor – beides muss aufgeklärt werden, statt es einseitig zu entscheiden. Der saubere Weg: Abweichung dokumentieren, dem Auftraggeber vorlegen, gemeinsam bewerten und bei gewünschter Umsetzung einen Änderungsantrag stellen, der Aufwand, Termin und Preis neu festschreibt. So bleiben Leistungsumfang, Kalkulation und die spätere Abnahme konsistent. Stille Zusatzleistungen und einseitiges Weglassen führen dagegen regelmäßig zu Streit bei der Abnahme.",
+    "verweis": "Modul 04, Abschnitt 4.1 – Lastenheft und Pflichtenheft"
+  }
+]

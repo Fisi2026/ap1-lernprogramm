@@ -1,0 +1,1253 @@
+[
+  {
+    "id": "FALL-01",
+    "modul": "M04",
+    "thema": "Software-Einführung: Anforderungen, Datenmodell, Lizenzen",
+    "pruefungsteil": "AP1",
+    "titel": "Werkstattverwaltung – Software für die Ausbildungswerkstatt beschaffen",
+    "szenario": "Die Ausbildungswerkstatt der Brunnhuber Metallverarbeitung GmbH läuft, und die Geräteverwaltung mit Tabellenblättern stößt an ihre Grenzen. Beschafft werden soll eine Software, die Schulungsgeräte, Ausleihen und Wartungstermine verwaltet. Ein Dienstleister ist beauftragt. Sie begleiten die Einführung fachlich: Anforderungen abstimmen, das Datenmodell prüfen, das Lizenzmodell wählen und den Einführungsplan aufstellen.",
+    "teilaufgaben": [
+      {
+        "typ": "mc",
+        "schwierigkeit": 2,
+        "frage": "a) Sie haben dem Dienstleister aufgeschrieben, was die Software leisten soll. Er schickt daraufhin ein Dokument zurück, in dem steht, mit welcher Datenbank, welchen Masken und welchen Schnittstellen er das umsetzen will. Wie heißen die beiden Dokumente?",
+        "optionen": [
+          "Ihr Dokument ist das Lastenheft, seine Antwort das Pflichtenheft",
+          "Ihr Dokument ist das Pflichtenheft, seine Antwort das Lastenheft",
+          "Beide Dokumente zusammen bilden das Lastenheft des Auftraggebers",
+          "Ihr Dokument ist der Projektauftrag, seine Antwort das Pflichtenheft"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Genau umgekehrt: Was gefordert wird, legt der Auftraggeber im Lastenheft fest.",
+          "Das Pflichtenheft stammt vom Auftragnehmer. Der Auftraggeber schreibt das Lastenheft.",
+          "Der Projektauftrag regelt Ziel, Budget und Verantwortung, nicht die fachlichen Anforderungen."
+        ],
+        "erklaerungKurz": "Das Lastenheft kommt vom Auftraggeber und beschreibt, WAS gefordert ist. Das Pflichtenheft kommt vom Auftragnehmer und beschreibt, WIE er es umsetzt.",
+        "erklaerungLang": "Die Merkhilfe lautet: Wer die Last hat, schreibt das Lastenheft – der Auftraggeber. Er beschreibt darin die Anforderungen aus fachlicher Sicht, ohne technische Festlegungen. Der Auftragnehmer antwortet mit dem Pflichtenheft: seiner technischen Umsetzung, also Datenbank, Oberflächen, Schnittstellen, Mengengerüst. Mit der Freigabe wird das Pflichtenheft Vertragsbestandteil und damit der Maßstab der Abnahme – deshalb lohnt es sich, es Satz für Satz gegen das eigene Lastenheft zu lesen. Was dort nicht steht, ist nicht geschuldet.",
+        "verweis": "Modul 04, Abschnitt 4.1 – Lastenheft und Pflichtenheft"
+      },
+      {
+        "typ": "dropdown",
+        "schwierigkeit": 3,
+        "frage": "b) Das Datenmodell enthält die Tabellen Geraet und Ausleihe. Eine Ausleihe betrifft genau ein Gerät; ein Gerät kann nacheinander mehrfach ausgeliehen werden. In der Tabelle Ausleihe steht das Feld GeraetNr. Dieses Feld ist dort ein ___. Zwischen Geraet und Ausleihe besteht eine ___-Beziehung.",
+        "luecken": [
+          {
+            "optionen": [
+              "Primärschlüssel",
+              "Fremdschlüssel",
+              "zusammengesetzter Schlüssel",
+              "Sekundärindex"
+            ],
+            "loesung": 1
+          },
+          {
+            "optionen": [
+              "1:1",
+              "1:n",
+              "n:m",
+              "n:1"
+            ],
+            "loesung": 1
+          }
+        ],
+        "erklaerungKurz": "GeraetNr verweist in der Tabelle Ausleihe auf den Primärschlüssel der Tabelle Geraet und ist dort deshalb ein Fremdschlüssel. Ein Gerät hat mehrere Ausleihen, eine Ausleihe genau ein Gerät: 1:n.",
+        "erklaerungLang": "Ein Primärschlüssel identifiziert jeden Datensatz seiner eigenen Tabelle eindeutig. Dasselbe Feld in einer anderen Tabelle ist ein Fremdschlüssel: Es verweist auf den Primärschlüssel und stellt damit die Beziehung her. Die Leserichtung entscheidet über die Bezeichnung – von Geraet aus gesehen hängen mehrere Ausleihen an einem Gerät, also 1:n; von Ausleihe aus gelesen wäre dieselbe Beziehung n:1. Eine n:m-Beziehung ließe sich so nicht abbilden; sie braucht eine eigene Zwischentabelle. Der Fremdschlüssel sichert außerdem die referenzielle Integrität: Eine Ausleihe auf ein Gerät, das es nicht gibt, weist die Datenbank zurück.",
+        "verweis": "Modul 04, Abschnitt 4.2 – Datenmodellierung, Schlüssel und Beziehungen"
+      },
+      {
+        "typ": "zuordnung",
+        "schwierigkeit": 3,
+        "frage": "c) Der Dienstleister legt mehrere Lizenzmodelle vor. Ordnen Sie jedem Modell seine Bedingung zu.",
+        "paare": [
+          [
+            "Einzelplatzlizenz",
+            "An einen Arbeitsplatz gebunden und nicht auf andere Rechner übertragbar"
+          ],
+          [
+            "Concurrent-User-Lizenz",
+            "Begrenzt die Zahl der gleichzeitigen Nutzer, nicht die der Installationen"
+          ],
+          [
+            "Subskription (SaaS)",
+            "Laufende Gebühr für Nutzung und Betrieb; endet die Zahlung, endet das Nutzungsrecht"
+          ],
+          [
+            "GPL (Copyleft)",
+            "Quelloffen; wer eine geänderte Fassung weitergibt, legt den Quellcode unter derselben Lizenz offen"
+          ],
+          [
+            "OEM-Lizenz",
+            "Beim Kauf an eine bestimmte Hardware gebunden und nur zusammen mit ihr weiterzugeben"
+          ]
+        ],
+        "erklaerungKurz": "Lizenzmodelle unterscheiden sich darin, woran das Nutzungsrecht hängt: an einem Arbeitsplatz, an der Zahl gleichzeitiger Nutzer, an einer laufenden Zahlung, an einer Offenlegungspflicht oder an einem Gerät.",
+        "erklaerungLang": "Für die Werkstatt sind zwölf Plätze zu versorgen, an denen selten alle gleichzeitig arbeiten – eine Concurrent-User-Lizenz über sechs Plätze ist dann günstiger als zwölf Einzelplatzlizenzen. Zwei Punkte werden in der Prüfung regelmäßig verwechselt. Erstens: Die GPL bedeutet NICHT kostenlos. GPL-Software darf verkauft werden; frei ist der Quellcode, nicht der Preis. Zweitens: Die Offenlegungspflicht greift bei der WEITERGABE einer geänderten Fassung. Wer GPL-Software nur im eigenen Betrieb anpasst und nicht weitergibt, muss nichts veröffentlichen. Die Subskription verschiebt die Kosten vom einmaligen Kauf in einen laufenden Aufwand – planbar, aber ohne dauerhaftes Nutzungsrecht.",
+        "verweis": "Modul 04, Abschnitt 4.4 – Lizenzmodelle, GPL und Copyleft"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "d) Welche der folgenden Punkte sind NICHT-funktionale Anforderungen an die Werkstattsoftware? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Die Anwendung antwortet auch bei dreißig gleichzeitigen Nutzern innerhalb von zwei Sekunden",
+          "Die Anwendung erfasst eine Ausleihe und speichert sie mit Rückgabedatum",
+          "Die Anwendung ist ohne vorherige Schulung in höchstens zehn Minuten bedienbar",
+          "Die Anwendung gibt einen Bestandsbericht als PDF aus",
+          "Die Anwendung speichert die Daten der Auszubildenden verschlüsselt",
+          "Die Anwendung läuft auf den vorhandenen Notebooks ohne zusätzliche Laufzeitumgebung"
+        ],
+        "loesungIndizes": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "Das ist eine funktionale Anforderung: Sie beschreibt, WAS das System tut.",
+          "",
+          "Auch das ist funktional – eine Ausgabe, die das System erzeugen soll.",
+          "",
+          ""
+        ],
+        "erklaerungKurz": "Funktionale Anforderungen sagen, WAS das System tut. Nicht-funktionale sagen, WIE GUT es das tut: Leistung, Bedienbarkeit, Sicherheit, Portabilität. Beide gehören ins Lastenheft.",
+        "erklaerungLang": "Die Unterscheidung entscheidet später über die Abnahme. Funktional sind Ausleihe erfassen, Bericht ausgeben, Wartungstermin anlegen – jede Aussage der Form „das System tut X\". Nicht-funktional sind Antwortzeit, Bedienbarkeit, Sicherheit, Portabilität, Verfügbarkeit und Wartbarkeit – Aussagen der Form „das System tut es so gut, dass Y\". Nicht-funktionale Anforderungen sind ausdrücklich NICHT nebensächlich: Sie gehören ins Lastenheft und sind der häufigste Streitpunkt bei der Abnahme, weil sie oft unmessbar formuliert werden. „Das System muss schnell sein\" ist wertlos; „antwortet bei dreißig gleichzeitigen Nutzern binnen zwei Sekunden\" ist prüfbar. Wer eine nicht-funktionale Anforderung nicht messbar macht, kann sie nicht einfordern.",
+        "verweis": "Modul 04, Abschnitt 4.1 – Funktionale und nicht-funktionale Anforderungen"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 4,
+        "frage": "e) Für die Einführung der Werkstattsoftware wird ein Plan aufgestellt. Bewerten Sie die folgenden Aussagen zu Planung, Durchführung und Abschluss jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Das Bereinigen und Übernehmen der bisherigen Geräteliste gehört bereits in die Planung und nicht erst in die Umstellung.",
+            "wahr": true
+          },
+          {
+            "text": "Die Schnittstellentests gegen die vorhandene Inventarliste gehören in die Durchführung.",
+            "wahr": true
+          },
+          {
+            "text": "Eine Sicherung der bisherigen Geräteliste ist erst nach der Umstellung nötig, weil bis dahin die alte Liste weitergeführt wird.",
+            "wahr": false
+          },
+          {
+            "text": "Auf Anwenderschulungen kann verzichtet werden, sobald die Oberfläche der bisherigen Lösung ähnelt.",
+            "wahr": false
+          },
+          {
+            "text": "Dokumentation, ein benannter Ansprechpartner und eine Retrospektive gehören in den Abschluss.",
+            "wahr": true
+          }
+        ],
+        "erklaerungKurz": "Planung: Anforderungen abstimmen, Altdaten vorbereiten, Schulung terminieren. Durchführung: installieren, Daten übernehmen, testen, schulen. Abschluss: Umstellung, Dokumentation, Ansprechpartner, Retrospektive. Die Sicherung der Altdaten steht VOR der Umstellung.",
+        "erklaerungLang": "Ein Einführungsplan ordnet jede Aufgabe einer Phase zu, und jede Phase hat ihre eigenen Risiken.\n• Planung: Lastenheft und Pflichtenheft abstimmen, die bisherige Geräteliste exportieren und bereinigen, Schulungstermine legen. Risiko: unvollständige Anforderungen, Terminverzug.\n• Durchführung: Software installieren, Daten übernehmen, Schnittstellen gegen die Inventarliste testen, Anwender schulen. Risiko: fehlerhafte Altdaten, Leistungsprobleme, Widerstand der Anwender.\n• Abschluss: Umstellung, Dokumentation, benannter Ansprechpartner, Retrospektive. Risiko: Ausfall im Betrieb, Datenverlust.\n• Die Sicherung der Altdaten ist die Rückfallebene für die Umstellung. Sie muss VORHER stehen, sonst schützt sie genau in dem Moment nicht, für den sie gedacht ist.\n• Eine ähnliche Oberfläche ersetzt keine Schulung: Die Abläufe dahinter ändern sich, nicht die Knöpfe.\nMerke: Jede Phase endet mit einem Meilenstein und einem Test, bevor die nächste beginnt.",
+        "verweis": "Modul 04, Abschnitt 4.1 – Projektphasen und Einführungsplanung"
+      }
+    ]
+  },
+  {
+    "id": "FALL-02",
+    "modul": "M03",
+    "thema": "Netzabschnitt, Betriebskosten und Erwerbsmodell",
+    "pruefungsteil": "AP1",
+    "titel": "Eigener Netzabschnitt und Betriebskosten der Ausbildungswerkstatt",
+    "szenario": "Die Ausbildungswerkstatt der Brunnhuber Metallverarbeitung GmbH bekommt einen eigenen Verteiler und einen eigenen Adressbereich, damit der Schulungsbetrieb vom Produktionsnetz getrennt bleibt. Anzuschließen sind die zwölf Schulungsnotebooks, ein Netzwerkdrucker und zwei Kameras zur Maschinenüberwachung. Sie legen die aktive Technik fest, rechnen die Betriebskosten und bereiten die Entscheidung Kauf oder Leasing vor.",
+    "teilaufgaben": [
+      {
+        "typ": "mc",
+        "schwierigkeit": 2,
+        "frage": "a) In den Verteiler kommt ein aktives Gerät, das die angeschlossenen Stationen untereinander verbindet und einen Datenrahmen gezielt an den einen Port weiterleitet, an dem der Empfänger hängt. Auf welcher OSI-Schicht arbeitet es, und woran erkennt es das Ziel?",
+        "optionen": [
+          "Schicht 2, es entscheidet anhand der MAC-Adresse",
+          "Schicht 1, es gibt das Signal an alle Ports weiter",
+          "Schicht 3, es entscheidet anhand der IP-Adresse",
+          "Schicht 4, es ordnet anhand der Portnummer zu"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Das beschreibt einen Hub oder Repeater. Er kennt keine Adressen und flutet alle Ports.",
+          "Das beschreibt einen Router. Er arbeitet mit IP-Adressen und verbindet Netze, statt Stationen innerhalb eines Netzes zu koppeln.",
+          "Portnummern gehören zur Transportschicht; ein Switch wertet sie nicht aus."
+        ],
+        "erklaerungKurz": "Der Switch ist ein Gerät der Schicht 2. Er lernt die MAC-Adressen der angeschlossenen Stationen und leitet jeden Rahmen nur an den Port weiter, an dem der Empfänger hängt.",
+        "erklaerungLang": "Der Switch führt eine Tabelle, in der zu jedem Port die dort gelernten MAC-Adressen stehen. Trifft ein Rahmen ein, schlägt er die Ziel-MAC nach und leitet ihn nur dorthin weiter; nur bei unbekanntem Ziel flutet er kurzzeitig alle Ports. Daraus folgt der Unterschied zum Hub: Jedes Portpaar bekommt die volle Bandbreite, und Kollisionen entfallen. Für die Werkstatt heißt das: Ein Switch im Verteiler genügt für die Kopplung innerhalb der Halle; für den Übergang ins Firmennetz und ins Internet braucht es zusätzlich ein Gerät der Schicht 3.",
+        "verweis": "Modul 03, Abschnitt 3.1 – Netzkomponenten und OSI-Schichten"
+      },
+      {
+        "typ": "dropdown",
+        "schwierigkeit": 3,
+        "frage": "b) Die zwölf Schulungsnotebooks nehmen im Betrieb je 65 Watt auf. Sie laufen an 200 Ausbildungstagen im Jahr jeweils sechs Stunden. Der Arbeitspreis beträgt 0,32 € je kWh. Der Jahresverbrauch aller zwölf Geräte beträgt ___ kWh, die Stromkosten betragen rund ___ €.",
+        "luecken": [
+          {
+            "optionen": [
+              "468",
+              "936",
+              "1.872",
+              "78"
+            ],
+            "loesung": 1
+          },
+          {
+            "optionen": [
+              "150",
+              "300",
+              "600",
+              "3.000"
+            ],
+            "loesung": 1
+          }
+        ],
+        "erklaerungKurz": "65 W × 6 h = 390 Wh = 0,39 kWh je Gerät und Tag. × 12 Geräte = 4,68 kWh je Tag. × 200 Tage = 936 kWh. × 0,32 € = 299,52 €, also rund 300 €.",
+        "erklaerungLang": "Der Rechenweg geht immer über die Kilowattstunde, und die Umrechnung passiert genau einmal: Watt mal Stunden ergibt Wattstunden, geteilt durch 1000 ergibt Kilowattstunden.\nSchritt 1 – ein Gerät, ein Tag: 65 W × 6 h = 390 Wh = 0,39 kWh.\nSchritt 2 – alle Geräte, ein Tag: 0,39 kWh × 12 = 4,68 kWh.\nSchritt 3 – ein Jahr: 4,68 kWh × 200 Tage = 936 kWh.\nSchritt 4 – Kosten: 936 kWh × 0,32 €/kWh = 299,52 €.\nDer häufigste Fehler ist ein vergessener Faktor: Wer die zwölf Geräte übersieht, landet bei 78 kWh; wer mit drei statt sechs Stunden rechnet, bei 468 kWh. Über sechs Jahre Nutzungsdauer summieren sich die Stromkosten auf rund 1.800 € – das gehört in jede Wirtschaftlichkeitsrechnung.",
+        "verweis": "Modul 03, Abschnitt 3.3 – Energieverbrauch und Betriebskosten"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 3,
+        "frage": "c) Die Geschäftsführung fragt nach den Gesamtkosten der Werkstatt-IT. Bewerten Sie die folgenden Aussagen jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Zu den Gesamtkosten (TCO) zählen neben dem Anschaffungspreis auch Strom, Wartung, Support und Entsorgung.",
+            "wahr": true
+          },
+          {
+            "text": "Bildschirmarbeitsplätze müssen nach Arbeitsschutzgesetz und Arbeitsstättenverordnung ergonomisch eingerichtet sein; die Kosten dafür gehören in die Beschaffungsrechnung.",
+            "wahr": true
+          },
+          {
+            "text": "Die betriebsgewöhnliche Nutzungsdauer bestimmt, über wie viele Jahre eine Anschaffung abgeschrieben wird.",
+            "wahr": true
+          },
+          {
+            "text": "Eine Wirtschaftlichkeitsbetrachtung ist mit dem Angebotsvergleich abgeschlossen; die laufenden Kosten bleiben außen vor.",
+            "wahr": false
+          },
+          {
+            "text": "Ein niedrigerer Anschaffungspreis bedeutet zwingend auch niedrigere Gesamtkosten über die Nutzungsdauer.",
+            "wahr": false
+          }
+        ],
+        "erklaerungKurz": "Die Gesamtkosten umfassen Anschaffung UND Betrieb über die gesamte Nutzungsdauer. Ein billigeres Gerät kann über sechs Jahre teurer sein, wenn es mehr Strom zieht oder häufiger ausfällt.",
+        "erklaerungLang": "Total Cost of Ownership heißt: alles rechnen, was das Gerät bis zur Entsorgung kostet.\n• Einmalig: Anschaffung, Lieferung, Aufbau, Ersteinrichtung, Schulung.\n• Laufend: Strom, Wartung, Support, Verbrauchsmaterial, Lizenzen, Versicherung.\n• Am Ende: Datenlöschung, Entsorgung oder Verwertung.\nDazu kommen die Pflichten aus dem Arbeitsschutz: Bildschirmarbeitsplätze sind nach dem Arbeitsschutzgesetz und der Arbeitsstättenverordnung ergonomisch einzurichten – Monitorgröße, Höhenverstellbarkeit, Beleuchtung, Sitzmöbel. Das ist kein Komfort, sondern eine Anforderung, deren Kosten in die Beschaffungsrechnung gehören.\nDie betriebsgewöhnliche Nutzungsdauer steuert die Abschreibung: Sie verteilt die Anschaffungskosten über die Jahre und bestimmt damit den jährlichen Aufwand.\nMerke: Der Angebotsvergleich ist der Anfang der Wirtschaftlichkeitsbetrachtung, nicht ihr Ende.",
+        "verweis": "Modul 03, Abschnitt 3.4 – Wirtschaftlichkeit und TCO"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "d) Die Geschäftsführung will wissen, was für ein Leasing der Schulungsnotebooks spricht. Welche Aussagen treffen zu? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Die gleichbleibende Rate macht die Belastung über die Laufzeit planbar",
+          "Über die gesamte Nutzungsdauer ist Leasing in der Regel günstiger als der Kauf",
+          "Die Liquidität wird geschont, weil keine hohe Einmalzahlung anfällt",
+          "Die Geräte erscheinen als Anlagevermögen in der Bilanz des Leasingnehmers",
+          "Am Ende der Laufzeit lässt sich auf aktuelle Geräte wechseln, ohne die Altgeräte verwerten zu müssen",
+          "Umbauten und eine vorzeitige Rückgabe sind ohne Rücksprache mit dem Leasinggeber möglich"
+        ],
+        "loesungIndizes": [
+          0,
+          2,
+          4
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "In der Summe ist Leasing meist teurer – der Leasinggeber trägt Kapitalbindung und Restwertrisiko und lässt sich das bezahlen.",
+          "",
+          "Beim üblichen Operating-Leasing bilanziert der Leasinggeber. Der Leasingnehmer bucht die Rate als Aufwand.",
+          "",
+          "Umgekehrt: Die Verfügungsgewalt ist eingeschränkt. Der Leasingnehmer ist nicht Eigentümer; Umbauten und vorzeitige Rückgabe sind vertraglich geregelt."
+        ],
+        "erklaerungKurz": "Für Leasing sprechen Planbarkeit, Liquidität und der einfache Gerätewechsel. Dagegen sprechen höhere Gesamtkosten und weniger Verfügungsgewalt. Der Kauf bringt Eigentum, Abschreibung und in der Regel niedrigere Gesamtkosten.",
+        "erklaerungLang": "Die Entscheidung hängt an drei Fragen.\n• Wie lange wird genutzt? Wer sechs Jahre plant, fährt mit dem Kauf meist günstiger; wer alle drei Jahre wechseln will, mit Leasing.\n• Wie steht es um die Liquidität? Der Kauf bindet auf einen Schlag Kapital, das Leasing verteilt die Belastung gleichmäßig – genau das ist sein Planbarkeitsvorteil, nicht der des Kaufs.\n• Wie wird gebucht? Beim Kauf wird das Gerät aktiviert und über die betriebsgewöhnliche Nutzungsdauer abgeschrieben; beim Operating-Leasing bleibt es beim Leasinggeber in der Bilanz, und die Rate ist beim Leasingnehmer sofort in voller Höhe Aufwand.\nFür die zwölf Schulungsnotebooks mit sechs Jahren geplanter Nutzung spricht deshalb mehr für den Kauf – die Frage nach den Leasingargumenten prüft, ob die Vorteile der jeweils anderen Seite zugeordnet werden können.",
+        "verweis": "Modul 03, Abschnitt 3.4 – Kauf, Leasing und Erwerbsmodelle"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "e) Die Werkstatt bekommt einen eigenen Adressbereich. Anzuschließen sind zwölf Notebooks, ein Drucker, zwei Kameras und der Verteiler; dazu soll Reserve bleiben. Welches Subnetz ist das kleinste, das ausreicht?",
+        "optionen": [
+          "10.10.4.0/27 mit 30 nutzbaren Adressen",
+          "10.10.4.0/28 mit 14 nutzbaren Adressen",
+          "10.10.4.0/26 mit 62 nutzbaren Adressen",
+          "10.10.4.0/24 mit 254 nutzbaren Adressen"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Ein /28 bietet nur 14 nutzbare Adressen. Allein die sechzehn Geräte passen nicht hinein.",
+          "Ein /26 reicht aus, ist aber größer als nötig – gefragt war das kleinste ausreichende Subnetz.",
+          "Ein /24 reicht ebenfalls, verschenkt aber 238 Adressen und widerspricht dem Sinn der Aufteilung."
+        ],
+        "erklaerungKurz": "Gebraucht werden 16 Adressen plus Reserve. Ein /27 hat 2^5 = 32 Adressen, davon 30 nutzbar – die Netzadresse und die Broadcastadresse fallen weg. Ein /28 mit 14 nutzbaren reicht nicht.",
+        "erklaerungLang": "Der Rechenweg ist immer derselbe: Zuerst den Bedarf zählen, dann die nächstgrößere Zweierpotenz suchen, dann zwei Adressen für Netz und Broadcast abziehen.\nBedarf: 12 Notebooks + 1 Drucker + 2 Kameras + 1 Verteiler = 16 Geräte.\nEin /28 hat 2^(32−28) = 16 Adressen, nutzbar 14 – zu klein, noch vor jeder Reserve.\nEin /27 hat 2^(32−27) = 32 Adressen, nutzbar 30 – 16 belegt, 14 frei als Reserve.\nDaraus folgt die Grundregel: Man wählt nicht das Subnetz, das gerade eben passt, sondern das nächstgrößere mit Luft für Wachstum – aber auch nicht mehr, denn ein eigener Adressbereich je Bereich ist genau dazu da, das Netz zu gliedern.",
+        "verweis": "Modul 03, Abschnitt 3.2 – IP-Adressierung und Subnetting"
+      }
+    ]
+  },
+  {
+    "id": "FALL-03",
+    "modul": "M06",
+    "thema": "Datenpanne: Schutzziele, DSGVO-Pflichten und Maßnahmen",
+    "pruefungsteil": "AP1",
+    "titel": "Verlorenes Schulungsnotebook – Datenpanne in der Ausbildungswerkstatt",
+    "szenario": "Nach einem Wochenende fehlt eines der zwölf Schulungsnotebooks der Ausbildungswerkstatt der Brunnhuber Metallverarbeitung GmbH. Auf dem Gerät lagen Übungsdateien mit Namen, Geburtsdaten und Zwischennoten von 24 Auszubildenden. Das Notebook war mit einem Kennwort für das Benutzerkonto geschützt, die Festplatte jedoch nicht verschlüsselt. Die Geschäftsführung beauftragt Sie, den Vorfall zu bewerten, die Pflichten zu klären und Maßnahmen vorzuschlagen.",
+    "teilaufgaben": [
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "a) Welche Maßnahme hätte den Verlust der DATEN – nicht den des Geräts – wirksam verhindert?",
+        "optionen": [
+          "Eine Verschlüsselung des gesamten Datenträgers",
+          "Eine tägliche Sicherung auf den Dateiserver",
+          "Eine Protokollierung aller Anmeldungen am Notebook",
+          "Ein längeres Kennwort für das Benutzerkonto"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Die Sicherung schützt die Verfügbarkeit – die Dateien wären noch da. Davor, dass Fremde sie lesen, schützt sie nicht.",
+          "Protokolle helfen bei der Aufklärung im Nachhinein. Den Zugriff auf den Datenträger verhindern sie nicht.",
+          "Das Kontokennwort schützt nur die Anmeldung. Wer die Festplatte ausbaut oder das Gerät von einem USB-Medium startet, liest sie ohne jede Anmeldung."
+        ],
+        "erklaerungKurz": "Verletzt ist das Schutzziel Vertraulichkeit. Nur die Verschlüsselung des Datenträgers macht die Daten für Unbefugte unlesbar; ein Kontokennwort tut das nicht.",
+        "erklaerungLang": "Der entscheidende Punkt ist der Unterschied zwischen Anmeldeschutz und Datenschutz auf dem Datenträger. Das Kennwort des Benutzerkontos wird vom Betriebssystem geprüft – und das Betriebssystem lässt sich umgehen: Datenträger ausbauen und an einem anderen Rechner anschließen oder das Gerät von einem USB-Medium starten. In beiden Fällen liegen die Dateien offen. Eine Verschlüsselung des gesamten Datenträgers setzt dagegen einen Schlüssel voraus, der beim Start eingegeben oder aus einem Sicherheitsbaustein im Gerät gelöst wird; ohne ihn ist der Inhalt unlesbar.\nDas hat unmittelbare rechtliche Folge: Die DSGVO nennt die Verschlüsselung in Artikel 32 ausdrücklich als geeignete Maßnahme, und nach Artikel 34 Absatz 3 Buchstabe a kann die Benachrichtigung der Betroffenen entfallen, wenn die Daten durch eine solche Maßnahme für Unbefugte unzugänglich sind. Verschlüsselung ist damit nicht nur Technik, sondern die Maßnahme, die den Vorfall im Ernstfall entschärft.",
+        "verweis": "Modul 06, Abschnitt 6.1 – Schutzziele und Verschlüsselung"
+      },
+      {
+        "typ": "zuordnung",
+        "schwierigkeit": 3,
+        "frage": "b) Nach dem Vorfall werden mehrere Maßnahmen beschlossen. Ordnen Sie jede Maßnahme dem Schutzziel zu, das sie in erster Linie bedient.",
+        "paare": [
+          [
+            "Verschlüsselung der Datenträger aller mobilen Geräte",
+            "Vertraulichkeit – Unbefugte können die Daten nicht lesen"
+          ],
+          [
+            "Prüfsummen über die exportierten Notenlisten",
+            "Integrität – eine nachträgliche Änderung wird erkennbar"
+          ],
+          [
+            "Tägliche Sicherung auf ein zweites, getrenntes Medium",
+            "Verfügbarkeit – die Daten sind nach einem Ausfall wieder da"
+          ],
+          [
+            "Anmeldeprotokoll mit Benutzername und Zeitstempel",
+            "Zurechenbarkeit – eine Handlung lässt sich einer Person zuordnen"
+          ],
+          [
+            "Mehr-Faktor-Anmeldung am Verwaltungskonto",
+            "Vertraulichkeit – ein gestohlenes Kennwort allein genügt nicht"
+          ]
+        ],
+        "erklaerungKurz": "Verschlüsselung und Mehr-Faktor-Anmeldung schützen die Vertraulichkeit, Prüfsummen die Integrität, Sicherungen die Verfügbarkeit. Protokolle gehören zur Zurechenbarkeit – sie weisen nach, WER etwas getan hat.",
+        "erklaerungLang": "Die drei klassischen Schutzziele sind Vertraulichkeit, Integrität und Verfügbarkeit. In der Praxis kommt ein viertes hinzu, das in der Prüfung gern mit der Integrität verwechselt wird: die Zurechenbarkeit.\n• Vertraulichkeit heißt: Nur Berechtigte sehen die Daten. Mittel sind Verschlüsselung, Zugriffsrechte und starke Anmeldeverfahren.\n• Integrität heißt: Die Daten sind unverändert. Mittel sind Prüfsummen, Hashwerte und digitale Signaturen – sie machen eine Veränderung SICHTBAR.\n• Verfügbarkeit heißt: Die Daten sind da, wenn man sie braucht. Mittel sind Sicherungen, Redundanz und Notfallpläne.\n• Zurechenbarkeit heißt: Eine Handlung lässt sich einer Person zuordnen. Mittel sind Protokolle, persönliche Konten und Zeitstempel.\nEin Protokoll sagt nichts darüber, ob eine Datei verändert wurde – es sagt, wer angemeldet war. Deshalb ist es Zurechenbarkeit und nicht Integrität.",
+        "verweis": "Modul 06, Abschnitt 6.1 – Schutzziele und technische Maßnahmen"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 4,
+        "frage": "c) Brunnhuber prüft die eigenen Pflichten nach der DSGVO. Bewerten Sie die folgenden Aussagen jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Der Verlust eines unverschlüsselten Geräts mit personenbezogenen Daten ist eine Verletzung des Schutzes personenbezogener Daten.",
+            "wahr": true
+          },
+          {
+            "text": "Die Meldung an die Aufsichtsbehörde erfolgt ohne unangemessene Verzögerung, möglichst binnen 72 Stunden nach Bekanntwerden.",
+            "wahr": true
+          },
+          {
+            "text": "Die 72-Stunden-Frist beginnt erst, wenn die interne Untersuchung abgeschlossen ist.",
+            "wahr": false
+          },
+          {
+            "text": "Wäre der Datenträger verschlüsselt gewesen, hätte die Benachrichtigung der Betroffenen entfallen können.",
+            "wahr": true
+          },
+          {
+            "text": "Solange keine Meldung an die Aufsichtsbehörde nötig ist, muss der Vorfall auch nicht dokumentiert werden.",
+            "wahr": false
+          }
+        ],
+        "erklaerungKurz": "Melden ohne unangemessene Verzögerung, Richtwert 72 Stunden ab Bekanntwerden. Betroffene benachrichtigen, wenn ein hohes Risiko besteht – bei verschlüsselten Daten kann das entfallen. Dokumentiert wird jeder Vorfall.",
+        "erklaerungLang": "Ein verlorenes Gerät ist kein Bagatellfall: Sobald personenbezogene Daten betroffen sind, greift die Kette der Pflichten.\n• Der Begriff: Eine Verletzung des Schutzes personenbezogener Daten liegt nach Artikel 4 Nummer 12 DSGVO auch dann vor, wenn Daten nur unbefugt zugänglich WERDEN KÖNNTEN – ein Verlust genügt, ein nachgewiesener Missbrauch ist nicht nötig.\n• Meldung nach Artikel 33 DSGVO: ohne unangemessene Verzögerung, als Richtwert binnen 72 Stunden ab Bekanntwerden – nicht ab Abschluss der Untersuchung. Wer später meldet, muss die Verzögerung begründen. Eine unvollständige Meldung darf nachgereicht werden.\n• Benachrichtigung der Betroffenen nach Artikel 34 DSGVO: nötig bei voraussichtlich hohem Risiko. Nach Absatz 3 Buchstabe a entfällt sie, wenn die Daten durch geeignete Maßnahmen – ausdrücklich genannt: Verschlüsselung – für Unbefugte unzugänglich sind. Genau das ist der wirtschaftliche Wert der Verschlüsselung.\n• Dokumentation nach Artikel 33 Absatz 5 DSGVO: JEDER Vorfall wird festgehalten, mit Art, Umfang, Folgen und ergriffenen Maßnahmen – auch wenn am Ende keine Meldung nötig war. Das ist die Nachweispflicht gegenüber der Aufsicht.\nMerke: Melden, benachrichtigen, dokumentieren – die drei Pflichten hängen nicht voneinander ab.",
+        "verweis": "Modul 06, Abschnitt 6.2 – Meldepflichten nach der DSGVO"
+      },
+      {
+        "typ": "dropdown",
+        "schwierigkeit": 3,
+        "frage": "d) Ergänzen Sie: ___ ist ein symmetrisches Verfahren und wird für die Verschlüsselung der Datenträger eingesetzt. ___ ist dagegen gar kein Verschlüsselungsverfahren, sondern eine Einwegfunktion, mit der sich die Unverändertheit einer Datei nachweisen lässt.",
+        "luecken": [
+          {
+            "optionen": [
+              "RSA",
+              "AES",
+              "TLS",
+              "VPN"
+            ],
+            "loesung": 1
+          },
+          {
+            "optionen": [
+              "SHA-256",
+              "AES-256",
+              "RSA-4096",
+              "ECDSA"
+            ],
+            "loesung": 0
+          }
+        ],
+        "erklaerungKurz": "AES verschlüsselt symmetrisch mit einem Schlüssel und ist schnell genug für ganze Datenträger. SHA-256 ist eine Hashfunktion: Sie erzeugt einen Fingerabdruck fester Länge und lässt sich nicht umkehren.",
+        "erklaerungLang": "Drei Bausteine werden regelmäßig verwechselt, weil sie alle mit Zahlen und Bitlängen auftreten.\n• Symmetrische Verschlüsselung (AES): EIN Schlüssel für Verschlüsseln und Entschlüsseln. Schnell, deshalb der Standard für große Datenmengen – Datenträger, Archive, Datenströme. Das Problem ist der Austausch des Schlüssels.\n• Asymmetrische Verschlüsselung (RSA, ECC): ein Schlüsselpaar aus öffentlichem und privatem Schlüssel. Rechenaufwändig, deshalb in der Praxis nicht für ganze Datenträger, sondern für den Austausch des symmetrischen Schlüssels und für Signaturen. Die Kombination beider heißt hybride Verschlüsselung und steckt zum Beispiel hinter TLS.\n• Hashfunktion (SHA-256): kein Schlüssel, keine Umkehrung. Aus beliebig langer Eingabe wird ein Wert fester Länge. Ändert sich ein einziges Bit der Datei, ändert sich der Hashwert vollständig – deshalb der Nachweis der Unverändertheit.\nMerke: Verschlüsseln kann man rückgängig machen, hashen nicht. Wer einen Hashwert als Verschlüsselung bezeichnet, verwechselt Integrität mit Vertraulichkeit.",
+        "verweis": "Modul 06, Abschnitt 6.3 – Verschlüsselungsverfahren und Hashfunktionen"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "e) Welche Maßnahmen gehören in das Paket, das Sie nach diesem Vorfall vorschlagen? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Die Verschlüsselung der Datenträger auf allen mobilen Geräten verbindlich einschalten",
+          "Eine Geräteliste führen, aus der Standort und verantwortliche Person jedes Notebooks hervorgehen",
+          "Alle Sicherheitsupdates künftig sofort und ohne vorherige Prüfung auf allen Geräten einspielen",
+          "Auszubildende und Ausbildende unterweisen, welche Daten überhaupt auf mobile Geräte gehören",
+          "Die Kennwortlänge auf acht Zeichen begrenzen, damit die Auszubildenden sie sich besser merken",
+          "Übungsdaten durch Testdaten ersetzen, wo echte Namen und Noten für die Übung nicht nötig sind"
+        ],
+        "loesungIndizes": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "",
+          "Patch-Management heißt prüfen, freigeben, verteilen. Ungeprüft ausgerollte Updates haben schon ganze Betriebe lahmgelegt – zügig ist richtig, ungeprüft nicht.",
+          "",
+          "Eine Obergrenze für die Kennwortlänge schwächt den Schutz. Vorgegeben wird eine Mindestlänge, nicht eine Höchstlänge.",
+          ""
+        ],
+        "erklaerungKurz": "Ein Maßnahmenpaket kombiniert Technik (Verschlüsselung), Organisation (Geräteliste, Unterweisung) und Datenminimierung (Testdaten statt echter Daten). Ungeprüftes Patchen und kurze Kennwörter gehören nicht dazu.",
+        "erklaerungLang": "Die DSGVO verlangt technische UND organisatorische Maßnahmen – beides zusammen, weil keines allein trägt.\n• Technisch: Verschlüsselung der Datenträger, Mehr-Faktor-Anmeldung, aktuelle Systeme, Fernlöschung für mobile Geräte.\n• Organisatorisch: eine Geräteliste mit Standort und verantwortlicher Person, eine Regelung, welche Daten mobil sein dürfen, Unterweisung der Beteiligten, ein Meldeweg für Vorfälle.\n• Datenminimierung: Der wirksamste Schutz ist die Datei, die gar nicht erst auf dem Gerät liegt. Für eine Übung genügen erfundene Namen und erfundene Noten; echte Auszubildendendaten haben dort nichts zu suchen.\nZwei verbreitete Fehlgriffe stehen in der Aufgabe. Sofortiges Einspielen ohne Prüfung verwechselt Geschwindigkeit mit Sorgfalt – zwischen Verfügbarkeit eines Updates und Verteilung gehört ein Test. Und eine Höchstlänge für Kennwörter kehrt die Anforderung um: Gefordert wird eine Mindestlänge; je länger das Kennwort, desto besser.",
+        "verweis": "Modul 06, Abschnitt 6.3 – Technische und organisatorische Maßnahmen"
+      }
+    ]
+  },
+  {
+    "id": "FALL-04",
+    "modul": "M01",
+    "thema": "Projektbegriff, Netzplan, Risiko und Zielformulierung",
+    "pruefungsteil": "AP1",
+    "titel": "Neue Ausbildungswerkstatt – IT-Ausstattung als Projekt planen",
+    "szenario": "Die Brunnhuber Metallverarbeitung GmbH richtet eine neue Ausbildungswerkstatt ein. Bis zum Ausbildungsbeginn am 1. September müssen zwölf Arbeitsplätze mit Rechnern, Netzwerk und Schulungssoftware bereitstehen. Die Geschäftsführung stellt ein festes Budget bereit und benennt Sie als verantwortliche Fachkraft für die IT-Seite. Sie sollen den Auftrag als Projekt aufsetzen, den Ablauf terminieren und die Risiken einschätzen.",
+    "teilaufgaben": [
+      {
+        "typ": "mc",
+        "schwierigkeit": 2,
+        "frage": "a) Ihre Ausbilderin fragt, woran man erkennt, dass es sich hier tatsächlich um ein Projekt handelt und nicht um Tagesgeschäft. Welche Begründung trifft zu?",
+        "optionen": [
+          "Der Auftrag ist einmalig, zeitlich befristet, hat ein klares Ziel sowie begrenzte Ressourcen und ist fachübergreifend – das sind typische Projektmerkmale",
+          "Es handelt sich um ein Projekt, weil mehr als zehn Arbeitsplätze betroffen sind; unterhalb dieser Grenze spricht man vom laufenden Tagesgeschäft der Fachabteilung",
+          "Es handelt sich um ein Projekt, weil externe Dienstleister beteiligt sind – ohne externe Beteiligung wäre es kein Projekt",
+          "Es handelt sich um ein Projekt, weil die Geschäftsführung es angeordnet hat; die Anordnung von oben ist das entscheidende Merkmal"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Eine feste Zahl betroffener Arbeitsplätze ist kein Projektmerkmal; entscheidend sind Einmaligkeit, Befristung, Zielvorgabe und begrenzte Ressourcen.",
+          "Externe Beteiligung ist möglich, aber kein notwendiges Merkmal – auch rein interne Vorhaben können Projekte sein.",
+          "Wer den Auftrag erteilt, ist unerheblich. Auch angeordnetes Tagesgeschäft bleibt Tagesgeschäft."
+        ],
+        "erklaerungKurz": "Ein Projekt ist durch Einmaligkeit, zeitliche Befristung, ein definiertes Ziel, begrenzte Ressourcen und meist fachübergreifende Zusammenarbeit gekennzeichnet. Wiederkehrende Routineaufgaben erfüllen diese Merkmale nicht.",
+        "erklaerungLang": "Die DIN 69901 beschreibt ein Projekt als Vorhaben, das im Wesentlichen durch die Einmaligkeit seiner Bedingungen gekennzeichnet ist: Zielvorgabe, zeitliche, finanzielle und personelle Begrenzung, Abgrenzung gegenüber anderen Vorhaben und eine projektspezifische Organisation. Die Einrichtung der Ausbildungswerkstatt erfüllt all das – sie geschieht einmalig, muss bis zu einem festen Termin fertig sein, hat ein begrenztes Budget und erfordert die Zusammenarbeit von IT, Ausbildungsleitung und Einkauf. Weder eine Mindestgröße noch die Beteiligung Externer noch die Anordnung durch die Geschäftsführung sind Projektmerkmale.",
+        "verweis": "Modul 01, Abschnitt 1.1 – Projektbegriff und Projektmerkmale"
+      },
+      {
+        "typ": "dropdown",
+        "schwierigkeit": 3,
+        "frage": "b) Sie erstellen einen Netzplan. In der Vorwärtsrechnung ergibt sich der früheste Endzeitpunkt eines Vorgangs als FEZ = FAZ + ___. Ein Vorgang, dessen Gesamtpuffer null beträgt, liegt auf dem ___.",
+        "luecken": [
+          {
+            "optionen": [
+              "Dauer",
+              "SAZ",
+              "Gesamtpuffer",
+              "freier Puffer"
+            ],
+            "loesung": 0
+          },
+          {
+            "optionen": [
+              "Meilenstein",
+              "kritischen Weg",
+              "Endknoten",
+              "Anfangsknoten"
+            ],
+            "loesung": 1
+          }
+        ],
+        "erklaerungKurz": "In der Vorwärtsrechnung gilt FEZ = FAZ + Dauer. Ein Vorgang ohne Puffer (GP = 0) liegt auf dem kritischen Weg: Jede Verzögerung dort verschiebt den Projektendtermin.",
+        "erklaerungLang": "Der Netzplan wird in zwei Richtungen gerechnet. Die Vorwärtsrechnung ermittelt die frühesten Zeitpunkte: FAZ ist der früheste Anfangszeitpunkt, FEZ = FAZ + Dauer der früheste Endzeitpunkt. Die Rückwärtsrechnung liefert die spätesten Zeitpunkte SAZ und SEZ. Aus beiden ergibt sich der Gesamtpuffer GP = SAZ − FAZ (gleichwertig SEZ − FEZ). Vorgänge mit GP = 0 haben keinen zeitlichen Spielraum und bilden zusammen den kritischen Weg, der die Gesamtprojektdauer bestimmt. Für die Werkstatt heißt das: Verzögert sich ein Vorgang auf dem kritischen Weg, ist der 1. September nicht mehr zu halten.",
+        "verweis": "Modul 01, Abschnitt 1.1 – Netzplan-Parameter"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "c) Welche der folgenden Punkte sind echte Projektrisiken, die Sie in die Risikoanalyse aufnehmen sollten? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Die bestellten Rechner werden wegen Lieferengpässen erst nach dem 1. September geliefert",
+          "Die Elektroinstallation der Werkstatt ist noch nicht abgenommen, sodass die Netzwerkverkabelung nicht beginnen kann",
+          "Die Schulungssoftware benötigt eine Lizenzform, die im Budget nicht eingeplant wurde",
+          "Der zuständige Kollege fällt während der Hauptarbeitsphase längere Zeit aus und niemand ist eingearbeitet",
+          "Die Ausbildungswerkstatt wird von der Geschäftsführung als wichtig eingestuft"
+        ],
+        "loesungIndizes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "",
+          "",
+          "",
+          "Eine hohe Bedeutung des Vorhabens ist kein Risiko, sondern eine Rahmenbedingung. Ein Risiko ist ein unsicheres Ereignis, das das Projektziel gefährden könnte."
+        ],
+        "erklaerungKurz": "Ein Risiko ist ein mögliches künftiges Ereignis mit negativer Auswirkung auf Termin, Kosten oder Qualität. Lieferverzug, Abhängigkeit von Vorgewerken, unklare Lizenzkosten und Personalausfall erfüllen das; die Wichtigkeit des Projekts an sich nicht.",
+        "erklaerungLang": "In der Risikoanalyse werden mögliche Störereignisse gesammelt und nach Eintrittswahrscheinlichkeit und Schadenshöhe bewertet; aus dem Produkt beider ergibt sich die Priorität. Für jedes relevante Risiko wird eine Maßnahme festgelegt – vermeiden, vermindern, übertragen oder bewusst tragen. Lieferverzug lässt sich etwa durch frühzeitige Bestellung und Pufferzeiten vermindern, der Personalausfall durch eine eingearbeitete Vertretung. Die strategische Bedeutung des Projekts ist dagegen eine Rahmenbedingung: Sie beeinflusst die Priorisierung von Ressourcen, ist aber selbst kein unsicheres Ereignis.",
+        "verweis": "Modul 01, Abschnitt 1.3 – Risikomanagement"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 2,
+        "frage": "d) Die Ausbildungsleitung schlägt vor, das Vorhaben agil nach Scrum abzuwickeln. Bewerte die folgenden Aussagen jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Im Wasserfallmodell werden die Phasen nacheinander durchlaufen; eine Phase beginnt erst, wenn die vorherige abgeschlossen ist.",
+            "wahr": true
+          },
+          {
+            "text": "Scrum arbeitet in kurzen, wiederkehrenden Zyklen (Sprints) mit regelmäßig auslieferbaren Zwischenergebnissen.",
+            "wahr": true
+          },
+          {
+            "text": "Ein Vorhaben mit vollständig bekannten, stabilen Anforderungen und festem Endtermin lässt sich auch klassisch nach dem Wasserfallmodell abwickeln.",
+            "wahr": true
+          },
+          {
+            "text": "Scrum eignet sich besonders dann, wenn alle Anforderungen von Beginn an feststehen und sich während der Umsetzung sicher nicht mehr ändern.",
+            "wahr": false
+          },
+          {
+            "text": "Ein Wechsel des Vorgehensmodells mitten im Projekt ist unproblematisch, weil beide Modelle dieselben Phasen kennen.",
+            "wahr": false
+          }
+        ],
+        "erklaerungKurz": "Das Wasserfallmodell arbeitet phasenweise und passt zu stabilen, vollständig bekannten Anforderungen. Scrum spielt seine Stärke gerade dort aus, wo Anforderungen unklar sind oder sich ändern – bei vollständig feststehenden Anforderungen bringt es wenig Zusatznutzen.",
+        "erklaerungLang": "Die Wahl des Vorgehensmodells richtet sich nach der Unsicherheit der Anforderungen. Das Wasserfallmodell durchläuft Analyse, Entwurf, Realisierung, Test und Einführung nacheinander; Rücksprünge sind teuer, dafür sind Termine und Kosten früh planbar. Scrum liefert in Sprints von meist zwei bis vier Wochen lauffähige Zwischenstände und erlaubt es, Anforderungen zwischen den Sprints anzupassen. Die Ausstattung der Werkstatt hat klar umrissene, stabile Anforderungen und einen fixen Endtermin – hier ist ein klassisches, terminorientiertes Vorgehen naheliegender, ohne dass Scrum grundsätzlich falsch wäre.\nDie Modelle lassen sich nicht beliebig mitten im Projekt tauschen: Wasserfall und Scrum unterscheiden sich in Rollen, Artefakten und Abnahmelogik, nicht nur in der Reihenfolge der Phasen. Ein Wechsel ist eine Projektentscheidung mit eigenem Aufwand.",
+        "verweis": "Modul 01, Abschnitt 1.2 – Vorgehensmodelle"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 2,
+        "frage": "e) Sie formulieren das Projektziel nach der SMART-Regel. Welche Formulierung erfüllt sie am besten?",
+        "optionen": [
+          "Bis zum 31.08. sind zwölf Schulungsarbeitsplätze mit installierter Schulungssoftware betriebsbereit und im Netz erreichbar; das Budget von 18.000 € wird eingehalten",
+          "Die Ausbildungswerkstatt soll möglichst bald eine moderne und zeitgemäße IT-Ausstattung erhalten",
+          "Die IT-Ausstattung der Werkstatt wird deutlich verbessert, damit die Auszubildenden zufriedener sind und die Ausbildung für künftige Bewerberinnen und Bewerber attraktiver wird",
+          "Es werden so viele Arbeitsplätze wie möglich eingerichtet, solange das Budget reicht"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "„Möglichst bald\" ist weder terminiert noch messbar, „modern und zeitgemäß\" nicht überprüfbar.",
+          "„Deutlich verbessert\" und „zufriedener\" sind nicht messbar und es fehlt ein Termin.",
+          "Ohne feste Stückzahl und ohne Termin ist das Ziel weder spezifisch noch messbar noch terminiert."
+        ],
+        "erklaerungKurz": "SMART verlangt Ziele, die spezifisch, messbar, attraktiv/akzeptiert, realistisch und terminiert sind. Nur die erste Formulierung nennt eine konkrete Stückzahl, ein überprüfbares Ergebnis, eine Budgetgrenze und einen festen Termin.",
+        "erklaerungLang": "SMART ist eine Prüfregel für Zielformulierungen. Spezifisch: Was genau soll erreicht werden (zwölf Arbeitsplätze, betriebsbereit, im Netz erreichbar)? Messbar: Woran wird der Erfolg festgestellt (Stückzahl, Budgeteinhaltung)? Attraktiv beziehungsweise akzeptiert: Tragen die Beteiligten das Ziel mit? Realistisch: Ist es mit den vorhandenen Mitteln erreichbar? Terminiert: Bis wann (31.08.)? Unscharfe Ziele wie „möglichst bald\" oder „deutlich verbessert\" lassen sich am Projektende nicht überprüfen und taugen daher nicht als Abnahmemaßstab.",
+        "verweis": "Modul 01, Abschnitt 1.2 – SMART-Ziele"
+      }
+    ]
+  },
+  {
+    "id": "FALL-05",
+    "modul": "M02",
+    "thema": "Bezugskalkulation, Nutzwertanalyse und Wirtschaftlichkeit",
+    "pruefungsteil": "AP1",
+    "titel": "Notebook-Beschaffung – Angebote vergleichen und kalkulieren",
+    "szenario": "Für die neue Ausbildungswerkstatt der Brunnhuber Metallverarbeitung GmbH sollen zwölf Notebooks beschafft werden. Ihnen liegt ein Angebot über einen Listenpreis von 1.200,00 € je Gerät vor. Der Lieferant gewährt 15 % Rabatt und bei Zahlung innerhalb von zehn Tagen zusätzlich 2 % Skonto. Für Fracht und Verpackung werden 20,00 € je Gerät berechnet. Ein zweiter Anbieter ist geringfügig teurer, liefert aber schneller und bietet einen Vor-Ort-Service. Sie sollen den Einkauf vorbereiten und die Entscheidung begründen.",
+    "teilaufgaben": [
+      {
+        "typ": "dropdown",
+        "schwierigkeit": 2,
+        "frage": "a) Ergänzen Sie das Kalkulationsschema: Vom Listeneinkaufspreis wird der Rabatt abgezogen; man erhält den ___. Nach Abzug des Skontos ergibt sich der ___.",
+        "luecken": [
+          {
+            "optionen": [
+              "Bareinkaufspreis",
+              "Zieleinkaufspreis",
+              "Bezugspreis",
+              "Selbstkostenpreis"
+            ],
+            "loesung": 1
+          },
+          {
+            "optionen": [
+              "Bezugspreis",
+              "Listeneinkaufspreis",
+              "Bareinkaufspreis",
+              "Zieleinkaufspreis"
+            ],
+            "loesung": 2
+          }
+        ],
+        "erklaerungKurz": "Das Schema lautet: Listeneinkaufspreis − Rabatt = Zieleinkaufspreis; Zieleinkaufspreis − Skonto = Bareinkaufspreis; Bareinkaufspreis + Bezugskosten = Bezugspreis.",
+        "erklaerungLang": "Die Bezugskalkulation führt vom Angebotspreis zum tatsächlichen Einstandspreis. Der Listeneinkaufspreis ist der Katalogpreis. Der Rabatt ist ein Preisnachlass, der sofort abgezogen wird; das Ergebnis heißt Zieleinkaufspreis, weil er bei Zahlung zum vereinbarten Zahlungsziel gilt. Wird früher gezahlt, darf zusätzlich Skonto abgezogen werden – daraus wird der Bareinkaufspreis. Erst die Bezugskosten wie Fracht, Verpackung und Versicherung werden hinzugerechnet, weil sie den Einkauf verteuern; das Ergebnis ist der Bezugspreis (Einstandspreis), mit dem weitergerechnet wird.",
+        "verweis": "Modul 02, Abschnitt 2.2 – Bezugskalkulation"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "b) Berechnen Sie den Bezugspreis je Notebook: Listenpreis 1.200,00 €, 15 % Rabatt, 2 % Skonto, 20,00 € Bezugskosten. Wie hoch ist er?",
+        "optionen": [
+          "1.019,60 €",
+          "999,60 €",
+          "1.040,00 €",
+          "996,00 €"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Das ist der Bareinkaufspreis – die Bezugskosten von 20,00 € wurden noch nicht hinzugerechnet.",
+          "Hier wurde nur der Rabatt berücksichtigt und die Bezugskosten addiert, das Skonto aber vergessen.",
+          "Hier wurden Rabatt und Skonto fälschlich addiert (17 %) und vom Listenpreis abgezogen; die beiden Nachlässe werden jedoch nacheinander berechnet."
+        ],
+        "erklaerungKurz": "1.200,00 € − 15 % = 1.020,00 € (Zieleinkaufspreis). Davon 2 % Skonto: 1.020,00 € × 0,98 = 999,60 € (Bareinkaufspreis). Zuzüglich 20,00 € Bezugskosten ergibt sich ein Bezugspreis von 1.019,60 €.",
+        "erklaerungLang": "Gerechnet wird schrittweise, nicht mit einer Summe der Prozentsätze. Schritt 1 – Rabatt: 1.200,00 € × 0,85 = 1.020,00 €. Schritt 2 – Skonto vom bereits rabattierten Betrag: 1.020,00 € × 0,98 = 999,60 €. Schritt 3 – Bezugskosten: 999,60 € + 20,00 € = 1.019,60 €. Wer stattdessen 17 % am Stück abzieht, kommt auf 996,00 € und rechnet damit das Skonto fälschlich auf den vollen Listenpreis. Für alle zwölf Geräte ergibt sich ein Gesamtbezugspreis von 12 × 1.019,60 € = 12.235,20 €.",
+        "verweis": "Modul 02, Abschnitt 2.2 – Bezugskalkulation"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 2,
+        "frage": "c) Bewerte die folgenden Aussagen zu Rabatt und Skonto jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Skonto wird vom bereits um den Rabatt verminderten Betrag berechnet, nicht vom Listenpreis.",
+            "wahr": true
+          },
+          {
+            "text": "Skonto ist ein Nachlass für Zahlung innerhalb einer bestimmten Frist.",
+            "wahr": true
+          },
+          {
+            "text": "Bezugskosten wie Fracht und Verpackung erhöhen den Bezugspreis.",
+            "wahr": true
+          },
+          {
+            "text": "Rabatt und Skonto dürfen zu einem Gesamtprozentsatz addiert und gemeinsam vom Listenpreis abgezogen werden.",
+            "wahr": false
+          },
+          {
+            "text": "Auf die Bezugskosten von 20,00 € je Gerät darf ebenfalls Skonto abgezogen werden.",
+            "wahr": false
+          }
+        ],
+        "erklaerungKurz": "Rabatt und Skonto werden nacheinander auf jeweils den verbliebenen Betrag angewendet. Ein Addieren der Prozentsätze führt zu einem zu niedrigen Ergebnis, weil das Skonto sonst auch auf den bereits rabattierten Teil gewährt würde.",
+        "erklaerungLang": "Prozentsätze, die auf unterschiedliche Grundwerte wirken, dürfen nicht addiert werden. Der Rabatt bezieht sich auf den Listeneinkaufspreis, das Skonto dagegen auf den Zieleinkaufspreis, also auf den bereits geminderten Betrag. Im Beispiel: 15 % von 1.200,00 € sind 180,00 €, aber 2 % Skonto sind nur 20,40 € (von 1.020,00 €) und nicht 24,00 € (von 1.200,00 €). Die Differenz von 3,60 € je Gerät summiert sich bei zwölf Geräten bereits auf 43,20 €. Bezugskosten werden hinzugerechnet, weil sie den Einkauf tatsächlich verteuern.\nEin letzter Punkt wird oft übersehen: Skonto wird nur auf den Warenwert gewährt, nicht auf die Bezugskosten. Deshalb steht im Schema erst der Skontoabzug und danach die Addition von Fracht und Verpackung – die Reihenfolge ist keine Formsache, sie verändert das Ergebnis.",
+        "verweis": "Modul 02, Abschnitt 2.2 – Rabatt, Skonto, Bezugskosten"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "d) Sie vergleichen die beiden Anbieter mit einer Nutzwertanalyse. Welche Aussagen dazu treffen zu? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Die Bewertungskriterien werden vor der Bewertung festgelegt und gewichtet",
+          "Für jedes Kriterium wird je Anbieter eine Punktzahl vergeben und mit der Gewichtung multipliziert",
+          "Die Nutzwertanalyse erlaubt es, auch nicht-monetäre Kriterien wie Lieferzeit oder Servicequalität einzubeziehen",
+          "Den Zuschlag erhält das Angebot mit der höchsten gewichteten Gesamtpunktzahl",
+          "Die Nutzwertanalyse liefert ein objektives Ergebnis, das unabhängig von den gewählten Gewichtungen ist"
+        ],
+        "loesungIndizes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "",
+          "",
+          "",
+          "Das Ergebnis hängt unmittelbar von der Wahl und Gewichtung der Kriterien ab. Die Nutzwertanalyse macht die Entscheidung nachvollziehbar, aber nicht objektiv im strengen Sinn."
+        ],
+        "erklaerungKurz": "Die Nutzwertanalyse macht eine Entscheidung mit mehreren, auch nicht in Euro messbaren Kriterien nachvollziehbar: Kriterien festlegen, gewichten, je Anbieter Punkte vergeben, Punkte mal Gewicht summieren. Objektiv ist sie dadurch nicht – Auswahl und Gewichtung bleiben Ermessensentscheidungen.",
+        "erklaerungLang": "Der Ablauf ist stets gleich: Zuerst werden die Bewertungskriterien bestimmt (etwa Preis, Lieferzeit, Service, Garantie) und mit Gewichtungen versehen, deren Summe üblicherweise 100 % ergibt. Anschließend erhält jedes Angebot je Kriterium eine Punktzahl auf einer einheitlichen Skala. Punktzahl mal Gewichtung ergibt den Teilnutzen, die Summe aller Teilnutzen den Gesamtnutzwert. Das höchste Ergebnis gewinnt. Wichtig für die Prüfung: Die Methode strukturiert die Entscheidung und macht sie begründbar, verlagert die Subjektivität aber in die Festlegung der Gewichte – wer den Preis mit 70 % gewichtet, erhält ein anderes Ergebnis als bei 30 %. Deshalb müssen Kriterien und Gewichte vor der Bewertung feststehen.",
+        "verweis": "Modul 02, Abschnitt 2.3 – Nutzwertanalyse"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "e) Der zweite Anbieter liegt beim Bezugspreis 25,00 € je Gerät höher, garantiert aber einen Vor-Ort-Austausch am nächsten Arbeitstag. Wie argumentieren Sie fachlich sauber gegenüber der Geschäftsführung?",
+        "optionen": [
+          "Der Mehrpreis von 300,00 € für alle zwölf Geräte ist den Ausfallkosten gegenüberzustellen, die entstehen, wenn Schulungsplätze mehrere Tage nicht nutzbar sind",
+          "Das günstigste Angebot ist immer zu wählen, weil der Einkauf ausschließlich nach dem niedrigsten Preis zu entscheiden hat",
+          "Der Servicevertrag ist unerheblich, da die gesetzliche Gewährleistung ohnehin zwei Jahre läuft und damit auch eine Reparatur binnen weniger Arbeitstage einschließt",
+          "Da beide Angebote technisch gleichwertig sind, sollte per Losentscheid entschieden werden"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Wirtschaftlichkeit bedeutet nicht „billigster Preis\", sondern das beste Verhältnis von Aufwand und Ertrag über die Nutzungsdauer.",
+          "Die Gewährleistung verpflichtet zur Nacherfüllung, sagt aber nichts über die Reaktionszeit. Genau diese Zusage ist Gegenstand eines Servicevertrags.",
+          "Ein Losentscheid ist keine fachliche Begründung; die Angebote unterscheiden sich gerade in Service und Verfügbarkeit."
+        ],
+        "erklaerungKurz": "Zu vergleichen sind nicht nur die Anschaffungspreise, sondern die Gesamtkosten über die Nutzungsdauer einschließlich der Folgen von Ausfallzeiten. 25,00 € je Gerät ergeben 300,00 € Mehrpreis – dem stehen mögliche Ausfalltage in der Ausbildung gegenüber.",
+        "erklaerungLang": "Der Denkfehler beim reinen Preisvergleich ist die Beschränkung auf den Anschaffungspreis. Sinnvoll ist die Betrachtung der Total Cost of Ownership: Anschaffung, Betrieb, Wartung, Support und Ausfallkosten über die gesamte Nutzungsdauer. Fällt ein Schulungsrechner ohne Vor-Ort-Service mehrere Tage aus, entstehen Kosten durch nicht nutzbare Ausbildungszeit, Umorganisation und gegebenenfalls Ersatzgeräte. Die Gewährleistung nach § 437 BGB verschafft zwar einen Anspruch auf Nacherfüllung, legt aber keine Reaktionszeit fest – zugesicherte Reaktions- und Wiederherstellungszeiten sind Gegenstand eines Service Level Agreements. Die saubere Argumentation stellt daher den bezifferbaren Mehrpreis den bezifferbaren Ausfallrisiken gegenüber.",
+        "verweis": "Modul 02, Abschnitt 2.3 – Wirtschaftlichkeit und Angebotsvergleich"
+      }
+    ]
+  },
+  {
+    "id": "FALL-06",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "pruefungsteil": "AP1",
+    "titel": "Qualitätssicherung beim Rollout der Schulungsrechner",
+    "szenario": "Die zwölf Notebooks der neuen Ausbildungswerkstatt sind geliefert und werden von Ihnen mit einem einheitlichen Image ausgerollt. Nach dem Rollout melden mehrere Auszubildende, dass die Schulungssoftware auf einigen Geräten nicht startet. Die Ausbildungsleitung möchte wissen, wie Sie die Qualität künftig systematisch sichern und den Vorfall aufarbeiten.",
+    "teilaufgaben": [
+      {
+        "typ": "mc",
+        "schwierigkeit": 2,
+        "frage": "a) Sie wollen den Vorfall nach dem PDCA-Zyklus aufarbeiten. Welche Zuordnung ist richtig?",
+        "optionen": [
+          "Plan = Maßnahme planen, Do = umsetzen (zunächst im Kleinen), Check = Wirkung überprüfen, Act = bei Erfolg dauerhaft als Standard festschreiben",
+          "Plan = den Fehler dokumentieren, Do = ihn an die Leitung melden, Check = die Schuldigen ermitteln, Act = arbeitsrechtliche Konsequenzen aussprechen",
+          "Plan = Budget festlegen, Do = beschaffen, Check = Rechnung prüfen, Act = bezahlen",
+          "Plan = testen, Do = planen, Check = standardisieren, Act = umsetzen"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "PDCA ist ein Verbesserungszyklus und kein Verfahren zur Schuldzuweisung; Fehlerkultur ist ausdrücklich sachbezogen.",
+          "Das beschreibt einen Beschaffungsvorgang, nicht den Verbesserungszyklus.",
+          "Die Reihenfolge ist vertauscht: Geplant wird zuerst, standardisiert wird zuletzt."
+        ],
+        "erklaerungKurz": "PDCA steht für Plan – Do – Check – Act: planen, im kleinen Rahmen umsetzen, die Wirkung überprüfen und die erfolgreiche Lösung dauerhaft als Standard festschreiben. Danach beginnt der Zyklus erneut.",
+        "erklaerungLang": "Der PDCA-Zyklus (auch Deming-Kreis) ist die Grundlage des kontinuierlichen Verbesserungsprozesses. Plan: Problem analysieren, Ursachen suchen, Maßnahme und Zielgröße festlegen. Do: Die Maßnahme zunächst begrenzt erproben, um Risiken klein zu halten – etwa das korrigierte Image auf zwei Geräten. Check: Prüfen, ob die Maßnahme die erwartete Wirkung hatte, anhand der vorher festgelegten Zielgröße. Act: Bei Erfolg wird die Lösung zum verbindlichen Standard und dokumentiert, bei Misserfolg beginnt der Zyklus mit neuen Erkenntnissen von vorn. Entscheidend ist die sachbezogene Fehlerkultur: Ziel ist die Ursachenbeseitigung, nicht die Schuldzuweisung.",
+        "verweis": "Modul 05, Abschnitt 5.1 – PDCA und KVP"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 2,
+        "frage": "b) Bewerte die folgenden Aussagen zum Testprotokoll jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Ein Testprotokoll hält fest, welcher Testfall mit welchem Ergebnis wann und von wem durchgeführt wurde.",
+            "wahr": true
+          },
+          {
+            "text": "Zu einem Testfall gehören die Vorbedingungen, die Eingaben, das erwartete Ergebnis und das tatsächliche Ergebnis.",
+            "wahr": true
+          },
+          {
+            "text": "Auch erfolgreich verlaufene Tests werden dokumentiert, nicht nur Fehlschläge.",
+            "wahr": true
+          },
+          {
+            "text": "Ein Testprotokoll ist erst dann erforderlich, wenn ein Fehler aufgetreten ist.",
+            "wahr": false
+          },
+          {
+            "text": "Ein Testfall gilt als bestanden, sobald das Programm ohne Fehlermeldung durchläuft.",
+            "wahr": false
+          }
+        ],
+        "erklaerungKurz": "Das Testprotokoll dokumentiert jeden durchgeführten Testfall mit Soll- und Ist-Ergebnis, Datum und Prüfer – unabhängig davon, ob der Test bestanden wurde. Nur so ist später nachweisbar, was tatsächlich geprüft wurde.",
+        "erklaerungLang": "Ein Testfall beschreibt die Ausgangslage (Vorbedingungen), die konkreten Eingaben oder Handlungsschritte und das erwartete Ergebnis. Im Testprotokoll wird das tatsächliche Ergebnis gegenübergestellt und der Testfall als bestanden oder nicht bestanden bewertet, ergänzt um Datum, Prüfer und die getestete Version. Die Dokumentation auch bestandener Tests ist wesentlich: Sie belegt gegenüber dem Auftraggeber den Prüfumfang, dient bei der Abnahme als Nachweis und macht bei späteren Fehlern nachvollziehbar, ob ein Fall überhaupt geprüft wurde. Im Werkstatt-Beispiel hätte ein Testfall „Schulungssoftware startet nach Image-Aufspielung\" den Fehler vor dem Rollout aufgedeckt.\nUnd ein Testfall ist nicht schon deshalb bestanden, weil nichts abstürzt. Bestanden heißt: Das tatsächliche Ergebnis stimmt mit dem vorher festgelegten erwarteten Ergebnis überein. Ein Programm, das fehlerfrei durchläuft und dabei den falschen Wert ausgibt, hat den Testfall nicht bestanden.",
+        "verweis": "Modul 05, Abschnitt 5.2 – Testfälle und Testprotokoll"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "c) Welche der folgenden Positionen zählen zu den Fehlerverhütungs- beziehungsweise Prüfkosten? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Schulung der Mitarbeitenden im Umgang mit dem Imaging-Werkzeug",
+          "Erstellung und Pflege einer Testfallsammlung für den Rollout",
+          "Durchführung der Funktionstests vor der Auslieferung an die Werkstatt",
+          "Nacharbeit an den fehlerhaft ausgerollten Geräten nach der Meldung der Auszubildenden",
+          "Qualitätsplanung vor Beginn des Rollouts"
+        ],
+        "loesungIndizes": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "",
+          "",
+          "Nacharbeit nach dem Auftreten des Fehlers gehört zu den internen Fehlerkosten, nicht zu Verhütungs- oder Prüfkosten.",
+          ""
+        ],
+        "erklaerungKurz": "Fehlerverhütungskosten (Schulung, Qualitätsplanung, Testfallpflege) und Prüfkosten (die eigentliche Testdurchführung) fallen an, bevor ein Fehler wirksam wird. Nacharbeit nach dem Auftreten des Fehlers zählt dagegen zu den Fehlerkosten.",
+        "erklaerungLang": "Die Qualitätskosten werden klassisch in drei Gruppen eingeteilt. Fehlerverhütungskosten entstehen vorbeugend: Qualitätsplanung, Schulung, Prozessverbesserung, Aufbau von Testfällen. Prüfkosten entstehen durch die Kontrolle selbst: Testdurchführung, Abnahmeprüfungen, Prüfmittel. Fehlerkosten entstehen, wenn ein Fehler bereits eingetreten ist – intern, wenn er vor der Auslieferung entdeckt wird (Nacharbeit, Ausschuss), extern, wenn er den Kunden erreicht (Gewährleistung, Imageschaden). Der Grundgedanke: Investitionen in Verhütung und Prüfung senken die deutlich teureren Fehlerkosten. Im Beispiel wären wenige Stunden Testaufwand günstiger gewesen als die Nacharbeit an mehreren Geräten plus ausgefallene Ausbildungszeit.",
+        "verweis": "Modul 05, Abschnitt 5.3 – Qualitätskosten"
+      },
+      {
+        "typ": "dropdown",
+        "schwierigkeit": 2,
+        "frage": "d) Ergänzen Sie: Die fortlaufende Verbesserung in kleinen Schritten unter Beteiligung der Mitarbeitenden bezeichnet man als ___. Eine systematische, unabhängige Untersuchung, ob die festgelegten Qualitätsanforderungen tatsächlich eingehalten werden, heißt ___.",
+        "luecken": [
+          {
+            "optionen": [
+              "Benchmarking",
+              "KVP",
+              "Reengineering",
+              "Controlling"
+            ],
+            "loesung": 1
+          },
+          {
+            "optionen": [
+              "Audit",
+              "Review",
+              "Inventur",
+              "Abnahme"
+            ],
+            "loesung": 0
+          }
+        ],
+        "erklaerungKurz": "KVP steht für den kontinuierlichen Verbesserungsprozess – viele kleine Verbesserungsschritte statt einzelner großer Sprünge. Ein Audit ist die systematische und unabhängige Prüfung, ob Vorgaben eingehalten werden.",
+        "erklaerungLang": "Der kontinuierliche Verbesserungsprozess setzt auf die Erfahrung der Mitarbeitenden vor Ort und auf viele kleine, schnell wirksame Schritte; methodisch stützt er sich auf den PDCA-Zyklus. Davon zu unterscheiden ist das Reengineering, das Prozesse grundlegend neu gestaltet. Ein Audit prüft systematisch und möglichst unabhängig, ob die dokumentierten Vorgaben eingehalten werden: Ein internes Audit führt das Unternehmen selbst durch, ein externes eine unabhängige Stelle, etwa im Rahmen einer Zertifizierung nach ISO 9001. Nicht zu verwechseln ist das Audit mit der Abnahme, die sich auf ein konkretes Werk bezieht und Rechtsfolgen auslöst.",
+        "verweis": "Modul 05, Abschnitt 5.1 – QM-Begriffe"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "e) Als Sofortmaßnahme wollen Sie verhindern, dass sich der Fehler beim nächsten Rollout wiederholt. Welches Vorgehen entspricht dem KVP-Gedanken am besten?",
+        "optionen": [
+          "Ursache des fehlgeschlagenen Software-Starts ermitteln, das Image korrigieren, einen Testfall dafür in die Rollout-Checkliste aufnehmen und die Checkliste verbindlich machen",
+          "Die betroffenen Geräte einzeln von Hand nachinstallieren, den davon betroffenen Auszubildenden kurz Bescheid geben und den Vorfall anschließend im Protokoll als erledigt abhaken",
+          "Künftig auf ein einheitliches Image verzichten und jedes Gerät individuell einrichten",
+          "Den Rollout künftig außerhalb der Ausbildungszeiten durchführen, damit Fehler nicht auffallen"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Das behebt nur das Symptom auf den betroffenen Geräten; ohne Ursachenanalyse und Standardisierung tritt der Fehler beim nächsten Rollout erneut auf.",
+          "Der Verzicht auf Standardisierung erhöht Aufwand und Fehleranfälligkeit – das ist das Gegenteil von Prozessverbesserung.",
+          "Fehler unauffällig zu machen beseitigt sie nicht und widerspricht einer offenen Fehlerkultur."
+        ],
+        "erklaerungKurz": "KVP verlangt, die Ursache zu beseitigen und die Lösung dauerhaft im Prozess zu verankern – hier durch einen zusätzlichen Testfall in einer verbindlichen Rollout-Checkliste. Reine Symptombehebung genügt nicht.",
+        "erklaerungLang": "Der Unterschied zwischen Symptom- und Ursachenbehebung ist der Kern des KVP. Die Nachinstallation der betroffenen Geräte stellt den Sollzustand wieder her, verändert aber den Prozess nicht – beim nächsten Rollout entsteht derselbe Fehler. Nach PDCA gehört zum Act-Schritt, die erfolgreiche Maßnahme zum Standard zu machen: korrigiertes Image, ergänzter Testfall, aktualisierte Checkliste, Information der Kolleginnen und Kollegen. Damit wird aus einem Einzelfall eine dauerhafte Prozessverbesserung. Die Standardisierung aufzugeben oder Fehler zeitlich zu kaschieren, verschlechtert die Qualitätslage zusätzlich.",
+        "verweis": "Modul 05, Abschnitt 5.1 – KVP in der Praxis"
+      }
+    ]
+  },
+  {
+    "id": "FALL-07",
+    "modul": "M07",
+    "thema": "SLA & Servicevertrag",
+    "pruefungsteil": "AP1",
+    "titel": "Wartungsvertrag für die Werkstatt-IT – Abnahme und Servicezusagen",
+    "szenario": "Die Brunnhuber Metallverarbeitung GmbH lässt das Netzwerk der neuen Ausbildungswerkstatt von einem externen Dienstleister installieren. Anschließend soll derselbe Dienstleister die Anlage laufend betreuen. Ihnen wird der Vertragsentwurf mit einem Service Level Agreement vorgelegt: Verfügbarkeit 99,9 % im Jahr, Reaktionszeit vier Stunden, Servicezeit werktags 8–17 Uhr. Sie sollen den Entwurf prüfen und die Abnahme vorbereiten.",
+    "teilaufgaben": [
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "a) Wie sind die beiden Leistungen vertraglich einzuordnen: die einmalige Installation des Netzwerks und die anschließende laufende Betreuung?",
+        "optionen": [
+          "Die Installation ist ein Werkvertrag (geschuldet ist der Erfolg), die laufende Betreuung ein Dienstvertrag (geschuldet ist das Tätigwerden)",
+          "Beide Leistungen sind Werkverträge, weil in beiden Fällen ein funktionierendes Netzwerk geschuldet wird",
+          "Beide Leistungen sind Dienstverträge, weil der Dienstleister in beiden Fällen allein seine Arbeitskraft und sein Fachwissen zur Verfügung stellt",
+          "Die Installation ist ein Kaufvertrag, weil Hardware geliefert wird; die Betreuung ist ein Werkvertrag"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Bei der laufenden Betreuung wird kein bestimmter Erfolg geschuldet – niemand kann garantieren, dass keine Störung auftritt.",
+          "Bei der Installation wird sehr wohl ein Erfolg geschuldet: ein funktionsfähiges Netzwerk. Das ist das Kennzeichen des Werkvertrags.",
+          "Zwar wird auch Hardware geliefert, der Schwerpunkt der Installationsleistung liegt aber auf der Herstellung eines funktionsfähigen Werks."
+        ],
+        "erklaerungKurz": "Beim Werkvertrag (§ 631 BGB) wird ein Erfolg geschuldet, beim Dienstvertrag (§ 611 BGB) nur das Tätigwerden. Die Installation schuldet ein funktionierendes Netzwerk, die Wartung dagegen sorgfältige Betreuung – nicht die Abwesenheit jeder Störung.",
+        "erklaerungLang": "Die Abgrenzung entscheidet über Abnahme, Gewährleistung und Vergütung. Beim Werkvertrag nach § 631 BGB schuldet der Unternehmer die Herstellung des versprochenen Werks; erst mit der Abnahme wird die Vergütung fällig, und es bestehen Mängelrechte nach § 634 BGB. Beim Dienstvertrag nach § 611 BGB schuldet der Dienstverpflichtete das fachgerechte Tätigwerden, nicht dessen Erfolg; die Vergütung ist zeitabhängig, eine Abnahme gibt es nicht. Gemischte Verträge wie hier sind in der Praxis üblich und werden für jeden Leistungsteil getrennt beurteilt. Wichtig für die Prüfung: Ein SLA verändert diese Einordnung nicht, es konkretisiert lediglich die geschuldete Dienstleistungsqualität und macht sie über Kennzahlen messbar.",
+        "verweis": "Modul 07, Abschnitt 7.1 – Vertragsarten"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "b) Das SLA sagt eine Verfügbarkeit von 99,9 % bezogen auf ein volles Jahr (8.760 Stunden) zu. Wie viel Ausfallzeit ist damit rechnerisch zulässig?",
+        "optionen": [
+          "rund 8,8 Stunden pro Jahr",
+          "rund 87,6 Stunden pro Jahr",
+          "rund 53 Minuten pro Jahr",
+          "rund 44 Minuten pro Jahr"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Das entspräche einer Verfügbarkeit von 99 %, also einem Zehntel der zugesagten Güte.",
+          "Das entspräche 99,99 % – eine Zehnerpotenz besser als zugesagt.",
+          "Das ist die zulässige Ausfallzeit pro Monat bei 99,9 %, nicht pro Jahr."
+        ],
+        "erklaerungKurz": "8.760 h × 0,1 % = 8,76 Stunden pro Jahr. Jede weitere Neun verzehnfacht die Anforderung: 99 % sind 87,6 h, 99,99 % nur noch 52,6 Minuten im Jahr.",
+        "erklaerungLang": "Die Verfügbarkeit ist der Anteil der Zeit, in dem ein System vereinbarungsgemäß nutzbar ist. Die zulässige Ausfallzeit ergibt sich aus dem Gegenwert: Ein Jahr hat 365 × 24 = 8.760 Stunden; 100 % − 99,9 % = 0,1 % davon sind 8,76 Stunden. Zum Vergleich: 99 % erlauben 87,6 Stunden, 99,99 % nur 52,56 Minuten und 99,999 % gut fünf Minuten pro Jahr. Praktisch wichtig ist die Bezugsgröße: Bezieht sich die Zusage auf die vereinbarte Servicezeit (hier werktags 8–17 Uhr, also rund 2.350 Stunden im Jahr) statt auf das Kalenderjahr, ist dieselbe Prozentzahl deutlich weniger wert. Genau das gehört beim Prüfen eines SLA hinterfragt.",
+        "verweis": "Modul 07, Abschnitt 7.2 – Verfügbarkeit und Kennzahlen"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 2,
+        "frage": "c) Bewerte die folgenden Aussagen zum Service Level Agreement jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Die Reaktionszeit gibt an, wie schnell mit der Bearbeitung einer gemeldeten Störung begonnen wird.",
+            "wahr": true
+          },
+          {
+            "text": "Die Wiederherstellungszeit gibt an, bis wann der Betrieb wieder verfügbar sein muss.",
+            "wahr": true
+          },
+          {
+            "text": "Ein SLA kann Vertragsstrafen für die Unterschreitung zugesagter Werte vorsehen.",
+            "wahr": true
+          },
+          {
+            "text": "Eine zugesagte Reaktionszeit von vier Stunden bedeutet, dass die Störung spätestens nach vier Stunden behoben ist.",
+            "wahr": false
+          },
+          {
+            "text": "Eine Verfügbarkeit von 99,9 % ist gleich viel wert, ob sie sich auf das Kalenderjahr oder nur auf die vereinbarte Servicezeit bezieht.",
+            "wahr": false
+          }
+        ],
+        "erklaerungKurz": "Reaktionszeit und Wiederherstellungszeit sind zwei verschiedene Zusagen: Die erste betrifft nur den Beginn der Bearbeitung, die zweite die tatsächliche Wiederverfügbarkeit. Wer beides verwechselt, überschätzt den Wert eines SLA erheblich.",
+        "erklaerungLang": "Ein Service Level Agreement konkretisiert die Qualität einer Dienstleistung über messbare Kennzahlen: Servicezeiten (wann überhaupt gearbeitet wird), Reaktionszeit (Zeit von der Störungsmeldung bis zum Beginn der Bearbeitung), Wiederherstellungszeit (Zeit bis zur Wiederverfügbarkeit) und Verfügbarkeit in Prozent. Häufig kommen Eskalationsstufen und Vertragsstrafen (Pönalen) hinzu. Die typische Fehlvorstellung ist die Gleichsetzung von Reaktions- und Wiederherstellungszeit: Eine Zusage „Reaktion in vier Stunden\" verpflichtet lediglich dazu, sich innerhalb der Servicezeit binnen vier Stunden der Sache anzunehmen. Fällt die Meldung auf Freitagabend, beginnt die Frist bei Servicezeiten von 8–17 Uhr erst am Montagmorgen.\nDie Bezugsgröße entscheidet mit: Dieselben 99,9 % bedeuten 8,76 Stunden zulässige Ausfallzeit im Kalenderjahr, aber nur rund 2,3 Stunden, wenn sie sich allein auf die vereinbarte Servicezeit von werktags 8 bis 17 Uhr beziehen. Wer ein SLA prüft, sucht zuerst nach dieser Bezugsgröße.",
+        "verweis": "Modul 07, Abschnitt 7.2 – SLA-Kennzahlen"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "d) Welche Rechtsfolgen hat die Abnahme des installierten Netzwerks? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Die Vergütung des Dienstleisters wird fällig",
+          "Die Gefahr geht auf den Auftraggeber über",
+          "Die Verjährungsfrist für Mängelansprüche beginnt zu laufen",
+          "Die Beweislast für das Vorliegen eines Mangels geht auf den Auftraggeber über",
+          "Sämtliche Mängelansprüche des Auftraggebers erlöschen"
+        ],
+        "loesungIndizes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "",
+          "",
+          "",
+          "Die Mängelansprüche bleiben bestehen und verjähren erst nach Ablauf der Frist. Nur wer einen bei der Abnahme bereits bekannten Mangel nicht vorbehält, verliert insoweit Rechte (§ 640 Abs. 3 BGB)."
+        ],
+        "erklaerungKurz": "Die Abnahme nach § 640 BGB ist der zentrale Wendepunkt des Werkvertrags: Vergütung wird fällig (§ 641), Gefahr geht über (§ 644), die Verjährung beginnt (§ 634a) und die Beweislast kehrt sich um. Mängelansprüche erlöschen dadurch aber nicht.",
+        "erklaerungLang": "Mit der Abnahme erklärt der Besteller, das Werk als im Wesentlichen vertragsgemäß entgegenzunehmen. Vier Folgen sind prüfungsrelevant: Erstens wird die Vergütung fällig (§ 641 BGB). Zweitens geht die Leistungsgefahr auf den Besteller über (§ 644 BGB) – ein danach eintretender Zufallsschaden geht zu seinen Lasten. Drittens beginnt die Verjährungsfrist für Mängelansprüche (§ 634a BGB). Viertens muss ab der Abnahme der Besteller beweisen, dass ein Mangel vorliegt und bereits bei Abnahme vorhanden war; vorher trifft diese Last den Unternehmer. Deshalb ist ein sorgfältiges Abnahmeprotokoll so wichtig: Bekannte Mängel müssen ausdrücklich vorbehalten werden, sonst gehen die Rechte aus § 634 Nr. 1 bis 3 BGB insoweit verloren (§ 640 Abs. 3 BGB).",
+        "verweis": "Modul 07, Abschnitt 7.3 – Abnahme und Übergabe"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "e) Zwei Wochen nach der Abnahme fällt auf, dass mehrere Netzwerkdosen falsch aufgelegt wurden. Wie gehen Sie rechtlich korrekt vor?",
+        "optionen": [
+          "Den Mangel anzeigen und dem Dienstleister unter Fristsetzung Gelegenheit zur Nacherfüllung geben",
+          "Sofort einen anderen Betrieb mit der Nacharbeit beauftragen und dessen Kosten vom Werklohn abziehen",
+          "Sofort vom gesamten Vertrag zurücktreten, weil die Leistung mangelhaft ist",
+          "Den Mangel hinnehmen, da mit der Abnahme alle Ansprüche verbraucht sind"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Die Selbstvornahme nach § 637 BGB setzt grundsätzlich voraus, dass zuvor erfolglos eine angemessene Frist zur Nacherfüllung gesetzt wurde.",
+          "Der Rücktritt kommt erst in Betracht, wenn die Nacherfüllung fehlgeschlagen oder unzumutbar ist; zudem wäre er bei einem unerheblichen Mangel ausgeschlossen.",
+          "Die Abnahme verbraucht die Mängelansprüche nicht – sie lässt lediglich die Verjährungsfrist beginnen und kehrt die Beweislast um."
+        ],
+        "erklaerungKurz": "Das Gesetz gibt der Nacherfüllung den Vorrang: Erst wenn eine angemessene Frist erfolglos verstrichen ist, kommen Selbstvornahme, Minderung, Rücktritt oder Schadensersatz in Betracht.",
+        "erklaerungLang": "Die Mängelrechte des Bestellers stehen in § 634 BGB in einer festen Reihenfolge. Zuerst hat der Unternehmer ein Recht zur zweiten Andienung: Der Besteller muss Nacherfüllung verlangen (§ 635 BGB) und dafür eine angemessene Frist setzen. Der Unternehmer wählt dabei zwischen Mangelbeseitigung und Neuherstellung. Erst wenn diese Frist erfolglos abläuft, die Nacherfüllung fehlschlägt oder sie unzumutbar ist, greifen die weiteren Rechte: Selbstvornahme mit Kostenersatz (§ 637), Minderung (§ 638), Rücktritt (§ 634 Nr. 3 in Verbindung mit §§ 636, 323) sowie Schadensersatz. Der Rücktritt scheidet bei unerheblichen Mängeln ohnehin aus. Wer diese Reihenfolge übergeht und sofort einen Drittbetrieb beauftragt, riskiert, auf den Kosten sitzen zu bleiben.",
+        "verweis": "Modul 07, Abschnitt 7.4 – Vertragsstörungen und Mängelrechte"
+      }
+    ]
+  },
+  {
+    "id": "FALL-08",
+    "modul": "M03",
+    "thema": "WLAN & Übertragungsstandards",
+    "pruefungsteil": "AP1",
+    "titel": "WLAN-Versorgung der Produktions- und Ausbildungshalle",
+    "szenario": "Die Ausbildungswerkstatt der Brunnhuber Metallverarbeitung GmbH liegt in einer Halle mit Stahlregalen und Maschinen. Die Auszubildenden sollen dort mit Tablets arbeiten. Eine erste Messung zeigt schwankende Verbindungen: In Hallenmitte brechen Verbindungen ab, in einer Ecke überlagern sich mehrere Funkzellen. Sie planen die WLAN-Versorgung neu und müssen die Stromversorgung der Access Points klären.",
+    "teilaufgaben": [
+      {
+        "typ": "mc",
+        "schwierigkeit": 2,
+        "frage": "a) Im 2,4-GHz-Band sollen sich benachbarte Access Points nicht stören. Welche Kanäle wählen Sie?",
+        "optionen": [
+          "1, 6 und 11, weil sich diese Kanäle bei 20 MHz Bandbreite nicht überlappen",
+          "1, 2 und 3, weil benachbarte Kanalnummern die geringste Störung verursachen",
+          "Alle Access Points auf Kanal 6, damit sie sich gegenseitig synchronisieren",
+          "Die Kanalwahl ist unerheblich, da jeder Access Point die Frequenz selbst wechselt"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Benachbarte Kanalnummern überlappen sich im 2,4-GHz-Band besonders stark – der Kanalabstand beträgt nur 5 MHz bei 20 MHz Kanalbreite.",
+          "Access Points auf demselben Kanal teilen sich das Medium; der Durchsatz sinkt dadurch, statt zu steigen.",
+          "Eine automatische Kanalwahl gibt es zwar in vielen Systemen, sie ersetzt aber keine Planung – und sie hebt die physikalische Überlappung nicht auf."
+        ],
+        "erklaerungKurz": "Im 2,4-GHz-Band liegen die Kanalmitten nur 5 MHz auseinander, ein Kanal belegt aber rund 20 MHz. Nur die Kanäle 1, 6 und 11 sind daher überlappungsfrei nutzbar.",
+        "erklaerungLang": "Das 2,4-GHz-Band stellt in Europa die Kanäle 1 bis 13 bereit, deren Mittenfrequenzen jeweils 5 MHz auseinanderliegen. Da eine Übertragung mit 20 MHz Bandbreite arbeitet, überlappen sich unmittelbar benachbarte Kanäle stark. Nur bei einem Abstand von fünf Kanalnummern ist der Überlappungsbereich vernachlässigbar – daraus ergibt sich das klassische Muster 1/6/11. Benachbarte Funkzellen erhalten unterschiedliche dieser Kanäle, sodass sie sich nicht ins Gehege kommen. Access Points auf identischem Kanal stören sich zwar nicht im engeren Sinn, müssen sich das Medium aber teilen, wodurch der verfügbare Durchsatz je Zelle sinkt. In einer Halle mit vielen Geräten ist zusätzlich das 5-GHz-Band attraktiv, weil es deutlich mehr überlappungsfreie Kanäle bietet.",
+        "verweis": "Modul 03, Abschnitt 3.4 – WLAN-Kanalplanung"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "b) Die vorgesehenen Access Points benötigen je rund 25 Watt und sollen über das Netzwerkkabel mitversorgt werden. Welcher PoE-Standard ist mindestens erforderlich?",
+        "optionen": [
+          "IEEE 802.3at (PoE+) mit 30 W am Port und mindestens 25,5 W am Endgerät",
+          "IEEE 802.3af (PoE) mit 15,4 W am Port und 12,95 W am Endgerät",
+          "IEEE 802.3bt Type 4 mit 90 W am Port, weil Access Points viel Strom ziehen",
+          "Kein PoE-Standard genügt; Access Points brauchen ein eigenes Netzteil"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "802.3af liefert am Endgerät nur 12,95 W und damit deutlich zu wenig für einen Bedarf von 25 W.",
+          "Type 4 würde zwar reichen, ist aber weit überdimensioniert und teurer – gefragt ist der mindestens erforderliche Standard.",
+          "Access Points sind typische PoE-Endgeräte; ein separates Netzteil ist gerade nicht nötig."
+        ],
+        "erklaerungKurz": "802.3at (PoE+) stellt 30 W am Port und mindestens 25,5 W am Endgerät bereit und deckt damit den Bedarf von 25 W. 802.3af reicht mit 12,95 W am Endgerät nicht aus.",
+        "erklaerungLang": "Bei Power over Ethernet ist zwischen der Leistung am speisenden Port und der garantierten Leistung am Endgerät zu unterscheiden – die Differenz deckt die Verluste auf der Leitung ab. Die Stufen: 802.3af (PoE) 15,4 W am Port / 12,95 W am Gerät; 802.3at (PoE+) 30 W / 25,5 W; 802.3bt Type 3 60 W / 51 W; 802.3bt Type 4 90 W / 71,3 W. Für die Auslegung zählt immer der Wert am Endgerät. Bei 25 W Bedarf scheidet 802.3af aus, 802.3at passt. Zu beachten ist außerdem das Leistungsbudget des Switches insgesamt: Ein Switch mit 24 PoE+-Ports kann selten alle Ports gleichzeitig mit voller Leistung versorgen, weshalb die Summe der angeschlossenen Geräte gegen das Gesamtbudget zu rechnen ist.",
+        "verweis": "Modul 03, Abschnitt 3.3 – Power over Ethernet"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 2,
+        "frage": "c) Bewerte die folgenden Aussagen zu den WLAN-Frequenzbändern jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Das 2,4-GHz-Band hat bei gleicher Sendeleistung die größere Reichweite und durchdringt Wände besser als das 5-GHz-Band.",
+            "wahr": true
+          },
+          {
+            "text": "Das 5-GHz-Band bietet mehr überlappungsfreie Kanäle als das 2,4-GHz-Band.",
+            "wahr": true
+          },
+          {
+            "text": "Das 6-GHz-Band wurde mit Wi-Fi 6E für WLAN nutzbar gemacht.",
+            "wahr": true
+          },
+          {
+            "text": "Je höher die Sendeleistung aller Access Points eingestellt wird, desto stabiler wird das WLAN in einer Halle mit mehreren Funkzellen.",
+            "wahr": false
+          },
+          {
+            "text": "Im 2,4-GHz-Band stören ausschließlich andere WLAN-Netze; Bluetooth und Mikrowellenherde nutzen andere Frequenzen.",
+            "wahr": false
+          }
+        ],
+        "erklaerungKurz": "Niedrigere Frequenzen reichen weiter und durchdringen Hindernisse besser, höhere bieten mehr Bandbreite und Kanäle. Die Sendeleistung pauschal hochzudrehen schadet in Mehrzellen-Umgebungen, weil sich die Zellen dann gegenseitig stören.",
+        "erklaerungLang": "Mit steigender Frequenz nimmt die Dämpfung durch Wände, Maschinen und Regale zu: 2,4 GHz reicht weiter, ist aber schmalbandiger und stark belegt – auch durch Bluetooth und Mikrowellen. 5 GHz bietet deutlich mehr überlappungsfreie Kanäle bei geringerer Reichweite, 6 GHz kam mit Wi-Fi 6E hinzu und ist bislang wenig belegt. Der letzte Punkt ist ein verbreiteter Praxisfehler: Werden alle Access Points auf maximale Sendeleistung gestellt, vergrößern sich die Funkzellen, überlappen stärker und die Clients halten zu lange an einem weit entfernten Access Point fest, statt zum nächstgelegenen zu wechseln. In Mehrzellen-Umgebungen wird die Sendeleistung deshalb bewusst begrenzt und die Zellgröße über Standort und Antennenwahl gesteuert.\nZu beachten ist außerdem die Fremdbelegung: Im 2,4-GHz-Band funken auch Bluetooth-Geräte, schnurlose Telefone und Mikrowellenherde. Sie erscheinen in keiner Kanalplanung, verschlechtern die Lage aber messbar – ein weiterer Grund, dicht genutzte Bereiche auf 5 GHz zu legen.",
+        "verweis": "Modul 03, Abschnitt 3.4 – Frequenzbänder und Ausleuchtung"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "d) Welche Maßnahmen verbessern die WLAN-Versorgung in der Halle sinnvoll? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Eine Ausleuchtungsmessung durchführen und die Standorte der Access Points danach festlegen",
+          "Benachbarten Funkzellen unterschiedliche, überlappungsfreie Kanäle zuweisen",
+          "Für dicht genutzte Bereiche bevorzugt das 5-GHz-Band verwenden",
+          "PoE-fähige Switches mit ausreichendem Gesamtleistungsbudget einsetzen",
+          "Alle Access Points auf maximale Sendeleistung stellen und auf denselben Kanal legen"
+        ],
+        "loesungIndizes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "",
+          "",
+          "",
+          "Das verschlechtert die Lage doppelt: Gleicher Kanal bedeutet geteiltes Medium, maximale Sendeleistung vergrößert die Überlappung und erschwert den Wechsel zwischen den Zellen."
+        ],
+        "erklaerungKurz": "Gute WLAN-Planung beruht auf Messung, sauberer Kanalverteilung, bewusster Bandwahl und einer tragfähigen Stromversorgung. Pauschal maximale Sendeleistung auf einem gemeinsamen Kanal ist der klassische Fehlgriff.",
+        "erklaerungLang": "Eine belastbare Planung beginnt mit der Ausleuchtungsmessung: Sie zeigt Dämpfung durch Regale und Maschinen, Reflexionen und Fremdnetze und liefert die Grundlage für Anzahl und Standorte der Access Points. Danach werden benachbarte Zellen auf überlappungsfreie Kanäle gelegt und die Sendeleistung so eingestellt, dass sich die Zellen nur leicht überlappen – gerade genug für einen sauberen Übergang der Clients. In dicht genutzten Bereichen entlastet das 5-GHz-Band, weil es mehr Kanäle bietet und weniger belegt ist. Auf der Verkabelungsseite ist das Leistungsbudget der PoE-Switches zu prüfen: Nicht die Zahl der Ports entscheidet, sondern ob die Summe der angeschlossenen Geräte im Gesamtbudget bleibt.",
+        "verweis": "Modul 03, Abschnitt 3.4 – WLAN-Planung in Industrieumgebungen"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "e) Ein Systemabbild von 20 GB (1 GB = 1.000 MB) soll über eine Verbindung mit 500 Mbit/s netto auf ein Tablet übertragen werden. Wie lange dauert die Übertragung ungefähr?",
+        "optionen": [
+          "gut 5 Minuten",
+          "rund 40 Sekunden",
+          "rund 40 Minuten",
+          "rund 2,5 Minuten"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Hier wurde die Umrechnung von Byte in Bit vergessen; ohne den Faktor 8 ergibt sich ein achtfach zu kurzer Wert.",
+          "Hier wurde der Faktor 8 in die falsche Richtung angewendet, das Ergebnis ist achtmal zu groß.",
+          "Das entspräche der halben Datenmenge oder der doppelten Datenrate."
+        ],
+        "erklaerungKurz": "20 GB entsprechen 160 Gbit (20 × 8). Bei 500 Mbit/s sind das 160.000 Mbit ÷ 500 Mbit/s = 320 Sekunden, also rund 5 Minuten und 20 Sekunden.",
+        "erklaerungLang": "Der häufigste Fehler bei Übertragungsrechnungen ist das Vermischen von Byte und Bit: Dateigrößen werden in Byte angegeben, Datenraten in Bit pro Sekunde. Der Rechenweg lautet daher: 20 GB × 8 = 160 Gbit; 160 Gbit = 160.000 Mbit; 160.000 Mbit ÷ 500 Mbit/s = 320 s = 5 min 20 s. Wer den Faktor 8 vergisst, landet bei 40 Sekunden, wer ihn doppelt anwendet, bei rund 42 Minuten. In der Praxis kommt hinzu, dass die Nettorate im WLAN deutlich unter der Bruttorate liegt – gerechnet wird deshalb sinnvollerweise mit gemessenen Nettowerten wie hier.",
+        "verweis": "Modul 03, Abschnitt 3.2 – Datenmengen und Übertragungszeiten"
+      }
+    ]
+  },
+  {
+    "id": "FALL-09",
+    "modul": "M04",
+    "thema": "Programmiersprachen, Kontrollstrukturen & Systemgrundlagen",
+    "pruefungsteil": "AP1",
+    "titel": "Auswertungsskript für das Geräteinventar der Werkstatt",
+    "szenario": "Für die Ausbildungswerkstatt der Brunnhuber Metallverarbeitung GmbH sollen Sie ein kleines Auswertungsskript schreiben, das die Inventarliste der Schulungsrechner durchgeht und Kennzahlen ausgibt. Ihre Ausbilderin lässt Sie den Entwurf zunächst auf dem Papier durchspielen, bevor Sie ihn umsetzen.",
+    "teilaufgaben": [
+      {
+        "typ": "mc",
+        "schwierigkeit": 3,
+        "frage": "a) Führen Sie einen Schreibtischtest durch. Welchen Wert gibt der folgende Pseudocode aus?\n\nzaehler = 0\nFÜR i VON 1 BIS 5\n    WENN i MOD 2 = 0 DANN\n        zaehler = zaehler + i\n    ENDE WENN\nENDE FÜR\nAUSGABE zaehler",
+        "optionen": [
+          "6",
+          "9",
+          "15",
+          "4"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Das wäre die Summe der ungeraden Zahlen 1 + 3 + 5; die Bedingung i MOD 2 = 0 trifft aber auf gerade Zahlen zu.",
+          "Das wäre die Summe aller Zahlen von 1 bis 5 ohne jede Bedingung.",
+          "Hier wurde offenbar nur der letzte passende Wert übernommen statt aufsummiert."
+        ],
+        "erklaerungKurz": "Die Bedingung i MOD 2 = 0 ist für gerade Zahlen erfüllt. Im Bereich 1 bis 5 sind das 2 und 4, die Summe beträgt 6.",
+        "erklaerungLang": "Beim Schreibtischtest wird der Code Schritt für Schritt mit einer Wertetabelle durchgespielt. i = 1: 1 MOD 2 = 1, Bedingung falsch, zaehler bleibt 0. i = 2: 2 MOD 2 = 0, Bedingung wahr, zaehler = 0 + 2 = 2. i = 3: Rest 1, unverändert. i = 4: Rest 0, zaehler = 2 + 4 = 6. i = 5: Rest 1, unverändert. Nach dem Schleifenende wird 6 ausgegeben. Der Modulo-Operator liefert den Rest einer ganzzahligen Division und ist das Standardmittel für die Prüfung auf gerade oder ungerade Zahlen sowie für Teilbarkeit allgemein.",
+        "verweis": "Modul 04, Abschnitt 4.3 – Schreibtischtest und Kontrollstrukturen"
+      },
+      {
+        "typ": "mc",
+        "schwierigkeit": 2,
+        "frage": "b) Welche Schleifenart wird in jedem Fall mindestens einmal durchlaufen?",
+        "optionen": [
+          "Die fußgesteuerte Schleife, weil die Bedingung erst am Ende des Durchlaufs geprüft wird",
+          "Die kopfgesteuerte Schleife, weil die Bedingung schon vor dem ersten Durchlauf geprüft wird",
+          "Die Zählschleife, weil die Anzahl der Durchläufe vorher feststeht",
+          "Alle Schleifenarten, da jede Schleife mindestens einen Durchlauf ausführt"
+        ],
+        "loesungIndex": 0,
+        "distraktorErklaerungen": [
+          "",
+          "Genau umgekehrt: Ist die Bedingung von Anfang an nicht erfüllt, wird der Rumpf einer kopfgesteuerten Schleife überhaupt nicht ausgeführt.",
+          "Auch eine Zählschleife kann null Durchläufe haben, etwa bei FÜR i VON 1 BIS 0.",
+          "Kopfgesteuerte Schleifen und Zählschleifen können null Durchläufe haben."
+        ],
+        "erklaerungKurz": "Bei der fußgesteuerten Schleife steht die Prüfung am Ende, der Rumpf läuft daher immer mindestens einmal. Kopfgesteuerte Schleifen und Zählschleifen können dagegen null Durchläufe haben.",
+        "erklaerungLang": "Kopfgesteuerte Schleifen (SOLANGE … TUE, in vielen Sprachen while) prüfen die Bedingung vor dem Rumpf: Ist sie schon zu Beginn falsch, wird der Rumpf nie ausgeführt. Fußgesteuerte Schleifen (WIEDERHOLE … BIS, do-while) prüfen erst danach und garantieren dadurch mindestens einen Durchlauf – sinnvoll etwa bei Eingabeaufforderungen, die einmal erscheinen müssen, bevor die Eingabe geprüft werden kann. Zählschleifen sind ein Sonderfall der kopfgesteuerten Schleife mit vorab bekannter Durchlaufzahl; auch sie können leer bleiben, wenn der Startwert bereits jenseits des Endwerts liegt.",
+        "verweis": "Modul 04, Abschnitt 4.3 – Schleifenarten"
+      },
+      {
+        "typ": "mtf",
+        "schwierigkeit": 2,
+        "frage": "c) Bewerte die folgenden Aussagen zu Kontrollstrukturen und Datentypen jeweils als wahr oder falsch.",
+        "aussagen": [
+          {
+            "text": "Eine Verzweigung (WENN … DANN … SONST) führt abhängig von einer Bedingung unterschiedliche Anweisungen aus.",
+            "wahr": true
+          },
+          {
+            "text": "Der Modulo-Operator liefert den Rest einer ganzzahligen Division.",
+            "wahr": true
+          },
+          {
+            "text": "Ein Datentyp legt fest, welche Werte eine Variable annehmen kann und wie viel Speicher sie belegt.",
+            "wahr": true
+          },
+          {
+            "text": "Eine Endlosschleife entsteht immer dann, wenn eine Schleife mehr als hundert Durchläufe benötigt.",
+            "wahr": false
+          },
+          {
+            "text": "Eine Zählschleife wird immer mindestens einmal durchlaufen, weil ihre Durchlaufzahl vorher feststeht.",
+            "wahr": false
+          }
+        ],
+        "erklaerungKurz": "Eine Endlosschleife entsteht nicht durch viele Durchläufe, sondern dadurch, dass die Abbruchbedingung nie erfüllt wird – etwa weil die Laufvariable im Rumpf nicht verändert wird.",
+        "erklaerungLang": "Die drei Grundstrukturen der strukturierten Programmierung sind Sequenz, Verzweigung und Wiederholung; jedes Programm lässt sich damit ausdrücken. Eine Verzweigung wählt anhand einer Bedingung zwischen Anweisungsblöcken. Der Modulo-Operator gibt den Rest der ganzzahligen Division zurück und dient häufig Teilbarkeitsprüfungen. Datentypen bestimmen Wertebereich, Speicherbedarf und zulässige Operationen – ein Ganzzahltyp erlaubt andere Operationen als eine Zeichenkette. Eine Endlosschleife hat nichts mit der Zahl der Durchläufe zu tun: Sie entsteht, wenn die Abbruchbedingung nie wahr wird, typischerweise weil die geprüfte Variable im Rumpf nicht oder falsch verändert wird. Ein Schreibtischtest deckt genau solche Fehler auf.\nAuch die Zählschleife kann leer bleiben: FÜR i VON 1 BIS 0 führt den Rumpf kein einziges Mal aus. Eine vorher feststehende Durchlaufzahl heißt nicht, dass diese Zahl größer als null ist.",
+        "verweis": "Modul 04, Abschnitt 4.3 – Kontrollstrukturen und Datentypen"
+      },
+      {
+        "typ": "mehrfach",
+        "schwierigkeit": 3,
+        "frage": "d) Welche Punkte gehören zu einer sauberen Umsetzung des Auswertungsskripts? (Mehrere Antworten richtig)",
+        "optionen": [
+          "Sprechende Namen für Variablen und Funktionen verwenden",
+          "Grenzfälle wie eine leere Inventarliste gezielt behandeln",
+          "Das Skript mit Testfällen prüfen, deren erwartetes Ergebnis vorher feststeht",
+          "Fehlerhafte Eingabedaten abfangen, statt das Skript abstürzen zu lassen",
+          "Variablennamen möglichst auf einzelne Buchstaben kürzen, um Tipparbeit zu sparen"
+        ],
+        "loesungIndizes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "distraktorErklaerungen": [
+          "",
+          "",
+          "",
+          "",
+          "Einbuchstabige Namen sparen kaum Zeit, erschweren aber Lesbarkeit und Wartung erheblich. Übliche Ausnahme sind kurze Laufvariablen wie i in Zählschleifen."
+        ],
+        "erklaerungKurz": "Lesbarkeit, bewusste Behandlung von Grenzfällen, Fehlerbehandlung und nachvollziehbare Testfälle machen ein Skript wartbar. Möglichst kurze Namen sind kein Qualitätsmerkmal.",
+        "erklaerungLang": "Wartbarkeit entsteht vor allem durch Lesbarkeit: Sprechende Bezeichner machen Kommentare oft überflüssig, weil der Code seine Absicht selbst erklärt. Grenzfälle sind die klassische Fehlerquelle – die leere Liste, genau ein Element, der größte zulässige Wert. Fehlerhafte oder unerwartete Eingabedaten müssen abgefangen werden, damit das Programm kontrolliert reagiert statt abzustürzen. Testfälle mit vorab festgelegtem Sollergebnis machen die Prüfung wiederholbar und decken Regressionen auf, wenn das Skript später erweitert wird. Extrem kurze Variablennamen sparen praktisch keine Zeit, kosten aber jeden späteren Leser Verständnisaufwand; lediglich kurzlebige Laufvariablen in Schleifen sind hiervon üblicherweise ausgenommen.",
+        "verweis": "Modul 04, Abschnitt 4.4 – Programmierpraxis und Tests"
+      },
+      {
+        "typ": "dropdown",
+        "schwierigkeit": 2,
+        "frage": "e) Ergänzen Sie: Ein ___ stellt den Ablauf eines Algorithmus grafisch in ineinander geschachtelten Blöcken dar. Beim ___ wird der Code Schritt für Schritt mit einer Wertetabelle von Hand durchgespielt.",
+        "luecken": [
+          {
+            "optionen": [
+              "Klassendiagramm",
+              "Struktogramm",
+              "Netzplan",
+              "Anwendungsfalldiagramm"
+            ],
+            "loesung": 1
+          },
+          {
+            "optionen": [
+              "Schreibtischtest",
+              "Lasttest",
+              "Regressionstest",
+              "Abnahmetest"
+            ],
+            "loesung": 0
+          }
+        ],
+        "erklaerungKurz": "Das Struktogramm (Nassi-Shneiderman-Diagramm) stellt Algorithmen in geschachtelten Blöcken dar. Der Schreibtischtest spielt den Ablauf von Hand mit einer Wertetabelle durch.",
+        "erklaerungLang": "Struktogramme bilden die Strukturen der strukturierten Programmierung unmittelbar ab: Sequenzen als untereinanderliegende Blöcke, Verzweigungen als geteilte Blöcke, Schleifen als umschließende Rahmen. Weil sie keine Sprünge zulassen, führen sie automatisch zu übersichtlichen Abläufen. Programmablaufpläne verwenden stattdessen Symbole und Pfeile. Vom Struktogramm zu unterscheiden sind die UML-Diagramme, die weniger den Ablauf als die Struktur und das Verhalten eines Systems beschreiben – etwa das Klassendiagramm oder das Anwendungsfalldiagramm. Der Schreibtischtest ist die einfachste Testform: Man notiert für jeden Schritt die aktuellen Werte aller Variablen und vergleicht das Ergebnis mit der Erwartung. Lasttests, Regressionstests und Abnahmetests setzen dagegen ein lauffähiges Programm voraus.",
+        "verweis": "Modul 04, Abschnitt 4.3 – Struktogramm und Schreibtischtest"
+      }
+    ]
+  }
+]

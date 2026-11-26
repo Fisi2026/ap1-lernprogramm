@@ -1,0 +1,32 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Einzelne Frage" [Ebene 1]
+  heading "Einzelne Frage" [Ebene 2]
+  img "Schwierigkeit 2 von 4"
+  button "Zum gezielten Wiederholen markieren"
+  button "Begriff: Netzplan"
+  button "⚑ Frage melden"
+  checkbox "Diese Bedienhilfe nicht mehr zeigen" [checked=false]
+  textbox "Schritt 1: Berechne FEZ von A (FAZ 0 + Dauer A). (Tag)"
+  textbox "Schritt 2: Berechne FEZ von B (FEZ A + Dauer B). (Tag)"
+  textbox "Schritt 3: Berechne FEZ von C (FEZ B + Dauer C) - zugleich die Projek…"
+  button "Lösung prüfen" [gesperrt]
+  button "Aufgeben"
+  button "Taschenrechner"
+  button "Zur Startseite"
+  button "Normal weiterüben"

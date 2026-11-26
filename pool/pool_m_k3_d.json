@@ -1,0 +1,1064 @@
+[
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-773",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Hollmann Gerätebau GmbH: Ein Mitarbeiter der Fertigung meldet dem Helpdesk: „Mein Messrechner stürzt seit gestern mehrmals täglich mit einem Bluescreen ab.“\n(5 Punkte, je Schritt 1 Punkt)\nBeschreiben Sie ein systematisches Vorgehen zur Fehlersuche – von der Aufnahme der Meldung bis zum Abschluss des Tickets.",
+    "musterloesung": "Erwartete Aussagen (je Schritt 1 Punkt):\n• Aufnehmen: Ticket anlegen, Fehlerbild, Zeitpunkt, Stop-Code und letzte Änderungen erfassen (Update, neuer Treiber, Umbau) – denn „seit gestern“ deutet auf eine Änderung hin.\n• Eingrenzen: Ereignisanzeige und Speicherabbild (Dump) auswerten, Fehler reproduzieren – Hardware oder Software? Tritt er bei einem bestimmten Programm oder unter Last auf?\n• Ursache prüfen: Hypothesen nacheinander testen, z. B. Treiber zurücksetzen (Rollback), Arbeitsspeicher mit Memtest86 prüfen, SMART-Werte der SSD und Temperaturen auslesen; notfalls Teile gegen funktionierende tauschen.\n• Beheben und testen: Ursache beseitigen (Treiber, RAM-Riegel, Kühlung) und die Funktion gemeinsam mit dem Nutzer prüfen.\n• Dokumentieren: Ursache und Lösung im Ticket und in der Wissensdatenbank festhalten, Ticket schließen; bei Wiederholung an mehreren PCs ein Problem eröffnen.",
+    "erklaerungKurz": "Aufnehmen – eingrenzen – Ursache gezielt prüfen – beheben und testen – dokumentieren. Bei „seit gestern“ zuerst nach der letzten Änderung fragen.",
+    "erklaerungLang": "Systematisch heißt: eine Hypothese nach der anderen, und jeder Schritt im Ticket.\n• Aufnehmen und eingrenzen verhindert, dass auf Verdacht neu installiert wird.\n• Prüfen mit Werkzeugen (Ereignisanzeige, Memtest86, SMART) oder per Tausch gegen ein funktionierendes Teil.\n• Testen mit dem Nutzer und Dokumentation schließen den Fall ab.\nMerke: Aufnehmen – eingrenzen – testen – beheben – dokumentieren.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Ticket",
+          "dokumentieren",
+          "Dokumentation",
+          "erfassen"
+        ],
+        [
+          "eingrenzen",
+          "reproduzieren",
+          "Eingrenzung",
+          "Hypothese"
+        ],
+        [
+          "testen",
+          "prüfen",
+          "Test",
+          "Memtest"
+        ],
+        [
+          "Treiber",
+          "Arbeitsspeicher",
+          "RAM",
+          "Stop-Code",
+          "Speicherabbild",
+          "Dump"
+        ]
+      ],
+      "kuer": [
+        "Ereignisanzeige",
+        "Wissensdatenbank",
+        "Rollback",
+        "SMART"
+      ]
+    }
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-774",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "frage": "Hollmann Gerätebau GmbH: Beim Einschalten von Arbeitsplatz-PCs treten unterschiedliche Fehler auf.\n(6 Punkte, je Fehlerbild und je Prüfmaßnahme 1 Punkt)\nNennen Sie drei typische Fehlerbilder beim Start eines PCs und je eine passende Prüfmaßnahme.",
+    "musterloesung": "Erwartete Aussagen (drei Paare):\n• Keine Reaktion (keine LED, kein Lüfter) → Stromversorgung prüfen: Kabel, Steckdose, Schalter, Netzteil testen oder tauschen.\n• Pieptöne und kein Bild, der POST (Power-On Self-Test) bricht ab → Piepcode im Mainboard-Handbuch nachschlagen; meist Arbeitsspeicher oder Grafik: RAM neu stecken, Riegel einzeln testen.\n• Meldung „No bootable device“ → Bootreihenfolge im UEFI prüfen, SMART-Werte des Datenträgers auslesen, Kabel/Steckplatz prüfen.\n• Bluescreen beim Start nach einem Treiber-Update → im abgesicherten Modus starten, Treiber zurücksetzen (Rollback), Stop-Code auswerten.\n• PC schaltet nach kurzer Zeit wieder ab → Überhitzung oder Netzteil: Temperaturen auslesen, Kühler und Lüfter reinigen, Netzteil prüfen.",
+    "erklaerungKurz": "Jedes Startfehlerbild zeigt auf eine Baugruppe: keine Reaktion → Strom, Pieptöne → POST/RAM/Grafik, kein Bootgerät → Datenträger/Bootreihenfolge, Abschalten → Hitze/Netzteil.",
+    "erklaerungLang": "Der Startablauf verrät, wo der Fehler sitzt.\n• Bevor der POST läuft: Strom und Netzteil.\n• Im POST: Pieptöne nach Mainboard-Handbuch, meist RAM oder Grafik.\n• Nach dem POST: Bootreihenfolge, Datenträger (SMART), Treiber (Bluescreen).\nMerke: Fehlerbild → Baugruppe → gezielte Prüfung, nicht raten.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Pieptöne",
+          "Piepcode",
+          "POST",
+          "Power-On Self-Test"
+        ],
+        [
+          "Netzteil",
+          "Stromversorgung",
+          "Strom",
+          "Kabel"
+        ],
+        [
+          "Arbeitsspeicher",
+          "RAM",
+          "Speicher"
+        ]
+      ],
+      "kuer": [
+        "SMART",
+        "Bootreihenfolge",
+        "UEFI",
+        "Überhitzung",
+        "Treiber"
+      ]
+    }
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-775",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordne jedem Fehlerbild die Baugruppe zu, die zuerst zu prüfen ist.",
+    "paare": [
+      [
+        "Piepcode laut Mainboard-Handbuch: Speicherfehler, kein Bild",
+        "Arbeitsspeicher (RAM)"
+      ],
+      [
+        "SMART meldet eine steigende Zahl neu zugewiesener Sektoren",
+        "Datenträger"
+      ],
+      [
+        "PC schaltet nach 10 Minuten Volllast ab, Lüfter laut",
+        "Kühlung"
+      ],
+      [
+        "Bluescreen seit dem Update der Grafikkartensoftware",
+        "Treiber"
+      ],
+      [
+        "Keine Reaktion auf den Einschalter, keine LED, kein Lüfter",
+        "Netzteil"
+      ],
+      [
+        "Memtest86 meldet Fehler an immer derselben Adresse",
+        "Arbeitsspeicher (RAM)"
+      ]
+    ],
+    "erklaerungKurz": "Piepcode und Memtest-Fehler → RAM, SMART-Warnung → Datenträger, Abschalten unter Last → Kühlung, Bluescreen nach Update → Treiber, keine Reaktion → Netzteil.",
+    "erklaerungLang": "Jedes Fehlerbild hat einen typischen ersten Verdacht.\n• RAM: Speicher-Piepcode im POST, Fehler im Speichertest.\n• Datenträger: SMART-Warnungen wie neu zugewiesene Sektoren.\n• Kühlung: Abschalten unter Last, laute Lüfter.\n• Treiber: Bluescreen direkt nach einem Update; Netzteil: gar keine Reaktion.\nMerke: erst die wahrscheinlichste Baugruppe prüfen, dann die nächste."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-776",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Was prüft der Power-On Self-Test beim Einschalten eines Rechners?",
+    "optionen": [
+      "Grundlegende Hardware wie CPU, Arbeitsspeicher und Grafik, bevor das System bootet",
+      "Die Dateisysteme aller Laufwerke auf Fehler, nachdem Windows vollständig gestartet ist",
+      "Die Netzwerkverbindung zum Domänencontroller, bevor sich ein Benutzer anmelden kann",
+      "Die Lizenz des Betriebssystems beim Hersteller, bevor die Firmware den Bootloader lädt"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Dateisysteme prüft das Betriebssystem (z. B. chkdsk), nicht der POST.",
+      "Falsch: Die Netzwerkanmeldung gehört zum Betriebssystem, lange nach dem POST.",
+      "Falsch: Der POST prüft Hardware; Lizenzen prüft erst das Betriebssystem."
+    ],
+    "erklaerungKurz": "Der POST ist der Selbsttest der Firmware (BIOS/UEFI): er prüft CPU, Arbeitsspeicher, Grafik und Grundfunktionen, bevor gebootet wird. Fehler meldet er per Piepcode oder Anzeige.",
+    "erklaerungLang": "Der POST läuft vor dem Betriebssystem.\n• Er prüft grundlegende Hardware: CPU, RAM, Grafik, Tastatur-Controller.\n• Fehler meldet er per Piepcode (herstellerabhängig, Mainboard-Handbuch) oder Fehlercode-Anzeige.\n• Erst danach lädt die Firmware den Bootloader vom Datenträger.\nMerke: Pieptöne ohne Bild = Fehler im POST, also Hardware."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-777",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Das Diagnosewerkzeug zeigt für die SSD eines Messrechners der Hollmann Gerätebau GmbH den SMART-Status „Vorsicht“: die Zahl der neu zugewiesenen Sektoren steigt. Was ist der richtige nächste Schritt?",
+    "optionen": [
+      "Sofort die Daten sichern und den Austausch des Datenträgers planen, weil ein Ausfall droht",
+      "Den Datenträger formatieren, weil die SMART-Warnung danach dauerhaft verschwunden ist",
+      "Zuerst eine Oberflächenprüfung mit chkdsk /r starten und erst bei weiteren Fehlern die Daten sichern",
+      "Den Arbeitsspeicher tauschen, weil neu zugewiesene Sektoren immer durch defekten RAM entstehen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Formatieren repariert keinen verschleißenden Datenträger; die SMART-Zähler bleiben und der Ausfall droht weiter.",
+      "Eine Oberflächenprüfung belastet den angeschlagenen Datenträger zusätzlich; zuerst werden die Daten gesichert.",
+      "Falsch: Neu zugewiesene Sektoren sind ein Zähler des Datenträgers selbst, nicht des Arbeitsspeichers."
+    ],
+    "erklaerungKurz": "SMART (Self-Monitoring, Analysis and Reporting Technology) überwacht den Datenträger selbst. Steigende Zahlen neu zugewiesener Sektoren kündigen einen Ausfall an: erst Daten sichern, dann tauschen.",
+    "erklaerungLang": "SMART ist das Frühwarnsystem von Festplatten und SSDs.\n• Neu zugewiesene Sektoren: defekte Bereiche wurden auf Reserve umgelegt – steigt der Wert, verschleißt der Datenträger.\n• Richtige Reihenfolge: Daten sichern bzw. Sicherung prüfen, dann den Datenträger tauschen.\n• Formatieren oder Ignorieren beseitigt den Verschleiß nicht.\nMerke: SMART-Warnung = erst sichern, dann tauschen."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-778",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Ein Arbeitsplatzrechner stürzt unregelmäßig mit wechselnden Bluescreens ab – in unterschiedlichen Programmen und ohne erkennbaren Auslöser. Welche Prüfung liegt zuerst nahe?",
+    "optionen": [
+      "Den Arbeitsspeicher mit einem Speichertest (z. B. Memtest86) über mehrere Durchläufe prüfen",
+      "Den Grafiktreiber deinstallieren und dauerhaft mit dem Standardtreiber weiterarbeiten",
+      "Die Festplatte defragmentieren, weil fragmentierte Systemdateien wechselnde Stop-Codes auslösen",
+      "Nur das Benutzerprofil neu anlegen, weil Hardwarefehler grundsätzlich keine Bluescreens auslösen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Wechselnde Stop-Codes in verschiedenen Programmen sprechen für Hardware wie den Arbeitsspeicher, nicht für einen einzelnen Treiber.",
+      "Fragmentierung macht langsam, löst aber keine Bluescreens aus; bei SSDs ist Defragmentieren ohnehin nicht sinnvoll.",
+      "Falsch: Gerade defekte Hardware wie RAM verursacht Bluescreens; ein neues Profil ändert daran nichts."
+    ],
+    "erklaerungKurz": "Wechselnde Bluescreens in verschiedenen Programmen deuten auf defekten Arbeitsspeicher. Ein Speichertest über mehrere Durchläufe bringt Gewissheit.",
+    "erklaerungLang": "Der Hinweis steckt im Muster der Abstürze.\n• Immer derselbe Stop-Code nach einem Update → eher ein Treiber.\n• Wechselnde Stop-Codes in verschiedenen Programmen → eher Hardware, vor allem RAM.\n• Memtest86 oder die Windows-Speicherdiagnose prüfen den RAM; mehrere Durchläufe, weil Fehler sporadisch sind.\nMerke: wechselnde Bluescreens → RAM testen."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-779",
+    "typ": "mehrfach",
+    "schwierigkeit": 2,
+    "frage": "Ein Messrechner in der staubigen Fertigungshalle der Hollmann Gerätebau GmbH schaltet sich unter Last ab, die Lüfter sind laut. Welche Maßnahmen sind sinnvoll? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Temperaturen von CPU und Grafik mit einem Diagnosewerkzeug oder im UEFI auslesen",
+      "Lüfter und Kühlkörper reinigen (Strom getrennt, ESD-Schutz) und die Lüfter prüfen",
+      "Ausgetrocknete Wärmeleitpaste zwischen CPU und Kühler erneuern",
+      "Die Lüftersteuerung im UEFI auf den leisesten Modus stellen, damit die Lüfter länger halten",
+      "Das Gehäuse dauerhaft offen betreiben, weil das die Kühlung immer verbessert"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Leisere Lüfter kühlen schlechter – bei Abschaltungen durch Überhitzung verschärft das den Fehler.",
+      "Falsch: Ein offenes Gehäuse stört den geplanten Luftstrom und lässt in staubiger Umgebung noch mehr Schmutz hinein."
+    ],
+    "erklaerungKurz": "Abschalten unter Last mit lauten Lüftern deutet auf Überhitzung: Temperaturen messen, Staub entfernen, Lüfter prüfen und Wärmeleitpaste erneuern.",
+    "erklaerungLang": "Hitze ist in staubiger Umgebung ein Klassiker.\n• Erst messen: Temperaturen im UEFI oder mit einem Diagnosewerkzeug.\n• Dann beheben: Staub aus Lüftern und Kühlkörpern, defekte Lüfter tauschen, Wärmeleitpaste erneuern.\n• Vorher Strom trennen und ESD-Schutz nutzen.\nMerke: Abschalten unter Last → zuerst an Hitze denken."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-780",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Seit einem Treiber-Update der Grafikkarte zeigt ein CAD-Arbeitsplatz beim Start einen Bluescreen. Welche Maßnahme ist zuerst sinnvoll?",
+    "optionen": [
+      "Im abgesicherten Modus starten und den vorherigen Treiber wiederherstellen (Rollback)",
+      "Die Grafikkarte sofort tauschen, weil ein Bluescreen immer einen Hardwaredefekt bedeutet",
+      "Das UEFI auf Werkseinstellungen zurücksetzen, weil der Grafiktreiber dort gespeichert ist",
+      "Den Arbeitsspeicher aufrüsten, weil ein neuer Treiber grundsätzlich mehr RAM verbraucht"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Der zeitliche Zusammenhang mit dem Update spricht für den Treiber, nicht für einen Hardwaredefekt.",
+      "Treiber gehören zum Betriebssystem, nicht zur Firmware; ein Zurücksetzen des UEFI ändert am Treiber nichts.",
+      "Falsch: Ein Treiber-Update verursacht keinen RAM-Mangel, der einen Bluescreen beim Start erklärt."
+    ],
+    "erklaerungKurz": "Der Bluescreen kam mit dem Update – also zuerst die Änderung zurücknehmen: abgesicherter Modus (nur Basistreiber) und Treiber-Rollback.",
+    "erklaerungLang": "Bei Fehlern direkt nach einer Änderung wird zuerst die Änderung geprüft.\n• Der abgesicherte Modus startet mit Basistreibern und umgeht den fehlerhaften Treiber.\n• Im Geräte-Manager lässt sich der vorherige Treiber wiederherstellen (Rollback).\n• Stop-Code und Ereignisanzeige bestätigen den Verdacht.\nMerke: Fehler seit Update → Update zurücknehmen."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-781",
+    "typ": "reihenfolge",
+    "schwierigkeit": 2,
+    "frage": "Ein Notebook der Hollmann Gerätebau GmbH startet nur noch sporadisch. Bringe die Schritte der systematischen Fehlersuche in die richtige Reihenfolge.",
+    "schritte": [
+      "Fehlerbild, Zeitpunkt und letzte Änderungen im Ticket aufnehmen",
+      "Fehler reproduzieren und eingrenzen: Hardware oder Software?",
+      "Ursache gezielt prüfen, z. B. Speichertest oder Tausch gegen ein funktionierendes Teil",
+      "Ursache beheben",
+      "Funktion gemeinsam mit dem Nutzer testen",
+      "Ursache und Lösung dokumentieren und das Ticket schließen"
+    ],
+    "erklaerungKurz": "Aufnehmen, eingrenzen, gezielt prüfen, beheben, mit dem Nutzer testen, dokumentieren – erst dann ist das Ticket erledigt.",
+    "erklaerungLang": "Die Reihenfolge verhindert Raten und Doppelarbeit.\n• Ohne Aufnahme und Eingrenzung wird auf Verdacht getauscht oder neu installiert.\n• Ohne Test mit dem Nutzer bleibt offen, ob der Fehler wirklich weg ist.\n• Ohne Dokumentation beginnt der nächste Fall wieder bei null.\nMerke: Aufnehmen – eingrenzen – prüfen – beheben – testen – dokumentieren."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Support-Levels: First-, Second-, Third-Level-Support",
+    "id": "M01-782",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Die IT der Hollmann Gerätebau GmbH arbeitet mit 1st Level (Helpdesk), 2nd Level (Administration) und 3rd Level (Hersteller oder Systemhaus). Ordne jede Aufgabe der Ebene zu, auf der sie sachgerecht erledigt wird.",
+    "paare": [
+      [
+        "Störung aufnehmen, Ticket anlegen und priorisieren",
+        "1st Level (Helpdesk)"
+      ],
+      [
+        "Passwort zurücksetzen und Druckertreiber neu installieren",
+        "1st Level (Helpdesk)"
+      ],
+      [
+        "Defekten RAM-Riegel per Speichertest finden und tauschen",
+        "2nd Level (Administration)"
+      ],
+      [
+        "Wiederkehrenden Bluescreen anhand des Speicherabbilds analysieren",
+        "2nd Level (Administration)"
+      ],
+      [
+        "Firmware-Fehler der Messkarte mit einem Hersteller-Patch beheben",
+        "3rd Level (Hersteller/Systemhaus)"
+      ]
+    ],
+    "erklaerungKurz": "1st Level nimmt auf und löst Standardfälle, 2nd Level übernimmt tiefere Diagnose und Reparatur, 3rd Level (Hersteller, Systemhaus) behebt, was nur er ändern kann – etwa Firmware.",
+    "erklaerungLang": "Die Ebenen staffeln Wissen und Zugriff.\n• 1st Level: Aufnahme, Priorisierung, Standardlösungen.\n• 2nd Level: Spezialisten im Haus – Diagnose mit Werkzeugen, Teile tauschen, Dumps analysieren.\n• 3rd Level: Hersteller oder Systemhaus – Fehler in Produkt oder Firmware.\nMerke: Eskaliert wird dokumentiert, nicht weitergeschoben."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-783",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Im SLA (Service Level Agreement) der Hollmann Gerätebau GmbH mit ihrem Systemhaus steht für Störungen der Priorität 1: Reaktionszeit 1 Stunde, Lösungszeit 8 Stunden. Was bedeutet das?",
+    "optionen": [
+      "Binnen 1 Stunde muss das Systemhaus tätig werden, binnen 8 Stunden muss der Service wieder laufen",
+      "Binnen 1 Stunde muss die Störung behoben sein; die 8 Stunden sind die Frist für die ganze Dokumentation",
+      "Binnen 1 Stunde muss das Systemhaus eine Ersatzlösung stellen, binnen 8 Stunden einen Techniker vor Ort haben",
+      "Nach 8 Stunden ohne Lösung endet das SLA automatisch, und das Unternehmen muss neu beauftragen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Die Reaktionszeit ist die Zeit bis zum Tätigwerden, nicht bis zur Lösung.",
+      "Die Reaktionszeit ist die Frist bis zum Beginn der Bearbeitung, die Lösungszeit die Frist, bis der Service wieder läuft.",
+      "Falsch: Wird die Lösungszeit überschritten, greifen die vereinbarten Folgen (z. B. Vertragsstrafe); das SLA endet nicht."
+    ],
+    "erklaerungKurz": "Reaktionszeit = Frist bis zum Tätigwerden, Lösungszeit = Frist bis der Service wieder läuft. Beide zählen ab der Meldung und sind im SLA messbar vereinbart.",
+    "erklaerungLang": "Ein SLA macht Servicequalität messbar.\n• Reaktionszeit: bis wann jemand an der Störung arbeitet.\n• Lösungszeit: bis wann der Nutzer wieder arbeiten kann.\n• Priorität 1 hat die kürzesten Fristen; bei Überschreitung greifen vereinbarte Folgen.\nMerke: Reaktion ≠ Lösung."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Fehlermanagement & Störungs-Management",
+    "id": "M01-784",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "An drei Mess-PCs der Fertigung fällt im Monat mehrfach dieselbe Netzwerkkarte aus; der Helpdesk startet die PCs jeweils neu, dann geht es wieder. Was ist richtig?",
+    "optionen": [
+      "Jeder Ausfall ist ein Incident; die gemeinsame Ursache wird als Problem untersucht und beseitigt",
+      "Jeder Ausfall ist ein Problem; ein Incident entsteht erst dann, wenn die gemeinsame Ursache bekannt ist",
+      "Die drei Ausfälle werden zu einem einzigen Incident zusammengefasst, eine Ursachenanalyse ist nicht vorgesehen",
+      "Incident und Problem meinen dasselbe; nur die Ticketsysteme nennen es unterschiedlich"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Umgekehrt – der einzelne Ausfall ist der Incident, die Ursache dahinter das Problem.",
+      "Jeder Ausfall ist ein eigener Incident; die wiederkehrende Ursache wird im Problem Management untersucht.",
+      "Falsch: Incident (Störung) und Problem (Ursache) sind verschiedene Dinge mit verschiedenen Zielen."
+    ],
+    "erklaerungKurz": "Incident = einzelne Störung, Ziel schnelle Wiederherstellung (hier Neustart als Workaround). Problem = gemeinsame Ursache wiederholter Störungen, Ziel dauerhafte Beseitigung.",
+    "erklaerungLang": "Wiederholung ist das Signal für das Problem Management.\n• Jeder Ausfall: Incident, schnell beheben – der Neustart ist ein Workaround.\n• Dieselbe Störung an drei PCs: gemeinsame Ursache vermuten, als Problem untersuchen (z. B. Treiber, Firmware, Netzteil).\n• Bis zur Behebung: Known Error mit dokumentiertem Workaround.\nMerke: Incident = Symptom, Problem = Ursache."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-785",
+    "typ": "mehrfach",
+    "schwierigkeit": 1,
+    "frage": "Eine Auszubildende soll in einem Arbeitsplatzrechner den Arbeitsspeicher tauschen. Welche Maßnahmen dienen dem Schutz vor elektrostatischer Entladung und der Arbeitssicherheit? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Rechner herunterfahren und den Netzstecker ziehen",
+      "Erdungsarmband anlegen und mit Masse verbinden",
+      "Module nur an den Kanten anfassen und in ESD-Beuteln lagern",
+      "Vor dem Arbeiten die Hände waschen und mit einem Tuch gründlich trocken reiben",
+      "Die Module vor dem Einbau mit Druckluft aus der Spraydose reinigen"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Händewaschen leitet keine Ladung ab; gegen ESD hilft die Erdung über Armband und Masse.",
+      "Druckluftspray schützt nicht vor Entladung und kann kalt und feucht austreten – keine ESD- oder Arbeitsschutzmaßnahme."
+    ],
+    "erklaerungKurz": "ESD (elektrostatische Entladung) zerstört Bauteile oft unbemerkt. Schutz: Strom trennen, Erdungsarmband, ESD-Unterlage und -Beutel, Bauteile an den Kanten fassen.",
+    "erklaerungLang": "Zwei Ziele: Bauteile vor Entladung schützen, Menschen vor Strom.\n• Strom trennen: herunterfahren, Netzstecker ziehen.\n• Potenzial ausgleichen: Erdungsarmband, ESD-Unterlage.\n• Richtig anfassen und lagern: an den Kanten, in ESD-Beuteln.\nMerke: erst Stecker raus, dann Armband an."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-786",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Eine 14 Monate alte SSD der Hollmann Gerätebau GmbH fällt aus. Der Hersteller gibt 5 Jahre Garantie. Was trifft zu?",
+    "optionen": [
+      "Die Garantie ist eine freiwillige Herstellerzusage; die gesetzliche Gewährleistung gegen den Verkäufer besteht davon unabhängig",
+      "Die Garantie ersetzt die Gewährleistung, daher kann sich das Unternehmen nur noch an den Hersteller wenden",
+      "Die Gewährleistung ist eine freiwillige Herstellerzusage, die Garantie gilt dagegen per Gesetz für zwei Jahre",
+      "Die Garantie gilt nur, wenn die SSD direkt beim Hersteller gekauft wurde; sonst bleibt allein die Gewährleistung gegen den Händler"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Eine Garantie kommt zur Gewährleistung hinzu, sie ersetzt sie nicht.",
+      "Falsch: Genau umgekehrt – die Gewährleistung ist gesetzlich, die Garantie freiwillig.",
+      "Die Herstellergarantie hängt nicht vom Händler ab; maßgeblich sind die Garantiebedingungen des Herstellers."
+    ],
+    "erklaerungKurz": "Gewährleistung = gesetzlich, gegen den Verkäufer, in der Regel zwei Jahre. Garantie = freiwillig, meist vom Hersteller, kommt obendrauf. Vor dem Einsenden: Daten sichern und sicher löschen.",
+    "erklaerungLang": "Merksatz: Gewährleistung muss, Garantie kann.\n• Gewährleistung: gesetzlich, Ansprechpartner ist der Verkäufer, in der Regel zwei Jahre.\n• Garantie: freiwillig, Umfang laut Garantiebedingungen, oft beim Hersteller.\n• Bei Datenträgern zusätzlich: Firmendaten vor dem Einsenden sichern und sicher löschen – oder den Datenträger einbehalten.\nMerke: Die Garantie ersetzt die Gewährleistung nicht."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-787",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH meldet die Fertigung dem Helpdesk (1st Level): „Der Messrechner an Prüfstand 2 startet nicht mehr – beim Einschalten kommen drei kurze Pieptöne, der Bildschirm bleibt schwarz. Die Endprüfung der heutigen Lieferung hängt daran.“",
+    "schritt1": {
+      "frage": "Wie gehst du als 1st Level vor?",
+      "optionen": [
+        "Ticket mit hoher Priorität anlegen, Piepcode festhalten und Standardprüfungen (Kabel, Monitor) machen",
+        "Ticket mit niedriger Priorität anlegen, weil nur ein einzelner PC in der Fertigung betroffen ist",
+        "Sofort ein neues Mainboard bestellen, weil Pieptöne beim Start in jedem Fall ein defektes Mainboard bedeuten"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Kabel und Monitor sind in Ordnung; das Mainboard-Handbuch nennt für drei kurze Töne einen Speicherfehler. Was folgt?",
+      "optionen": [
+        "An den 2nd Level eskalieren: Arbeitsspeicher mit ESD-Schutz neu stecken, Riegel einzeln testen und tauschen",
+        "Das Mainboard sofort über den Hersteller tauschen lassen, weil drei Töne auf einen defekten Speichercontroller deuten",
+        "Das Betriebssystem neu installieren, weil der Speicherfehler vom Betriebssystem verursacht wird"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Die Lieferung hängt daran – hohe Auswirkung und Dringlichkeit; der Piepcode ist der wichtigste Hinweis.",
+      "Die Priorität richtet sich nach Auswirkung und Dringlichkeit, nicht nur nach der Zahl der PCs.",
+      "Piepcodes sind herstellerabhängig und zeigen meist auf RAM oder Grafik – erst nachschlagen, dann handeln."
+    ],
+    "erklaerungKurz": "Hohe Priorität (Lieferung hängt daran), Piepcode aufnehmen und nachschlagen. Der Code zeigt einen Speicherfehler im POST – der 2nd Level prüft und tauscht den RAM mit ESD-Schutz.",
+    "erklaerungLang": "Pieptöne mit schwarzem Bild bedeuten: der POST hat einen Hardwarefehler gefunden, das Betriebssystem ist noch gar nicht beteiligt.\n• Die Bedeutung steht im Mainboard-Handbuch (herstellerabhängig); hier: Speicherfehler.\n• Der 1st Level dokumentiert und eskaliert, der 2nd Level steckt die Riegel neu, testet sie einzeln und tauscht den defekten.\n• Die Priorität ist hoch, weil die Endprüfung der Lieferung am PC hängt.\nMerke: Pieptöne = POST = Hardware – Handbuch lesen statt raten."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "verweis": "Modul 01, Abschnitt 1.3 – Hardwarefehler im Support: Fehlerbilder und Ablauf",
+    "id": "M01-788",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Im 2nd Level der Hollmann Gerätebau GmbH landet das Notebook eines Außendienstmitarbeiters: zunehmende Lesefehler, das Diagnosewerkzeug meldet den SMART-Status „schlecht“. Das Notebook ist 10 Monate alt.",
+    "schritt1": {
+      "frage": "Was hat jetzt Vorrang?",
+      "optionen": [
+        "Daten sofort sichern bzw. die letzte Sicherung prüfen, dann den Datenträger tauschen",
+        "Erst eine Defragmentierung starten, damit die Lesefehler von selbst wieder verschwinden",
+        "Zuerst eine vollständige Oberflächenprüfung mit chkdsk /r durchführen, dann die Daten sichern"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Die defekte SSD soll zurück an den Händler. Was ist zu beachten?",
+      "optionen": [
+        "Als Gewährleistungs- oder Garantiefall abwickeln und Firmendaten vorher sicher löschen oder die SSD einbehalten",
+        "Ohne Rücksicht auf die Daten einsenden, weil defekte SSDs grundsätzlich nicht mehr auslesbar sind",
+        "Die SSD vor dem Einsenden mit einem Schnellformat leeren, weil das die Firmendaten sicher entfernt"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Bei SMART-Warnungen droht der Ausfall – Daten zuerst, Tausch danach.",
+      "Defragmentieren belastet einen verschleißenden Datenträger zusätzlich und ist bei SSDs ohnehin nicht sinnvoll.",
+      "Die Prüfung belastet die sterbende SSD zusätzlich – erst sichern, dann prüfen oder tauschen."
+    ],
+    "erklaerungKurz": "SMART „schlecht“ heißt: Ausfall droht – erst Daten sichern, dann tauschen. Nach 10 Monaten greift die gesetzliche Gewährleistung (und ggf. die Garantie); Firmendaten vor dem Einsenden sicher löschen.",
+    "erklaerungLang": "Zwei Pflichten: Daten retten und Datenschutz wahren.\n• SMART-Warnung plus Lesefehler: sofort sichern, dann Datenträger tauschen.\n• Nach 10 Monaten liegt der Fall in der gesetzlichen Gewährleistung (in der Regel zwei Jahre, gegen den Verkäufer); eine Herstellergarantie kann zusätzlich greifen.\n• Ein Datenträger mit Firmendaten verlässt das Haus nur sicher gelöscht – oder er wird einbehalten.\nMerke: erst sichern, dann tauschen, dann datenschutzgerecht zurückgeben."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-617",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 4 – Hardwareplanung und Leistungsbewertung (12 Punkte)\nEin Unternehmen möchte einen neuen Arbeitsplatz für einen Mitarbeiter der CAD- und 3D-Konstruktionsabteilung beschaffen. Das Budget beträgt 1.600 Euro.\nMindestanforderungen:\n• Verarbeitung großer CAD-Modelle\n• gleichzeitiger Betrieb mehrerer Anwendungen\n• flüssige 3D-Darstellung\n• schnelle Ladezeiten\n• Nutzung von zwei hochauflösenden Monitoren\n\nKomponente: System A | System B\nCPU: 6 Kerne / 12 Threads | 12 Kerne / 24 Threads\nRAM: 16 GB DDR4 | 32 GB DDR5\nSSD: 1 TB SATA | 1 TB NVMe\nGPU: 4 GB VRAM | 12 GB VRAM\nNetzteil: 400 Watt | 750 Watt\nPreis: 950 Euro | 1.850 Euro\n\n4.1 (4 Punkte: Bewertung A, Bewertung B, Entscheidung und Begründung je 1 Punkt)\nBewerten Sie beide Systeme anhand der Anforderungen und des Budgets. Treffen Sie eine begründete Kaufentscheidung.",
+    "musterloesung": "Erwartete Aussagen (je 1 Punkt):\n• Bewertung System A: liegt mit 950 Euro im Budget, erfüllt die Mindestanforderungen aber nicht – 16 GB RAM reichen für große CAD-Modelle und mehrere Anwendungen gleichzeitig kaum (Auslagerung), 4 GB VRAM sind für flüssige 3D-Darstellung auf zwei hochauflösenden Monitoren zu knapp, die SATA-SSD bremst die Ladezeiten.\n• Bewertung System B: erfüllt alle Anforderungen – 12 Kerne / 24 Threads für parallele Anwendungen, 32 GB DDR5 für große Modelle, NVMe-SSD für kurze Ladezeiten, 12 GB VRAM für 3D und zwei Monitore, 750-Watt-Netzteil mit Reserve –, überschreitet das Budget aber um 250 Euro (1.850 statt 1.600 Euro).\n• Entscheidung: System B, die Mehrkosten von 250 Euro bei der Geschäftsführung begründet freigeben lassen (Budgeterhöhung).\n• Begründung: Mindestanforderungen sind Muss-Kriterien. System A wäre eine Fehlinvestition (Engpässe bei RAM, VRAM und Datenträger, baldige Aufrüstung oder Ersatz); 250 Euro (rund 16 %) sind gering gegenüber dem Produktivitätsverlust eines langsamen CAD-Arbeitsplatzes.\nEbenfalls vertretbar, wenn begründet: kein System unverändert kaufen, sondern ein angepasstes Angebot im Budget (z. B. 32 GB RAM, NVMe, Grafikkarte mit mehr VRAM). Gewertet wird die Begründung mit Anforderungen UND Budget.",
+    "erklaerungKurz": "System A ist günstig, erfüllt aber die CAD-Anforderungen nicht (RAM, VRAM, SATA); System B erfüllt sie, liegt aber 250 Euro über dem Budget – begründete Entscheidung: B mit Budgetfreigabe.",
+    "erklaerungLang": "Bewertet wird in zwei Schritten: erst die Mindestanforderungen, dann das Budget.\n• System A: im Budget, aber 16 GB RAM, 4 GB VRAM und SATA-SSD sind für große CAD-Modelle und zwei hochauflösende Monitore zu schwach.\n• System B: erfüllt jede Anforderung, kostet aber 250 Euro mehr als vorgesehen.\n• Eine Entscheidung zählt nur mit Begründung – B mit Budgetfreigabe oder ein angepasstes Angebot im Budget.\nMerke: Erst Anforderungen, dann Budget – ein billiges System, das die Anforderungen verfehlt, ist eine Fehlinvestition.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Budget",
+          "1.600",
+          "Mehrkosten",
+          "250 Euro",
+          "250 €"
+        ],
+        [
+          "Arbeitsspeicher",
+          "RAM",
+          "32 GB",
+          "16 GB"
+        ],
+        [
+          "Grafikspeicher",
+          "VRAM",
+          "Grafikkarte",
+          "GPU"
+        ],
+        [
+          "Anforderungen",
+          "Mindestanforderungen",
+          "Anforderung"
+        ]
+      ],
+      "kuer": [
+        "NVMe",
+        "Threads",
+        "Fehlinvestition",
+        "Budgeterhöhung"
+      ]
+    }
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-618",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "frage": "Aufgabe 4 (Fortsetzung) – CAD-Arbeitsplatz, Budget 1.600 Euro: System A hat eine 1-TB-SATA-SSD, System B eine 1-TB-NVMe-SSD.\n\n4.2 (2 Punkte: Schnittstelle 1 Punkt, Leistungsfähigkeit 1 Punkt)\nErklären Sie den Unterschied zwischen einer SATA-SSD und einer NVMe-SSD hinsichtlich Schnittstelle und Leistungsfähigkeit.\nZusatz: Erläutern Sie auch das Protokoll und nennen Sie mehrere Anwendungsfälle.",
+    "musterloesung": "Erwartete Aussagen:\n• Schnittstelle: Die SATA-SSD hängt am SATA-III-Anschluss (6 Gbit/s), der für Festplatten gebaut wurde. Die NVMe-SSD hängt direkt an PCI Express (PCIe, meist 4 Lanes, oft M.2).\n• Leistung: SATA schafft höchstens ca. 550–600 MB/s. NVMe schafft ca. 3.500 MB/s (PCIe 3.0) bis 7.000 MB/s (PCIe 4.0), dazu mehr IOPS und weniger Latenz.\n• Protokoll: SATA nutzt AHCI (Advanced Host Controller Interface): 1 Warteschlange mit 32 Befehlen. NVMe ist für Flash gebaut: sehr viele Warteschlangen gleichzeitig.\n• Anwendungsfälle: NVMe für CAD, Videoschnitt, Datenbank- und Virtualisierungsserver. SATA für Büro-PCs, ältere Rechner ohne M.2-Steckplatz und günstigen Datenspeicher.",
+    "erklaerungKurz": "SATA-SSD: SATA III mit AHCI, höchstens ca. 600 MB/s. NVMe-SSD: PCIe mit NVMe, mehrere tausend MB/s.",
+    "erklaerungLang": "Der Unterschied liegt im Anschluss, nicht im Speicher.\n• SATA III + AHCI: für Festplatten gebaut, ca. 600 MB/s.\n• PCIe + NVMe: für Flash gebaut, mehrere tausend MB/s, mehr IOPS, weniger Latenz.\n• M.2 ist nur die Bauform: M.2-SSDs gibt es mit SATA und mit NVMe.\nMerke: SATA = Festplatten-Anschluss, NVMe = schnelles PCIe.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "PCIe",
+          "PCI Express"
+        ],
+        [
+          "SATA III",
+          "6 Gbit/s",
+          "600 MB/s",
+          "550 MB/s"
+        ],
+        [
+          "AHCI",
+          "Advanced Host Controller Interface"
+        ]
+      ],
+      "kuer": [
+        "Warteschlangen",
+        "M.2",
+        "Latenz",
+        "IOPS",
+        "Virtualisierung"
+      ]
+    }
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-619",
+    "typ": "erklaeren",
+    "schwierigkeit": 3,
+    "frage": "Aufgabe 4 (Fortsetzung) – CAD-Arbeitsplatz in der Konstruktionsabteilung.\n\n4.3 (4 Punkte, je Ursache und je Maßnahme 1 Punkt)\nNennen Sie zwei mögliche Ursachen und je eine passende Maßnahme für folgendes Problem: Ein Rechner mit leistungsstarker CPU wird sehr langsam, sobald mehrere CAD-Projekte gleichzeitig geöffnet sind.",
+    "musterloesung": "Erwartete Aussagen (zwei Paare genügen):\n• Ursache 1: Der Arbeitsspeicher (RAM) ist voll. Jedes offene CAD-Projekt belegt viel RAM; reicht er nicht, lagert das Betriebssystem auf die SSD aus (Auslagerungsdatei, Swapping) – um ein Vielfaches langsamer als RAM.\n• Maßnahme 1: RAM aufrüsten (z. B. von 16 auf 32 oder 64 GB, freie Steckplätze und Dual-Channel beachten); kurzfristig nicht benötigte Projekte schließen.\n• Ursache 2: Der Grafikspeicher (VRAM) reicht nicht. Mehrere große 3D-Modelle auf zwei hochauflösenden Monitoren füllen ihn, die Grafikkarte muss Daten aus dem RAM nachladen, die Darstellung ruckelt.\n• Maßnahme 2: Grafikkarte mit mehr VRAM einsetzen (z. B. 12 GB, für die CAD-Software zertifiziert); dabei die Leistung des Netzteils prüfen.\nEbenfalls richtig: langsamer Massenspeicher (SATA-SSD oder HDD) beim Laden und Auslagern → NVMe-SSD; Überhitzung, CPU und Grafikkarte drosseln den Takt (Thermal Throttling) → Kühlung reinigen, Wärmeleitpaste erneuern.\nHinweis: Den Engpass vorher im Task-Manager messen (Auslastung von Arbeitsspeicher, Datenträger, GPU-Speicher).",
+    "erklaerungKurz": "Eine starke CPU nützt nichts, wenn RAM (Auslagerung), VRAM oder der Datenträger der Engpass sind – passende Maßnahme ist die Aufrüstung genau dieser Komponente.",
+    "erklaerungLang": "Gefragt ist der Engpass hinter der starken CPU.\n• RAM voll → Auslagerung auf die SSD → RAM aufrüsten.\n• VRAM voll → Grafikkarte lädt nach, Darstellung ruckelt → Grafikkarte mit mehr VRAM.\n• Weitere Ursachen: langsamer Datenträger (→ NVMe-SSD) oder Überhitzung (→ Kühlung reinigen).\nMerke: Erst den Engpass messen, dann gezielt die Komponente aufrüsten, die an ihrer Grenze läuft.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Arbeitsspeicher",
+          "RAM"
+        ],
+        [
+          "Auslagerung",
+          "auslagern",
+          "Swapping",
+          "Auslagerungsdatei",
+          "lagert"
+        ],
+        [
+          "aufrüsten",
+          "erweitern",
+          "mehr RAM",
+          "mehr Arbeitsspeicher",
+          "Aufrüstung"
+        ]
+      ],
+      "kuer": [
+        "VRAM",
+        "Grafikkarte",
+        "NVMe",
+        "Engpass",
+        "Task-Manager"
+      ]
+    }
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-620",
+    "typ": "erklaeren",
+    "schwierigkeit": 2,
+    "frage": "Aufgabe 4 (Fortsetzung) – CAD-Arbeitsplatz: System A hat ein 400-Watt-Netzteil, System B ein 750-Watt-Netzteil.\n\n4.4 (2 Punkte, je Problem 1 Punkt)\nErläutern Sie, warum ein zu schwach dimensioniertes Netzteil zu Problemen führen kann. Nennen Sie zwei Probleme.",
+    "musterloesung": "Erwartete Aussagen:\n• Warum: Das Netzteil muss die Leistung aller Komponenten auch in Lastspitzen liefern (CPU und Grafikkarte unter Volllast). Liegt der Bedarf darüber, bricht die Spannung ein oder der Überlastschutz des Netzteils schaltet ab.\n• Problem 1: Instabilität – Abstürze, Bluescreens, spontane Neustarts oder Abschalten unter Last (z. B. beim Rendern); ungespeicherte Arbeit geht verloren.\n• Problem 2: Komponenten laufen nicht mit voller Leistung oder lassen sich nicht nachrüsten – eine stärkere Grafikkarte braucht mehr Leistung und eigene PCIe-Stromanschlüsse.\nEbenfalls richtig: Dauerbetrieb an der Leistungsgrenze → Netzteil wird heiß, Lüfter laut, Wirkungsgrad sinkt, Lebensdauer verkürzt sich bis zum Ausfall; Spannungsschwankungen können Bauteile oder Daten (z. B. SSD beim Schreiben) schädigen.\nHinweis: Netzteil = Summe der Komponenten + 20–30 % Reserve; 80 PLUS beschreibt den Wirkungsgrad, nicht die Leistung.",
+    "erklaerungKurz": "Reicht die Nennleistung in Lastspitzen nicht, bricht die Spannung ein oder der Überlastschutz schaltet ab: Abstürze und Neustarts unter Last, keine Aufrüstung möglich, schnellere Alterung.",
+    "erklaerungLang": "Das Netzteil ist Teil der Leistungsplanung, nicht Nebensache.\n• Lastspitzen von CPU und Grafikkarte bestimmen den Bedarf, nicht der Leerlauf.\n• Zu wenig Leistung zeigt sich als Absturz oder Abschalten genau dann, wenn gerechnet wird.\n• Dauerbetrieb an der Grenze macht das Netzteil heiß und verkürzt seine Lebensdauer.\nMerke: Summe der Komponenten plus 20–30 % Reserve – sonst kippt das System unter Last.",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Absturz",
+          "Abstürze",
+          "Neustart",
+          "abschalten",
+          "schaltet ab",
+          "instabil",
+          "Instabilität"
+        ],
+        [
+          "Lastspitzen",
+          "Volllast",
+          "unter Last",
+          "Leistungsbedarf",
+          "Lastspitze"
+        ],
+        [
+          "Netzteil",
+          "Nennleistung",
+          "Überlastschutz",
+          "Spannung"
+        ]
+      ],
+      "kuer": [
+        "Lebensdauer",
+        "Reserve",
+        "Grafikkarte",
+        "Watt"
+      ]
+    }
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-621",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Die Hollmann Gerätebau GmbH beschafft einen CAD-Arbeitsplatz für die Entwicklung (Budget 1.600 Euro; große 3D-Baugruppen, mehrere Anwendungen gleichzeitig, zwei hochauflösende Monitore). System X: 8 Kerne / 16 Threads, 32 GB RAM, 1-TB-NVMe-SSD, Grafikkarte mit 12 GB Grafikspeicher, 650 W, 1.540 Euro. System Y: 16 Kerne / 32 Threads, 16 GB RAM, 2-TB-SSD mit rund 550 MB/s, Grafikkarte mit 4 GB Grafikspeicher, 500 W, 1.480 Euro. Welche Entscheidung ist fachlich am besten begründet?",
+    "optionen": [
+      "System X, weil RAM, VRAM und NVMe-SSD die CAD-Anforderungen decken und es im Budget bleibt",
+      "System Y, weil die doppelte Kernzahl jede CAD-Anwendung am stärksten beschleunigt und es billiger ist",
+      "System Y, weil eine größere SSD für CAD wichtiger ist als Arbeitsspeicher und Grafikspeicher",
+      "System Y, weil 16 Kerne und die größere SSD bei mehreren Anwendungen mehr bringen als VRAM"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Mehr Kerne helfen nur, wenn die Arbeit parallel läuft. Mit 16 GB RAM und 4 GB VRAM bleiben Speicher und Grafik der Engpass.",
+      "Falsch: Die Kapazität der SSD entscheidet nicht über flüssige 3D-Darstellung; 16 GB RAM und 4 GB VRAM sind für große Baugruppen zu knapp.",
+      "Bei großen 3D-Baugruppen begrenzen RAM und VRAM; 16 GB RAM und 4 GB VRAM reichen hier nicht."
+    ],
+    "erklaerungKurz": "System X erfüllt die Engpass-Komponenten für CAD (32 GB RAM, 12 GB VRAM, NVMe) und bleibt mit 1.540 Euro im Budget; System Y hat zwar mehr Kerne, aber zu wenig RAM und VRAM.",
+    "erklaerungLang": "Für CAD zählen vor allem Arbeitsspeicher, Grafikspeicher und schneller Datenträger.\n• System X: 32 GB RAM, 12 GB VRAM, NVMe – alle Anforderungen gedeckt, 60 Euro unter Budget.\n• System Y: mehr Kerne, aber 16 GB RAM und 4 GB VRAM – genau die Engpässe bei großen Modellen und zwei Monitoren.\nMerke: Die höchste Kernzahl ist nicht automatisch das beste System – die Anforderungen entscheiden."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-622",
+    "typ": "mtf",
+    "schwierigkeit": 2,
+    "frage": "CAD-Arbeitsplatz mit Budget 1.600 Euro. System A: 6 Kerne / 12 Threads, 16 GB RAM, 1-TB-SSD mit rund 550 MB/s, 4 GB Grafikspeicher, 400 W, 950 Euro. System B: 12 Kerne / 24 Threads, 32 GB RAM, 1-TB-NVMe-SSD, 12 GB Grafikspeicher, 750 W, 1.850 Euro. Bewerte die Aussagen jeweils als wahr oder falsch.",
+    "aussagen": [
+      {
+        "text": "System A liegt im Budget, deckt aber die Anforderung „große CAD-Modelle und mehrere Anwendungen gleichzeitig“ mit 16 GB RAM nur unzureichend ab.",
+        "wahr": true
+      },
+      {
+        "text": "System B erfüllt die technischen Anforderungen, überschreitet das Budget aber um 250 Euro.",
+        "wahr": true
+      },
+      {
+        "text": "Die 4 GB VRAM von System A reichen für flüssige 3D-Darstellung auf zwei hochauflösenden Monitoren problemlos aus.",
+        "wahr": false
+      },
+      {
+        "text": "Weil System B über dem Budget liegt, lässt sich eine Entscheidung für System B in keinem Fall fachlich begründen.",
+        "wahr": false
+      }
+    ],
+    "erklaerungKurz": "A ist günstig, aber bei RAM und VRAM zu schwach; B erfüllt alles und liegt 250 Euro über dem Budget. Eine Entscheidung für B ist begründbar, wenn die Mehrkosten mit den Mindestanforderungen begründet werden.",
+    "erklaerungLang": "Die Bewertung trennt Anforderungen und Budget.\n• A: 950 Euro, aber 16 GB RAM und 4 GB VRAM verfehlen große Modelle und zwei Monitore.\n• B: alle Anforderungen erfüllt, 1.850 Euro – 250 Euro über dem Budget.\n• Eine Budgetüberschreitung schließt eine Entscheidung nicht aus; sie muss begründet und freigegeben werden.\nMerke: Bewertung = Anforderungen prüfen + Budget prüfen + begründet entscheiden."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-623",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordne jedes Merkmal der passenden SSD-Art zu.",
+    "paare": [
+      [
+        "Protokoll AHCI mit einer Befehlswarteschlange für 32 Befehle",
+        "SATA-SSD"
+      ],
+      [
+        "Anbindung über PCIe-Lanes direkt an CPU oder Chipsatz",
+        "NVMe-SSD"
+      ],
+      [
+        "Höchstens rund 600 MB/s wegen SATA III (6 Gbit/s)",
+        "SATA-SSD"
+      ],
+      [
+        "Bis zu 65.535 Warteschlangen für parallele Zugriffe",
+        "NVMe-SSD"
+      ],
+      [
+        "Passt in ältere Rechner mit 2,5-Zoll-Laufwerksschacht",
+        "SATA-SSD"
+      ],
+      [
+        "Rund 7.000 MB/s bei PCIe 4.0 mit vier Lanes",
+        "NVMe-SSD"
+      ]
+    ],
+    "erklaerungKurz": "SATA-SSD: SATA III, AHCI, eine Warteschlange, rund 600 MB/s. NVMe-SSD: PCIe-Lanes, NVMe-Protokoll mit vielen Warteschlangen, mehrere tausend MB/s.",
+    "erklaerungLang": "Schnittstelle und Protokoll gehören zusammen.\n• SATA-SSD: SATA III (6 Gbit/s) mit AHCI – für Festplatten entworfen, daher eine Warteschlange und rund 600 MB/s.\n• NVMe-SSD: PCIe mit NVMe – für Flash gebaut, viele Warteschlangen, PCIe 4.0 x4 rund 7.000 MB/s.\nMerke: SATA = AHCI, NVMe = PCIe."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-624",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Die IT der Hollmann Gerätebau GmbH hat nur ein kleines Budget für NVMe-SSDs. In welchem Fall bringt eine NVMe-SSD gegenüber einer SSD mit rund 550 MB/s den größten spürbaren Vorteil?",
+    "optionen": [
+      "Hyper-V-Host mit vielen virtuellen Maschinen, die gleichzeitig auf den Datenträger zugreifen",
+      "Büro-PC in der Verwaltung, auf dem vor allem E-Mails und Textdokumente bearbeitet werden",
+      "Gaming-PC, auf dem vor allem Spiele laufen, die einmal geladen kaum noch nachladen",
+      "Archivspeicher für selten gelesene Daten, bei dem vor allem der Preis je Terabyte zählt, sonst nichts"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Bei E-Mails und Texten ist der Datenträger kaum ausgelastet; der Unterschied zu SATA ist im Alltag kaum spürbar.",
+      "Sind die Daten erst geladen, bringt der schnellere Datenträger kaum noch etwas; viele gleichzeitige Zugriffe profitieren am meisten.",
+      "Falsch: Bei selten gelesenen Archivdaten zählt der Preis je Terabyte – hier ist SATA (oder HDD) wirtschaftlicher."
+    ],
+    "erklaerungKurz": "NVMe spielt seine Stärke bei vielen parallelen Zugriffen (viele Warteschlangen, hohe IOPS) aus – typisch für Virtualisierungs- und Datenbankserver sowie CAD.",
+    "erklaerungLang": "Der Vorteil von NVMe zeigt sich nur, wenn der Datenträger der Engpass ist.\n• Viele VMs greifen gleichzeitig zu – NVMe bedient sie über viele Warteschlangen mit hohen IOPS.\n• Büro-PC und Archiv lasten den Datenträger kaum aus bzw. zählen den Preis je Terabyte.\n• Ohne M.2- oder PCIe-Steckplatz ist NVMe gar nicht einsetzbar.\nMerke: NVMe dort, wo viele parallele Zugriffe oder große Dateien den Takt vorgeben."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-625",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Bei der Hollmann Gerätebau GmbH wird ein CAD-Arbeitsplatz der Entwicklung (16 Kerne, 16 GB RAM, SSD mit rund 550 MB/s, Grafikkarte mit 4 GB Grafikspeicher) sehr langsam, sobald drei Baugruppen gleichzeitig geöffnet sind. Der Task-Manager zeigt: CPU 35 %, Arbeitsspeicher 97 %, Datenträger 100 %, GPU-Speicher 3,9 von 4 GB. Welche Maßnahmen beheben einen Engpass? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Arbeitsspeicher auf 32 GB oder mehr erweitern, damit nicht mehr ausgelagert wird",
+      "Grafikkarte mit mehr Grafikspeicher (VRAM) einsetzen, weil der VRAM voll ist",
+      "SATA-SSD durch eine NVMe-SSD ersetzen, weil der Datenträger bei 100 % steht",
+      "Die CPU höher takten, damit sie die Auslagerung auf die SSD schneller abarbeitet",
+      "Die Auslagerungsdatei abschalten, damit die SSD nicht mehr belastet wird"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Die CPU liegt bei 35 % und ist kein Engpass; es bremsen der volle Arbeitsspeicher und der Datenträger.",
+      "Falsch: Ohne Auslagerungsdatei bricht das System bei vollem RAM Programme ab oder stürzt ab; die Ursache, zu wenig RAM, bleibt."
+    ],
+    "erklaerungKurz": "Die Werte zeigen drei Engpässe: RAM voll (97 %, daher Auslagerung), Datenträger am Anschlag (100 %) und VRAM voll. Die CPU mit 35 % ist es nicht.",
+    "erklaerungLang": "Der Task-Manager zeigt, welche Komponente an ihrer Grenze läuft.\n• Arbeitsspeicher 97 %: das System lagert auf die SSD aus – RAM aufrüsten.\n• Datenträger 100 %: Auslagerung und Laden bremsen – NVMe-SSD.\n• GPU-Speicher 3,9 von 4 GB: VRAM voll – Grafikkarte mit mehr VRAM.\n• CPU 35 %: kein Engpass.\nMerke: Erst messen, dann die Komponente aufrüsten, die an ihrer Grenze läuft."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-626",
+    "typ": "mehrfach",
+    "schwierigkeit": 2,
+    "rechner": true,
+    "frage": "Die IT der Hollmann Gerätebau GmbH baut in einen Entwicklungsrechner mit 450-Watt-Netzteil eine Grafikkarte mit 300 W Leistungsaufnahme ein. Die übrigen Komponenten brauchen unter Last zusammen rund 200 W. Mit welchen Problemen ist zu rechnen? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Abschalten oder Neustart unter Last, weil der Überlastschutz des Netzteils auslöst",
+      "Abstürze beim Rendern, weil die Spannung in Lastspitzen einbricht",
+      "Hitze und kürzere Lebensdauer des Netzteils durch Betrieb an der Grenze",
+      "Die Grafikkarte drosselt sich auf 150 W, und alles läuft dauerhaft stabil",
+      "Das Netzteil zieht einfach mehr aus der Steckdose und liefert so genug Leistung"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Falsch: Grafikkarten passen ihre Leistungsaufnahme nicht an ein zu kleines Netzteil an; unter Last fordern sie ihre volle Leistung.",
+      "Falsch: Die Nennleistung ist die Obergrenze der Ausgangsleistung; darüber schaltet der Schutz ab oder die Spannung bricht ein."
+    ],
+    "erklaerungKurz": "Bedarf rund 500 W gegen 450 W Nennleistung: unter Last Abschalten, Neustarts und Abstürze, dazu Hitze und schnellere Alterung des Netzteils.",
+    "erklaerungLang": "Rechnung: 300 W + 200 W = 500 W Bedarf, das Netzteil liefert höchstens 450 W.\n• In Lastspitzen bricht die Spannung ein oder der Überlastschutz schaltet ab.\n• Betrieb an der Grenze erzeugt Hitze und verkürzt die Lebensdauer.\n• Richtig wäre: 500 W + 20–30 % Reserve → mindestens ein 650-W-Netzteil.\nMerke: Das Netzteil muss den Lastfall tragen, nicht den Leerlauf."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-627",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Die Entwicklung der Hollmann Gerätebau GmbH bekommt einen neuen CAD-Arbeitsplatz (Budget 1.600 Euro je Platz; große 3D-Baugruppen, mehrere Anwendungen gleichzeitig, zwei hochauflösende Monitore). Angebot 1: 6 Kerne, 16 GB RAM, SSD mit rund 550 MB/s, 4 GB Grafikspeicher, 400 W, 950 Euro. Angebot 2: 12 Kerne, 32 GB RAM, NVMe-SSD, 12 GB Grafikspeicher, 750 W, 1.850 Euro.",
+    "schritt1": {
+      "frage": "Welche Empfehlung gibst du der IT-Leitung?",
+      "optionen": [
+        "Angebot 2 und die 250 Euro Mehrkosten begründet freigeben lassen, weil Angebot 1 die Anforderungen nicht erfüllt",
+        "Angebot 1, weil die Einhaltung des Budgets in jedem Fall Vorrang vor den Mindestanforderungen des Arbeitsplatzes hat",
+        "Angebot 1, weil sich 16 GB RAM und 4 GB Grafikspeicher bei CAD durch eine schnelle SSD ausgleichen lassen"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Die IT-Leitung gibt nur 1.600 Euro frei; Angebot 1 soll aufgerüstet werden. Welche Aufrüstung hat Vorrang?",
+      "optionen": [
+        "Arbeitsspeicher auf 32 GB und eine Grafikkarte mit mehr VRAM – samt passend größerem Netzteil",
+        "Nur eine CPU mit mehr Kernen, weil sie die Engpässe bei Arbeitsspeicher und Grafik vollständig ausgleicht",
+        "Nur eine NVMe-SSD, weil das Auslagern dann so schnell ist, dass 16 GB Arbeitsspeicher ausreichen"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Mindestanforderungen sind Muss-Kriterien; Mehrkosten werden begründet freigegeben.",
+      "Ein System im Budget, das die Anforderungen verfehlt, ist eine Fehlinvestition.",
+      "Eine SSD ersetzt weder Arbeitsspeicher noch Grafikspeicher – Angebot 1 erfüllt die CAD-Anforderungen nicht."
+    ],
+    "erklaerungKurz": "Angebot 1 verfehlt die CAD-Anforderungen (RAM, VRAM, SATA), Angebot 2 liegt 250 Euro über dem Budget. Ohne Freigabe wird Angebot 1 gezielt bei RAM und VRAM aufgerüstet – mit Blick auf das Netzteil.",
+    "erklaerungLang": "Erst Anforderungen, dann Budget.\n• Angebot 1 ist bei Arbeitsspeicher, Grafikspeicher und Datenträger zu schwach; Angebot 2 erfüllt alles, kostet aber 250 Euro mehr – das wird begründet zur Freigabe vorgelegt.\n• Bleibt es bei 1.600 Euro, wird Angebot 1 dort aufgerüstet, wo die Engpässe liegen: RAM auf 32 GB und eine Grafikkarte mit mehr VRAM; die stärkere Grafikkarte verlangt ein größeres Netzteil.\n• Mehr Kerne oder ein dritter Monitor beheben keinen dieser Engpässe.\nMerke: Aufrüsten dort, wo der Engpass liegt – und das Netzteil mitdenken."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Berechnungen: Energie",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-628",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Für den neuen CAD-Arbeitsplatz der Hollmann Gerätebau GmbH plant die IT folgende Leistungsaufnahme unter Last: CPU 125 W, Grafikkarte 220 W, Mainboard 50 W, RAM 10 W, NVMe-SSD 10 W, Lüfter 15 W. Üblich sind Netzteile mit 450, 550, 650 und 750 W.",
+    "schritt1": {
+      "frage": "Wie groß ist der Bedarf, und welches Netzteil wählst du mit 30 % Reserve?",
+      "optionen": [
+        "430 W; mit Reserve 559 W → Netzteil mit 650 W",
+        "430 W; mit Reserve 559 W → Netzteil mit 550 W",
+        "330 W; mit Reserve 429 W → ein Netzteil mit 450 W"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Zur Wahl stehen zwei 650-W-Netzteile: 80 PLUS Bronze und 80 PLUS Gold. Was sagt das Siegel aus?",
+      "optionen": [
+        "Gold hat den höheren Wirkungsgrad: weniger Abwärme und geringere Stromkosten bei gleicher Leistung",
+        "Gold liefert mehr Ausgangsleistung als Bronze, obwohl beide Netzteile mit jeweils 650 W angegeben werden",
+        "Gold steht für eine längere Herstellergarantie und eine höhere Lebensdauer der Bauteile"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: 430 W × 1,3 = 559 W; die nächste übliche Größe darüber ist 650 W.",
+      "550 W liegt unter dem berechneten Bedarf mit Reserve von 559 W.",
+      "Die Summe stimmt nicht: 125 + 220 + 50 + 10 + 10 + 15 = 430 W, nicht 330 W."
+    ],
+    "erklaerungKurz": "125 + 220 + 50 + 10 + 10 + 15 = 430 W; mit 30 % Reserve 559 W → 650-W-Netzteil. 80 PLUS beschreibt den Wirkungsgrad, nicht die Leistung.",
+    "erklaerungLang": "Netzteil berechnen in drei Schritten.\n• Alle Komponenten unter Last addieren: 430 W.\n• Reserve aufschlagen: 430 W × 1,3 = 559 W; dann die nächstgrößere übliche Größe wählen: 650 W.\n• 80 PLUS (Bronze bis Titanium) sagt, wie viel der aufgenommenen Leistung nutzbar ankommt: Gold verliert weniger als Wärme und spart Strom, liefert aber nicht mehr Watt als Bronze gleicher Nennleistung.\nMerke: Leistung kommt aus der Rechnung, Wirkungsgrad aus dem Siegel."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Berechnungen: Energie",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-629",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Für einen Konstruktionsrechner der Eckhardt Maschinenbau GmbH sind geplant: CPU 170 W, Grafikkarte 285 W, Mainboard und RAM 60 W, zwei SSDs je 8 W, Lüfter und Pumpe 20 W. Die IT rechnet mit 25 % Reserve. Welches Netzteil ist die kleinste passende Wahl?",
+    "optionen": [
+      "550 W",
+      "650 W",
+      "750 W",
+      "1.000 W"
+    ],
+    "loesungIndex": 2,
+    "distraktorErklaerungen": [
+      "Falsch: Schon ohne Reserve liegt der Bedarf bei 551 W.",
+      "Falsch: Mit 25 % Reserve sind rund 689 W nötig – 650 W reichen nicht.",
+      "",
+      "Falsch: 1.000 W reichen zwar, sind aber nicht die kleinste passende Wahl und laufen meist in einem ungünstigen Lastbereich."
+    ],
+    "erklaerungKurz": "170 + 285 + 60 + 16 + 20 = 551 W; × 1,25 = rund 689 W → kleinste passende Größe 750 W.",
+    "erklaerungLang": "Rechenweg in drei Schritten.\n• Summe: 170 + 285 + 60 + 2 × 8 + 20 = 551 W.\n• Reserve: 551 W × 1,25 = 688,75 W, also rund 689 W.\n• Auswahl: die nächstgrößere übliche Größe über 689 W ist 750 W.\nMerke: Summe + Reserve, dann aufrunden auf die nächste Netzteilgröße."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-630",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "System B hat eine CPU mit 12 Kernen und 24 Threads. Die doppelte Zahl an Threads entsteht durch ___. Sie hilft vor allem, wenn ___.",
+    "luecken": [
+      {
+        "optionen": [
+          "Simultaneous Multithreading (bei Intel: Hyper-Threading)",
+          "eine höhere Taktfrequenz",
+          "einen größeren L3-Cache",
+          "DDR5-Arbeitsspeicher"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "mehrere Anwendungen oder Rechenaufgaben parallel laufen",
+          "nur ein einzelnes Programm mit einem Kern läuft",
+          "die Grafikkarte zu wenig VRAM hat",
+          "das Netzteil zu schwach ist"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "Simultaneous Multithreading (Hyper-Threading) lässt jeden Kern zwei Threads bearbeiten: 12 Kerne → 24 Threads. Das nützt bei paralleler Arbeit, nicht bei einem Programm, das nur einen Kern nutzt.",
+    "erklaerungLang": "Kerne sind physische Recheneinheiten, Threads logische.\n• Mit Simultaneous Multithreading (Intel: Hyper-Threading) bearbeitet ein Kern zwei Threads abwechselnd und nutzt Wartezeiten.\n• Davon profitieren mehrere Anwendungen gleichzeitig oder Programme, die parallel rechnen (z. B. Rendern).\n• Ein Programm, das nur einen Kern nutzt, wird dadurch nicht schneller.\nMerke: Threads ≠ Kerne – ein Thread ist kein zweiter vollwertiger Kern."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-631",
+    "typ": "mtf",
+    "schwierigkeit": 2,
+    "frage": "Bewerte die folgenden Aussagen zu Komponenten eines CAD-Arbeitsplatzes jeweils als wahr oder falsch.",
+    "aussagen": [
+      {
+        "text": "M.2 ist eine Bauform; eine M.2-SSD kann je nach Modell über SATA oder über NVMe angebunden sein.",
+        "wahr": true
+      },
+      {
+        "text": "DDR5-Module lassen sich in einen DDR4-Steckplatz einsetzen und laufen dort nur langsamer.",
+        "wahr": false
+      },
+      {
+        "text": "Der Grafikspeicher (VRAM) sitzt auf der Grafikkarte und nimmt Modell- und Texturdaten für die Darstellung auf.",
+        "wahr": true
+      },
+      {
+        "text": "Jede neuere PCIe-Generation verdoppelt ungefähr die Datenrate je Lane, z. B. von PCIe 3.0 auf 4.0.",
+        "wahr": true
+      },
+      {
+        "text": "Eine CPU mit mehr Kernen beschleunigt jedes Programm im gleichen Maß, auch eines, das nur einen Kern nutzt.",
+        "wahr": false
+      }
+    ],
+    "erklaerungKurz": "M.2 ist nur die Bauform, DDR4 und DDR5 sind nicht steckkompatibel, VRAM liegt auf der Grafikkarte, PCIe verdoppelt je Generation die Datenrate je Lane, und mehr Kerne helfen nur bei paralleler Arbeit.",
+    "erklaerungLang": "Fünf Kenngrößen, die in der Hardwareplanung immer wieder auftauchen.\n• M.2 = Bauform: SATA- und NVMe-SSDs gibt es beide als M.2.\n• DDR5 hat eine andere Kerbe und Spannung – passt nicht in DDR4-Steckplätze.\n• VRAM gehört der Grafikkarte; ist er voll, muss sie aus dem RAM nachladen.\n• PCIe 3.0 → 4.0 → 5.0: je Generation etwa doppelte Datenrate je Lane.\n• Mehr Kerne nützen nur, wenn die Software parallel arbeitet.\nMerke: Bauform, Schnittstelle und Protokoll sind drei verschiedene Dinge."
+  },
+  {
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "verweis": "Modul 03, Abschnitt 3.3 – Hardwareplanung: SATA vs. NVMe, Engpässe, Netzteil",
+    "id": "M03-632",
+    "typ": "mc",
+    "schwierigkeit": 1,
+    "frage": "Was versteht man bei der Leistungsbewertung eines Rechners unter einem Engpass (Flaschenhals)?",
+    "optionen": [
+      "Die Komponente, die zuerst an ihre Grenze kommt und dadurch das ganze System bremst",
+      "Die teuerste Komponente im System, die deshalb bei Problemen zuerst ausgetauscht wird",
+      "Die Komponente mit der höchsten Taktfrequenz, weil sie alle anderen Bauteile mitzieht",
+      "Eine Schnittstelle, die nur bei Netzwerkzugriffen eine Rolle spielt, nicht im PC selbst"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Der Preis sagt nichts darüber, welche Komponente das System bremst.",
+      "Falsch: Eine hohe Taktfrequenz macht eine Komponente schnell; sie bremst das System gerade nicht.",
+      "Falsch: Engpässe gibt es auch im PC selbst – etwa RAM, VRAM oder Datenträger."
+    ],
+    "erklaerungKurz": "Der Engpass ist die Komponente, die als erste voll ausgelastet ist; sie bestimmt die Leistung des ganzen Systems, egal wie stark die übrigen Teile sind.",
+    "erklaerungLang": "Ein System ist nur so schnell wie sein langsamstes beteiligtes Glied.\n• Beispiel: starke CPU, aber RAM voll – das System lagert aus und wird langsam.\n• Den Engpass zeigt die Auslastung im Task-Manager oder Ressourcenmonitor.\n• Aufrüsten lohnt nur an der Komponente, die an ihrer Grenze läuft.\nMerke: Engpass = die Komponente, die zuerst bei 100 % steht."
+  }
+]

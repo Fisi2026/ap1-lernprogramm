@@ -1,0 +1,66 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt" [current=page]
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Gantt-Training" [Ebene 1]
+  table
+    row "Vorgang Dauer Vorgänger Start-Tag End-Tag"
+      columnheader "Vorgang"
+      columnheader "Dauer"
+      columnheader "Vorgänger"
+      columnheader "Start-Tag"
+      columnheader "End-Tag"
+    row "A – Auswahl & Beschaffung 3 –"
+      cell "A – Auswahl & Beschaffung"
+      cell "3"
+      cell "–"
+      cell
+        textbox "Start-Tag A"
+      cell
+        textbox "End-Tag A"
+    row "B – Server aufsetzen 2 A"
+      cell "B – Server aufsetzen"
+      cell "2"
+      cell "A"
+      cell
+        textbox "Start-Tag B"
+      cell
+        textbox "End-Tag B"
+    row "C – Workflows definieren 4 A"
+      cell "C – Workflows definieren"
+      cell "4"
+      cell "A"
+      cell
+        textbox "Start-Tag C"
+      cell
+        textbox "End-Tag C"
+    row "D – Testbetrieb 2 B, C"
+      cell "D – Testbetrieb"
+      cell "2"
+      cell "B, C"
+      cell
+        textbox "Start-Tag D"
+      cell
+        textbox "End-Tag D"
+    row "E – Go-Live & Schulung 1 D"
+      cell "E – Go-Live & Schulung"
+      cell "1"
+      cell "D"
+      cell
+        textbox "Start-Tag E"
+      cell
+        textbox "End-Tag E"
+  button "Planung prüfen"

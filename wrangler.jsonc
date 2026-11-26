@@ -1,0 +1,44 @@
+{
+  // N20b (17.09.2026): Konfiguration des Workers `ap1-lernprogramm`.
+  // ⛔ name, compatibility_date, compatibility_flags, observability und assets.directory
+  //    sind die Werte, die Cloudflare bisher selbst erzeugt hat (Branch
+  //    cloudflare/workers-autoconfig-2). Neu sind nur: main, assets.binding,
+  //    assets.run_worker_first und d1_databases.
+  // ⛔ run_worker_first: NUR /api/* läuft durch den Worker – alles andere liefert
+  //    Cloudflare wie bisher direkt aus den Assets (.assetsignore gilt weiter).
+  // ⛔⛔ N29 (23.09.2026, E22): ausgeliefert wird NUR NOCH `v2/` – das Bauergebnis des Neubaus
+  //    (Positivliste). Der Wurzelordner mit der alten App und `.assetsignore` ist damit aus dem Deploy.
+  //    `v2/_redirects` leitet alte Adressen auf / um; `/sw.js` ist der Abschalt-SW (R9).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ap1-lernprogramm",
+  "main": "neu/src/server/worker.ts",
+  "compatibility_date": "2026-09-26",
+  "compatibility_flags": ["nodejs_compat"],
+  // ⛔ Audit 26.09.2026 (AUD-A3): Invocation-Logs AUS. Cloudflare schrieb sonst zu JEDER Anfrage
+  //    Request-Metadaten mit (Feldliste undokumentiert, 3-7 Tage). Eigene `console.error` aus
+  //    worker.ts (`protokolliere`, ohne IP/Koerper) laufen weiter in Workers Logs.
+  "observability": { "enabled": true, "logs": { "invocation_logs": false } },
+  "assets": {
+    "directory": "./v2",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ap1-meldungen",
+      "database_id": "1fad47df-2f60-4e2c-96c5-9d6bce968719",
+      "migrations_dir": "neu/src/server/migrationen"
+    }
+  ],
+  // ⛔ 26.09.2026 (Pruefbericht): Ratenbremse am Rand, je IP und Zweck (api.ts `gebremst`).
+  //    Die IP ist dort nur fluechtiger Zaehlschluessel und wird nirgends gespeichert (E8).
+  //    namespace_id ist kontoweit eindeutig; period nur 10 oder 60 (Cloudflare).
+  "ratelimits": [
+    { "name": "RL_SCHREIBEN", "namespace_id": "2601", "simple": { "limit": 10, "period": 60 } },
+    { "name": "RL_ADMIN", "namespace_id": "2602", "simple": { "limit": 30, "period": 60 } }
+  ],
+  // ⛔ 26.09.2026 (Nutzer-Entscheid): taeglich 03:23 UTC aufraeumen – Fehlerberichte nach
+  //    90 Tagen, erledigte Meldungen 365 Tage nach Erledigung (api.ts AUFBEWAHRUNG).
+  "triggers": { "crons": ["23 3 * * *"] }
+}

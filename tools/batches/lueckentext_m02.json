@@ -1,0 +1,21 @@
+[
+ {
+  "id": "M02-207",
+  "pruefungsteil": "AP1",
+  "modul": "M02",
+  "thema": "Präsentation & Quellen",
+  "gebiet": "A4",
+  "typ": "lueckentext",
+  "schwierigkeit": 2,
+  "frage": "Sie bauen eine Kundenpräsentation für ein Angebot auf. Nach dem Deckblatt folgt die ___, damit die Zuhörer den Ablauf kennen. Nach der Problemdarstellung kommt der ___, danach zeigen Sie zwei bis drei ___ mit unterschiedlichem Budget. Den Abschluss bilden die ___ (Call-to-Action).",
+  "luecken": [
+   ["Agenda", "agenda", "Inhaltsverzeichnis", "Übersicht"],
+   ["Lösungsvorschlag", "lösungsvorschlag", "Lösungsweg", "Lösung"],
+   ["Handlungsoptionen", "handlungsoptionen", "Alternativen", "Optionen"],
+   ["nächsten Schritte", "nächste Schritte", "Nächsten Schritte", "Nächste Schritte"]
+  ],
+  "erklaerungKurz": "Aufbau: Deckblatt, Agenda, Problemdarstellung, Lösungsvorschlag, Handlungsoptionen, nächste Schritte, Anhang.",
+  "erklaerungLang": "Der Aufbau folgt der Frage, die der Kunde im Kopf hat – erst worum geht es, dann was ist mein Problem, dann was schlagen Sie vor, dann was kostet mich das, dann was passiert jetzt.\n• Die Agenda direkt nach dem Deckblatt nimmt dem Zuhörer die Unsicherheit, wie lange es dauert und wann sein Thema kommt.\n• Handlungsoptionen sind kein Beiwerk: zwei bis drei Alternativen mit verschiedenem Budget machen aus einer Vorführung eine Entscheidungsgrundlage.\n• Der Anhang trägt Detaildaten und technische Spezifikationen – er wird nicht vorgetragen, sondern nachgereicht.\nMerke: Eine Präsentation endet nie mit „Danke für Ihre Aufmerksamkeit“, sondern mit dem nächsten Schritt.",
+  "verweis": "Modul 02, Abschnitt 2.4 – Präsentation und Medienkompetenz"
+ }
+]

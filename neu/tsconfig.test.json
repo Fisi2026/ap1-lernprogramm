@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.test.tsbuildinfo",
+    /* Testcode darf Node sehen, App-Code nicht. Genau dafuer steht diese Datei:
+       die Grenze soll im Typsystem stehen und nicht in der Selbstdisziplin. */
+    "types": ["vite/client", "node", "vitest/globals"],
+    "noEmit": true,
+    /* N32: die strenge Index-Pruefung gilt dem App-Code (tsconfig.app.json). Tests greifen auf
+       Beispieldaten zu, deren Laenge sie selbst gebaut haben - dort waeren 300 Ausrufezeichen
+       Laerm, kein Schutz. */
+    "noUncheckedIndexedAccess": false
+  },
+  /* ⛔⛔ GEMESSEN AM 14.09.2026, UND ES WAR EIN LOCH VON ANFANG AN:
+     `exclude` wird ueber `extends` MITGEERBT — und tsconfig.app.json schliesst
+     genau die Testdateien aus. Der Ausschluss der Eltern hat das `include` hier
+     wieder aufgehoben: `tsc -p tsconfig.test.json --listFiles` zog **KEINE
+     einzige Testdatei** ein. Damit war jedes "tsc ohne Befund" eine Aussage
+     ueber den App-Code allein; ein unbeendeter String in einer Testdatei lief
+     durch alle vier Aufrufarten gruen durch.
+     ►► Das leere `exclude` hebt die Erbschaft auf. Nachgewiesen: danach meldet
+        tsc den kaputten String. */
+  "exclude": [],
+  "include": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/pruefstand.ts", "src/fremd.d.ts", "src/testhilfe/*.ts"]
+}

@@ -1,0 +1,17 @@
+# Hand-Pins gegen die Pins von semgrep (uv `--override`, gelesen von tools/semgrep/erzeugen.sh).
+# Ein Override ERSETZT jede Anforderung an das Paket im ganzen Baum - auch semgreps eigene. Darum installiert die CI
+# mit `--require-hashes --no-deps` (pip wuerde sonst semgreps Pins nachziehen bzw. ablehnen).
+# Beim Heben von semgrep pruefen, ob ein Pin noch noetig ist (`requires_dist` auf PyPI); wenn nicht: Zeile streichen.
+# Stand 25.11.2026: semgrep 1.187.0 pinnt weiter mcp==1.29.0, opentelemetry ~=1.37.0, wcmatch ~=8.3 (PyPI gemessen).
+
+# mcp 1.29.0: CVE-2026-59951, Fix 1.30.0 (BUILD_LOG 18.10.2026).
+mcp==1.30.0
+# opentelemetry ~=1.37 / wcmatch ~=8.3: Dependabot-Alarme, gehoben 23.11.2026 (BUILD_LOG 233, CI semgrep gruen auf PR #31).
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2
+opentelemetry-exporter-otlp-proto-http==1.45.2
+opentelemetry-instrumentation-requests==0.66b2
+opentelemetry-instrumentation-threading==0.66b2
+wcmatch==12.0.4
+# certifi: Dependabot-Alarm kritisch (Fix >= 2026.10.18), 23.11.2026 auf 2026.11.20; semgrep 1.187.0 verlangt selbst >= 2026.10.19.
+certifi>=2026.11.20

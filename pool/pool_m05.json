@@ -1,0 +1,2196 @@
+[
+  {
+    "id": "M05-001",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 1,
+    "frage": "Erkläre den Begriff: PDCA-Zyklus",
+    "musterloesung": "Der PDCA-Zyklus (Plan-Do-Check-Act) ist das Kernmodell des Qualitätsmanagements und läuft kontinuierlich und iterativ ab. Plan: Ist-Zustand analysieren, Ziel setzen, Maßnahmen planen. Do: Maßnahmen umsetzen und durchführen. Check: Ergebnisse messen und mit Ziel vergleichen. Act: Erkenntnisse nutzen, Maßnahmen anpassen und standardisieren. Nach einem Zyklus folgt sofort ein neuer Zyklus, wodurch sich die Qualität spiralförmig verbessert.",
+    "erklaerungKurz": "Der PDCA-Zyklus ist ein iteratives Modell des Qualitätsmanagements mit den vier Phasen Plan, Do, Check und Act. Der Zyklus läuft kontinuierlich ab und führt zu spiralförmiger Verbesserung.",
+    "erklaerungLang": "Der PDCA-Zyklus (Plan-Do-Check-Act, auch Deming-Kreis genannt) ist das Kernmodell des Qualitätsmanagements und besteht aus vier Phasen.\n• Plan: Der Ist-Zustand wird analysiert und ein messbares Ziel festgelegt.\n• Do: Die geplanten Maßnahmen werden umgesetzt.\n• Check: Die Ergebnisse werden gemessen und mit dem Ziel verglichen.\n• Act: Die Erkenntnisse werden genutzt, um Maßnahmen anzupassen und zu standardisieren.\n• Das Besondere ist der iterative, kontinuierliche Charakter: Nach Act folgt wieder Plan.\nMerke: Dadurch verbessert sich die Qualität spiralförmig – der Zyklus endet nie.",
+    "verweis": "Modul 05, Abschnitt 5.2",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "PDCA-Zyklus",
+          "PDCA",
+          "Plan Do Check Act"
+        ],
+        [
+          "Ist-Zustand",
+          "Ist Analyse",
+          "Ist-Analyse",
+          "Ausgangslage"
+        ],
+        [
+          "iterativ",
+          "wiederholt",
+          "immer wieder",
+          "kontinuierlich",
+          "fortlaufend"
+        ]
+      ],
+      "kuer": [
+        "Massnahmen planen",
+        "Qualitaetsmanagement",
+        "standardisieren",
+        "umsetzen"
+      ]
+    }
+  },
+  {
+    "id": "M05-002",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "paare": [
+      [
+        "Plan",
+        "Ziel festlegen, Ist-Zustand analysieren, Maßnahmen planen"
+      ],
+      [
+        "Do",
+        "Checkliste einführen, Techniker schulen, Maßnahmen umsetzen"
+      ],
+      [
+        "Check",
+        "Fehlerquote messen, Ergebnisse prüfen, mit Ziel vergleichen"
+      ],
+      [
+        "Act",
+        "Prozess standardisieren, Checkliste ergänzen, nächsten Zyklus starten"
+      ]
+    ],
+    "erklaerungKurz": "Die vier PDCA-Phasen stehen jeweils für spezifische Aktivitäten im Qualitätsmanagementprozess. Plan definiert Ziele, Do setzt um, Check misst, Act optimiert.",
+    "erklaerungLang": "Die Zuordnung der PDCA-Phasen zu Aktivitäten zeigt den praktischen Ablauf von Qualitätsmaßnahmen.\n• Plan: Ist-Zustand, Ziele und Maßnahmen definieren – z.B. Fehlerquote 5%, Ziel 2%, Maßnahme Checkliste.\n• Do: Umsetzung durch Schulung und praktische Durchführung.\n• Check: quantitative Messung – Fehlerquote nach 1 Monat: 3,5%.\n• Act: aus den Erkenntnissen Anpassungen ableiten und den Prozess standardisieren.\nMerke: Jede Phase hat ihre eigene Art von Aktivität – planen, tun, messen, verankern.",
+    "verweis": "Modul 05, Abschnitt 5.2, Tabelle PDCA-Zyklus",
+    "frage": "Ordnen Sie die PDCA-Phasen den passenden Aktivitäten zu."
+  },
+  {
+    "id": "M05-003",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "paare": [
+      [
+        "Qualitätsmanagementsystem (QM)",
+        "Ganzes System aus Planung, Umsetzung, Überprüfung und kontinuierlicher Verbesserung"
+      ],
+      [
+        "Qualitätssicherung (QS)",
+        "Teil des QM; Fokus auf Prüfen, Messen und Dokumentieren (z.B. Testprotokolle)"
+      ],
+      [
+        "Kontinuierlicher Verbesserungsprozess (KVP)",
+        "Systematischer Prozess, bei dem Mitarbeiter regelmäßig kleine, nachhaltige Verbesserungen einbringen"
+      ],
+      [
+        "Zertifizierung",
+        "Externe Bestätigung durch akkreditierte Stelle, dass Unternehmen ISO 9001 erfüllt"
+      ]
+    ],
+    "extra": [
+      "Internationale Norm, die die Anforderungen an ein QM-System beschreibt"
+    ],
+    "erklaerungKurz": "QM ist der Rahmen, QS ist ein Werkzeug innerhalb dieses Rahmens. KVP beschreibt die Kultur der Verbesserung, Zertifizierung ist der externe Nachweis.",
+    "erklaerungLang": "Die vier QM-Begriffe unterscheiden sich in ihrer Reichweite – vom Gesamtsystem bis zur einzelnen Prüftätigkeit.\n• Qualitätsmanagementsystem (QM = Qualitätsmanagement): die organisierte Gesamtheit aller Prozesse und Richtlinien.\n• Qualitätssicherung (QS): ein Werkzeug innerhalb des QM; sie konzentriert sich auf konkrete Prüftätigkeiten wie Testprotokolle.\n• Kontinuierlicher Verbesserungsprozess (KVP): die Haltung, dass kleine, regelmäßige Verbesserungen zu großen Effekten führen.\n• Zertifizierung: die formale externe Bestätigung, dass ein Unternehmen die Anforderungen der ISO 9001 erfüllt (ISO = International Organization for Standardization).\nMerke: QM ist das System, QS ein Teil davon, KVP die Haltung, Zertifizierung der Nachweis nach außen.",
+    "verweis": "Modul 05, Abschnitte 5.1 und 5.2",
+    "frage": "Ordnen Sie die QM-Begriffe der passenden Definition zu."
+  },
+  {
+    "id": "M05-004",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "optionen": [
+      "ISO 9001 ist zertifizierbar und legt verbindliche Anforderungen an Qualitätsmanagementsysteme fest. Eine Zertifizierung ist 3 Jahre gültig und wird durch jährliche Überwachungsaudits überwacht.",
+      "ISO 9000 legt die verbindlichen Anforderungen an ein Qualitätsmanagementsystem fest und ist die zertifizierbare Norm der Reihe. Ein erteiltes Zertifikat ist fünf Jahre gültig; Zwischenprüfungen entfallen in dieser Zeit.",
+      "ISO 9001 und ISO 9000 sind lediglich zwei Bezeichnungen für dieselbe Norm. Beide sind zertifizierbar, das Zertifikat gilt zwei Jahre und wird danach ohne erneute Prüfung automatisch verlängert.",
+      "ISO 9001 ist nicht zertifizierbar, sondern beschreibt nur Grundbegriffe und Grundsätze des Qualitätsmanagements. Wer ein Zertifikat erwerben möchte, lässt sich stattdessen nach ISO 9000 prüfen."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: ISO 9000 ist nur eine Orientierungshilfe und nicht zertifizierbar. ISO 9001 ist zertifizierbar. Die Gültigkeitsdauer beträgt 3 Jahre, nicht 5 Jahre.",
+      "Falsch: ISO 9000 und ISO 9001 haben unterschiedliche Zwecke. ISO 9000 sind Grundlagen und Begriffe, ISO 9001 sind verbindliche Anforderungen. Die Gültigkeitsdauer ist 3 Jahre.",
+      "Falsch: ISO 9001 ist ausdrücklich zertifizierbar. Das ist der Kernunterschied zu ISO 9000, das nur Orientierungshilfe ist."
+    ],
+    "erklaerungKurz": "ISO 9001 ist das zertifizierbare Regelwerk für Qualitätsmanagementsysteme mit einer Gültigkeitsdauer von 3 Jahren. ISO 9000 hingegen sind nur Grundlagen und Begriffe.",
+    "erklaerungLang": "ISO 9000 erklärt die Begriffe, ISO 9001 stellt die Anforderungen – und nur sie ist zertifizierbar.\n• ISO 9000 definiert Grundbegriffe des Qualitätsmanagements und dient als Orientierungshilfe (ISO = International Organization for Standardization, internationale Normungsorganisation).\n• ISO 9001 legt dagegen verbindliche Anforderungen fest, nach denen sich Unternehmen zertifizieren lassen können.\n• Eine ISO 9001-Zertifizierung ist i.d.R. 3 Jahre gültig.\n• Sie wird durch jährliche Überwachungsaudits einer akkreditierten Zertifizierungsstelle überwacht.\nMerke: Das schafft für Kunden Vertrauen und ist oft eine Geschäftsbedingung bei großen Auftraggebern.",
+    "verweis": "Modul 05, Abschnitt 5.1",
+    "frage": "Welche Aussage zu den Normen ISO 9000 und ISO 9001 ist korrekt?"
+  },
+  {
+    "id": "M05-005",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "freitext",
+    "schwierigkeit": 3,
+    "frage": "Die Großkreutz Gebäudetechnik GmbH richtet 12 neue Arbeitsplätze ein. Nennen Sie 5 sinnvolle Prüfpunkte für ein Testprotokoll zur Abnahme der Arbeitsplätze.",
+    "musterloesung": "1. Systemstart (Boot): Rechner startet, Windows lädt, Desktop erreichbar. 2. Netzwerkanmeldung/Domänenanmeldung: Anmeldung an Active Directory erfolgreich, Benutzerprofile geladen. 3. Peripherie: Monitor, Drucker, USB-Geräte werden erkannt und funktionieren. 4. Software-Installation/Lizenzierung: Notwendige Software (z.B. Microsoft 365) ist installiert und lizenziert. 5. Benutzerordner/Berechtigungen: Persönliche Ordner auf Dateiserver sind erreichbar, Zugriff ist korrekt konfiguriert.",
+    "erklaerungKurz": "Ein Testprotokoll dokumentiert systematisch, dass alle erforderlichen Prüfpunkte durchgeführt wurden. Die 5 genannten Punkte decken Boot, Netzwerk, Peripherie, Software und Berechtigungen ab.",
+    "erklaerungLang": "Testprotokolle sind Werkzeuge der Qualitätssicherung und dokumentieren die Abnahme neuer Arbeitsplätze.\n• Zuerst wird der Systemstart überprüft – die technische Grundlage.\n• Dann die Netzwerkintegration – die Verbindung zur Infrastruktur.\n• Dann die Peripherie – die Bedienbarkeit.\n• Dann die notwendige Software – die Arbeitsfähigkeit.\n• Abschließend die Berechtigungen – Sicherheit und Datenschutz.\n• Jeder Punkt wird mit Ergebnis (OK/Fehler) und ggf. Bemerkungen dokumentiert.\nMerke: Die Prüfpunkte folgen einer logischen Reihenfolge und ermöglichen Nachvollziehbarkeit, Fehlerverfolgung und Audit-Sicherheit.",
+    "verweis": "Modul 05, Abschnitt 5.2, Beispiel Testprotokoll Büroarbeitsplatz",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Netzwerkanmeldung",
+          "Domänenanmeldung",
+          "Netzwerk",
+          "Active Directory"
+        ],
+        [
+          "Software",
+          "Softwareinstallation",
+          "Lizenzierung"
+        ],
+        [
+          "Peripherie",
+          "Drucker",
+          "USB-Geräte"
+        ]
+      ],
+      "kuer": [
+        "Systemstart",
+        "Berechtigungen",
+        "Benutzerprofile",
+        "Dateiserver"
+      ]
+    }
+  },
+  {
+    "id": "M05-006",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Der PDCA-Zyklus ist ein iteratives Modell des Qualitätsmanagements. ___ ist die Phase, in der der Ist-Zustand analysiert und Ziele festgelegt werden. ___ ist die Umsetzungsphase. ___ ist die Messphase, in der Ergebnisse mit Zielen verglichen werden. ___ ist die Optimierungsphase, in der aus Erkenntnissen Maßnahmen abgeleitet und standardisiert werden.",
+    "luecken": [
+      {
+        "optionen": [
+          "Do",
+          "Plan",
+          "Check",
+          "Act",
+          "Measure",
+          "Improve"
+        ],
+        "loesung": 1
+      },
+      {
+        "optionen": [
+          "Check",
+          "Act",
+          "Do",
+          "Plan",
+          "Measure",
+          "Improve"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "Act",
+          "Plan",
+          "Check",
+          "Do",
+          "Measure",
+          "Improve"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "Act",
+          "Plan",
+          "Do",
+          "Check",
+          "Measure",
+          "Improve"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "Der Lückentext verdeutlicht die Reihenfolge und Bedeutung der vier PDCA-Phasen in der praktischen Anwendung von Qualitätsmanagementsystemen.",
+    "erklaerungLang": "Die vier Phasen des PDCA-Zyklus folgen einer logischen Abfolge.\n• Plan beschreibt die Vorbereitungsphase mit der Zielformulierung.\n• Do ist die Umsetzungsphase, in der geplante Maßnahmen durchgeführt werden.\n• Check ist die Kontrollphase, in der Messungen und Prüfungen durchgeführt werden.\n• Act ist die Handlungsphase, in der Verbesserungen abgeleitet und langfristig verankert werden.\nMerke: Der Zyklus ist kontinuierlich – nach Act folgt sofort wieder Plan für den nächsten Verbesserungszyklus.",
+    "verweis": "Modul 05, Abschnitt 5.2"
+  },
+  {
+    "id": "M05-007",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Die DIN EN ___ definiert Grundbegriffe und Orientierungshilfen für Qualitätsmanagement, während die DIN EN ___ verbindliche Anforderungen für den Aufbau eines Qualitätsmanagementsystems festlegt. Nur die ___ ist zertifizierbar. Eine Zertifizierung nach dieser Norm ist i.d.R. ___ Jahre gültig und wird durch jährliche ___ eines unabhängigen Auditors überwacht.",
+    "luecken": [
+      {
+        "optionen": [
+          "ISO 9001",
+          "ISO 9000",
+          "ISO 14001",
+          "ISO 27001"
+        ],
+        "loesung": 1
+      },
+      {
+        "optionen": [
+          "ISO 9000",
+          "ISO 20000",
+          "ISO 9001",
+          "ISO 27001"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "ISO 9004",
+          "ISO 9000",
+          "ISO 19011",
+          "ISO 9001"
+        ],
+        "loesung": 3
+      },
+      {
+        "optionen": [
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "Zertifizierungsaudits",
+          "Überwachungsaudits",
+          "Selbstbewertungen",
+          "Managementreviews"
+        ],
+        "loesung": 1
+      }
+    ],
+    "erklaerungKurz": "Dieser Lückentext unterscheidet ISO 9000 (Orientierungshilfe) von ISO 9001 (verbindliches, zertifizierbares Regelwerk) und dokumentiert die 3-jährige Gültigkeitsdauer mit jährlichen Kontrollen.",
+    "erklaerungLang": "Die Unterscheidung zwischen ISO 9000 und ISO 9001 ist fundamental: ISO 9000 sind Grundlagen und Begriffe des Qualitätsmanagements, ISO 9001 sind verbindliche Anforderungen.\n• Nur die ISO 9001 ist zertifizierbar (DIN = Deutsches Institut für Normung; EN = Europäische Norm; ISO = International Organization for Standardization).\n• Eine Zertifizierung ist i.d.R. 3 Jahre gültig.\n• In dieser Zeit führt die akkreditierte Zertifizierungsstelle jährlich Überwachungsaudits durch.\n• So wird sichergestellt, dass das Unternehmen die Anforderungen dauerhaft erfüllt.\nMerke: Damit ist die kontinuierliche Einhaltung der Standards sowohl für Kunden als auch intern gewährleistet.",
+    "verweis": "Modul 05, Abschnitt 5.1"
+  },
+  {
+    "id": "M05-008",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "optionen": [
+      "Zertifizierung ist ein formales Verfahren, bei dem eine akkreditierte externe Stelle prüft, ob ein Unternehmen die Anforderungen von ISO 9001 erfüllt. Das Zertifikat wird bei Bestehen für 3 Jahre vergeben und danach jährlich durch Überwachungsaudits überprüft.",
+      "Zertifizierung ist ein interner Prozess, bei dem das Unternehmen in Eigenregie überprüft, ob die Anforderungen der ISO 9000 erfüllt sind, und sich das Ergebnis anschließend selbst bescheinigt. Ein so erteiltes Zertifikat ist mehrere Jahre gültig und wird danach erneuert.",
+      "Eine Zertifizierung muss jedes Jahr vollständig neu beantragt werden und wird vom Unternehmen selbst durchgeführt. Externe Auditoren sind daran nicht beteiligt; es genügt, die eigenen Prüfergebnisse bei der zuständigen Kammer einzureichen.",
+      "Zertifizierung ist eine einmalige Überprüfung durch eine externe Stelle. Ist das Zertifikat erst einmal erteilt, sind Überwachungsaudits nur bei Beanstandungen notwendig; es bleibt ansonsten fünf Jahre ohne weitere Nachweise bestehen."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Zertifizierung erfolgt durch eine externe akkreditierte Stelle, nicht durch Selbstbescheinigung.",
+      "Falsch: Zertifizierung ist formal und erfordert externe Auditoren. Das Zertifikat ist 3 Jahre gültig und wird nicht jedes Jahr neu beantragt, sondern durch Überwachungsaudits überprüft.",
+      "Überwachungsaudits finden jährlich statt und das Zertifikat gilt 3 Jahre."
+    ],
+    "erklaerungKurz": "Zertifizierung nach ISO 9001 ist ein formales Verfahren durch externe, akkreditierte Stellen. Das Zertifikat ist 3 Jahre gültig und wird durch jährliche Überwachungsaudits bestätigt.",
+    "erklaerungLang": "Die Zertifizierung erteilt ein externer, akkreditierter Auditor; das Zertifikat gilt 3 Jahre.\n• Der Auditor prüft objektiv, ob das Unternehmen alle Anforderungen von ISO 9001 erfüllt (ISO = International Organization for Standardization).\n• Bei erfolgreichem Audit erhält das Unternehmen ein Zertifikat, das für 3 Jahre gültig ist.\n• Während dieser Zeit führt die Zertifizierungsstelle jährlich Überwachungsaudits durch.\n• Das ist nicht nur für Kunden ein Vertrauenssignal, sondern auch eine Geschäftsanforderung bei vielen großen Auftraggebern.\nMerke: Zertifizierung ist ein formales Qualitätsmerkmal, das Vertrauen schafft.",
+    "verweis": "Modul 05, Abschnitt 5.1, Zertifizierung",
+    "frage": "Welche Aussage zur ISO-9001-Zertifizierung ist korrekt?"
+  },
+  {
+    "id": "M05-009",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "bild",
+    "unterTyp": "mc",
+    "schwierigkeit": 2,
+    "svg": "<svg viewBox='0 0 700 300' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif'><text x='350' y='28' text-anchor='middle' font-size='17' font-weight='bold' fill='#22293a'>PDCA-Zyklus (Deming-Kreis)</text><rect x='280' y='45' width='140' height='50' rx='10' fill='#e8f0fe' stroke='#2A4B8D' stroke-width='2'/><text x='350' y='75' text-anchor='middle' font-size='16' font-weight='bold' fill='#22293a'>PLAN</text><rect x='500' y='125' width='140' height='50' rx='10' fill='#FFE066' stroke='#e08a00' stroke-width='3'/><text x='570' y='157' text-anchor='middle' font-size='22' font-weight='bold' fill='#22293a'>?</text><rect x='280' y='205' width='140' height='50' rx='10' fill='#e8f0fe' stroke='#2A4B8D' stroke-width='2'/><text x='350' y='235' text-anchor='middle' font-size='16' font-weight='bold' fill='#22293a'>CHECK</text><rect x='60' y='125' width='140' height='50' rx='10' fill='#e8f0fe' stroke='#2A4B8D' stroke-width='2'/><text x='130' y='157' text-anchor='middle' font-size='16' font-weight='bold' fill='#22293a'>ACT</text><path d='M 425 80 Q 545 90 565 120' fill='none' stroke='#2A4B8D' stroke-width='2.5'/><polygon points='565,120 553,113 561,107' fill='#2A4B8D'/><path d='M 565 180 Q 545 215 425 235' fill='none' stroke='#2A4B8D' stroke-width='2.5'/><polygon points='425,235 436,228 438,239' fill='#2A4B8D'/><path d='M 275 235 Q 155 215 135 180' fill='none' stroke='#2A4B8D' stroke-width='2.5'/><polygon points='135,180 132,193 143,188' fill='#2A4B8D'/><path d='M 135 120 Q 155 90 275 68' fill='none' stroke='#2A4B8D' stroke-width='2.5'/><polygon points='275,68 264,76 262,64' fill='#2A4B8D'/><text x='350' y='285' text-anchor='middle' font-size='12' fill='#555'>Ablaufrichtung: im Uhrzeigersinn, beginnend bei PLAN</text></svg>",
+    "frage": "Das Schaubild zeigt den PDCA-Zyklus (Ablauf im Uhrzeigersinn, Start bei PLAN). Welche Phase gehört an die mit '?' markierte Stelle?",
+    "optionen": [
+      "Check",
+      "Do",
+      "Act",
+      "Plan"
+    ],
+    "loesungIndex": 1,
+    "distraktorErklaerungen": [
+      "Falsch: Check kommt nach Do, nicht an dieser Stelle im Kreis.",
+      "",
+      "Falsch: Act kommt nach Check, nicht an dieser Stelle.",
+      "Falsch: Plan ist der Anfang des Zyklus und kommt nicht an dieser Stelle."
+    ],
+    "erklaerungKurz": "Im PDCA-Zyklus folgt nach Plan die Do-Phase. Die mit '?' markierte Stelle gehört zu Do (Umsetzung der geplanten Maßnahmen).",
+    "erklaerungLang": "An der markierten Stelle steht die Do-Phase, weil sie logisch nach Plan und vor Check liegt.\n• Der PDCA-Zyklus folgt der Reihenfolge: Plan → Do → Check → Act → Plan (wiederholt).\n• Die mit '?' markierte Stelle in der Abbildung liegt zwischen Plan und Check – dort gehört die Do-Phase hin.\n• In der Do-Phase werden die im Plan festgelegten Maßnahmen konkret umgesetzt.\n• Beispiele: Checkliste einführen, Schulung durchführen, erste Durchläufe mit der neuen Arbeitsweise.\nMerke: Do ist die Phase des Machens – geplant wurde vorher, gemessen wird nachher.",
+    "verweis": "Modul 05, Abschnitt 5.2, PDCA-Zyklus"
+  },
+  {
+    "id": "M05-010",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "optionen": [
+      "KVP (Kontinuierlicher Verbesserungsprozess) ist ein systematischer Prozess, bei dem Mitarbeiter regelmäßig kleine, nachhaltige Verbesserungen einbringen. Im IT-Kontext könnte dies z.B. die regelmäßige Optimierung von Ticketing-Systemen oder die Automatisierung wiederkehrender Wartungsaufgaben sein.",
+      "KVP ist ein Verfahren der Jahresplanung, das von der Geschäftsleitung durchgeführt wird. Die Verbesserungsziele werden einmal im Jahr festgelegt und von oben nach unten vorgegeben; Vorschläge der Mitarbeiter aus dem Tagesgeschäft fließen erst in die Planung des Folgejahres ein und werden dort gesammelt bewertet.",
+      "KVP bezieht sich auf Kosteneinsparungen: In jedem Bereich wird jährlich ein fester Prozentsatz der Ausgaben gestrichen. Die Qualität der Arbeitsergebnisse wird nur am Rande berücksichtigt.",
+      "KVP ist ein Qualitätskontrollverfahren, das ausschließlich nach Fehlern sucht. Die gefundenen Fehler werden in einer Liste erfasst und an die zuständige Fachabteilung gemeldet; Maßnahmen zur Verbesserung werden daraus jedoch nicht abgeleitet."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "KVP lebt von laufenden Verbesserungen durch die Mitarbeiter, nicht von jährlicher Top-down-Planung.",
+      "KVP zielt auf Qualität und Prozesse, nicht auf pauschale Kürzungen.",
+      "Falsch: KVP ist nicht passiv (nur Fehlersuche), sondern aktiv: Es leitet konkrete Verbesserungen ein und verankert diese als Standard."
+    ],
+    "erklaerungKurz": "KVP ist ein systematischer Prozess kontinuierlicher, kleiner Verbesserungen durch Mitarbeiterbeteiligung. Es verkörpert die Philosophie, dass Verbesserung nicht einmalig, sondern dauerhaft ist.",
+    "erklaerungLang": "Der Kontinuierliche Verbesserungsprozess (KVP, auch Kaizen) setzt auf viele kleine, regelmäßige Schritte statt auf einen großen Umbau.\n• Er ist ein Kerngedanke moderner Qualitätsmanagementsysteme.\n• Im Gegensatz zu großen, einmaligen Umstrukturierungen lebt er von der Mitarbeiterbeteiligung.\n• In IT-Kontexten zeigt sich das z.B. in regelmäßigen Optimierungen von Ticketing-Prozessen, der Automatisierung repetitiver Aufgaben oder verbesserter Dokumentation (IT = Informationstechnik).\n• KVP ist fest in den PDCA-Zyklus integriert: Auf jede Act-Phase folgt eine neue Plan-Phase.\nMerke: Der Verbesserungsprozess läuft dadurch spiralförmig weiter – klein, regelmäßig, von den Mitarbeitern getragen.",
+    "verweis": "Modul 05, Abschnitt 5.2 – KVP",
+    "frage": "Welche Aussage zum Kontinuierlichen Verbesserungsprozess (KVP) ist korrekt?"
+  },
+  {
+    "id": "M05-011",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "optionen": [
+      "Qualitätssicherung (QS) ist Teil des Qualitätsmanagementsystems (QM) und konzentriert sich auf konkrete Prüf-, Mess- und Dokumentationstätigkeiten wie Testprotokolle. Das QM ist das gesamte System aus Planung, Umsetzung, Überprüfung und kontinuierlicher Verbesserung.",
+      "Qualitätssicherung (QS) und Qualitätsmanagementsystem (QM) bezeichnen dasselbe und werden in der Praxis synonym verwendet. Beide meinen die Gesamtheit aller Prüf- und Steuerungstätigkeiten; eine Über- oder Unterordnung der beiden Begriffe gibt es nicht, weshalb auch die Normen sie austauschbar benutzen.",
+      "Ein Qualitätsmanagementsystem (QM) ist nur für große Unternehmen ab etwa 250 Beschäftigten relevant, weil es umfangreiche Dokumentation erfordert. Kleinen Betrieben genügt die Qualitätssicherung (QS) mit gelegentlichen Stichproben am fertigen Arbeitsplatz.",
+      "Die Qualitätssicherung (QS) beschreibt die übergeordnete Unternehmensstrategie für Qualität, während das Qualitätsmanagementsystem (QM) die konkreten Prüf- und Messtätigkeiten am fertigen Produkt umfasst."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: QS und QM sind nicht identisch. QS ist ein Werkzeug, QM ist der gesamte Rahmen. QM ist umfassender als QS.",
+      "Falsch: Die Größe des Unternehmens ändert nichts an der konzeptionellen Unterscheidung. Beide, QS und QM, sind für Unternehmen jeder Größe relevant.",
+      "Die Rollen sind vertauscht; QS ist Teil des QM."
+    ],
+    "erklaerungKurz": "QM ist der strategische Rahmen eines Unternehmens für Qualität. QS ist ein Werkzeug innerhalb dieses Rahmens für konkrete Prüf- und Dokumentationstätigkeiten.",
+    "erklaerungLang": "QM ist die Strategie, QS ist die Praxis – QS ist ein Bestandteil von QM.\n• Das Qualitätsmanagementsystem (QM) ist die organisierte Gesamtheit aller Prozesse, Richtlinien und Verfahren zur Sicherung und kontinuierlichen Verbesserung von Qualität.\n• Die Qualitätssicherung (QS) ist ein Bestandteil dieses Systems.\n• QS konzentriert sich auf die praktischen Prüftätigkeiten: Testprotokolle erstellen und überprüfen, Messungen durchführen, Ergebnisse dokumentieren.\nMerke: Die zentrale Faustregel lautet: QM ist die Strategie, QS ist die Praxis.",
+    "verweis": "Modul 05, Abschnitt 5.1, Abgrenzung QS und QM",
+    "frage": "Welche Aussage zum Verhältnis von Qualitätsmanagement (QM) und Qualitätssicherung (QS) ist korrekt?"
+  },
+  {
+    "id": "M05-012",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 1,
+    "optionen": [
+      "Ein Testprotokoll dokumentiert, dass alle erforderlichen Prüfpunkte durchgeführt wurden, ermöglicht Nachvollziehbarkeit bei Fehlern oder Reklamationen und dient als Grundlage für interne oder externe Audits.",
+      "Ein Testprotokoll ist eine Arbeitshilfe mit geringer rechtlicher Bedeutung. Es dient dem Techniker während der Einrichtung als Gedächtnisstütze und wird nach Abschluss der Arbeiten nicht mehr benötigt.",
+      "Ein Testprotokoll ist nur für Unternehmen erforderlich, die nach ISO 9001 zertifiziert sind. Betriebe ohne Zertifikat geben ihre Prüfergebnisse formlos und mündlich an den Kunden weiter.",
+      "Ein Testprotokoll dient allein der Archivierung und wird angelegt, um gesetzliche Aufbewahrungsfristen zu erfüllen. Für die laufende Qualitätssicherung wird es nicht ausgewertet und hat dort keine praktische Bedeutung."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Das Protokoll dient als Nachweis bei Reklamationen und Audits.",
+      "Nachvollziehbarkeit durch Dokumentation ist unabhängig von einer Zertifizierung sinnvoll.",
+      "Falsch: Testprotokolle haben eine zentrale praktische Bedeutung: Sie dokumentieren Qualität, ermöglichen Fehlerverfolgung und unterstützen die Einhaltung von Standards."
+    ],
+    "erklaerungKurz": "Testprotokolle sind formale Dokumente der Qualitätssicherung, die Prüfergebnisse dokumentieren, Nachvollziehbarkeit ermöglichen und als Audit-Grundlage dienen.",
+    "erklaerungLang": "Ein Testprotokoll dokumentiert systematisch, dass alle erforderlichen Prüfpunkte durchgeführt wurden.\n• Beispiel Arbeitsplatzeinrichtung: Boot, Netzwerk, Peripherie, Software, Berechtigungen.\n• Nachvollziehbarkeit: Treten später Fehler auf, lässt sich überprüfen, welche Tests durchgeführt wurden.\n• Beweismittel: Es dient als Nachweis bei Reklamationen oder Garantiefällen.\n• Audit-Dokumentation: Bei internen oder externen Audits weist es die Einhaltung von Qualitätsstandards nach.\nMerke: Deshalb werden Testprotokolle langfristig archiviert – sie sind ein zentrales Werkzeug der praktischen Qualitätssicherung.",
+    "verweis": "Modul 05, Abschnitt 5.2, Testprotokoll",
+    "frage": "Welche Aussage beschreibt den Zweck eines Testprotokolls korrekt?"
+  },
+  {
+    "id": "M05-013",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 1,
+    "frage": "Ordnen Sie jede Ausgabe der passenden Art von Qualitätskosten zu.",
+    "paare": [
+      [
+        "Schulung der Techniker vor Einführung eines neuen Verfahrens",
+        "Fehlerverhütungskosten"
+      ],
+      [
+        "Endkontrolle jedes Arbeitsplatzes vor der Übergabe",
+        "Prüfkosten"
+      ],
+      [
+        "Nacharbeit an einem Gerät, dessen Fehler im Haus entdeckt wurde",
+        "Interne Fehlerkosten"
+      ],
+      [
+        "Technikereinsatz beim Kunden wegen einer Reklamation",
+        "Externe Fehlerkosten"
+      ]
+    ],
+    "extra": [
+      "Vertriebskosten"
+    ],
+    "erklaerungKurz": "Entscheidend ist der Zeitpunkt: vor der Entstehung (Fehlerverhütung), beim Prüfen (Prüfkosten), nach Entdeckung im Haus (interne Fehlerkosten) oder erst beim Kunden (externe Fehlerkosten).",
+    "erklaerungLang": "Qualitätskosten werden danach eingeteilt, wann im Ablauf sie anfallen.\n• Fehlerverhütungskosten entstehen, bevor überhaupt etwas schiefgehen kann: Schulung, Prüfpläne, Standardisierung, Wartung.\n• Prüfkosten entstehen beim Suchen nach Fehlern: Eingangskontrolle, Endkontrolle, Messmittel und die dafür aufgewendete Arbeitszeit.\n• Interne Fehlerkosten entstehen, wenn ein Fehler noch im eigenen Haus gefunden wird: Nacharbeit, Ausschuss, erneute Prüfung.\n• Externe Fehlerkosten entstehen, wenn der Fehler erst beim Kunden auffällt: Anfahrt, Ersatzteile, Gewährleistung, Ausfallzeiten – und der schwer bezifferbare Ansehensverlust.\n• Die Faustregel dahinter ist die Zehnerregel: Mit jeder Stufe, die ein Fehler unentdeckt weiterwandert, verzehnfachen sich die Kosten seiner Behebung.\nMerke: Vorbeugen ist billiger als prüfen, prüfen ist billiger als nachbessern.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Qualitätskosten"
+  },
+  {
+    "id": "M05-014",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 1,
+    "frage": "Was besagt die Zehnerregel der Fehlerkosten?",
+    "optionen": [
+      "Die Kosten der Fehlerbehebung verzehnfachen sich mit jeder Phase, in der der Fehler unentdeckt bleibt",
+      "Zehn Prozent aller auftretenden Fehler verursachen den größten Teil der gesamten Fehlerkosten eines Betriebs",
+      "Höchstens zehn Fehler je Auftrag gelten noch als vertretbar und müssen nicht dokumentiert werden",
+      "Die Fehlerkosten dürfen zehn Prozent des Auftragswerts nicht überschreiten, sonst ist er unrentabel"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Das ist sinngemäß das Pareto-Prinzip, das mit anderen Zahlen arbeitet und eine andere Aussage trifft.",
+      "Eine Obergrenze für tolerierte Fehler kennt die Regel nicht; dokumentiert wird ohnehin jeder Fehler.",
+      "Die Regel beschreibt die Entwicklung der Kosten über die Zeit, nicht eine Grenze zum Auftragswert."
+    ],
+    "erklaerungKurz": "Die Zehnerregel besagt: Je später ein Fehler entdeckt wird, desto teurer wird seine Behebung – mit jeder Phase etwa um den Faktor zehn.",
+    "erklaerungLang": "Die Zehnerregel (auch Rule of Ten) beschreibt, wie die Kosten eines Fehlers mit der Zeit wachsen.\n• In der Planungsphase kostet die Behebung fast nichts – es genügt, eine Zeile im Konzept zu ändern.\n• In der Entwicklung kostet derselbe Fehler etwa das Zehnfache, weil bereits Arbeit darauf aufgebaut hat.\n• Beim Test das Hundertfache, beim Kunden das Tausendfache – bei dieser Zählung mit vier Stufen (Planung, Entwicklung, Test, Kunde): Dann kommen Anfahrt, Ersatz, Gewährleistung und Ansehensverlust hinzu.\n• Beispiel: Ein Fehler, dessen Korrektur in der Anforderungsphase 100 EUR kostet, kostet in der Umsetzung rund 1.000 EUR.\n• Die praktische Folgerung ist der wirtschaftliche Grund für Qualitätsmanagement: Geld, das in Fehlerverhütung und frühe Prüfung fließt, ist besser angelegt als Geld für Nachbesserung.\nMerke: Der Faktor gilt je Phasenübergang – wie hoch die Endzahl ausfällt, hängt davon ab, wie viele Phasen man zählt.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Qualitätskosten und die 10er-Regel"
+  },
+  {
+    "id": "M05-101",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 1,
+    "frage": "Was ist unter dem Begriff 'Qualität' im Sinne des Qualitätsmanagements zu verstehen?",
+    "optionen": [
+      "Qualität bedeutet die Erfüllung von vorgegebenen Anforderungen und Kundenerwartungen. Ein günstiges Produkt ist nicht automatisch von geringerer Qualität, wenn es alle Anforderungen erfüllt.",
+      "Qualität ist gleichbedeutend mit einem hohen Preis und einer exklusiven Ausstattung. Hohe Qualität weisen vor allem teure Produkte auf; ein günstiges Produkt ist meist von geringerer Qualität.",
+      "Qualität beschreibt vor allem die Langlebigkeit und Haltbarkeit eines Produkts. Wie gut es die vorher vereinbarten Anforderungen erfüllt, spielt für die Bewertung nur eine untergeordnete Rolle.",
+      "Qualität ist ein rein subjektives Merkmal und hängt allein vom persönlichen Empfinden des Betrachters ab. Sie lässt sich deshalb weder an Anforderungen messen noch objektiv nachweisen."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Qualität bedeutet Anforderungserfüllung, nicht Preis.",
+      "Maßgeblich ist die Erfüllung der vereinbarten Anforderungen.",
+      "Falsch: Qualität ist durchaus objektiv messbar. Standards wie ISO 9001 basieren auf messbaren Kriterien und dokumentierten Anforderungen."
+    ],
+    "erklaerungKurz": "Qualität bedeutet Erfüllung von vorgegebenen Anforderungen und Erwartungen. Der Preis bestimmt nicht die Qualität, sondern die Übereinstimmung mit den Spezifikationen.",
+    "erklaerungLang": "Qualität ist der Grad, in dem ein Produkt oder eine Dienstleistung die vorgegebenen Anforderungen erfüllt.\n• Diese Definition ist unabhängig vom Preis.\n• Ein günstiger Artikel, der genau das leistet, was spezifiziert wurde, hat hohe Qualität.\n• Umgekehrt hat ein teures Produkt mit unerfüllten Anforderungen mangelnde Qualität.\n• Deshalb ist die Anforderungsdefinition (Plan-Phase des PDCA-Zyklus) so zentral.\nMerke: Nur wenn Anforderungen klar definiert sind, lässt sich Qualität objektiv bewerten.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Qualitätsbegriff"
+  },
+  {
+    "id": "M05-102",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Die Vennekamp Elektromotoren GmbH führt eine Checkliste zur Qualitätskontrolle in der Montage ein. Welche Aussage zu den Qualitätskosten ist korrekt?",
+    "optionen": [
+      "Qualitätskosten gliedern sich in Fehlerverhütungskosten (Prävention), Prüfkosten (Qualitätssicherung) und Fehlerkosten (Beseitigung von Fehlern). Die Investition in Prävention ist meist günstiger als die Behebung von Fehlern im Feld (etwa 1:10 Regel).",
+      "Fehlerkosten sind in der Praxis vernachlässigbar, weil bei ausreichender Fachkompetenz der Monteure keine Fehler entstehen. Eine gesonderte Prüfung ist deshalb unnötig und verursacht in der Montage nur zusätzliche Kosten.",
+      "Qualitätskosten bestehen im Wesentlichen aus Prüfkosten. Wer die Zahl der Prüfungen senkt, senkt damit unmittelbar die Qualitätskosten; Schulungen und die Behebung von Fehlern fallen kaum ins Gewicht.",
+      "Die Investition in Fehlerverhütung ist meist unwirtschaftlich, weil Schulungen und Prüfpläne sofort Geld kosten. Es ist günstiger, aufgetretene Fehler nachträglich beim Kunden zu reparieren, weil dann nur die tatsächlich fehlerhaften Geräte Aufwand verursachen."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Auch hochqualifizierte Teams erzeugen gelegentlich Fehler. Prävention (Checklisten, Schulung, Standards) senkt das Fehlerrisiko nachweislich.",
+      "Qualitätskosten umfassen Fehlerverhütungs-, Prüf- und Fehlerkosten.",
+      "Nach der 10er-Regel ist Fehlerbehebung im Feld deutlich teurer als Prävention."
+    ],
+    "erklaerungKurz": "Qualitätskosten setzen sich aus Fehlerverhütung (Prävention), Prüfung und Fehlerbehebung zusammen. Prävention ist wirtschaftlich vorteilhaft (10er-Regel).",
+    "erklaerungLang": "Das Qualitätskostenmodell in der Industrie teilt sich auf drei Säulen auf.\n• Fehlerverhütungskosten = Aufwendungen zur Vermeidung von Fehlern, z.B. Checklisten, Schulung, standardisierte Prozesse, Prüfmittel.\n• Prüfkosten = Kosten für Qualitätskontrolle und Tests.\n• Fehlerkosten = Kosten für die Behebung fehlerhafter Produkte oder Dienstleistungen.\n• Die 10er-Regel besagt: Ein Euro in Prävention spart etwa 10 Euro in Fehlerbehebung.\n• Das ist die ökonomische Grundlage für Investitionen in Qualitätsmanagementsysteme.\nMerke: Im Beispiel der Vennekamp Elektromotoren GmbH ist die Checkliste eine Fehlerverhütungsmaßnahme, die langfristig Geld spart.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Qualitätskosten und Kostensparen durch Prävention"
+  },
+  {
+    "id": "M05-103",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Welche Aussage zu den Unterschieden zwischen internen und externen Audits ist korrekt?",
+    "optionen": [
+      "Interne Audits werden von Mitarbeitern des Unternehmens durchgeführt und prüfen die Einhaltung interner Standards. Externe Audits werden von unabhängigen Dritten durchgeführt und dienen der Bestätigung von Konformität (z.B. ISO 9001). Externe Audits führen zu Zertifikaten.",
+      "Interne und externe Audits unterscheiden sich vor allem im Umfang: Beide werden von einer Zertifizierungsstelle durchgeführt, externe Audits prüfen lediglich mehr Prozesse.",
+      "Externe Audits sind für kleine Unternehmen nicht notwendig, weil interne Audits denselben Nachweis erbringen. Ein Kunde kann das Ergebnis der eigenen Prüfung genauso verwenden wie das Zertifikat einer akkreditierten Stelle.",
+      "Audits sind Kontrollmaßnahmen, die vor allem Abweichungen feststellen. Verbesserungsmaßnahmen entstehen daraus nur selten, weshalb Unternehmen sie meist nur durchführen, wenn ein Kunde oder eine Behörde darauf besteht; die Ergebnisse werden danach in der Regel nur noch abgelegt."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Interne Audits führen eigene Mitarbeiter durch, externe unabhängige Dritte.",
+      "Falsch: Externe Audits haben einen hohen Wert auch für kleine Unternehmen — sie bauen Kundenvertrauen auf und schaffen objektive Sicherheit.",
+      "Audits dienen gerade der Ableitung von Verbesserungsmaßnahmen."
+    ],
+    "erklaerungKurz": "Interne Audits sind Selbstbewertungen durch das Unternehmen; externe Audits sind unabhängige Prüfungen durch akkreditierte Stellen und führen zu Zertifikaten.",
+    "erklaerungLang": "Ein internes Audit führt das Unternehmen selbst durch, ein externes eine akkreditierte, unabhängige Stelle.\n• Das interne Audit übernehmen Mitarbeiter des Unternehmens oder speziell geschulte interne Auditoren.\n• Es dient der Überprüfung unternehmensinterner Standards und Prozesse sowie der Identifikation von Verbesserungsbereichen.\n• Das externe Audit führt eine akkreditierte, unabhängige Zertifizierungsstelle durch.\n• Es prüft objektiv, ob das Unternehmen die Anforderungen einer Norm erfüllt, z.B. der ISO 9001 (ISO = International Organization for Standardization). Bei Bestehen folgt die Zertifizierung.\n• Externe Audits werden i.d.R. jährlich wiederholt (Überwachungsaudits) und schaffen Vertrauen bei Kunden und Geschäftspartnern.\nMerke: Intern = Selbstprüfung zur Verbesserung, extern = unabhängige Prüfung für das Zertifikat.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Audits und externe Zertifizierung"
+  },
+  {
+    "id": "M05-104",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Welche Aussage unterscheidet korrekt Verifizierung und Validierung?",
+    "optionen": [
+      "Verifizierung prüft, ob ein Produkt oder Prozess den Spezifikationen entspricht ('Produkt richtig gebaut'). Validierung prüft, ob das richtige Produkt für den Zweck des Kunden gebaut wurde ('richtiges Produkt gebaut'). Beides ist notwendig für hohe Qualität.",
+      "Verifizierung und Validierung unterscheiden sich nur im Zeitpunkt: Die Verifizierung erfolgt vor, die Validierung nach der Auslieferung an den Kunden; beide beantworten aber dieselbe Frage, nämlich ob das gelieferte Produkt der vereinbarten technischen Spezifikation entspricht.",
+      "Validierung ist nur in der Softwareentwicklung relevant, weil dort der Kundennutzen schwer messbar ist. Bei der Einrichtung von Hardware genügt die Verifizierung, da sich Geräte vollständig anhand ihres Datenblatts beurteilen lassen.",
+      "Validierung ist so aufwendig und teuer, dass sie in der Praxis meist entfällt. Üblich ist die Verifizierung, weil sich die Zufriedenheit des Kunden erst nach der Übergabe zeigt."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Verifizierung prüft die Spezifikation, Validierung den Kundennutzen.",
+      "Falsch: Validierung ist bei allen Produkten und Prozessen wichtig — Hardware, Software, Dienstleistungen.",
+      "Beide Schritte sind für hohe Qualität notwendig."
+    ],
+    "erklaerungKurz": "Verifizierung = 'Produkt richtig gebaut?' (entspricht Spezifikation). Validierung = 'richtiges Produkt gebaut?' (erfüllt Kundenbedarf). Beide sind notwendig.",
+    "erklaerungLang": "Verifizierung fragt „Richtig gebaut?\", Validierung fragt „Das Richtige gebaut?\".\n• Verifizierung (verify) stellt die Frage 'Haben wir das Produkt nach Spezifikation gebaut?' – technische Tests prüfen, ob jedes Anforderungsdetail erfüllt ist.\n• Validierung (validate) stellt die Frage 'Haben wir das richtige Produkt gebaut – nämlich das, was der Kunde wirklich braucht?' – geprüft wird der praktische Nutzen.\n• Beispiel Arbeitsplatzeinrichtung, Verifizierung: Sind alle Komponenten korrekt installiert (Testprotokoll)?\n• Beispiel Arbeitsplatzeinrichtung, Validierung: Kann der Benutzer mit dem Arbeitsplatz produktiv arbeiten?\nMerke: Idealerweise werden beide durchgeführt – die Unterscheidung ist oft in QM-Fragen enthalten (QM = Qualitätsmanagement).",
+    "verweis": "Modul 05, Abschnitt 5.1 – Verifizierung und Validierung: die Standardverwechslung"
+  },
+  {
+    "id": "M05-105",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "In der Rothenburg Pflegeheim gGmbH sollen täglich neue Arbeitsplätze in Betrieb genommen werden. Wann ist Stichprobenprüfung angebracht, wann eher Vollprüfung?",
+    "optionen": [
+      "Bei vielen, ähnlichen Einheiten (z.B. 50 Arbeitsplätze täglich) ist Stichprobenprüfung wirtschaftlich sinnvoll. Bei kritischen, einmaligen Objekten (z.B. der Arbeitsplatz der Heimleitung) oder bei hohem Fehlerrisiko ist Vollprüfung erforderlich. Die Ergebnisse jeder einzelnen Prüfung hält das Testprotokoll fest.",
+      "Die Stichprobenprüfung ist in der Regel ausreichend und spart Kosten, weil identisch aufgebaute Geräte meist identische Ergebnisse liefern. Eine Vollprüfung ist deshalb auch bei einzelnen, besonders kritischen Arbeitsplätzen nicht nötig.",
+      "Die Vollprüfung ist das bevorzugte Verfahren, weil Qualität sonst nicht gewährleistet ist. Auch bei fünfzig gleichartigen Arbeitsplätzen am Tag sollte jede einzelne Position vollständig geprüft und protokolliert werden; Stichproben sind nur bei Messgeräten und Verbrauchsmaterial üblich, nicht aber bei den eingerichteten Arbeitsplätzen.",
+      "Die Wahl zwischen Stichprobe und Vollprüfung richtet sich allein nach dem verfügbaren Budget. Wie kritisch ein Arbeitsplatz für den Betrieb ist oder wie hoch das Fehlerrisiko liegt, spielt für diese Entscheidung keine Rolle."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Kritische Einzelobjekte erfordern Vollprüfung.",
+      "Bei vielen gleichartigen Einheiten ist die Stichprobe wirtschaftlich sinnvoll.",
+      "Falsch: Die Wahl wird von Kritikalität und Fehlerrisiko bestimmt, nicht nur von Kosten."
+    ],
+    "erklaerungKurz": "Stichprobenprüfung ist bei vielen ähnlichen Einheiten wirtschaftlich; Vollprüfung bei kritischen oder hochfehlergefährdeten Objekten notwendig. Häufen sich Fehler in den Stichproben, wird der Prozess korrigiert.",
+    "erklaerungLang": "Stichproben lohnen bei großen, gleichartigen Mengen; Vollprüfung bei kritischen, riskanten oder auffälligen Fällen.\n• Stichprobenprüfung reduziert Kosten und ist bei großen, homogenen Mengen wirtschaftlich, z.B. täglich 50 neue Arbeitsplätze mit gleicher Konfiguration — solange der Prozess stabil ist.\n• Sie prüft den Prozess, nicht das Einzelstück: Häufen sich Fehler in den Stichproben, wird die Ursache im Prozess gesucht und abgestellt. Den Umfang zu erhöhen oder auf Vollprüfung zu wechseln sichert nur ab, bis die Ursache behoben ist.\n• Vollprüfung ist notwendig bei kritischen, einmaligen Objekten, z.B. Arbeitsplätzen der Leitungsebene.\n• Ebenso bei sehr hohem Fehlerrisiko.\n• Und bei bereits erkannten Problemen.\nMerke: Im Rothenburg-Beispiel könnte bei Standardarbeitsplätzen eine Stichprobe von 10 % reichen; der Arbeitsplatz der Heimleitung würde zu 100 % geprüft.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Vollprüfung oder Stichprobe"
+  },
+  {
+    "id": "M05-106",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 3,
+    "frage": "Im PDCA-Zyklus der Aschendorf Kartonagenwerk GmbH: 'Die Fehlerquote bei Arbeitsplatzbau wird täglich gemessen und mit dem Ziel (2 %) verglichen' — dies ist die Phase ___. 'Die etablierte Checkliste wird um fehlende Punkte ergänzt und als neuer Standard verankert' — dies ist die Phase ___.",
+    "luecken": [
+      {
+        "optionen": [
+          "Plan",
+          "Do",
+          "Check",
+          "Act"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "Act",
+          "Check",
+          "Do",
+          "Plan"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "Die Check-Phase misst und vergleicht; die Act-Phase standardisiert und verbessert. Dies unterscheidet aktive Verbesserung von reiner Datenerfassung.",
+    "erklaerungLang": "Messen und Vergleichen ist Check, Ableiten und Standardisieren ist Act.\n• Check ist die Messphase: Ergebnisse werden erfasst (Fehlerquote gemessen) und mit Zielen verglichen (Ist gegen Soll).\n• Check liefert Informationen, ist aber noch nicht die Verbesserung selbst.\n• Act ist die Optimierungsphase: Auf Basis der Check-Erkenntnisse werden Maßnahmen abgeleitet und standardisiert – Checkliste ergänzen, Prozess als neuen Standard verankern.\n• Dadurch schließt sich der Zyklus, und es folgt ein neuer Plan auf Basis des neuen Standards.\nMerke: Wer nur misst, ist bei Check; wer den Standard ändert, ist bei Act.",
+    "verweis": "Modul 05, Abschnitt 5.2 — PDCA-Zyklus Phasen"
+  },
+  {
+    "id": "M05-107",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Ein Testprotokoll für die Arbeitsplatzeinrichtung muss folgende Pflichtinformationen enthalten: Prüfdatum, Name des ___ , alle Prüfpunkte mit ihrem Ergebnis (OK/Fehler), sowie als Gesamtergebnis die ___ (ja oder nein).",
+    "luecken": [
+      {
+        "optionen": [
+          "Kunden",
+          "Abteilungsleiters",
+          "Prüfers",
+          "Herstellers"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "Freigabe",
+          "Mängelliste",
+          "Garantie",
+          "Rechnungsstellung"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "Testprotokolle dokumentieren objektiv: wer geprüft hat, was geprüft wurde, und ob das Objekt freigegeben wird. Dies ist Beweis für Qualitätssicherung.",
+    "erklaerungLang": "Ein Testprotokoll muss nachvollziehbar machen, WER geprüft hat, WAS geprüft wurde und wie das Gesamtergebnis lautet.\n• Wer: Name und Unterschrift des Prüfers.\n• Was: alle Prüfpunkte mit ihren Ergebnissen.\n• Gesamtergebnis: Freigabe ja/nein.\n• Optional gehören auch Prüfdatum, Benutzer-ID, Arbeitsplatz-Nummer und Bemerkungen dazu.\n• Das Gesamtergebnis ist nicht nur Dokumentation, sondern auch eine Entscheidung: Wird ein Arbeitsplatz nicht freigegeben, darf er nicht in Betrieb gehen.\nMerke: Das Testprotokoll ist ein zentrales QS-Dokument und schafft Verantwortlichkeit und Rückverfolgbarkeit (QS = Qualitätssicherung).",
+    "verweis": "Modul 05, Abschnitt 5.2 — Testprotokoll und seine Bestandteile"
+  },
+  {
+    "id": "M05-108",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordnen Sie die QM-Prozesse den passenden Aktivitäten zu.",
+    "paare": [
+      [
+        "Qualitätsplanung",
+        "Ist-Zustand erfassen, Ziele definieren, Maßnahmen planen (Plan-Phase des PDCA)"
+      ],
+      [
+        "Qualitätslenkung",
+        "Maßnahmen umsetzen, Prozesse steuern und korrigieren (Do-Phase)"
+      ],
+      [
+        "Qualitätssicherung",
+        "Prüfen, Messen, Testen, Ergebnisse dokumentieren (Testprotokolle)"
+      ],
+      [
+        "Qualitätsverbesserung",
+        "Erkenntnisse nutzen, Prozesse optimieren, standardisieren (Act-Phase und KVP)"
+      ]
+    ],
+    "erklaerungKurz": "QM-Prozesse folgen dem PDCA-Muster: Planung → Lenkung (Umsetzung) → Sicherung (Prüfung) → Verbesserung (Optimierung).",
+    "erklaerungLang": "Die vier QM-Prozesse bauen aufeinander auf und bilden zusammen einen Zyklus (QM = Qualitätsmanagement).\n• Qualitätsplanung ist der Anfang: Anforderungen klären, Ziele setzen, Maßnahmen planen.\n• Qualitätslenkung ist die operative Umsetzung: Prozesse durchführen, überwachen und bei Abweichungen korrigieren.\n• Qualitätssicherung ist die Messung und Dokumentation: Durch Tests und Protokolle wird objektiviert, ob die Qualitätsziele erreicht wurden.\n• Qualitätsverbesserung ist die Rückkopplung: Aus den Erkenntnissen werden Prozesse optimiert und standardisiert.\nMerke: Das ist kein linearer Ablauf, sondern ein Zyklus – nach der Verbesserung beginnt die Planung erneut (PDCA-Spirale).",
+    "verweis": "Modul 05, Abschnitt 5.2 — QM-Prozesse und PDCA-Integration"
+  },
+  {
+    "id": "M05-109",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "freitext",
+    "schwierigkeit": 3,
+    "frage": "Die Hilkenbach Optikerkette GmbH führt eine Checkliste für die Arbeitsplatz-Einrichtung ein. Nach einem Monat sinkt die Fehlerquote von 8 % auf 4 %. Das Ziel von 2 % ist noch nicht erreicht. Welche PDCA-Phase folgt jetzt? Nennen Sie 2 konkrete Maßnahmen, die eingeleitet werden könnten.",
+    "musterloesung": "Die Phase, die folgt, ist 'Act' — Handlungsphase. Erkenntnisse aus der Check-Phase (Fehlerquote 4 %) werden genutzt, um den Prozess zu optimieren. Zwei konkrete Maßnahmen könnten sein: (1) Checkliste erweitern/vertiefen — fehlende oder unklar formulierte Prüfpunkte hinzufügen, um häufige Fehlerquellen besser zu erfassen. (2) Schulung intensivieren — Techniker gezielt schulen in den Bereichen, wo die restlichen 4 % Fehler auftreten (z.B. Netzwerk-Konfiguration, Peripherie-Treiber). Danach folgt ein neuer PDCA-Zyklus (Plan) mit den angepassten Maßnahmen und verbesserter Checkliste.",
+    "erklaerungKurz": "Nach Messung (Check) folgt Act — die Optimierungsphase. Aus der Erkenntnis (4 % Fehler noch zu viel) werden Maßnahmen abgeleitet und umgesetzt.",
+    "erklaerungLang": "Nach der Check-Phase (Messung: 4 % Fehlerquote) beginnt sofort die Act-Phase.\n• In Act werden nicht nur die positiven Erkenntnisse gewürdigt (Verbesserung von 8 % auf 4 %), sondern auch die verbleibende Lücke analysiert.\n• Checklisten-Optimierung: Die bestehende Checkliste hat bereits gewirkt (Fehler halbiert), hat aber offensichtlich noch Schwachstellen. Die lassen sich gezielt analysieren und in neue Prüfpunkte oder klarere Formulierungen umwandeln.\n• Schulung und Training: Techniker erhalten zusätzliche Schulung in den Bereichen, in denen Fehler weiterhin vorkommen.\n• Arbeitsumgebung: Möglicherweise sind Abläufe zu optimieren oder die Ausrüstung ist zu verbessern.\n• Nach den Act-Maßnahmen folgt sofort ein neuer Plan, in dem die angepassten Prozesse mit dem neuen Ziel (2 %) geplant werden.\nMerke: Ziel nicht erreicht heißt Act, nicht Aufgeben – eine typische IHK-Praxisaufgabe zum PDCA-Verständnis (IHK = Industrie- und Handelskammer).",
+    "verweis": "Modul 05, Abschnitt 5.2 — PDCA-Zyklus und kontinuierliche Verbesserung",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Act",
+          "Handlungsphase"
+        ],
+        [
+          "Checkliste erweitern",
+          "Prüfpunkte",
+          "Checkliste"
+        ],
+        [
+          "Schulung",
+          "schulen",
+          "geschult"
+        ]
+      ],
+      "kuer": [
+        "PDCA",
+        "Fehlerquote",
+        "optimieren",
+        "Check-Phase"
+      ]
+    }
+  },
+  {
+    "id": "M05-110",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 1,
+    "frage": "Erkläre den Begriff: Audit",
+    "musterloesung": "Ein Audit ist eine systematische, objektive Überprüfung von Prozessen, Dokumenten und Arbeitsergebnissen, um festzustellen, ob diese den geltenden Standards, Richtlinien und Anforderungen entsprechen. Es gibt interne Audits, die von Mitarbeitern des Unternehmens durchgeführt werden, und externe Audits, die von unabhängigen, akkreditierten Stellen durchgeführt werden (z.B. im Rahmen einer ISO 9001-Zertifizierung). Audits dienen nicht nur der Kontrolle, sondern auch der Identifikation von Verbesserungspotenzialen. Sie sind ein wichtiges Werkzeug des Qualitätsmanagements und bieten Nachvollziehbarkeit sowie Vertrauensaufbau bei Kunden und Aufsichtsbehörden.",
+    "erklaerungKurz": "Ein Audit ist eine systematische Überprüfung durch Fachleute, um Einhaltung von Standards zu prüfen und Verbesserungen zu identifizieren.",
+    "erklaerungLang": "Ein Audit ist eine systematische Überprüfung – der Begriff stammt aus dem Lateinischen (audire = hören).\n• In modernen QM-Systemen ist ein Audit ein strukturierter Prozess (QM = Qualitätsmanagement).\n• Verfahren, Dokumentation und Arbeitsergebnisse werden dabei gegen Vorgaben bewertet: Standards, Prozessrichtlinien, Gesetze.\n• Interne Audits sind Selbstbewertungen – das Unternehmen prüft sich selbst.\n• Externe Audits sind unabhängige Bewertungen durch anerkannte Auditorinnen und Auditoren, oft zu Zertifizierungszwecken.\n• Audits sind grundsätzlich konstruktiv: Sie zeigen nicht nur Abweichungen, sondern auch Stärken und Verbesserungspotenziale auf.\nMerke: Ein positives Audit-Ergebnis oder eine erfolgreiche Zertifizierung schafft Vertrauen bei Geschäftspartnern und Kunden.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Audits und externe Zertifizierung",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Audit",
+          "Audits"
+        ],
+        [
+          "systematisch",
+          "systematische",
+          "objektiv"
+        ],
+        [
+          "Überprüfung",
+          "Kontrolle",
+          "überprüft"
+        ],
+        [
+          "unabhängigen",
+          "akkreditierten",
+          "Zertifizierung"
+        ]
+      ],
+      "kuer": [
+        "ISO 9001",
+        "Verbesserungspotenziale",
+        "Arbeitsergebnissen"
+      ]
+    }
+  },
+  {
+    "id": "M05-111",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Die Hörselberger Systemhaus GmbH wirbt auf ihrer Website mit einer Zertifizierung nach ISO 9001. Das Zertifikat wurde vor vier Jahren ausgestellt; nach dem ersten Überwachungsaudit hat der Betrieb keine weiteren mehr durchführen lassen. Wie ist die Werbeaussage zu bewerten?",
+    "optionen": [
+      "Unzulässig: Ein Zertifikat gilt in der Regel drei Jahre und setzt jährliche Überwachungsaudits voraus. Beides ist hier nicht erfüllt, der Betrieb müsste sich neu zertifizieren lassen.",
+      "Zulässig, weil das Zertifikat einmal rechtmäßig erteilt worden ist. Eine Zertifizierung gilt zeitlich unbefristet, solange der Betrieb sein Qualitätsmanagementsystem nicht vollständig abschafft.",
+      "Zulässig, solange die Zertifizierungsstelle das Zertifikat nicht ausdrücklich entzogen hat. Überwachungsaudits sind eine freiwillige Zusatzleistung ohne Einfluss auf die Gültigkeit.",
+      "Zulässig, weil ein Zertifikat nach ISO 9001 fünf Jahre gilt und Überwachungsaudits nur bei Änderungen der Prozesse notwendig sind; vier Jahre liegen noch innerhalb dieser Frist."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Die Gültigkeit ist befristet. Ohne Re-Zertifizierung läuft das Zertifikat nach der Frist aus, unabhängig vom weiterbestehenden Qualitätsmanagementsystem.",
+      "Falsch: Die Überwachungsaudits sind Bedingung der Aufrechterhaltung, keine Zusatzleistung. Bleiben sie aus, ist die Konformität nicht mehr bestätigt.",
+      "Das Zertifikat gilt in der Regel drei Jahre und verlangt jährliche Überwachungsaudits."
+    ],
+    "erklaerungKurz": "Ein Zertifikat nach ISO 9001 gilt in der Regel drei Jahre und wird durch jährliche Überwachungsaudits aufrechterhalten. Nach vier Jahren ohne Überwachung ist es abgelaufen — die Werbung ist unzulässig.",
+    "erklaerungLang": "Eine Zertifizierung ist kein einmaliger Vorgang, sondern ein Zustand, der bestätigt bleiben muss.\n• Ablauf: Das Unternehmen führt ein Qualitätsmanagementsystem nach ISO 9001 ein, eine akkreditierte Zertifizierungsstelle prüft im externen Audit die Konformität, danach wird das Zertifikat vergeben.\n• Gültigkeitsdauer: in der Regel drei Jahre.\n• Überwachungsaudits: in der Regel jährlich, um die Konformität zu bestätigen. Sie sind Bedingung, nicht Kür.\n• Im Fall hier sind vier Jahre vergangen und nur ein Überwachungsaudit stattgefunden: Das Zertifikat ist abgelaufen, die Werbung führt Kunden in die Irre.\n• Wer weiter damit werben will, durchläuft die Zertifizierung erneut.\nMerke: Das Zertifikat bescheinigt einen geprüften Zustand — es altert, und die Überwachungsaudits sind der Beleg, dass der Zustand noch gilt.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Zertifizierung: Gültigkeitsdauer und Überwachungsaudits"
+  },
+  {
+    "id": "M05-112",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Die Löhnberger Anlagenbau GmbH hat vor einem Jahr ein Qualitätsmanagementsystem eingeführt. Die Geschäftsführung misst den Erfolg an der Zahl der geschriebenen Verfahrensanweisungen: 120 Dokumente in zwölf Monaten. Wie ist dieser Maßstab zu beurteilen?",
+    "optionen": [
+      "Er taugt nicht: Ein Qualitätsmanagementsystem wird an seiner Wirkung gemessen — erfüllte Kundenerwartungen, weniger Fehler, verankerte Verbesserung. Das Audit prüft, ob die Anforderungen wirksam sind.",
+      "Er ist der übliche Maßstab, weil die Zahl der Verfahrensanweisungen den Reifegrad eines Qualitätsmanagementsystems unmittelbar abbildet und sich anders als die Kundenzufriedenheit ohne Aufwand objektiv zählen lässt.",
+      "Er taugt nicht, weil sich ein Qualitätsmanagementsystem nur schwer bewerten lässt. Qualität ist eine Haltung der Beschäftigten und entzieht sich Kennzahlen weitgehend ebenso wie einer Prüfung im Audit.",
+      "Er ist tragfähig, sobald die Dokumente von der Zertifizierungsstelle abgenommen sind. Die Norm verlangt für wichtige Prozesse jeweils eine schriftlich ausformulierte Verfahrensanweisung."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Dokumente sind Mittel, nicht Ziel. 120 Anweisungen, die niemand anwendet, verbessern nichts.",
+      "Die Wirksamkeit eines QMS ist messbar und wird im Audit geprüft.",
+      "Die Dokumentenzahl sagt nichts über die Wirksamkeit aus."
+    ],
+    "erklaerungKurz": "Ein Qualitätsmanagementsystem wird an seiner Wirksamkeit gemessen: erfüllte Kundenerwartungen, weniger Fehler und Verschwendung, verankerte kontinuierliche Verbesserung. Die Dokumentation ist Mittel zum Zweck.",
+    "erklaerungLang": "Die Frage hinter dem Maßstab lautet: Wozu ist das System da?\n• Die Ziele eines Qualitätsmanagementsystems sind Kundenerwartungen erfüllen, Fehler und Verschwendung minimieren, Vertrauen aufbauen und den kontinuierlichen Verbesserungsprozess verankern.\n• Keines dieser Ziele wird durch die Zahl der Verfahrensanweisungen gemessen.\n• Ein Audit prüft systematisch, ob Prozesse und Ergebnisse den festgelegten Anforderungen entsprechen — und ob diese Anforderungen wirksam sind. Genau dort fällt eine reine Papierlage auf.\n• Brauchbare Maßstäbe wären Fehlerquote, Reklamationen, Wiederholungsaufträge, Durchlaufzeiten oder die Zahl umgesetzter Verbesserungsvorschläge.\nMerke: Dokumentation ist das Mittel, Wirksamkeit ist das Ziel — wer das Mittel zählt, misst den Aufwand statt des Nutzens.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Ziele eines Qualitätsmanagementsystems und Wirksamkeit im Audit"
+  },
+  {
+    "id": "M05-113",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "lueckentext",
+    "schwierigkeit": 2,
+    "frage": "In der DIN-EN-ISO-9000er-Familie beschreibt die Norm ___ die Grundlagen und Begriffe des Qualitätsmanagements, während die Norm ___ die verbindlichen, zertifizierbaren Anforderungen an ein QM-System festlegt. Der systematische Prozess, bei dem Mitarbeiter laufend kleine Verbesserungen einbringen (japanisch Kaizen), heißt ___.",
+    "luecken": [
+      [
+        "ISO 9000",
+        "iso 9000",
+        "DIN EN ISO 9000",
+        "9000"
+      ],
+      [
+        "ISO 9001",
+        "iso 9001",
+        "DIN EN ISO 9001",
+        "9001"
+      ],
+      [
+        "KVP",
+        "kvp",
+        "Kontinuierlicher Verbesserungsprozess",
+        "kontinuierlicher Verbesserungsprozess"
+      ]
+    ],
+    "erklaerungKurz": "ISO 9000 = Grundlagen und Begriffe, ISO 9001 = zertifizierbare Anforderungen, KVP = laufende kleine Verbesserungen.",
+    "erklaerungLang": "Die beiden Nummern werden regelmäßig verwechselt, obwohl sie verschiedene Aufgaben haben.\n• Nach ISO 9000 wird niemand zertifiziert – sie klärt nur, was Qualität, Konformität und Abweichung überhaupt bedeuten.\n• ISO 9001 ist das Regelwerk, das ein Betrieb erfüllen muss; große Auftraggeber fordern das Zertifikat oft als Geschäftsbedingung.\n• KVP zielt auf viele kleine Schritte statt auf ein großes Projekt: im IT-Betrieb etwa ein gestraffter Ticket-Prozess oder automatisierte Patches.\nMerke: 9000 erklärt die Begriffe, 9001 stellt die Anforderungen – zertifiziert wird nach 9001.",
+    "verweis": "Modul 05, Abschnitt 5.1 – QS-Normen: DIN EN ISO 9000er-Familie"
+  },
+  {
+    "id": "M05-114",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "lueckentext",
+    "schwierigkeit": 3,
+    "frage": "Ein IT-Systemhaus ordnet seine Qualitätskosten nach dem Zeitpunkt zu. Die Schulung der Techniker und der Aufbau einer Testumgebung zählen zu den ___. Das Testprotokoll je Arbeitsplatz und die Abnahmeprüfung sind ___. Muss ein falsch aufgesetzter PC vor der Übergabe neu installiert werden, entstehen ___; wird derselbe Fehler erst beim Kunden bemerkt und ein Vor-Ort-Einsatz nötig, sind es ___.",
+    "luecken": [
+      [
+        "Fehlerverhütungskosten",
+        "fehlerverhütungskosten",
+        "Präventionskosten",
+        "Fehlerverhütung"
+      ],
+      [
+        "Prüfkosten",
+        "prüfkosten",
+        "Prüfungskosten"
+      ],
+      [
+        "interne Fehlerkosten",
+        "Interne Fehlerkosten",
+        "interne Fehlerkosten (Nacharbeit)"
+      ],
+      [
+        "externe Fehlerkosten",
+        "Externe Fehlerkosten"
+      ]
+    ],
+    "erklaerungKurz": "Vier Arten nach Zeitpunkt: Fehlerverhütung (vorher), Prüfkosten (währenddessen), interne (im Haus) und externe Fehlerkosten (beim Kunden).",
+    "erklaerungLang": "Die Reihenfolge ist die eigentliche Aussage: sie zeigt, wie teuer ein Fehler wird, je später er auffällt.\n• Fehlerverhütung und Prüfung sind gewollte, planbare Ausgaben – die beiden Fehlerkostenarten sind Schäden und lassen sich nicht budgetieren.\n• Die Zehnerregel besagt, dass sich die Behebungskosten mit jeder Phase verzehnfachen, in der ein Fehler unentdeckt bleibt.\n• Externe Fehlerkosten enthalten mehr als die Reparatur: Gewährleistung, Kulanz, Vertragsstrafe und den Imageschaden, der sich schlecht beziffern lässt.\nMerke: Wer an der Prüfung spart, bezahlt die Ersparnis bei den externen Fehlerkosten zurück – mit Zinsen.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Qualitätskosten"
+  },
+  {
+    "id": "M05-201",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Nach der 10er-Regel der Fehlerkosten verzehnfachen sich die Kosten der Fehlerbehebung mit jeder Projektphase. Ein Fehler, dessen Behebung in der Anforderungsphase 100 EUR kostet — wie viel kostet seine Behebung ungefähr, wenn er erst EINE Phase später (in der Entwicklung/Umsetzung) entdeckt wird?",
+    "optionen": [
+      "Etwa 1.000 EUR (ca. 10× teurer)",
+      "Etwa 200 EUR (ca. 2× teurer)",
+      "Etwa 500 EUR (ca. 5× teurer)",
+      "Gleich 100 EUR, die Phase ist egal"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die 10er-Regel besagt nicht, dass es doppelt so teuer wird.",
+      "Die 10er-Regel besagt nicht, dass es nur 5× teurer wird.",
+      "Die Phase ist zentral für die Fehlerkosten — je später ein Fehler entdeckt wird, desto teurer ist er."
+    ],
+    "erklaerungKurz": "10er-Regel der Fehlerkosten, hier mit drei Stufen gerechnet: Anforderung 1×, Entwicklung ca. 10×, Kunde ca. 100×. Prävention ist wirtschaftlich.",
+    "erklaerungLang": "Nach der 10er-Regel verzehnfachen sich die Fehlerkosten mit jeder Projektphase – aus 100 EUR werden 1.000 EUR.\n• Anforderungsphase: Der Fehler wird mit minimaler Bearbeitung behoben, die Spezifikation wird angepasst.\n• Implementierungsphase: Derselbe Fehler erfordert Code-Änderung, Test und Dokumentationsupdate.\n• Beim Kunden: Der gleiche Fehler erfordert Kundensupport, Außendiensteinsatz, ggf. Garantiefall und Rufschaden – 10.000 EUR.\n• Die Kostensteigerung ist also exponentiell.\n• Das rechtfertigt hohe Investitionen in Prävention: Anforderungsmanagement, Reviews, Testabdeckung.\nMerke: Jeder Euro in Prävention spart etwa 10 EUR später.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Qualitätskosten und die 10er-Regel"
+  },
+  {
+    "id": "M05-202",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 3,
+    "frage": "Ordnen Sie jede Kostenart der passenden Definition und dem passenden Beispiel zu.",
+    "paare": [
+      [
+        "Fehlerverhütungskosten",
+        "Schulung der Techniker, Entwicklung von Prüfplänen, Standardisierung von Prozessen"
+      ],
+      [
+        "Prüfkosten",
+        "Testprotokoll, Endkontrolle, Abnahme vor Übergabe an Kunde"
+      ],
+      [
+        "Interne Fehlerkosten",
+        "Nacharbeit vor Auslieferung, Austausch fehlerhafter Komponenten, Rework im Lager"
+      ],
+      [
+        "Externe Fehlerkosten",
+        "Garantiefall beim Kunden, Reklamation mit Reparatur vor Ort, Schadensersatz wegen Ausfallzeit"
+      ]
+    ],
+    "extra": [
+      "Werbeanzeige für einen neuen Wartungsvertrag"
+    ],
+    "erklaerungKurz": "Qualitätskosten-Klassifizierung: Prävention (Fehlervermeidung) → Prüfung (Erkennung) → interne Reparatur (vor Versand) → externe Reparatur (beim Kunden = teuer).",
+    "erklaerungLang": "Die vier Kostenarten bilden eine Hierarchie – je später der Fehler auffällt, desto teurer wird er.\n• Fehlerverhütungskosten entstehen VOR der Produktion: Investitionen in Qualität wie Schulung, Prozesse, Audits.\n• Prüfkosten entstehen WÄHREND der Produktion: Tests und Kontrollen wie Testfälle, Testprotokolle, Inspektionen.\n• Interne Fehlerkosten entstehen, wenn Fehler VOR dem Versand entdeckt werden – der Fehler kann noch im Betrieb behoben werden und ist weniger teuer.\n• Externe Fehlerkosten entstehen NACH dem Versand, wenn der Kunde den Fehler entdeckt – am teuersten, wegen Kundenbeziehung, Reparatur vor Ort und ggf. Vertragsstrafen.\nMerke: Die Optimierung besteht darin, die ersten drei Kategorien zu maximieren, um die vierte zu minimieren.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Qualitätskosten-Klassifizierung"
+  },
+  {
+    "id": "M05-203",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Im QM-Prozess: Die ___ legt Qualitätsziele fest und definiert den Soll-Zustand. Die ___ setzt die Maßnahmen im laufenden Prozess um und steuert die Umsetzung. Diese beiden Funktionen sind in einem kontinuierlichen Zyklus miteinander verbunden.",
+    "luecken": [
+      {
+        "optionen": [
+          "Qualitätslenkung",
+          "Qualitätssicherung",
+          "Qualitätsplanung",
+          "Qualitätsprüfung"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "Qualitätslenkung",
+          "Qualitätsplanung",
+          "Qualitätsverbesserung",
+          "Qualitätsprüfung"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "Qualitätsplanung ist strategisch (Was ist das Ziel?). Qualitätslenkung ist operativ (Wie erreichen wir das Ziel?). Beide sind notwendig.",
+    "erklaerungLang": "Die Qualitätsplanung legt die Ziele fest, die Qualitätslenkung setzt sie im laufenden Prozess um.\n• Qualitätsplanung (P wie Plan im PDCA) definiert Qualitätsziele (z.B. 'Fehlerquote unter 2 %'), Qualitätskriterien (was akzeptabel ist), Qualitätsmittel (Prüfmittel, Testabdeckung) und Verantwortlichkeiten.\n• Sie ist strategisch und findet einmalig pro Projekt bzw. Prozess statt.\n• Qualitätslenkung (D wie Do im PDCA) setzt die Planung um: Prozesse werden nach Plan durchgeführt, Abweichungen werden erkannt (z.B. ein Arbeitsplatz erfüllt die Kriterien nicht) und Korrekturmaßnahmen eingeleitet (z.B. Nachbessern, erneute Kalibrierung).\n• Sie ist operativ und findet täglich statt.\nMerke: Ohne gute Planung keine klaren Ziele, ohne gute Lenkung keine Umsetzung – beide sind essentiell.",
+    "verweis": "Modul 05, Abschnitt 5.2 — Qualitätsplanung und Qualitätslenkung"
+  },
+  {
+    "id": "M05-204",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein Techniker der Steinbrenner Bestattungen e.K. richtet 12 identische Arbeitsplätze ein und möchte Kosten sparen. Er erstellt ein Testprotokoll für den ersten Arbeitsplatz, unterschreibt es und sagt, dass die anderen 11 'identisch' sind — keine Protokolle nötig. Warum ist diese Vorgehensweise falsch?",
+    "optionen": [
+      "Weil es nicht nachvollziehbar ist, wer die Einrichtung durchgeführt hat, und im Garantiefall und bei Audits jeder Arbeitsplatz separat dokumentiert sein muss. Fehlende Protokolle gefährden die Qualitätsnachweise.",
+      "Weil sich dadurch keine Kosten sparen lassen: Das Ausfüllen eines Protokolls dauert nur wenige Minuten und verursacht keinen nennenswerten Aufwand. Der Techniker hätte die elf weiteren Protokolle also ohne Mehrkosten ausfüllen können.",
+      "Weil ein Testprotokoll nur gültig ist, wenn es der Kunde und nicht der Techniker unterschreibt. Die Unterschrift des Technikers reicht deshalb schon beim ersten Arbeitsplatz nicht aus, sodass auch dieses Protokoll erneut erstellt werden muss.",
+      "Weil der zuerst eingerichtete Arbeitsplatz automatisch als fehlerhaft gilt, sobald die übrigen elf nicht geprüft werden. Das erste Protokoll verliert dadurch rückwirkend seine Gültigkeit und muss vollständig wiederholt werden."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Protokolle sind tatsächlich kostengünstig — die Einsparung ist marginal.",
+      "Techniker dürfen Testprotokolle unterschreiben; der Fehler ist die fehlende Dokumentation der übrigen Plätze.",
+      "Die Konfiguration des ersten Arbeitsplatzes ist nicht automatisch fehlerhaft."
+    ],
+    "erklaerungKurz": "Jeder Arbeitsplatz benötigt ein separates Testprotokoll mit Datum, Techniker-Name, Prüfergebnis und Freigabe. Dies ist Qualitätsnachweise für Audits und Gewährleistung.",
+    "erklaerungLang": "Ein gemeinsames Protokoll für alle Arbeitsplätze genügt nicht – jeder braucht sein eigenes.\n• Testprotokolle sind keine Formalie, sondern Rückverfolgbarkeits- und Haftungsdokumente.\n• Im Reklamationsfall muss nachweisbar sein: Wer hat den Arbeitsplatz eingerichtet? Wann? Was wurde geprüft? Wurden alle Kriterien erfüllt? Wer hat freigegeben?\n• Ein gemeinsames Protokoll für 12 Arbeitsplätze erfüllt diese Anforderungen nicht.\n• Auditoren – IHK, Kunden, Zertifizierungsstellen – verlangen einen Nachweis für JEDEN Arbeitsplatz (IHK = Industrie- und Handelskammer).\n• Nur so ist bei Qualitätsproblemen klar: Arbeitsplatz 5 war nicht akzeptabel, alle anderen waren es. Ohne Protokolle haftet das Unternehmen für den gesamten Fehler.\nMerke: Jeder Arbeitsplatz bekommt sein eigenes Protokoll – gern als Vorlage, aber mit individuellen Daten.",
+    "verweis": "Modul 05, Abschnitt 5.2 — Testprotokoll und Dokumentation"
+  },
+  {
+    "id": "M05-300",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Bei der Amtsberger Netzwerkservice GmbH steht ein internes Audit an. Der Netzwerkadministrator soll dabei die Prozesse und die Dokumentation seines eigenen Bereichs prüfen — mit der Begründung, dort kenne sich niemand besser aus. Wie ist das zu bewerten?",
+    "optionen": [
+      "Naheliegend, aber unzulässig: Ein internes Audit führen geschulte eigene Mitarbeiter durch, nur nicht im eigenen Bereich. Wer die eigene Arbeit prüft, prüft die eigene Betriebsblindheit mit.",
+      "Sachgerecht, weil die Unabhängigkeit im internen Audit ohnehin nicht gefordert ist. Fachkunde wiegt hier schwerer, und niemand kennt die Schwachstellen des Bereichs so genau wie er selbst.",
+      "Unzulässig, weil ein internes Audit in der Regel von einer akkreditierten Zertifizierungsstelle durchgeführt wird. Eigene Mitarbeiter dürfen dabei nur als Beobachter auftreten.",
+      "Sachgerecht, sofern die Geschäftsführung es schriftlich anordnet. Die Unabhängigkeit gilt allein für das externe Audit; im internen Audit ersetzt die Anordnung die persönliche Unabhängigkeit."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Gerade die Unabhängigkeit macht das Audit zum Audit. Fachkunde ersetzt sie nicht, sie ist zusätzlich nötig.",
+      "Interne Audits führen geschulte eigene Mitarbeiter durch.",
+      "Falsch: Die Unabhängigkeit ist ein Merkmal des Audits selbst und lässt sich nicht per Anordnung ersetzen."
+    ],
+    "erklaerungKurz": "Ein Audit ist eine systematische, unabhängige Untersuchung. Im internen Audit prüfen eigene, geschulte Mitarbeiter — aber nicht den eigenen Bereich, sonst prüft man die eigene Betriebsblindheit mit.",
+    "erklaerungLang": "Die Fachkunde spricht für ihn, die Unabhängigkeit gegen ihn — und die Unabhängigkeit ist Teil der Definition.\n• Ein Audit ist eine systematische, unabhängige Untersuchung gegen einen Maßstab (Norm, Richtlinie, Vertrag), nicht nach Gefühl.\n• Im internen Audit prüfen geschulte eigene Mitarbeiter, ausdrücklich nicht im eigenen Bereich; im externen Audit prüft eine Zertifizierungsstelle, ein Kunde oder ein Lieferant.\n• Zweck des internen Audits ist, Schwachstellen selbst zu finden, bevor es jemand anderes tut. Wer die eigene Arbeit prüft, übersieht genau das, was er beim Aufbau schon übersehen hat.\n• Die Lösung im Fall: Ein geschulter Kollege aus einem anderen Bereich auditiert das Netzwerk, der Administrator steht als Auskunftgeber bereit.\nMerke: Unabhängigkeit heißt nicht fremd, sondern nicht in eigener Sache.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Audits: internes und externes Audit, Unabhängigkeit der Prüfenden"
+  },
+  {
+    "id": "M05-301",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 1,
+    "frage": "In welcher Phase des PDCA-Zyklus werden Abweichungen zwischen Soll- und Ist-Zustand erkannt und analysiert?",
+    "optionen": [
+      "In der Check-Phase werden Messergebnisse erfasst und mit den geplanten Zielen verglichen, um Abweichungen zu erkennen.",
+      "In der Plan-Phase werden Ziele festgelegt; Abweichungen lassen sich erst nach Abschluss des gesamten Zyklus beurteilen.",
+      "In der Do-Phase werden die Maßnahmen umgesetzt und die auftretenden Abweichungen dort bereits endgültig analysiert.",
+      "In der Act-Phase erfolgt die Abweichungserkennung als Teil der Standardisierung."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Abweichungen werden in der Check-Phase durch Soll-Ist-Vergleich erkannt.",
+      "Die Analyse erfolgt in der Check-Phase.",
+      "Falsch: Die Act-Phase nutzt bereits erkannte Abweichungen zur Optimierung, erkennt sie aber nicht erstmals."
+    ],
+    "erklaerungKurz": "Die Check-Phase ist die Messphase des PDCA-Zyklus. Sie erfasst Ist-Daten und vergleicht sie mit Sollwerten, um Abweichungen aufzudecken.",
+    "erklaerungLang": "Abweichungen zwischen Soll- und Ist-Zustand werden in der Check-Phase erkannt und analysiert.\n• Die Check-Phase ist der Kernmechanismus des PDCA-Zyklus für die Qualitätsverbesserung.\n• Daten werden systematisch erfasst, z.B. Fehlerquote, Zykluszeit, Kundenreklamationen.\n• Sie werden auf Qualität und Vollständigkeit überprüft und mit den in der Plan-Phase festgelegten Zielen und Erwartungswerten verglichen.\n• Nur durch diese Messung und den Vergleich lassen sich Abweichungen überhaupt erkennen.\n• Das ist die Grundlage für die nachfolgende Act-Phase, in der aus den erkannten Abweichungen konkrete Verbesserungsmaßnahmen abgeleitet werden.\nMerke: Ohne Check wäre der PDCA-Zyklus nicht iterativ, sondern linear.",
+    "verweis": "Modul 05, Abschnitt 5.2 — Check-Phase und Abweichungserkennung"
+  },
+  {
+    "id": "M05-302",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordnen Sie die folgenden KVP-Aktivitäten (kontinuierliche Verbesserung) den passenden PDCA-Phasen zu.",
+    "paare": [
+      [
+        "Plan",
+        "Team trifft sich, analysiert aktuelle Fehlerquote (12 %), definiert Ziel (8 %) und plant Maßnahme (neue Prüfliste)"
+      ],
+      [
+        "Do",
+        "Neue Prüfliste wird in den täglichen Arbeitsablauf eingefügt, Techniker erhalten Kurzschulung"
+      ],
+      [
+        "Check",
+        "Nach 2 Wochen wird die Fehlerquote gemessen: jetzt 9 %. Ergebnis wird dokumentiert."
+      ],
+      [
+        "Act",
+        "Prüfliste wird als Standarddokument verankert, Schulung wird ins Onboarding aufgenommen, nächster PDCA-Zyklus startet mit Ziel 5 %"
+      ]
+    ],
+    "erklaerungKurz": "KVP manifestiert sich durch wiederholte PDCA-Zyklen. Jeder Zyklus führt zu Verbesserung, die Ziele werden schrittweise ehrgeiziger.",
+    "erklaerungLang": "Der Kontinuierliche Verbesserungsprozess ist keine Einmal-Maßnahme, sondern eine Abfolge von PDCA-Zyklen.\n• Im Beispiel: Zyklus 1 reduziert die Fehler von 12 % auf 9 %.\n• Zyklus 2 baut darauf auf und setzt das Ziel auf 5 %.\n• Visualisiert wird das oft als steigende Spirale – mit jedem Zyklus rückt man dem übergeordneten Qualitätsziel näher.\n• KVP funktioniert deshalb so erfolgreich, weil kleine, durchdachte Schritte psychologisch besser akzeptiert werden als ein radikaler Umbruch.\n• Mitarbeiter fühlen sich nicht überfordert, können schnelle Erfolge verbuchen und bleiben motiviert.\nMerke: KVP ist eine Kette von PDCA-Zyklen, keine einzelne Aktion.",
+    "verweis": "Modul 05, Abschnitt 5.2 — KVP als Abfolge von PDCA-Zyklen"
+  },
+  {
+    "id": "M05-303",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Welche Aussage zu DIN EN ISO 9000 und DIN EN ISO 9001 ist korrekt?",
+    "optionen": [
+      "ISO 9000 definiert Grundbegriffe und Qualitätsgrundsätze (z.B. Kundenorientierung, Mitarbeitereinbindung), ISO 9001 formuliert verbindliche Anforderungen für ein QM-System. Unternehmen müssen ISO 9001 erfüllen, um zertifiziert zu werden; ISO 9000 ist Orientierungshilfe.",
+      "ISO 9000 und ISO 9001 sind unterschiedliche Ausgaben derselben Norm. ISO 9001 ist die neuere Fassung und löst ISO 9000 ab; wer heute ein Qualitätsmanagementsystem aufbaut und zertifizieren lassen möchte, benötigt die ältere Fassung nur noch als Nachschlagewerk für Begriffe.",
+      "ISO 9001 ist nur für Großunternehmen verpflichtend, weil dort die Prozesse unübersichtlich werden. Kleine Betriebe können sich auf ISO 9000 beschränken und sich auf dieser Grundlage ebenfalls zertifizieren lassen.",
+      "Beide Normen sind zertifizierbar, schließen einander aber aus: Ein Unternehmen muss sich für eine der beiden entscheiden und kann nicht gleichzeitig nach ISO 9000 und nach ISO 9001 zertifiziert sein."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Es sind zwei verschiedene Normen mit unterschiedlichem Zweck.",
+      "Falsch: Alle Unternehmen, unabhängig von Größe, können von ISO 9001-Zertifizierung profitieren. Die Norm gilt unabhaengig von der Betriebsgroesse; sie wird auf den Umfang der Organisation angewendet, nicht nach ihr gestaffelt.",
+      "Falsch: Nur ISO 9001 ist zertifizierbar. Ein Unternehmen wird 'nach ISO 9001 zertifiziert', nicht 'nach ISO 9000'. Eine Doppel-Zertifizierung gibt es nicht."
+    ],
+    "erklaerungKurz": "ISO 9000 = Grundlagen und Begriffe (keine Zertifizierung). ISO 9001 = verbindliche Anforderungen (zertifizierbar, 3 Jahre gültig).",
+    "erklaerungLang": "Die eine Norm ist die Orientierungshilfe, die andere das verbindliche Regelwerk – nur die zweite ist zertifizierbar.\n• DIN EN ISO 9000 ('Qualitätsmanagementsysteme — Grundlagen und Begriffe') definiert, was Qualität ist (DIN = Deutsches Institut für Normung; EN = Europäische Norm; ISO = International Organization for Standardization).\n• Sie nennt die Grundprinzipien, die ein gutes QM-System haben sollte: Kundenorientierung, Mitarbeiterfokus, prozessorientierter Ansatz usw. (QM = Qualitätsmanagement).\n• Sie legt außerdem die Begriffe fest, z.B. Audit, Konformität, Abweichung – und ist selbst nicht zertifizierbar.\n• DIN EN ISO 9001 ('Qualitätsmanagementsysteme — Anforderungen') legt konkrete Anforderungen fest: Dokumentation, Prozessplanung, Verantwortlichkeiten, Prüfung, Korrekturmaßnahmen usw.\n• Nur diese Norm ist zertifizierbar: Ein Unternehmen kann sich von einer akkreditierten Stelle prüfen lassen und bei Erfüllung ein Zertifikat erhalten (Gültigkeitsdauer 3 Jahre).\nMerke: Ein Unternehmen könnte sagen: 'Wir handeln nach ISO 9000 Prinzipien und sind nach ISO 9001 zertifiziert.'",
+    "verweis": "Modul 05, Abschnitt 5.1 — Unterscheidung ISO 9000 und ISO 9001"
+  },
+  {
+    "id": "M05-304",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Ein Qualitätsmanagementsystem soll ___ werden. Das Ziel ist, dass externe Stakeholder (Kunden, Partner) ___ in die Einhaltung von Qualitätsstandards haben. Dies wird durch eine ___ erreicht, die von einer akkreditierten Stelle ausgestellt wird, nachdem alle Anforderungen der ISO 9001 erfüllt wurden.",
+    "luecken": [
+      {
+        "optionen": [
+          "auditiert",
+          "akkreditiert",
+          "dokumentiert",
+          "zertifiziert"
+        ],
+        "loesung": 3
+      },
+      {
+        "optionen": [
+          "Vertrauen",
+          "Einblick",
+          "Mitspracherecht",
+          "Kontrolle"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "Akkreditierung",
+          "Zertifikat",
+          "Gütesiegel",
+          "Patent"
+        ],
+        "loesung": 1
+      }
+    ],
+    "erklaerungKurz": "Zertifizierung schafft Vertrauen durch externe Bestätigung. Das Zertifikat ist der Beleg der erfolgreichen Audit-Prüfung.",
+    "erklaerungLang": "Ein Qualitätsmanagementsystem wird zertifiziert, damit externe Stakeholder Vertrauen in die Qualitätsstandards haben.\n• Das ist das Ziel vieler Unternehmen, insbesondere bei B2B-Geschäftsmodellen (B2B = Business-to-Business, Geschäfte zwischen Unternehmen).\n• Die Zertifizierung bestätigt öffentlich, dass das Unternehmen die Anforderungen der ISO 9001 erfüllt und ein funktionierendes Qualitätsmanagementsystem hat (ISO = International Organization for Standardization).\n• Kunden und Geschäftspartner wissen dadurch: Das Unternehmen behauptet Qualität nicht nur, sie wurde von einer unabhängigen, akkreditierten Stelle überprüft und bestätigt.\n• Das Zertifikat ist der formale Beleg dieser Überprüfung und in der Regel 3 Jahre gültig.\n• Es wird oft öffentlich gezeigt – auf der Webseite, im Büro, in Angeboten –, um Glaubwürdigkeit zu signalisieren.\nMerke: Zertifiziert wird das System, bestätigt wird es von einer unabhängigen Stelle.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Zertifizierung und Vertrauensaufbau"
+  },
+  {
+    "id": "M05-305",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Bei der Wilnsdorf Nachhilfeinstitut GmbH werden täglich 12 neue Arbeitsplätze eingerichtet. Ein Testprotokoll wird für jeden Arbeitsplatz angelegt. Welche Funktion hat das Testprotokoll primär?",
+    "optionen": [
+      "Das Testprotokoll dokumentiert systematisch, welche Prüfungen durchgeführt wurden und welche Ergebnisse erzielt wurden (OK oder Fehler). Es schafft Nachvollziehbarkeit, ermöglicht Fehlerverfolgung und dient als Beweismittel bei Reklamationen oder internen Audits.",
+      "Das Testprotokoll ist ein interner Arbeitsbericht mit begrenzter Bedeutung. Es hilft dem Techniker, den Überblick über den Tag zu behalten, und wird nach Abschluss der Einrichtung nicht mehr benötigt, weil die Arbeitsplätze dann bereits laufen.",
+      "Das Testprotokoll dient vor allem der persönlichen Dokumentation des Technikers und ist für das Unternehmen von geringer Bedeutung. Die Fachabteilung greift darauf nur selten zu; eine geordnete Aufbewahrung im Unternehmen ist deshalb nicht vorgesehen und auch nicht üblich.",
+      "Das Testprotokoll ist eine Checkliste zur Selbstkontrolle des Technikers. Sie wird während der Arbeit abgehakt, danach aber nicht formal archiviert, weil das Unternehmen den Nachweis über die Rechnung an den Kunden führt."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Das Protokoll dient als Nachweis bei Reklamationen und Audits.",
+      "Das Protokoll ist ein Qualitätsnachweis des Unternehmens.",
+      "Falsch: Ein Testprotokoll ist nicht allein die private Sache eines Technikers. Es ist ein Dokument des Unternehmens mit bindender Aussagekraft."
+    ],
+    "erklaerungKurz": "Testprotokolle sind formale QS-Dokumente, die Prüfungen dokumentieren, Fehlerverfolgung ermöglichen und als Audit-Nachweis dienen.",
+    "erklaerungLang": "Die primäre Funktion des Testprotokolls ist die objektive, nachvollziehbare Dokumentation.\n• Dokumentiert wird: Wann wurde geprüft (Datum), wer hat geprüft (Name, Unterschrift), was wurde geprüft (alle Prüfpunkte), mit welchem Ergebnis (OK/Fehler für jeden Punkt) und wie lautet das Gesamtergebnis (Freigabe ja/nein).\n• Nachvollziehbarkeit: Treten später Probleme auf, lässt sich prüfen, ob die betreffenden Prüfpunkte ordnungsgemäß durchgeführt wurden.\n• Fehlerverfolgung: Bei einem Fehler lässt sich ermitteln, in welcher Phase der Arbeitsplatz-Einrichtung das Problem entstanden ist.\n• Audit-Sicherheit: Bei internen oder externen Audits ist das Testprotokoll der Beweis, dass die Qualitätsmanagementsysteme funktionieren und Kontrollen durchgeführt werden.\nMerke: Deshalb werden Testprotokolle über Jahre hinweg archiviert.",
+    "verweis": "Modul 05, Abschnitt 5.2 — Testprotokoll und seine Funktionen"
+  },
+  {
+    "id": "M05-306",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "freitext",
+    "schwierigkeit": 3,
+    "frage": "Beschreiben Sie, warum Testprotokolle für die Brügmann Bauplanung GmbH bei der Arbeitsplatz-Abnahme unverzichtbar sind. Nennen Sie mindestens 3 Gründe und erklären Sie je kurz.",
+    "musterloesung": "Testprotokolle sind für die Arbeitsplatz-Abnahme unverzichtbar aus folgenden Gründen: (1) Objektivität und Nachvollziehbarkeit: Das Testprotokoll dokumentiert objektiv, welche Prüfpunkte getestet wurden und mit welchem Ergebnis. Dies wird nicht von der Erinnerung oder subjektiven Einschätzung abhängig, sondern ist schwarz auf weiß nachvollziehbar. (2) Haftung und Fehlerverfolgung: Wenn später ein Fehler bei einem Arbeitsplatz entdeckt wird, kann aus dem Testprotokoll ermittelt werden, ob dieser Fehler bereits bei der Abnahme vorhanden war oder danach entstanden ist. Dies schützt das Unternehmen vor unberechtigten Reklamationen und Gewährleistungsfällen. (3) Audit- und Compliance-Sicherheit: Audits verlangen Belege dafür, dass Qualitätskontrollprozesse durchgeführt werden. Testprotokolle sind dieser Beleg und zeigen, dass das Unternehmen ein funktionierendes QM-System hat. (4) Rechtliche Absicherung: Das unterschriebene Testprotokoll ist eine rechtliche Bestätigung, dass die Abnahme durchgeführt wurde und der Arbeitsplatz freigegeben wurde. Im Streitfall kann das Testprotokoll vor Gericht verwendet werden.",
+    "erklaerungKurz": "Testprotokolle sind essenzielle Beweise für korrekte Qualitätskontrolle. Sie schützen das Unternehmen, ermöglichen Fehleranalyse und sind Audit-Nachweis.",
+    "erklaerungLang": "Testprotokolle sind nicht 'nett zu haben', sondern notwendig für ein professionelles Qualitätsmanagementsystem.\n• Qualitätssicherung: Die dokumentierte Abnahme stellt sicher, dass jeder Arbeitsplatz nach gleichen Standards geprüft wird. Das reduziert Fehlerquoten und Benutzer-Frustrationen.\n• Risikomanagement und Haftung: Behauptet ein Benutzer später, der Arbeitsplatz funktioniere nicht, kann das Unternehmen zeigen: 'Im Testprotokoll vom XX.XX.XXXX wurde dies und das geprüft und war OK. Wenn das Problem jetzt auftritt, ist es durch den Benutzer verursacht worden.' Das schützt vor Haftung.\n• Kontinuierliche Verbesserung: Aus den Testprotokollen lassen sich Trends analysieren ('9/10 Fehler sind Netzwerk-Konfiguration'). Das ist die Grundlage für KVP – Fehlerprävention durch verbesserte Checklisten und Schulung (KVP = Kontinuierlicher Verbesserungsprozess).\n• ISO 9001-Konformität und Audits: Die ISO 9001 verlangt Nachweise dafür, dass Prozesse kontrolliert werden; Testprotokolle sind dieser Nachweis (ISO = International Organization for Standardization).\nMerke: Ohne Testprotokolle kann das Unternehmen die Zertifizierung verlieren.",
+    "verweis": "Modul 05, Abschnitt 5.2 — Testprotokoll als QM-Grundinstrument",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Objektivität",
+          "Nachvollziehbarkeit",
+          "nachvollziehbar",
+          "subjektiv"
+        ],
+        [
+          "Haftung",
+          "Fehlerverfolgung",
+          "Streitfall"
+        ],
+        [
+          "Audit",
+          "Compliance",
+          "Nachweis",
+          "ISO 9001"
+        ]
+      ],
+      "kuer": [
+        "Testprotokoll",
+        "Prüfpunkte",
+        "Wiederholbarkeit",
+        "Erinnerung"
+      ]
+    }
+  },
+  {
+    "id": "M05-307",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Welche der folgenden Ausgaben zählt zu den Fehlerverhütungskosten?",
+    "optionen": [
+      "Schulung von Technikern in den richtigen Installationsverfahren; Entwicklung und Implementierung einer standardisierten Checkliste für die Arbeitsplatz-Einrichtung; Erstellung von Standarddokumenten und Arbeitsanweisungen.",
+      "Durchführung von Testprüfungen an jedem fertiggestellten Arbeitsplatz; Endkontrolle vor der Übergabe an den Kunden; Qualitätsprüfung mit Messgeräten und die Arbeitszeit, die für diese Prüfungen und ihre Auswertung aufgewendet wird.",
+      "Behebung von Fehlern, die erst nach der Inbetriebnahme auftreten; Bearbeitung von Reklamationen und Nacharbeiten beim Kunden vor Ort; Ersatz von Bauteilen, die im laufenden Betrieb ausgefallen sind.",
+      "Abschreibungen für Audit-Zertifizierungen; Gebühren für externe Zertifizierungsstellen und für die jährlichen Überwachungsaudits; Reisekosten der Auditoren und die Vorbereitungszeit der eigenen Fachabteilung."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Dies sind Prüfkosten, nicht Fehlerverhütungskosten. Prüfkosten entstehen nach Ausführung der Arbeit.",
+      "Falsch: Dies sind Fehlerkosten. Diese entstehen, wenn ein Fehler bereits eingetreten ist und behoben werden muss.",
+      "Falsch: Dies sind Kosten für Zertifizierung/Audit, nicht spezifisch für Fehlerverhütung."
+    ],
+    "erklaerungKurz": "Fehlerverhütungskosten sind Investitionen zur Vermeidung von Fehlern: Schulung, Standards, Dokumentation, Prozessplanung.",
+    "erklaerungLang": "Fehlerverhütungskosten sind alle Ausgaben, die Fehler von vornherein vermeiden sollen.\n• Fehlerverhütungskosten (Prevention Costs): Schulung und Training, Prozessentwicklung, standardisierte Checklisten und Arbeitsanweisungen, Ausstattung mit guten Werkzeugen und Arbeitsmitteln, Qualitätszirkel und kontinuierliche Verbesserungsprogramme.\n• Prüfkosten (Appraisal Costs): Ausgaben für Tests und Kontrollen nach der Arbeit – Testmessungen, Qualitätsprüfer-Lohn, Prüf-Dokumentation.\n• Fehlerkosten (Failure Costs): Ausgaben nach einem erkannten Fehler – Reparaturen, Reklamationsbearbeitung, Garantie, Image-Schaden.\n• Die 10er-Regel besagt: 1 Euro Fehlerverhütung spart etwa 10 Euro Fehlerkosten.\nMerke: Deshalb ist es wirtschaftlich sinnvoll, in Prävention zu investieren.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Qualitätskosten und ihre Kategorien"
+  },
+  {
+    "id": "M05-308",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 3,
+    "frage": "Ordnen Sie die vier Qualitätskostenarten dem passenden Beispiel aus der Arbeitsplatz-Einrichtung zu.",
+    "paare": [
+      [
+        "Fehlerverhütungskosten",
+        "Schulung der Techniker und Erstellung von Standard-Checklisten und Prozessdokumentation, BEVOR Fehler entstehen"
+      ],
+      [
+        "Prüfkosten",
+        "Testprotokoll und Endkontrolle jedes Arbeitsplatzes VOR der Übergabe (Prüfzeit, Messgeräte)"
+      ],
+      [
+        "interne Fehlerkosten",
+        "Nacharbeit an einem noch im Haus entdeckten fehlerhaften Arbeitsplatz vor der Auslieferung"
+      ],
+      [
+        "externe Fehlerkosten",
+        "Reklamation nach Auslieferung: Technikereinsatz beim Kunden, Ausfallzeit, Imageschaden (rund zehnmal so teuer wie dieselbe Nacharbeit im eigenen Haus)"
+      ]
+    ],
+    "extra": [
+      "Werbeanzeige für einen neuen Wartungsvertrag"
+    ],
+    "erklaerungKurz": "Qualitätskosten gliedern sich in Fehlerverhütungs-, Prüf- und Fehlerkosten (intern/extern). Je später der Fehler entdeckt wird, desto teurer.",
+    "erklaerungLang": "Je später ein Fehler erkannt wird, desto teurer wird er – das ist ein wirtschaftlicher Grundsatz.\n• Prävention (Schulung, Standards, Checklisten) kostet vorgelagert Geld, führt aber zu weniger Fehlern.\n• Prüfung (Testprotokoll) kostet auch etwas, aber weniger als nachgelagerte Fehlerkosten.\n• Fehler im Feld sind am teuersten – nicht nur Reparaturkosten, sondern auch Fahrzeit des Technikers, Kundenausfallzeit und Imageschaden.\n• Die 10er-Regel beschreibt diesen Kostensprung quantitativ.\nMerke: Unternehmen mit hoher Prävention und durchdachter Prüfung senken den Anteil der Fehlerkosten und steigern Rentabilität und Kundenzufriedenheit.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Qualitätskosten über Lebenszyklus und 10er-Regel"
+  },
+  {
+    "id": "M05-309",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Die Kalthoff Medizintechnik GmbH führt eine ISO 9001-Zertifizierung durch. Welche Aussage zu internen und externen Audits ist korrekt?",
+    "optionen": [
+      "In Vorbereitung der Zertifizierung führt das Unternehmen interne Audits durch, um Schwachstellen zu identifizieren. Nach Bestätigung der Konformität durch ein externes Audit einer akkreditierten Stelle erhält das Unternehmen das Zertifikat. Interne Audits sind Selbstbewertungen; externe Audits sind Fremd-Bewertungen.",
+      "Interne und externe Audits sind gleichwertig. Das Unternehmen kann frei wählen, welche Form es für die Zertifizierung durchführen lässt; entscheidet es sich für interne Audits, erhält es das Zertifikat auf Grundlage der eigenen Prüfberichte und ohne jede Beteiligung einer akkreditierten Stelle; ein Unterschied in der Aussagekraft besteht nicht.",
+      "Für die Zertifizierung sind allein externe Audits notwendig. Interne Audits binden nur Arbeitszeit und liefern keine verwertbaren Erkenntnisse, weil eigene Mitarbeitende die Schwachstellen im eigenen Haus ohnehin nicht erkennen.",
+      "Interne Audits sind verbindlich vorgeschrieben und müssen alle drei Monate durchgeführt werden. Das externe Audit einer akkreditierten Stelle ist dagegen freiwillig und für die Erteilung des Zertifikats nicht erforderlich."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Interne Audits (Selbstbewertung) und externe Audits (Fremd-Bewertung durch akkreditierte Stelle) sind grundsätzlich unterschiedlich. Das Unternehmen kann sich nicht 'eins aussuchen'.",
+      "Falsch: Interne Audits sind sehr wertvoll als kontinuierliche Selbstkontrolle. Sie ermöglichen frühzeitige Erkennung von Problemen vor dem externen Audit.",
+      "Das externe Audit ist Voraussetzung für das Zertifikat."
+    ],
+    "erklaerungKurz": "Interne Audits = Selbstkontrolle des Unternehmens. Externe Audits = unabhängige Prüfung durch akkreditierte Stelle. Beide sind sinnvoll.",
+    "erklaerungLang": "Das Audit-System der ISO 9001 arbeitet auf zwei Ebenen: intern zur Vorbereitung, extern für das Zertifikat.\n• Interne Audits sind ein Werkzeug des Unternehmens selbst (ISO = International Organization for Standardization).\n• Ein geschulter interner Auditor oder ein Team prüft regelmäßig – mindestens einmal jährlich – die eigenen Prozesse und Dokumentationen gegen die ISO 9001-Anforderungen.\n• So findet das Unternehmen Schwachstellen und kann Korrekturmaßnahmen einleiten, bevor der externe Auditor kommt.\n• Externe Audits sind Prüfungen durch eine akkreditierte, unabhängige Zertifizierungsstelle; der externe Auditor prüft objektiv, ob das Unternehmen tatsächlich die ISO 9001-Anforderungen erfüllt.\n• Bei Bestehen wird das Zertifikat ausgestellt, danach folgen jährliche Überwachungsaudits.\nMerke: Beide Audit-Arten zusammen gewährleisten, dass Qualität kontinuierlich gelebt wird, nicht nur für die Zertifizierung.",
+    "verweis": "Modul 05, Abschnitt 5.1 — Interne und externe Audits im Zertifizierungsprozess"
+  },
+  {
+    "id": "M05-310",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Ein ___ prüft, ob ein Produkt oder Prozess die technische Spezifikation erfüllt. Eine ___ prüft, ob das Produkt dem eigentlichen Geschäftszweck des Kunden dient. Beide Verfahren sind notwendig: Wenn nur das erste durchgeführt wird, ist das Risiko hoch, dass ein ___ Produkt entsteht, das den Spezifikationen entspricht, aber für den Kunden wertlos ist.",
+    "luecken": [
+      {
+        "optionen": [
+          "Validierung",
+          "Verifizierung",
+          "Review",
+          "Audit"
+        ],
+        "loesung": 1
+      },
+      {
+        "optionen": [
+          "Verifizierung",
+          "Kalibrierung",
+          "Validierung",
+          "Zertifizierung"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "fehlerhaftes",
+          "unbrauchbares",
+          "funktional korrektes",
+          "mangelhaftes"
+        ],
+        "loesung": 2
+      }
+    ],
+    "erklaerungKurz": "Verifizierung = technische Konformität. Validierung = praktischer Nutzen. Ohne Validierung kann ein technisch korrektes Produkt trotzdem unbrauchbar sein.",
+    "erklaerungLang": "Verifizierung prüft die technische Spezifikation, Validierung den Geschäftszweck des Kunden.\n• Verifizierung antwortet auf die Frage 'Ist das Produkt technisch korrekt gebaut?' und prüft objektivierbare, messbare Kriterien.\n• Beispiel Arbeitsplatz: Das Netzwerk antwortet auf ping, der Monitor hat 1920x1080, der Drucker druckt.\n• Validierung antwortet auf 'Erfüllt das Produkt den Geschäftszweck des Kunden?' und ist subjektiver und pragmatischer.\n• Beispiel Arbeitsplatz: Der Nutzer kann produktiv arbeiten, die benötigte Software läuft flüssig, die Ergonomie stimmt.\n• Das Risiko bei alleiniger Verifizierung ist real: Ein Arbeitsplatz kann alle technischen Anforderungen erfüllen und trotzdem praktisch wertlos sein, wenn Software und ergonomische Ausstattung nicht zum Benutzer passen.\nMerke: Verifizierung fragt „Was haben wir versprochen?\", Validierung „Was braucht der Kunde wirklich?\" – erst beides zusammen genügt.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Verifizierung und Validierung als komplementäre Prüfverfahren"
+  },
+  {
+    "id": "M05-311",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "erklaeren",
+    "schwierigkeit": 1,
+    "frage": "Erkläre den Begriff: Qualitätslenkung (Quality Control)",
+    "musterloesung": "Qualitätslenkung ist der operative Prozess, bei dem geplante Maßnahmen umgesetzt und während der Umsetzung kontinuierlich überwacht werden. Im Gegensatz zur Qualitätsplanung (strategisch, am Anfang) und Qualitätssicherung (prüfend, am Ende) ist Qualitätslenkung das 'Lenken' der laufenden Produktion. Qualitätslenkung beinhaltet: (1) Prozessüberwachung — werden die Standards eingehalten? (2) Sofortkorrektur — wenn Abweichungen auftreten, werden diese unmittelbar behoben. (3) Dokumentation von Abweichungen und Korrekturen. Qualitätslenkung ist 'live' — während der Arbeit, nicht nur nachher. Dies reduziert die Anzahl der Fehler insgesamt und macht die Qualitätssicherung ('Prüfung am Ende') einfacher. Im PDCA-Zyklus entspricht Qualitätslenkung der Do-Phase, in der das geplante Verfahren durchgeführt wird, aber nicht unbeobachtet, sondern mit Steuerung.",
+    "erklaerungKurz": "Qualitätslenkung ist die operative Überwachung und Korrektur während der Ausführung. Sie unterscheidet sich von Planung (vorher) und Sicherung (nachher).",
+    "erklaerungLang": "Qualitätslenkung ist das Steuern des Prozesses während der Ausführung – nicht erst die Prüfung am Ende.\n• Sie wird oft missverstanden als 'nur Prüfung'.\n• Beispiel Arbeitsplatz-Einrichtung: Während der Techniker den Arbeitsplatz aufbaut, folgt er der Checkliste, wechselt zwischen Ausführung und Selbstprüfung, erkennt kleine Fehler sofort und behebt sie live.\n• Qualitätslenkung umfasst auch Anpassungen an veränderte Bedingungen, z.B. 'Die Software ist nicht verfügbar, die Priorität muss angepasst werden'.\n• Diese Anpassungen werden dokumentiert und dem Qualitätssicherungs-Bereich mitgeteilt.\n• Dadurch werden viele Fehler gar nicht erst geboren, sondern schon in der Lenkungsphase unterbunden.\nMerke: Fehler früh zu verhindern senkt die Fehlerquote erheblich und ist wirtschaftlicher als Reparatur am Ende.",
+    "verweis": "Modul 05, Abschnitt 5.2 — Qualitätslenkung als operative Steuerung im QM-System",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Qualitätslenkung",
+          "operativer Prozess",
+          "laufende Produktion"
+        ],
+        [
+          "Überwachung",
+          "Prozessüberwachung",
+          "überwacht",
+          "Standards"
+        ],
+        [
+          "Sofortkorrektur",
+          "Abweichungen",
+          "korrigiert"
+        ]
+      ],
+      "kuer": [
+        "Quality Control",
+        "Qualitätsplanung",
+        "Qualitätssicherung",
+        "Umsetzung"
+      ]
+    }
+  },
+  {
+    "id": "M05-312",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Die Wetzlarer Prüftechnik GmbH richtet täglich rund 50 gleichartige Arbeitsplätze ein und prüft sie per Stichprobe. Seit zwei Wochen häufen sich Fehler in den Stichproben. Der Teamleiter verdoppelt daraufhin den Stichprobenumfang und lässt es dabei bewenden. Wie ist die Maßnahme zu beurteilen?",
+    "optionen": [
+      "Sie sichert ab, behebt aber nichts: Die Stichprobe prüft den Prozess, nicht das Einzelstück. Häufen sich Fehler, ist die Ursache im Prozess zu suchen und abzustellen — sonst misst der größere Umfang denselben Fehler nur genauer.",
+      "Sie ist ausreichend, weil ein größerer Stichprobenumfang die Fehlerquote senkt: Es werden mehr Geräte geprüft, dadurch gelangen weniger fehlerhafte Arbeitsplätze zu den Anwendern, und der Prozess pendelt sich von selbst wieder ein.",
+      "Sie ist unnötig, weil steigende Fehlerzahlen bei gleichartigen Einheiten die normale Streuung einer Stichprobe sind. Solange die Konfiguration unverändert bleibt, gibt es keinen Anlass, an der Prüfung oder am Prozess etwas zu ändern.",
+      "Sie ist unzureichend, weil beim ersten Fehler in einer Stichprobe zwingend die lückenlose Vollprüfung aller Einheiten vorgeschrieben ist — unabhängig von Ursache, Stückzahl und Aufwand der Prüfung."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Falsch: Mehr Prüfung findet mehr Fehler, sie verhindert keinen einzigen. Der Prozess bleibt unverändert fehlerhaft.",
+      "Falsch: Eine über zwei Wochen steigende Fehlerquote ist ein Signal, keine Streuung — die Stichprobe meldet genau das.",
+      "Falsch: Die Vollprüfung ist bei wenigen, kritischen oder risikoreichen Einheiten angezeigt, nicht als Reflex auf jeden Fehler."
+    ],
+    "erklaerungKurz": "Die Stichprobe prüft den Prozess, nicht das Einzelstück. Häufen sich Fehler, wird der Prozess korrigiert — ein größerer Stichprobenumfang sichert nur ab und misst denselben Fehler genauer.",
+    "erklaerungLang": "Die Maßnahme ist als Sofortmaßnahme richtig und als Antwort auf die Ursache falsch.\n• Stichprobenprüfung ist bei vielen gleichartigen Einheiten wirtschaftlich — solange der Prozess stabil ist. Genau diese Bedingung ist hier verletzt.\n• Eine über zwei Wochen steigende Fehlerquote ist die Meldung der Stichprobe, dass sich am Prozess etwas geändert hat: ein neues Image, eine andere Hardwarecharge, ein geänderter Arbeitsschritt.\n• Kurzfristig darf der Umfang erhöht oder auf Vollprüfung gewechselt werden, damit nichts Fehlerhaftes hinausgeht — das ist Absicherung, keine Behebung.\n• Die eigentliche Maßnahme ist, die Ursache zu suchen und den Prozess zu korrigieren. Erst danach darf der Umfang wieder sinken.\nMerke: Die Stichprobe ist ein Messgerät, kein Filter — wer nur feiner misst, hat den Fehler noch nicht abgestellt.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Vollprüfung oder Stichprobe: die Stichprobe prüft den Prozess"
+  },
+  {
+    "id": "M05-401",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 1,
+    "frage": "Welche Tätigkeiten bilden die vier Phasen des PDCA-Zyklus in der kontinuierlichen Verbesserung? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Planung der Verbesserungsmaßnahme",
+      "Umsetzung der geplanten Maßnahme, zunächst im kleinen Rahmen",
+      "Überprüfung der Wirksamkeit und Ergebnisse",
+      "Archivierung aller Unterlagen des Verbesserungsprojekts",
+      "Standardisierung wirksamer Maßnahmen oder Wiederholung des Zyklus",
+      "Regelmäßige Berichterstattung der Ergebnisse an die Geschäftsführung"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "erklaerungKurz": "PDCA ist: Planen, Umsetzen, Überprüfen, Handeln/Standardisieren. Der Zyklus wiederholt sich kontinuierlich.",
+    "erklaerungLang": "Zum PDCA-Zyklus gehören genau vier Phasen: Plan, Do, Check und Act.\n• Plan: Ziel und Maßnahmen definieren.\n• Do: Die Maßnahme umsetzen und zunächst im kleinen Rahmen erproben (Pilot).\n• Check: Ist das Ergebnis wie erwartet? Daten sammeln.\n• Act: Wirksame Maßnahmen standardisieren, ineffektive verwerfen oder anpassen. Dann beginnt der nächste Zyklus.\n• Dokumentation und Reporting sind unterstützend, gehören aber nicht zu den vier Kern-Phasen.\nMerke: Der PDCA-Zyklus (Deming-Zyklus) ist der Motor der kontinuierlichen Verbesserung (KVP = Kontinuierlicher Verbesserungsprozess).",
+    "verweis": "Modul 05, Abschnitt 5.2 – PDCA-Zyklus und kontinuierliche Verbesserung",
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Die Archivierung der Unterlagen ist keine PDCA-Phase; der Zyklus besteht nur aus Plan, Do, Check, Act.",
+      "",
+      "Berichte an die Geschäftsführung gehören nicht zum PDCA-Zyklus; die vierte Phase heißt Act (Standardisieren oder erneut durchlaufen)."
+    ]
+  },
+  {
+    "id": "M05-402",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche der folgenden Aussagen zu Qualitätskostenarten sind korrekt? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Externe Fehlerkosten entstehen, wenn ein Produkt oder eine Leistung erst beim Kunden Mängel zeigt",
+      "Prävention ist ein Beispiel für Kosten, die zur Fehlervermeidung aufgewendet werden",
+      "Inspektionskosten sind Kosten, um Fehler nach der Herstellung auszusortieren",
+      "Externe Fehlerkosten sind immer niedriger als interne, weil der Kunde nichts bemerkt",
+      "Qualitätskostenmanagement ist irrelevant für kleine Unternehmen",
+      "Präventionskosten sind oft günstiger als die Kosten für Fehlerbehebung"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      5
+    ],
+    "erklaerungKurz": "Qualitätskosten: Prävention (vorbeugen), Inspektion (prüfen), Fehler (intern/extern). Prävention ist meist günstiger.",
+    "erklaerungLang": "Das Qualitätskostenmanagement unterscheidet vier Kostenkategorien.\n• Prevention Costs – Schulung, Tests, Prozess-Optimierung.\n• Inspection/Appraisal Costs – Qualitätsprüfung, Code-Review.\n• Internal Failure Costs – Fehler vor der Auslieferung.\n• External Failure Costs – Fehler beim Kunden, die teuerste Kategorie.\n• Die Faustregel: 1 € Prävention spart etwa 10 € Fehlerbehebung.\nMerke: Externe Fehlerkosten sind oft ein Vielfaches von internen.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Qualitätskostenarten",
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Externe Fehlerkosten sind meist höher als interne (Imageschaden, Kulanz); der Kunde bemerkt den Fehler sehr wohl.",
+      "Qualitätskostenmanagement ist für Unternehmen jeder Größe relevant, auch für kleine Betriebe.",
+      ""
+    ]
+  },
+  {
+    "id": "M05-440",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "reihenfolge",
+    "schwierigkeit": 1,
+    "frage": "Bringe die vier Phasen des PDCA-Zyklus (Plan–Do–Check–Act) in die richtige Reihenfolge:",
+    "schritte": [
+      "Plan: Problem analysieren, Ursachen identifizieren, Lösungsansatz planen",
+      "Do: Lösungsansatz in kleinem Maßstab testen oder durchführen",
+      "Check: Ergebnisse überprüfen, Daten sammeln, Erfolg bewerten",
+      "Act: Erfolgreiche Maßnahmen standardisieren, in größerem Maßstab einführen, oder neu planen bei Misserfolg"
+    ],
+    "erklaerungKurz": "PDCA ist ein iterativer Qualitäts- und Verbesserungszyklus: Planen → Erproben → Überprüfen → Standardisieren. Der Zyklus wiederholt sich kontinuierlich.",
+    "erklaerungLang": "PDCA (auch Deming-Zyklus genannt) ist die Basis der Kontinuierlichen Verbesserung (KVP/Kaizen).\n• Plan schafft Klarheit.\n• Do testet im kleinen (Pilot).\n• Check bewertet objektiv.\n• Act standardisiert oder startet einen neuen Zyklus.\n• Das ist zentral für QM und ISO-Normen (QM = Qualitätsmanagement; ISO = International Organization for Standardization, internationale Normungsorganisation).\nMerke: Der Zyklus ist nicht einmalig – nach Act beginnt ein neuer Plan auf Basis der neuen Erkenntnisse.",
+    "verweis": "Modul 05, Abschnitt 5.2 – PDCA-Zyklus und kontinuierliche Verbesserung"
+  },
+  {
+    "id": "M05-461",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Der PDCA-Zyklus beschreibt einen Regelkreis aus vier Phasen: ___ (Planung), Do (Durchführung), Check (___ und Auswertung) und Act (Aktion/Anpassung). Dieses Modell unterstützt die KVP-Philosophie (___) im Qualitätsmanagementsystem.",
+    "luecken": [
+      {
+        "optionen": [
+          "Do",
+          "Plan",
+          "Check",
+          "Act"
+        ],
+        "loesung": 1
+      },
+      {
+        "optionen": [
+          "Überprüfung",
+          "Reparatur",
+          "Abwicklung",
+          "Freigabe"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "Kritische Verbesserung",
+          "Kontinuierliche Verbesserung",
+          "Kundenverantwortung",
+          "Komplette Veränderung"
+        ],
+        "loesung": 1
+      }
+    ],
+    "erklaerungKurz": "PDCA = Plan → Do → Check → Act. Dies ist die Grundlage der KVP (Kontinuierliche Verbesserung) und wird in Qualitätsmanagementsystemen nach ISO 9001 angewendet.",
+    "erklaerungLang": "Der Plan-Do-Check-Act-Zyklus (auch Deming-Rad genannt) ist ein iteratives Modell für ständige Verbesserung.\n• Plan: Ziel und Strategie festlegen.\n• Do: Maßnahmen durchführen.\n• Check: Ergebnisse überprüfen.\n• Act: Lernerkenntnisse in den Prozess einbauen.\nMerke: Das wird zyklisch wiederholt und schafft so eine KVP-Kultur (KVP = Kontinuierlicher Verbesserungsprozess).",
+    "verweis": "Modul 05, Abschnitt 5.1 – PDCA und kontinuierliche Verbesserung"
+  },
+  {
+    "id": "M05-487",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "bild",
+    "unterTyp": "dropdown",
+    "schwierigkeit": 1,
+    "frage": "Der PDCA-Zyklus besteht aus vier Phasen. Die erste Phase ist 'Plan', die zweite ist '___', die dritte ist 'Check' und die vierte ist '___'.",
+    "svg": "<svg viewBox='0 0 400 420' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'>\n<defs>\n<style>\n.circle {fill: #E3F2FD; stroke: #0D47A1; stroke-width: 2;}\n.phase-label {text-anchor: middle; dominant-baseline: middle; font-weight: bold; font-size: 13px; color: #0D47A1;}\n.phase-number {text-anchor: middle; dominant-baseline: middle; font-weight: bold; font-size: 20px; fill: #666;}\n.arrow {stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrowhead);}\n.description {text-anchor: middle; font-size: 10px; fill: #666;}\n.title {font-weight: bold; font-size: 14px; text-anchor: middle;}\n</style>\n<marker id='arrowhead' markerWidth='10' markerHeight='10' refX='9' refY='3' orient='auto'>\n<polygon points='0 0, 10 3, 0 6' fill='#333'/>\n</marker>\n</defs>\n<text class='title' x='200' y='25'>PDCA-Zyklus (Deming Cycle)</text>\n<circle class='circle' cx='200' cy='100' r='45'/>\n<text class='phase-number' x='200' y='100'>1</text>\n<text class='description' x='200' y='165'>Plan: Planen</text>\n<circle class='circle' cx='300' cy='180' r='45'/>\n<text class='phase-number' x='300' y='180'>2</text>\n<text class='description' x='300' y='245'>???</text>\n<circle class='circle' cx='200' cy='280' r='45'/>\n<text class='phase-number' x='200' y='280'>3</text>\n<text class='description' x='200' y='345'>Check: Überprüfen</text>\n<circle class='circle' cx='100' cy='180' r='45'/>\n<text class='phase-number' x='100' y='180'>4</text>\n<text class='description' x='100' y='245'>???</text>\n<path class='arrow' d='M 240 130 L 270 160'/>\n<path class='arrow' d='M 280 220 L 240 250'/>\n<path class='arrow' d='M 140 250 L 130 220'/>\n<path class='arrow' d='M 130 140 L 160 110'/>\n</svg>",
+    "luecken": [
+      {
+        "optionen": [
+          "Define",
+          "Design",
+          "Do",
+          "Deploy"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "Act",
+          "Analyze",
+          "Assess",
+          "Apply"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "Der PDCA-Zyklus (auch Deming Cycle genannt) besteht aus Plan → Do (Durchführen) → Check (Überprüfen) → Act (Handeln). Diese vier Phasen werden wiederholt, um kontinuierliche Verbesserungen zu erreichen.",
+    "erklaerungLang": "PDCA ist die Grundlage des Kontinuierlichen Verbesserungsprozesses (KVP).\n• Plan: Ziele und Maßnahmen definieren.\n• Do: Die geplanten Maßnahmen umsetzen.\n• Check: Ergebnisse überprüfen und mit den Zielen vergleichen.\n• Act: Erkenntnisse nutzen, um den Prozess anzupassen.\nMerke: Der Zyklus wird dann wiederholt, um schrittweise Verbesserungen zu erreichen.",
+    "verweis": "Modul 05, Abschnitt 5.2 – PDCA-Zyklus und kontinuierliche Verbesserung"
+  },
+  {
+    "id": "M05-501",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "fehlersuche",
+    "schwierigkeit": 2,
+    "frage": "Ein Testprotokoll für einen Installationstest wird ausgefüllt. Folgende Einträge werden gemacht. Klicke die fehlerhafte Zeile an.",
+    "zeilen": [
+      "Tester: Max Mustermann",
+      "Datum: 08.07.2026",
+      "Erwartetes Ergebnis: System startet fehlerfrei",
+      "Durchführung: System wird hochgefahren, kein Ergebnis dokumentiert"
+    ],
+    "fehlerZeile": 3,
+    "erklaerungKurz": "Das Testprotokoll muss das TATSÄCHLICHE ERGEBNIS dokumentieren. 'Kein Ergebnis dokumentiert' ist keine zulässige Eintragung und verletzt die Dokumentationspflicht.",
+    "erklaerungLang": "Ein Testprotokoll ohne dokumentiertes Testergebnis ist ungültig.\n• Ein Testprotokoll ist ein verbindliches Dokumentationsmittel und muss alle Pflichtangaben enthalten: Tester, Datum, erwartetes Ergebnis UND tatsächliches Ergebnis.\n• Die Zeile 'Durchführung: System wird hochgefahren, kein Ergebnis dokumentiert' ist unvollständig und nicht nachverfolgbar.\n• Korrekt müsste sie lauten: 'Tatsächliches Ergebnis: System startete erfolgreich / System startete mit Fehlern [Fehlerdetails]'.\nMerke: Ohne dokumentiertes Ist-Ergebnis lässt sich nichts vergleichen – dann ist das Protokoll wertlos.",
+    "verweis": "Modul 05, Abschnitt 5.2: Testprotokolle und Dokumentation von Testergebnissen"
+  },
+  {
+    "id": "M05-601",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Die Overkamp Wertpapierhandel AG führt ein neues IT-Sicherheit-Audit durch. Der Auditor prüft, ob die Prozesse zur Verfügbarkeitssicherung (z. B. Backups, Redundanz) regelmäßig durchgeführt werden, und notiert Abweichungen. In welche QM-Phase fällt diese Aktivität?",
+    "optionen": [
+      "Qualitätssicherung – Überprüfung der bestehenden Prozesse auf Einhaltung",
+      "Qualitätsplanung – Festlegung von Qualitätszielen und Maßnahmen",
+      "Qualitätsverbesserung – Ableitung von Optimierungen aus Prüfergebnissen",
+      "Qualitätslenkung – Anpassung einzelner Maßnahmen während der Durchführung"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Qualitätsplanung würde vor dem Audit stattfinden (Ziele setzen).",
+      "Qualitätsverbesserung wäre das Resultat nach dem Audit (aus Findings Maßnahmen ableiten).",
+      "Qualitätslenkung ist operative Steuerung während der laufenden Arbeit, nicht im Audit."
+    ],
+    "erklaerungKurz": "Qualitätssicherung (QS) ist systematische Überprüfung; der Auditor prüft, ob Prozesse eingehalten werden. Audit ist ein Werkzeug der QS.",
+    "erklaerungLang": "Die vier QM-Phasen nach ISO 9001: Planung, Lenkung, Sicherung, Verbesserung – das Audit gehört zur Qualitätssicherung (QM = Qualitätsmanagement; ISO = International Organization for Standardization).\n• Qualitätsplanung – Ziele festlegen, Prozesse designen, z. B. 'Backup täglich um 22:00'.\n• Qualitätslenkung – operative Steuerung während der Durchführung, z. B. den Backup-Status überprüfen.\n• Qualitätssicherung – systematische Prüfung, z. B. ein Audit alle 6 Monate.\n• Qualitätsverbesserung – aus den Prüfergebnissen Verbesserungen ableiten.\nMerke: Das Audit ist klassisches Werkzeug der QS – es prüft auf Einhaltung von Vereinbarungen und dokumentiert Abweichungen (QS = Qualitätssicherung).",
+    "verweis": "Modul 05, Abschnitt 5.2 – QM-Phasen und ihre Zuordnung"
+  },
+  {
+    "id": "M05-602",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "zuordnung",
+    "schwierigkeit": 2,
+    "frage": "Ordnen Sie die vier QM-Phasen exemplarischen Tätigkeiten zu.",
+    "paare": [
+      [
+        "Qualitätsplanung",
+        "Festlegung: 'Verfügbarkeit muss mind. 99,5 % sein'; Design: Redundante Server, tägliche Backups"
+      ],
+      [
+        "Qualitätslenkung",
+        "Operative Überwachung: Backup-Status täglich prüfen, bei Fehler sofort manuell Backup"
+      ],
+      [
+        "Qualitätssicherung",
+        "Halbjährliche Audit: Sind alle Backups vollständig? Sind Dokumentationen aktuell?"
+      ],
+      [
+        "Qualitätsverbesserung",
+        "Audit-Finding: Backups unverschlüsselt → Maßnahme: AES-256-Verschlüsseln implementieren"
+      ]
+    ],
+    "erklaerungKurz": "Planung = Ziel + Design; Lenkung = operative Überwachung; Sicherung = systematische Prüfung; Verbesserung = aus Findings lernen.",
+    "erklaerungLang": "Die vier QM-Phasen entsprechen genau den vier Phasen des PDCA-Zyklus (QM = Qualitätsmanagement).\n• Zuerst plant man: Plan = Qualitätsplanung.\n• Dann steuert man operativ: Do = Qualitätslenkung.\n• Dann prüft man systematisch: Check = Qualitätssicherung.\n• Dann leitet man Verbesserungen ab: Act = Qualitätsverbesserung.\n• Die Phasen sind nicht isoliert, sondern Teil eines durchgehenden Zyklus.\nMerke: Der Zyklus läuft kontinuierlich und führt zu spiralförmiger Steigerung.",
+    "verweis": "Modul 05, Abschnitt 5.2 – ISO 9001 Prozessmodell"
+  },
+  {
+    "id": "M05-603",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 3,
+    "frage": "Ein Unternehmen, das nach ISO 9001 zertifiziert ist, nutzt den PDCA-Zyklus als Grundgerüst: Die ___ Phase entspricht der Qualitätsplanung. Die ___ Phase ist Qualitätslenkung. Die ___ Phase ist Qualitätssicherung. Die ___ Phase ist Qualitätsverbesserung, endet aber mit der Standardisierung für den nächsten Zyklus.",
+    "luecken": [
+      {
+        "optionen": [
+          "Do",
+          "Plan",
+          "Check",
+          "Act"
+        ],
+        "loesung": 1
+      },
+      {
+        "optionen": [
+          "Plan",
+          "Check",
+          "Do",
+          "Act"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "Check",
+          "Act",
+          "Plan",
+          "Do"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "Plan",
+          "Do",
+          "Check",
+          "Act"
+        ],
+        "loesung": 3
+      }
+    ],
+    "erklaerungKurz": "PDCA ist das Kernmodell; jede Phase entspricht einer QM-Phase der ISO 9001.",
+    "erklaerungLang": "Die vier PDCA-Phasen entsprechen den vier QM-Funktionen (QM = Qualitätsmanagement).\n• Plan = QM-Planung, z. B. das Ziel 99,9 %.\n• Do = QM-Lenkung, z. B. die tägliche Überwachung.\n• Check = QM-Sicherung, z. B. das Audit.\n• Act = QM-Verbesserung, z. B. die Standardisierung.\n• Nach Act folgt sofort wieder Plan für den nächsten Zyklus, was zu kontinuierlicher spiralförmiger Verbesserung führt.\nMerke: Diese Zuordnung ist zentral für das Verständnis von modernem Qualitätsmanagement.",
+    "verweis": "Modul 05, Abschnitt 5.2 – PDCA und ISO 9001 Prozessmodell"
+  },
+  {
+    "id": "M05-604",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "freitext",
+    "schwierigkeit": 4,
+    "frage": "Sie sind QM-Verantwortlicher der Nierstein Weinkellerei GmbH. Beschreiben Sie einen konkreten PDCA-Zyklus für die Verbesserung der Ticketlösungszeit im Helpdesk. Die aktuelle Lösungszeit beträgt 12 Stunden, Ziel sind 4 Stunden.",
+    "musterloesung": "Plan-Phase: (1) IST analysieren: 12 h Lösungszeit, hauptsächlich wegen Wartezeiten auf Informationen vom User (30%), fehlendem Wissen bei Supportern (40%), unzureichenden Dokumentationen (30%). (2) SOLL-Zustand: 4 h Lösungszeit. (3) Maßnahmen planen: (a) Knowledge-Base erweitern (Dokumentation), (b) Supporter schulen (typische Probleme), (c) Ticket-Template verbessern (schneller Infos von User sammeln). Do-Phase: (1) Maßnahmen umsetzen: Knowledge-Base um 50 typische Issues erweitern (2 Wochen), Schulung 4 Stunden je Supporter, verbessertes Ticket-Template einführen. Check-Phase: (1) Nach 4 Wochen Lösungszeiten messen: Durchschnitt 6,5 Stunden (Verbesserung von 12 auf 6,5 h). (2) Mit Ziel 4 h vergleichen: noch 2,5 h Differenz. (3) Ermitteln, was noch bremst: Knowledge-Base ist noch unvollständig. Act-Phase: (1) Erkenntnisse: Mehr Zeit für Knowledge-Base nötig; Supporter-Schulung war teilweise wirksam. (2) Maßnahmen für nächsten Zyklus: Dokumentation erweitern (4 weitere Wochen), monatliche Auffrischungsschulungen einführen. (3) Neuer Zyklus startet mit verbessertem Plan.",
+    "erklaerungKurz": "PDCA ist iterativ: Plan → Do → Check → Act → Plan (nächster Zyklus). Jeder Zyklus bringt Fortschritt bis zum Ziel.",
+    "erklaerungLang": "Der PDCA-Zyklus ist das Kern-Instrument für Verbesserungen in modernen Unternehmen.\n• Plan definiert den Ist-Zustand, das Ziel und die Maßnahmen.\n• Do setzt die Maßnahmen um.\n• Check misst die Ergebnisse und vergleicht sie mit dem Ziel.\n• Act leitet aus den Erkenntnissen Anpassungen ab und standardisiert Verbesserungen.\n• Der Zyklus ist iterativ: Nach Act folgt sofort wieder Plan – mit neuem Zielwert.\nMerke: Das ist zugleich KVP (Kontinuierlicher Verbesserungsprozess) – kleine Verbesserungsschritte in jedem Zyklus addieren sich über Monate und Jahre zu großen Effekten.",
+    "verweis": "Modul 05, Abschnitt 5.2 – Praktische PDCA-Anwendung",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "12 Stunden",
+          "12 h",
+          "zwölf Stunden"
+        ],
+        [
+          "4 Stunden",
+          "vier Stunden"
+        ],
+        [
+          "Knowledge-Base",
+          "Ticket-Template",
+          "Supporter schulen"
+        ]
+      ],
+      "kuer": [
+        "Plan",
+        "Check",
+        "Pilot",
+        "standardisiert"
+      ]
+    }
+  },
+  {
+    "id": "M05-700",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Begriffe & Normen",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 1,
+    "frage": "Welche Aussagen über Qualitätsmanagement und die Norm ISO 9001 sind zutreffend? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Die ISO 9001 stellt Anforderungen an ein Qualitätsmanagementsystem, nicht an ein einzelnes Produkt",
+      "Qualität bedeutet, dass ein Ergebnis die vereinbarten Anforderungen erfüllt",
+      "Eine Zertifizierung weist gegenüber Dritten nach, dass die Anforderungen der Norm erfüllt sind",
+      "Die ISO 9001 schreibt vor, mit welchen Werkzeugen und Programmen ein Betrieb seine Aufgaben erledigen muss",
+      "Qualität bedeutet, immer die technisch bestmögliche Ausführung zu wählen, unabhängig von der Vereinbarung",
+      "Ein zertifizierter Betrieb ist von Reklamationen befreit, weil die Norm die Fehlerfreiheit garantiert"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "erklaerungKurz": "Die ISO 9001 stellt Anforderungen an das Managementsystem. Qualität heißt: die vereinbarten Anforderungen sind erfüllt – nicht: technisch maximal.",
+    "erklaerungLang": "Die ISO 9001 bewertet das System, nicht das einzelne Produkt (ISO = International Organization for Standardization).\n• Die Norm beschreibt, wie ein Betrieb seine Abläufe steuert, überwacht und verbessert – deshalb richten sich ihre Anforderungen an das Qualitätsmanagementsystem und nicht an ein einzelnes Produkt.\n• Qualität ist in diesem Sinn kein Werturteil, sondern der Abgleich mit dem Vereinbarten: Ein Ergebnis ist dann gut, wenn es die vereinbarten Anforderungen erfüllt.\n• Die Zertifizierung durch eine unabhängige Stelle weist gegenüber Dritten nach, dass die Anforderungen der Norm erfüllt sind, und macht das nach außen sichtbar, etwa bei Ausschreibungen.\n• Warum die Aussage zu Werkzeugen und Programmen nicht stimmt: Die Norm schreibt keine vor – wie der Betrieb seine Ziele erreicht, bleibt ihm überlassen.\n• Warum die technisch bestmögliche Ausführung nicht gemeint ist: Diese Gleichsetzung ist ein verbreiteter Irrtum – eine überdimensionierte Lösung ist teurer als vereinbart und damit gerade nicht bedarfsgerecht.\n• Warum die Befreiung von Reklamationen nicht stimmt: Eine Zertifizierung sagt etwas über die Abläufe aus, nicht darüber, dass nie ein Fehler passiert.\nMerke: Zertifiziert werden die Abläufe – nicht die Fehlerfreiheit und nicht das einzelne Produkt.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Qualitätsbegriff und Normen",
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Die Norm schreibt keine konkreten Werkzeuge oder Programme vor. Sie stellt Anforderungen an die Abläufe; den Weg wählt der Betrieb selbst.",
+      "Qualität ist die Erfüllung der vereinbarten Anforderungen. Eine überdimensionierte Lösung ist teurer als vereinbart und damit nicht bedarfsgerecht.",
+      "Eine Zertifizierung bewertet die Abläufe. Fehler und Reklamationen kann sie nicht ausschließen – sie sorgt dafür, dass systematisch damit umgegangen wird."
+    ]
+  },
+  {
+    "id": "M05-701",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "hotspot",
+    "schwierigkeit": 2,
+    "frage": "Klicke im PDCA-Zyklus die Phase an, in der erfolgreich erprobte Verbesserungen als neuer verbindlicher Standard festgeschrieben werden.",
+    "svg": "<svg viewBox='0 0 340 270' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='14'><text x='170' y='22' text-anchor='middle' font-weight='bold'>PDCA-Zyklus</text><rect x='40' y='45' width='110' height='60' rx='6' fill='#fff' stroke='#2A2F39' stroke-width='2'/><text x='95' y='81' text-anchor='middle'>Plan</text><rect x='190' y='45' width='110' height='60' rx='6' fill='#fff' stroke='#2A2F39' stroke-width='2'/><text x='245' y='81' text-anchor='middle'>Do</text><rect x='190' y='170' width='110' height='60' rx='6' fill='#fff' stroke='#2A2F39' stroke-width='2'/><text x='245' y='206' text-anchor='middle'>Check</text><rect x='40' y='170' width='110' height='60' rx='6' fill='#fff' stroke='#2A2F39' stroke-width='2'/><text x='95' y='206' text-anchor='middle'>Act</text><line x1='150' y1='75' x2='190' y2='75' stroke='#2A2F39' stroke-width='2'/><line x1='245' y1='105' x2='245' y2='170' stroke='#2A2F39' stroke-width='2'/><line x1='190' y1='200' x2='150' y2='200' stroke='#2A2F39' stroke-width='2'/><line x1='95' y1='170' x2='95' y2='105' stroke='#2A2F39' stroke-width='2'/></svg>",
+    "zonen": [
+      {
+        "x": 40,
+        "y": 170,
+        "w": 110,
+        "h": 60,
+        "richtig": true,
+        "label": "Act"
+      },
+      {
+        "x": 40,
+        "y": 45,
+        "w": 110,
+        "h": 60,
+        "richtig": false,
+        "label": "Plan"
+      },
+      {
+        "x": 190,
+        "y": 45,
+        "w": 110,
+        "h": 60,
+        "richtig": false,
+        "label": "Do"
+      },
+      {
+        "x": 190,
+        "y": 170,
+        "w": 110,
+        "h": 60,
+        "richtig": false,
+        "label": "Check"
+      }
+    ],
+    "erklaerungKurz": "In der Act-Phase werden bewährte Maßnahmen standardisiert und flächendeckend eingeführt – danach beginnt der Zyklus von vorn.",
+    "erklaerungLang": "Erfolgreich erprobte Verbesserungen werden in der Act-Phase als neuer verbindlicher Standard festgeschrieben.\n• Plan – Verbesserung planen und Ziele festlegen.\n• Do – Maßnahme im kleinen Maßstab erproben.\n• Check – Ergebnisse mit den Zielen vergleichen (Soll-Ist-Vergleich).\n• Act – bewährte Maßnahmen als neuen Standard festschreiben und in die Breite tragen.\n• War die Maßnahme nicht erfolgreich, startet der Zyklus mit angepasster Planung erneut.\nMerke: Der PDCA-Zyklus (Deming-Kreis) ist die Grundlage des kontinuierlichen Verbesserungsprozesses (KVP).",
+    "verweis": "Modul 05, Abschnitt 5.2 – PDCA-Zyklus & KVP"
+  },
+  {
+    "id": "M05-702",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "matrix",
+    "schwierigkeit": 3,
+    "frage": "Ordne die Kostenbeispiele aus der Fertigung der Düsterloh Schweißtechnik GmbH den vier Kategorien der Qualitätskosten zu.",
+    "quadranten": [
+      "Fehlerverhütungskosten",
+      "Prüfkosten",
+      "Interne Fehlerkosten",
+      "Externe Fehlerkosten"
+    ],
+    "elemente": [
+      {
+        "text": "Zweitägige Schweißerschulung für acht Monteure vor Anlauf der neuen Baureihe: 6.400 Euro.",
+        "quadrant": 0
+      },
+      {
+        "text": "Wareneingangskontrolle: eine Vollzeitstelle prüft stichprobenartig die angelieferten Bauteile, Personalkosten 52.000 Euro im Jahr.",
+        "quadrant": 1
+      },
+      {
+        "text": "Ausschuss: 140 fehlerhafte Werkstücke im Quartal werden wieder eingeschmolzen, Materialwert 9.800 Euro.",
+        "quadrant": 2
+      },
+      {
+        "text": "Nacharbeit an 60 Teilen, die die Endkontrolle nicht bestanden haben, bevor sie das Werk verlassen: 22 Arbeitsstunden.",
+        "quadrant": 2
+      },
+      {
+        "text": "Garantie-Reparaturen beim Kunden nach 18 Reklamationen im letzten Jahr: 31.000 Euro einschließlich Anfahrt und Monteurstunden.",
+        "quadrant": 3
+      },
+      {
+        "text": "Rückruf einer bereits ausgelieferten Charge von 400 Baugruppen: 145.000 Euro sowie Berichte in zwei Fachzeitschriften.",
+        "quadrant": 3
+      }
+    ],
+    "erklaerungKurz": "Entscheidend ist der ZEITPUNKT, nicht die Höhe: 6.400 Euro Schulung vorher gegen 145.000 Euro Rückruf nachher. Also: vor der Entstehung (Fehlerverhütung), während der Prüfung (Prüfkosten), nach Entdeckung im Haus (interne Fehlerkosten) oder erst beim Kunden (externe Fehlerkosten).",
+    "erklaerungLang": "Die Qualitätskosten werden nach dem Zeitpunkt eingeteilt, zu dem sie anfallen.\n• FEHLERVERHÜTUNGSKOSTEN entstehen, bevor überhaupt ein Fehler möglich ist – die Schweißerschulung für 6.400 Euro.\n• PRÜFKOSTEN entstehen durch das Suchen nach Fehlern, unabhängig davon, ob welche gefunden werden – die Wareneingangskontrolle für 52.000 Euro im Jahr.\n• INTERNE FEHLERKOSTEN entstehen, wenn ein Fehler im eigenen Haus entdeckt wird: Ausschuss und Nacharbeit, hier 9.800 Euro Material und 22 Arbeitsstunden.\n• EXTERNE FEHLERKOSTEN entstehen, wenn der Fehler erst beim Kunden auffällt: 31.000 Euro Garantie-Reparaturen und 145.000 Euro Rückruf.\n• Die Zahlen zeigen die zentrale Aussage der Zehnerregel: Je später ein Fehler entdeckt wird, desto teurer wird er – vom Materialwert des Ausschusses über die Garantiereparatur bis zum Rückruf, bei dem zu den 145.000 Euro noch der Imageschaden aus den Fachzeitschriften kommt, der sich nicht beziffern lässt.\nMerke: Geld für Schulung und Prüfung ist fast immer besser angelegt als für Nacharbeit.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Qualitätskosten"
+  },
+  {
+    "id": "M05-703",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "reihenfolge",
+    "schwierigkeit": 2,
+    "frage": "Die neue Lagerverwaltungssoftware der Marklohe Möbelspedition GmbH soll systematisch getestet werden. Bringe die Schritte eines Testdurchlaufs in die richtige Reihenfolge:",
+    "schritte": [
+      "Testfall festlegen: Vorbedingungen, Testschritte und erwartetes Ergebnis definieren",
+      "Testumgebung vorbereiten und Testdaten bereitstellen",
+      "Test durchführen und Ist-Ergebnis im Testprotokoll festhalten",
+      "Soll-Ist-Vergleich: erwartetes und tatsächliches Ergebnis abgleichen",
+      "Abweichungen als Fehler melden und Nachtest planen"
+    ],
+    "erklaerungKurz": "Erst den Testfall mit erwartetem Ergebnis definieren, dann Umgebung vorbereiten, testen und protokollieren, Soll und Ist vergleichen, Abweichungen melden.",
+    "erklaerungLang": "Ein systematischer Testdurchlauf beginnt mit dem Testfall und endet mit dem Nachtest.\n• Zuerst wird der Testfall definiert – inklusive des erwarteten Ergebnisses, denn ohne Soll-Wert lässt sich später nichts vergleichen.\n• Anschließend werden Testumgebung und Testdaten vorbereitet, damit der Test reproduzierbar ist.\n• Bei der Durchführung wird das Ist-Ergebnis im Testprotokoll dokumentiert.\n• Der Soll-Ist-Vergleich zeigt, ob der Test bestanden ist.\n• Abweichungen werden als Fehler (Mangel) gemeldet und nach der Korrektur in einem Nachtest erneut geprüft.\nMerke: Ohne vorher definierten Soll-Wert ist ein Test wertlos.",
+    "verweis": "Modul 05, Abschnitt 5.2 – Testdurchführung & Testprotokoll"
+  },
+  {
+    "id": "M05-704",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 2,
+    "frage": "Welche Angaben gehören in ein ordnungsgemäßes Testprotokoll? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Testfall-Nummer und Bezeichnung des Testfalls",
+      "Datum der Durchführung und Name des Testers",
+      "Erwartetes Ergebnis und tatsächliches Ergebnis (Soll und Ist)",
+      "Die Projektkosten des Testprojekts und die Stundensätze der Tester",
+      "Angaben zur Testumgebung, z. B. Betriebssystem und Softwareversion",
+      "Die Lizenzschlüssel aller auf den Testrechnern installierten Programme"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "erklaerungKurz": "Ins Testprotokoll gehören Testfall-ID, Datum und Tester, Soll- und Ist-Ergebnis sowie die Testumgebung – so wird der Test nachvollziehbar und reproduzierbar.",
+    "erklaerungLang": "Ein Testprotokoll dokumentiert die Testdurchführung nachvollziehbar und reproduzierbar.\n• Testfall-Nummer und Bezeichnung.\n• Datum und Tester.\n• Erwartetes und tatsächliches Ergebnis.\n• Status: bestanden oder nicht bestanden.\n• Testumgebung mit Versionsangaben – nur so lässt sich ein Fehler später unter gleichen Bedingungen nachstellen.\n• Persönliche Daten wie Gehälter gehören nicht hinein.\nMerke: Eine Garantie auf Fehlerfreiheit kann Testen grundsätzlich nicht liefern – Tests zeigen die Anwesenheit von Fehlern, nie deren Abwesenheit.",
+    "verweis": "Modul 05, Abschnitt 5.2 – Testprotokoll & Mängeldokumentation",
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Kosten und Stundensätze dokumentiert kein Testprotokoll; es hält Testfälle, Ergebnisse und Umgebung fest.",
+      "",
+      "Lizenzschlüssel sind kein Bestandteil eines Testprotokolls und für die Nachvollziehbarkeit des Tests ohne Belang."
+    ]
+  },
+  {
+    "id": "M05-705",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 1,
+    "frage": "Welche Aussagen über Prozesse im Qualitätsmanagement sind zutreffend? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Eine Verfahrensanweisung legt schriftlich fest, wie eine wiederkehrende Tätigkeit auszuführen ist",
+      "Für jeden Prozess wird eine verantwortliche Person benannt",
+      "Messbare Kennzahlen zeigen, ob ein Prozess sein Ziel erreicht",
+      "Ein Prozess ist erst dann gut, wenn er ohne jede Dokumentation auskommt",
+      "Rückmeldungen von Kunden spielen für die Bewertung interner Prozesse keine Rolle",
+      "Prozessbeschreibungen gelten unverändert für die gesamte Lebensdauer des Unternehmens"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "erklaerungKurz": "QM-Prozesse werden schriftlich festgelegt, einer verantwortlichen Person zugeordnet und über Kennzahlen überwacht.",
+    "erklaerungLang": "Drei Dinge machen einen gesteuerten Prozess aus: schriftliche Festlegung, Zuständigkeit und Messung.\n• Schriftliche Festlegung: Eine Verfahrensanweisung sorgt dafür, dass eine wiederkehrende Tätigkeit unabhängig von der ausführenden Person gleich abläuft.\n• Zuständigkeit: Für jeden Prozess wird eine verantwortliche Person benannt – ohne sie fühlt sich niemand für die Verbesserung zuständig.\n• Messung: Erst messbare Kennzahlen zeigen, ob der Prozess sein Ziel erreicht.\n• Warum der Verzicht auf Dokumentation kein Gütezeichen ist: Dokumentation ist kein notwendiges Übel, sondern Voraussetzung für Nachvollziehbarkeit und Einarbeitung.\n• Warum Kundenrückmeldungen sehr wohl zählen: Sie sind eine der wichtigsten Quellen für Prozessverbesserungen, weil sie Schwächen zeigen, die intern niemand bemerkt.\n• Warum Prozessbeschreibungen nicht unverändert gelten: Sie werden regelmäßig überprüft und angepasst, sobald sich Technik, Recht oder Auftragslage ändern.\nMerke: Festgelegt, zuständig, gemessen – fehlt eines davon, ist der Prozess nicht gesteuert.",
+    "verweis": "Modul 05, Abschnitt 5.2 – QM-Prozesse und Verfahrensanweisungen",
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Umgekehrt: Die schriftliche Festlegung macht einen Prozess nachvollziehbar, wiederholbar und für neue Mitarbeitende erlernbar.",
+      "Kundenrückmeldungen sind eine der wichtigsten Quellen für Verbesserungen – sie zeigen Schwächen, die intern oft unbemerkt bleiben.",
+      "Prozessbeschreibungen werden regelmäßig überprüft und angepasst, sobald sich Technik, Rechtslage oder Auftragslage ändern."
+    ]
+  },
+  {
+    "id": "M05-706",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Audit & Prüfverfahren",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 2,
+    "frage": "Die Hellermann Laborservice GmbH bereitet ein internes Audit ihres Qualitätsmanagementsystems vor. Welche Aussagen dazu sind zutreffend? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Ein internes Audit wird von eigenen Mitarbeitenden durchgeführt, die den geprüften Bereich nicht selbst verantworten",
+      "Abweichungen werden dokumentiert und mit Maßnahmen, Zuständigkeit und Termin hinterlegt",
+      "Ein Audit prüft, ob die festgelegten Abläufe tatsächlich eingehalten werden",
+      "Ein internes Audit ersetzt das externe Zertifizierungsaudit einer akkreditierten Stelle vollständig",
+      "Ein Audit, bei dem keine Abweichung festgestellt wurde, war vergebliche Mühe und reine Zeitverschwendung",
+      "Der Auditbericht ist ausschließlich für die Geschäftsführung bestimmt und wird den Fachbereichen nicht gezeigt"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "erklaerungKurz": "Interne Audits prüfen unabhängig, ob die festgelegten Abläufe eingehalten werden. Abweichungen werden mit Maßnahme, Zuständigkeit und Termin nachverfolgt.",
+    "erklaerungLang": "Beim internen Audit sind Unabhängigkeit, Nachverfolgung und der Soll-Ist-Abgleich entscheidend.\n• Unabhängigkeit: Wer einen Bereich selbst verantwortet, prüft ihn nicht – sonst bewertet man die eigene Arbeit. Deshalb auditieren eigene Mitarbeitende nur Bereiche, die sie nicht selbst verantworten.\n• Nachverfolgung: Jede Abweichung wird dokumentiert und mit Maßnahme, zuständiger Person und Termin hinterlegt.\n• Soll-Ist-Abgleich: Geprüft wird, ob die festgelegten Abläufe tatsächlich eingehalten werden.\n• Warum das interne Audit die externe Zertifizierung nicht ersetzt: Es bereitet sie vor – die Zertifizierung setzt eine unabhängige, akkreditierte Stelle voraus.\n• Warum ein Audit ohne Abweichung keine vergebliche Mühe ist: Es ist ein gutes Ergebnis und bestätigt die Wirksamkeit der Abläufe.\n• Warum der Auditbericht nicht nur der Geschäftsführung gehört: Er geht an alle Beteiligten, weil die betroffenen Bereiche die Maßnahmen umsetzen müssen.\nMerke: Der Nutzen des internen Audits entsteht erst durch die Nachverfolgung der Abweichungen.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Audit und Prüfverfahren",
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Ein internes Audit bereitet die Zertifizierung vor, ersetzt sie aber nicht: Das Zertifikat vergibt eine unabhängige, akkreditierte Stelle.",
+      "Ein Audit ohne Abweichung ist ein gutes Ergebnis – es bestätigt, dass die festgelegten Abläufe eingehalten werden und wirksam sind.",
+      "Der Auditbericht geht an alle betroffenen Bereiche, denn dort werden die Maßnahmen umgesetzt."
+    ]
+  },
+  {
+    "id": "M05-707",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 2,
+    "frage": "Nach häufigen Druckerstörungen führt die IT-Abteilung der Quakenbrück Verlagshaus GmbH einen kontinuierlichen Verbesserungsprozess nach dem PDCA-Zyklus ein. Welche Aussagen dazu sind zutreffend? (Mehrere Antworten richtig)",
+    "optionen": [
+      "In der Check-Phase werden die gemessenen Ergebnisse mit den zuvor gesetzten Zielen verglichen",
+      "In der Act-Phase wird eine wirksame Maßnahme zum neuen Standard erklärt",
+      "Der Zyklus endet nicht mit der Act-Phase, sondern beginnt von vorn",
+      "Die Check-Phase lässt sich auch dann sinnvoll durchführen, wenn vorher kein messbares Ziel festgelegt wurde",
+      "Verbesserungsvorschläge einzureichen ist allein Aufgabe der Führungskräfte",
+      "Eine unwirksame Maßnahme wird in der Act-Phase trotzdem standardisiert, weil sie bereits eingeführt ist"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "erklaerungKurz": "PDCA: Plan, Do, Check, Act. Die Check-Phase vergleicht mit dem Ziel, die Act-Phase standardisiert das Wirksame – und dann beginnt der Zyklus von vorn.",
+    "erklaerungLang": "Der PDCA-Zyklus ist der Motor des kontinuierlichen Verbesserungsprozesses.\n• Plan: Ziel und Maßnahme festlegen, etwa die Zahl der Störungsmeldungen pro Monat halbieren.\n• Do: die Maßnahme umsetzen.\n• Check: die gemessenen Ergebnisse gegen die zuvor gesetzten Ziele halten.\n• Act: Was gewirkt hat, wird zum neuen Standard erklärt – und danach beginnt der nächste Durchlauf, der Zyklus endet also nicht mit der Act-Phase.\n• Warum die Check-Phase ohne messbares Ziel nicht funktioniert: Dann gibt es nichts zu vergleichen; die Zielfestlegung in der Plan-Phase ist die Voraussetzung für alles Weitere.\n• Warum Verbesserungsvorschläge nicht allein Sache der Führungskräfte sind: Der kontinuierliche Verbesserungsprozess lebt ausdrücklich davon, dass alle Beschäftigten Vorschläge einbringen – sie kennen die Schwachstellen ihrer täglichen Arbeit am besten.\n• Warum eine unwirksame Maßnahme nicht standardisiert wird: Sie wird verworfen oder angepasst, gerade nicht zum Standard erklärt.\nMerke: Plan – Do – Check – Act, und nach Act beginnt sofort der nächste Durchlauf.",
+    "verweis": "Modul 05, Abschnitt 5.2 – PDCA-Zyklus und KVP",
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Ohne vorher festgelegtes, messbares Ziel fehlt der Check-Phase der Vergleichsmaßstab. Die Zielfestlegung gehört in die Plan-Phase.",
+      "Der kontinuierliche Verbesserungsprozess lebt davon, dass alle Beschäftigten Vorschläge einbringen – sie kennen die Schwachstellen ihrer Arbeit am besten.",
+      "Eine unwirksame Maßnahme wird in der Act-Phase verworfen oder angepasst. Standardisiert wird nur, was nachweislich gewirkt hat."
+    ]
+  },
+  {
+    "id": "M05-950",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Qualitätskosten",
+    "gebiet": "A3",
+    "typ": "matrix",
+    "schwierigkeit": 3,
+    "frage": "Ordne die Fehlerarten aus der Serienfertigung der Weissger Sanitärtechnik GmbH in die Fehlerkosten-Matrix ein.",
+    "xAchse": "Waagerecht: links geringe Auftretenswahrscheinlichkeit → rechts hohe Auftretenswahrscheinlichkeit",
+    "yAchse": "Senkrecht: oben hohe Schadenshöhe/Folgekosten → unten geringe Schadenshöhe/Folgekosten",
+    "quadranten": [
+      "Hohe Schadenshöhe, seltenes Auftreten",
+      "Hohe Schadenshöhe, häufiges Auftreten",
+      "Geringe Schadenshöhe, seltenes Auftreten",
+      "Geringe Schadenshöhe, häufiges Auftreten"
+    ],
+    "elemente": [
+      {
+        "text": "Ein Fehler in der Maschinensteuerung, der in den letzten acht Jahren einmal auftrat; er legte die Fertigungsstraße damals fünf Tage lahm und kostete 190.000 Euro.",
+        "quadrant": 0
+      },
+      {
+        "text": "Ein Rundungsfehler in der Chargenverwaltung, der bei etwa jedem zwanzigsten Auftrag zuschlägt und dabei die Bestandsdaten so verfälscht, dass die Inventur der betroffenen Charge komplett wiederholt werden muss.",
+        "quadrant": 1
+      },
+      {
+        "text": "Ein Tippfehler in einer internen Wartungsnotiz, der ungefähr zweimal im Jahr vorkommt und beim Lesen sofort auffällt.",
+        "quadrant": 2
+      },
+      {
+        "text": "Ein Protokolleintrag der Testumgebung, der die Uhrzeit ohne Sekunden ausgibt; er entsteht bei jedem der rund 200 Testläufe pro Woche und wird von den 3 Entwicklern nicht ausgewertet.",
+        "quadrant": 3
+      }
+    ],
+    "erklaerungKurz": "Einmal in acht Jahren bei 190.000 Euro gehört nach oben links; jeder zwanzigste Auftrag mit kompletter Inventurwiederholung nach oben rechts.",
+    "erklaerungLang": "Die Fehlerkosten-Matrix hilft, begrenzte Entwicklungskapazität auf die richtigen Fehler zu lenken.\n• Die Auftretenshäufigkeit steht als Zahl da: einmal in acht Jahren, jeder zwanzigste Auftrag, zweimal im Jahr, bei jedem der rund 200 Testläufe pro Woche.\n• Die Folgekosten ebenfalls: 190.000 Euro und fünf Tage Stillstand, eine wiederholte Inventur, ein sofort sichtbarer Tippfehler, eine fehlende Sekundenangabe in einem Protokoll der Testumgebung, das niemand auswertet.\n• Der Protokolleintrag entsteht bei jedem der 200 Testläufe pro Woche und ist trotzdem der unwichtigste, weil ihn die 3 Entwickler gar nicht auswerten und keine Kundendaten berührt sind.\n• Der Steuerungsfehler trat einmal auf und ist trotzdem gravierend.\n• Oben rechts steht, was beides verbindet – der Rundungsfehler in der Chargenverwaltung ist deshalb zuerst zu beheben.\n• In der Praxis rechnet man dafür die Risikoprioritätszahl aus Häufigkeit und Bedeutung, wie sie auch in der FMEA verwendet wird (FMEA = Failure Mode and Effects Analysis, Fehlermöglichkeits- und Einflussanalyse).\nMerke: Der häufigste Fehler ist nicht der teuerste.",
+    "verweis": "Modul 05, Abschnitt 5.1 – Qualitätsmanagement – Fehlerkosten und Risikobewertung"
+  },
+  {
+    "id": "M05-951",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "QM-Prozesse",
+    "gebiet": "A3",
+    "typ": "matrix",
+    "schwierigkeit": 2,
+    "frage": "Ordne die geplanten QM-Maßnahmen der Ehrenfeld Maschinenbau GmbH in die Aufwand-Nutzen-Matrix ein.",
+    "xAchse": "Waagerecht: links geringer Aufwand → rechts hoher Aufwand",
+    "yAchse": "Senkrecht: oben hoher Nutzen → unten geringer Nutzen",
+    "quadranten": [
+      "Hoher Nutzen, geringer Aufwand (Quick Win)",
+      "Hoher Nutzen, hoher Aufwand (strategisch)",
+      "Geringer Nutzen, geringer Aufwand (optional)",
+      "Geringer Nutzen, hoher Aufwand (vermeiden)"
+    ],
+    "elemente": [
+      {
+        "text": "Eine Checkliste für Code-Reviews einführen: eine Seite, in zwei Stunden geschrieben; in der Pilotgruppe sank die Zahl der Produktionsfehler von 18 auf 5 im Quartal.",
+        "quadrant": 0
+      },
+      {
+        "text": "Ein Qualitätsmanagementsystem nach ISO 9001 aufbauen: 14 Monate, rund 90.000 Euro für Beratung, Schulung und Zertifizierung; drei Großkunden setzen das Zertifikat ab dem kommenden Jahr voraus.",
+        "quadrant": 1
+      },
+      {
+        "text": "Die Ablage der Prüfprotokolle von Aktenordnern auf Hängeregister umstellen: ein Nachmittag Arbeit; die Suchzeit je Protokoll lag vorher wie nachher bei rund 2 Minuten.",
+        "quadrant": 2
+      },
+      {
+        "text": "Ein eigenes Zertifizierungsverfahren für die Sonderbaureihe entwickeln: geschätzt acht Personenmonate; von der Baureihe wurden im letzten Jahr sechs Stück verkauft.",
+        "quadrant": 3
+      }
+    ],
+    "erklaerungKurz": "2 Stunden Aufwand gegen 13 vermiedene Produktionsfehler je Quartal (18 auf 5) ist ein Quick Win. 8 Personenmonate für 6 verkaufte Stück lohnen sich nicht.",
+    "erklaerungLang": "Auch im Qualitätsmanagement werden Maßnahmen nach ihrem Verhältnis von Aufwand und Wirkung ausgewählt.\n• Die Review-Checkliste kostet zwei Stunden und senkt die Produktionsfehler messbar von 18 auf 5 je Quartal – ein Quick Win, den man sofort umsetzt und dessen Wirkung sich sogar belegen lässt.\n• Das ISO-9001-System kostet 14 Monate und 90.000 Euro, ist aber strategisch: Ohne Zertifikat fallen ab dem kommenden Jahr drei Großkunden weg, der Aufwand ist also faktisch eine Marktzutrittsbedingung (ISO = International Organization for Standardization).\n• Die neue Ablage der Prüfprotokolle kostet wenig, hat aber nachweislich nichts bewirkt – die Suchzeit blieb bei 2 Minuten; so etwas macht man nur nebenbei.\n• Das eigene Zertifizierungsverfahren für sechs verkaufte Stück ist zu vermeiden.\nMerke: Eine QM-Maßnahme rechtfertigt sich nicht dadurch, dass sie gründlich ist, sondern dadurch, dass sie eine messbare Wirkung hat oder eine Anforderung erfüllt, ohne die man nicht am Markt bleibt.",
+    "verweis": "Modul 05, Abschnitt 5.2 – Qualitätsmanagement – Priorisierung von QM-Maßnahmen (Aufwand-Nutzen-Analyse)"
+  },
+  {
+    "id": "M05-960",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "reihenfolge",
+    "schwierigkeit": 2,
+    "frage": "Bringe die Phasen des PDCA-Zyklus in die richtige Reihenfolge (Beginn zuerst).",
+    "schritte": [
+      "Plan – Ziele, Ist-Zustand analysieren und Maßnahmen planen",
+      "Do – Geplante Maßnahmen im Kleinen umsetzen bzw. testen",
+      "Check – Ergebnisse der Umsetzung überprüfen und mit den Zielen vergleichen",
+      "Act – Vorgehen bei Erfolg standardisieren oder bei Abweichung nachbessern"
+    ],
+    "erklaerungKurz": "Der PDCA-Zyklus (Plan-Do-Check-Act, auch Deming-Kreis) ist ein iteratives Modell für kontinuierliche Verbesserung (KVP): Erst planen, dann umsetzen, anschließend prüfen und schließlich handeln bzw. standardisieren.",
+    "erklaerungLang": "Der PDCA-Zyklus stammt aus dem Qualitätsmanagement und bildet die Grundlage für den Kontinuierlichen Verbesserungsprozess (KVP).\n• Plan: Der Ist-Zustand wird analysiert, ein Ziel definiert und eine Maßnahme zur Verbesserung geplant.\n• Do: Die Maßnahme wird testweise bzw. im kleinen Rahmen umgesetzt, um Risiken gering zu halten.\n• Check: Die erzielten Ergebnisse werden mit den ursprünglich gesetzten Zielen verglichen und es wird bewertet, ob die Maßnahme den gewünschten Erfolg gebracht hat.\n• Act: Bei Erfolg wird die Maßnahme als neuer Standard im gesamten Unternehmen eingeführt; bei Misserfolg beginnt der Zyklus mit angepassten Erkenntnissen erneut bei 'Plan'.\n• Durch die wiederholte Durchführung entsteht ein fortlaufender Verbesserungskreislauf.\nMerke: Er ist zentral für Qualitätsmanagementsysteme (z. B. nach ISO 9001) und für ITIL-Prozesse (ISO = International Organization for Standardization; ITIL = IT Infrastructure Library, Sammlung bewährter Verfahren für IT-Serviceprozesse).",
+    "verweis": "Modul 05, Abschnitt 5.2 – Qualitätsmanagement/KVP – PDCA-Zyklus (Deming-Kreis)"
+  },
+  {
+    "id": "M05-961",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "PDCA & KVP",
+    "gebiet": "A3",
+    "typ": "beschriftung",
+    "schwierigkeit": 2,
+    "frage": "Benenne die vier Phasen des PDCA-Zyklus (von oben nach unten in der Durchlaufreihenfolge).",
+    "svg": "<svg viewBox='0 0 260 174' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='13'><rect x='15' y='10' width='230' height='34' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='33' text-anchor='middle' font-weight='bold' fill='#69707D'>1</text><rect x='15' y='50' width='230' height='34' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='73' text-anchor='middle' font-weight='bold' fill='#69707D'>2</text><rect x='15' y='90' width='230' height='34' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='113' text-anchor='middle' font-weight='bold' fill='#69707D'>3</text><rect x='15' y='130' width='230' height='34' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='130' y='153' text-anchor='middle' font-weight='bold' fill='#69707D'>4</text></svg>",
+    "ziele": [
+      {
+        "nr": 1,
+        "loesung": "Plan"
+      },
+      {
+        "nr": 2,
+        "loesung": "Do"
+      },
+      {
+        "nr": 3,
+        "loesung": "Check"
+      },
+      {
+        "nr": 4,
+        "loesung": "Act"
+      }
+    ],
+    "labels": [
+      "Plan",
+      "Do",
+      "Check",
+      "Act",
+      "Review"
+    ],
+    "erklaerungKurz": "Der PDCA-Zyklus besteht aus den Phasen Plan, Do, Check und Act.",
+    "erklaerungLang": "Die vier Phasen des PDCA-Zyklus haben je eine klar abgegrenzte Aufgabe.\n• Plan: Ziele definieren und Maßnahmen planen.\n• Do: Die geplanten Maßnahmen im kleinen Rahmen umsetzen.\n• Check: Das Ergebnis überprüfen und mit den geplanten Zielen vergleichen.\n• Act: Die Erkenntnisse standardisieren und in die Regelprozesse übernehmen – dadurch wiederholt sich der Zyklus im Sinne des KVP (kontinuierlicher Verbesserungsprozess).\nMerke: 'Review' ist kein eigenständiger Bestandteil des PDCA-Zyklus.",
+    "verweis": "Modul 05, Abschnitt 5.2 – PDCA-Zyklus und KVP"
+  }
+]

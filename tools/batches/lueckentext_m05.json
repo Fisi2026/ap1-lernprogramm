@@ -1,0 +1,39 @@
+[
+ {
+  "id": "M05-113",
+  "pruefungsteil": "AP1",
+  "modul": "M05",
+  "thema": "QM-Begriffe & Normen",
+  "gebiet": "A3",
+  "typ": "lueckentext",
+  "schwierigkeit": 2,
+  "frage": "In der DIN-EN-ISO-9000er-Familie beschreibt die Norm ___ die Grundlagen und Begriffe des Qualitätsmanagements, während die Norm ___ die verbindlichen, zertifizierbaren Anforderungen an ein QM-System festlegt. Der systematische Prozess, bei dem Mitarbeiter laufend kleine Verbesserungen einbringen (japanisch Kaizen), heißt ___.",
+  "luecken": [
+   ["ISO 9000", "iso 9000", "DIN EN ISO 9000", "9000"],
+   ["ISO 9001", "iso 9001", "DIN EN ISO 9001", "9001"],
+   ["KVP", "kvp", "Kontinuierlicher Verbesserungsprozess", "kontinuierlicher Verbesserungsprozess"]
+  ],
+  "erklaerungKurz": "ISO 9000 = Grundlagen und Begriffe, ISO 9001 = zertifizierbare Anforderungen, KVP = laufende kleine Verbesserungen.",
+  "erklaerungLang": "Die beiden Nummern werden regelmäßig verwechselt, obwohl sie verschiedene Aufgaben haben.\n• Nach ISO 9000 wird niemand zertifiziert – sie klärt nur, was Qualität, Konformität und Abweichung überhaupt bedeuten.\n• ISO 9001 ist das Regelwerk, das ein Betrieb erfüllen muss; große Auftraggeber fordern das Zertifikat oft als Geschäftsbedingung.\n• KVP zielt auf viele kleine Schritte statt auf ein großes Projekt: im IT-Betrieb etwa ein gestraffter Ticket-Prozess oder automatisierte Patches.\nMerke: 9000 erklärt die Begriffe, 9001 stellt die Anforderungen – zertifiziert wird nach 9001.",
+  "verweis": "Modul 05, Abschnitt 5.1 – QS-Normen: DIN EN ISO 9000er-Familie"
+ },
+ {
+  "id": "M05-114",
+  "pruefungsteil": "AP1",
+  "modul": "M05",
+  "thema": "Qualitätskosten",
+  "gebiet": "A3",
+  "typ": "lueckentext",
+  "schwierigkeit": 3,
+  "frage": "Ein IT-Systemhaus ordnet seine Qualitätskosten nach dem Zeitpunkt zu. Die Schulung der Techniker und der Aufbau einer Testumgebung zählen zu den ___. Das Testprotokoll je Arbeitsplatz und die Abnahmeprüfung sind ___. Muss ein falsch aufgesetzter PC vor der Übergabe neu installiert werden, entstehen ___; wird derselbe Fehler erst beim Kunden bemerkt und ein Vor-Ort-Einsatz nötig, sind es ___.",
+  "luecken": [
+   ["Fehlerverhütungskosten", "fehlerverhütungskosten", "Präventionskosten", "Fehlerverhütung"],
+   ["Prüfkosten", "prüfkosten", "Prüfungskosten"],
+   ["interne Fehlerkosten", "Interne Fehlerkosten", "interne Fehlerkosten (Nacharbeit)"],
+   ["externe Fehlerkosten", "Externe Fehlerkosten"]
+  ],
+  "erklaerungKurz": "Vier Arten nach Zeitpunkt: Fehlerverhütung (vorher), Prüfkosten (währenddessen), interne (im Haus) und externe Fehlerkosten (beim Kunden).",
+  "erklaerungLang": "Die Reihenfolge ist die eigentliche Aussage: sie zeigt, wie teuer ein Fehler wird, je später er auffällt.\n• Fehlerverhütung und Prüfung sind gewollte, planbare Ausgaben – die beiden Fehlerkostenarten sind Schäden und lassen sich nicht budgetieren.\n• Die Zehnerregel besagt, dass sich die Behebungskosten mit jeder Phase verzehnfachen, in der ein Fehler unentdeckt bleibt.\n• Externe Fehlerkosten enthalten mehr als die Reparatur: Gewährleistung, Kulanz, Vertragsstrafe und den Imageschaden, der sich schlecht beziffern lässt.\nMerke: Wer an der Prüfung spart, bezahlt die Ersparnis bei den externen Fehlerkosten zurück – mit Zinsen.",
+  "verweis": "Modul 05, Abschnitt 5.1 – Qualitätskosten"
+ }
+]

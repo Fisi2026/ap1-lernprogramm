@@ -1,0 +1,23 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck" [current=page]
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Fehler-Deck" [Ebene 1]
+  heading "Jetzt fällig (1)" [Ebene 2]
+  list
+    listitem
+      button "Frage M01-004 öffnen"
+  heading "Kommt später (0)" [Ebene 2]

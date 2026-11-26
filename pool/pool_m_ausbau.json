@@ -1,0 +1,693 @@
+[
+  {
+    "id": "M01-734",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "KI im Störungsmanagement",
+    "gebiet": "A5",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Welche der folgenden Aussagen beschreibt eine echte Limitation von KI-Chatbots im IT-Support richtig?",
+    "optionen": [
+      "KI-Systeme können \"halluzinieren\" und dem Nutzer falsche, aber überzeugend formulierte Lösungsvorschläge liefern",
+      "KI-Chatbots können höchstens 50 % aller IT-Probleme lösen und lassen sich darüber hinaus nicht skalieren",
+      "KI-Systeme dürfen nach der DSGVO grundsätzlich nicht im First-Level-Support eingesetzt werden",
+      "KI-Chatbots vergessen alle gelernten Informationen automatisch nach 24 Stunden und müssen täglich neu trainiert werden"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die Prozentgrenze ist nicht wissenschaftlich belegt; KI kann skalieren, wenn richtig gestaltet.",
+      "DSGVO verbietet KI nicht – es braucht aber sichere Datenverarbeitung und Datenschutzerklärung.",
+      "KI-Modelle vergessen nicht automatisch; sie benötigen Retraining für neue Informationen."
+    ],
+    "erklaerungKurz": "KI-Chatbots können plausible, aber falsche Antworten generieren (\"Halluzinationen\"), z.B. erfundene Commands oder fehlerhafte Lösungsschritte. Das ist ein dokumentiertes Risiko.",
+    "erklaerungLang": "Eine bekannte Limitation von Language Models ist die sogenannte \"Halluzination\": Das Modell erzeugt grammatikalisch korrekte, fachlich aber falsche Auskünfte. Im IT-Support kann dies fatal sein – z.B. ein erfundenes Kommando zum Beheben eines Netzwerkfehlers, das in Wahrheit das System beschädigt. Deshalb ist bei KI-Einsatz im IT-Support eine menschliche Eskalation und Validierung obligatorisch. Die anderen Optionen sind entweder übertrieben oder faktisch falsch.",
+    "verweis": "Modul 01, Abschnitt 1.3 – KI im Störungsmanagement – Grenzen und Risiken"
+  },
+  {
+    "id": "M01-735",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "KI im Störungsmanagement",
+    "gebiet": "A5",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Voraussetzungen müssen erfüllt sein, damit KI sinnvoll im First-/Second-Level-Support (z.B. bei Bad Neustädter Servicecenter) eingesetzt werden kann? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Eine gepflegte, aktualisierte Wissensdatenbank mit häufigen Problemen und bewährten Lösungen",
+      "Hohe Datenqualität und Konsistenz in den Trainingsquellen (FAQ, Tickets, Handbücher)",
+      "Klare Eskalationsregeln, damit KI komplexe oder unbekannte Probleme an Menschen übergeben kann",
+      "Datenschutz-konforme Verarbeitung (z.B. keine sensiblen Kundendaten in öffentliche KI-APIs)",
+      "Vollständiger Verzicht auf menschliche Eskalation, weil die KI alle Störungen eigenständig abschließend löst"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Falsch: KI unterstützt, ersetzt aber die menschliche Eskalation nicht – komplexe/unbekannte Fälle müssen an Fachkräfte übergeben werden."
+    ],
+    "erklaerungKurz": "KI im Support braucht Wissensgrundlage, saubere Daten, klare Grenzen und Datenschutz – alles essentiell für sichere Nutzung.",
+    "erklaerungLang": "Damit KI-Assistenten im First-Level-Support effektiv und sicher arbeiten, sind mehrere Faktoren notwendig: (1) Eine zuverlässige, gepflegte Wissensdatenbank (KB), die regelmäßig aktualisiert wird – ohne diese würde die KI \"blind\" arbeiten. (2) Hohe Datenqualität in Trainingsdaten (FAQ, Ticketsystem, Handbücher), denn \"Müll rein, Müll raus\". (3) Klare Eskalationsregeln: Die KI muss wissen, wann sie unsicher ist und an einen Techniker übergeben muss (Confidence-Schwellwert, unbekannte Kategorien). (4) Datenschutz: Bei Bad Neustädter Servicecenter könnte es um Kundendaten gehen – diese dürfen nicht in öffentliche KI-APIs (wie OpenAI) hochgeladen werden, sondern müssen lokal/intern verarbeitet werden. Alle vier Punkte sind notwendig.",
+    "verweis": "Modul 01, Abschnitt 1.3 – KI im Störungsmanagement – Rahmenbedingungen"
+  },
+  {
+    "id": "M03-746",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerk- und Arbeitsplatz-Ausstattung",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Ein neuer Facharbeitsplatz bei Melsunger Facharztzentrum wird ausgestattet. Welche Komponente gehört zu einer modernen Arbeitsplatz-Ausstattung standardmäßig dazu?",
+    "optionen": [
+      "Eine Docking-Station oder ein USB-Hub zur Verbindung von externen Geräten (Monitor, Drucker, Netzwerk)",
+      "Ein eigener lokaler File-Server im Schrank neben dem jeweiligen Arbeitsplatz",
+      "Ein dedizierter Internetrouter unter dem Schreibtisch jedes einzelnen Arbeitsplatzes",
+      "Eine eigene USV (unterbrechungsfreie Stromversorgung) für jeden einzelnen Arbeitsplatzrechner im Büro und im Lager"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Lokale File-Server sind nicht Standard; zentrale Serversysteme sind üblich.",
+      "Ein Router unter dem Schreibtisch ist nicht notwendig; zentrale Netzwerk-Infrastruktur ist Standard.",
+      "USV ist nur für kritische Systeme (Server, Switche) sinnvoll, nicht für jeden Arbeitsplatz."
+    ],
+    "erklaerungKurz": "Docking-Stationen verbinden Laptops oder Thin Clients mit Peripherie (Monitor, Tastatur, Drucker, Netzwerk) und sind in modernen Büros Standard.",
+    "erklaerungLang": "Bei der Ausstattung von Facharbeitsplätzen ist die Docking-Station eine Standardkomponente. Sie ermöglicht es, einen Laptop oder Thin Client schnell an mehrere Peripheriegeräte anzuschließen: externen Monitor (HDMI/DisplayPort), Tastatur, Maus, Drucker, und vor allem auch Netzwerkanbindung (RJ45). Dies verbessert Ergonomie und Produktivität. File-Server lokal zu installieren ist unwirtschaftlich und nicht skalierbar. Router gehören zur zentralen Infrastruktur. USV ist ein Schutzmaßnahme für kritische Serversysteme, nicht für einzelne Arbeitsplätze.",
+    "verweis": "Modul 03, Abschnitt 3.1 Netzwerk- und Arbeitsplatz-Ausstattung"
+  },
+  {
+    "id": "M03-747",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerk- und Arbeitsplatz-Ausstattung",
+    "gebiet": "A2",
+    "typ": "dropdown",
+    "schwierigkeit": 3,
+    "frage": "Im Serverraum von Homberger Datentechnik müssen Racks und deren Komponenten korrekt dimensioniert werden. Ergänzen Sie die Lücken: Eine ___ sichert den Betrieb bei Stromausfall; die Höheneinheit (HE) im Rack beträgt genau ___ mm; und eine leistungsstarke ___ sorgt für Wärmeabfuhr bei Dauerlast.",
+    "luecken": [
+      {
+        "optionen": [
+          "Unterbrechungsfreie Stromversorgung (USV)",
+          "Notstromaggregat",
+          "Stabilisator",
+          "Überspannungsschutz"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "44,45",
+          "45,00",
+          "50,00",
+          "48,26"
+        ],
+        "loesung": 0
+      },
+      {
+        "optionen": [
+          "Klimaanlage",
+          "Deckenventilator",
+          "Heizungsregelung",
+          "Luftbefeuchter"
+        ],
+        "loesung": 0
+      }
+    ],
+    "erklaerungKurz": "USV puffert Stromausfälle; HE = 44,45 mm ist der Standard (IEC 60297); Klimatisierung ist essentiell für Rechenzentren.",
+    "erklaerungLang": "Im professionellen Serverraum-Betrieb sind drei Faktoren kritisch: (1) USV (Unterbrechungsfreie Stromversorgung) – ermöglicht einen geordneten Shutdown oder Übergabe auf Backup-Strom bei Stromausfall. Notstromaggregate sind langsamer und für Spitzen nicht geeignet. (2) Die Rack-Höheneinheit (HE, auch \"U\") ist genormt auf 44,45 Millimeter (IEC 60297). Dies ist essentiell für Kompatibilität. (3) Wärmemanagement: Eine leistungsstarke Klimaanlage oder Kühllösung ist obligatorisch, da Server und Switches permanent Wärmeleistung abgeben. Zu wenig Kühlung führt zu Überhitzung, Drosselung und Hardware-Schäden. Ein einfacher Lüfter reicht bei höherem Durchsatz nicht aus.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Serverraum-Ausstattung und Infrastruktur"
+  },
+  {
+    "id": "M06-737",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Security by Design",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Welche Maßnahme ist ein gutes Beispiel für \"Security by Design\" bei der Entwicklung einer Webanwendung?",
+    "optionen": [
+      "Eingabevalidierung und Sanitizing von Benutzerdaten werden bereits im Design vorgegeben und in jedes Eingabefeld integriert",
+      "Nach Fertigstellung der Webanwendung wird eine Penetrationsprüfung beauftragt und die dabei gefundenen Lücken werden behoben",
+      "Die Anwendung wird mit Administratorrechten betrieben, damit sie ohne Einschränkungen auf alle Ressourcen zugreifen kann",
+      "Sicherheitsmaßnahmen werden als optionale Module ausgeliefert, die der Betreiber bei Bedarf nachträglich hinzufügen kann"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Das ist Sicherheit nachträglich; nicht by Design.",
+      "Zu viele Rechte erhöhen das Risiko, nicht by Design.",
+      "Optionale Sicherheit ist nicht by Design; sie muss Standard sein."
+    ],
+    "erklaerungKurz": "\"Security by Design\" bedeutet, dass Sicherheit von Anfang an in die Architektur und Entwicklung integriert ist – nicht nachträglich hinzugefügt.",
+    "erklaerungLang": "Security by Design ist ein Designprinzip, bei dem Sicherheit nicht als nachträgliches Addon, sondern als fundamentale Anforderung von Anfang an berücksichtigt wird. Im Kontext einer Webanwendung bedeutet das: (1) Eingabevalidierung ist nicht optional, sondern eine Grundanforderung in jedes Eingabefeld. (2) Sichere Standardeinstellungen (z.B. HTTPS, TLS 1.3) sind vorgegeben. (3) Least-Privilege-Prinzip ist in der Architektur verankert – Benutzer und Prozesse erhalten nur die Rechte, die sie wirklich brauchen. (4) Datensparsamkeit ist designt (z.B. nur notwendige Kundendaten speichern). Penetrationstests nach Fertigstellung sind wichtig, aber keine \"by Design\" Maßnahme – das wäre nachträgliche Kontrolle. Optionale Sicherheit ist auch nicht by Design, da sie aktiviert sein muss, um wirksam zu werden.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Security by Design und Security by Default"
+  },
+  {
+    "id": "M06-738",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Security by Design",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche der folgenden Maßnahmen setzen \"Security by Design\" oder \"Privacy by Design\" in der Software-Entwicklung konkret um? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Datensparsamkeit: Die Anwendung erhebt und speichert nur die Kundendaten, die wirklich nötig sind",
+      "Sichere Algorithmen und Verschlüsselung werden von Anfang an in der Architektur vorgegeben, nicht optional",
+      "Eingabevalidierung ist in jedem Eingabefeld integriert, um SQL-Injection und XSS zu verhindern",
+      "Eine nachträgliche Dokumentation aller Sicherheitsmaßnahmen als PDF am Ende des Projekts"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Nachträgliche Dokumentation ist nicht by Design; by Design bedeutet es ist von Anfang an Teil der Entwicklung."
+    ],
+    "erklaerungKurz": "Security/Privacy by Design bedeutet: Minimale Datenverwaltung, sichere Algorithmen und Eingabevalidierung von Anfang an – nicht nachträglich dokumentiert.",
+    "erklaerungLang": "Security by Design und Privacy by Design sind zwei komplementäre Konzepte aus der modernen Softwareentwicklung: (1) **Datensparsamkeit** (Privacy by Design): Die Anwendung erhebt und verarbeitet nur die Personendaten, die für den Zweck absolut notwendig sind. Beispiel: Ein Kontaktformular braucht nicht Geburtsdatum, nur Name und E-Mail. (2) **Sichere Algorithmen**: Bereits in der initialen Architektur werden Verschlüsselung (z.B. AES-256 für Datenspeicherung, TLS für Übertragung) und sichere Hash-Funktionen festgelegt – nicht als optionale Ergänzung. (3) **Eingabevalidierung**: Jedes Eingabefeld ist designt und implementiert mit Validierungsregeln und Sanitizing, um SQL-Injection, XSS und andere Injection-Angriffe zu verhindern. Ein nachträgliches Dokument ist nicht by Design; by Design ist es von Anfang an integral Part der Anforderungen und Architektur.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Security by Design und Security by Default"
+  },
+  {
+    "id": "M06-739",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "IT-Sicherheit und Datenschutz-Vorfall",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Nach DSGVO: Felsberger Versicherungskontor entdeckt eine Datenpanne, bei der 500 Kundenadressen offengelegt wurden. Welche Meldepflicht besteht?",
+    "optionen": [
+      "Meldung an die Aufsichtsbehörde (Datenschutzbehörde) innerhalb von 72 Stunden ohne unbegründete Verzögerung – falls ein Risiko für Betroffene besteht",
+      "Zuerst sind sämtliche betroffenen Kunden schriftlich und einzeln zu informieren; die Meldung an die zuständige Aufsichtsbehörde erfolgt erst im Anschluss daran",
+      "Zuständig ist die örtliche Polizei; eine Meldung an die Datenschutz-Aufsichtsbehörde ist nicht vorgesehen",
+      "Eine Meldung entfällt, sofern die offengelegten Kundenadressen innerhalb von 24 Stunden gelöscht werden"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die Kundenmitteilung ist wichtig, erfolgt aber parallel/nach der Behördenmeldung, nicht vorher.",
+      "Datenpanne ist kein Straffall; Datenschutzbehörde (z.B. Landesamt) ist zuständig.",
+      "Es besteht eine Meldepflicht nach Art. 33 DSGVO, auch wenn Löschung geplant ist."
+    ],
+    "erklaerungKurz": "Art. 33 DSGVO verpflichtet zur Meldung an die Aufsichtsbehörde binnen 72 Stunden, falls ein Risiko für Betroffene besteht.",
+    "erklaerungLang": "Nach Art. 33 DSGVO besteht bei einer Datenpanne eine Meldepflicht an die zuständige Datenschutzbehörde (z.B. Landesamt für Datenschutz), die innerhalb von 72 Stunden nach Kenntnisnahme erfolgen muss – ohne unbegründete Verzögerung. Die Meldung ist Pflicht, falls der Vorfall ein Risiko für die Rechte und Freiheiten der Betroffenen darstellt (was bei offengelegten Adressen der Fall ist). Zusätzlich besteht nach Art. 34 DSGVO die Verpflichtung, die betroffenen Personen zu benachrichtigen, **wenn ein hohes Risiko** besteht (z.B. auch Kreditkartendaten). Die Polizeianmeldung ist unabhängig davon möglich, aber nicht die primäre regulatorische Pflicht. Löschung allein macht die Meldepflicht nicht überflüssig.",
+    "verweis": "Modul 06, Abschnitt 6.1 – DSGVO Art. 33 und 34 – Meldepflichten bei Datenpannen"
+  },
+  {
+    "id": "M06-740",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "IT-Sicherheit und Datenschutz-Vorfall",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein Mitarbeiter bei Gudensberger Verkehrsbetriebe bemerkt, dass sein Arbeitsplatz-PC anomale Netzwerkaktivität zeigt und möglicherweise von Schadsoftware befallen ist. Welche Maßnahme ist die BESTE Sofortmaßnahme?",
+    "optionen": [
+      "PC vom Netzwerk isolieren (Kabel ziehen/WLAN deaktivieren), den Incident dokumentieren, und sofort die IT-Leitung informieren",
+      "Das System sofort neu starten und anschließend vollständig neu aufsetzen, um die vermutete Schadsoftware zuverlässig und dauerhaft zu entfernen",
+      "Zunächst sämtliche Passwörter des betroffenen Mitarbeiters zurücksetzen und danach weiterarbeiten",
+      "Abwarten und einen vollständigen Virenscan durchführen, während der PC weiter im Netzwerk bleibt"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Neustart oder Neuaufsetzen würde Beweise zerstören und könnte eine Lateralbewegung nicht verhindern.",
+      "Passwort-Reset ist sinnvoll, aber nicht die erste Aktion – Isolation ist Vorrang.",
+      "Ein Scan bei laufender Netzverbindung ist zu langsam und lässt weiteren Datenabfluss und Ausbreitung zu."
+    ],
+    "erklaerungKurz": "Bei Sicherheitsverdacht: ISOLATION (vom Netz) > DOKUMENTATION > ESKALATION. Nicht löschen/neustarten, das zerstört Beweise.",
+    "erklaerungLang": "Wenn ein Sicherheitsvorfall vermutet wird (anomale Netzwerk, verdächtige Prozesse, Schadsoftware-Warnung), ist die korrekte Abfolge essentiell: (1) **ISOLIEREN**: PC sofort vom Netzwerk trennen (Netzwerkkabel ziehen, WLAN ausschalten). So kann Malware nicht zu anderen Systemen lateral bewegt werden und keine Daten abfließen. (2) **DOKUMENTIEREN**: Der Zustand des Systems, die beobachteten Anomalien, Zeitpunkt, beteiligte Benutzer aufzeichnen. Dies ist wichtig für forensische Analyse. (3) **ESKALIEREN**: Sofort die IT-Leitung / Incident-Response-Team informieren. Sie entscheiden dann über weitere Maßnahmen (Forensik, Antivirus, Neuaufsetzen). **NICHT tun**: Das System neu starten oder neu aufsetzen, da dies flüchtige Speicherdaten löscht und Malware-Spuren vernichtet. Auch nicht einfach die Antivirus darauf laufen lassen, während es noch online ist – zu langsam und zu riskant.",
+    "verweis": "Modul 06, Abschnitt 6.1 – IT-Sicherheit: Notfallmaßnahmen und Incident Response"
+  },
+  {
+    "id": "M02-750",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Kommunikationsmodelle",
+    "gebiet": "A1",
+    "typ": "freitext",
+    "schwierigkeit": 4,
+    "frage": "Ein Techniker der Fritzlarer IT-Service GmbH ist bei der Schlosserei Voss vor Ort, um eine Störung an der Fertigungssteuerungs-Software zu beheben. Der Kunde sagt gereizt: \"Typisch IT – schon wieder funktioniert gar nichts, und ich habe wieder Ausfallzeit an der Maschine!\" Der Techniker antwortet knapp: \"Ich kann doch nichts dafür, dass Ihre Mitarbeiter falsch damit umgehen.\" Die Situation eskaliert, der Kunde droht mit Kündigung des Wartungsvertrags.\n\nAnalysieren Sie die Aussage des Kunden mit Hilfe des Eisberg-Modells UND des Vier-Ohren-Modells (Schulz von Thun). Gehen Sie dabei auf Sach- und Beziehungsebene sowie auf die vier Nachrichten-Ebenen ein, die der Kunde sendet und die der Techniker offenbar missversteht. Entwickeln Sie anschließend eine deeskalierende Reaktion des Technikers, die BEIDE Modelle berücksichtigt.",
+    "musterloesung": "EISBERG-MODELL: Über der Wasseroberfläche (ca. 20%, Sachebene) liegt die reine Fach-/Sachaussage: die Software funktioniert nicht, die Maschine steht still. Unter der Wasseroberfläche (ca. 80%, Beziehungsebene) verbergen sich Emotionen, Werte und Beziehungsaspekte: Frust über wiederholte Ausfälle, Existenzangst wegen Produktionsstillstand und Lieferverzug, das Gefühl, von der IT nicht ernst genommen zu werden, sowie enttäuschte Erwartungen an die Zuverlässigkeit des Dienstleisters. Der Techniker reagiert jedoch ausschließlich auf der Sachebene (Rechtfertigung, Schuldzuweisung an die Mitarbeiter des Kunden) und ignoriert die unter der Oberfläche liegende Beziehungsebene komplett – das verstärkt die Eskalation.\n\nVIER-OHREN-MODELL (Schulz von Thun) zur Kundenaussage:\n- Sachinhalt: 'Die Software funktioniert nicht, die Maschine steht still.'\n- Selbstoffenbarung: 'Ich bin gestresst, überfordert und frustriert von der aktuellen Situation.'\n- Beziehungsebene: 'Ich habe den Eindruck, dass die IT/der Dienstleister meine Probleme nicht ernst nimmt bzw. nicht zuverlässig arbeitet.'\n- Appell: 'Tu jetzt endlich etwas, nimm mich und mein Problem ernst, löse das schnell und zuverlässig.'\n\nDer Techniker hat nur mit seinem 'Sach-Ohr' gehört und mit einer Sach-/Schuld-Aussage geantwortet; er hat weder die Selbstoffenbarung (Stress des Kunden) noch die Beziehungsebene (Vertrauen) noch den Appell (schnelle, verlässliche Hilfe) aufgegriffen. Genau das führt typischerweise zur Eskalation, weil sich der Kunde auf der Beziehungsebene abgewertet fühlt.\n\nDEESKALIERENDE REAKTION: Der Techniker sollte zunächst die Beziehungs- und Selbstoffenbarungsebene ansprechen (aktives Zuhören, Verständnis zeigen, Ich-Botschaften statt Vorwürfe) und erst danach zur Sachebene zurückkehren, z. B.: 'Ich verstehe, dass der Ausfall Sie gerade sehr unter Druck setzt und das schon nicht das erste Mal ist – das ist ärgerlich. Lassen Sie uns das jetzt gemeinsam Schritt für Schritt lösen: Ich sehe mir die Störung sofort an und halte Sie laufend auf dem aktuellen Stand.' Damit wird der Appell erfüllt (sofortiges Handeln), die Beziehungsebene versorgt (Verständnis statt Rechtfertigung) und erst danach sachlich an der Ursache gearbeitet – im Sinne des Eisberg-Modells wird also zuerst der 'unter Wasser' liegende Teil adressiert, bevor die Sachebene weiterbearbeitet wird.",
+    "erklaerungKurz": "Die Kundenaussage enthält weit mehr als die Sachinformation 'Ausfall'. Eisberg-Modell: Beziehungsebene (Frust, Vertrauen) liegt unsichtbar unter der sichtbaren Sachaussage. Vier-Ohren-Modell: Selbstoffenbarung (Stress), Beziehung (Enttäuschung) und Appell (schnelle Hilfe) werden vom Techniker ignoriert, der nur sachlich/rechtfertigend reagiert. Deeskalation gelingt, indem zuerst Beziehungs-/Gefühlsebene aufgegriffen wird, bevor die Sachlage geklärt wird.",
+    "erklaerungLang": "Kommunikationskonflikte lassen sich selten mit einem einzigen Modell vollständig erklären – erst die Kombination macht sichtbar, warum eine Reaktion eskaliert. Das Eisberg-Modell zeigt, dass jede Kommunikation aus einem kleinen sichtbaren Sachanteil und einem großen, meist unbewussten Beziehungs-/Gefühlsanteil besteht. Das Vier-Ohren-Modell von Schulz von Thun differenziert diesen 'unsichtbaren' Anteil weiter in Selbstoffenbarung, Beziehung und Appell. In der Praxis eskalieren Konflikte häufig, weil eine Partei ausschließlich mit dem Sach-Ohr hört bzw. antwortet und die anderen drei Ebenen ignoriert – wie hier der Techniker, der die Kundenäußerung als reinen Vorwurf (Sachebene) auffasst und mit Gegen-Vorwurf reagiert, statt den dahinterliegenden Stress und Appell zu erkennen. Eine professionelle, deeskalierende Reaktion muss deshalb bewusst zuerst die Beziehungs- und Gefühlsebene bedienen (Verständnis, aktives Zuhören, Ich-Botschaften), um überhaupt wieder eine Sachebene herstellen zu können, auf der das eigentliche technische Problem bearbeitet werden kann. Für die AP1-Prüfung ist entscheidend, dass beide Modelle nicht isoliert, sondern ergänzend zueinander angewendet werden können.",
+    "verweis": "Modul 02, Abschnitt 2.3 – Kommunikationsmodelle in Kundengesprächen",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Eisberg",
+          "Sachebene",
+          "Oberfläche"
+        ],
+        [
+          "Emotionen",
+          "Frust",
+          "Angst",
+          "nicht ernst genommen"
+        ],
+        [
+          "Verständnis",
+          "aktiv zuhören",
+          "Empathie",
+          "zuhören"
+        ]
+      ],
+      "kuer": [
+        "Existenzangst",
+        "Selbstoffenbarung",
+        "Schuldzuweisung"
+      ]
+    }
+  },
+  {
+    "id": "M03-750",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "OSI-Modell & Protokolle",
+    "gebiet": "A3",
+    "typ": "freitext",
+    "schwierigkeit": 4,
+    "frage": "Ein Mitarbeiter der Borkener Kunststoffwerk GmbH meldet: \"Ich kann das interne Wiki nicht mehr über http://wiki.borkener.local erreichen. Wenn ich aber direkt die IP-Adresse 10.20.30.40 im Browser eingebe, öffnet sich die Seite normal. Ping auf die IP-Adresse funktioniert einwandfrei, Ping auf den Namen liefert 'Host nicht gefunden'.\"\n\nAnalysieren Sie das Problem schichtweise anhand des OSI-Modells: Welche Schichten funktionieren nachweislich? Auf welcher Schicht liegt die Störung mit hoher Wahrscheinlichkeit? Wie würden Sie die Ursache weiter eingrenzen?",
+    "musterloesung": "Schichtweise Analyse:\n\nSchicht 1–3 (Bitübertragung, Sicherung, Vermittlung): Der Ping auf die IP-Adresse 10.20.30.40 funktioniert einwandfrei. Das belegt, dass die physische Verbindung (Kabel/WLAN), die Datensicherungsschicht (MAC-Adressierung, Switching) und die Vermittlungsschicht (IP-Routing) fehlerfrei arbeiten – das Netzwerk als solches ist erreichbar.\n\nSchicht 4 (Transport): Da sich die Wiki-Seite über die IP-Adresse im Browser normal öffnet, wird auch erfolgreich eine TCP-Verbindung auf Port 80/443 zum Webserver aufgebaut. Die Transportschicht funktioniert also ebenfalls fehlerfrei.\n\nSchicht 7 (Anwendung): DNS ist ein Protokoll der Anwendungsschicht (Port 53). Genau hier tritt der Fehler auf: Der Name wiki.borkener.local kann nicht in die IP-Adresse aufgelöst werden ('Host nicht gefunden'), während der direkte Zugriff per IP-Adresse – der DNS umgeht – problemlos funktioniert. Die Störung liegt also nicht im Netzwerktransport, sondern isoliert bei der Namensauflösung auf Anwendungsschicht-Ebene.\n\nWeitere Eingrenzung: (1) Client-Konfiguration prüfen (z. B. ipconfig /all): Welcher DNS-Server ist beim Client eingetragen, ist dieser erreichbar (Ping auf die DNS-Server-IP)? (2) Direkte Abfrage des DNS-Servers mit nslookup wiki.borkener.local <DNS-Server-IP>, um zu prüfen, ob der DNS-Dienst selbst antwortet und ob der Eintrag dort überhaupt existiert bzw. korrekt gepflegt ist. (3) Prüfen, ob der DNS-Dienst auf dem Server läuft und die Zone/den A-Eintrag für 'wiki' korrekt enthält. (4) Prüfen, ob nur dieser eine Client betroffen ist (dann eher Client-Konfiguration) oder alle Clients (dann eher DNS-Server/Zonenfehler).\n\nFazit: Kein Kabel-, Switching- oder Routingproblem, sondern eine gestörte Namensauflösung (Anwendungsschicht, DNS-Dienst bzw. dessen Konfiguration oder Erreichbarkeit).",
+    "erklaerungKurz": "Ping per IP und Laden der Seite per IP funktionieren – damit sind Schicht 1–4 (Physik, Sicherung, Vermittlung, Transport) nachweislich in Ordnung. Nur die Namensauflösung (DNS, Anwendungsschicht 7) schlägt fehl. Die Fehlersuche muss sich also gezielt auf DNS-Konfiguration und -Erreichbarkeit konzentrieren, nicht auf das Netzwerk selbst.",
+    "erklaerungLang": "Diese Aufgabe verlangt die Fähigkeit, ein Störungsbild anhand des OSI-Schichtenmodells strukturiert einzugrenzen, statt wahllos zu testen. Grundprinzip: Jeder erfolgreiche Test auf einer höheren Schicht beweist implizit, dass alle darunterliegenden Schichten funktionieren. Da der Zugriff per IP-Adresse (inklusive Ping und vollständigem HTTP-Seitenaufbau) funktioniert, sind Schicht 1 bis 4 sowie sogar Teile der Anwendungsschicht (HTTP) bereits als fehlerfrei bewiesen. Der einzige Unterschied zwischen 'per Name' und 'per IP' ist der vorgeschaltete DNS-Auflösungsschritt – ein eigenständiges Anwendungsschicht-Protokoll (Port 53), das rein logisch getrennt von HTTP arbeitet. Die Fehlersuche muss daher zielgerichtet bei DNS ansetzen: Erreichbarkeit des DNS-Servers, Korrektheit der Client-Konfiguration und Vorhandensein/Korrektheit des DNS-Eintrags. Diese Vorgehensweise – vom Groben (funktioniert das Netz grundsätzlich) zum Feinen (welcher konkrete Dienst versagt) – ist die in der AP1 geprüfte systematische Fehlereingrenzung nach dem OSI-Modell, ohne dass eine Subnetz-Berechnung nötig wäre.",
+    "verweis": "Modul 03, Abschnitt 3.2: OSI-Modell und schichtweise Fehlersuche",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Ping",
+          "Schicht 1",
+          "Verbindung"
+        ],
+        [
+          "Schicht 4",
+          "Transport",
+          "Port 80"
+        ],
+        [
+          "DNS",
+          "Namensauflösung",
+          "nslookup"
+        ]
+      ],
+      "kuer": [
+        "OSI",
+        "Bitübertragung",
+        "Anwendungsschicht",
+        "Routing"
+      ]
+    }
+  },
+  {
+    "id": "M04-750",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Konsolenbefehle & Fehlersuche",
+    "gebiet": "A3",
+    "typ": "freitext",
+    "schwierigkeit": 4,
+    "frage": "Bei der Schwalmstädter Buchversand GmbH melden mehrere Mitarbeiter, dass der interne ERP-Server 'manchmal' nicht erreichbar ist – mal funktioniert der Zugriff einwandfrei, mal bricht die Verbindung ab oder ist sehr langsam. Es gibt keine feste, reproduzierbare Fehlermeldung, das Problem tritt unregelmäßig auf.\n\nEntwerfen Sie eine begründete Diagnosestrategie: Welche Konsolenbefehle bzw. Werkzeuge setzen Sie in welcher Reihenfolge ein? Begründen Sie die Reihenfolge fachlich, und erläutern Sie, wie Sie die jeweiligen Ergebnisse interpretieren würden.",
+    "musterloesung": "Da das Problem NICHT dauerhaft, sondern zeitweise auftritt, darf man sich nicht auf Einzelmessungen verlassen, sondern muss über einen längeren Zeitraum beobachten, um Muster zu erkennen. Vorgehen vom Allgemeinen zum Speziellen:\n\n1. Dauer-Ping (z. B. ping -t <Server-IP> mit Zeitstempel-Protokollierung) über mehrere Stunden laufen lassen: Zeigt, ob und wann Paketverlust oder stark schwankende Antwortzeiten auftreten. Interpretation: Regelmäßiger Paketverlust deutet auf ein Netzwerkproblem (Kabel, Switch, WLAN-Störung) hin; kein Paketverlust trotz gemeldeter Verbindungsabbrüche deutet eher auf ein serverseitiges oder anwendungsseitiges Problem hin.\n\n2. tracert/traceroute zum Server, wiederholt zu unterschiedlichen Zeitpunkten (auch während einer Störungsphase): Zeigt, ob Verzögerungen an einer bestimmten Zwischenstation (z. B. einem bestimmten Switch oder Router) auftreten – hilft, das Problem im Netzwerkpfad einzugrenzen statt pauschal 'das Netzwerk' zu vermuten.\n\n3. netstat -an sowohl auf betroffenen Client-Rechnern als auch auf dem Server während einer Störungsphase: Zeigt bestehende Verbindungen und deren Status. Viele Verbindungen im Status TIME_WAIT oder eine sehr hohe Anzahl gleichzeitiger Verbindungen können auf einen Ressourcenengpass (z. B. erschöpfte Verbindungs-Slots) hindeuten.\n\n4. Ressourcenauslastung auf dem Server prüfen (Task-Manager/Ressourcenmonitor bzw. Systemprotokolle für CPU, RAM, Festplatten-I/O, Netzwerklast): Wird geprüft, ob die Aussetzer zeitlich mit Lastspitzen zusammenfallen (z. B. Backup-Jobs, Batch-Verarbeitung, viele gleichzeitige Nutzer).\n\n5. Windows-Ereignisanzeige (Event Log) am Server auf den exakten Zeitpunkt der gemeldeten Aussetzer prüfen: Zeigt eventuelle Dienstneustarts, Fehler oder Warnungen, die zeitlich korrelieren.\n\n6. Ergänzend nslookup/DNS-Konfiguration prüfen, um kurzzeitige DNS-Aussetzer als Ursache für 'nicht erreichbar' auszuschließen, da diese sich ähnlich wie ein genereller Verbindungsabbruch äußern können, obwohl das Netzwerk selbst funktioniert.\n\nBegründung der Reihenfolge: Zunächst wird die grundsätzliche Netzwerk-Erreichbarkeit über die Zeit erfasst (Ping/Tracert), da dies am schnellsten ein Netzwerkproblem von einem Server-/Anwendungsproblem trennt. Erst danach wird auf Verbindungsebene (netstat) und schließlich serverseitig (Ressourcen, Ereignisprotokolle) tiefer analysiert, um die Ursache immer weiter einzugrenzen, statt vorschnell eine Komponente auszutauschen. Die Korrelation der Zeitstempel aus allen Schritten liefert am Ende die wahrscheinliche Ursache (z. B. Netzwerkinstabilität vs. Serverüberlastung zu bestimmten Uhrzeiten).",
+    "erklaerungKurz": "Bei zeitweisen Störungen ist eine Langzeit-Beobachtung nötig statt einzelner Stichproben. Sinnvolle Reihenfolge: Dauer-Ping/Tracert (Netzwerkebene), dann netstat (Verbindungsebene), dann Server-Ressourcen und Ereignisprotokolle (Serverebene) – jeweils mit Zeitstempeln, um die Aussetzer zeitlich zu korrelieren und Netzwerk- von Server-Ursachen zu unterscheiden.",
+    "erklaerungLang": "Diese Aufgabe prüft die Fähigkeit, bei einem diffusen, nicht reproduzierbaren Fehlerbild eine systematische, zeitbasierte Diagnosestrategie zu entwerfen – eine typische Transferleistung, die über reines Befehlswissen hinausgeht. Entscheidend ist, dass bei 'manchmal auftretenden' Problemen Einzelmessungen (ein einmaliger Ping) wenig aussagekräftig sind; erst die kontinuierliche Protokollierung über die Zeit erlaubt es, Muster zu erkennen und Zeitpunkte der Störung mit anderen Ereignissen (Serverlast, Backup-Fenster, Ereignisprotokoll-Einträge) zu korrelieren. Die Reihenfolge folgt dem Prinzip 'vom Allgemeinen zum Speziellen bzw. vom Netzwerk zum Server': Erst wird geprüft, ob überhaupt eine stabile Netzwerkverbindung besteht (Ping/Tracert), danach die Verbindungsebene (netstat) und zuletzt die serverseitigen Ressourcen und Protokolle. Diese Struktur verhindert, dass vorschnell die falsche Komponente (z. B. das Netzwerk) verdächtigt wird, obwohl die eigentliche Ursache z. B. in einer überlasteten Anwendung auf dem Server liegt.",
+    "verweis": "Modul 04, Abschnitt 4.5: Strukturierte Fehlersuche mit Konsolenbefehlen",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "längerer Zeitraum",
+          "Beobachtung",
+          "Muster",
+          "beobachten"
+        ],
+        [
+          "Dauer-Ping",
+          "ping -t",
+          "Zeitstempel",
+          "Paketverlust"
+        ],
+        [
+          "Logfiles",
+          "Auslastung",
+          "Cronjob",
+          "Stoßzeiten"
+        ]
+      ],
+      "kuer": [
+        "zeitweise",
+        "Switch",
+        "Backup-Job",
+        "korrelieren"
+      ]
+    }
+  },
+  {
+    "id": "M04-751",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Programmiersprachen, Kontrollstrukturen & Systemgrundlagen",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Ein Auszubildender der Ziegenhainer Softwarewerkstatt GmbH schreibt folgenden Pseudocode, um alle 10 Messwerte eines Sensor-Arrays A auszugeben (das Array A hat die gültigen Indizes 0 bis 9):\n\ni = 0\nSOLANGE i <= 10 TUN\n    Ausgabe: A[i]\n    i = i + 1\nENDE SOLANGE\n\nWelche Aussage zum tatsächlichen Verhalten dieses Programms trifft zu?",
+    "optionen": [
+      "Das Programm gibt alle zehn Werte korrekt aus und terminiert danach ordnungsgemäß, weil die Bedingung i <= 10 den Abbruch genau nach dem zehnten gelesenen Wert sicherstellt und der Zähler bereits bei 0 und nicht erst bei 1 zu zählen beginnt.",
+      "Die Schleife führt 11 Durchläufe aus (i = 0 bis 10) und versucht im letzten Durchlauf auf A[10] zuzugreifen – ein Index außerhalb des gültigen Bereichs 0–9, was zu einem Laufzeitfehler bzw. undefiniertem Verhalten führt.",
+      "Da die Schleife kopfgesteuert ist, wird der erste Wert A[0] übersprungen; die Ausgabe beginnt deshalb erst bei A[1] und endet nach neun Werten.",
+      "Das Programm gibt nur neun Werte aus, weil die Bedingung i <= 10 die Schleife bereits vor dem letzten gültigen Index abbricht."
+    ],
+    "loesungIndex": 1,
+    "distraktorErklaerungen": [
+      "Die Bedingung i <= 10 lässt i auch den Wert 10 annehmen. Da i bei 0 beginnt, ergibt das 11 Durchläufe (i = 0,1,...,10), nicht 10 – der letzte Zugriff A[10] liegt außerhalb des gültigen Bereichs 0–9.",
+      "",
+      "Eine kopfgesteuerte Schleife prüft die Bedingung lediglich VOR jedem Durchlauf, überspringt aber keine Indizes. Im ersten Durchlauf gilt i = 0, also wird A[0] ganz normal ausgegeben.",
+      "Die Schleife läuft nicht zu kurz, sondern zu lang: Durch i <= 10 werden 11 Iterationen (i = 0 bis 10) ausgeführt, nicht 9 – der Fehler ist ein klassischer Off-by-One-Fehler mit Zugriff außerhalb des Arrays, keine zu frühe Terminierung."
+    ],
+    "erklaerungKurz": "Klassischer Off-by-One-Fehler: Bei einem Array mit den gültigen Indizes 0–9 (10 Elemente) muss die Schleifenbedingung i < 10 lauten. Mit i <= 10 läuft die Schleife 11-mal und greift im letzten Durchlauf auf den ungültigen Index A[10] zu.",
+    "erklaerungLang": "Diese Aufgabe prüft das genaue Nachvollziehen einer kopfgesteuerten SOLANGE-Schleife (Bedingungsprüfung vor jedem Durchlauf). Ein Array mit 10 Elementen hat in den meisten Programmiersprachen die gültigen Indizes 0 bis 9. Die korrekte Abbruchbedingung wäre i < 10 (oder i <= 9). Durch die fehlerhafte Bedingung i <= 10 nimmt i die Werte 0,1,2,...,9,10 an – das sind 11 statt 10 Werte. Im elften Durchlauf (i = 10) wird auf A[10] zugegriffen, was aber außerhalb des gültigen Bereichs liegt und zu einem Laufzeitfehler (z. B. 'Index out of range') oder – je nach Sprache – zu undefiniertem Verhalten führt. Dieser sogenannte Off-by-One-Fehler ist einer der häufigsten Programmierfehler bei Schleifen über Arrays und wird in der AP1-Prüfung gezielt als Transferaufgabe zum genauen Nachvollziehen von Kontrollstrukturen abgefragt.",
+    "verweis": "Modul 04, Abschnitt 4.6: Kontrollstrukturen – Schleifen und typische Laufzeitfehler"
+  },
+  {
+    "id": "M04-752",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "UML & Schreibtischtest",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 4,
+    "frage": "Bei der Modellierung des Auftragsverwaltungssystems der Neukirchener Auftragsfertigung GmbH gilt: Ein Fertigungsauftrag besteht aus mehreren Auftragspositionen (mindestens einer). Jede Auftragsposition gehört exakt zu genau einem Fertigungsauftrag und hat außerhalb dieses Auftrags keine eigenständige Bedeutung – wird der Fertigungsauftrag storniert, werden auch alle seine Positionen automatisch aus dem System gelöscht.\n\nWelche Beziehung mit welcher Multiplizität bildet diesen Sachverhalt im UML-Klassendiagramm korrekt ab?",
+    "optionen": [
+      "Aggregation, Fertigungsauftrag 1 -- 0..* Auftragsposition, da die einzelnen Positionen als eigenständige Teile auch ohne den zugehörigen Fertigungsauftrag im System weiterbestehen können.",
+      "Komposition, Fertigungsauftrag 1 -- 1..* Auftragsposition; die Auftragsposition ist existenzabhängig vom Fertigungsauftrag und wird beim Löschen des Ganzen automatisch mitgelöscht.",
+      "Assoziation, Fertigungsauftrag 0..* -- 0..* Auftragsposition, da beide Klassen gleichberechtigt und unabhängig voneinander verwaltet werden.",
+      "Komposition, Fertigungsauftrag 0..1 -- 1..* Auftragsposition, da eine Auftragsposition auch ohne zugehörigen Auftrag angelegt werden kann."
+    ],
+    "loesungIndex": 1,
+    "distraktorErklaerungen": [
+      "Aggregation modelliert eine 'Ganzes-Teil'-Beziehung, bei der die Teile auch unabhängig vom Ganzen existieren können (z. B. ein Werkzeug ohne zugeordneten Mitarbeiter). Hier ist die Auftragsposition aber existenzabhängig und wird beim Löschen automatisch mitgelöscht – das erfordert eine Komposition, keine Aggregation.",
+      "",
+      "Eine einfache Assoziation drückt nur eine lose, gleichberechtigte Beziehung ohne Existenzabhängigkeit aus und würde die beschriebene automatische Lösch-Kaskade nicht korrekt abbilden. Außerdem widerspricht die Multiplizität 0..* auf Auftragsseite der Angabe, dass jede Position zu GENAU EINEM Auftrag gehört.",
+      "Die Multiplizität 0..1 auf Seite des Fertigungsauftrags würde bedeuten, dass eine Auftragsposition auch ganz ohne zugehörigen Auftrag existieren kann. Das widerspricht der Angabe, dass jede Position exakt zu genau einem Auftrag gehört – hier muss die Multiplizität auf dieser Seite fest 1 sein, nicht 0..1."
+    ],
+    "erklaerungKurz": "Existenzabhängigkeit (Löschen des Ganzen löscht automatisch die Teile) ist das Kennzeichen einer Komposition, nicht einer Aggregation oder einfachen Assoziation. Da jede Position zu GENAU EINEM Auftrag gehört, muss die Multiplizität auf Auftragsseite fest 1 sein: Fertigungsauftrag 1 -- 1..* Auftragsposition.",
+    "erklaerungLang": "Die drei UML-Beziehungstypen Assoziation, Aggregation und Komposition unterscheiden sich vor allem in der Existenzabhängigkeit der Teile vom Ganzen. Eine Assoziation ist die schwächste Form ohne besondere Abhängigkeit. Eine Aggregation ('kann-aus-Teilen-bestehen') erlaubt, dass die Teile auch unabhängig vom Ganzen existieren und z. B. einem anderen Ganzen zugeordnet werden können. Eine Komposition ('besteht-zwingend-aus-Teilen') bedeutet dagegen, dass die Teile existenziell an genau ein Ganzes gebunden sind – wird das Ganze gelöscht, werden auch die Teile automatisch mitgelöscht. Im beschriebenen Szenario ist genau das der Fall: Die Auftragsposition hat ohne ihren Fertigungsauftrag keine eigenständige Bedeutung und wird bei dessen Stornierung automatisch entfernt. Die Multiplizität auf Seite des Ganzen (Fertigungsauftrag) muss fest 1 sein, da jede Position zu GENAU EINEM Auftrag gehört; auf Seite der Teile (Auftragsposition) gilt 1..*, da ein Auftrag mindestens eine Position enthalten muss.",
+    "verweis": "Modul 04, Abschnitt 4.7: UML-Klassendiagramm – Assoziation, Aggregation, Komposition"
+  },
+  {
+    "id": "M06-750",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Schutzziele (CIA)",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 4,
+    "frage": "Bei der Treysaer Steuerkanzlei PartG öffnet ein Mitarbeiter einen Phishing-Anhang. In der Folge werden (1) vertrauliche Konstruktionspläne und Kundendaten unbemerkt auf einen externen Server kopiert (Exfiltration), (2) sämtliche Dateien auf dem Fileserver durch Ransomware verschlüsselt, und (3) zusätzlich wurden vor der Verschlüsselung einige Rechnungsdatensätze durch den Angreifer unbemerkt manipuliert (Beträge verändert), um Spuren zu verwischen.\n\nWelche der folgenden Aussagen zur Betroffenheit und Priorisierung der Schutzziele sind zutreffend? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Durch die Exfiltration der Konstruktionspläne und Kundendaten ist die Vertraulichkeit verletzt, da Unbefugte Kenntnis von schützenswerten Informationen erlangt haben.",
+      "Durch die Manipulation der Rechnungsdatensätze ist die Integrität verletzt, da Daten unbemerkt und unautorisiert verändert wurden.",
+      "Durch die Verschlüsselung des Fileservers ist die Verfügbarkeit verletzt, da autorisierte Nutzer nicht mehr in angemessener Zeit auf ihre Daten zugreifen können.",
+      "Da alle drei Schutzziele betroffen sind, sollte die schnellstmögliche Wiederherstellung der Verfügbarkeit (Fileserver aus dem letzten Backup zurückspielen) automatisch oberste Priorität vor der Analyse der Vertraulichkeits- und Integritätsverletzung haben.",
+      "Da die Manipulation der Rechnungsdaten vor der Verschlüsselung erfolgte, ist unabhängig vom Backup-Zeitpunkt sichergestellt, dass ein Restore aus dem letzten Backup automatisch auch unveränderte, korrekte Rechnungsdaten liefert."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Ein vorschnelles Wiederherstellen ohne vorherige forensische Sicherung und Analyse würde Spuren des Angriffs (u. a. zur Exfiltration) vernichten und könnte Melde- und Dokumentationspflichten (z. B. nach DSGVO) unterlaufen. Die Reihenfolge Eindämmung/Analyse VOR vollständiger Wiederherstellung ist vorzuziehen – Priorität hat nicht automatisch die schnellste Verfügbarkeit.",
+      "Das gilt nur, wenn das letzte Backup VOR der Manipulation erstellt wurde. Erfolgte die Manipulation vor dem letzten Backup-Zeitpunkt, würden auch die bereits manipulierten (falschen) Rechnungsdaten wiederhergestellt. Das muss anhand des Backup-Zeitstempels und ggf. zusätzlicher Integritätsprüfungen (Prüfsummen, Protokolle) verifiziert werden."
+    ],
+    "erklaerungKurz": "Der Vorfall verletzt alle drei Schutzziele gleichzeitig: Vertraulichkeit (Exfiltration), Integrität (Manipulation der Rechnungsdaten) und Verfügbarkeit (Verschlüsselung). Eine vorschnelle, rein auf Verfügbarkeit fokussierte Wiederherstellung ohne Analyse ist riskant und ein Backup-Restore garantiert nicht automatisch unveränderte Daten, wenn die Manipulation vor dem Sicherungszeitpunkt erfolgte.",
+    "erklaerungLang": "Diese Aufgabe verlangt, einen zusammengesetzten Sicherheitsvorfall differenziert nach den drei Schutzzielen der Informationssicherheit zu analysieren: Vertraulichkeit (nur Befugte erhalten Zugriff auf Informationen), Integrität (Daten sind unverändert/korrekt bzw. Änderungen sind nachvollziehbar) und Verfügbarkeit (Daten/Systeme stehen Berechtigten bei Bedarf zur Verfügung). Alle drei sind hier gleichzeitig betroffen. Die beiden Distraktoren prüfen typische Fehlschlüsse im Incident-Management: Erstens darf die Wiederherstellung der Verfügbarkeit nicht reflexhaft und ohne vorherige forensische Sicherung erfolgen, weil sonst Spuren zur Aufklärung der Vertraulichkeits- und Integritätsverletzung verloren gehen und rechtliche Meldepflichten gefährdet werden können. Zweitens ist ein Backup kein automatischer Garant für korrekte Daten – enthält bereits das letzte Backup die manipulierten Werte (weil die Manipulation vor dem Sicherungszeitpunkt lag), würde ein Restore die falschen Daten lediglich reproduzieren. Eine saubere Incident-Response erfordert daher, Backup-Zeitstempel und Integrität der gesicherten Daten aktiv zu prüfen, statt dies anzunehmen.",
+    "verweis": "Modul 06, Abschnitt 6.1: Schutzziele der Informationssicherheit (CIA)"
+  },
+  {
+    "id": "M06-751",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "DSGVO & Datenschutz",
+    "gebiet": "A3",
+    "typ": "freitext",
+    "schwierigkeit": 4,
+    "frage": "Die Alsfelder Onlinemarketing GmbH möchte einen Cloud-Analytics-Dienst eines Anbieters mit Serverstandort in den USA nutzen, um Kundendaten (Name, Adresse, Bestellhistorie) für Marketingzwecke auszuwerten. Der Anbieter verarbeitet die Daten ausschließlich nach Weisung der Alsfelder Onlinemarketing GmbH.\n\nErläutern Sie: (a) um welche Art der Verarbeitung es sich datenschutzrechtlich handelt und welcher Vertrag dafür zwingend erforderlich ist; (b) welches zusätzliche datenschutzrechtliche Problem durch den Serverstandort USA entsteht und wie es gelöst werden kann; (c) auf welcher Rechtsgrundlage die Verarbeitung der Kundendaten für Marketingzwecke überhaupt zulässig sein könnte und welche Rechte betroffene Kunden dabei haben.",
+    "musterloesung": "(a) Auftragsverarbeitung: Der Cloud-Anbieter verarbeitet die Kundendaten weisungsgebunden im Auftrag der Alsfelder Onlinemarketing GmbH, die datenschutzrechtlich Verantwortliche bleibt. Nach Art. 28 DSGVO ist dafür zwingend ein Auftragsverarbeitungsvertrag (AVV) abzuschließen, der u. a. Gegenstand und Dauer der Verarbeitung, Weisungsgebundenheit, Vertraulichkeitspflichten, technische und organisatorische Maßnahmen (TOM), Regelungen zu Unterauftragsverarbeitern sowie Lösch- und Rückgabepflichten nach Vertragsende regelt.\n\n(b) Drittlandtransfer: Die USA gelten datenschutzrechtlich als Drittland ohne durchgängig anerkanntes, der EU gleichwertiges Datenschutzniveau. Eine Datenübermittlung dorthin ist deshalb nur zulässig, wenn zusätzliche Garantien vorliegen – z. B. eine Zertifizierung des Anbieters nach dem EU-US Data Privacy Framework (Angemessenheitsbeschluss für teilnehmende Unternehmen) oder der Abschluss von EU-Standardvertragsklauseln (Standard Contractual Clauses, SCC) der EU-Kommission zwischen Alsfelder Onlinemarketing GmbH und dem Anbieter. Zusätzlich sollten ergänzende technische Maßnahmen (z. B. Verschlüsselung der Daten, bei der der Anbieter keinen Zugriff auf den Klartext hat) geprüft werden, um Bedenken bezüglich möglicher Zugriffe US-amerikanischer Behörden zu begegnen.\n\n(c) Rechtsgrundlage nach Art. 6 Abs. 1 DSGVO: Für Marketingauswertungen bestehender Kundendaten kommt insbesondere das berechtigte Interesse (Art. 6 Abs. 1 lit. f DSGVO) in Betracht, sofern eine Interessenabwägung zugunsten des Unternehmens ausfällt und die Kunden angemessen informiert werden; alternativ kann eine ausdrückliche Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) eingeholt werden, was insbesondere bei weitergehender Direktwerbung (z. B. E-Mail-Marketing) regelmäßig zusätzlich erforderlich ist. Den betroffenen Kunden stehen dabei insbesondere folgende Rechte zu: Auskunftsrecht (Art. 15), Recht auf Berichtigung (Art. 16), Recht auf Löschung (Art. 17), Recht auf Einschränkung der Verarbeitung (Art. 18), Recht auf Datenübertragbarkeit (Art. 20) sowie vor allem das jederzeitige, ohne Begründung auszuübende Widerspruchsrecht gegen die Verarbeitung zu Marketingzwecken (Art. 21 Abs. 2 DSGVO).",
+    "erklaerungKurz": "Der Fall verbindet drei DSGVO-Aspekte: Auftragsverarbeitung (Art. 28, AVV zwingend), Drittlandtransfer in die USA (zusätzliche Garantien wie SCC oder Data-Privacy-Framework-Zertifizierung nötig) und Rechtsgrundlage für Marketing (Art. 6 Abs. 1 lit. f berechtigtes Interesse oder lit. a Einwilligung), verbunden mit einem umfassenden Widerspruchsrecht der Kunden nach Art. 21 Abs. 2.",
+    "erklaerungLang": "Diese Aufgabe verknüpft mehrere zentrale DSGVO-Bausteine zu einem realistischen Unternehmensfall. Erstens: Sobald ein externer Dienstleister personenbezogene Daten ausschließlich nach Weisung des Unternehmens verarbeitet (keine eigenen Zwecke), handelt es sich um Auftragsverarbeitung nach Art. 28 DSGVO, die zwingend vertraglich (AVV) geregelt werden muss – die datenschutzrechtliche Verantwortung bleibt beim auftraggebenden Unternehmen. Zweitens: Da der Server in einem Drittland (USA) steht, greift zusätzlich das Kapitel V der DSGVO zu internationalen Datentransfers; ohne einen pauschalen Angemessenheitsbeschluss für alle US-Anbieter braucht es entweder eine Zertifizierung des konkreten Anbieters nach dem EU-US Data Privacy Framework oder vertragliche Garantien wie Standardvertragsklauseln, ergänzt um technische Schutzmaßnahmen. Drittens: Die Verarbeitung selbst benötigt unabhängig vom Auftragsverarbeiter und vom Transfer eine eigene Rechtsgrundlage nach Art. 6 – bei Bestandskundendaten für Marketing meist berechtigtes Interesse, wobei Kunden jederzeit gemäß Art. 21 Abs. 2 widersprechen können, was dann eine sofortige Beendigung der Verarbeitung zu Marketingzwecken erzwingt. Die Kombination aller drei Aspekte in einem Fall entspricht dem Transfer- und Analyseniveau der AP1-Prüfung.",
+    "verweis": "Modul 06, Abschnitt 6.1 – DSGVO – Auftragsverarbeitung, Drittlandtransfer und Rechtsgrundlagen",
+    "schluesselbegriffe": {
+      "pflicht": [
+        [
+          "Auftragsverarbeitung",
+          "AVV",
+          "Auftragsverarbeitungsvertrag",
+          "Art. 28"
+        ],
+        [
+          "Drittland",
+          "Drittlandtransfer",
+          "Standardvertragsklauseln",
+          "Data Privacy Framework"
+        ],
+        [
+          "Einwilligung",
+          "berechtigtes Interesse"
+        ]
+      ],
+      "kuer": [
+        "Verantwortliche",
+        "weisungsgebunden",
+        "TOM",
+        "Widerspruchsrecht"
+      ]
+    }
+  },
+  {
+    "id": "M07-750",
+    "pruefungsteil": "AP1",
+    "modul": "M07",
+    "thema": "SLA & Servicevertrag",
+    "gebiet": "A5",
+    "typ": "mehrfach",
+    "schwierigkeit": 4,
+    "frage": "Die Lauterbacher Werkzeugmaschinen GmbH möchte mit einem IT-Dienstleister einen SLA für den Betrieb der geschäftskritischen Fertigungssteuerungs-Software abschließen (ein Ausfall bedeutet unmittelbaren Produktionsstillstand). Welche der folgenden Klauseln bzw. Kennzahlen sind für die Gestaltung dieses SLA sinnvoll bzw. notwendig? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Getrennte Definition von Reaktionszeit (Zeit bis zur ersten Rückmeldung/Bearbeitung durch den Dienstleister) und Wiederherstellungszeit (Zeit bis zur vollständigen Behebung der Störung), da beide unterschiedliche Prozessphasen abbilden.",
+      "Gestaffelte Eskalationsstufen (z. B. Kategorisierung nach Kritikalität wie kritisch/hoch/mittel/niedrig) mit jeweils eigenen Reaktions- und Wiederherstellungszeiten, damit produktionskritische Störungen priorisiert behandelt werden.",
+      "Vertraglich vereinbarte Wartungsfenster außerhalb der Produktionszeiten, die klar von ungeplanten Ausfallzeiten abgegrenzt werden, damit geplante Wartung nicht in die Verfügbarkeitsberechnung einfließt.",
+      "Vertragsstrafen (Service Credits) bei Nichteinhaltung der vereinbarten Zeiten, um einen wirtschaftlichen Anreiz für den Dienstleister zur Einhaltung der SLA-Werte zu schaffen.",
+      "Eine einzige pauschale Verfügbarkeitskennzahl von '99% im Jahresmittel' ohne Unterscheidung nach Störungsschwere oder Tageszeit reicht für ein geschäftskritisches Produktionssystem aus, da der Prozentwert bereits ausreichend Aussagekraft über die tatsächliche Betriebssicherheit besitzt."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Eine reine Jahres-Durchschnittsverfügbarkeit von 99% würde theoretisch einen einzelnen, sehr langen Ausfall von bis zu ca. 3,65 Tagen im Jahr zulassen, ohne dass dies zeitlich oder nach Kritikalität eingegrenzt wird. Für ein produktionskritisches System sind zusätzlich klare Reaktions-/Wiederherstellungszeiten je Störungsklasse sowie idealerweise eine Kernzeit-Verfügbarkeit nötig, da ein einzelner tagelanger Ausfall während der Produktionszeit weitaus schädlicher ist als viele kurze Unterbrechungen außerhalb davon."
+    ],
+    "erklaerungKurz": "Ein SLA für geschäftskritische Systeme braucht mehr als eine pauschale Jahres-Verfügbarkeit: getrennte Reaktions-/Wiederherstellungszeiten, nach Kritikalität gestaffelte Eskalationsstufen, klar abgegrenzte Wartungsfenster und Service Credits als wirtschaftlicher Anreiz. Eine einzelne 99%-Jahreskennzahl ohne weitere Differenzierung ist dafür NICHT ausreichend.",
+    "erklaerungLang": "Die Bewertung einer SLA-Gestaltung erfordert, über die reine Prozentrechnung hinauszudenken und zu beurteilen, welche vertraglichen Instrumente ein Ausfallrisiko für ein geschäftskritisches System wirksam begrenzen. Reaktionszeit und Wiederherstellungszeit sind bewusst zu trennen, da 'schnell reagieren' (z. B. Ticket wird in 15 Minuten bearbeitet) nicht gleichbedeutend mit 'schnell behoben' ist. Eskalationsstufen nach Kritikalität stellen sicher, dass ein Totalausfall der Fertigungssteuerung nicht in derselben Warteschlange wie eine kleine Komfortstörung landet. Wartungsfenster müssen vertraglich klar von ungeplanten Ausfällen abgegrenzt sein, damit die Verfügbarkeitsberechnung nicht durch geplante Arbeiten verfälscht wird. Service Credits schaffen einen wirtschaftlichen Anreiz, die vereinbarten Zeiten tatsächlich einzuhalten. Der Distraktor zur pauschalen 99%-Jahresverfügbarkeit prüft ein verbreitetes Missverständnis: Eine hohe Durchschnittskennzahl kann einen einzelnen, sehr langen zusammenhängenden Ausfall verdecken, der für ein geschäftskritisches Produktionssystem besonders schädlich wäre – ein SLA muss deshalb zusätzlich zeitliche und kritikalitätsbezogene Differenzierungen enthalten, keine reine Jahresdurchschnittsangabe.",
+    "verweis": "Modul 07, Abschnitt 7.1 – Gestaltung und Bewertung von SLA-Klauseln"
+  },
+  {
+    "id": "M03-760",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Berechnungen: Energie",
+    "gebiet": "A2",
+    "typ": "rechenassistent",
+    "schwierigkeit": 2,
+    "frage": "Im Serverraum der Herbsteiner Hostingdienste GmbH läuft ein Server mit einer Leistungsaufnahme von {watt} W mit {stunden} Betriebsstunden pro Jahr. Der Strompreis beträgt {preisCent/100|2} EUR/kWh. Berechne die jährlichen Energiekosten dieses Servers.",
+    "schritte": [
+      {
+        "text": "Berechne die jährliche Energiemenge in Wattstunden (Wh): Leistung (W) × Betriebsstunden/Jahr.",
+        "einheit": "Wh",
+        "formel": "watt*stunden"
+      },
+      {
+        "text": "Rechne die Energiemenge von Wh in kWh um (1 kWh = 1.000 Wh).",
+        "einheit": "kWh",
+        "formel": "s1/1000"
+      },
+      {
+        "text": "Berechne die Energiekosten: Energiemenge (kWh) × Strompreis (EUR/kWh).",
+        "einheit": "EUR",
+        "formel": "s2*preisCent/100"
+      }
+    ],
+    "erklaerungKurz": "{watt} W x {stunden} h = {s1} Wh = {s2} kWh; x {preisCent/100|2} EUR = {s3|2} EUR.",
+    "erklaerungLang": "Schritt 1: {watt} W x {stunden} h/Jahr = {s1} Wh. Schritt 2: {s1} Wh / 1.000 = {s2} kWh. Schritt 3: {s2} kWh x {preisCent/100|2} EUR/kWh = {s3|2} EUR Jahres-Energiekosten.",
+    "verweis": "Modul 03, Abschnitt 3.3 – Energieeffizienz & Betriebskosten",
+    "variablen": {
+      "watt": {
+        "min": 100,
+        "max": 600,
+        "schritt": 50
+      },
+      "stunden": {
+        "min": 2000,
+        "max": 8000,
+        "schritt": 2000
+      },
+      "preisCent": {
+        "min": 25,
+        "max": 40,
+        "schritt": 1
+      }
+    }
+  },
+  {
+    "id": "M03-761",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Datenmengen & Präfixe",
+    "gebiet": "A2",
+    "typ": "rechenassistent",
+    "schwierigkeit": 3,
+    "frage": "Die Schlitzer Medienproduktion GmbH zeichnet ein Schulungsvideo mit einer Bitrate von {bitrate} Mbit/s auf. Die Aufnahme dauert {dauer} Sekunden. Rechne konsequent mit DEZIMALEN Präfixen (1 Mbit = 1.000.000 Bit, 1 GB = 1.000.000.000 Byte). Berechne die Dateigröße in Gigabyte.",
+    "schritte": [
+      {
+        "text": "Berechne die Gesamtdatenmenge in Bit (Bitrate in Bit/s × Dauer in Sekunden; 1 Mbit = 1.000.000 Bit).",
+        "einheit": "Bit",
+        "formel": "bitrate*1000000*dauer"
+      },
+      {
+        "text": "Rechne die Datenmenge von Bit in Byte um (1 Byte = 8 Bit).",
+        "einheit": "Byte",
+        "formel": "s1/8"
+      },
+      {
+        "text": "Rechne die Datenmenge von Byte in Gigabyte um (dezimal: 1 GB = 1.000.000.000 Byte).",
+        "einheit": "GB",
+        "formel": "s2/1000000000"
+      }
+    ],
+    "erklaerungKurz": "{bitrate} Mbit/s x {dauer} s = {s1} Bit = {s2} Byte = {s3|2} GB (dezimal).",
+    "erklaerungLang": "Schritt 1: {bitrate} Mbit/s = {bitrate*1000000} Bit/s; {bitrate*1000000} Bit/s x {dauer} s = {s1} Bit. Schritt 2: {s1} Bit / 8 = {s2} Byte. Schritt 3: {s2} Byte / 1.000.000.000 = {s3|2} GB (dezimale Präfixe, Basis 1000).",
+    "verweis": "Modul 03, Abschnitt 3.1 und 3.3 – Speichermedien und Kenngrößen",
+    "variablen": {
+      "bitrate": {
+        "min": 4,
+        "max": 24,
+        "schritt": 1
+      },
+      "dauer": {
+        "min": 600,
+        "max": 7200,
+        "schritt": 300
+      }
+    }
+  },
+  {
+    "id": "M02-760",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Bezugskalkulation & Skonto",
+    "gebiet": "A2",
+    "typ": "rechenassistent",
+    "schwierigkeit": 3,
+    "frage": "Die Grebenauer Stahlhandel GmbH bestellt Stahlbleche zu einem Listeneinkaufspreis von {liste} EUR (netto). Der Lieferant gewährt {rabatt} % Rabatt. Bei Zahlung innerhalb der Frist werden zusätzlich {skonto} % Skonto abgezogen. Es fallen {bezug} EUR Bezugskosten (Fracht, Versicherung) an. Berechne den Bezugspreis.",
+    "schritte": [
+      {
+        "text": "Berechne den Zieleinkaufspreis (Listeneinkaufspreis − Rabatt).",
+        "einheit": "EUR",
+        "formel": "liste*(1-rabatt/100)"
+      },
+      {
+        "text": "Berechne den Bareinkaufspreis (Zieleinkaufspreis − Skonto).",
+        "einheit": "EUR",
+        "formel": "s1*(1-skonto/100)"
+      },
+      {
+        "text": "Berechne den Bezugspreis (Bareinkaufspreis + Bezugskosten).",
+        "einheit": "EUR",
+        "formel": "s2+bezug"
+      }
+    ],
+    "erklaerungKurz": "{liste} × {1-rabatt/100|2} = {s1}; × {1-skonto/100|2} = {s2|2}; + {bezug} = {s3|2} EUR.",
+    "erklaerungLang": "Schritt 1: {liste} EUR × (1 − {rabatt/100|2}) = {liste} × {1-rabatt/100|2} = {s1} EUR Zieleinkaufspreis. Schritt 2: {s1} EUR × (1 − {skonto/100|2}) = {s1} × {1-skonto/100|2} = {s2|2} EUR Bareinkaufspreis. Schritt 3: {s2|2} EUR + {bezug} EUR Bezugskosten = {s3|2} EUR Bezugspreis.",
+    "verweis": "Modul 02, Abschnitt 2.1 – Bezugskalkulation und Skonto",
+    "variablen": {
+      "liste": {
+        "min": 8000,
+        "max": 16000,
+        "schritt": 1000
+      },
+      "rabatt": {
+        "min": 8,
+        "max": 18,
+        "schritt": 1
+      },
+      "skonto": {
+        "min": 2,
+        "max": 3,
+        "schritt": 1
+      },
+      "bezug": {
+        "min": 150,
+        "max": 350,
+        "schritt": 10
+      }
+    }
+  },
+  {
+    "id": "M07-760",
+    "pruefungsteil": "AP1",
+    "modul": "M07",
+    "thema": "Soll-Ist & Nachkalkulation",
+    "gebiet": "A5",
+    "typ": "rechenassistent",
+    "schwierigkeit": 2,
+    "frage": "Für einen Fertigungsauftrag der Romroder Serienfertigung GmbH wurden Sollkosten von {sollk} EUR kalkuliert. Die Nachkalkulation ergibt tatsächliche Istkosten von {istk} EUR. Berechne die absolute und die prozentuale Abweichung (Istkosten − Sollkosten).",
+    "schritte": [
+      {
+        "text": "Berechne die absolute Abweichung (Istkosten − Sollkosten).",
+        "einheit": "EUR",
+        "formel": "istk-sollk"
+      },
+      {
+        "text": "Berechne die prozentuale Abweichung (Abweichung / Sollkosten × 100).",
+        "einheit": "%",
+        "formel": "s1/sollk*100"
+      }
+    ],
+    "erklaerungKurz": "{istk} − {sollk} = {s1} EUR; {s1} ÷ {sollk} × 100 = {s2|1} % Abweichung.",
+    "erklaerungLang": "Schritt 1: {istk} EUR − {sollk} EUR = {s1} EUR absolute Abweichung.\n• Schritt 2: {s1} EUR ÷ {sollk} EUR × 100 = {s2|1} % prozentuale Abweichung.\nMerke: Erst die absolute Abweichung, dann die Quote – und immer bezogen auf die SOLL-Kosten. Das Vorzeichen sagt die Richtung: positiv = Kostenüberschreitung, negativ = Unterschreitung.",
+    "verweis": "Modul 07, Abschnitt 7.7 – Soll-Ist-Vergleich & Nachkalkulation",
+    "variablen": {
+      "sollk": {
+        "min": 18000,
+        "max": 32000,
+        "schritt": 1000
+      },
+      "istk": {
+        "min": 16000,
+        "max": 35000,
+        "schritt": 500
+      }
+    }
+  }
+]

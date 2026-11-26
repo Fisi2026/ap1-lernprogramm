@@ -1,0 +1,259 @@
+[
+ {
+  "id": "M09-005",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Wertschöpfung",
+  "typ": "freitext",
+  "schwierigkeit": 2,
+  "frage": "Erkläre, wie die IT-Abteilung der Rhaus-Metall-GmbH zur Wertschöpfung des Unternehmens beiträgt, obwohl sie selbst keine Metallprodukte herstellt.",
+  "musterloesung": "Die IT-Abteilung ist ein Unterstützungsprozess und kein Teil der eigentlichen Wertschöpfungskette aus Beschaffung, Produktion und Absatz, trägt aber indirekt zur Wertschöpfung bei. Sie sorgt zum Beispiel für funktionierende ERP-Systeme, mit denen Produktion und Vertrieb reibungslos ablaufen, und steigert dadurch die Effizienz der Kernprozesse. Ohne eine funktionierende IT würden Störungen den Output senken oder zusätzliche Vorleistungen von Dritten nötig machen. Damit vergrößert die IT-Abteilung indirekt die Differenz zwischen Output und Vorleistungen und erhöht so die Wertschöpfung, obwohl sie selbst kein verkaufbares Metallprodukt herstellt.",
+  "erklaerungKurz": "Die IT ist ein Unterstützungsprozess: Sie trägt nicht direkt zum Absatz bei, verbessert aber die Effizienz der Kernprozesse und erhöht so indirekt die Wertschöpfung.",
+  "erklaerungLang": "Die Wertschöpfungskette eines Unternehmens umfasst die Kernprozesse Beschaffung, Produktion beziehungsweise Leistungserstellung und Absatz. Unterstützungsprozesse wie IT, Personal oder Verwaltung liefern selbst keinen direkt verkaufbaren Output, sind aber notwendig, damit die Kernprozesse funktionieren. Bei der Rhaus-Metall-GmbH sorgt die IT-Abteilung zum Beispiel für stabile Produktionssteuerungs- und ERP-Systeme, ohne die Fertigung und Vertrieb ins Stocken geraten würden. Fällt die IT aus, sinkt der Output oder es entstehen zusätzliche Kosten (Vorleistungen), wodurch die Wertschöpfung sinkt. Deshalb wird der Beitrag der IT als indirekt bezeichnet: Er wirkt über die Kernprozesse und nicht über ein eigenes verkauftes Produkt.",
+  "verweis": "Unser Unterricht – Wertschöpfung",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "Unterstützungsprozess",
+    "indirekt",
+    "Vorleistungen"
+   ],
+   "kuer": [
+    "Output",
+    "Effizienz",
+    "ERP-System",
+    "Kernprozesse"
+   ]
+  }
+ },
+ {
+  "id": "M09-013",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Aufgabenanalyse & -synthese",
+  "typ": "erklaeren",
+  "schwierigkeit": 2,
+  "frage": "Erkläre am Beispiel der Rhaus-Metall-GmbH den Unterschied zwischen Aufgabenanalyse und Aufgabensynthese.",
+  "musterloesung": "Die Aufgabenanalyse zerlegt die Gesamtaufgabe der Rhaus-Metall-GmbH – zum Beispiel 'Metallbauteile herstellen und verkaufen' – gedanklich in immer kleinere Teilaufgaben bis hin zu Elementaraufgaben wie 'Blech zuschneiden' oder 'Rechnung schreiben'. Die Aufgabensynthese setzt anschließend genau umgekehrt an: Sie bündelt die zuvor zerlegten Elementaraufgaben wieder zu sinnvollen Aufgabenpaketen, aus denen Stellen gebildet werden, etwa die Stelle 'Sachbearbeiter Rechnungswesen' oder die Abteilung 'Fertigung'. Während die Analyse also vom Ganzen zum Einzelnen führt, führt die Synthese vom Einzelnen zurück zu neu gebildeten organisatorischen Einheiten. Beide Schritte zusammen ergeben den Aufbau der Aufbauorganisation der Rhaus-Metall-GmbH.",
+  "erklaerungKurz": "Aufgabenanalyse zerlegt die Gesamtaufgabe in immer kleinere Teilaufgaben bis zu Elementaraufgaben; Aufgabensynthese bündelt diese wieder zu Stellen. Analyse = Zerlegen, Synthese = Bündeln.",
+  "erklaerungLang": "In der Aufbauorganisation wird zunächst die Gesamtaufgabe eines Betriebs analysiert, das heißt in Teilaufgaben und schließlich in nicht mehr sinnvoll teilbare Elementaraufgaben zerlegt. Dieser Schritt heißt Aufgabenanalyse. Im zweiten Schritt, der Aufgabensynthese, werden die Elementaraufgaben nach Zusammengehörigkeit neu gebündelt und Stellen, Instanzen oder Abteilungen zugeordnet. So entsteht aus der reinen Zerlegung wieder eine arbeitsfähige Organisationsstruktur. Bei der Rhaus-Metall-GmbH führt dieser Prozess zum Beispiel zur Bildung der Stelle 'Sachbearbeiter Rechnungswesen' aus vorher analysierten Einzeltätigkeiten wie Rechnungen schreiben und Zahlungseingänge prüfen.",
+  "verweis": "Unser Unterricht – Aufgabenanalyse & -synthese",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "Aufgabenanalyse",
+    "Aufgabensynthese",
+    "Elementaraufgaben"
+   ],
+   "kuer": [
+    "Teilaufgaben",
+    "Stellenbildung",
+    "Aufbauorganisation"
+   ]
+  }
+ },
+ {
+  "id": "M09-035",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Führungsstile",
+  "typ": "erklaeren",
+  "schwierigkeit": 3,
+  "frage": "In der Konstruktionsabteilung der Rhaus-Metall-GmbH arbeitet ein Team aus erfahrenen Ingenieuren, die selbstständig neue Bauteile entwickeln sollen. Der Abteilungsleiter überlegt, welchen Führungsstil er anwenden soll. Empfiehl einen passenden Führungsstil und begründe deine Wahl.",
+  "musterloesung": "Für dieses Team empfiehlt sich der kooperative Führungsstil, da die Ingenieure erfahren und fachlich kompetent sind und selbstständig kreative Lösungen entwickeln sollen. Beim kooperativen Führungsstil werden die Mitarbeiter an Entscheidungen beteiligt, was ihre Motivation erhöht und ihr Fachwissen einbezieht. Ein autoritärer Führungsstil wäre hier ungeeignet, weil Entscheidungen allein beim Abteilungsleiter liegen und die eigenständige Entwicklungsarbeit der Ingenieure gebremst würde. Ein laissez-faire Führungsstil mit völliger Freiheit ohne Führung birgt dagegen die Gefahr, dass die Arbeit an gemeinsamen Projektzielen unkoordiniert bleibt. Deshalb passt der kooperative Führungsstil am besten zur Situation eines erfahrenen, selbstständigen Ingenieursteams.",
+  "erklaerungKurz": "Erfahrene, selbstständige Teams profitieren vom kooperativen Führungsstil, weil er Beteiligung und Motivation fördert, während ein autoritärer Führungsstil bremst und laissez-faire zu Orientierungslosigkeit führen kann.",
+  "erklaerungLang": "Der Führungsstil sollte situativ zur Aufgabe und zum Reifegrad der Mitarbeiter passen. Ein autoritärer Stil eignet sich für einfache, zeitkritische Entscheidungen, wirkt bei erfahrenen Fachkräften aber demotivierend, weil ihre Kompetenz ungenutzt bleibt. Ein kooperativer Stil bezieht die Mitarbeiter in Entscheidungen ein, nutzt ihr Fachwissen und fördert die Motivation, braucht dafür aber mehr Zeit. Laissez-faire gewährt völlige Freiheit, birgt aber bei komplexen Projekten die Gefahr der Orientierungslosigkeit ohne Abstimmung. Für ein Team erfahrener Ingenieure mit eigenständiger Entwicklungsaufgabe ist der kooperative Stil daher die beste Wahl.",
+  "verweis": "Unser Unterricht – Führungsstile",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "kooperativ",
+    "Motivation",
+    [
+     "autoritär",
+     "laissez-faire"
+    ]
+   ],
+   "kuer": [
+    "laissez-faire",
+    "Fachwissen",
+    "Entscheidungen",
+    "selbstständig"
+   ]
+  }
+ },
+ {
+  "id": "M09-085",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kaufmannseigenschaft",
+  "typ": "freitext",
+  "schwierigkeit": 2,
+  "frage": "Metallbau-Handwerker Hoffmann betreibt seit Jahren einen kleinen Ein-Mann-Betrieb ohne kaufmännische Buchführung, ohne Lager und ohne Mitarbeiter. Prüfe, ob Hoffmann Kaufmann im Sinne des HGB ist, und begründe dein Ergebnis.",
+  "musterloesung": "Hoffmann ist grundsätzlich kein Istkaufmann nach § 1 HGB, weil sein Betrieb nach Art und Umfang keinen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert. Ohne Buchführung, Lager oder Mitarbeiter fehlt die für § 1 HGB nötige kaufmännische Organisation, sodass sein Handelsgewerbe als Kleingewerbe einzustufen ist. Er könnte sich jedoch freiwillig als Kannkaufmann nach § 2 HGB ins Handelsregister eintragen lassen; diese Eintragung wirkt konstitutiv, das heißt, er wird erst durch die Eintragung zum Kaufmann. Solange Hoffmann keine Eintragung vornimmt, bleibt er Nichtkaufmann und unterliegt nicht den Sonderregeln des HGB.",
+  "erklaerungKurz": "Ohne kaufmännische Organisation ist Hoffmann kein Istkaufmann, sondern Kleingewerbetreibender; erst eine freiwillige Eintragung als Kannkaufmann (§ 2 HGB) würde ihn zum Kaufmann machen.",
+  "erklaerungLang": "§ 1 HGB macht die Kaufmannseigenschaft eines Gewerbetreibenden davon abhängig, ob sein Betrieb nach Art und Umfang eine kaufmännische Einrichtung erfordert, etwa Buchführung, Lagerhaltung oder Personal. Ein kleiner Ein-Mann-Betrieb ohne diese Merkmale gilt als Kleingewerbe und ist damit kein Istkaufmann. Nach § 2 HGB kann sich ein Kleingewerbetreibender aber freiwillig ins Handelsregister eintragen lassen und wird dadurch Kannkaufmann. Diese Eintragung wirkt konstitutiv, das heißt rechtsbegründend – ohne Eintragung bleibt Hoffmann Nichtkaufmann.",
+  "verweis": "Unser Unterricht – Kaufmannseigenschaft",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "Istkaufmann",
+    "Kleingewerbe",
+    "Kannkaufmann"
+   ],
+   "kuer": [
+    "§ 1 HGB",
+    "konstitutiv",
+    "Handelsregister"
+   ]
+  }
+ },
+ {
+  "id": "M09-096",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Die Firma",
+  "typ": "erklaeren",
+  "schwierigkeit": 2,
+  "frage": "Erkläre, warum die Rhaus-Metall-GmbH nicht unter dem Namen 'Rhaus Stahl AG' auftreten darf, obwohl der Name werbewirksamer klingen könnte.",
+  "musterloesung": "Die Firma ist der im Handelsregister eingetragene Name, unter dem ein Kaufmann seine Geschäfte betreibt, und muss den Firmengrundsätzen des § 17 HGB entsprechen. Der Grundsatz der Wahrheit verlangt, dass die Firma keine irreführenden Angaben enthält – da das Unternehmen tatsächlich als GmbH und nicht als AG organisiert ist, wäre der Rechtsformzusatz 'AG' unwahr und würde über die tatsächliche Haftungsform täuschen. Der vorgeschriebene Rechtsformzusatz ist Pflichtbestandteil der Firma und muss die reale Rechtsform widerspiegeln, damit Geschäftspartner die Haftungsverhältnisse erkennen können. Deshalb muss das Unternehmen weiterhin den Zusatz 'GmbH' führen und darf sich nicht als 'AG' bezeichnen, auch wenn der Name werblich attraktiver wäre.",
+  "erklaerungKurz": "Der Firmengrundsatz der Wahrheit (§ 17 HGB) verbietet einen falschen Rechtsformzusatz; die GmbH müsste als AG auftreten, was über die tatsächliche Haftungsform täuscht.",
+  "erklaerungLang": "Nach § 17 HGB ist die Firma der Name, unter dem ein Kaufmann im Handelsregister eingetragen ist und seine Geschäfte führt. Sie muss verschiedenen Grundsätzen genügen, unter anderem der Firmenwahrheit: Die Firma darf keine falschen Angaben über wesentliche geschäftliche Verhältnisse enthalten. Der Rechtsformzusatz ist Pflichtbestandteil der Firma und zeigt Geschäftspartnern, wie die Haftung geregelt ist – bei einer GmbH haftet nur das Gesellschaftsvermögen, bei einer AG gelten andere Organe und Kapitalvorschriften. Würde die Rhaus-Metall-GmbH den Zusatz 'AG' führen, wäre dies unwahr und irreführend, weshalb der Zusatz 'GmbH' zwingend beibehalten werden muss.",
+  "verweis": "Unser Unterricht – Die Firma",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "Wahrheit",
+    "Rechtsformzusatz",
+    "Firma"
+   ],
+   "kuer": [
+    "§ 17 HGB",
+    "Handelsregister",
+    "irreführend"
+   ]
+  }
+ },
+ {
+  "id": "M09-115",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Handlungsvollmachten & Prokura",
+  "typ": "erklaeren",
+  "schwierigkeit": 3,
+  "frage": "Prokurist Baumann verkauft im Namen der Rhaus-Metall-GmbH ohne weitere Vollmacht das Firmengrundstück an einen Investor. Ist dieses Geschäft wirksam? Erkläre anhand des § 49 HGB.",
+  "musterloesung": "Die Prokura berechtigt nach § 49 Abs. 1 HGB grundsätzlich zu allen gewöhnlichen und außergewöhnlichen Geschäften des Handelsgewerbes. Nach § 49 Abs. 2 HGB sind aber die Veräußerung und Belastung von Grundstücken von dieser Berechtigung ausgenommen. Für den Verkauf von Grundstücken braucht ein Prokurist deshalb eine besondere Sondervollmacht, die Baumann hier nicht besitzt. Ohne diese Sondervollmacht ist der Grundstücksverkauf nicht von der Prokura gedeckt und das Geschäft grundsätzlich unwirksam, solange die Geschäftsleitung es nicht nachträglich genehmigt.",
+  "erklaerungKurz": "Die Prokura deckt gewöhnliche und außergewöhnliche Geschäfte (§ 49 Abs. 1 HGB), aber Grundstücksgeschäfte sind nach § 49 Abs. 2 HGB ausgenommen; ohne Sondervollmacht ist der Verkauf unwirksam.",
+  "erklaerungLang": "§ 49 Abs. 1 HGB gibt dem Prokuristen eine sehr weitreichende Vertretungsmacht für alle Geschäfte, die der Betrieb eines Handelsgewerbes mit sich bringt. § 49 Abs. 2 HGB schränkt diese Macht jedoch bei besonders bedeutsamen Geschäften ein: Die Veräußerung und Belastung von Grundstücken ist nur mit einer ausdrücklich erteilten Sondervollmacht möglich. Da Baumann keine solche Sondervollmacht besitzt, überschreitet er mit dem Grundstücksverkauf seine Vertretungsmacht. Das Geschäft ist deshalb schwebend unwirksam und wird nur wirksam, wenn die Geschäftsleitung der Rhaus-Metall-GmbH es nachträglich genehmigt.",
+  "verweis": "Unser Unterricht – Handlungsvollmachten & Prokura",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "Prokura",
+    "Sondervollmacht",
+    "Grundstücken"
+   ],
+   "kuer": [
+    "§ 49 HGB",
+    "Handelsgewerbe",
+    "unwirksam",
+    "Prokurist"
+   ]
+  }
+ },
+ {
+  "id": "M09-125",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "freitext",
+  "schwierigkeit": 3,
+  "frage": "Ein Kunde schickt der Rhaus-Metall-GmbH eine Anfrage nach Stahlträgern mit gewünschten Mengen und Lieferterminen. Erkläre die rechtliche Wirkung dieser Anfrage. Ist der Kunde damit bereits zur Bestellung verpflichtet?",
+  "musterloesung": "Die Anfrage ist rechtlich unverbindlich und begründet keinerlei Verpflichtung zum Kauf. Sie bekundet lediglich ein Kaufinteresse des Kunden und dient dazu, von der Rhaus-Metall-GmbH ein Angebot mit Preisen und Konditionen zu erhalten. Weder der Kunde noch die Rhaus-Metall-GmbH gehen durch die Anfrage einen rechtlich bindenden Vertrag ein; ein Vertrag kommt erst durch Angebot und Annahme zustande. Der Kunde ist also nicht verpflichtet, nach Erhalt eines Angebots tatsächlich zu bestellen.",
+  "erklaerungKurz": "Die Anfrage ist rechtlich unverbindlich und bekundet nur ein Kaufinteresse; ein bindender Vertrag entsteht erst durch Angebot und Annahme.",
+  "erklaerungLang": "Die Anfrage eines Kunden hat keine rechtliche Bindungswirkung. Sie ist lediglich die Kundgabe eines Kaufinteresses und die Bitte um ein Angebot mit Informationen zu Preisen, Mengen und Lieferbedingungen. Ein Vertrag im rechtlichen Sinn entsteht erst, wenn auf ein Angebot (Antrag) eine Annahme erfolgt. Da bei einer bloßen Anfrage noch kein Angebot vorliegt, ist weder der Kunde noch der Anbieter zu irgendetwas verpflichtet.",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "unverbindlich",
+    "Kaufinteresse",
+    "Angebot"
+   ],
+   "kuer": [
+    "Vertrag",
+    "Annahme",
+    "Bestellung"
+   ]
+  }
+ },
+ {
+  "id": "M09-126",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "erklaeren",
+  "schwierigkeit": 3,
+  "frage": "Erkläre, unter welchen Voraussetzungen ein Angebot rechtlich als Antrag gilt, und begründe, warum Annahmefristen für Angebote notwendig sind.",
+  "musterloesung": "Ein Angebot gilt rechtlich als Antrag, wenn es erstens an eine bestimmte Person gerichtet ist, zweitens dieser Person zugegangen ist und drittens vollständig ist, also keine Freizeichnungsklauseln wie 'freibleibend' enthält. Sind diese drei Voraussetzungen erfüllt, ist der Anbieter an sein Angebot gebunden. Annahmefristen sind notwendig, weil der Anbieter ohne eine solche Frist auf unbestimmte Zeit an sein Angebot gebunden wäre und nicht anderweitig disponieren könnte. Deshalb gilt ein Angebot nur so lange, wie unter normalen Umständen eine Antwort erwartet werden kann: unter Anwesenden sofort, bei einem Brief etwa eine Woche, oder bis zum Ablauf einer ausdrücklich gesetzten Frist.",
+  "erklaerungKurz": "Ein Angebot ist Antrag, wenn es an eine bestimmte Person gerichtet, zugegangen und vollständig ist; Annahmefristen verhindern eine unbegrenzte Bindung des Anbieters.",
+  "erklaerungLang": "Ein Angebot wird rechtlich zum Antrag, wenn drei Bedingungen erfüllt sind: Es ist an eine bestimmte Person gerichtet, dieser zugegangen und vollständig, also ohne Freizeichnungsklauseln wie 'Preis freibleibend'. Ist dies der Fall, ist der Anbieter an sein Angebot gebunden. Ohne Annahmefristen bestünde diese Bindung zeitlich unbegrenzt, was den Anbieter unangemessen belasten würde, da er nicht anderweitig über seine Ware verfügen könnte. Deshalb gilt ein Angebot nur so lange, wie unter normalen Umständen mit einer Antwort zu rechnen ist: unter Anwesenden sofort, bei brieflichem Kontakt etwa eine Woche, oder bis zum Ablauf einer ausdrücklich gesetzten Frist.",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "Antrag",
+    "zugegangen",
+    "Annahmefristen"
+   ],
+   "kuer": [
+    "Freizeichnungsklauseln",
+    "gebunden",
+    "Frist"
+   ]
+  }
+ },
+ {
+  "id": "M09-138",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "freitext",
+  "schwierigkeit": 3,
+  "frage": "Auszubildender Lukas Brenner befindet sich im 5. Monat seiner Ausbildung bei der Rhaus-Metall-GmbH (Probezeit: 3 Monate). Er möchte die Ausbildung abbrechen, weil er eine Ausbildung in einem anderen Beruf beginnen möchte. Prüfe, ob und wie Lukas rechtswirksam kündigen kann.",
+  "musterloesung": "Die Probezeit von Lukas ist mit 3 Monaten bereits abgelaufen, da er sich im 5. Monat der Ausbildung befindet; eine fristlose Kündigung ohne Grund nach § 22 Abs. 1 BBiG ist damit nicht mehr möglich. Nach der Probezeit kann der Auszubildende nach § 22 Abs. 2 Nr. 2 BBiG kündigen, wenn er die Berufsausbildung aufgeben oder eine andere Berufsausbildung beginnen will; hierfür gilt eine Kündigungsfrist von vier Wochen. Lukas kann also wirksam kündigen, muss die Kündigung aber schriftlich erklären und die vierwöchige Frist einhalten. Ist Lukas noch minderjährig, muss die Kündigung von seinen gesetzlichen Vertretern erklärt werden.",
+  "erklaerungKurz": "Nach Ablauf der Probezeit kann der Azubi nach § 22 Abs. 2 Nr. 2 BBiG mit vier Wochen Frist kündigen, wenn er die Ausbildung aufgibt oder wechselt; die Kündigung muss schriftlich erfolgen.",
+  "erklaerungLang": "Nach § 20 BBiG dauert die Probezeit mindestens einen und höchstens vier Monate; danach kann nicht mehr fristlos ohne Grund gekündigt werden. Nach der Probezeit ist nach § 22 Abs. 2 BBiG eine Kündigung nur noch in zwei Fällen möglich: fristlos aus wichtigem Grund, oder durch den Auszubildenden mit einer Frist von vier Wochen, wenn er die Berufsausbildung aufgeben oder in einem anderen Beruf ausgebildet werden möchte. Da Lukas im 5. Ausbildungsmonat und damit nach der dreimonatigen Probezeit kündigen will, greift der zweite Fall: Er kann mit vierwöchiger Frist schriftlich kündigen. Ist er noch nicht volljährig, muss die Kündigung von seinen gesetzlichen Vertretern abgegeben werden, da Minderjährige nicht selbst wirksam kündigen können.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "Probezeit",
+    "vier Wochen",
+    "schriftlich"
+   ],
+   "kuer": [
+    "§ 22 BBiG",
+    "gesetzlichen Vertretern",
+    "Kündigungsfrist"
+   ]
+  }
+ },
+ {
+  "id": "M09-139",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "freitext",
+  "schwierigkeit": 4,
+  "frage": "Die 16-jährige Auszubildende Mara Voss unterschreibt ihren Ausbildungsvertrag bei der Rhaus-Metall-GmbH. Der Vertrag enthält folgende Angaben: (1) Probezeit 5 Monate, (2) tägliche Arbeitszeit 9 Stunden, (3) 25 Werktage Urlaub pro Jahr, (4) keine Angabe zur Dauer der Ausbildung. Bewerte diese vier Angaben rechtlich und begründe jeweils, ob sie zulässig sind.",
+  "musterloesung": "Die vereinbarte Probezeit von 5 Monaten ist unzulässig, weil § 20 BBiG die Probezeit auf höchstens 4 Monate begrenzt. Die tägliche Arbeitszeit von 9 Stunden verstößt gegen § 8 JArbSchG, wonach Jugendliche höchstens 8 Stunden täglich und 40 Stunden wöchentlich beschäftigt werden dürfen. Die vereinbarten 25 Werktage Urlaub unterschreiten den nach § 19 JArbSchG für Jugendliche unter 17 Jahren vorgeschriebenen Mindesturlaub von 27 Werktagen und sind damit ebenfalls unzulässig. Die fehlende Angabe zur Dauer der Ausbildung verstößt gegen § 11 BBiG, da die Niederschrift des Ausbildungsvertrags zwingend Angaben zur Dauer der Ausbildung enthalten muss. Insgesamt müsste der Vertrag in allen vier Punkten korrigiert werden, bevor er rechtswirksam so umgesetzt werden darf.",
+  "erklaerungKurz": "Der Vertrag verstößt gegen § 20 BBiG (Probezeit max. 4 Monate), § 8 JArbSchG (Arbeitszeit max. 8h/Tag), § 19 JArbSchG (Mindesturlaub 27 Werktage unter 17) und § 11 BBiG (fehlende Pflichtangabe zur Ausbildungsdauer).",
+  "erklaerungLang": "Nach § 20 BBiG darf die Probezeit mindestens einen und höchstens vier Monate dauern; die vereinbarten 5 Monate überschreiten diese Höchstgrenze und sind unwirksam. Nach § 8 JArbSchG dürfen Jugendliche höchstens 8 Stunden täglich und 40 Stunden wöchentlich beschäftigt werden, sodass die vereinbarten 9 Stunden unzulässig sind. § 19 JArbSchG schreibt für Jugendliche unter 17 Jahren einen Mindesturlaub von 27 Werktagen vor; die vertraglich vereinbarten 25 Werktage unterschreiten diesen Mindestwert und sind daher unzulässig. Nach § 11 BBiG muss die Niederschrift des Ausbildungsvertrags unter anderem Angaben zur Dauer der Ausbildung enthalten; fehlt diese Angabe, ist der Vertrag in diesem Punkt unvollständig und muss nachgebessert werden. Insgesamt zeigt der Fall, dass Ausbildungsverträge in mehreren Punkten gegen zwingende Schutzvorschriften des BBiG und JArbSchG verstoßen können.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)",
+  "schluesselbegriffe": {
+   "pflicht": [
+    "Probezeit",
+    "Mindesturlaub",
+    "Arbeitszeit"
+   ],
+   "kuer": [
+    "§ 20 BBiG",
+    "§ 8 JArbSchG",
+    "§ 11 BBiG",
+    "Niederschrift"
+   ]
+  }
+ }
+]

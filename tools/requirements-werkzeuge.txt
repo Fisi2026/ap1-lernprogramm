@@ -1,0 +1,9 @@
+# Messwerkzeuge fuer tools/qualitaet_ratsche.py (N43 M1, BUILD_LOG 121). Gepinnt MIT Hashes (wie das npm-Lockfile):
+# ein neues Release kommt erst nach bewusster Aenderung hier an. Hashes je Plattform: win_amd64 (PC) und
+# manylinux x86_64 (CI), gemessen 10.10.2026 per pip download + sha256sum.
+# Installieren: python3 -m pip install --require-hashes -r tools/requirements-werkzeuge.txt
+lizard==1.24.1 --hash=sha256:746060a3e9a375af7340b2d4c6aab307b8a8b4199339c36ddc7afc4188b53d1c
+pathspec==1.1.1 --hash=sha256:a00ce642f577bf7f473932318056212bc4f8bfdf53128c78bbd5af0b9b20b189
+pygments==2.21.0 --hash=sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9
+ruff==0.17.0 --hash=sha256:8ab76bcda86dfd28e13776cb5de3c7bcdcf1ae3d37ed761113d1a5a415dc134c --hash=sha256:bc73e7c133e82d55b5f15897b2a442d72c0cb4a0c886c46801ce3c247150b60c
+shellcheck-py==0.11.0.1 --hash=sha256:784156289ecb17e91c692cd783ab5152333309588cabb10032a047331c63e759 --hash=sha256:1b274df81de5b000ff78db433e7328b87e52e3c38481c60f8e488c3095beef05

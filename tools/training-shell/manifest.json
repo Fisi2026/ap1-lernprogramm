@@ -1,0 +1,46 @@
+{
+  "manifest_version": "0.3",
+  "name": "training-shell",
+  "display_name": "Training Shell",
+  "version": "1.1.2",
+  "description": "Fuehrt Bash-Befehle im FISI-Projektordner aus (Git Bash). Ersatz fuer die Sandbox-Shell, solange der Plan9-Mount durch KB5124008 defekt ist. Laeufe ueber 50 s gehen selbst in den Hintergrund.",
+  "author": {
+    "name": "Winterberg"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "TRAINING_DIR": "${user_config.projektordner}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "run",
+      "description": "Bash-Befehl im Projektordner ausfuehren und Ausgabe zurueckgeben"
+    },
+    {
+      "name": "info",
+      "description": "Ordner, Shell und Werkzeugversionen melden"
+    }
+  ],
+  "compatibility": {
+    "platforms": [
+      "win32"
+    ]
+  },
+  "user_config": {
+    "projektordner": {
+      "type": "directory",
+      "title": "Projektordner (Repo-Klon)",
+      "description": "Klon von Fisi2026/ap1-lernprogramm. Leer lassen = <Benutzerordner>\\Claude\\Projects\\Training (ein Vorgabewert mit ${HOME} wird von der App NICHT ersetzt - gemessen 26.09.2026).",
+      "required": false
+    }
+  }
+}

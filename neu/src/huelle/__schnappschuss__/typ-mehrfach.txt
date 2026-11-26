@@ -1,0 +1,33 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Einzelne Frage" [Ebene 1]
+  heading "Einzelne Frage" [Ebene 2]
+  img "Schwierigkeit 2 von 4"
+  button "Zum gezielten Wiederholen markieren"
+  button "⚑ Frage melden"
+  group "Antwortmöglichkeiten"
+    checkbox "Wer Feedback erhält, hört zu und fragt bei Unklarem nach, statt sich …" [checked=false]
+    checkbox "Beim 360°-Feedback kommen Rückmeldungen von Vorgesetzten, Kollegen un…" [checked=false]
+    checkbox "Feedback wird am besten gesammelt und einmal im Jahr im Personalgespr…" [checked=false]
+    checkbox "Wer Feedback erhält, muss jeden Hinweis ohne Rückfrage annehmen und s…" [checked=false]
+    checkbox "Der Feedback-Nehmer entscheidet selbst, welche Hinweise er annimmt un…" [checked=false]
+    checkbox "Beim 360°-Feedback beurteilt ausschließlich die direkte Führungskraft…" [checked=false]
+  button "Lösung prüfen" [gesperrt]
+  button "Aufgeben"
+  button "Zur Startseite"
+  button "Normal weiterüben"

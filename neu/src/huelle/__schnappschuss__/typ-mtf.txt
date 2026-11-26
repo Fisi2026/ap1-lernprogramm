@@ -1,0 +1,38 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar"
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Einzelne Frage" [Ebene 1]
+  heading "Einzelne Frage" [Ebene 2]
+  img "Schwierigkeit 2 von 4"
+  button "Zum gezielten Wiederholen markieren"
+  button "⚑ Frage melden"
+  radiogroup "Aussage 1"
+    radio "Aussage 1: wahr" [checked=false]
+    radio "Aussage 1: falsch" [checked=false]
+  radiogroup "Aussage 2"
+    radio "Aussage 2: wahr" [checked=false]
+    radio "Aussage 2: falsch" [checked=false]
+  radiogroup "Aussage 3"
+    radio "Aussage 3: wahr" [checked=false]
+    radio "Aussage 3: falsch" [checked=false]
+  radiogroup "Aussage 4"
+    radio "Aussage 4: wahr" [checked=false]
+    radio "Aussage 4: falsch" [checked=false]
+  button "Lösung prüfen" [gesperrt]
+  button "Aufgeben"
+  button "Zur Startseite"
+  button "Normal weiterüben"

@@ -1,0 +1,153 @@
+navigation "Bereiche"
+  button "Startseite"
+  button "Üben"
+  button "Klausurvorbereitung"
+  button "Tagesserie"
+  button "Fehler-Deck"
+  button "Markierte Fragen"
+  button "Prüfungssimulation"
+  button "Rechen-Generator"
+  button "Netzplan"
+  button "Gantt"
+  button "Glossar" [current=page]
+  button "Spickzettel"
+  button "Statistik"
+  button "Einstellungen"
+main
+  banner
+    heading "Glossar" [Ebene 1]
+  group "Glossar-Teile"
+    button "Begriffe (66)"
+  searchbox "Begriff suchen"
+  heading "Audit M05" [Ebene 2]
+    button "Audit M05"
+  heading "Aufgabenanalyse M09" [Ebene 2]
+    button "Aufgabenanalyse M09"
+  heading "Aufgabensynthese M09" [Ebene 2]
+    button "Aufgabensynthese M09"
+  heading "BBiG M09" [Ebene 2]
+    button "BBiG M09"
+  heading "Bezugspreis M09" [Ebene 2]
+    button "Bezugspreis M09"
+  heading "Bindefrist M09" [Ebene 2]
+    button "Bindefrist M09"
+  heading "Copyleft (GPL) M04" [Ebene 2]
+    button "Copyleft (GPL) M04"
+  heading "das Eisbergmodell der Kommunikation M02" [Ebene 2]
+    button "das Eisbergmodell der Kommunikation M02"
+  heading "DHCP-Lease M04" [Ebene 2]
+    button "DHCP-Lease M04"
+  heading "Direktvertrieb M02" [Ebene 2]
+    button "Direktvertrieb M02"
+  heading "Domäne (im Kontext von Windows und Active Directory) M03" [Ebene 2]
+    button "Domäne (im Kontext von Windows und Active Directory) M03"
+  heading "Duales System M08" [Ebene 2]
+    button "Duales System M08"
+  heading "Einliniensystem M09" [Ebene 2]
+    button "Einliniensystem M09"
+  heading "Eisenhower-Matrix M09" [Ebene 2]
+    button "Eisenhower-Matrix M09"
+  heading "Elementaraufgabe M09" [Ebene 2]
+    button "Elementaraufgabe M09"
+  heading "Firma M09" [Ebene 2]
+    button "Firma M09"
+  heading "Formkaufmann M09" [Ebene 2]
+    button "Formkaufmann M09"
+  heading "Freizeichnungsklausel M09" [Ebene 2]
+    button "Freizeichnungsklausel M09"
+  heading "Gefahrenübergang (im Kontext der Abnahme) M07" [Ebene 2]
+    button "Gefahrenübergang (im Kontext der Abnahme) M07"
+  heading "Gesamtpuffer M09" [Ebene 2]
+    button "Gesamtpuffer M09"
+  heading "Günstigkeitsprinzip (Tarifrecht) M08" [Ebene 2]
+    button "Günstigkeitsprinzip (Tarifrecht) M08"
+  heading "Handelsregister M09" [Ebene 2]
+    button "Handelsregister M09"
+  heading "Handlungsvollmacht M09" [Ebene 2]
+    button "Handlungsvollmacht M09"
+  heading "IOPS (Input/Output Operations per Second) M03" [Ebene 2]
+    button "IOPS (Input/Output Operations per Second) M03"
+  heading "ISMS (Informationssicherheits-Managementsystem) M06" [Ebene 2]
+    button "ISMS (Informationssicherheits-Managementsystem) M06"
+  heading "Istkaufmann M09" [Ebene 2]
+    button "Istkaufmann M09"
+  heading "JArbSchG M09" [Ebene 2]
+    button "JArbSchG M09"
+  heading "Jugend- und Auszubildendenvertretung (JAV) M08" [Ebene 2]
+    button "Jugend- und Auszubildendenvertretung (JAV) M08"
+  heading "Kannkaufmann M09" [Ebene 2]
+    button "Kannkaufmann M09"
+  heading "Käufermarkt M02" [Ebene 2]
+    button "Käufermarkt M02"
+  heading "Kernprozess M09" [Ebene 2]
+    button "Kernprozess M09"
+  heading "Kommanditist M09" [Ebene 2]
+    button "Kommanditist M09"
+  heading "Komplementär M09" [Ebene 2]
+    button "Komplementär M09"
+  heading "Kritischer Weg M01" [Ebene 2]
+    button "Kritischer Weg M01"
+  heading "Lessons Learned M01" [Ebene 2]
+    button "Lessons Learned M01"
+  heading "Matrixorganisation M09" [Ebene 2]
+    button "Matrixorganisation M09"
+  heading "MbD M09" [Ebene 2]
+    button "MbD M09"
+  heading "MbE M09" [Ebene 2]
+    button "MbE M09"
+  heading "MbO M09" [Ebene 2]
+    button "MbO M09"
+  heading "Mehrliniensystem M09" [Ebene 2]
+    button "Mehrliniensystem M09"
+  heading "Meilenstein M01" [Ebene 2]
+    button "Meilenstein M01"
+  heading "Multi-Channel-Vertrieb (Mehrkanal-Vertrieb) M02" [Ebene 2]
+    button "Multi-Channel-Vertrieb (Mehrkanal-Vertrieb) M02"
+  heading "Multiplikator im Kontext von Change Management M07" [Ebene 2]
+    button "Multiplikator im Kontext von Change Management M07"
+  heading "Nutzwertanalyse M02" [Ebene 2]
+    button "Nutzwertanalyse M02"
+  heading "PDCA-Zyklus M05" [Ebene 2]
+    button "PDCA-Zyklus M05"
+  heading "Probezeit M09" [Ebene 2]
+    button "Probezeit M09"
+  heading "Prokura M09" [Ebene 2]
+    button "Prokura M09"
+  heading "Prokurist M09" [Ebene 2]
+    button "Prokurist M09"
+  heading "Pseudonymisierung M06" [Ebene 2]
+    button "Pseudonymisierung M06"
+  heading "Qualitätslenkung (Quality Control) M05" [Ebene 2]
+    button "Qualitätslenkung (Quality Control) M05"
+  heading "Retrospektive M01" [Ebene 2]
+    button "Retrospektive M01"
+  heading "Service Level Agreement (SLA) M07" [Ebene 2]
+    button "Service Level Agreement (SLA) M07"
+  heading "Social Engineering M06" [Ebene 2]
+    button "Social Engineering M06"
+  heading "Sprint (im SCRUM-Kontext) M01" [Ebene 2]
+    button "Sprint (im SCRUM-Kontext) M01"
+  heading "Stabliniensystem M09" [Ebene 2]
+    button "Stabliniensystem M09"
+  heading "Stabsstelle M09" [Ebene 2]
+    button "Stabsstelle M09"
+  heading "Stammkapital M09" [Ebene 2]
+    button "Stammkapital M09"
+  heading "TCO (Total Cost of Ownership) M03" [Ebene 2]
+    button "TCO (Total Cost of Ownership) M03"
+  heading "Unterstützungsprozess M09" [Ebene 2]
+    button "Unterstützungsprozess M09"
+  heading "VPN (Virtual Private Network) M04" [Ebene 2]
+    button "VPN (Virtual Private Network) M04"
+  heading "Wartungsvertrag im Kontext von IT-Service M07" [Ebene 2]
+    button "Wartungsvertrag im Kontext von IT-Service M07"
+  heading "Wertschöpfung M09" [Ebene 2]
+    button "Wertschöpfung M09"
+  heading "Wirkungsgrad (η – eta) M03" [Ebene 2]
+    button "Wirkungsgrad (η – eta) M03"
+  heading "Zero-Trust-Netzwerk im Zusammenhang mit WLAN und VPN M04" [Ebene 2]
+    button "Zero-Trust-Netzwerk im Zusammenhang mit WLAN und VPN M04"
+  heading "Zertifizierungsstelle (Certificate Authority, CA) M06" [Ebene 2]
+    button "Zertifizierungsstelle (Certificate Authority, CA) M06"
+  heading "Zwei-Faktor-Authentifizierung (2FA) M06" [Ebene 2]
+    button "Zwei-Faktor-Authentifizierung (2FA) M06"

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AP1-Lernprogramm – Fachinformatiker Systemintegration</title>
+<meta name="description" content="Offline-Lernprogramm zur Vorbereitung auf die AP1 der Fachinformatiker Systemintegration. 941 Fragen, Prüfungssimulation, Fehler-Deck.">
+<meta name="theme-color" content="#15171C">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon-180.png">
+<!-- Styles bewusst INLINE: die Landing muss ohne den App-Stack (styles.css, app_*.js) laden.
+     Keine externen Ressourcen – die Offline-Invariante gilt auch hier. -->
+<style>
+  :root{
+    --gelb:#F4C20D; --ink900:#15171C; --ink700:#2A2F39; --g500:#69707D;
+    --g200:#E2E6EB; --g100:#F0F2F5; --panel:#fff; --bg:#FAFBFC;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink700); line-height:1.6;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .kopf{background:var(--ink900); color:#fff; padding:40px 20px 44px}
+  .mitte{max-width:760px; margin:0 auto}
+  .logo{
+    display:inline-block; background:var(--gelb); color:var(--ink900);
+    font-weight:700; font-size:1.05rem; letter-spacing:.04em;
+    padding:6px 12px; border-radius:8px; margin-bottom:18px;
+  }
+  h1{margin:0 0 10px; font-size:1.75rem; line-height:1.25; letter-spacing:-.02em}
+  .kopf p{margin:0; color:#C6CCD4; font-size:1.02rem}
+  .cta{
+    display:inline-block; margin-top:26px; background:var(--gelb); color:var(--ink900);
+    font-weight:600; font-size:1.08rem; text-decoration:none;
+    padding:15px 30px; border-radius:10px; min-height:44px;
+  }
+  .cta:hover{background:#C8920A}
+  .cta:focus-visible{outline:3px solid #fff; outline-offset:2px}
+  main{max-width:760px; margin:0 auto; padding:32px 20px 56px}
+  section{margin-bottom:34px}
+  h2{
+    font-size:1.16rem; color:var(--ink900); margin:0 0 12px;
+    padding-bottom:7px; border-bottom:2px solid var(--g200); letter-spacing:-.01em;
+  }
+  ul{margin:0; padding-left:20px}
+  li{margin-bottom:7px}
+  .karten{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+  .karte{background:var(--panel); border:1px solid var(--g200); border-radius:10px; padding:15px 17px}
+  .karte b{display:block; color:var(--ink900); margin-bottom:3px}
+  .karte span{font-size:.93rem; color:var(--g500)}
+  .hinweis{background:var(--g100); border-left:4px solid var(--gelb); padding:13px 16px; border-radius:0 8px 8px 0}
+  .hinweis p{margin:0}
+  footer{border-top:1px solid var(--g200); padding:20px; text-align:center; color:var(--g500); font-size:.87rem}
+  footer a{color:var(--g500)}
+  @media (max-width:520px){ h1{font-size:1.45rem} .kopf{padding:30px 18px 34px} }
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="mitte">
+    <div class="logo">AP1</div>
+    <h1>Lernprogramm für die AP1</h1>
+    <p>Gestreckte Abschlussprüfung Teil 1 – Fachinformatiker/-in für Systemintegration.
+       Läuft im Browser, funktioniert offline, kostet nichts.</p>
+    <a class="cta" href="lernprogramm_ap1.html">App starten</a>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>Was drin ist</h2>
+    <div class="karten">
+      <div class="karte"><b>941 Fragen</b><span>Über alle Lernfelder der AP1, dazu ein eigener Bereich für den WiSo-Unterricht.</span></div>
+      <div class="karte"><b>21 Aufgabenformate</b><span>Von Ankreuzfragen über Netzpläne und Kalkulationstabellen bis zu frei formulierten Antworten.</span></div>
+      <div class="karte"><b>Prüfungssimulation</b><span>Vier Aufgaben, 100 Punkte, 90 Minuten – im Aufbau der echten AP1, mit Auswertung und Note.</span></div>
+      <div class="karte"><b>Fehler-Deck</b><span>Falsch beantwortete Fragen kommen im 1-/3-/7-Tage-Rhythmus zur Wiederholung zurück.</span></div>
+      <div class="karte"><b>Passt sich an</b><span>Die Schwierigkeit steigt und fällt je Thema einzeln – dort, wo es nötig ist.</span></div>
+      <div class="karte"><b>Spickzettel &amp; Glossar</b><span>Formeln, Merksätze und Kurzdefinitionen zum Nachschlagen.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Auf dem Handy installieren</h2>
+    <p>Die Seite lässt sich wie eine App zum Startbildschirm hinzufügen – danach startet sie im
+       Vollbild und ohne Browserleiste.</p>
+    <ul>
+      <li><b>Android (Chrome):</b> Menü <b>⋮</b> öffnen und <b>„App installieren"</b> beziehungsweise
+          <b>„Zum Startbildschirm hinzufügen"</b> wählen. Oft erscheint der Hinweis auch von selbst.</li>
+      <li><b>iPhone und iPad (Safari):</b> auf <b>Teilen</b> tippen, dann <b>„Zum Home-Bildschirm"</b>.
+          Safari zeigt dafür keinen automatischen Hinweis – der Weg über das Teilen-Menü ist der
+          einzige. In anderen Browsern auf iOS funktioniert es nicht.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Offline und privat</h2>
+    <div class="hinweis">
+      <p>Nach dem ersten Laden funktioniert alles ohne Internet – im Zug, in der Pause, in der
+         Berufsschule. Dein Lernstand wird ausschließlich lokal im Browser gespeichert: keine
+         Anmeldung, kein Konto, kein Server, der mitliest. Wer den Browserspeicher löscht,
+         löscht damit auch den Fortschritt.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a href="lernprogramm_ap1.html">Zum Lernprogramm</a>
+</footer>
+
+</body>
+</html>

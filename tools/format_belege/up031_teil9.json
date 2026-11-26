@@ -1,0 +1,362 @@
+{
+ "tools/abschnitt.py:26": {
+  "typen": [
+   "str"
+  ],
+  "grund": "marke = sys.argv[1:][1] (Z. 16/18) - Element von sys.argv ist str"
+ },
+ "tools/apply_batch.py:154": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/apply_batch.py:176": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/apply_batch.py:178": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/apply_batch.py:180": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/apply_batch.py:182": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/apply_batch.py:192": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/apply_batch.py:212": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/apply_batch.py:215": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/apply_batch.py:217": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "i = q.get('id', '<ohne id>') (Z. 150); q stammt aus json.load (Z. 125) - JSON-Werte sind nie Tupel"
+ },
+ "tools/archiv/migration/mig_g26.py:321": {
+  "typen": [
+   "str"
+  ],
+  "grund": "fid ist Schluessel von MIG (for fid, m in MIG.items() / for fid in MIG); MIG-Schluessel sind laut AST alle str-Konstanten"
+ },
+ "tools/archiv/migration/mig_g26.py:361": {
+  "typen": [
+   "str"
+  ],
+  "grund": "fid ist Schluessel von MIG (for fid, m in MIG.items() / for fid in MIG); MIG-Schluessel sind laut AST alle str-Konstanten"
+ },
+ "tools/archiv/migration/mig_g26.py:337": {
+  "typen": [
+   "zahl"
+  ],
+  "grund": "gezeigt = eval(...) mit v=float; im selben Set-Literal formatiert Z. 335 gezeigt vorher mit '%.Nf' - ein Nicht-Zahl-Wert wirft dort, bevor Z. 337 laeuft (Auswertung links nach rechts)"
+ },
+ "tools/archiv/migration/mig_g26_erkl.py:43": {
+  "typen": [
+   "zahl"
+  ],
+  "grund": "else-Zweig nach float(v).is_integer(); round(v, d) in Z. 38 lief vorher und wirft bei str - v ist int oder float (bool landet im if-Zweig)"
+ },
+ "tools/archiv/migration/mig_g26_erkl.py:149": {
+  "typen": [
+   "str"
+  ],
+  "grund": "a['formeln'] = [s[0] for s in m['steps']] (Z. 124); s[0] ist in jedem MIG-steps-Eintrag ein str-Literal"
+ },
+ "tools/archiv/migration/mig_g26_erkl.py:154": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name = Schluessel von werte = dict(a['werte']) plus f's{i}' - Schluessel eines aus JSON/Literal gebauten dict, str"
+ },
+ "tools/archiv/migration/mig_g26_erkl.py:155": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name = Schluessel von werte = dict(a['werte']) plus f's{i}' - Schluessel eines aus JSON/Literal gebauten dict, str"
+ },
+ "tools/archiv/migration/mig_g26_erkl.py:156": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name = Schluessel von werte = dict(a['werte']) plus f's{i}' - Schluessel eines aus JSON/Literal gebauten dict, str"
+ },
+ "tools/archiv/migration/mig_g26_erkl.py:157": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name = Schluessel von werte = dict(a['werte']) plus f's{i}' - Schluessel eines aus JSON/Literal gebauten dict, str"
+ },
+ "tools/archiv/migration/mig_g26_erkl.py:158": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name = Schluessel von werte = dict(a['werte']) plus f's{i}' - Schluessel eines aus JSON/Literal gebauten dict, str"
+ },
+ "tools/archiv/migration/mig_g26_erkl.py:159": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name = Schluessel von werte = dict(a['werte']) plus f's{i}' - Schluessel eines aus JSON/Literal gebauten dict, str"
+ },
+ "tools/archiv/r3_5_matrix.py:859": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "f ist Element von json.load(fh) (Z. 849) - JSON-Wert, nie Tupel"
+ },
+ "tools/befunde_index.py:223": {
+  "typen": [
+   "str"
+  ],
+  "grund": "q ist Element von anderswo[x]; dort landen nur die Literale 'BUILD_LOG.md'/'BUILD_LOG_ARCHIV.md' (Z. 213/220)"
+ },
+ "tools/css_skala.py:186": {
+  "typen": [
+   "int",
+   "str",
+   "str"
+  ],
+  "grund": "px, soll aus dem Literal-Tupel faelle (Z. 179-181: int, str); ist = name aus naechster() = s[0] der SKALA-Tupel, str-Literale"
+ },
+ "tools/deploy_inhalt.py:94": {
+  "typen": [
+   "str"
+  ],
+  "grund": "ordner + '/' in Z. 87 laeuft vorher - Tupel + str wuerfe; einziger Aufrufer messen() gibt auslieferungsordner() (str)"
+ },
+ "tools/deploy_inhalt.py:137": {
+  "typen": [
+   "str"
+  ],
+  "grund": "auslieferungsordner() gibt in allen Zweigen '.' oder einen bearbeiteten Regex-Treffer zurueck (Z. 73-83), str"
+ },
+ "tools/deploy_inhalt.py:151": {
+  "typen": [
+   "float",
+   "str"
+  ],
+  "grund": "gr[d] / 1024.0 ist float (gr-Werte aus os.path.getsize); d ist Element von ohne = git-ls-files-Zeilen, str"
+ },
+ "tools/gebiete_stand.py:198": {
+  "typen": [
+   "str"
+  ],
+  "grund": "code aus for code, _, _ in GEBIETE; GEBIETE ist laut AST eine Liste von (str, str, str)-Literalen"
+ },
+ "tools/katalog/katalog_parse.py:118": {
+  "typen": [
+   "str"
+  ],
+  "grund": "seite: Aufrufer spalten(s) mit s aus SEITEN/TEILE; TEILE-Werte sind f'{n:02d}'-Strings (Z. 85-89)"
+ },
+ "tools/katalog/katalog_parse.py:239": {
+  "typen": [
+   "str"
+  ],
+  "grund": "s in SEITEN = TEILE['1'] - f'{n:02d}'-Strings"
+ },
+ "tools/katalog/katalog_parse.py:445": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "k['nummer'] stammt aus Regex-Gruppen (Z. 283/323/362/377), str"
+ },
+ "tools/katalog/katalog_parse.py:450": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "k['nummer'] stammt aus Regex-Gruppen (Z. 283/323/362/377), str"
+ },
+ "tools/katalog/katalog_parse.py:478": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "z ist Element von pruefen() = Liste fehler, in die nur f-/format-/%-Strings appended werden"
+ },
+ "tools/lehrtext_pool.py:80": {
+  "typen": [
+   "str"
+  ],
+  "grund": "gemeinsam = sorted(set(L) & set(P)): Schluessel aus norm() (gibt str zurueck) oder [gesucht] aus sys.argv"
+ },
+ "tools/opt_ersatz.py:73": {
+  "typen": [
+   "str"
+  ],
+  "grund": "re.escape(fid) in Z. 71 lief vorher - wirft bei Tupel"
+ },
+ "tools/opt_ersatz.py:75": {
+  "typen": [
+   "str"
+  ],
+  "grund": "re.escape(fid) in Z. 71 lief vorher - wirft bei Tupel"
+ },
+ "tools/opt_ersatz.py:101": {
+  "typen": [
+   "str"
+  ],
+  "grund": "re.escape(fid) in Z. 99 lief in der Schleife (pool/ hat 20 .json-Dateien) - wirft bei Tupel"
+ },
+ "tools/opt_ersatz.py:109": {
+  "typen": [
+   "str"
+  ],
+  "grund": "Aufrufer option/feld/_zeige rufen vorher _datei_der_frage(fid) mit Erfolg - dort lief re.escape(fid)"
+ },
+ "tools/opt_ersatz.py:206": {
+  "typen": [
+   "str"
+  ],
+  "grund": "datei = Schluessel von self.roh = Namen aus os.listdir(POOL)"
+ },
+ "tools/opt_ersatz.py:216": {
+  "typen": [
+   "str"
+  ],
+  "grund": "_datei_der_frage(fid) in Z. 212 lief mit Erfolg (re.escape); Aufruf aus sys.argv[2]"
+ },
+ "tools/plugin/packen.py:22": {
+  "typen": [
+   "str"
+  ],
+  "grund": "s in sorted(os.listdir(...)) - str"
+ },
+ "tools/plugin/packen.py:23": {
+  "typen": [
+   "str"
+  ],
+  "grund": "s in sorted(os.listdir(...)) - str"
+ },
+ "tools/rohe_elemente.py:87": {
+  "typen": [
+   "wert",
+   "wert"
+  ],
+  "grund": "v in verwaist aus paare = {(a['datei'], a['element'])} - genau 2-Tupel aus JSON-Werten (Z. 72)",
+  "stern": true
+ },
+ "tools/rotiere.py:93": {
+  "typen": [
+   "str"
+  ],
+  "grund": "z in verlust = [z for z in ur if z.strip() ...] (Z. 50) - hat .strip(), also str; Slice von str ist str"
+ },
+ "tools/sabotage_vt.py:106": {
+  "typen": [
+   "str"
+  ],
+  "grund": "os.path.join(NEU, datei) in Z. 74 lief vorher - wirft bei Tupel; datei aus argparse --datei"
+ },
+ "tools/schluessel_setzen.py:85": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name: einzige Aufrufer pruefe_gruppen('pflicht', ...) und ('kuer', ...) (Z. 121/126)"
+ },
+ "tools/schluessel_setzen.py:89": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name: einzige Aufrufer pruefe_gruppen('pflicht', ...) und ('kuer', ...) (Z. 121/126)"
+ },
+ "tools/schluessel_setzen.py:95": {
+  "typen": [
+   "str"
+  ],
+  "grund": "name: einzige Aufrufer pruefe_gruppen('pflicht', ...) und ('kuer', ...) (Z. 121/126)"
+ },
+ "tools/schluessel_setzen.py:129": {
+  "typen": [
+   "wert"
+  ],
+  "grund": "a.id aus argparse --id: str oder None"
+ },
+ "tools/svg_breiter.py:32": {
+  "typen": [
+   "str",
+   "float"
+  ],
+  "grund": "m.group(1) ist str; float(m.group(2)) * f mit f = float(...) (Z. 38) ist float"
+ },
+ "tools/ungepusht.py:81": {
+  "typen": [
+   "str"
+  ],
+  "grund": "feld(name) nur mit Literalen 'directory'/'main'/'migrations_dir' aufgerufen (Z. 83)"
+ },
+ "tools/ungepusht.py:130": {
+  "typen": [
+   "str"
+  ],
+  "grund": "self.main aus konfig() = feld('main'); None faengt Z. 84 mit SystemExit ab - Regex-Gruppe, str"
+ },
+ "tools/verweis_setzen.py:34": {
+  "typen": [
+   "str"
+  ],
+  "grund": "fid aus sys.argv (a[1]) oder Schluessel von json.load(auftrag) - einzige Aufrufer von finde/setze"
+ },
+ "tools/verweis_setzen.py:45": {
+  "typen": [
+   "str"
+  ],
+  "grund": "fid aus sys.argv (a[1]) oder Schluessel von json.load(auftrag) - einzige Aufrufer von finde/setze"
+ },
+ "tools/verweis_setzen.py:47": {
+  "typen": [
+   "str"
+  ],
+  "grund": "fid aus sys.argv (a[1]) oder Schluessel von json.load(auftrag) - einzige Aufrufer von finde/setze"
+ },
+ "tools/verweis_setzen.py:71": {
+  "typen": [
+   "str"
+  ],
+  "grund": "fid aus sys.argv (a[1]) oder Schluessel von json.load(auftrag) - einzige Aufrufer von finde/setze"
+ },
+ "tools/verweis_setzen.py:76": {
+  "typen": [
+   "str"
+  ],
+  "grund": "fid aus sys.argv (a[1]) oder Schluessel von json.load(auftrag) - einzige Aufrufer von finde/setze"
+ },
+ "tools/verweis_setzen.py:61": {
+  "typen": [
+   "str"
+  ],
+  "grund": "treffer = FELD.findall(...) mit zwei Gruppen - Liste von str-Tupeln; treffer[0][1] ist str"
+ },
+ "tools/verweis_setzen.py:69": {
+  "typen": [
+   "str"
+  ],
+  "grund": "treffer = FELD.findall(...) mit zwei Gruppen - Liste von str-Tupeln; treffer[0][1] ist str"
+ }
+}

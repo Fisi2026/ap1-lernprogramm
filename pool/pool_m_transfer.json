@@ -1,0 +1,572 @@
+[
+  {
+    "id": "M01-770",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Netzplan & Puffer",
+    "gebiet": "A5",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Im Netzplan eines Projekts bei Felsberger Projektsteuerung liegt der Vorgang \"Serverlieferung\" auf dem kritischen Pfad und hat einen Gesamtpuffer von 0. Ein Stakeholder (der Lieferant) meldet ein Lieferrisiko. Welche Einordnung ist fachlich korrekt?",
+    "optionen": [
+      "Da der Vorgang ohne Puffer auf dem kritischen Pfad liegt, verschiebt jede Verzögerung den Projektendtermin – das Lieferrisiko ist vorrangig zu überwachen und abzusichern (z. B. Zweitlieferant, Sicherheitsbestand).",
+      "Der Gesamtpuffer 0 bedeutet, dass eine Verzögerung von den nachfolgenden Vorgängen aufgefangen wird; der Endtermin bleibt davon unberührt und das Lieferrisiko ist deshalb nachrangig zu behandeln.",
+      "Risiken einzelner Stakeholder werden erst nach Projektabschluss in der Nachbetrachtung bewertet und wirken sich im laufenden Netzplan grundsätzlich nicht auf die Terminlage aus.",
+      "Ein Vorgang auf dem kritischen Pfad kann per Definition kein Risiko tragen, weil er bereits fest eingeplant und mit dem Lieferanten verbindlich terminiert ist – zu überwachen sind allein die Vorgänge mit freiem Puffer."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Gesamtpuffer 0 heißt gerade, dass NICHTS eine Verzögerung auffängt – sie schlägt voll auf den Endtermin durch.",
+      "Risiken werden fortlaufend gesteuert (Risikomonitoring), nicht erst am Projektende.",
+      "Die Einplanung beseitigt kein Risiko; kritische Vorgänge sind besonders risikorelevant."
+    ],
+    "erklaerungKurz": "Kritischer Pfad + Gesamtpuffer 0 ⇒ jede Verzögerung trifft den Endtermin. Das gemeldete Lieferrisiko ist daher hochprioritär abzusichern.",
+    "erklaerungLang": "Der kritische Pfad ist die längste Kette von Vorgängen ohne Pufferzeit; sein Gesamtpuffer ist 0. Verzögert sich ein solcher Vorgang, verschiebt sich der Projektendtermin um denselben Betrag. Koppelt man dies mit dem Risikomanagement, folgt: Ein gemeldetes Lieferrisiko auf einem kritischen Vorgang muss priorisiert behandelt werden – etwa durch Zweitlieferant, Pufferbestand oder vorgezogene Bestellung. Vorgänge mit großem Puffer sind dagegen terminlich unkritischer. Risiken werden über den gesamten Projektverlauf beobachtet und aktualisiert.",
+    "verweis": "Modul 01, Abschnitt 1.1 – Netzplantechnik (kritischer Pfad, Pufferzeiten) gekoppelt mit Risiko-/Stakeholdermanagement"
+  },
+  {
+    "id": "M01-771",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Netzplan & Puffer",
+    "gebiet": "A5",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Vorgang B hat den frühesten Anfangszeitpunkt (FAZ) 5 und den spätesten Anfangszeitpunkt (SAZ) 8 (Angaben in Tagen). Ein identifiziertes Risiko könnte B um 4 Tage verzögern. Welche Aussage ist korrekt?",
+    "optionen": [
+      "Gesamtpuffer = SAZ − FAZ = 8 − 5 = 3 Tage; eine Verzögerung von 4 Tagen überschreitet den Puffer um 1 Tag und verschiebt den Endtermin um 1 Tag.",
+      "Gesamtpuffer = SAZ + FAZ = 8 + 5 = 13 Tage; eine Verzögerung von 4 Tagen ist damit für den Endtermin völlig unkritisch.",
+      "Der Puffer beträgt genau 4 Tage, die Verzögerung wird dadurch exakt aufgefangen und der Endtermin bleibt unverändert bestehen.",
+      "Ohne Kenntnis des gesamten kritischen Pfades lässt sich der Gesamtpuffer eines einzelnen Vorgangs nicht bestimmen; FAZ und SAZ allein reichen dafür nicht aus."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Der Gesamtpuffer ist die Differenz SAZ − FAZ, nicht deren Summe.",
+      "Der Gesamtpuffer beträgt 3 Tage; 4 Tage Verzögerung überschreiten ihn um 1 Tag.",
+      "Der Gesamtpuffer eines Vorgangs ergibt sich direkt aus SAZ − FAZ (bzw. SEZ − FEZ)."
+    ],
+    "erklaerungKurz": "GP = SAZ − FAZ = 3 Tage. Eine Verzögerung von 4 Tagen ist 1 Tag größer als der Puffer, also verschiebt sich der Endtermin um 1 Tag.",
+    "erklaerungLang": "Der Gesamtpuffer (GP) eines Vorgangs gibt an, um wie viel er sich verschieben darf, ohne den Projektendtermin zu gefährden: GP = SAZ − FAZ = SEZ − FEZ. Hier GP = 8 − 5 = 3 Tage. Ein Risiko, das den Vorgang um 4 Tage verzögert, verbraucht die 3 Tage Puffer vollständig und schiebt den Endtermin um die überschießenden 1 Tag nach hinten. Diese Kopplung von Puffer-Berechnung (Netzplan) und Risikofolge zeigt, warum Puffergrößen die Risikotoleranz eines Vorgangs bestimmen.",
+    "verweis": "Modul 01, Abschnitt 1.1 – Zeitrechnung im Netzplan (Gesamtpuffer) gekoppelt mit Risikobewertung"
+  },
+  {
+    "id": "M01-772",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Netzplan & Puffer",
+    "gebiet": "A5",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Aussagen zur Kopplung von Netzplan (Puffer/kritischer Pfad) und Risiko-/Stakeholdermanagement sind korrekt? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Vorgänge auf dem kritischen Pfad sollten im Risikomanagement bevorzugt betrachtet werden.",
+      "Ein großer Gesamtpuffer verringert das terminliche Risiko eines Vorgangs für den Endtermin.",
+      "Stakeholder mit hohem Einfluss und hoher Betroffenheit sollten eng eingebunden werden (Stakeholder-Matrix).",
+      "Risiken werden nur einmal zu Projektbeginn erfasst und danach nicht mehr aktualisiert.",
+      "Sobald ein Risiko identifiziert ist, sind Pufferzeiten für die Bewertung irrelevant."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "Risiken werden fortlaufend überwacht und aktualisiert (Risk-Monitoring über den Projektverlauf).",
+      "Gerade die Pufferzeiten bestimmen, wie viel Verzögerung ein Risiko toleriert – sie sind zentral für die Bewertung."
+    ],
+    "erklaerungKurz": "Kritische Vorgänge sind risikovorrangig, große Puffer senken das Terminrisiko, einflussreiche Stakeholder werden eng eingebunden. Risiken werden laufend gepflegt, Puffer bleiben relevant.",
+    "erklaerungLang": "Die Kopplung von Netzplan und Risikomanagement bedeutet: (1) Vorgänge ohne Puffer (kritischer Pfad) haben die höchste Terminwirkung und damit Risikopriorität. (2) Ein großer Gesamtpuffer ist ein Terminpolster – er senkt das Risiko, dass eine Störung den Endtermin verschiebt. (3) Die Stakeholder-Matrix (Einfluss × Betroffenheit) steuert die Einbindung; einflussreiche, stark betroffene Stakeholder werden aktiv gemanagt. Falsch sind die statische Einmalerfassung von Risiken (Risiken werden fortlaufend überwacht) und die Behauptung, Puffer seien nach Risikoerkennung irrelevant – sie definieren gerade die Toleranz.",
+    "verweis": "Modul 01, Abschnitt 1.1 – Netzplan (Puffer/kritischer Pfad) + Risiko- und Stakeholdermanagement"
+  },
+  {
+    "id": "M03-770",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Melsunger Büroausstattung wählt zwischen zwei Arbeitsplatz-PCs: A hat einen niedrigen Anschaffungspreis, aber hohen Stromverbrauch und kurze Garantie; B ist teurer, aber energieeffizient mit langer Garantie. Welche Betrachtung ist für die Beschaffungsentscheidung fachlich korrekt?",
+    "optionen": [
+      "Die Total Cost of Ownership (TCO) über die gesamte Nutzungsdauer einbeziehen – inkl. Energie, Wartung, Ausfall-/Garantiekosten, nicht nur den Anschaffungspreis.",
+      "Allein der niedrigste Anschaffungspreis entscheidet, weil sich die späteren Folgekosten nicht kalkulieren lassen.",
+      "Nur der Stromverbrauch über die gesamte Nutzungsdauer zählt; Anschaffungs-, Wartungs- und Garantiekosten sind demgegenüber vernachlässigbar und bleiben außen vor.",
+      "Die Entscheidung ist rein technisch nach der schnellsten CPU zu treffen und unabhängig von jeder Kostenbetrachtung."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Folgekosten lassen sich über die TCO sehr wohl abschätzen und sind oft ausschlaggebend.",
+      "Die TCO umfasst mehrere Kostenarten (Anschaffung, Energie, Wartung, Ausfall), nicht nur Energie.",
+      "Wirtschaftlichkeit verlangt eine Kosten-Nutzen-Abwägung, nicht allein die technische Spitzenleistung."
+    ],
+    "erklaerungKurz": "Beschaffung wird über die TCO entschieden: Anschaffung + Betrieb (Energie, Wartung, Ausfall) über die Nutzungsdauer – nicht nur der Kaufpreis.",
+    "erklaerungLang": "Die Kopplung von Hardware-Auswahl und Wirtschaftlichkeit (TCO) verlangt eine Gesamtkostenbetrachtung über die Nutzungsdauer. Ein günstiger Kaufpreis kann durch hohe Energie-, Wartungs- oder Ausfallkosten überkompensiert werden. Die Total Cost of Ownership summiert Anschaffung und alle Betriebs-/Folgekosten. Erst dieser Vergleich zeigt, welches Gerät über z. B. 4–5 Jahre wirtschaftlich ist. Technische Leistung ist nur relevant, soweit sie dem Bedarf entspricht (Nutzwert).",
+    "verweis": "Modul 03, Abschnitt 3.1 – Hardware-Komponenten gekoppelt mit Wirtschaftlichkeit/TCO"
+  },
+  {
+    "id": "M03-771",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "PC A kostet 500 € Anschaffung und 90 €/Jahr Energie; PC B kostet 700 € Anschaffung und 25 €/Jahr Energie. Nutzungsdauer 5 Jahre, sonstige Kosten gleich. Welche TCO-Aussage stimmt?",
+    "optionen": [
+      "TCO_A = 500 + 5·90 = 950 €, TCO_B = 700 + 5·25 = 825 €; über 5 Jahre ist B trotz höherem Kaufpreis um 125 € günstiger.",
+      "TCO_A = 950 €, TCO_B = 825 €, aber A ist günstiger, weil sein Anschaffungspreis der niedrigere von beiden Angeboten ist.",
+      "A ist in jedem Fall günstiger, weil für die Beschaffungsentscheidung allein der Anschaffungspreis zählt.",
+      "TCO_A = 590 €, TCO_B = 725 €; damit ist A über die fünf Jahre günstiger."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Beim TCO-Vergleich entscheidet die Gesamtsumme über die Nutzungsdauer: 825 € < 950 €, also B.",
+      "Der Anschaffungspreis ist nur ein Teil der TCO; die Betriebskosten kehren das Bild hier um.",
+      "Die Energie über 5 Jahre ist 5×Jahreswert (450 € bzw. 125 €), nicht der Einjahreswert."
+    ],
+    "erklaerungKurz": "TCO_A = 500 + 450 = 950 €; TCO_B = 700 + 125 = 825 €. B ist über 5 Jahre um 125 € günstiger – der höhere Kaufpreis wird durch geringere Energiekosten mehr als ausgeglichen.",
+    "erklaerungLang": "Rechenweg: Energie über die Nutzungsdauer = Jahreswert × 5. PC A: 5 × 90 € = 450 €, plus 500 € = 950 €. PC B: 5 × 25 € = 125 €, plus 700 € = 825 €. Differenz 125 € zugunsten B. Dieses Transferbeispiel koppelt Hardware-Kennwerte (Leistungsaufnahme) mit der Wirtschaftlichkeitsrechnung (TCO). Wer nur den Kaufpreis vergleicht, wählt A und zahlt über die Laufzeit drauf. Der häufige Fehler ist, die Energiekosten nur für ein Jahr statt für die volle Nutzungsdauer anzusetzen – dann kommt man auf 590 € und 725 € und entscheidet sich falsch.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Wirtschaftlichkeit/TCO-Berechnung gekoppelt mit Hardware-Leistungsaufnahme"
+  },
+  {
+    "id": "M03-772",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Kostenpositionen gehören zur Total Cost of Ownership (TCO) eines Arbeitsplatz-PCs? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Anschaffungskosten (Hardware und benötigte Lizenzen)",
+      "Energiekosten über die Nutzungsdauer",
+      "Wartung, Support und Ausfallkosten",
+      "Entsorgung/Recycling am Ende des Lebenszyklus",
+      "Marketingkosten des Herstellers für die Vermarktung des PC-Modells"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Herstellermarketing fällt nicht beim Betreiber an und gehört nicht zur TCO."
+    ],
+    "erklaerungKurz": "Zur TCO zählen Anschaffung, Energie, Wartung/Support/Ausfall und Entsorgung – also alle Kosten über den Lebenszyklus. Fremdmodell-Preise gehören nicht dazu.",
+    "erklaerungLang": "Die Total Cost of Ownership erfasst sämtliche Kosten eines Betriebsmittels über seinen Lebenszyklus: (1) einmalige Anschaffung inkl. Lizenzen, (2) laufende Energiekosten, (3) Wartung, Support und die Kosten von Ausfällen, (4) Entsorgung/Recycling. Diese Kopplung von Hardwarewahl und Wirtschaftlichkeit erlaubt einen fairen Vergleich zweier Geräte. Der Listenpreis eines gar nicht betrachteten Fremdmodells ist irrelevant und verfälscht die Rechnung.",
+    "verweis": "Modul 03, Abschnitt 3.4 – Total Cost of Ownership (TCO): Bestandteile über den Lebenszyklus"
+  },
+  {
+    "id": "M03-773",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "OSI-Modell & Protokolle",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein PC bei Guxhagener Internetdienste erreicht Webseiten über die direkte Eingabe der IP-Adresse, aber nicht über den Domainnamen. Auf welcher OSI-Schicht liegt das Problem am ehesten und welches Konsolenwerkzeug hilft bei der Diagnose?",
+    "optionen": [
+      "Namensauflösung (DNS) auf der Anwendungsschicht (Schicht 7); Diagnose mit nslookup.",
+      "Bitübertragung auf der physischen Schicht 1 (Kabel und Stecker); Diagnose mit ping.",
+      "Vermittlungsschicht 3 (Routing zwischen den Netzen); Diagnose mit dem Befehl tracert.",
+      "Transportschicht 4 (TCP-Ports und Verbindungsaufbau); Diagnose mit dem Befehl netstat."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Da der Zugriff per IP funktioniert, ist die physische Verbindung intakt; ein ping auf die IP wäre erfolgreich.",
+      "Der Fehler liegt bei der Namensauflösung (DNS), nicht beim Routing.",
+      "Der Fehler liegt bei der Namensauflösung (DNS), nicht bei der Transportschicht."
+    ],
+    "erklaerungKurz": "IP funktioniert, Name nicht ⇒ DNS-Problem. DNS ist ein Dienst der Anwendungsschicht (Schicht 7); nslookup prüft gezielt die Namensauflösung.",
+    "erklaerungLang": "Die Symptomkopplung 'IP geht, Name geht nicht' isoliert das Problem eindeutig auf die Namensauflösung (DNS). DNS ist ein Anwendungsschicht-Dienst (Schicht 7 des OSI-Modells). Das passende Diagnosewerkzeug ist nslookup, das einen Domainnamen gegen den DNS-Server auflöst und so zeigt, ob und welche Antwort kommt. ping prüft die Erreichbarkeit auf Schicht 3 (funktioniert hier per IP), format und chkdsk sind Datenträgerbefehle ohne Netzwerkbezug. Diese Aufgabe koppelt das OSI-Schichtmodell mit der praktischen Konsolen-Fehlersuche.",
+    "verweis": "Modul 03, Abschnitt 3.2 – OSI-Schichten (DNS = Schicht 7); Konsolen-Diagnose siehe Modul 04, Abschnitt 4.5"
+  },
+  {
+    "id": "M03-774",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "OSI-Modell & Protokolle",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein Rechner zeigt laut ipconfig die Adresse 169.254.14.7. Welche Ursache liegt am ehesten vor und welcher Befehl ist der richtige nächste Diagnose-/Behebungsschritt?",
+    "optionen": [
+      "Es ist eine APIPA-Adresse (169.254.0.0/16): der DHCP-Dienst wurde nicht erreicht; mit 'ipconfig /renew' eine neue Adress-Lease anfordern.",
+      "Es ist eine gültige öffentliche Internetadresse; es liegt kein Problem vor und es ist kein weiterer Befehl nötig.",
+      "Es ist eine manuell vergebene Server-IP-Adresse; mit 'ping 169.254.0.1' lässt sich die erfolgte Vergabe bestätigen und anschließend dokumentieren.",
+      "Es ist die Loopback-Adresse für den Selbsttest des Netzwerkstapels; mit 'nslookup localhost' lässt sich das prüfen."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "169.254.x.x ist eine private Auto-Konfigurationsadresse (APIPA), kein regulärer Internetzugang.",
+      "APIPA-Adressen werden automatisch vergeben, nicht manuell; sie signalisieren gerade einen DHCP-Ausfall.",
+      "Die Loopback-Adresse ist 127.0.0.1; 169.254.x.x ist APIPA."
+    ],
+    "erklaerungKurz": "169.254.x.x = APIPA: Der Client hat keinen DHCP-Server erreicht und sich selbst konfiguriert. 'ipconfig /renew' fordert eine neue Lease an.",
+    "erklaerungLang": "Der Adressbereich 169.254.0.0/16 ist für APIPA (Automatic Private IP Addressing) reserviert. Vergibt ein Windows-Client sich selbst eine solche Adresse, bedeutet das: Es konnte kein DHCP-Server erreicht werden. Der richtige Schritt ist 'ipconfig /renew', um erneut eine Lease anzufordern (nach Prüfung von Kabel/Switch/DHCP-Dienst). Diese Aufgabe koppelt das Wissen über Adressierung/Dienste (DHCP als Anwendungsschicht-Dienst) mit der Konsolen-Fehlersuche. 127.0.0.1 wäre Loopback, eine öffentliche Adresse läge in keinem der privaten Bereiche.",
+    "verweis": "Modul 03, Abschnitt 3.2 – DHCP und APIPA; ipconfig siehe Modul 04, Abschnitt 4.5"
+  },
+  {
+    "id": "M03-775",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "OSI-Modell & Protokolle",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Zuordnungen von Konsolen-Diagnosewerkzeug zu Zweck bzw. OSI-Schicht sind korrekt? (Mehrere Antworten richtig)",
+    "optionen": [
+      "ping prüft die Erreichbarkeit auf der Vermittlungsschicht (Schicht 3, ICMP/IP).",
+      "nslookup prüft die DNS-Namensauflösung (Dienst der Anwendungsschicht).",
+      "tracert zeigt den Weg (Hops) über die Router zum Ziel.",
+      "ipconfig zeigt und erneuert die IP-Konfiguration des Hosts.",
+      "ping übersetzt Domainnamen fest in MAC-Adressen der Anwendungsschicht."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "ping arbeitet mit ICMP/IP (Schicht 3) und löst keine MAC-Adressen auf; Namen werden per DNS aufgelöst."
+    ],
+    "erklaerungKurz": "ping (Schicht 3/ICMP), nslookup (DNS/Schicht 7), tracert (Routenverfolgung) und ipconfig (IP-Konfiguration) sind korrekt zugeordnet. ping löst keine MAC-Adressen auf.",
+    "erklaerungLang": "Diese Aufgabe koppelt Diagnosewerkzeuge mit dem OSI-Modell: ping nutzt ICMP über IP und prüft die Erreichbarkeit auf Schicht 3. nslookup fragt den DNS-Server ab – DNS ist ein Anwendungsschicht-Dienst. tracert verfolgt die Router-Hops bis zum Ziel und deckt Routing-Probleme auf. ipconfig zeigt die IP-Konfiguration und kann sie per /renew /release erneuern. Falsch ist die Behauptung, ping übersetze Namen in MAC-Adressen: Namensauflösung leistet DNS (Name→IP), die MAC-Auflösung übernimmt ARP auf Schicht 2 – nicht ping.",
+    "verweis": "Modul 03, Abschnitt 3.2 – OSI-Modell; Konsolenwerkzeuge siehe Modul 04, Abschnitt 4.5"
+  },
+  {
+    "id": "M06-770",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Schutzziele (CIA)",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Baunataler Fahrzeugbau führt ein tägliches, extern gelagertes Backup ein. Welches der drei klassischen Schutzziele (CIA) wird dadurch primär gestärkt?",
+    "optionen": [
+      "Verfügbarkeit – nach Ausfall, Verlust oder Ransomware können die Daten wiederhergestellt werden.",
+      "Vertraulichkeit – ein externes Backup verhindert, dass Unbefugte die gesicherten Daten lesen können.",
+      "Integrität – ein Backup verhindert jede nachträgliche Veränderung an den Produktivdaten.",
+      "Vertraulichkeit – weil die Sicherung außer Haus liegt, ist sie dem Zugriff aus dem eigenen Netz entzogen."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Vertraulichkeit wird durch Verschlüsselung und Zugriffskontrolle geschützt; ein unverschlüsseltes Backup kann sie sogar gefährden.",
+      "Integrität sichern Prüfsummen/Signaturen; ein Backup stellt Daten wieder her, verhindert aber Änderungen nicht.",
+      "Ein externes Backup schützt vor Verlust, nicht vor unbefugtem Lesen; dafür braucht es z. B. Verschlüsselung."
+    ],
+    "erklaerungKurz": "Backups adressieren primär die Verfügbarkeit: Nach Datenverlust (Hardwaredefekt, Ransomware, Fehlbedienung) lässt sich der Betrieb aus der Sicherung wiederherstellen.",
+    "erklaerungLang": "Die drei Grundschutzziele sind Vertraulichkeit (Confidentiality), Integrität (Integrity) und Verfügbarkeit (Availability). Ein Backup dient in erster Linie der Verfügbarkeit: Es stellt sicher, dass Daten nach Verlust wieder bereitstehen. Vertraulichkeit erfordert zusätzlich Verschlüsselung/Zugriffsschutz – ein offen gelagertes Backup kann die Vertraulichkeit sogar schwächen. Integrität sichern Prüfsummen und Signaturen. Diese Aufgabe koppelt das CIA-Modell mit dem Maßnahmenbereich Backup/Verfügbarkeit.",
+    "verweis": "Modul 06, Abschnitt 6.1 – Schutzziele (CIA) gekoppelt mit Backup & Verfügbarkeit"
+  },
+  {
+    "id": "M06-771",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Schutzziele (CIA)",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Maßnahmen erhöhen die Verfügbarkeit und sind zugleich typischer Bestandteil eines tragfähigen Backup-Konzepts? (Mehrere Antworten richtig)",
+    "optionen": [
+      "3-2-1-Regel: mindestens 3 Kopien, auf 2 verschiedenen Medien, 1 davon extern/offline.",
+      "Regelmäßiges Testen der Wiederherstellung (Restore-Test).",
+      "Redundante Hardware und eine USV gegen Stromausfall.",
+      "Eine Offline-/Air-Gap-Kopie als Schutz gegen Ransomware-Verschlüsselung.",
+      "Sicherungskopien nur auf demselben Server ablegen, auf dem auch die Originaldaten liegen"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Das verstößt gegen die 3-2-1-Regel und erhöht die Verfügbarkeit nicht."
+    ],
+    "erklaerungKurz": "3-2-1-Regel, Restore-Tests, Redundanz/USV und eine Offline-Kopie erhöhen die Verfügbarkeit. Zu kurze Aufbewahrung untergräbt sie.",
+    "erklaerungLang": "Ein tragfähiges Backup-/Verfügbarkeitskonzept kombiniert mehrere Bausteine: (1) Die 3-2-1-Regel streut Kopien über Medien und Orte. (2) Restore-Tests beweisen, dass die Sicherung im Ernstfall funktioniert. (3) Redundante Hardware und USV überbrücken Ausfälle. (4) Eine Offline-/Air-Gap-Kopie kann von Ransomware nicht mitverschlüsselt werden. Falsch ist das Löschen aller Backups nach einer Woche: Datenverluste werden oft spät bemerkt; eine gestaffelte Aufbewahrung (Generationenprinzip) ist nötig, sonst leidet gerade die Verfügbarkeit.",
+    "verweis": "Modul 06, Abschnitt 6.4 – Datensicherung: 3-2-1-Regel, Restore-Test, Air-Gap"
+  },
+  {
+    "id": "M06-772",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Schutzziele (CIA)",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Warum gehört zu einem Backup-Konzept zwingend das regelmäßige Prüfen der Rücksicherung (Restore-Test)?",
+    "optionen": [
+      "Nur ein erfolgreich getesteter Restore beweist, dass die Sicherung im Ernstfall vollständig und unverfälscht (integer) verfügbar ist.",
+      "Weil Restore-Tests die Vertraulichkeit der Produktivdaten nachweislich erhöhen, solange sie in einem vom Betrieb abgetrennten Testnetz laufen.",
+      "Weil eine Sicherung, die nie zurückgespielt wurde, vom Sicherungssystem automatisch verworfen wird.",
+      "Weil erst der Restore-Test die Sicherung verschlüsselt und damit vor Ransomware schützt."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Restore-Tests betreffen die Wiederherstellbarkeit (Verfügbarkeit/Integrität), nicht die Vertraulichkeit.",
+      "Ein ungetestetes Backup wird nicht automatisch gelöscht – es bleibt nur unsicher, ob es brauchbar ist.",
+      "Ein Restore-Test verschlüsselt nichts; er weist nach, dass sich die Daten vollständig zurückspielen lassen."
+    ],
+    "erklaerungKurz": "Ein Backup ist nur so gut wie seine Wiederherstellbarkeit. Der Restore-Test belegt, dass die Daten vollständig und integer zurückgeholt werden können.",
+    "erklaerungLang": "Diese Aufgabe koppelt die Schutzziele Verfügbarkeit und Integrität mit der Backup-Praxis. Ein ungetestetes Backup kann durch defekte Medien, fehlerhafte Jobs oder unvollständige Auswahl im Ernstfall unbrauchbar sein. Erst ein Restore-Test stellt sicher, dass die Rücksicherung tatsächlich gelingt und die Daten vollständig und unverfälscht (integer) vorliegen. Restore-Tests gehören daher zum Standard eines Backup-Konzepts. Vertraulichkeit wird davon nicht berührt (dafür sorgen Verschlüsselung/Zugriffsschutz).",
+    "verweis": "Modul 06, Abschnitt 6.4 – Datensicherung: Restore-Test und Rücksicherung"
+  },
+  {
+    "id": "M06-773",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "DSGVO & Datenschutz",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Schauenburger Kundenservice verarbeitet personenbezogene Kundendaten. Welche Kopplung von Rechtsgrundlage (DSGVO) und technisch-organisatorischer Maßnahme (TOM) ist korrekt?",
+    "optionen": [
+      "Art. 32 DSGVO verlangt geeignete TOM (z. B. Verschlüsselung, Zugriffskontrolle, Pseudonymisierung) passend zum Risiko der Verarbeitung.",
+      "Die DSGVO benennt ein bestimmtes Antivirenprodukt, das für die Verarbeitung verbindlich einzusetzen ist.",
+      "Technische und organisatorische Maßnahmen sind rechtlich unverbindlich und bleiben dem Unternehmen freigestellt.",
+      "Liegt eine Einwilligung der betroffenen Person vor, dürfen die Daten ohne jede weitere technische oder organisatorische Schutzmaßnahme verarbeitet werden."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Die DSGVO ist technikneutral: Sie fordert geeignete Maßnahmen, benennt aber kein konkretes Produkt.",
+      "TOM sind nach Art. 32 DSGVO verpflichtend, nicht freiwillig.",
+      "Auch mit Einwilligung (Art. 6) bleibt die Pflicht zur Sicherheit der Verarbeitung (Art. 32) bestehen."
+    ],
+    "erklaerungKurz": "Art. 32 DSGVO (Sicherheit der Verarbeitung) fordert risikoangemessene TOM wie Verschlüsselung, Zugriffskontrolle und Pseudonymisierung.",
+    "erklaerungLang": "Diese Aufgabe koppelt die Rechtsgrundlage mit den passenden Schutzmaßnahmen. Art. 32 DSGVO ('Sicherheit der Verarbeitung') verpflichtet Verantwortliche zu geeigneten technischen und organisatorischen Maßnahmen, die dem Risiko angemessen sind – genannt werden u. a. Verschlüsselung, Pseudonymisierung, Sicherstellung von Vertraulichkeit/Integrität/Verfügbarkeit und Belastbarkeit. Die Norm ist technikneutral (kein bestimmtes Produkt). TOM sind verpflichtend, und auch eine Einwilligung nach Art. 6 entbindet nicht von der Pflicht zur Sicherheit der Verarbeitung nach Art. 32.",
+    "verweis": "Modul 06, Abschnitt 6.1 – DSGVO (Art. 32) gekoppelt mit TOM/Rechtsgrundlagen"
+  },
+  {
+    "id": "M06-774",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "DSGVO & Datenschutz",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Maßnahmen sind geeignete technisch-organisatorische Maßnahmen (TOM) im Sinne des Art. 32 DSGVO? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Verschlüsselung personenbezogener Daten (gespeichert und bei der Übertragung).",
+      "Rollenbasierte Zugriffskontrolle nach dem Need-to-know-Prinzip.",
+      "Pseudonymisierung der Daten, wo dies möglich ist.",
+      "Protokollierung von Zugriffen zur Nachvollziehbarkeit.",
+      "Weitergabe der Kundendaten an alle Mitarbeiter, damit jeder bei Bedarf darauf zugreifen kann"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Das widerspricht dem Need-to-know-Prinzip und ist keine geeignete TOM."
+    ],
+    "erklaerungKurz": "Verschlüsselung, Zugriffskontrolle, Pseudonymisierung und Zugriffs-Protokollierung sind klassische TOM. Das Veröffentlichen von Kundendaten ist ein Datenschutzverstoß.",
+    "erklaerungLang": "Art. 32 DSGVO nennt beispielhaft geeignete TOM: Verschlüsselung schützt Daten at rest und in transit. Rollenbasierte Zugriffskontrolle (Need-to-know) begrenzt den Kreis der Zugriffsberechtigten. Pseudonymisierung senkt das Risiko bei einem Datenabfluss. Protokollierung sichert Nachvollziehbarkeit/Rechenschaft (Art. 5 Abs. 2). Die Veröffentlichung aller Kundendaten verletzt Vertraulichkeit und Zweckbindung fundamental und ist keine Schutzmaßnahme, sondern ein Verstoß.",
+    "verweis": "Modul 06, Abschnitt 6.1 – TOM nach Art. 32 DSGVO"
+  },
+  {
+    "id": "M07-770",
+    "pruefungsteil": "AP1",
+    "modul": "M07",
+    "thema": "Vertragsarten",
+    "gebiet": "A5",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Habichtswalder Betriebsservice beauftragt einen IT-Dienstleister mit dem laufenden Betrieb und Support der Server (dauerhaftes Tätigwerden, vereinbarte Reaktionszeiten). Welche Vertragsart passt, und welches SLA-Element gehört typischerweise dazu?",
+    "optionen": [
+      "Dienstvertrag (geschuldet ist das Tätigwerden, kein Werk-Erfolg); im SLA werden Reaktions- und Verfügbarkeitszeiten (z. B. 99,5 %) vereinbart.",
+      "Werkvertrag, weil beim laufenden Support ein einmaliger, abnahmefähiger Erfolg geschuldet ist, den der Kunde am Ende der Laufzeit förmlich abnimmt.",
+      "Kaufvertrag, weil im Rahmen des Supports auch Software genutzt und dem Kunden dauerhaft überlassen wird.",
+      "Es braucht keinen gesonderten Vertrag; SLAs gelten für IT-Leistungen automatisch kraft Gesetzes."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Laufender Support schuldet ein Tätigwerden (Dienst), keinen einmaligen, abnahmefähigen Werk-Erfolg.",
+      "Ein Kaufvertrag betrifft die Übereignung einer Sache, nicht die laufende Dienstleistung.",
+      "SLAs entstehen durch vertragliche Vereinbarung, nicht automatisch per Gesetz."
+    ],
+    "erklaerungKurz": "Laufender Betrieb/Support = Dienstvertrag (Tätigwerden geschuldet). Das SLA konkretisiert messbare Servicegüte wie Reaktionszeit und Verfügbarkeit.",
+    "erklaerungLang": "Diese Aufgabe koppelt die Vertragsart mit dem Service Level Agreement. Beim Dienstvertrag (§ 611 BGB) wird das Tätigwerden geschuldet, nicht ein bestimmter Erfolg – typisch für laufenden Betrieb/Support. Beim Werkvertrag (§ 631 BGB) ist dagegen ein abnahmefähiger Erfolg geschuldet (z. B. eine fertig installierte Lösung). Ein SLA ergänzt den Dienstvertrag um messbare Servicegüte: Reaktions- und Wiederherstellzeiten, Verfügbarkeit (z. B. 99,5 %), ggf. Pönalen. Ein Kaufvertrag beträfe die Übereignung einer Sache; SLAs entstehen vertraglich, nicht per Gesetz.",
+    "verweis": "Modul 07, Abschnitt 7.1 – Vertragsarten (Dienst-/Werkvertrag) gekoppelt mit SLA/Servicevertrag"
+  },
+  {
+    "id": "M07-771",
+    "pruefungsteil": "AP1",
+    "modul": "M07",
+    "thema": "Vertragsarten",
+    "gebiet": "A5",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Aussagen zur Kopplung von Vertragsart und Service Level Agreement (SLA) sind korrekt? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Ein Werkvertrag schuldet einen abnahmefähigen Erfolg (z. B. eine fertig installierte Software).",
+      "Ein Dienstvertrag schuldet das Tätigwerden, nicht einen bestimmten Erfolg.",
+      "Ein SLA konkretisiert messbare Servicegüte wie Verfügbarkeit und Reaktionszeit.",
+      "Konventionalstrafen (Pönalen) bei SLA-Verletzung können vertraglich vereinbart werden.",
+      "Ein SLA ersetzt die Vertragsart und setzt die BGB-Regelungen außer Kraft."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Ein SLA ergänzt den Vertrag um messbare Kennzahlen, hebt aber die gesetzliche Vertragssystematik (BGB) nicht auf."
+    ],
+    "erklaerungKurz": "Werkvertrag = Erfolg, Dienstvertrag = Tätigwerden; das SLA ergänzt messbare Servicegüte und kann Pönalen enthalten – ersetzt aber nicht die Vertragsart.",
+    "erklaerungLang": "Die Kopplung von Vertragsart und SLA ist ein häufiges AP1-Transferthema: Der Werkvertrag (§ 631 BGB) schuldet einen abnahmefähigen Erfolg. Der Dienstvertrag (§ 611 BGB) schuldet das sorgfältige Tätigwerden. Ein SLA legt messbare Servicegüte fest (Verfügbarkeit, Reaktions-/Wiederherstellzeit). Für Verstöße können Vertragsstrafen/Pönalen vereinbart werden. Falsch ist, dass ein SLA die Vertragsart ersetzt oder das BGB außer Kraft setzt – es ist eine vertragliche Ergänzung innerhalb des geltenden Rechtsrahmens.",
+    "verweis": "Modul 07, Abschnitt 7.1 – Vertragsarten + SLA (Servicegüte, Pönalen)"
+  },
+  {
+    "id": "M05-770",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "In einem Testprotokoll häufen sich Fehler bei einer bestimmten Funktion. Wie ordnet sich dieser Befund in den PDCA-Zyklus (KVP) ein?",
+    "optionen": [
+      "Das Testprotokoll gehört zur Check-Phase; aus den Befunden werden in der Act-Phase Korrektur- und Verbesserungsmaßnahmen abgeleitet (KVP).",
+      "Testprotokolle gehören zur Plan-Phase; sie werden vor jeder Entwicklung geschrieben und danach weder geändert noch für Verbesserungen ausgewertet.",
+      "Die Fehler gehören zur Do-Phase und sind Teil der normalen Umsetzung; sie werden festgehalten, erfordern aber keine weitere Maßnahme.",
+      "Der PDCA-Zyklus endet mit der Check-Phase; eine Act-Phase gibt es nicht, die Häufung wird nur dokumentiert und abgelegt."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Das Testprotokoll dokumentiert die Ergebnisse der Prüfung (Check), nicht die vorherige Planung.",
+      "Do ist die Durchführung/Umsetzung; die Auswertung und Reaktion erfolgen in Check und Act.",
+      "PDCA ist ein geschlossener Kreislauf – nach Check folgt Act, danach erneut Plan."
+    ],
+    "erklaerungKurz": "Das Prüfen/Testen ist die Check-Phase; die daraus abgeleiteten Korrekturmaßnahmen sind die Act-Phase. So schließt sich der KVP-Kreis.",
+    "erklaerungLang": "Der PDCA-Zyklus (Plan-Do-Check-Act) ist das Grundmodell des kontinuierlichen Verbesserungsprozesses (KVP). Diese Aufgabe koppelt das Testprotokoll (Qualitätssicherung) mit PDCA: Das Testen und das Festhalten der Ergebnisse ist die Check-Phase. Zeigt das Protokoll gehäufte Fehler an einer Funktion, werden in der Act-Phase Korrektur- und Verbesserungsmaßnahmen beschlossen und in den nächsten Plan/Do überführt. So wird aus einem Testbefund eine nachhaltige Prozessverbesserung – der Kern des KVP.",
+    "verweis": "Modul 05, Abschnitt 5.2 – Testprotokoll gekoppelt mit PDCA/KVP (Check→Act)"
+  },
+  {
+    "id": "M05-771",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Welche Angaben gehören in ein aussagekräftiges Testprotokoll, damit im KVP nachvollziehbare Verbesserungen möglich sind?",
+    "optionen": [
+      "Testfall-ID, erwartetes und tatsächliches Ergebnis, Testumgebung/-version, Status sowie Datum und Tester.",
+      "Die persönliche Einschätzung des Testers in eigenen Worten, ohne Gegenüberstellung von Soll-Ergebnis und Ist-Ergebnis.",
+      "Ausschließlich der Name des verantwortlichen Programmierers, damit sich der Fehler später eindeutig zuordnen lässt.",
+      "Keine besonderen Angaben; für den kontinuierlichen Verbesserungsprozess sind Testprotokolle ohne jede Bedeutung."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Ohne Soll-/Ist-Vergleich ist ein Befund weder nachvollziehbar noch reproduzierbar.",
+      "Der KVP ist sach- und nicht schuldorientiert; es geht um Prozess-, nicht um Schuldsuche.",
+      "Testprotokolle sind gerade die Datenbasis (Check) für Verbesserungen im KVP."
+    ],
+    "erklaerungKurz": "Ein gutes Testprotokoll enthält Testfall, Soll/Ist, Umgebung/Version, Status und Datum/Tester – nur so sind Befunde reproduzierbar und im KVP nutzbar.",
+    "erklaerungLang": "Diese Aufgabe koppelt die formale Anforderung an ein Testprotokoll mit dem KVP-Nutzen. Ein aussagekräftiges Protokoll dokumentiert je Testfall: eindeutige ID, erwartetes (Soll) und tatsächliches (Ist) Ergebnis, Testumgebung/Softwareversion, Status (bestanden/fehlgeschlagen) sowie Datum und Tester. Erst diese Nachvollziehbarkeit macht Befunde reproduzierbar und erlaubt es, im KVP gezielte Verbesserungen abzuleiten. Persönliche Meinungen ohne Soll-/Ist-Vergleich oder reine Schuldzuweisungen widersprechen dem sachorientierten Qualitätsgedanken.",
+    "verweis": "Modul 05, Abschnitt 5.2 – Aufbau Testprotokoll gekoppelt mit KVP-Nutzen"
+  },
+  {
+    "id": "M02-770",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Bezugskalkulation & Skonto",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Ein Lieferant nennt für Material einen Listenpreis von 1.000 EUR. Zierenberger Materialhandel erhält 10 % Rabatt und nutzt 2 % Skonto; hinzu kommen 50 EUR Bezugskosten (Fracht). Wie hoch ist der Bezugspreis (Einstandspreis)?",
+    "optionen": [
+      "Zieleinkaufspreis 900 EUR (−10 %), abzüglich 2 % Skonto = 882 EUR, plus 50 EUR Bezugskosten = 932 EUR.",
+      "1.000 EUR − 10 % − 2 % + 50 EUR = 930 EUR (Rabatt und Skonto beide vom Listenpreis).",
+      "1.000 EUR + 10 % + 2 % + 50 EUR = 1.170 EUR.",
+      "Der Bezugspreis ist der Listenpreis 1.000 EUR; Rabatte werden erst in der Nachkalkulation berücksichtigt."
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Skonto wird vom bereits rabattierten Zieleinkaufspreis (900 EUR) berechnet, nicht vom vollen Listenpreis.",
+      "Rabatt und Skonto werden abgezogen, nicht addiert.",
+      "Rabatte und Skonti gehören in die Bezugskalkulation, nicht erst in die Nachkalkulation."
+    ],
+    "erklaerungKurz": "1.000 EUR − 10 % = 900 EUR; 900 EUR − 2 % = 882 EUR; + 50 EUR Bezugskosten = 932 EUR Bezugspreis.",
+    "erklaerungLang": "Rechenweg der Bezugskalkulation (Reihenfolge beachten): Listeneinkaufspreis 1.000 EUR, minus 10 % Rabatt = 900 EUR Zieleinkaufspreis; davon 2 % Skonto (18 EUR) abziehen = 882 EUR Bareinkaufspreis; plus 50 EUR Bezugskosten (Fracht/Verpackung) = 932 EUR Bezugspreis (Einstandspreis). Wichtig ist die Reihenfolge: erst Rabatt, dann Skonto – Skonto wird nie vom vollen Listenpreis gerechnet. Diese Aufgabe bereitet die spätere Soll-Ist-/Nachkalkulation vor, in der der kalkulierte Bezugspreis (Soll) mit den tatsächlichen Kosten (Ist) verglichen wird.",
+    "verweis": "Modul 02, Abschnitt 2.1 – Bezugskalkulation (Rabatt→Skonto→Bezugskosten) als Basis der Nachkalkulation"
+  },
+  {
+    "id": "M02-771",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Bezugskalkulation & Skonto",
+    "gebiet": "A2",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Aussagen zur Kopplung von Bezugskalkulation und Soll-Ist-/Nachkalkulation sind korrekt? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Der kalkulierte Bezugspreis (Soll) wird später mit den tatsächlichen Beschaffungskosten (Ist) verglichen.",
+      "Eine Abweichung mit Ist < Soll bedeutet, dass die Beschaffung günstiger war als geplant.",
+      "Skonto ist ein Abzug für die Zahlung innerhalb der vereinbarten Skontofrist.",
+      "Bezugskosten wie Fracht und Verpackung erhöhen den Einstandspreis.",
+      "Der Rabatt wird prozentual auf den Preis nach Skontoabzug gerechnet."
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Die Reihenfolge ist umgekehrt: erst Rabatt (→ Zieleinkaufspreis), dann Skonto (→ Bareinkaufspreis)."
+    ],
+    "erklaerungKurz": "Soll-Bezugspreis wird mit Ist verglichen; Ist < Soll = günstiger als geplant; Skonto ist ein Zahlungsabzug; Bezugskosten erhöhen den Einstandspreis. Rabatt kommt vor Skonto.",
+    "erklaerungLang": "Diese Aufgabe koppelt die Bezugskalkulation mit der Nachkalkulation. Der in der Bezugskalkulation ermittelte Bezugspreis ist der Soll-Wert, der später gegen die tatsächlichen Beschaffungskosten (Ist) gestellt wird. Ist < Soll ist dabei eine günstige Abweichung, die Beschaffung war also billiger als geplant. Skonto ist ein Preisnachlass für die Zahlung innerhalb der Skontofrist. Bezugskosten wie Fracht, Verpackung und Zoll erhöhen den Einstandspreis. Falsch ist allein die umgekehrte Reihenfolge beim Rabatt: In der Handelskalkulation wird zuerst der Rabatt vom Listenpreis abgezogen (Zieleinkaufspreis), erst danach das Skonto (Bareinkaufspreis).",
+    "verweis": "Modul 02, Abschnitt 2.1 – Bezugskalkulation gekoppelt mit Soll-Ist-/Nachkalkulation"
+  }
+]

@@ -1,0 +1,474 @@
+[
+  {
+    "id": "M03-980",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "hotspot",
+    "schwierigkeit": 2,
+    "frage": "Ein Mitarbeiter der Kirtorfer Blechtechnik GmbH kann keine Rechner außerhalb seines eigenen Subnetzes erreichen. Klicke in der ipconfig-Ausgabe seines PCs auf den fehlerhaften Wert.",
+    "svg": "<svg viewBox='0 0 384 200' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='12' y='10' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='30' text-anchor='middle'>Verbindungsspezifisches DNS-Suffix: kirtorfer.local</text><rect x='12' y='50' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='70' text-anchor='middle'>IPv4-Adresse: 192.168.10.50</text><rect x='12' y='90' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='110' text-anchor='middle'>Subnetzmaske: 255.255.255.0</text><rect x='12' y='130' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='150' text-anchor='middle'>Standardgateway: 192.168.20.1</text><rect x='12' y='170' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='190' text-anchor='middle'>DNS-Server: 192.168.10.5</text></svg>",
+    "zonen": [
+      {
+        "x": 12.0,
+        "y": 10,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "DNS-Suffix"
+      },
+      {
+        "x": 12.0,
+        "y": 50,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "IPv4-Adresse"
+      },
+      {
+        "x": 12.0,
+        "y": 90,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Subnetzmaske"
+      },
+      {
+        "x": 12.0,
+        "y": 130,
+        "w": 360.0,
+        "h": 30,
+        "richtig": true,
+        "label": "Standardgateway"
+      },
+      {
+        "x": 12.0,
+        "y": 170,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "DNS-Server"
+      }
+    ],
+    "erklaerungKurz": "Mit Maske 255.255.255.0 liegt der PC im Netz 192.168.10.0/24 (Hosts .1–.254). Das Gateway 192.168.20.1 liegt in einem anderen Netz und ist daher unerreichbar.",
+    "erklaerungLang": "Aus IPv4-Adresse 192.168.10.50 und Subnetzmaske 255.255.255.0 ergibt sich das Netz 192.168.10.0/24 mit dem gültigen Hostbereich 192.168.10.1 bis 192.168.10.254. Ein Standardgateway muss im selben Subnetz wie der Client liegen, da der PC nur direkt mit Adressen im eigenen Netz kommunizieren kann. Der eingetragene Wert 192.168.20.1 gehört zum Netz 192.168.20.0/24 und ist damit für diesen Client nicht direkt erreichbar – jeglicher Verkehr in andere Netze schlägt fehl. Korrekt wäre ein Gateway aus 192.168.10.0/24, z. B. 192.168.10.1. Alle übrigen Werte (IPv4-Adresse, Maske, DNS-Server, DNS-Suffix) sind konsistent und korrekt.",
+    "verweis": "Modul 03, Abschnitt 3.1, Netzwerkkomponenten"
+  },
+  {
+    "id": "M03-981",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "hotspot",
+    "schwierigkeit": 3,
+    "frage": "Laut Netzwerkdokumentation ist das Abteilungsnetz der Konstruktion bei der Homberger Konstruktionswerk GmbH als /24-Netz (255.255.255.0) angelegt. Ein Rechner dieser Abteilung erreicht den Server 192.168.40.20 der Nachbarabteilung nicht, obwohl der Zugriff laut Konzept über das Standardgateway erlaubt ist. Klicke in der ipconfig-Ausgabe auf den fehlerhaften Wert.",
+    "svg": "<svg viewBox='0 0 384 200' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='12' y='10' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='30' text-anchor='middle'>Verbindungsspezifisches DNS-Suffix: homberger.local</text><rect x='12' y='50' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='70' text-anchor='middle'>IPv4-Adresse: 192.168.30.87</text><rect x='12' y='90' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='110' text-anchor='middle'>Subnetzmaske: 255.255.0.0</text><rect x='12' y='130' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='150' text-anchor='middle'>Standardgateway: 192.168.30.1</text><rect x='12' y='170' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='190' text-anchor='middle'>DNS-Server: 192.168.30.10</text></svg>",
+    "zonen": [
+      {
+        "x": 12.0,
+        "y": 10,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "DNS-Suffix"
+      },
+      {
+        "x": 12.0,
+        "y": 50,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "IPv4-Adresse"
+      },
+      {
+        "x": 12.0,
+        "y": 90,
+        "w": 360.0,
+        "h": 30,
+        "richtig": true,
+        "label": "Subnetzmaske"
+      },
+      {
+        "x": 12.0,
+        "y": 130,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Standardgateway"
+      },
+      {
+        "x": 12.0,
+        "y": 170,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "DNS-Server"
+      }
+    ],
+    "erklaerungKurz": "Die eingetragene Maske 255.255.0.0 (/16) widerspricht dem dokumentierten /24-Konzept und macht das gesamte 192.168.0.0/16 statt nur 192.168.30.0/24 zum lokalen Netz – dadurch stellt der PC Pakete an Nachbarabteilungen direkt zu, statt sie an das Gateway zu schicken, und erreicht sie nicht.",
+    "erklaerungLang": "Laut Konzept soll jede Abteilung ein eigenes /24-Netz (255.255.255.0) bilden, sodass z. B. 192.168.30.0/24 und 192.168.40.0/24 getrennte Segmente sind, die nur über den Router/die Firewall kommunizieren. Der Client trägt jedoch die Maske 255.255.0.0 (/16) ein. Damit betrachtet der PC alle Adressen von 192.168.0.0 bis 192.168.255.255 als sein lokales Netz und versucht, Rechner anderer Abteilungen direkt per ARP anzusprechen, statt den Verkehr über das Gateway zu routen. Da diese Rechner in einem anderen Segment liegen, beantworten sie die ARP-Anfrage nicht – die Verbindung scheitert. Korrekt wäre 255.255.255.0. IPv4-Adresse, Gateway und DNS-Server passen zum dokumentierten Netz 192.168.30.0/24 und sind korrekt.",
+    "verweis": "Modul 03, Abschnitt 3.1 und 3.2, Netzwerkkomponenten und Übertragungsmedien"
+  },
+  {
+    "id": "M03-982",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "hotspot",
+    "schwierigkeit": 2,
+    "frage": "Ein Notebook der Stadtallendorfer Werkzeugservice GmbH kann keine Webseiten per Namen aufrufen, IP-Verbindungen funktionieren aber. Klicke in der ipconfig-Ausgabe auf den fehlerhaften Wert.",
+    "svg": "<svg viewBox='0 0 400 200' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='12.5' y='10' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='30' text-anchor='middle'>Verbindungsspezifisches DNS-Suffix: stadtallendorfer.local</text><rect x='12.5' y='50' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='70' text-anchor='middle'>IPv4-Adresse: 192.168.40.60</text><rect x='12.5' y='90' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='110' text-anchor='middle'>Subnetzmaske: 255.255.255.0</text><rect x='12.5' y='130' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='150' text-anchor='middle'>Standardgateway: 192.168.40.1</text><rect x='12.5' y='170' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='190' text-anchor='middle'>DNS-Server: 192.168.40.255</text></svg>",
+    "zonen": [
+      {
+        "x": 12.5,
+        "y": 10,
+        "w": 375.0,
+        "h": 30,
+        "richtig": false,
+        "label": "DNS-Suffix"
+      },
+      {
+        "x": 12.5,
+        "y": 50,
+        "w": 375.0,
+        "h": 30,
+        "richtig": false,
+        "label": "IPv4-Adresse"
+      },
+      {
+        "x": 12.5,
+        "y": 90,
+        "w": 375.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Subnetzmaske"
+      },
+      {
+        "x": 12.5,
+        "y": 130,
+        "w": 375.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Standardgateway"
+      },
+      {
+        "x": 12.5,
+        "y": 170,
+        "w": 375.0,
+        "h": 30,
+        "richtig": true,
+        "label": "DNS-Server"
+      }
+    ],
+    "erklaerungKurz": "Bei Netz 192.168.40.0/24 ist 192.168.40.255 die Broadcast-Adresse des Netzes – sie kann keinem Host, also auch keinem DNS-Server, zugewiesen werden.",
+    "erklaerungLang": "Im Netz 192.168.40.0/24 (Maske 255.255.255.0) ist 192.168.40.0 die Netzadresse und 192.168.40.255 die Broadcast-Adresse dieses Segments. Broadcast-Adressen sind reserviert, um alle Hosts im Netz gleichzeitig zu adressieren, und dürfen keinem einzelnen Gerät wie einem DNS-Server zugewiesen werden. Ein als DNS-Server eingetragener Wert 192.168.40.255 ist daher nicht erreichbar, wodurch Namensauflösung fehlschlägt, während IP-basierte Verbindungen (z. B. per IP-Adresse) weiterhin funktionieren. Korrekt wäre ein regulärer Host aus dem Bereich 192.168.40.1–192.168.40.254, z. B. 192.168.40.5. IPv4-Adresse, Maske, Gateway und DNS-Suffix sind korrekt.",
+    "verweis": "Modul 03, Abschnitt 3.1, Netzwerkkomponenten"
+  },
+  {
+    "id": "M04-997",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Konsolenbefehle & Fehlersuche",
+    "gebiet": "A3",
+    "typ": "hotspot",
+    "schwierigkeit": 2,
+    "frage": "Ein Support-Skript soll bei einem Client der Rauschenberger Handelsagentur GmbH die IP-Adresse neu beziehen und anschließend den DNS-Cache leeren. Klicke auf den Befehl, der für den beabsichtigten Zweck falsch ist.",
+    "svg": "<svg viewBox='0 0 320 160' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='10' y='10' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='30' text-anchor='middle'>1. ipconfig /release</text><rect x='10' y='50' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='70' text-anchor='middle'>2. ipconfig /renew</text><rect x='10' y='90' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='110' text-anchor='middle'>3. ipconfig /displaydns</text><rect x='10' y='130' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='150' text-anchor='middle'>4. ipconfig /flushdns</text></svg>",
+    "zonen": [
+      {
+        "x": 10,
+        "y": 10,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "ipconfig /release"
+      },
+      {
+        "x": 10,
+        "y": 50,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "ipconfig /renew"
+      },
+      {
+        "x": 10,
+        "y": 90,
+        "w": 300,
+        "h": 30,
+        "richtig": true,
+        "label": "ipconfig /displaydns"
+      },
+      {
+        "x": 10,
+        "y": 130,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "ipconfig /flushdns"
+      }
+    ],
+    "erklaerungKurz": "/displaydns zeigt den DNS-Cache nur an, löscht ihn aber nicht. Zum Leeren des Caches dient /flushdns (Schritt 4).",
+    "erklaerungLang": "Die Option 'ipconfig /displaydns' listet lediglich den Inhalt des lokalen DNS-Resolver-Caches auf, verändert oder löscht ihn aber nicht. Da das Skript den DNS-Cache leeren soll, ist an dieser Stelle 'ipconfig /flushdns' erforderlich – genau das steht als Schritt 4 schon im Skript. Die übrigen Schritte sind für ihren jeweiligen Zweck korrekt: /release gibt die aktuelle IP-Konfiguration frei, /renew fordert eine neue Adresse per DHCP an und /flushdns leert den DNS-Cache.",
+    "verweis": "Modul 04, Abschnitt 4.5: Konsolenbefehle für Netzwerk-Diagnose"
+  },
+  {
+    "id": "M04-998",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Konsolenbefehle & Fehlersuche",
+    "gebiet": "A3",
+    "typ": "hotspot",
+    "schwierigkeit": 3,
+    "frage": "Ein Techniker der Wetterer Bauträger GmbH prüft eine Netzwerkstörung schrittweise 'von innen nach außen'. Klicke auf den Schritt, dessen Ping-Ziel nicht zum beschriebenen Testzweck passt.",
+    "svg": "<svg viewBox='0 0 320 160' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='10' y='10' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='30' text-anchor='middle'>1. Eigener TCP/IP-Stack: ping 127.0.0.1</text><rect x='10' y='50' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='70' text-anchor='middle'>2. Eigene IP-Adresse: ping 192.168.10.50</text><rect x='10' y='90' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='110' text-anchor='middle'>3. Standardgateway: ping 192.168.10.1</text><rect x='10' y='130' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='150' text-anchor='middle'>4. Internetserver: ping 192.168.10.1</text></svg>",
+    "zonen": [
+      {
+        "x": 10,
+        "y": 10,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "Loopback"
+      },
+      {
+        "x": 10,
+        "y": 50,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "Eigene IP"
+      },
+      {
+        "x": 10,
+        "y": 90,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "Gateway"
+      },
+      {
+        "x": 10,
+        "y": 130,
+        "w": 300,
+        "h": 30,
+        "richtig": true,
+        "label": "Internetserver"
+      }
+    ],
+    "erklaerungKurz": "Schritt 4 soll die Internet-Erreichbarkeit testen, pingt aber erneut das private Standardgateway 192.168.10.1 statt eine öffentliche Adresse.",
+    "erklaerungLang": "Bei der systematischen Fehlersuche wird üblicherweise von innen nach außen getestet: zuerst der eigene TCP/IP-Stack (127.0.0.1), dann die eigene Adresse, danach das Standardgateway und zuletzt ein Ziel außerhalb des lokalen Netzes, um die Internetanbindung zu prüfen. Schritt 4 verwendet jedoch erneut 192.168.10.1 – dieselbe private Gateway-Adresse aus Schritt 3 – und kann daher keine Aussage über die tatsächliche Internetverbindung treffen. Korrekt wäre eine öffentliche Adresse, z. B. 8.8.8.8 oder ein bekannter Internet-Host. Die Schritte 1 bis 3 sind für ihren jeweiligen Zweck korrekt gewählt.",
+    "verweis": "Modul 04, Abschnitt 4.5: Strukturierte Netzwerk-Fehlersuche"
+  },
+  {
+    "id": "M04-999",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Konsolenbefehle & Fehlersuche",
+    "gebiet": "A3",
+    "typ": "hotspot",
+    "schwierigkeit": 3,
+    "frage": "Das Produktionsnetz der Fronhäuser Produktionstechnik GmbH soll über eine statische Route vom Verwaltungsnetz aus erreichbar gemacht werden. Klicke auf den fehlerhaften Eintrag.",
+    "svg": "<svg viewBox='0 0 400 160' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='12.5' y='10' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='30' text-anchor='middle'>Lokales Netz (Verwaltung): 192.168.10.0/24</text><rect x='12.5' y='50' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='70' text-anchor='middle'>Zielnetz (Produktion): 192.168.20.0/24</text><rect x='12.5' y='90' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='110' text-anchor='middle'>Router-Schnittstelle (Verwaltung): 192.168.10.254</text><rect x='12.5' y='130' width='375' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='200' y='150' text-anchor='middle'>route add 192.168.20.0 mask 255.255.255.0 192.168.30.254</text></svg>",
+    "zonen": [
+      {
+        "x": 12.5,
+        "y": 10,
+        "w": 375.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Lokales Netz"
+      },
+      {
+        "x": 12.5,
+        "y": 50,
+        "w": 375.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Zielnetz"
+      },
+      {
+        "x": 12.5,
+        "y": 90,
+        "w": 375.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Router-Schnittstelle"
+      },
+      {
+        "x": 12.5,
+        "y": 130,
+        "w": 375.0,
+        "h": 30,
+        "richtig": true,
+        "label": "route add-Befehl"
+      }
+    ],
+    "erklaerungKurz": "Das Gateway im route-Befehl (192.168.30.254) liegt nicht im lokalen Netz 192.168.10.0/24 und stimmt nicht mit der genannten Router-Schnittstelle 192.168.10.254 überein.",
+    "erklaerungLang": "Bei einer statischen Route muss das angegebene Gateway direkt vom lokalen Rechner aus erreichbar sein, also im eigenen Subnetz liegen – hier 192.168.10.0/24. Der Befehl 'route add 192.168.20.0 mask 255.255.255.0 192.168.30.254' trägt jedoch 192.168.30.254 als Gateway ein, eine Adresse aus einem dritten, nicht existierenden bzw. nicht dokumentierten Netz. Das Paket kann so nicht zugestellt werden, die Route bleibt unbrauchbar. Korrekt wäre die dokumentierte Router-Schnittstelle im Verwaltungsnetz, also 192.168.10.254: 'route add 192.168.20.0 mask 255.255.255.0 192.168.10.254'. Lokales Netz, Zielnetz und Router-Schnittstelle sind wie angegeben korrekt.",
+    "verweis": "Modul 04, Abschnitt 4.5 – Netzwerk-Diagnostik und Konsolenbefehle"
+  },
+  {
+    "id": "M06-970",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Härtung & Zugriffskontrolle",
+    "gebiet": "A3",
+    "typ": "hotspot",
+    "schwierigkeit": 2,
+    "frage": "Ein Azubi hat einen neuen Switch der Amöneburger Bildungszentrum gGmbH nach Härtungs-Checkliste konfiguriert. Klicke auf den Punkt, der die Härtung nicht erfüllt.",
+    "svg": "<svg viewBox='0 0 368 200' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='11.5' y='10' width='345' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='184' y='30' text-anchor='middle'>Firmware: aktuellster Stand installiert</text><rect x='11.5' y='50' width='345' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='184' y='70' text-anchor='middle'>Login-Banner: konfiguriert</text><rect x='11.5' y='90' width='345' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='184' y='110' text-anchor='middle'>Fernwartung: Telnet (Port 23) aktiviert</text><rect x='11.5' y='130' width='345' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='184' y='150' text-anchor='middle'>Nicht benötigte Dienste: deaktiviert</text><rect x='11.5' y='170' width='345' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='184' y='190' text-anchor='middle'>Passwortrichtlinie: Mindestlänge 12 Zeichen aktiv</text></svg>",
+    "zonen": [
+      {
+        "x": 11.5,
+        "y": 10,
+        "w": 345.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Firmware"
+      },
+      {
+        "x": 11.5,
+        "y": 50,
+        "w": 345.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Login-Banner"
+      },
+      {
+        "x": 11.5,
+        "y": 90,
+        "w": 345.0,
+        "h": 30,
+        "richtig": true,
+        "label": "Fernwartung Telnet"
+      },
+      {
+        "x": 11.5,
+        "y": 130,
+        "w": 345.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Dienste deaktiviert"
+      },
+      {
+        "x": 11.5,
+        "y": 170,
+        "w": 345.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Passwortrichtlinie"
+      }
+    ],
+    "erklaerungKurz": "Telnet (Port 23) überträgt Zugangsdaten und Kommandos unverschlüsselt im Klartext; für die Fernwartung gehört SSH (Port 22) verwendet.",
+    "erklaerungLang": "Telnet überträgt sämtliche Daten – inklusive Benutzername und Passwort – unverschlüsselt über das Netz. Ein Angreifer, der den Datenverkehr mitschneidet (z. B. per Sniffing im selben Segment), kann die Zugangsdaten im Klartext auslesen und die vollständige Kontrolle über den Switch übernehmen. Härtungskonzepte fordern deshalb, Telnet zu deaktivieren und stattdessen SSH (Port 22) zu verwenden, das die Verbindung verschlüsselt. Die übrigen Punkte der Checkliste (aktuelle Firmware, Login-Banner, Deaktivierung nicht benötigter Dienste, Passwortrichtlinie mit Mindestlänge 12) entsprechen anerkannten Härtungsmaßnahmen und sind korrekt umgesetzt.",
+    "verweis": "Modul 06, Abschnitt 6.4 Härtung des Betriebssystems"
+  },
+  {
+    "id": "M06-971",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Härtung & Zugriffskontrolle",
+    "gebiet": "A3",
+    "typ": "hotspot",
+    "schwierigkeit": 3,
+    "frage": "Die IT der Kirchhainer Energiedienste GmbH hat ein Firewall-Regelwerk für die Perimeter-Firewall erstellt. Klicke auf die Regel, die dem Prinzip der minimalen Rechtevergabe widerspricht.",
+    "svg": "<svg viewBox='0 0 384 160' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='12' y='10' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='30' text-anchor='middle'>Regel 1: LAN → Internet, HTTP/HTTPS, Erlauben</text><rect x='12' y='50' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='70' text-anchor='middle'>Regel 2: Internet → DMZ-Webserver, HTTPS, Erlauben</text><rect x='12' y='90' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='110' text-anchor='middle'>Regel 3: ANY → ANY, ANY, Erlauben</text><rect x='12' y='130' width='360' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='192' y='150' text-anchor='middle'>Regel 4 (Default): ANY → ANY, ANY, Verweigern</text></svg>",
+    "zonen": [
+      {
+        "x": 12.0,
+        "y": 10,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Regel 1"
+      },
+      {
+        "x": 12.0,
+        "y": 50,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Regel 2"
+      },
+      {
+        "x": 12.0,
+        "y": 90,
+        "w": 360.0,
+        "h": 30,
+        "richtig": true,
+        "label": "Regel 3"
+      },
+      {
+        "x": 12.0,
+        "y": 130,
+        "w": 360.0,
+        "h": 30,
+        "richtig": false,
+        "label": "Regel 4 Default"
+      }
+    ],
+    "erklaerungKurz": "Regel 3 erlaubt jeglichen Verkehr von jeder Quelle zu jedem Ziel und jedem Dienst – sie hebelt alle anderen Regeln und die Default-Deny-Regel aus.",
+    "erklaerungLang": "Eine Firewall-Regel 'ANY → ANY, Dienst ANY, Erlauben' lässt sämtlichen Datenverkehr unabhängig von Quelle, Ziel und Protokoll passieren. Da Firewall-Regelwerke von oben nach unten in der ersten passenden Zeile ausgewertet werden, greift Regel 3 noch vor der eigentlich sinnvollen Default-Deny-Regel (Regel 4) und macht diese wirkungslos – jeder beliebige Verkehr, auch aus dem Internet in interne Netze, wird durchgelassen. Das widerspricht dem Prinzip der minimalen Rechtevergabe (Need-to-know/Least Privilege), nach dem nur explizit benötigter Verkehr erlaubt werden darf. Regel 1 (ausgehender Web-Zugriff), Regel 2 (eingehender HTTPS-Zugriff auf den DMZ-Webserver) und die abschließende Default-Deny-Regel 4 sind dagegen fachlich korrekt und entsprechen dem Minimalprinzip.",
+    "verweis": "Modul 06, Abschnitt 6.4 Personal Firewall konfigurieren"
+  },
+  {
+    "id": "M06-972",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Härtung & Zugriffskontrolle",
+    "gebiet": "A3",
+    "typ": "hotspot",
+    "schwierigkeit": 2,
+    "frage": "Auf dem Dateiserver FS01 der Neustädter Projektarchiv GmbH wurde eine neue Projektfreigabe eingerichtet. Klicke auf die fehlerhaft konfigurierte Berechtigung.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' font-size='12'><rect x='10' y='10' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='30' text-anchor='middle'>Freigabename: \\\\FS01\\Projekte</text><rect x='10' y='50' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='70' text-anchor='middle'>Freigabeberechtigung: Jeder – Vollzugriff</text><rect x='10' y='90' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='110' text-anchor='middle'>NTFS-Recht: Gruppe Konstruktion – Ändern</text><rect x='10' y='130' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='150' text-anchor='middle'>SMB-Verschlüsselung: aktiviert</text><rect x='10' y='170' width='300' height='30' fill='#fff' stroke='#2A2F39' stroke-width='1.5' rx='4'/><text x='160' y='190' text-anchor='middle'>Freigabe-Protokoll: SMB 3.1.1</text></svg>",
+    "zonen": [
+      {
+        "x": 10,
+        "y": 10,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "Freigabename"
+      },
+      {
+        "x": 10,
+        "y": 50,
+        "w": 300,
+        "h": 30,
+        "richtig": true,
+        "label": "Freigabeberechtigung Jeder"
+      },
+      {
+        "x": 10,
+        "y": 90,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "NTFS-Berechtigung"
+      },
+      {
+        "x": 10,
+        "y": 130,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "SMB-Verschlüsselung"
+      },
+      {
+        "x": 10,
+        "y": 170,
+        "w": 300,
+        "h": 30,
+        "richtig": false,
+        "label": "Freigabe-Protokoll"
+      }
+    ],
+    "erklaerungKurz": "Die Gruppe 'Jeder' mit 'Vollzugriff' auf Freigabeebene erlaubt praktisch allen Netzwerkbenutzern uneingeschränkten Zugriff – das widerspricht dem Minimalprinzip.",
+    "erklaerungLang": "Die Freigabeberechtigung 'Jeder – Vollzugriff' gewährt jedem Benutzer, der die Freigabe über das Netz erreichen kann, uneingeschränkten Zugriff einschließlich Lesen, Schreiben, Löschen und Berechtigungen ändern. Selbst wenn die NTFS-Berechtigungen (hier: Gruppe 'Konstruktion' – Ändern) enger gefasst sind, gilt bei kombinierten Freigabe- und NTFS-Berechtigungen stets die jeweils restriktivere Einstellung – eine zu offene Freigabeberechtigung untergräbt aber in der Praxis die Übersichtlichkeit und birgt bei Fehlkonfiguration der NTFS-Ebene ein hohes Risiko. Nach dem Minimalprinzip sollte auf Freigabeebene ebenfalls nur die konkret benötigte Gruppe (z. B. 'Konstruktion') mit den tatsächlich erforderlichen Rechten eingetragen werden, nicht 'Jeder'. Freigabename, NTFS-Berechtigung, SMB-Verschlüsselung und das verwendete Protokoll SMB 3.1.1 sind korrekt.",
+    "verweis": "Modul 06, Abschnitt 6.4 Zugangs- vs. Zugriffskontrolle"
+  }
+]

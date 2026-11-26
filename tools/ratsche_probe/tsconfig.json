@@ -1,0 +1,6 @@
+{
+  "//": "Selbsttest tsc_tools: dieselben Optionen wie tools/tsconfig.tools.json, nur die Probedatei - genau TS2339 + TS2554 erwartet.",
+  "extends": "../tsconfig.tools.json",
+  "include": ["probe_typ.js"],
+  "exclude": []
+}

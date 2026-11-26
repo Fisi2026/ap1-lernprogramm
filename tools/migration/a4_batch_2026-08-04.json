@@ -1,0 +1,102 @@
+[
+ {
+  "id": "M07-043",
+  "pruefungsteil": "AP1",
+  "modul": "M07",
+  "thema": "Abnahme & Übergabe",
+  "gebiet": "A4",
+  "typ": "zuordnung",
+  "schwierigkeit": 3,
+  "frage": "Bei der Abnahme einer Netzwerkerneuerung geht die Projektleiterin der Kestenholzer Baustoffhandel GmbH die Positionen des Auftrags durch. Ordnen Sie jeden Befund der zutreffenden Einordnung zu.",
+  "paare": [
+   [
+    "Schlechtleistung",
+    "Ein Switch ist der vertraglich vereinbarte, erreicht im Messprotokoll aber nur 1 Gbit/s statt der zugesagten 10 Gbit/s"
+   ],
+   [
+    "Falschlieferung (aliud)",
+    "Im Rack stehen Geräte eines anderen Herstellers als der im Auftrag namentlich genannte"
+   ],
+   [
+    "Minderlieferung",
+    "Von den zehn beauftragten Access Points sind bei der Begehung nur acht montiert und angeschlossen"
+   ],
+   [
+    "Kein Mangel, sondern Änderungswunsch",
+    "Die Projektleiterin möchte zusätzlich eine WLAN-Ausleuchtung des Außenlagers, die im Auftrag nicht steht"
+   ]
+  ],
+  "erklaerungKurz": "Schlechtleistung = richtige Sache, zu schlechte Qualität. Falschlieferung = etwas anderes als vereinbart. Minderlieferung = zu wenig. Was nie beauftragt war, ist kein Mangel, sondern eine neue Leistung.",
+  "erklaerungLang": "Bei der Abnahme entscheidet sich, was Mangel ist und was Zusatzauftrag – und damit, wer zahlt.\n• Schlechtleistung: Geliefert wurde das Vereinbarte, aber die zugesagte Eigenschaft fehlt. Der Anspruch richtet sich auf Nachbesserung.\n• Falschlieferung (aliud): Geliefert wurde etwas anderes als vereinbart. Auch ein technisch gleichwertiges Gerät eines anderen Herstellers ist ein aliud, wenn der Auftrag den Hersteller benennt.\n• Minderlieferung: Die Menge stimmt nicht. Der Rest bleibt geschuldet, die Abnahme kann unter Vorbehalt erfolgen.\n• Der Änderungswunsch ist die Abgrenzung, die in der Praxis am meisten Streit macht: Was nie beauftragt war, kann auch nicht mangelhaft sein. Er gehört in ein Angebot, nicht ins Mängelprotokoll.\nMerke: Erst gegen den Auftrag halten, dann einordnen – ohne Auftragstext gibt es keinen Mangel.",
+  "verweis": "Modul 07, Abschnitt 7.6 – Mängel und Mängelarten"
+ },
+ {
+  "id": "M07-044",
+  "pruefungsteil": "AP1",
+  "modul": "M07",
+  "thema": "Einweisung & Schulung",
+  "gebiet": "A4",
+  "typ": "freitext",
+  "schwierigkeit": 4,
+  "frage": "Die Ohrdrufer Speditionsgesellschaft mbH führt an fünf Standorten eine neue Dispositionssoftware ein. 300 Beschäftigte arbeiten im Schichtbetrieb; eine Präsenzschulung, bei der alle gleichzeitig anwesend sind, ist ausgeschlossen. Entwerfen Sie ein Schulungskonzept nach dem Blended-Learning-Ansatz: Welche Inhalte gehören in die Selbstlernphase, welche in die Präsenzphase, und welche Aufgabe haben Multiplikatoren dabei?",
+  "musterloesung": "Blended Learning kombiniert eine zeitlich flexible Selbstlernphase mit einer Präsenzphase; genau das passt zum Schichtbetrieb, weil niemand für den Grundlagenteil aus der Schicht geholt werden muss.\n\nSelbstlernphase: Alles, was standardisiert und für alle gleich ist. Also Aufbau der Oberfläche, Anmeldung, Navigation, die Grundbegriffe der Disposition in dieser Software und der Weg eines einfachen Auftrags durch das System. Geeignete Formen sind kurze Videos, ein Klick-Rundgang und eine Übungsumgebung mit Testdaten, in der nichts kaputtgehen kann. Der Vorteil: Jede und jeder lernt im eigenen Tempo und zur eigenen Schichtzeit, Wiederholung kostet nichts.\n\nPräsenzphase: Alles, was Rückfragen, Diskussion oder den echten Arbeitsablauf braucht. Also die standortspezifischen Besonderheiten, die Schnittstellen zu vorhandenen Abläufen, Ausnahme- und Störfälle sowie das gemeinsame Durchspielen typischer Tagesabläufe. Sie ist kurz zu halten und setzt die Selbstlernphase voraus – sonst wird sie wieder zur Grundlagenschulung.\n\nMultiplikatoren: Je Standort und Schicht werden einzelne Beschäftigte vorab intensiv geschult. Sie leiten die Präsenzphase vor Ort, sind danach erste Anlaufstelle bei Rückfragen und melden wiederkehrende Probleme gebündelt an das Systemhaus zurück. Damit skaliert die Schulung über Standorte und Schichten hinweg, ohne dass das Systemhaus 300 Personen einzeln erreichen muss. Wichtig ist die Auswahl: Multiplikatoren müssen den täglichen Arbeitsablauf kennen und in ihrer Schicht ansprechbar sein – nicht die Führungsebene.\n\nOrganisatorisch gehören dazu: eine verbindliche Frist für die Selbstlernphase, eine Anwenderdokumentation, die auch nach der Schulung auffindbar ist, und eine Regelung für Beschäftigte, die erst nach der Einführung dazukommen.",
+  "schluesselbegriffe": {
+   "pflicht": [
+    [
+     "Selbstlernphase",
+     "eigenes Tempo",
+     "Videos",
+     "Übungsumgebung"
+    ],
+    [
+     "Präsenzphase",
+     "Rückfragen",
+     "Störfälle",
+     "Arbeitsablauf"
+    ],
+    [
+     "Multiplikatoren",
+     "je Standort",
+     "Anlaufstelle",
+     "skaliert"
+    ]
+   ],
+   "kuer": [
+    "Schichtbetrieb",
+    "Testdaten",
+    "Anwenderdokumentation",
+    "Frist",
+    "Neueinstellungen"
+   ]
+  },
+  "erklaerungKurz": "Standardisierte Grundlagen in die Selbstlernphase, Rückfragen und echte Abläufe in die Präsenzphase, Multiplikatoren je Standort und Schicht als Träger und erste Anlaufstelle.",
+  "erklaerungLang": "Blended Learning ist keine Sparmaßnahme, sondern eine Antwort auf Verfügbarkeit.\n• Was für alle gleich ist, verträgt Selbstlernen: Oberfläche, Navigation, der einfache Standardfall.\n• Was Rückfragen auslöst, braucht Menschen: Ausnahmen, Störfälle, standortspezifische Abläufe.\n• Multiplikatoren machen das Konzept skalierbar – sie tragen es in Schichten hinein, die kein externer Trainer erreicht.\n• Ohne Frist und ohne auffindbare Dokumentation bleibt die Selbstlernphase Theorie.\nMerke: Erst sortieren, was Selbstlernen verträgt – der Rest bestimmt die Länge der Präsenzphase.",
+  "verweis": "Modul 07, Abschnitt 7.5 – Qualifizierung durch Blended Learning und Multiplikatoren"
+ },
+ {
+  "id": "M07-045",
+  "pruefungsteil": "AP1",
+  "modul": "M07",
+  "thema": "Change Management",
+  "gebiet": "A4",
+  "typ": "mc",
+  "schwierigkeit": 2,
+  "frage": "Zum Auftakt einer Softwareumstellung stellt die Projektleitung allen Beschäftigten eine Roadmap mit den Umstellungsschritten und Terminen vor. Welchen Zweck erfüllt diese Visualisierung im Veränderungsprozess vor allem?",
+  "optionen": [
+   "Sie macht den Ablauf und den eigenen Platz darin sichtbar und nimmt der Umstellung das Unvorhersehbare",
+   "Sie ersetzt die Einzelgespräche, weil alle Beteiligten anschließend denselben Informationsstand haben",
+   "Sie verpflichtet die Beschäftigten auf die genannten Termine und macht spätere Verzögerungen zurechenbar",
+   "Sie weist der Geschäftsführung nach, dass das Projekt nach anerkannten Methoden geführt wird"
+  ],
+  "loesungIndex": 0,
+  "distraktorErklaerungen": [
+   "",
+   "Ein gemeinsamer Informationsstand ist ein Nebeneffekt. Das persönliche Gespräch mit Skeptikern und Widerständlern ersetzt eine Grafik nicht.",
+   "Eine Roadmap ist ein Kommunikationsmittel, keine Verpflichtungserklärung. Wer sie so einsetzt, erzeugt genau den Druck, der Widerstand verstärkt.",
+   "Ein Methodennachweis mag nebenbei entstehen, ist aber nicht der Zweck. Die Roadmap richtet sich an die Betroffenen, nicht an die Leitung."
+  ],
+  "erklaerungKurz": "Die Roadmap zeigt jedem, was wann passiert und wo er selbst darin vorkommt. Unsicherheit über den Ablauf ist eine der häufigsten Ursachen von Widerstand.",
+  "erklaerungLang": "Widerstand entsteht selten aus Bosheit, sondern aus Unsicherheit.\n• Wer den Ablauf kennt, kann sich einordnen: Was kommt wann, und was bedeutet es für meine Arbeit?\n• Die Visualisierung erreicht auch die, die einen Fließtext nicht lesen – Roadmaps, Gantt-Diagramme und einfache Grafiken vermitteln das große Bild.\n• Sie ersetzt aber kein Gespräch: Ängste um Kompetenz oder Arbeitsplatz löst keine Grafik.\nMerke: Die Roadmap nimmt der Veränderung das Unvorhersehbare – nicht die Sorge.",
+  "verweis": "Modul 07, Abschnitt 7.5 – Identifizierung und Darstellung von Veränderungsschritten"
+ }
+]

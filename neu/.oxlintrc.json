@@ -1,0 +1,98 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "react",
+    "typescript",
+    "oxc",
+    "jsx-a11y",
+    "import"
+  ],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ],
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/no-unnecessary-type-assertion": "error",
+    "typescript/await-thenable": "off",
+    "typescript/no-base-to-string": "off",
+    "typescript/no-implied-eval": "off",
+    "typescript/no-redundant-type-constituents": "off",
+    "typescript/require-array-sort-compare": "off",
+    "typescript/unbound-method": "off",
+    "typescript/consistent-return": "error",
+    "eslint/no-shadow": "error",
+    "eslint/no-await-in-loop": "error",
+    "react/no-array-index-key": "error",
+    "react/react-in-jsx-scope": "off",
+    "typescript/no-unsafe-type-assertion": "off",
+    "import/no-cycle": "error",
+    "import/no-unassigned-import": [
+      "error",
+      {
+        "allow": [
+          "**/*.css"
+        ]
+      }
+    ],
+    "typescript/prefer-nullish-coalescing": [
+      "error",
+      {
+        "ignorePrimitives": true
+      }
+    ],
+    "eslint/eqeqeq": [
+      "error",
+      "always",
+      {
+        "null": "ignore"
+      }
+    ],
+    "typescript/only-throw-error": "error",
+    "typescript/switch-exhaustiveness-check": "error",
+    "typescript/restrict-plus-operands": "error",
+    "eslint/no-promise-executor-return": "error",
+    "eslint/no-loop-func": "error",
+    "react/no-unescaped-entities": "error",
+    "eslint/no-useless-return": "error",
+    "oxc/branches-sharing-code": "error"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/testhilfe/**",
+        "src/pruefstand.ts",
+        "src/daten/frage.generiert.ts"
+      ],
+      "rules": {
+        "typescript/no-unnecessary-type-assertion": "off",
+        "eslint/no-shadow": "off",
+        "eslint/no-await-in-loop": "off",
+        "eslint/no-loop-func": "off"
+      }
+    },
+    {
+      "files": [
+        "src/components/ui/**"
+      ],
+      "rules": {
+        "react/only-export-components": "off",
+        "react/no-array-index-key": "off"
+      }
+    }
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "error"
+  }
+}

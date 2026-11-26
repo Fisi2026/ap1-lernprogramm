@@ -1,0 +1,366 @@
+[
+  {
+    "id": "M04-923",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Praxisszenarien",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 2,
+    "frage": "Bei Homberger Serienfertigung meldet die Fertigung, dass die neue Lagerverwaltungs-App bei jedem Wareneingang abstürzt. Du bist für die Software zuständig und sollst reagieren.",
+    "erklaerungKurz": "Einen gemeldeten Fehler zuerst reproduzieren und dokumentieren, dann gezielt beheben – hier durch eine Eingabevalidierung, die leere/ungültige Mengen abfängt.",
+    "erklaerungLang": "Strukturierte Fehlerbehebung: 1. reproduzieren (Schritte protokollieren), 2. Ursache eingrenzen, 3. gezielt beheben, 4. testen. Ein leeres Pflichtfeld darf nicht zum Absturz führen – die saubere Lösung ist eine Eingabevalidierung, nicht das Entfernen des Feldes oder das Unterdrücken der Fehlermeldung.",
+    "verweis": "Modul 04, Abschnitt 4.7: Schreibtischtest und Debugging",
+    "schritt1": {
+      "frage": "Wie gehst du zuerst vor?",
+      "optionen": [
+        "Den Fehler reproduzieren und die genauen Schritte protokollieren",
+        "Sofort den Quellcode an der vermuteten Stelle umschreiben",
+        "Die App kommentarlos auf die alte Version zurücksetzen"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Der Absturz tritt nur auf, wenn das Mengenfeld leer bleibt. Was ist die passende Lösung?",
+      "optionen": [
+        "Eine Eingabevalidierung ergänzen, die leere/ungültige Mengen abfängt",
+        "Das Mengenfeld ganz aus der Eingabemaske entfernen",
+        "Die Fehlermeldung unterdrücken (try/catch ohne Behandlung)"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Erst reproduzieren und dokumentieren, dann gezielt beheben.",
+      "Ohne reproduzierten Fehler änderst du ins Blaue und riskierst neue Fehler.",
+      "Ein Rollback verschleiert die Ursache – der Fehler bleibt ungeklärt."
+    ]
+  },
+  {
+    "id": "M04-924",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "Konsolenbefehle & Fehlersuche",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 2,
+    "frage": "Ein Arbeitsplatz bei Gemuendener Handelsbetriebe hat keinen Internetzugang. Andere PCs im selben Netz funktionieren normal.",
+    "erklaerungKurz": "Mit ipconfig /all die IP-Konfiguration prüfen. Eine Adresse aus 169.254.x.x (APIPA) bedeutet: Der Client hat keine Antwort vom DHCP-Server erhalten – Kabel, Switch und DHCP prüfen.",
+    "erklaerungLang": "169.254.0.0/16 ist der APIPA-Bereich (Automatic Private IP Addressing). Windows vergibt ihn selbst, wenn kein DHCP-Server erreichbar ist. Folge: keine Standard-Gateway-Verbindung, kein Internet. Zu prüfen sind Netzwerkkabel/Port, Switch und der DHCP-Dienst. format C: und ein bloßer Neustart sind keine Diagnosemittel.",
+    "verweis": "Modul 04, Abschnitt 4.5 – Konsolenbefehle",
+    "schritt1": {
+      "frage": "Womit prüfst du zuerst die IP-Konfiguration des betroffenen PCs?",
+      "optionen": [
+        "ipconfig /all",
+        "netstat -an",
+        "tracert 8.8.8.8"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "ipconfig zeigt die IPv4-Adresse 169.254.10.7. Was folgt daraus?",
+      "optionen": [
+        "Der PC hat keine DHCP-Adresse erhalten (APIPA) – DHCP/Verkabelung prüfen",
+        "Der PC hat eine gültige öffentliche Internetadresse",
+        "Der DNS-Server ist damit nachweislich korrekt gesetzt"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: ipconfig /all zeigt IP, Maske, Gateway und DNS des Rechners.",
+      "Falsch: netstat zeigt Verbindungen, nicht die IP-Konfiguration des PCs.",
+      "Falsch: tracert zeigt den Weg zum Ziel, nicht die lokale IP-Konfiguration."
+    ]
+  },
+  {
+    "id": "M06-944",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "Phishing & Social Engineering",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 2,
+    "frage": "Eine Mitarbeiterin bei Schwalmtaler Buchhaltungsbuero erhält eine E-Mail: „Ihr Konto wird in 24 Stunden gesperrt. Klicken Sie hier und bestätigen Sie Ihr Passwort.“ Der Absender wirkt wie die interne IT, die Adresse endet aber auf @schwalmtaler-support.net.",
+    "erklaerungKurz": "Nicht auf den Link klicken, keine Zugangsdaten eingeben, die E-Mail an die IT melden. Phishing erkennt man an gefälschter Absenderdomain, Zeitdruck/Drohung und der Aufforderung zur Passworteingabe – Logo und fehlerfreie Sprache sind kein Echtheitsbeweis.",
+    "erklaerungLang": "Social-Engineering-Angriffe erzeugen Druck („Konto wird gesperrt“) und leiten auf gefälschte Seiten. Merkmale: abweichende Absenderdomain, generische Anrede, Aufforderung zur Eingabe von Zugangsdaten, verdächtige Links. Passwörter werden niemals per E-Mail abgefragt oder verschickt. Richtige Reaktion: melden und löschen.",
+    "verweis": "Modul 06, Abschnitt 6.1 — Social Engineering und Phishing-Angriffe",
+    "schritt1": {
+      "frage": "Wie reagiert sie richtig?",
+      "optionen": [
+        "Nicht auf den Link klicken und die E-Mail der IT-Abteilung melden",
+        "Den Link nur im privaten Browserfenster öffnen und das Passwort dort eingeben",
+        "Die E-Mail löschen und Kollegen nicht warnen, damit keine Unruhe entsteht"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Woran erkennt man solche Phishing-Mails am zuverlässigsten?",
+      "optionen": [
+        "An gefälschter Absenderdomain, Drohkulisse und Aufforderung zur Passworteingabe",
+        "An der Anrede – steht dort der volle Name, ist die Mail echt",
+        "Am Absendernamen im Anzeigefeld – steht dort die IT-Abteilung, ist die Mail echt"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: nicht klicken, nichts eingeben, an die IT melden.",
+      "Falsch: Auch im privaten Fenster landen die Zugangsdaten beim Angreifer.",
+      "Falsch: Phishing muss der IT gemeldet werden, damit andere geschützt werden."
+    ]
+  },
+  {
+    "id": "M06-945",
+    "pruefungsteil": "AP1",
+    "modul": "M06",
+    "thema": "IT-Sicherheit und Datenschutz-Vorfall",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "frage": "Bei Willingshaeuser Werksvertrieb wird einem Außendienstmitarbeiter ein Notebook mit einer unverschlüsselten Kundendatenbank (Namen, Adressen, Kontaktdaten) im Zug gestohlen.",
+    "erklaerungKurz": "Den Vorfall sofort intern melden und dokumentieren. Besteht ein Risiko für die Betroffenen, ist die Datenpanne nach Art. 33 DSGVO ohne unangemessene Verzögerung, möglichst binnen 72 Stunden, der Aufsichtsbehörde zu melden.",
+    "erklaerungLang": "Der Verlust personenbezogener Daten auf einem unverschlüsselten Gerät ist eine Verletzung des Schutzes personenbezogener Daten. Ablauf: intern melden und dokumentieren, Risiko bewerten, bei Risiko Meldung an die Aufsichtsbehörde nach Art. 33 DSGVO (max. 72 Stunden). Bei hohem Risiko sind zusätzlich die Betroffenen zu benachrichtigen (Art. 34). Verschweigen oder Abwarten verschärft den Verstoß. Verschlüsselung hätte das Risiko deutlich reduziert.",
+    "verweis": "Modul 06, Abschnitt 6.1 – Datenschutzvorfall, Meldepflicht (Art. 33, 34 DSGVO)",
+    "schritt1": {
+      "frage": "Was ist unmittelbar zu tun?",
+      "optionen": [
+        "Den Vorfall an den Datenschutzbeauftragten/Vorgesetzten melden und dokumentieren",
+        "Abwarten, ob überhaupt jemand die Daten missbraucht",
+        "Zunächst abwarten, bis die Polizei den Täter ermittelt hat, und erst dann intern berichten"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Es besteht ein Risiko für die Betroffenen. Welche Frist gilt für die Meldung an die Aufsichtsbehörde nach DSGVO?",
+      "optionen": [
+        "Ohne unangemessene Verzögerung, möglichst binnen 72 Stunden",
+        "Innerhalb von 30 Tagen",
+        "Es besteht keinerlei Meldepflicht"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Vorfall sofort melden und dokumentieren, damit fristgerecht reagiert werden kann.",
+      "Abwarten verstößt gegen die Meldepflichten und vergrößert den Schaden.",
+      "Falsch: Datenpannen sind unverzüglich intern zu melden, nicht erst nach Ermittlung."
+    ]
+  },
+  {
+    "id": "M07-933",
+    "pruefungsteil": "AP1",
+    "modul": "M07",
+    "thema": "Vertragsstörungen & Mängel",
+    "gebiet": "A5",
+    "typ": "szenario2",
+    "schwierigkeit": 2,
+    "frage": "Ottrauer Netzwerkhandel bestellt bei einem Lieferanten 10 Industrie-Switches. Bei der Lieferung sind 3 Geräte sichtbar beschädigt (erkennbarer Transportschaden).",
+    "erklaerungKurz": "Den Mangel dokumentieren und dem Lieferanten unverzüglich anzeigen (Mängelrüge). Beim Sachmangel steht dem Käufer zunächst die Nacherfüllung zu (Nachlieferung oder Nachbesserung); Rücktritt oder Minderung erst nach erfolglosem Fristablauf.",
+    "erklaerungLang": "Bei einem Sachmangel (§ 434 BGB) gilt der Vorrang der Nacherfüllung (§§ 437, 439 BGB): Der Käufer kann Nachbesserung oder Nachlieferung verlangen. Erst wenn diese fehlschlägt oder eine gesetzte Frist erfolglos verstreicht, kommen Rücktritt, Minderung oder Schadensersatz in Betracht. Voraussetzung für die Ansprüche ist die dokumentierte, unverzügliche Mängelanzeige (beim Handelskauf § 377 HGB).",
+    "verweis": "Modul 07, Abschnitt 7.1 – Vertragsstörungen und Mängelarten",
+    "schritt1": {
+      "frage": "Wie reagiert der Einkauf richtig?",
+      "optionen": [
+        "Die Mängel dokumentieren (Fotos) und dem Lieferanten unverzüglich anzeigen",
+        "Die drei Geräte selbst reparieren lassen und dem Lieferanten die Kosten erst bei der nächsten Bestellung nennen",
+        "Alle 10 Geräte trotzdem vorbehaltlos als einwandfrei abnehmen"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Der Lieferant reagiert. Welchen Anspruch macht Ottrauer Netzwerkhandel bei einem Sachmangel zunächst geltend?",
+      "optionen": [
+        "Nacherfüllung – Nachlieferung mangelfreier oder Reparatur der Geräte",
+        "Sofortiger Rücktritt vom gesamten Vertrag, ohne Frist zu setzen",
+        "Schadensersatz statt der ganzen Leistung ohne weitere Voraussetzungen"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Mangel dokumentieren und unverzüglich rügen, um die Ansprüche zu sichern.",
+      "Falsch: Der Mangel muss unverzüglich angezeigt werden, sonst gehen Rechte verloren.",
+      "Vorbehaltlose Abnahme kann Mängelansprüche gefährden."
+    ]
+  },
+  {
+    "id": "M01-956",
+    "pruefungsteil": "AP1",
+    "modul": "M01",
+    "thema": "Ticketsystem & Support-Level",
+    "gebiet": "A5",
+    "typ": "szenario2",
+    "schwierigkeit": 2,
+    "frage": "Im First-Level-Support von Frielendorfer Produktionsservice geht ein Ticket ein: „Der zentrale Produktionsserver ist komplett ausgefallen, die Fertigung steht still.“",
+    "erklaerungKurz": "Hohe Auswirkung und hohe Dringlichkeit ergeben höchste Priorität. Kann der First Level die Störung nicht lösen, wird sie dokumentiert an den Second Level eskaliert – nicht geschlossen oder liegen gelassen.",
+    "erklaerungLang": "Die Priorität ergibt sich aus Auswirkung × Dringlichkeit. Ein Produktionsstillstand betrifft das gesamte Unternehmen und duldet keinen Aufschub → höchste Priorität. Ein Ausfall ist eine Störung (Incident), kein geplanter Change. Der First-Level-Support nimmt auf und löst Standardfälle; komplexe/ungelöste Störungen werden mit vollständiger Dokumentation an den Second Level eskaliert.",
+    "verweis": "Modul 01, Abschnitt 1.3 – Support-Levels und Eskalationskriterien",
+    "schritt1": {
+      "frage": "Wie priorisierst bzw. kategorisierst du das Ticket?",
+      "optionen": [
+        "Höchste Priorität – hohe Auswirkung und Dringlichkeit (Produktionsstillstand)",
+        "Mittlere Priorität – nur ein Server ist betroffen, die Arbeitsplätze funktionieren weiter",
+        "Als Problem einordnen, weil die Ursache des Ausfalls noch unbekannt ist"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Du kannst das Problem im First Level nicht lösen. Was ist der richtige nächste Schritt?",
+      "optionen": [
+        "An den Second-Level-Support eskalieren und den Vorgang im Ticket dokumentieren",
+        "Das Ticket direkt an den Hersteller (Third-Level-Support) übergeben, den Second Level überspringen",
+        "Den Server selbst neu installieren, um die Fertigung schneller wieder in Gang zu bringen"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: hohe Auswirkung + hohe Dringlichkeit = höchste Priorität.",
+      "Ein Produktionsstillstand hat höchste Auswirkung – entscheidend ist die Wirkung auf den Betrieb, nicht die Zahl der Geräte.",
+      "Ein akuter Ausfall ist ein Incident; ein Problem ist die Untersuchung einer (wiederkehrenden) Ursache."
+    ]
+  },
+  {
+    "id": "M02-926",
+    "pruefungsteil": "AP1",
+    "modul": "M02",
+    "thema": "Bezugskalkulation & Skonto",
+    "gebiet": "A2",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Die Borkener Bürotechnik GmbH holt für neue Switches zwei Angebote ein. Angebot A: Listenpreis 4.000,00 EUR netto, 10 % Rabatt, 2 % Skonto, Frachtkosten 120,00 EUR. Angebot B: Listenpreis 3.900,00 EUR netto, 5 % Rabatt, 3 % Skonto, Frachtkosten 80,00 EUR. Skonto wird in beiden Fällen genutzt.",
+    "erklaerungKurz": "Verglichen wird der Bezugspreis: Listenpreis minus Rabatt = Zieleinkaufspreis, minus Skonto = Bareinkaufspreis, plus Bezugskosten = Bezugspreis. Angebot A liegt mit 3.648,00 EUR um 25,85 EUR unter Angebot B (3.673,85 EUR).",
+    "erklaerungLang": "Angebot A: 4.000,00 EUR - 10 % = 3.600,00 EUR Zieleinkaufspreis; - 2 % Skonto (72,00 EUR) = 3.528,00 EUR Bareinkaufspreis; + 120,00 EUR Fracht = 3.648,00 EUR Bezugspreis. Angebot B: 3.900,00 EUR - 5 % = 3.705,00 EUR; - 3 % Skonto (111,15 EUR) = 3.593,85 EUR; + 80,00 EUR Fracht = 3.673,85 EUR Bezugspreis. Angebot A ist also um 25,85 EUR günstiger, obwohl sein Listenpreis höher und sein Skontosatz niedriger ist – der höhere Rabatt und die Reihenfolge der Abzüge kehren das Bild um. Wichtig: Skonto wird immer vom bereits um den Rabatt verminderten Betrag berechnet, Bezugskosten werden erst danach addiert und sind nicht skontierfähig.",
+    "verweis": "Modul 02, Abschnitt 2.1 – Angebotsvergleich über den Einstandspreis",
+    "schritt1": {
+      "frage": "Welche Größe ist für den Angebotsvergleich maßgeblich?",
+      "optionen": [
+        "Der Bezugspreis: Listenpreis abzüglich Rabatt und Skonto, zuzüglich der Bezugskosten",
+        "Der Listenpreis, weil er die Preisstellung des Lieferanten unverfälscht wiedergibt",
+        "Der Zieleinkaufspreis, also der Listenpreis nach Rabatt – Skonto und Fracht bleiben außen vor"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Welches Angebot ist danach günstiger?",
+      "optionen": [
+        "Angebot A mit einem Bezugspreis von 3.648,00 EUR",
+        "Angebot B mit einem Bezugspreis von 3.673,85 EUR",
+        "Angebot B mit einem Bezugspreis von 3.593,85 EUR",
+        "Angebot A mit einem Bezugspreis von 3.528,00 EUR"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Erst der Bezugspreis macht Angebote mit unterschiedlichen Rabatten, Skonti und Frachtkosten vergleichbar.",
+      "Der Listenpreis sagt nichts über die tatsächliche Belastung aus – hier hat sogar das Angebot mit dem höheren Listenpreis den niedrigeren Bezugspreis.",
+      "Nach dem Rabatt aufzuhören verzerrt den Vergleich: Skontosätze und Frachtkosten unterscheiden sich zwischen den Angeboten deutlich."
+    ]
+  },
+  {
+    "id": "M03-909",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Netzwerkkomponenten & Medien",
+    "gebiet": "A2",
+    "typ": "szenario2",
+    "schwierigkeit": 2,
+    "frage": "In der Fertigungshalle der Wabern-Uttershäuser Fertigungstechnik GmbH wird ein neuer Arbeitsplatz eingerichtet. Der Rechner bekommt keine Netzwerkverbindung. Die Messung ergibt: Die Twisted-Pair-Strecke vom Verteilerschrank bis zur Anschlussdose beträgt zusammen mit den Patchkabeln rund 120 m. Switch, Port und Netzwerkkarte sind nachweislich in Ordnung.",
+    "erklaerungKurz": "Für Twisted-Pair-Kupferverkabelung gilt eine maximale Gesamtstrecke von 100 m. Bei 120 m hilft nur, die Strecke mit einer aktiven Komponente aufzuteilen oder auf Lichtwellenleiter zu wechseln.",
+    "erklaerungLang": "Die Norm begrenzt die Übertragungsstrecke bei Twisted-Pair auf 100 m Gesamtlänge – üblicherweise 90 m fest verlegte Installationsleitung plus zusammen bis zu 10 m Patch- und Anschlusskabel. Wird das überschritten, führen Dämpfung und Laufzeit dazu, dass keine stabile Verbindung mehr zustande kommt; typischerweise bleibt der Link ganz aus oder fällt sporadisch weg. Die Kabelkategorie (Cat 6, Cat 6A, Cat 7) bestimmt die erreichbare Bandbreite, nicht die zulässige Länge – ein höherwertiges Kabel verlängert die 100-m-Grenze also nicht. Auch das Verbinden zweier Kabel über eine Kupplung ändert nichts an der Gesamtstrecke und verschlechtert die Übertragung durch die zusätzliche Steckverbindung sogar. Fachlich richtig ist, einen Zwischenverteiler mit aktiver Komponente (Switch) einzurichten – damit beginnt eine neue 100-m-Strecke – oder die Strecke als Lichtwellenleiter auszuführen, der weit größere Längen erlaubt und in der Halle zusätzlich unempfindlich gegen elektromagnetische Störungen ist.",
+    "verweis": "Modul 03, Abschnitt 3.3 – Übertragungsmedien und Segmentlängen",
+    "schritt1": {
+      "frage": "Was ist die wahrscheinlichste Ursache?",
+      "optionen": [
+        "Die zulässige Gesamtstrecke von 100 m für Twisted-Pair-Kupferverkabelung ist überschritten",
+        "Der Rechner hat keine IP-Adresse erhalten, weil der DHCP-Bereich erschöpft ist",
+        "Die verlegte Kabelkategorie ist für die Netzwerkkarte des Rechners zu hoch"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Welche Maßnahme behebt das Problem fachlich richtig?",
+      "optionen": [
+        "Die Strecke über einen Zwischenverteiler mit aktiver Komponente aufteilen oder als Lichtwellenleiter ausführen",
+        "Ein Kabel höherer Kategorie einsetzen, weil damit auch die zulässige Länge steigt",
+        "Zwei kürzere Kabel über eine Kupplung verbinden, dann zählt jedes Teilstück für sich"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: 120 m liegen deutlich über der zulässigen Gesamtstrecke von 100 m.",
+      "Ohne Verbindung auf der Leitung kommt gar kein DHCP zustande – die Ursache liegt eine Schicht tiefer, in der zu langen Strecke.",
+      "Eine höhere Kategorie erhöht die mögliche Bandbreite; für die Endgeräte ist sie abwärtskompatibel und niemals 'zu hoch'."
+    ]
+  },
+  {
+    "id": "M03-910",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Wirtschaftlichkeit & TCO",
+    "gebiet": "A2",
+    "typ": "szenario2",
+    "schwierigkeit": 3,
+    "rechner": true,
+    "frage": "Für 20 neue Büroarbeitsplätze liegen zwei Angebote vor. Angebot A: 620,00 EUR je Gerät, Leistungsaufnahme 60 W. Angebot B: 700,00 EUR je Gerät, Leistungsaufnahme 30 W. Kalkuliert wird mit 2.000 Betriebsstunden pro Jahr, einer Nutzungsdauer von 5 Jahren und einem Strompreis von 0,30 EUR/kWh. Wartung und Support sind bei beiden Angeboten gleich.",
+    "erklaerungKurz": "Über fünf Jahre kostet Angebot A 12.400 EUR + 3.600 EUR Strom = 16.000 EUR, Angebot B 14.000 EUR + 1.800 EUR Strom = 15.800 EUR. Der höhere Anschaffungspreis wird durch die halbierte Leistungsaufnahme mehr als ausgeglichen.",
+    "erklaerungLang": "Angebot A: 20 × 620,00 EUR = 12.400,00 EUR Anschaffung. Energie: 20 × 60 W = 1.200 W = 1,2 kW; 1,2 kW x 2.000 h = 2.400 kWh pro Jahr; x 0,30 EUR/kWh = 720,00 EUR pro Jahr; x 5 Jahre = 3.600,00 EUR. Gesamt 16.000,00 EUR. Angebot B: 20 × 700,00 EUR = 14.000,00 EUR Anschaffung. Energie: 20 × 30 W = 600 W = 0,6 kW; 0,6 kW x 2.000 h = 1.200 kWh pro Jahr; x 0,30 EUR/kWh = 360,00 EUR pro Jahr; x 5 Jahre = 1.800,00 EUR. Gesamt 15.800,00 EUR. Angebot B ist über die Nutzungsdauer um 200,00 EUR günstiger, obwohl es in der Anschaffung 1.600,00 EUR teurer ist. Genau das ist der Kern der TCO-Betrachtung: Neben Anschaffung und Energie gehören auch Wartung, Support, Lizenzen, Schulung und Entsorgung dazu – hier waren sie laut Aufgabenstellung gleich und konnten deshalb entfallen.",
+    "verweis": "Modul 03, Abschnitt 3.4 – Wirtschaftlichkeitsbetrachtung und Total Cost of Ownership",
+    "schritt1": {
+      "frage": "Welcher Maßstab ist für diese Beschaffungsentscheidung sachgerecht?",
+      "optionen": [
+        "Die Gesamtkosten über die Nutzungsdauer (TCO): Anschaffung zuzüglich Betriebs-, Energie-, Support- und Entsorgungskosten",
+        "Allein der Anschaffungspreis, weil nur er zum Entscheidungszeitpunkt sicher feststeht",
+        "Allein die Energiekosten, weil sie über eine Nutzungsdauer von fünf Jahren stets den größten Kostenblock bilden"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Welches Angebot ist über die fünf Jahre günstiger?",
+      "optionen": [
+        "Angebot B mit 15.800,00 EUR, also 200,00 EUR unter Angebot A (16.000,00 EUR)",
+        "Angebot A mit 12.400,00 EUR, weil sein Anschaffungspreis der niedrigere ist",
+        "Angebot A, weil die Stromkosten von 3.600,00 EUR gegenüber 1.800,00 EUR den Preisunterschied nicht aufwiegen",
+        "Beide sind gleichwertig, weil sich Mehrpreis und Stromersparnis genau ausgleichen"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Erst die Gesamtkosten über die Nutzungsdauer machen Angebote mit unterschiedlichem Verbrauch vergleichbar.",
+      "Der Anschaffungspreis blendet die Betriebskosten aus – hier führt genau das zur falschen Entscheidung.",
+      "Die Energiekosten sind ein wichtiger, aber nicht automatisch der größte Posten; bei diesen Geräten liegen sie deutlich unter dem Anschaffungswert."
+    ]
+  },
+  {
+    "id": "M05-964",
+    "pruefungsteil": "AP1",
+    "modul": "M05",
+    "thema": "Testprotokoll",
+    "gebiet": "A3",
+    "typ": "szenario2",
+    "schwierigkeit": 2,
+    "frage": "Beim Testdurchlauf der neuen Arbeitsplatzumgebung schlägt der Testfall „Testseite drucken\" fehl. Bei der Untersuchung stellt sich heraus: Der Netzwerkdrucker war während des Tests ausgeschaltet – die in der Testfallbeschreibung geforderte Vorbedingung „Drucker betriebsbereit\" war also nicht erfüllt.",
+    "erklaerungKurz": "War eine Vorbedingung nicht erfüllt, ist der Durchlauf ungültig: Der Testfall wird nach Herstellung der Vorbedingung wiederholt. Beide Durchläufe – der abgebrochene mit Begründung und der Wiederholungslauf mit Ergebnis – gehören ins Protokoll.",
+    "erklaerungLang": "Ein Testfall prüft eine Funktion unter definierten Vorbedingungen. Ist eine Vorbedingung nicht hergestellt, sagt das Ergebnis nichts über die getestete Funktion aus – der Durchlauf ist ungültig, nicht „nicht bestanden\". Ein Fehlermeldung an die Entwicklung wäre hier eine Falschmeldung und kostet Zeit auf beiden Seiten. Ebenso falsch wäre „bestanden\", denn die Funktion wurde ja gar nicht geprüft. Richtig ist: Vorbedingung herstellen, Testfall vollständig wiederholen, Ergebnis bewerten. Für die Nachvollziehbarkeit muss das Testprotokoll beide Durchläufe zeigen – mit Datum, Grund des Abbruchs und dem Ergebnis der Wiederholung. Ein Protokoll, das nur die gelungenen Läufe enthält, ist als Nachweis wertlos, weil sich nicht mehr erkennen lässt, unter welchen Umständen getestet wurde und wie oft nachgebessert werden musste.",
+    "verweis": "Modul 05, Abschnitt 5.2 – Testprotokoll, Vorbedingungen und Wiederholungsläufe",
+    "schritt1": {
+      "frage": "Wie ist dieser Testdurchlauf zu bewerten?",
+      "optionen": [
+        "Der Durchlauf ist ungültig: Die Vorbedingung war nicht erfüllt, der Testfall wird nach deren Herstellung wiederholt",
+        "Der Testfall gilt als nicht bestanden und wird als Mangel an die Entwicklung gemeldet",
+        "Der Testfall gilt als bestanden, weil die Ursache außerhalb der getesteten Funktion lag"
+      ],
+      "loesungIndex": 0
+    },
+    "schritt2": {
+      "frage": "Was gehört dazu ins Testprotokoll?",
+      "optionen": [
+        "Beide Durchläufe: der abgebrochene mit Datum und Grund sowie der Wiederholungslauf mit seinem Ergebnis",
+        "Nur der Wiederholungslauf, damit das Protokoll übersichtlich bleibt",
+        "Gar nichts weiter, solange die Wiederholung bestanden wird"
+      ],
+      "loesungIndex": 0
+    },
+    "feedback1": [
+      "Richtig: Ohne erfüllte Vorbedingung ist über die Funktion selbst nichts ausgesagt.",
+      "Eine Meldung an die Entwicklung wäre eine Falschmeldung – die Funktion wurde gar nicht geprüft.",
+      "„Bestanden\" darf nur stehen, wenn die Funktion tatsächlich geprüft wurde und das Ist dem Soll entspricht."
+    ]
+  }
+]

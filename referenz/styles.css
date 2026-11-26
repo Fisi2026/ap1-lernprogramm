@@ -1,0 +1,591 @@
+/* ===== minions design system – Tokens ===== */
+  :root {
+    --gelb:#F4C20D; --gelb-hover:#C8920A; --gelb-soft:#FCEBA6; --gelb-wash:#FBF6E6;
+    --ink900:#15171C; --ink700:#2A2F39; --g600:#474E5B; --g500:#69707D;
+    --g300:#C6CCD4; --g200:#E2E6EB; --g100:#F0F2F5;
+    --bg:#FAFBFC; --panel:#ffffff; --text:#2A2F39; --text2:#69707D;
+    --rand:#E2E6EB; --gruen:#2E7D55; --rot:#BE413B; --orange:#C8920A; --info:#2F6FB0;
+    --sidebar-bg:#15171C; --sidebar-text:#C6CCD4; --sidebar-active:#1F232B;
+    --schatten:0 1px 2px rgba(21,23,28,.05), 0 4px 14px rgba(21,23,28,.05);
+    --f-display:"Space Grotesk", system-ui, sans-serif;
+    --f-text:"Hanken Grotesk", system-ui, sans-serif;
+    --f-mono:"JetBrains Mono", ui-monospace, monospace;
+    /* Abstands-Skala (10.09.2026). Gemessen waren 178 px-Werte bei padding/margin/gap,
+       verteilt auf 22 verschiedene Zahlen. Die App steht auf einem 2px-Raster; die Skala
+       bildet das ab, statt Abstaende sichtbar zu verschieben. Werte kommen ueber
+       tools/css_skala.py hierher - dort steht auch, was das Werkzeug NICHT anfasst. */
+    --s0:2px; --s1:4px; --s2:6px; --s3:8px; --s4:10px; --s5:12px;
+    --s6:14px; --s7:16px; --s8:20px; --s9:24px; --s10:32px; --s11:40px;
+    /* Radien: vorher 3,4,5,7,8,9,10,12px nebeneinander. */
+    --r1:4px; --r2:8px; --r3:10px; --r4:12px;
+    --dauer:120ms; --kurve:cubic-bezier(.2,.7,.3,1);
+  }
+  html[data-theme="dark"] {
+    --ink900:#F0F2F5; --ink700:#E2E6EB;
+    --bg:#15171C; --panel:#1E2128; --text:#E2E6EB; --text2:#9AA3B0;
+    /* FB-R3.3: --g300 fehlte im Dark-Theme. Die Netzplan-Eingabefelder nutzen ihn seit jeher
+       fuer den Rahmen (.np-grid input) – dort fiel die Rahmenfarbe im dunklen Theme aus.
+       Genau die Fehlerklasse aus R1.1 (dort war es --gelb-wash). Wert zwischen --g200 und
+       --text2 gewaehlt, damit der Rahmen sichtbar, aber nicht dominant ist. */
+    --rand:#2E333D; --g200:#2E333D; --g100:#22262E; --g300:#3C4350;
+    --gruen:#4CC07D; --rot:#E5736C; --orange:#E0A93C; --info:#5A93D6;
+    /* FB-R1.1: die hellen Gelb-Toene blieben im Dark-Theme stehen. Eine gewaehlte Antwort
+       (.opt.gewaehlt, .zu-item.gewaehlt) stand damit als heller Text auf fast weissem Grund
+       (#E2E6EB auf #FBF6E6 = 1,04:1) und war unlesbar. Jetzt dunkle Bernstein-Toene:
+       Text #E2E6EB auf #332C10 = 11,1:1, Akzentschrift #C8920A darauf = 5,0:1. */
+    --gelb-wash:#332C10; --gelb-soft:#5C4E15;
+    --sidebar-bg:#101216; --sidebar-text:#9AA3B0; --sidebar-active:#1B1E24;
+    --schatten:0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.35);
+  }
+  html[data-theme="sepia"] {
+    --bg:#F4ECD8; --panel:#FBF6E9; --text:#463A28; --text2:#7A6A4F;
+    --rand:#E0D3B8; --g300:#D8C8A6; --g200:#E7DBC2; --g100:#F0E7D2;
+    --ink900:#33291A; --ink700:#463A28;
+    --gelb-wash:#F3E4BE; --gelb-soft:#EAD79C;
+    --sidebar-bg:#33291A; --sidebar-text:#C9B790; --sidebar-active:#43371F;
+    --schatten:0 1px 2px rgba(70,58,40,.10), 0 4px 14px rgba(70,58,40,.08);
+  }
+  html[data-theme="kontrast"] {
+    --bg:#ffffff; --panel:#ffffff; --text:#000000; --text2:#1a1a1a;
+    --rand:#000000; --g300:#000000; --g200:#000000; --g100:#f4f4f4; --g500:#1a1a1a; --g600:#000000;
+    --ink900:#000000; --ink700:#000000;
+    --gelb:#9a6b00; --gelb-hover:#7a5400; --gelb-wash:#fff2c2; --gelb-soft:#ffe08a;
+    --gruen:#0a6b2e; --rot:#a30000; --orange:#7a5400; --info:#00408a;
+    --sidebar-bg:#000000; --sidebar-text:#ffffff; --sidebar-active:#333333;
+    --schatten:0 0 0 1.5px #000;
+  }
+  html[data-theme="kontrast"] .opt, html[data-theme="kontrast"] .panel, html[data-theme="kontrast"] .tag { border-width:2px; }
+  * { box-sizing:border-box; }
+  /* Wer im Betriebssystem weniger Bewegung eingestellt hat, bekommt sie hier auch nicht.
+     Vorher war das nirgends beruecksichtigt (0 Vorkommen von prefers-reduced-motion). */
+  @media (prefers-reduced-motion: reduce) {
+    :root { --dauer:0ms; }
+    *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important;
+      transition-duration:.01ms !important; scroll-behavior:auto !important; }
+  }
+  body { margin:0; font-family:var(--f-text); font-weight:400; background:var(--bg); color:var(--text); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .kicker { font-family:var(--f-mono); font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--g500); }
+
+  /* ===== Layout-Shell: Sidebar + Content + Actionbar ===== */
+  .app { display:grid; grid-template-columns:248px 1fr; min-height:100vh; }
+  .sidebar { grid-column:1; background:var(--sidebar-bg); color:var(--sidebar-text); display:flex; flex-direction:column; gap:var(--s0); padding:var(--s8) var(--s6); position:sticky; top:0; height:100vh; overflow-y:auto; }
+  .brand { display:flex; align-items:center; gap:var(--s4); padding:var(--s0) var(--s3) var(--s7); }
+  .brand svg { width:30px; height:30px; flex:none; }
+  .brand .wm { font-family:var(--f-display); font-weight:600; font-size:1.15rem; letter-spacing:-.02em; color:#fff; }
+  .brand .wm small { display:block; font-family:var(--f-mono); font-size:.56rem; letter-spacing:.16em; text-transform:uppercase; color:var(--g500); font-weight:400; margin-top:1px; }
+  .sidebar .rule { height:1px; background:rgba(255,255,255,.08); margin:var(--s3) var(--s1) var(--s5); }
+  .nav-item { display:flex; align-items:center; justify-content:space-between; gap:var(--s3); background:transparent; color:var(--sidebar-text); border:none; border-radius:var(--r2); padding:var(--s4) var(--s5); cursor:pointer; font-family:var(--f-text); font-size:.92rem; font-weight:500; text-align:left; width:100%; box-shadow:inset 0 0 0 var(--gelb); transition:background var(--dauer) var(--kurve); }
+  .nav-item:hover { background:var(--sidebar-active); color:#fff; }
+  .nav-item.aktiv { background:var(--sidebar-active); color:#fff; font-weight:600; box-shadow:inset 6px 0 0 var(--gelb); padding-left:var(--s6); }
+  .nav-item .zbadge { font-family:var(--f-mono); font-size:.66rem; background:var(--gelb); color:var(--ink900); border-radius:var(--r3); padding:1px var(--s3); font-weight:600; }
+  .sidebar .spacer { flex:1; }
+  .side-chip { font-family:var(--f-mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--sidebar-text); padding:var(--s2) var(--s4); display:flex; align-items:center; gap:var(--s3); }
+  .side-chip b { color:var(--gelb); font-weight:600; }
+  .side-theme { margin-top:var(--s2); background:transparent; color:var(--sidebar-text); border:1px solid rgba(255,255,255,.14); border-radius:var(--r2); padding:var(--s3) var(--s5); cursor:pointer; font-family:var(--f-mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; }
+  .side-theme:hover { border-color:var(--gelb); color:#fff; }
+
+  .content { grid-column:2; display:flex; flex-direction:column; min-height:100vh; }
+  .workspace { flex:1; padding:var(--s9) var(--s10) var(--s10); max-width:1160px; width:100%; }
+  .actionbar { position:sticky; bottom:0; display:none; align-items:center; justify-content:flex-end; gap:var(--s6); background:var(--panel); border-top:1px solid var(--rand); padding:var(--s6) var(--s10); box-shadow:0 -3px 14px rgba(21,23,28,.05); }
+  .actionbar .fusshinweis { margin-right:auto; }
+
+  /* ===== Karten & Typo ===== */
+  .panel { background:var(--panel); border:1px solid var(--rand); border-radius:var(--r3); padding:var(--s8) var(--s9); margin-bottom:var(--s8); box-shadow:var(--schatten); }
+  h1,h2,h3 { font-family:var(--f-display); color:var(--ink900); letter-spacing:-.02em; }
+  h2 { margin:0 0 var(--s6); font-size:1.18rem; font-weight:600; padding-bottom:var(--s3); position:relative; border-bottom:2px solid var(--g200); }
+  h2::after { content:""; position:absolute; left:0; bottom:-2px; width:38px; height:2px; background:var(--gelb); }
+  h3 { margin:var(--s7) 0 var(--s3); font-size:1rem; font-weight:600; }
+  button.b { background:var(--ink700); color:#fff; border:none; border-radius:var(--r2); padding:var(--s4) var(--s8); font-family:var(--f-text); font-weight:600; font-size:.92rem; cursor:pointer; transition:filter var(--dauer) var(--kurve),background var(--dauer) var(--kurve); }
+  html[data-theme="dark"] button.b { background:var(--g600); color:#fff; }
+  button.b:hover { filter:brightness(1.12); }
+  button.b.gelb { background:var(--gelb); color:var(--ink900); font-weight:700; }
+  button.b.gelb:hover { background:var(--gelb-hover); filter:none; }
+  button.b.leise { background:transparent; color:var(--text); border:1px solid var(--rand); }
+  button.b.leise:hover { border-color:var(--gelb); filter:none; }
+  button.b:disabled { opacity:.4; cursor:default; filter:none; }
+  /* FB-R1.8 / E3: „Frage melden" sieht jetzt aus wie ein Knopf statt wie eine graue Hinweiszeile.
+     Es bleibt ein <summary> (aufklappbares <details>), damit die Tastatur- und Screenreader-
+     Semantik unveraendert bleibt – nur die Optik wechselt. */
+  summary.melden-btn { display:inline-block; list-style:none; background:transparent; color:var(--text);
+    border:1px solid var(--rand); border-radius:var(--r2); padding:var(--s3) var(--s6); font-family:var(--f-text);
+    font-weight:600; font-size:.88rem; cursor:pointer; }
+  summary.melden-btn::-webkit-details-marker { display:none; }
+  summary.melden-btn:hover { border-color:var(--gelb); }
+  details.melden[open] > summary.melden-btn { border-color:var(--gelb); }
+  .frage-text { font-size:1.02rem; line-height:1.6; white-space:pre-wrap; color:var(--text); }
+
+  /* ===== Split-Workspace ===== */
+  .split { display:grid; grid-template-columns:1fr 1fr; gap:var(--s8); align-items:start; }
+  .split .aufgabe, .split .loeser { margin-bottom:0; }
+  .split .aufgabe { border-top:none; }
+  .split .loeser { background:var(--g100); }
+  @media (max-width:860px){ .split { grid-template-columns:1fr; } }
+
+  .opt { display:block; width:100%; text-align:left; margin:var(--s3) 0; padding:var(--s5) var(--s6); border-radius:var(--r2);
+         border:1px solid var(--g300); background:var(--panel); color:var(--text); font-family:var(--f-text); font-size:.96rem; cursor:pointer; transition:border-color var(--dauer) var(--kurve),background var(--dauer) var(--kurve); }
+  .opt:hover { border-color:var(--gelb); }
+  .opt.richtig { border-color:var(--gruen); border-width:2px; background:rgba(46,125,85,.10); }
+  .opt.falsch { border-color:var(--rot); border-width:2px; background:rgba(190,65,59,.10); }
+  .opt.gewaehlt { border-color:var(--gelb); border-width:2px; background:var(--gelb-wash); }
+  .luecke { border:none; border-bottom:2px solid var(--gelb); background:transparent; color:var(--text);
+            font-family:var(--f-mono); font-size:.95rem; width:130px; padding:var(--s0) var(--s2); text-align:center; }
+  .fb { border-radius:var(--r2); padding:var(--s5) var(--s6); margin-top:var(--s5); font-size:.95rem; }
+  .fb.ok { background:rgba(46,125,85,.10); border:1px solid var(--gruen); }
+  .fb.nein { background:rgba(190,65,59,.09); border:1px solid var(--rot); }
+  /* Klausurmodus (2026-07-21, M09): waehrend einer laufenden Klausur darf keine Ergebnisfarbe
+     verraten, ob eine Antwort richtig oder falsch war (die Auswertung kommt erst am Ende der
+     Klausur). Setzt Rahmen/Hintergrund auf den unbeantworteten Grundzustand zurueck - nur die
+     eigene Auswahl (.gewaehlt/.kt-an, beide gelb) bleibt sichtbar. Deckt neben den beiden
+     Kern-Klassen (.opt.richtig/.falsch, .fb.ok/.nein) auch die typspezifischen Pendants ab, die
+     dieselbe Rolle fuer kreuztabelle (.kt-soll/.kt-fehlt/.kt-zuviel) und mtf (.mtf-soll/.mtf-ok/
+     .mtf-fehl) uebernehmen - sonst waeren diese beiden Fragetypen trotz verstecktem .fb-Kasten
+     weiterhin farblich verraeterisch. */
+  .klausur .opt.richtig, .klausur .opt.falsch { border-color:var(--g300); border-width:1px; background:var(--panel); }
+  .klausur .fb.ok, .klausur .fb.nein { background:var(--panel); border-color:var(--rand); }
+  .klausur .kt-box.kt-soll, .klausur .kt-box.kt-fehlt, .klausur .kt-box.kt-zuviel { background:transparent; border-color:var(--g300); color:var(--text); }
+  .klausur .mtf-btn.mtf-soll { color:inherit; border-color:var(--g300); }
+  .klausur .mtf-ok, .klausur .mtf-fehl { color:var(--text); }
+  body.farbsymbole .klausur .opt.richtig::after, body.farbsymbole .klausur .opt.falsch::after { content:""; }
+  .meta { color:var(--text2); font-size:.82rem; margin-bottom:var(--s5); display:flex; gap:var(--s3); flex-wrap:wrap; align-items:center; }
+  .tag { font-family:var(--f-mono); font-size:.64rem; letter-spacing:.1em; text-transform:uppercase; background:var(--g100); border:1px solid var(--rand); border-radius:var(--r1); padding:var(--s1) var(--s3); color:var(--g600); }
+  .tag.ap2 { border-color:var(--gelb); color:var(--gelb-hover); background:var(--gelb-wash); }
+  .bananen { font-family:var(--f-mono); letter-spacing:2px; color:var(--gelb-hover); }
+  .zeile { display:flex; gap:var(--s5); flex-wrap:wrap; align-items:center; }
+  .karten { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:var(--s6); }
+  .menu-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(205px,1fr)); gap:var(--s5); margin-bottom:var(--s8); }
+  .tile { position:relative; background:var(--panel); border:1px solid var(--rand); border-radius:var(--r3); padding:var(--s7) var(--s7) var(--s6); cursor:pointer; text-align:left; box-shadow:var(--schatten); transition:border-color var(--dauer) var(--kurve), transform var(--dauer) var(--kurve); font-family:var(--f-text); color:var(--text); }
+  .tile:hover { border-color:var(--gelb); transform:translateY(-1px); }
+  .tile .t-titel { font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink900); margin:0 0 var(--s1); display:flex; align-items:center; gap:var(--s3); }
+  .tile .t-sub { font-size:.8rem; color:var(--text2); line-height:1.4; }
+  .tile .zbadge { position:absolute; top:12px; right:12px; font-family:var(--f-mono); font-size:.68rem; background:var(--gelb); color:var(--ink900); border-radius:var(--r3); padding:1px var(--s3); font-weight:600; }
+  .tile.hero { background:var(--gelb-wash); border-color:var(--gelb); }
+  .stat-mini { display:flex; gap:var(--s8); flex-wrap:wrap; align-items:center; font-size:.86rem; color:var(--text2); }
+  .stat-mini b { font-family:var(--f-mono); color:var(--ink900); font-size:.95rem; }
+  /* Interaktiver Netzplan */
+  .np-scroll { overflow-x:auto; }
+  .np-wrap { position:relative; width:760px; height:330px; margin:var(--s2) 0; }
+  .np-wrap svg.np-kanten { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+  .np-knoten { position:absolute; width:158px; background:var(--panel); border:2px solid var(--info); border-radius:var(--r3); padding:var(--s2) var(--s3) var(--s3); box-shadow:var(--schatten); }
+  .np-knoten.kritisch-zeig { border-color:var(--orange); }
+  .np-titel { font-family:var(--f-mono); font-size:.72rem; font-weight:600; color:var(--ink900); margin-bottom:var(--s0); }
+  .np-name { font-size:.66rem; color:var(--text2); line-height:1.25; margin-bottom:var(--s2); min-height:2em; }
+  /* FB-R3.3: drei Spalten statt zwei – der Knoten folgt jetzt dem Pool-Schema
+     (oben FAZ | Dauer | FEZ, unten SAZ | GP | SEZ). Beide Reihen nutzen .np-grid. */
+  .np-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:var(--s1); }
+  .np-oben { margin-bottom:var(--s1); }
+  .np-dauer { display:flex; align-items:center; justify-content:center; border:1px solid var(--g300);
+    border-radius:var(--r1); padding:var(--s1) var(--s1); font-family:var(--f-mono); font-size:.72rem; font-weight:600;
+    background:var(--g100); color:var(--ink900); }
+  .np-grid input { width:100%; box-sizing:border-box; border:1px solid var(--g300); border-radius:var(--r1); padding:var(--s1) var(--s1); font-family:var(--f-mono); font-size:.72rem; text-align:center; background:var(--panel); color:var(--text); }
+  .np-grid input::placeholder { color:var(--g500); font-size:.62rem; letter-spacing:.04em; }
+  .np-grid input.ok { border-color:var(--gruen); background:rgba(46,125,85,.10); }
+  .np-grid input.nein { border-color:var(--rot); background:rgba(190,65,59,.10); }
+  .karte { background:var(--panel); border:1px solid var(--rand); border-radius:var(--r3); padding:var(--s7); text-align:center; box-shadow:var(--schatten); }
+  .karte .gross { font-family:var(--f-display); font-size:1.7rem; font-weight:700; color:var(--ink900); letter-spacing:-.02em; }
+  .balken { height:8px; background:var(--g200); border-radius:var(--r1); overflow:hidden; margin-top:var(--s2); }
+  .balken > div { height:100%; background:var(--gelb); }
+  .zu-item { display:inline-block; margin:var(--s1); padding:var(--s4) var(--s6); border-radius:var(--r2); border:1px solid var(--g300); cursor:pointer; background:var(--panel); font-size:.92rem; }
+  .zu-item.gewaehlt { border-color:var(--gelb); border-width:2px; background:var(--gelb-wash); }
+  .zu-item.verbunden { border-style:dashed; opacity:.85; }
+  .zu-paar { margin:var(--s1) 0; padding:var(--s3) var(--s5); border-radius:var(--r2); background:var(--panel); border:1px solid var(--rand); cursor:pointer; font-size:.9rem; }
+  .simgrid { display:flex; flex-wrap:wrap; gap:var(--s2); margin:var(--s4) 0; }
+  .simgrid button { width:38px; height:34px; border-radius:var(--r2); border:1px solid var(--g300); background:var(--panel); color:var(--text); cursor:pointer; font-family:var(--f-mono); font-size:.8rem; }
+  .simgrid button.beantwortet { background:var(--gelb-wash); border-color:var(--gelb); }
+  .simgrid button.markiert { border-color:var(--orange); border-width:2px; }
+  .simgrid button.aktuell { outline:2px solid var(--ink900); outline-offset:1px; }
+  .timer { font-family:var(--f-mono); font-size:1.3rem; font-weight:600; color:var(--ink900); }
+  .timer.warn { color:var(--rot); }
+  textarea { width:100%; min-height:90px; border:1px solid var(--rand); border-radius:var(--r2); padding:var(--s4); background:var(--panel); color:var(--text); font-family:var(--f-text); font-size:.95rem; }
+  details.lang { margin-top:var(--s4); } details.lang summary { cursor:pointer; color:var(--gelb-hover); font-weight:600; font-size:.9rem; }
+  details.diagnose { margin-top:var(--s3); } details.diagnose summary { cursor:pointer; color:var(--rot); font-weight:600; font-size:.82rem; }
+  details.diagnose ul { margin:var(--s1) 0 0 var(--s8); padding:0; } details.diagnose li { margin:var(--s1) 0; }
+  .fehlerbanner { background:rgba(190,65,59,.08); border:1px solid var(--rot); border-radius:var(--r2); padding:var(--s4) var(--s6); margin-bottom:var(--s7); font-size:.9rem; }
+  /* R2: fixierter LocalStorage-Fehler-Banner (oben, ueber allen Seiten; deckender Hintergrund statt rgba) */
+  .lsbanner { position:fixed; top:0; left:0; right:0; z-index:1200; margin:0; border-radius:0; text-align:center; background:var(--rot); color:#fff; }
+  /* G1.6 #11: PWA-Update-Hinweis – unten fixiert, damit er den LS-Fehlerbanner oben nicht verdeckt. */
+  .pwabanner { position:fixed; bottom:0; left:0; right:0; z-index:1190; margin:0; padding:var(--s3) var(--s5); text-align:center;
+               background:var(--gelb); color:var(--ink900); font-size:.92rem; }
+  .svgbox { margin:var(--s4) 0; overflow-x:auto; background:#fff; border:1px solid var(--rand); border-radius:var(--r2); padding:var(--s3); }
+  html[data-theme="dark"] .svgbox { background:#eef1f5; }
+  label.check { display:inline-flex; align-items:center; gap:var(--s2); margin:var(--s1) var(--s4) var(--s1) 0; cursor:pointer; font-size:.92rem; }
+  .ring { width:86px; height:86px; border-radius:50%; margin:0 auto var(--s3);
+          display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.05rem; color:var(--ink900);
+          background:conic-gradient(var(--gelb) calc(var(--p)*1%), var(--g200) 0); }
+  .ring > span { background:var(--panel); border-radius:50%; width:64px; height:64px; display:flex; align-items:center; justify-content:center; font-family:var(--f-mono); font-size:.85rem; }
+  .hinweis { font-size:.85rem; color:var(--text2); line-height:1.5; }
+  .spick-table { border-collapse:collapse; width:100%; margin:var(--s3) 0; font-size:.86rem; }
+  /* ⚠️ 2026-07-30: derselbe Dark-Theme-Fehler wie bei .kt-tabelle th.kt-spalte – siehe dort. */
+  .spick-table th { background:var(--ink900); color:var(--bg); text-align:left; padding:var(--s2) var(--s4); }
+  .spick-table td { border:1px solid var(--rand); padding:var(--s2) var(--s4); vertical-align:top; }
+  .spick code, .frage-text code { font-family:var(--f-mono); font-size:.86em; background:var(--g100); padding:1px var(--s2); border-radius:var(--r1); }
+  .spick h3, .spick h4 { color:var(--ink900); margin:var(--s6) 0 var(--s2); }
+  .spick ul { margin:var(--s2) 0; padding-left:var(--s8); } .spick li { margin:var(--s1) 0; }
+  .spick p { margin:var(--s3) 0; }
+  input[type=number], input[type=date], select { padding:var(--s3); border-radius:var(--r2); border:1px solid var(--rand); background:var(--panel); color:var(--text); font-family:var(--f-text); }
+  .trend { display:flex; align-items:flex-end; gap:var(--s2); height:80px; margin-top:var(--s3); }
+  .trend > div { width:26px; background:var(--gelb); border-radius:var(--r1) var(--r1) 0 0; position:relative; }
+  .trend > div span { position:absolute; top:-20px; left:50%; transform:translateX(-50%); font-size:.72rem; color:var(--text2); font-family:var(--f-mono); }
+  @media (max-width:640px){
+    .app { grid-template-columns:1fr; }
+    .sidebar { position:sticky; top:0; z-index:20; height:auto; flex-direction:row; flex-wrap:nowrap; align-items:center; gap:var(--s2); overflow-x:auto; padding:var(--s3) var(--s4); }
+    .brand { padding:0 var(--s3) 0 var(--s0); flex:none; } .brand .wm small { display:none; }
+    .sidebar .rule { display:none; } .sidebar .spacer { display:none; }
+    .sidebar nav { display:flex; flex-direction:row; gap:var(--s1); }
+    .nav-item { white-space:nowrap; padding:var(--s3) var(--s5); width:auto; }
+    .nav-item.aktiv { box-shadow:inset 0 -3px 0 var(--gelb); padding-left:var(--s5); }
+    .side-chip { display:none; } .side-theme { padding:var(--s2) var(--s4); }
+    .workspace { padding:var(--s6); } .panel { padding:var(--s7) var(--s7); }
+    .split { grid-template-columns:1fr; gap:var(--s5); }
+    .actionbar { padding:var(--s5) var(--s6); } .actionbar .fusshinweis { display:none; }
+    .karten { grid-template-columns:1fr 1fr; }
+    h2 { font-size:1.08rem; } .frage-text { font-size:1rem; }
+  }
+  @media (max-width:380px){ .karten { grid-template-columns:1fr; } .nav-item span:first-child { font-size:.86rem; } }
+
+  /* #47 SVG-Zoom */
+  .svgbox { position:relative; }
+  .svgbox .zoombtn { position:absolute; top:6px; right:6px; width:30px; height:30px; padding:0; border:1px solid var(--rand); border-radius:var(--r2); background:var(--panel); color:var(--text); font-size:1rem; line-height:1; cursor:pointer; opacity:.8; z-index:2; }
+  .svgbox .zoombtn:hover { opacity:1; }
+  /* FB-R1.4: Tap/Klick aufs Bild zoomt (ausser hotspot, dort fehlt die Klasse .tapzoom). */
+  .svgbox.tapzoom { cursor:zoom-in; }
+  /* FB-R1.6: aufklappbare Statistik-Panels. Die Kopfzeile soll wie die bisherige <h2>-Ueberschrift
+     im Panel aussehen, nur mit Aufklapp-Pfeil und Zeigefinger. */
+  details.stat-panel > summary.panel-kopf { list-style:none; cursor:pointer; font-family:var(--f-display);
+    font-weight:600; font-size:1.05rem; color:var(--ink900); padding:var(--s0) 0; }
+  details.stat-panel > summary.panel-kopf::-webkit-details-marker { display:none; }
+  details.stat-panel > summary.panel-kopf::before { content:"▸ "; color:var(--text2); }
+  details.stat-panel[open] > summary.panel-kopf::before { content:"▾ "; }
+  .zoomoverlay { position:fixed; inset:0; background:rgba(0,0,0,.8); display:flex; align-items:center; justify-content:center; z-index:999; }
+  .zoomoverlay .zoominner { max-width:92vw; max-height:92vh; display:flex; }
+  .zoomoverlay .zoominner svg { max-width:92vw; max-height:92vh; width:auto; height:auto; }
+  .zoomoverlay .zoomclose { position:fixed; top:14px; right:16px; width:40px; height:40px; border:1px solid #888; border-radius:var(--r2); background:rgba(0,0,0,.5); color:#fff; font-size:1.2rem; line-height:1; cursor:pointer; z-index:1000; }
+
+  /* #55 Fokus-/Konzentrationsmodus: Seitenleiste + Chrome ausblenden, Aufgabe zentrieren */
+  .fokus-exit { position:fixed; top:14px; right:16px; z-index:60; display:none; box-shadow:0 2px 10px rgba(0,0,0,.18); }
+  body.fokus .sidebar { display:none; }
+  body.fokus .app { grid-template-columns:1fr; }
+  body.fokus .content { grid-column:1; }
+  body.fokus .workspace { max-width:1000px; margin:0 auto; padding-top:52px; /* bewusste Ausnahme, kein Skalenwert: der Fokus-Modus setzt den Inhalt tiefer */ }
+  body.fokus .actionbar .fusshinweis { display:none; }
+  body.fokus .zbadge { display:none; }
+  body.fokus .fokus-exit { display:inline-flex; }
+
+/* R10 (c) Globaler Fokus-Ring für Tastaturbedienung (Buttons, .opt, .zu-item, input, select,
+   summary und via chipTastatur fokussierbare Chips/Slots/Zonen erben das automatisch) */
+:focus-visible { outline:2px solid var(--gelb); outline-offset:2px; }
+
+/* #53 Tooltip-Glossar: Begriffs-Markierung im Fragetext + Popover */
+.glossar-term { border-bottom:1px dotted var(--gelb); cursor:help; }
+.glossar-term:focus { outline:2px solid var(--gelb); outline-offset:2px; }
+.glossar-pop { position:absolute; z-index:9999; max-width:280px; padding:var(--s3) var(--s4); font-size:.86rem; line-height:1.35; color:var(--text); background:var(--panel); border:1px solid var(--rand); border-radius:var(--r2); box-shadow:0 6px 20px rgba(0,0,0,.28); }
+.glossar-pop b { color:var(--ink900); }
+
+/* #64 Farbenblind-freundlich: ✓/✗ zusätzlich zur Farbe (nur bei body.farbsymbole) */
+body.farbsymbole .opt.richtig::after { content:" ✓"; font-weight:700; color:var(--gruen); }
+body.farbsymbole .opt.falsch::after { content:" ✗"; font-weight:700; color:var(--rot); }
+body.farbsymbole .fb.ok b::before { content:"✓ "; }
+body.farbsymbole .fb.nein b::before { content:"✗ "; }
+
+/* #66 Onboarding-Tour Overlay + #67 Kontext-Hilfe je Aufgabentyp */
+.onb-overlay { position:fixed; inset:0; background:rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; z-index:1000; padding:var(--s8); }
+.onb-card { background:var(--panel); border:1px solid var(--rand); border-radius:var(--r4); padding:var(--s8) var(--s9); max-width:440px; width:100%; box-shadow:0 10px 40px rgba(0,0,0,.35); }
+.typ-hilfe { background:rgba(244,194,13,.08); border:1px solid var(--gelb); border-radius:var(--r2); padding:var(--s4) var(--s5); margin:var(--s3) 0; font-size:.9rem; }
+
+/* === T2 Utility-Klassen (#84) BEGIN === */
+.u-align-items-center{align-items:center}
+.u-align-items-stretch{align-items:stretch}
+.u-align-self-center{align-self:center}
+.u-border-1px-solid-var-rot{border:1px solid var(--rot)}
+.u-border-left-3px-solid-transparent{border-left:3px solid transparent}
+.u-border-left-4px-solid-var-gelb{border-left:4px solid var(--gelb)}
+.u-border-none{border:none}
+.u-color-var-gelb-hover{color:var(--gelb-hover)}
+.u-color-var-ink900{color:var(--ink900)}
+.u-cursor-pointer{cursor:pointer}
+.u-display-block{display:block}
+.u-display-flex{display:flex}
+.u-display-grid{display:grid}
+.u-flex-1{flex:1}
+.u-flex-wrap-wrap{flex-wrap:wrap}
+.u-font-family-var-f-display{font-family:var(--f-display)}
+.u-font-size-1-05rem{font-size:1.05rem}
+.u-font-size-86rem{font-size:.86rem}
+.u-font-size-8rem{font-size:.8rem}
+.u-font-size-92rem{font-size:.92rem}
+.u-font-size-9rem{font-size:.9rem}
+.u-font-weight-600{font-weight:600}
+.u-gap-10px{gap:var(--s4)}
+.u-gap-5px{gap:5px}
+.u-gap-6px{gap:var(--s2)}
+.u-gap-8px{gap:var(--s3)}
+.u-grid-template-columns-1fr-1fr{grid-template-columns:1fr 1fr}
+.u-grid-template-rows-1fr-1fr{grid-template-rows:1fr 1fr}
+.u-justify-content-flex-end{justify-content:flex-end}
+.u-justify-content-space-between{justify-content:space-between}
+.u-margin-0{margin:0}
+.u-margin-0-4px{margin:0 var(--s1)}
+.u-margin-2px-0-6px{margin:var(--s0) 0 var(--s2)}
+.u-margin-2px-0-8px{margin:var(--s0) 0 var(--s3)}
+.u-margin-4px-0-4px{margin:var(--s1) 0 var(--s1)}
+.u-margin-5px-0{margin:5px 0}
+.u-margin-6px-0{margin:var(--s2) 0}
+.u-margin-8px-0{margin:var(--s3) 0}
+.u-margin-8px-0-4px{margin:var(--s3) 0 var(--s1)}
+.u-margin-9px-0{margin:9px 0}
+.u-margin-bottom-10px{margin-bottom:var(--s4)}
+.u-margin-bottom-12px{margin-bottom:var(--s5)}
+.u-margin-bottom-2px{margin-bottom:var(--s0)}
+.u-margin-bottom-3px{margin-bottom:3px}
+.u-margin-bottom-4px{margin-bottom:var(--s1)}
+.u-margin-bottom-6px{margin-bottom:var(--s2)}
+.u-margin-bottom-8px{margin-bottom:var(--s3)}
+.u-margin-left-10px{margin-left:var(--s4)}
+.u-margin-left-8px{margin-left:var(--s3)}
+.u-margin-left-auto{margin-left:auto}
+.u-margin-top-10px{margin-top:var(--s4)}
+.u-margin-top-12px{margin-top:var(--s5)}
+.u-margin-top-14px{margin-top:var(--s6)}
+.u-margin-top-2px{margin-top:var(--s0)}
+.u-margin-top-4px{margin-top:var(--s1)}
+.u-margin-top-6px{margin-top:var(--s2)}
+.u-margin-top-8px{margin-top:var(--s3)}
+.u-max-width-430px{max-width:430px}
+.u-min-height-48px{min-height:48px}
+.u-min-height-60px{min-height:60px}
+.u-opacity-3{opacity:.3}
+.u-padding-5px-10px{padding:5px 10px}
+.u-text-align-center{text-align:center}
+.u-transform-rotate-180deg{transform:rotate(180deg)}
+.u-white-space-pre{white-space:pre}
+.u-white-space-pre-wrap{white-space:pre-wrap}
+.u-writing-mode-vertical-rl{writing-mode:vertical-rl}
+/* === T2 Utility-Klassen (#84) END === */
+/* #101 mtf (Multiple-True-False) */
+.mtf-zeile{display:flex;align-items:flex-start;gap:var(--s4);margin:var(--s3) 0}
+.mtf-wahl{display:flex;gap:var(--s2);flex:0 0 auto}
+.mtf-btn{padding:var(--s0) var(--s5)}
+.mtf-btn.aktiv{outline:2px solid var(--gelb);outline-offset:1px}
+.mtf-btn.mtf-soll{color:var(--gruen);border-color:var(--gruen)}
+.mtf-text{flex:1}
+.mtf-ok{color:var(--gruen)}
+.mtf-fehl{color:var(--rot)}
+/* #103 kreuztabelle (Raster ankreuzen) */
+.kt-tabelle{border-collapse:collapse;margin:var(--s3) 0;font-size:.86rem}
+.kt-tabelle th,.kt-tabelle td{border:1px solid var(--rand);padding:var(--s2) var(--s3)}
+.kt-tabelle th.kt-ecke{background:transparent;border:none}
+/* ⚠️ 2026-07-30 NUTZER-BEFUND: Im Dark-Theme war der Spaltenkopf WEISS AUF FAST-WEISS und damit
+   unlesbar. Ursache: `color:#fff` war hart verdrahtet, `--ink900` kippt aber je Theme – light
+   #15171C (dunkel), dark #F0F2F5 (fast weiss), sepia #33291A, kontrast #000000. Nur im Dark-Theme
+   trafen sich beide.
+   ►► `var(--bg)` ist das GEGENSTUECK zu `--ink900`: Wo ink900 dunkel ist, ist bg hell und
+   umgekehrt. Kontrast in allen vier Themes >= 16:1. Dieselbe Zeile hatte `.spick-table th`. */
+.kt-tabelle th.kt-spalte{background:var(--ink900);color:var(--bg);text-align:center;vertical-align:bottom}
+.kt-tabelle th.kt-zeile{background:var(--g100);color:var(--text);text-align:left;font-weight:600}
+.kt-zelle{text-align:center}
+.kt-box{width:30px;height:30px;padding:0;line-height:1;font-weight:700}
+.kt-box.kt-an{outline:2px solid var(--gelb);outline-offset:1px;color:var(--gelb-hover)}
+.kt-box.kt-soll{border-color:var(--gruen)}
+.kt-box.kt-fehlt{background:rgba(46,125,85,.14);border-color:var(--gruen)}
+.kt-box.kt-zuviel{background:rgba(190,65,59,.14);border-color:var(--rot);color:var(--rot)}
+
+/* #50 szenario2 (2-Schritt-Entscheidungen) */
+.sz-schritt{margin:var(--s5) 0 var(--s1);font-weight:700;color:var(--text2);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+.sz-frage{margin:var(--s0) 0 var(--s2);font-weight:600}
+.sz-konsequenz{margin:var(--s3) 0;padding:var(--s3) var(--s4);border-left:3px solid var(--gelb);background:var(--g100);border-radius:var(--r1);font-size:.9rem}
+.sz-box2{margin-top:var(--s2)}
+
+/* FB-R1.7 Wisch-Leiste (#54): nur auf Touch-Geraeten sichtbar. Sie kuendigt eine Wisch-Geste an,
+   die es am Desktop nicht gibt. Sie bleibt im DOM, damit die Handler und test_swipe unberuehrt
+   bleiben – ausgeblendet wird ausschliesslich hier. */
+.wischleiste{ display:none; justify-content:space-between; align-items:center; gap:var(--s3);
+  margin-top:var(--s5); padding:var(--s4) var(--s6); border:1px dashed currentColor; border-radius:var(--r3);
+  opacity:.5; font-size:.8rem; touch-action:pan-y; user-select:none; }
+@media (pointer:coarse){ .wischleiste{ display:flex; } }
+
+/* F3 Mobil-Feinschliff: Touch-Ziele >=44px NUR auf Touch-Geraeten (coarse pointer).
+   Desktop-Optik bleibt exakt unveraendert. chipTastatur setzt role="button" auf alle
+   Chips/Slots/Zonen -> Sammelselektor [role="button"] (SVG-Zonen via :not(rect) ausgenommen,
+   da min-height auf SVG-rect ohnehin wirkungslos). Inline-min-height der Drop-Slots wird per
+   !important angehoben. */
+@media (pointer:coarse){
+  button.b, .nav-item, .side-theme, .opt,
+  .mtf-btn, .kt-box, summary.melden-btn, summary.panel-kopf,
+  .ap-seg-btn, .themen-kachel, details.platzhalter > summary, .geb-toggle,
+  .svgbox .zoombtn, .zoomoverlay .zoomclose{ min-height:44px; }
+  /* inline-flex, damit der Melden-Knopf auch auf dem Handy Knopfbreite behaelt und nicht
+     ueber die ganze Zeile laeuft; die Panel-Kopfzeile soll dagegen volle Breite haben. */
+  summary.melden-btn{ display:inline-flex; align-items:center; }
+  summary.panel-kopf{ display:flex; align-items:center; }
+  /* Kompakte/Icon-Buttons auch horizontal auf 44px, Inhalt zentriert.
+     FB-R2b.1: .rechner-taste steht hier AUSDRUECKLICH mit drin, obwohl sie zusaetzlich
+     .b.leise traegt und darueber schon erfasst waere. Absicht: ein Ziffernblock mit
+     30-px-Tasten ist am Handy unbrauchbar, und die Abhaengigkeit von einer fremden
+     Klasse waere beim naechsten Umbau leicht zu uebersehen. */
+  .b.leise, .mtf-btn, .kt-box, .rechner-taste,
+  .svgbox .zoombtn, .zoomoverlay .zoomclose{
+    min-width:44px; display:inline-flex; align-items:center; justify-content:center;
+  }
+  /* Antwort-Optionen: Inhalt vertikal mittig statt oben */
+  .opt{ display:flex; align-items:center; }
+  /* Alle tastatur-/tap-baren Chips, Slots, Zonen, Matrixzellen, Fehlersuche-Zeilen */
+  [role="button"]:not(rect){ min-height:44px !important; }
+}
+
+/* ===== FB-R3 Punkt 6: AP1/AP2-Themenauswahl (Üben) =====
+   Klarer Prüfungsteil-Schnitt: Segment-Umschalter, zwei Sektionen (AP1/AP2) mit 3-Spalten-Raster
+   am Desktop, 1 Spalte am Handy. Nutzt ausschließlich vorhandene Farb-Tokens (kein neuer Token in
+   den vier Theme-Bloecken) – aktiver Zustand ueber --text/--panel-Invertierung bzw. --info-Rahmen. */
+.ap-seg{ display:inline-flex; margin-bottom:var(--s5); border:1px solid var(--rand); border-radius:var(--r2); overflow:hidden; }
+.ap-seg-btn{ border:0; border-right:1px solid var(--rand); background:var(--panel); color:var(--text); font:inherit; padding:var(--s3) var(--s7); cursor:pointer; }
+.ap-seg-btn:last-child{ border-right:0; }
+.ap-seg-btn.aktiv{ background:var(--text); color:var(--panel); }
+.ap-sektion{ margin:var(--s3) 0 var(--s1); }
+.ap-sektion.aus{ opacity:.5; }
+.ap-kopf{ font-family:var(--f-display); font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; color:var(--text2); margin:var(--s3) 0 var(--s2); display:flex; align-items:center; gap:var(--s3); }
+.themen-grid{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:var(--s3); }
+@media (max-width:640px){ .themen-grid{ grid-template-columns:1fr; } }
+.themen-kachel{ display:flex; align-items:center; gap:var(--s3); margin:0; padding:var(--s4) var(--s5); border:1px solid var(--rand); border-radius:var(--r2); background:var(--panel); cursor:pointer; font-size:.9rem; }
+.themen-kachel input{ flex:none; margin:0; }
+.themen-kachel.aktiv{ border-color:var(--info); background:var(--g100); }
+.themen-kachel .hinweis{ font-size:.78rem; }
+.wi-chip{ grid-column:1 / -1; }
+details.platzhalter{ display:block; }
+details.platzhalter > summary{ list-style:none; cursor:pointer; display:flex; align-items:center; gap:var(--s3); }
+details.platzhalter > summary::-webkit-details-marker{ display:none; }
+details.platzhalter > summary::before{ content:"▸ "; color:var(--text2); }
+details.platzhalter[open] > summary::before{ content:"▾ "; }
+.platzhalter .bald{ font-family:var(--f-mono); font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; background:var(--gelb-wash); color:var(--gelb-hover); border:1px solid var(--gelb); border-radius:var(--r1); padding:var(--s0) var(--s2); }
+.platzhalter ul{ margin:var(--s2) 0 0; padding-left:var(--s8); font-size:.8rem; color:var(--text2); }
+.platzhalter ul li{ margin:var(--s1) 0; }
+
+/* ===== FB-R3 Etappe 2: Themenauswahl nach Prüfungsordnung (Gebiete, Üben) =====
+   Jedes Gebiet ist ein Block: Kopfzeile mit „ganzes Gebiet"-Häkchen (volle Breite) + Aufklapp-Knopf,
+   darunter die Feinthemen als 3-Spalten-Raster (1 Spalte am Handy, via .themen-grid geerbt). */
+.gebiet-block{ margin:var(--s2) 0; }
+.gebiet-kopf{ display:flex; align-items:center; gap:var(--s3); }
+.gebiet-kopf .geb-alle{ flex:1 1 auto; }
+.geb-toggle{ flex:none; white-space:nowrap; }
+.geb-feinthemen{ margin:var(--s2) 0 var(--s1) var(--s4); padding-left:var(--s4); border-left:2px solid var(--rand); }
+.geb-feinthemen[hidden]{ display:none; }
+.themen-kachel.fein{ font-size:.86rem; }
+.platzhalter-info{ margin:var(--s3) 0 var(--s0); }
+.platzhalter-info .pi-kopf{ display:flex; align-items:center; gap:var(--s3); }
+.platzhalter-info .bald{ font-family:var(--f-mono); font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; background:var(--gelb-wash); color:var(--gelb-hover); border:1px solid var(--gelb); border-radius:var(--r1); padding:var(--s0) var(--s2); }
+.platzhalter-info ul{ margin:var(--s2) 0 0; padding-left:var(--s8); font-size:.8rem; color:var(--text2); }
+.platzhalter-info ul li{ margin:var(--s1) 0; }
+
+/* ===== FB-R2b.2 Stufen-Vorschau (Statistik-Seite) =====
+   Die Matrix hat fuenf Spalten und wird am Handy zwangslaeufig breiter als der Bildschirm.
+   Statt sie zu quetschen (unlesbar) bekommt sie einen eigenen Scroll-Bereich – dasselbe
+   Mittel wie bei .np-scroll fuer die Netzplaene. */
+.stufen-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+/* ⚠️ 2026-07-30 NUTZER-BEFUND zu M09-007: "die darstellung der gesamten aufgabe ist verschoben und
+   rechts sogar aus dem bild". Ursache: Die Tabellen von trace, kalkulation und kreuztabelle standen
+   OHNE Scroll-Container im Fluss. Beim Schreibtischtest sind es vier Spalten mit je einem 74px
+   breiten Eingabefeld plus Rahmen und Innenabstand - auf einem schmalen Display sprengt das den
+   Container und schiebt das ganze Layout nach rechts.
+   `min-width:100%` statt `width:100%` an der Tabelle: Sie fuellt die Breite, wenn sie passt, und
+   scrollt nur dann, wenn sie es nicht tut. Dieselbe Mechanik wie .np-scroll und .stufen-scroll. */
+.tabelle-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; max-width:100%; }
+.tabelle-scroll > .spick-table{ width:auto; min-width:100%; }
+.stufen-tab{ min-width:560px; }
+.stufen-tab th{ vertical-align:top; }
+.stufen-bananen{ font-weight:400; opacity:.85; margin-top:var(--s0); }
+.stufen-typ{ font-weight:600; white-space:nowrap; }
+.stufen-leer{ color:var(--text2); text-align:center; }
+.stufen-bsp > summary{ cursor:pointer; font-size:.85rem; }
+.stufen-frage{ margin-top:var(--s2); font-size:.88rem; max-width:34em; }
+
+/* ===== FB-R2b.1 Taschenrechner + Notizfeld =====
+   Nur bei den Rechen-Typen eingeblendet (app_loeser.js). Das Tastenraster ist bewusst
+   ein GRID mit fester Spaltenzahl statt einem Flex-Umbruch: so stehen die Ziffern immer
+   untereinander an derselben Stelle, egal wie breit das Panel gerade ist.
+   KEINE Inline-Styles an den Tasten – sonst waere die 44px-Regel im pointer:coarse-Block
+   ausgehebelt (genau die Falle, die die Wisch-Leiste in R1.7 hatte). */
+.rechner-wrap{ padding:var(--s1) var(--s0) var(--s0); }
+/* Eigene Optik statt der Klasse .luecke – die gehoert den Antwortfeldern (siehe Kommentar
+   in app_util.js). Bewusst als Kasten und nicht als Unterstrich, damit man auf einen Blick
+   sieht: hier wird gerechnet, nicht geantwortet. */
+.rechner-anzeige{ width:100%; box-sizing:border-box; text-align:right;
+  font-family:var(--f-mono); font-size:1.1rem; padding:var(--s3) var(--s4); margin-bottom:var(--s4);
+  border:1px solid var(--rand); border-radius:var(--r2); background:var(--panel); color:var(--text); }
+.rechner-tasten{ display:grid; grid-template-columns:repeat(5, 1fr); gap:var(--s2); margin-bottom:var(--s4); }
+.rechner-taste{ font-family:var(--f-mono); }
+.rechner-ergebnis{ min-height:1.4em; font-family:var(--f-mono); font-weight:600;
+  text-align:right; padding:0 var(--s2); }
+.rechner-ergebnis.fehler{ color:var(--rot); font-weight:400; }
+.rechner-notiz-label{ display:block; font-weight:600; margin:var(--s4) 0 var(--s2); font-size:.9rem; }
+/* Die globale textarea-Regel (Rahmen, Hintergrund, Schrift, Themes) traegt schon alles –
+   hier nur die beiden Abweichungen, damit das Notizfeld im Panel nicht zu hoch startet. */
+.rechner-notiz{ min-height:70px; resize:vertical; }
+
+/* ===== #31 Schriftgroesse in drei Stufen =====
+   Das gesamte Design rechnet in rem, deshalb genuegt die Basisgroesse am <html>-Element:
+   Text, Abstaende und Bedienflaechen wachsen gemeinsam, das Layout bleibt stimmig.
+   Ohne Attribut (Default) bleibt es beim Browser-Standard – keine Aenderung fuer Bestandsnutzer. */
+html[data-schrift="gross"]    { font-size:112.5%; }   /* 16 -> 18 px */
+html[data-schrift="sehrgross"]{ font-size:125%; }     /* 16 -> 20 px */
+
+/* ===== #30 Print-CSS: Spickzettel und Statistik =====
+   Nutzer-Entscheid: nicht generisch fuer jede Seite, sondern gezielt fuer die beiden
+   Seiten, die man tatsaechlich aufs Papier bringt. Die aktuelle Route steht als
+   data-seite am <html>-Element (gesetzt in render()). "spickzettel" ist der AP1-Spickzettel,
+   "unterricht" traegt den M09-Spickzettel als eigenen Reiter. */
+@media print {
+  html[data-seite="spickzettel"],
+  html[data-seite="stat"],
+  html[data-seite="unterricht"] {
+    background:#fff;
+  }
+  html[data-seite="spickzettel"] body,
+  html[data-seite="stat"] body,
+  html[data-seite="unterricht"] body {
+    background:#fff; color:#000;
+  }
+  /* Bedienelemente gehoeren nicht aufs Papier */
+  html[data-seite="spickzettel"] .sidebar, html[data-seite="stat"] .sidebar, html[data-seite="unterricht"] .sidebar,
+  html[data-seite="spickzettel"] .kopf,    html[data-seite="stat"] .kopf,    html[data-seite="unterricht"] .kopf,
+  html[data-seite="spickzettel"] .aktion,  html[data-seite="stat"] .aktion,  html[data-seite="unterricht"] .aktion,
+  html[data-seite="spickzettel"] button,   html[data-seite="stat"] button,   html[data-seite="unterricht"] button,
+  html[data-seite="spickzettel"] input,    html[data-seite="stat"] input,    html[data-seite="unterricht"] input,
+  html[data-seite="spickzettel"] select,   html[data-seite="stat"] select,   html[data-seite="unterricht"] select,
+  html[data-seite="spickzettel"] .lsbanner,html[data-seite="stat"] .lsbanner,html[data-seite="unterricht"] .lsbanner {
+    display:none !important;
+  }
+  /* FB-R2b.2 (Nutzer-Entscheid 2026-07-21): Die Stufen-Vorschau kommt NICHT aufs Papier.
+     Grund: app_ui.js klappt im beforeprint-Ereignis ALLE <details> auf – die Matrix haette
+     damit 51 vollstaendige Beispielfragen mitgedruckt und den Statistik-Ausdruck von einer
+     kompakten Uebersicht (#30) in ein mehrseitiges Fragenheft verwandelt.
+     Der Selektor greift am Panel selbst, nicht an der Tabelle, damit auch die Kopfzeile
+     und der Hinweistext verschwinden.
+     BEWUSST ueber eine eigene Klasse `stufen-panel` und NICHT ueber `:has()` – der Selektor
+     muss auch in aelteren Browsern und in jsdom sicher greifen. */
+  html[data-seite="stat"] details.stufen-panel { display:none !important; }
+  /* Inhaltsflaeche ueber die volle Seitenbreite */
+  html[data-seite="spickzettel"] .wrap, html[data-seite="stat"] .wrap, html[data-seite="unterricht"] .wrap,
+  html[data-seite="spickzettel"] main,  html[data-seite="stat"] main,  html[data-seite="unterricht"] main {
+    display:block !important; margin:0 !important; padding:0 !important; max-width:none !important; width:auto !important;
+  }
+  html[data-seite="spickzettel"] .panel, html[data-seite="stat"] .panel, html[data-seite="unterricht"] .panel {
+    border:none !important; box-shadow:none !important; padding:0 !important; margin:0 0 var(--s4) !important;
+    background:#fff !important; break-inside:avoid; page-break-inside:avoid;
+  }
+  /* Zusammengeklappte Abschnitte oeffnen – ein Ausdruck mit lauter Ueberschriften waere nutzlos
+     (Nutzer-Entscheid). CSS allein ist hier NICHT verlaesslich: Browser blenden den Inhalt eines
+     geschlossenen <details> ueber einen internen Mechanismus aus. Deshalb oeffnet zusaetzlich
+     app_ui.js im beforeprint-Ereignis alle details und stellt sie danach wieder her; diese Regel
+     ist nur die Absicherung fuer den Fall, dass das Ereignis ausbleibt. */
+  html[data-seite="spickzettel"] details:not([open]) > *:not(summary),
+  html[data-seite="stat"] details:not([open]) > *:not(summary),
+  html[data-seite="unterricht"] details:not([open]) > *:not(summary) {
+    display:block !important;
+  }
+  html[data-seite="spickzettel"] summary, html[data-seite="stat"] summary, html[data-seite="unterricht"] summary {
+    list-style:none; font-weight:600; break-after:avoid; page-break-after:avoid;
+  }
+  /* Fortschrittsbalken der Statistik als Rahmen statt Farbflaeche */
+  html[data-seite="stat"] .balken { border:1px solid #666 !important; background:#fff !important; }
+  html[data-seite="stat"] .balken > div { background:#666 !important; }
+  html[data-seite="spickzettel"] a, html[data-seite="stat"] a, html[data-seite="unterricht"] a { text-decoration:none; color:#000; }
+  @page { margin:16mm; }
+}

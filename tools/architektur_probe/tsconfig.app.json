@@ -1,0 +1,5 @@
+{
+  "//": "Probe fuer tools/architektur.py --probe (N43 M2): Alias wie neu/tsconfig.app.json.",
+  "compilerOptions": { "baseUrl": ".", "paths": { "@/*": ["./src/*"] }, "module": "esnext", "moduleResolution": "bundler" },
+  "include": ["src"]
+}

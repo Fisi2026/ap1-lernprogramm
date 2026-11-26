@@ -1,0 +1,770 @@
+[
+ {
+  "id": "M09-001",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Wertschöpfung",
+  "typ": "mc",
+  "schwierigkeit": 1,
+  "frage": "Wie ist Wertschöpfung in einem Unternehmen definiert?",
+  "optionen": [
+   "Wert der erstellten Leistung (Output) minus von Dritten bezogene Vorleistungen",
+   "Der Umsatz abzüglich der Materialkosten",
+   "Die Summe aller Gewinne eines Geschäftsjahres",
+   "Das Gesamtkapital des Unternehmens"
+  ],
+  "loesungIndex": 0,
+  "distraktorErklaerungen": [
+   "",
+   "Der Umsatz ist nicht dasselbe wie Wertschöpfung; Wertschöpfung rechnet auch andere Kosten ein.",
+   "Gewinne sind Umsatz minus ALLE Kosten, nicht Wertschöpfung.",
+   "Das Kapital ist ein Bestandteil der Bilanz, keine Wertschöpfung."
+  ],
+  "erklaerungKurz": "Wertschöpfung = Wert der erstellten Leistung (Output) − von Dritten bezogene Vorleistungen. Sie zeigt, welchen neuen Wert ein Unternehmen schafft.",
+  "erklaerungLang": "Die Wertschöpfung misst den wirtschaftlichen Erfolg eines Unternehmens neu: nicht der gesamte Umsatz zählt, sondern nur der Wert, den das Unternehmen selbst hinzufügt. Bei der Rhaus-Metall-GmbH beispielsweise: wenn die Firma Stahl für 10.000 EUR kauft und daraus Maschinen im Wert von 25.000 EUR anfertigt, ist die Wertschöpfung 15.000 EUR (nicht 25.000 EUR). Diese Methode vermeidet Doppelzählungen in der Wirtschaft.",
+  "verweis": "Unser Unterricht – Wertschöpfung"
+ },
+ {
+  "id": "M09-002",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Wertschöpfung",
+  "typ": "lueckentext",
+  "schwierigkeit": 1,
+  "frage": "Die Wertschöpfungskette in einem Industrieunternehmen wie der Rhaus-Metall-GmbH folgt dieser Reihenfolge: ___ → ___ → ___. Zusätzlich unterstützen ___ diesen Prozess.",
+  "luecken": [
+   [
+    "Beschaffung",
+    "beschaffung"
+   ],
+   [
+    "Produktion",
+    "produktion",
+    "Leistungserstellung"
+   ],
+   [
+    "Absatz",
+    "absatz"
+   ],
+   [
+    "Unterstützungsprozesse",
+    "IT",
+    "Personal",
+    "Verwaltung"
+   ]
+  ],
+  "erklaerungKurz": "Wertschöpfungskette: Beschaffung → Produktion → Absatz, unterstützt durch IT, Personal, Verwaltung.",
+  "erklaerungLang": "Die Wertschöpfungskette beschreibt den kompletten Prozess von der Rohstoffbeschaffung bis zum Kundenverkauf. Bei der Rhaus-Metall-GmbH: 1) Beschaffung von Stahl und Komponenten, 2) Produktion von Metallbau-Komponenten, 3) Absatz an Kunden. Parallel laufen Unterstützungsprozesse: die IT-Abteilung verwaltet Maschinen und Daten, die Personalabteilung rekrutiert Fachkräfte, die Verwaltung managt Finanzen und Verträge. Alle diese Bereiche tragen indirekt zur Wertschöpfung bei.",
+  "verweis": "Unser Unterricht – Wertschöpfung"
+ },
+ {
+  "id": "M09-011",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Aufgabenanalyse & -synthese",
+  "typ": "lueckentext",
+  "schwierigkeit": 1,
+  "frage": "___ bedeutet, eine Gesamtaufgabe in Teil- und Elementaraufgaben zu zerlegen. ___ bedeutet, diese Aufgaben wieder zu Stellen und Abteilungen zu bündeln.",
+  "luecken": [
+   [
+    "Aufgabenanalyse",
+    "Analyse"
+   ],
+   [
+    "Aufgabensynthese",
+    "Synthese"
+   ]
+  ],
+  "erklaerungKurz": "Analyse = Zerlegen der Gesamtaufgabe; Synthese = Bündeln zu Stellen und Abteilungen.",
+  "erklaerungLang": "Aufgabenanalyse und -synthese sind zwei Phasen der Organisationsentwicklung. In der Analyse fragt man: Was muss alles getan werden? Man zerlegt die Gesamtaufgabe eines Unternehmens schrittweise in kleinere Aufgaben. In der Synthese fragt man: Wie ordnen wir diese Aufgaben sinnvoll an? Welche Aufgaben bilden eine Stelle, welche eine Abteilung? Dies führt zur Organisationsstruktur (Organigramm) mit definierten Instanzen und Verantwortlichkeiten.",
+  "verweis": "Unser Unterricht – Aufgabenanalyse & -synthese"
+ },
+ {
+  "id": "M09-031",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Führungsstile",
+  "typ": "mehrfach",
+  "schwierigkeit": 1,
+  "frage": "Welche Aussagen zum kooperativen Führungsstil sind korrekt? (Mehrere Antworten möglich)",
+  "optionen": [
+   "Der kooperative Führungsstil bezieht die Mitarbeiter in Entscheidungen ein.",
+   "Der kooperative Führungsstil führt zu schnelleren Entscheidungsprozessen als der autoritäre Stil.",
+   "Der kooperative Führungsstil erhöht die Mitarbeitermotivation und Identifikation mit dem Unternehmen.",
+   "Der kooperative Führungsstil gilt als Best Practice für alle Situationen."
+  ],
+  "loesungIndizes": [
+   0,
+   2
+  ],
+  "distraktorErklaerungen": [
+   "",
+   "Der kooperative Stil ist mit Beteiligungsprozessen verbunden, die zeitaufwändiger sind als autoritäre Befehle.",
+   "",
+   "Der kooperative Stil ist wertvoll, aber nicht für alle Situationen optimal — manchmal ist autoritäre Schnelligkeit nötig."
+  ],
+  "erklaerungKurz": "Der kooperative Führungsstil integriert die Mitarbeiter, erhöht die Motivation, aber dauert länger. Er ist situativ zu wählen.",
+  "erklaerungLang": "Der kooperative Führungsstil zeichnet sich durch Partizipation und Beteiligung aus. Mitarbeiter werden einbezogen, können ihre Ideen äußern, und Entscheidungen entstehen im Dialog. Das führt zu höherer Identifikation und Motivation. Nachteil: Der Prozess ist zeitaufwändiger als schnelle autoritäre Befehle. Die beste Führung wählt situativ — in Krisensituationen kann Autorität erforderlich sein, bei stabilen Aufgaben funktioniert Kooperation besser.",
+  "verweis": "Unser Unterricht – Führungsstile"
+ },
+ {
+  "id": "M09-081",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kaufmannseigenschaft",
+  "typ": "mc",
+  "schwierigkeit": 1,
+  "frage": "Nach § 1 HGB ist eine Person Istkaufmann, wenn sie:",
+  "optionen": [
+   "ein Handelsgewerbe betreibt, das nach Art und Umfang einen kaufmännischen Geschäftsbetrieb erfordert",
+   "sich ins Handelsregister eintragen lässt",
+   "Einzelunternehmer ist",
+   "eine Handwerkskammer-Berechtigung hat"
+  ],
+  "loesungIndex": 0,
+  "distraktorErklaerungen": [
+   "",
+   "Die Registereintragung ist Folge der Kaufmannseigenschaft, nicht die Ursache; auch ohne Eintrag kann man Istkaufmann sein.",
+   "Einzelunternehmer sind nicht automatisch Kaufleute — das kommt auf die Art des Gewerbes an.",
+   "Handwerkskammer-Berechtigung ist etwas anderes; Handwerker können Kaufleute sein, müssen aber nicht."
+  ],
+  "erklaerungKurz": "Ein Istkaufmann ist, wer kraft seines Handelsgewerbes einen kaufmännischen Betrieb führt (§ 1 HGB).",
+  "erklaerungLang": "Nach § 1 HGB ist Istkaufmann, wer ein Handelsgewerbe betreibt und dieses nach Art und Umfang einen kaufmännischen Geschäftsbetrieb erfordert. Die Rhaus-Metall-GmbH ist ein klarer Istkaufmann: sie betreibt Metallbau als Handelsgewerbe mit komplexen Verwaltungs-, Buchhaltungs- und Vertragsaufgaben. Es ist eine reine Tatsachenfrage, die unabhängig von einer Registereintragung besteht (wobei Kaufleute meist auch eintragen lassen).",
+  "verweis": "Unser Unterricht – Kaufmannseigenschaft"
+ },
+ {
+  "id": "M09-082",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kaufmannseigenschaft",
+  "typ": "mehrfach",
+  "schwierigkeit": 1,
+  "frage": "Welche Merkmale gelten für einen Geschäftsbetrieb, der 'in kaufmännischer Weise eingerichtet' ist? (Mehrere Antworten möglich)",
+  "optionen": [
+   "Es wird eine geordnete (doppelte) Buchführung mit Bilanzierung geführt",
+   "Es gibt eine kaufmännische Organisation: geordnete Ablage, Schriftverkehr, Verwaltung",
+   "Die Eintragung ins Handelsregister ist Voraussetzung dafür, dass der Betrieb kaufmännisch eingerichtet ist",
+   "Gesetzlich vorgeschrieben sind mindestens zehn Mitarbeiter"
+  ],
+  "loesungIndizes": [
+   0,
+   1
+  ],
+  "distraktorErklaerungen": [
+   "",
+   "",
+   "Falsch herum: Die kaufmännische Einrichtung ist Merkmal des Betriebs selbst; die Eintragung folgt daraus (beim Istkaufmann deklaratorisch), sie erzeugt die Einrichtung nicht.",
+   "Eine feste Mitarbeiterzahl schreibt das HGB nicht vor – Art UND Umfang des Betriebs entscheiden im Gesamtbild."
+  ],
+  "erklaerungKurz": "Kaufmännische Einrichtung zeigt sich v. a. an geordneter Buchführung/Bilanzierung und kaufmännischer Organisation; feste Schwellenwerte gibt es nicht.",
+  "erklaerungLang": "Nach § 1 HGB ist die kaufmännische Einrichtung ein Indiz für Kaufmannseigenschaft. Typische Merkmale: (1) räumliche Trennung (Büro vs. Produktionsstätte), Verwaltungspersonal, (2) systematische Buchhaltung (nicht nur Kassenbuch), (3) Lagerhaltung, Logistik, oft EDV-Systeme für Bestellwesen und Versand. Größe (Anzahl Mitarbeiter) ist kein zwingendes Merkmal. Ein Ein-Mann-Handwerksbetrieb kann ohne kaufmännische Einrichtung keine Kaufmannseigenschaft haben, während ein Großhandel mit systematischen Prozessen typischerweise Kaufmann ist.",
+  "verweis": "Unser Unterricht – Kaufmannseigenschaft"
+ },
+ {
+  "id": "M09-083",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kaufmannseigenschaft",
+  "typ": "lueckentext",
+  "schwierigkeit": 1,
+  "frage": "Es gibt drei Kategorien von Kaufleuten nach dem HGB: Ein ___ ist automatisch Kaufmann, weil er ein Handelsgewerbe betreibt. Ein ___ wird Kaufmann durch freiwillige Eintragung. Ein ___ ist kraft seiner Rechtsform automatisch Kaufmann (z.B. GmbH oder AG).",
+  "luecken": [
+   [
+    "Istkaufmann",
+    "Ist-Kaufmann"
+   ],
+   [
+    "Kannkaufmann",
+    "Kann-Kaufmann"
+   ],
+   [
+    "Formkaufmann",
+    "Form-Kaufmann"
+   ]
+  ],
+  "erklaerungKurz": "Istkaufmann (tatsächliches Handelsgewerbe), Kannkaufmann (freiwillige Eintragung), Formkaufmann (Rechtsform wie GmbH).",
+  "erklaerungLang": "§ 1–6 HGB regeln diese drei Kategorien: Ein Istkaufmann (§ 1) betreibt ein Handelsgewerbe; die Kaufmannseigenschaft entsteht automatisch durch die Tätigkeit. Ein Kannkaufmann (§ 2) ist ein Kleingewerbetreibender, der sich eintragen lässt und dadurch zum Kaufmann wird — die Eintragung ist konstitutiv. Ein Formkaufmann (§ 6) ist eine juristische Person mit Handelsgewerbe (GmbH, AG); die Kaufmannseigenschaft folgt direkt aus der Rechtsform. Die Rhaus-Metall-GmbH ist z.B. ein Formkaufmann.",
+  "verweis": "Unser Unterricht – Kaufmannseigenschaft"
+ },
+ {
+  "id": "M09-084",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kaufmannseigenschaft",
+  "typ": "mtf",
+  "schwierigkeit": 1,
+  "frage": "Bewerte die folgenden Aussagen zur Kaufmannseigenschaft als wahr oder falsch:",
+  "aussagen": [
+   {
+    "text": "Ein Kannkaufmann ist automatisch ein Kaufmann, sobald er sein Gewerbe anmeldet.",
+    "wahr": false
+   },
+   {
+    "text": "Die Eintragung eines Kannkaufmanns ins Handelsregister ist konstitutiv, also erforderlich für die Kaufmannseigenschaft.",
+    "wahr": true
+   },
+   {
+    "text": "Ein Formkaufmann wie eine GmbH ist unabhängig von seiner Geschäftstätigkeit automatisch Kaufmann.",
+    "wahr": true
+   },
+   {
+    "text": "Ein Istkaufmann muss sich ins Handelsregister eintragen lassen, um Kaufmann zu sein.",
+    "wahr": false
+   }
+  ],
+  "erklaerungKurz": "Kannkaufmann = konstitutive Eintragung; Istkaufmann = automatisch; Formkaufmann = kraft Rechtsform.",
+  "erklaerungLang": "Die Unterscheidung liegt in der Entstehung der Kaufmannseigenschaft: Der Kannkaufmann braucht die Eintragung (§ 2 HGB), ohne sie ist er nicht Kaufmann — die Eintragung schafft die Eigenschaft. Der Istkaufmann wird Kaufmann durch die Natur seiner Tätigkeit, die Eintragung ist deklaratorisch (bekräftigt nur, was bereits besteht). Der Formkaufmann ist kraft Rechtsform Kaufmann — die GmbH ist vom ersten Tag an Kaufmann, auch wenn sie noch keine Geschäftstätigkeit hat.",
+  "verweis": "Unser Unterricht – Kaufmannseigenschaft"
+ },
+ {
+  "id": "M09-091",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Die Firma",
+  "typ": "mc",
+  "schwierigkeit": 1,
+  "frage": "Was ist nach § 17 HGB die 'Firma' eines Unternehmens?",
+  "optionen": [
+   "Der Handelsname des Kaufmanns",
+   "Das Unternehmen selbst",
+   "Der Name des Eigentümers",
+   "Die Rechtsform des Unternehmens"
+  ],
+  "loesungIndex": 0,
+  "distraktorErklaerungen": [
+   "",
+   "Das Unternehmen ist eine wirtschaftliche Einheit, die Firma ist nur sein Name.",
+   "Die Firma kann den Namen des Eigentümers enthalten, ist aber mehr als das.",
+   "Die Rechtsform ist ein separate Element; die Firma ist der Name."
+  ],
+  "erklaerungKurz": "Die Firma ist der Handelsname eines Kaufmanns (§ 17 HGB) — nicht das Unternehmen selbst, sondern sein Name.",
+  "erklaerungLang": "Nach § 17 HGB ist die Firma der Name, unter dem ein Kaufmann seine Geschäfte betreibt. Die Firma ist die Identität des Unternehmens in der Öffentlichkeit und im Rechtsverkehr. Beispiele: 'Rhaus-Metall-GmbH', 'Müller Metallbau e.K.' Die Firma muss bestimmten Grundsätzen genügen (Wahrheit, Klarheit, Beständigkeit, Ausschließlichkeit). Wichtig: Die Firma ist NICHT das Unternehmen selbst, sondern nur sein Name.",
+  "verweis": "Unser Unterricht – Die Firma"
+ },
+ {
+  "id": "M09-092",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Die Firma",
+  "typ": "mehrfach",
+  "schwierigkeit": 1,
+  "frage": "Welche Grundsätze müssen für die Bildung einer Firma nach HGB beachtet werden? (Mehrere Antworten möglich)",
+  "optionen": [
+   "Wahrheit: Die Firma darf nicht täuschen; sie muss Aufschluss über die wahre Natur des Unternehmens geben.",
+   "Klarheit: Die Firma darf keine irreführenden Angaben über Art oder Umfang des Geschäfts enthalten.",
+   "Beständigkeit: Die Firma darf während der Geschäftstätigkeit beliebig oft gewechselt werden.",
+   "Ausschließlichkeit: Die Firma muss sich in der jeweiligen Kammer deutlich von anderen unterscheiden."
+  ],
+  "loesungIndizes": [
+   0,
+   1,
+   3
+  ],
+  "distraktorErklaerungen": [
+   "",
+   "",
+   "Die Beständigkeit bedeutet, dass die Firma NICHT beliebig wechseln sollte; Firmenwechsel sind selten und müssen begründet sein.",
+   ""
+  ],
+  "erklaerungKurz": "Firmengrundsätze: Wahrheit (nicht täuschend), Klarheit (verständlich), Beständigkeit (stabil), Ausschließlichkeit (unterscheidbar).",
+  "erklaerungLang": "Eine gültige Firma nach HGB muss vier Grundsätze erfüllen: (1) Wahrheit: die Firma darf nicht in die Irre führen über die Natur des Gewerbes, (2) Klarheit: verständlich geschrieben, ohne unnötige Zeichen oder fremde Sprachen, (3) Beständigkeit: die Firma bleibt über Zeit gleich; häufige Wechsel schaden dem Vertrauen, (4) Ausschließlichkeit: sie darf sich nicht mit anderen Firmen verwechseln lassen (wird durch Handelsregister geprüft). Hinzu kommt die Pflicht, eine Rechtsform-Abkürzung (e.K., GmbH, AG) anzufügen.",
+  "verweis": "Unser Unterricht – Die Firma"
+ },
+ {
+  "id": "M09-093",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Die Firma",
+  "typ": "dropdown",
+  "schwierigkeit": 1,
+  "frage": "Ordne Firmennamen zu: 'Rhaus-Metall GmbH' ist eine ___-Firma. 'Müller Elektrotechnik' ist eine ___-Firma. 'Siemens AG' ist eine ___-Firma.",
+  "luecken": [
+   {
+    "optionen": [
+     "Personen",
+     "Sach",
+     "Fantasie"
+    ],
+    "loesung": 1
+   },
+   {
+    "optionen": [
+     "Personen",
+     "Sach",
+     "Fantasie"
+    ],
+    "loesung": 0
+   },
+   {
+    "optionen": [
+     "Personen",
+     "Sach",
+     "Fantasie"
+    ],
+    "loesung": 2
+   }
+  ],
+  "erklaerungKurz": "Firmenenarten: Personenfirma (Inhaber), Sachfirma (Gegenstand), Fantasiefirma (erfunden).",
+  "erklaerungLang": "Es gibt drei Arten: (1) Personenfirma: Name des Inhabers, (2) Sachfirma: Gegenstand des Gewerbes, (3) Fantasiefirma: erfundener Name. Die Wahl ist frei bei Einhaltung der Grundsätze.",
+  "verweis": "Unser Unterricht – Die Firma"
+ },
+ {
+  "id": "M09-094",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Die Firma",
+  "typ": "mtf",
+  "schwierigkeit": 1,
+  "frage": "Bewerte die Zulässigkeit der folgenden Firmennamen als wahr (zulässig) oder falsch (nicht zulässig):",
+  "aussagen": [
+   {
+    "text": "'Stahlbau Rhaus GmbH' ist zulässig, wenn die Gesellschaft tatsächlich Stahlbau betreibt.",
+    "wahr": true
+   },
+   {
+    "text": "'Rhaus-Metall' ganz ohne Rechtsformzusatz ist als Firma einer GmbH zulässig.",
+    "wahr": false
+   },
+   {
+    "text": "'Rhaus Software AG' wäre für das Metallbauunternehmen unzulässig, weil der Name über den Geschäftsgegenstand und die Rechtsform täuscht (Firmenwahrheit).",
+    "wahr": true
+   },
+   {
+    "text": "Eine Fantasiefirma wie 'Feronix GmbH' ist grundsätzlich zulässig, solange sie kennzeichnungskräftig ist und nicht täuscht.",
+    "wahr": true
+   }
+  ],
+  "erklaerungKurz": "Maßstab sind die Firmengrundsätze: Wahrheit (keine Täuschung), Rechtsformzusatz ist Pflicht, Fantasienamen sind erlaubt, wenn sie unterscheidbar und nicht irreführend sind.",
+  "erklaerungLang": "Firmenzulässigkeit prüft: (1) Rechtsformzusatz Pflicht, (2) Wahrheit: 'AG' darf nicht für GmbH verwendet werden, (3) Beständigkeit: Namen mit variabler Jahreszahl verletzen dies, (4) Klarheit und Ausschließlichkeit.",
+  "verweis": "Unser Unterricht – Die Firma"
+ },
+ {
+  "id": "M09-101",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Rechtsformen",
+  "typ": "mc",
+  "schwierigkeit": 1,
+  "frage": "Nach deutschem Recht ist eine GmbH charakterisiert durch:",
+  "optionen": [
+   "Juristische Person, Mindeststammkapital 25.000 EUR, Haftung beschränkt auf Gesellschaftsvermögen",
+   "Juristische Person, Mindeststammkapital 50.000 EUR, unbeschränkte Haftung der Gesellschafter",
+   "Personengesellschaft mit Mindestkapital, beschränkte Haftung",
+   "Gesellschaft mit unbeschränkter Haftung, kein Mindestkapital erforderlich"
+  ],
+  "loesungIndex": 0,
+  "distraktorErklaerungen": [
+   "",
+   "Das Grundkapital der AG beträgt 50.000 EUR, nicht der GmbH; die GmbH hat Stammkapital von 25.000 EUR.",
+   "Eine GmbH ist eine juristische Person, keine Personengesellschaft.",
+   "Eine GmbH verlangt ein Mindestkapital und hat beschränkte Haftung."
+  ],
+  "erklaerungKurz": "GmbH = juristische Person, 25.000 EUR Stammkapital, Haftung begrenzt auf Gesellschaftsvermögen.",
+  "erklaerungLang": "Die GmbH (Gesellschaft mit beschränkter Haftung) ist eine verbreitete Rechtsform für mittelständische Unternehmen. Sie ist eine juristische Person (nicht einfach die Summe ihrer Gesellschafter) mit eigenem Vermögen und Haftung. Das Mindeststammkapital beträgt 25.000 EUR (bei Gründung seit 2008 15.000 EUR für die UG). Die Gesellschafter haften nicht persönlich — nur die Gesellschaft haftet mit ihrem Vermögen. Die Rhaus-Metall-GmbH ist ein Beispiel.",
+  "verweis": "Unser Unterricht – Rechtsformen"
+ },
+ {
+  "id": "M09-102",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Rechtsformen",
+  "typ": "dropdown",
+  "schwierigkeit": 1,
+  "frage": "Ergänze: OHG hat ___ Haftung. KG Komplementär: ___ Haftung. AG Grundkapital: ___ EUR.",
+  "luecken": [
+   {
+    "optionen": [
+     "beschränkte",
+     "unbeschränkte"
+    ],
+    "loesung": 1
+   },
+   {
+    "optionen": [
+     "beschränkte",
+     "unbeschränkte"
+    ],
+    "loesung": 1
+   },
+   {
+    "optionen": [
+     "25.000",
+     "50.000",
+     "100.000"
+    ],
+    "loesung": 1
+   }
+  ],
+  "erklaerungKurz": "OHG: unbeschränkt; KG-Komplementär: unbeschränkt; AG: 50.000 EUR.",
+  "erklaerungLang": "Rechtsformen unterscheiden sich durch Haftung und Kapital: OHG — unbeschränkte Haftung aller Gesellschafter. KG — Komplementär unbeschränkt, Kommanditist beschränkt. AG — Grundkapital 50.000 EUR, Haftung beschränkt.",
+  "verweis": "Unser Unterricht – Rechtsformen"
+ },
+ {
+  "id": "M09-104",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Rechtsformen",
+  "typ": "mtf",
+  "schwierigkeit": 1,
+  "frage": "Bewerte die Aussagen zu OHG und KG als wahr oder falsch:",
+  "aussagen": [
+   {
+    "text": "In einer OHG haften alle Gesellschafter unbeschränkt, persönlich und solidarisch.",
+    "wahr": true
+   },
+   {
+    "text": "Ein Kommanditist in einer KG haftet mit seinem Privatvermögen, aber nur bis zur Höhe seiner Einlage.",
+    "wahr": true
+   },
+   {
+    "text": "Eine KG benötigt mindestens einen Komplementär und einen Kommanditisten.",
+    "wahr": true
+   },
+   {
+    "text": "Ein Komplementär haftet nur bis zur Höhe seiner Kapitaleinlage.",
+    "wahr": false
+   }
+  ],
+  "erklaerungKurz": "OHG: alle unbeschränkt; KG: Komplementär unbeschränkt, Kommanditist bis Einlage.",
+  "erklaerungLang": "OHG: alle Gesellschafter haften unbeschränkt und persönlich. KG: Komplementär unbeschränkt, Kommanditist bis Einlage. Dies macht die KG attraktiv für Investoren mit begrenztem Risiko.",
+  "verweis": "Unser Unterricht – Rechtsformen"
+ },
+ {
+  "id": "M09-111",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Handlungsvollmachten & Prokura",
+  "typ": "dropdown",
+  "schwierigkeit": 1,
+  "frage": "Zuordnung: ___ berechtigt zu allen Geschäften; HR-eintragbar. ___ berechtigt zu einer Geschäftsart. ___ berechtigt zu einem Geschäft.",
+  "luecken": [
+   {
+    "optionen": [
+     "Handlungsvollmacht",
+     "Prokura",
+     "Artvollmacht"
+    ],
+    "loesung": 1
+   },
+   {
+    "optionen": [
+     "Artvollmacht",
+     "Einzelvollmacht",
+     "Prokura"
+    ],
+    "loesung": 0
+   },
+   {
+    "optionen": [
+     "Einzelvollmacht",
+     "Handlungsvollmacht",
+     "Artvollmacht"
+    ],
+    "loesung": 0
+   }
+  ],
+  "erklaerungKurz": "Prokura: alle Geschäfte, eintragungsfähig; Artvollmacht: Geschäftsart; Einzelvollmacht: ein Geschäft.",
+  "erklaerungLang": "Prokura (§ 48–53) — alle Geschäfte eines Handelsgewerbes, eintragungsfähig, Zeichnung ppa. Handlungsvollmacht (§ 54) in Unterarten: Generalvollmacht (alle gewöhnlichen Geschäfte), Artvollmacht (Geschäftsart), Einzelvollmacht (ein Geschäft), nicht eintragungsfähig, Zeichnung i.V.",
+  "verweis": "Unser Unterricht – Handlungsvollmachten & Prokura"
+ },
+ {
+  "id": "M09-113",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Handlungsvollmachten & Prokura",
+  "typ": "mtf",
+  "schwierigkeit": 1,
+  "frage": "Bewerte Aussagen zur Prokura als wahr oder falsch:",
+  "aussagen": [
+   {
+    "text": "Die Prokura ist bereits mit der Erteilung durch den Kaufmann wirksam – die Handelsregister-Eintragung wirkt nur deklaratorisch (bestätigend).",
+    "wahr": true
+   },
+   {
+    "text": "Ein Prokurist darf immer Grundstücke verkaufen, weil das zur normalen Geschäftstätigkeit gehört.",
+    "wahr": false
+   },
+   {
+    "text": "Prokura kann nur der Kaufmann selbst erteilen.",
+    "wahr": true
+   },
+   {
+    "text": "Mit einer Prokura darf man die Firma an einen Dritten veräußern.",
+    "wahr": false
+   }
+  ],
+  "erklaerungKurz": "Prokura: wirksam ab Erteilung, HR-Eintragung deklaratorisch; keine Grundstücksgeschäfte ohne Sondervollmacht (§ 49 II HGB); nur der Kaufmann erteilt sie; Grundlagengeschäfte (Firma veräußern) nie.",
+  "erklaerungLang": "Prokura nach HGB: Erteilung durch Kaufmann, Eintragung konstitutiv. § 49 regelt Ausnahmen: NICHT erlaubt sind Grundstücksverkauf, Prokuraerteilung, Firmaaufgabe, Insolvenzantrag — diese brauchen Sondervollmacht.",
+  "verweis": "Unser Unterricht – Handlungsvollmachten & Prokura"
+ },
+ {
+  "id": "M09-122",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "mehrfach",
+  "schwierigkeit": 2,
+  "frage": "Welche Aussagen zur Beantwortung einer Kundenanfrage sind korrekt? (Mehrere Antworten möglich)",
+  "optionen": [
+   "Anfragen sollten schnell beantwortet werden, um Verkaufsabschlüsse nicht zu gefährden.",
+   "Die Verwendung von Fach-Chinesisch kann Kunden abschrecken und sollte vermieden werden.",
+   "Der Preis muss völlig unverbindlich mitgeteilt werden.",
+   "Kundenorientierung bedeutet, Nutzungseigenschaften klar zu erklären."
+  ],
+  "loesungIndizes": [
+   0,
+   1,
+   3
+  ],
+  "distraktorErklaerungen": [
+   "",
+   "",
+   "Preistransparenz ist wichtig, nicht völlige Unverbindlichkeit.",
+   ""
+  ],
+  "erklaerungKurz": "Anfrage schnell beantworten, Fachbegriffe vermeiden, Nutzungseigenschaften erklären.",
+  "erklaerungLang": "Bei der Beantwortung einer Anfrage gilt: Anfragen nicht aufschieben — schnelle Antwort erhöht Abschluss-Chancen; Fachbegriffe vermeiden — einfach erklären; Preis begründen durch Nutzungseigenschaften. Dies ist Kundenorientierung im Verkauf.",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot"
+ },
+ {
+  "id": "M09-123",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "lueckentext",
+  "schwierigkeit": 2,
+  "frage": "Bei Angeboten werden häufig Freizeichnungsklauseln verwendet wie: '___ ', '___ ', '___ '.",
+  "luecken": [
+   [
+    "Preis freibleibend",
+    "Preisänderung vorbehalten",
+    "Nur solange der Vorrat reicht",
+    "Solange der Vorrat reicht",
+    "Lieferzeit freibleibend",
+    "unverbindlich",
+    "freibleibend",
+    "ohne Gewähr",
+    "ohne Obligo"
+   ],
+   [
+    "Preis freibleibend",
+    "Preisänderung vorbehalten",
+    "Nur solange der Vorrat reicht",
+    "Solange der Vorrat reicht",
+    "Lieferzeit freibleibend",
+    "unverbindlich",
+    "freibleibend",
+    "ohne Gewähr",
+    "ohne Obligo"
+   ],
+   [
+    "Preis freibleibend",
+    "Preisänderung vorbehalten",
+    "Nur solange der Vorrat reicht",
+    "Solange der Vorrat reicht",
+    "Lieferzeit freibleibend",
+    "unverbindlich",
+    "freibleibend",
+    "ohne Gewähr",
+    "ohne Obligo"
+   ]
+  ],
+  "erklaerungKurz": "Übliche Freizeichnungsklauseln: 'Preis freibleibend', 'Preisänderung vorbehalten', 'Nur solange der Vorrat reicht', 'Lieferzeit freibleibend', 'unverbindlich', 'ohne Gewähr', 'ohne Obligo'. Jede davon zählt.",
+  "erklaerungLang": "Typische Freizeichnungsklauseln sind: (1) 'Preis freibleibend', (2) 'Solange der Vorrat reicht', (3) 'Lieferzeit freibleibend', (4) 'Ohne Gewähr'. Sie heben die Bindungswirkung eines Angebots auf.",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot"
+ },
+ {
+  "id": "M09-124",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Kundenauftrag: Anfrage & Angebot",
+  "typ": "dropdown",
+  "schwierigkeit": 2,
+  "frage": "Bindefristen eines Angebots: Unter Anwesenden (Telefonat): ___. Brief: etwa ___. Mit gesetzter Frist: ___.",
+  "luecken": [
+   {
+    "optionen": [
+     "sofort",
+     "eine Woche",
+     "ein Monat"
+    ],
+    "loesung": 0
+   },
+   {
+    "optionen": [
+     "sofort",
+     "eine Woche",
+     "ein Monat"
+    ],
+    "loesung": 1
+   },
+   {
+    "optionen": [
+     "nur bis zum Fristablauf",
+     "auch noch nach Fristablauf",
+     "unbegrenzt"
+    ],
+    "loesung": 0
+   }
+  ],
+  "erklaerungKurz": "Bindefristen: unter Anwesenden sofort; Brief ca. eine Woche; bei gesetzter Frist gilt das Angebot nur bis zum Fristablauf.",
+  "erklaerungLang": "Unter Anwesenden erlischt Bindung sofort. Brief: etwa eine Woche. Mit Frist: bis zum Fristablauf gebunden.",
+  "verweis": "Unser Unterricht – Kundenauftrag: Anfrage & Angebot"
+ },
+ {
+  "id": "M09-131",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "mc",
+  "schwierigkeit": 2,
+  "frage": "Nach BBiG müssen Ausbilder folgende Voraussetzungen erfüllen:",
+  "optionen": [
+   "Persönlich geeignet (§ 29), fachlich kompetent (§ 30, AEVO-Prüfung)",
+   "Hochschulabschluss und 5 Jahre Berufserfahrung",
+   "Kaufmann oder Techniker mit Fortbildung",
+   "Nur Berufserfahrung, keine formalen Qualifikationen nötig"
+  ],
+  "loesungIndex": 0,
+  "distraktorErklaerungen": [
+   "",
+   "AEVO ist typischerweise erforderlich, nicht Hochschulabschluss.",
+   "Kaufmann-Status nicht direkt erforderlich.",
+   "Formale Qualifikationen (AEVO) sind wichtig."
+  ],
+  "erklaerungKurz": "Ausbilder: persönlich geeignet (§ 29), fachlich kompetent (§ 30, AEVO-Prüfung).",
+  "erklaerungLang": "§ 28–30 BBiG: Persönliche Eignung (§ 29) — nicht wegen BBiG-Verstößen ausgeschlossen. Fachliche Eignung (§ 30) — Fertigkeiten + berufs- und arbeitspädagogische Eignung, typischerweise AEVO-Prüfung.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-132",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "mehrfach",
+  "schwierigkeit": 2,
+  "frage": "Nach § 11 BBiG muss die Niederschrift des Ausbildungsvertrags enthalten: (Mehrere Antworten möglich)",
+  "optionen": [
+   "Ausbildungsberuf und Dauer der Ausbildung",
+   "Dauer der regelmäßigen täglichen Ausbildungszeit",
+   "Dauer und Regelung des Urlaubs",
+   "Persönliche psychologische Befähigung des Azubis"
+  ],
+  "loesungIndizes": [
+   0,
+   1,
+   2
+  ],
+  "distraktorErklaerungen": [
+   "",
+   "",
+   "",
+   "Persönliche Befähigung ist nicht Vertragsbestandteil."
+  ],
+  "erklaerungKurz": "Vertragsbestandteile nach § 11: Beruf, Dauer, Arbeitszeit, Urlaub, Vergütung, Kündigungsvoraussetzungen.",
+  "erklaerungLang": "§ 11 BBiG schreibt vor: (1) Ausbildungsberuf und Dauer, (2) regelmäßige tägliche Ausbildungszeit, (3) Probezeit, (4) Vergütung, (5) Urlaub, (6) Kündigungsvoraussetzungen.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-133",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "dropdown",
+  "schwierigkeit": 1,
+  "frage": "Eckdaten Berufsausbildung: Probezeit: mindestens ___ , höchstens ___ . Kündigung durch den Azubi nach der Probezeit bei Berufsaufgabe: ___ Wochen Frist. Urlaub eines 15-jährigen Azubis: mindestens ___ Werktage.",
+  "luecken": [
+   {
+    "optionen": [
+     "1 Monat",
+     "2 Monate",
+     "3 Monate"
+    ],
+    "loesung": 0
+   },
+   {
+    "optionen": [
+     "2 Monate",
+     "3 Monate",
+     "4 Monate"
+    ],
+    "loesung": 2
+   },
+   {
+    "optionen": [
+     "2",
+     "4",
+     "6"
+    ],
+    "loesung": 1
+   },
+   {
+    "optionen": [
+     "25",
+     "27",
+     "30"
+    ],
+    "loesung": 2
+   }
+  ],
+  "erklaerungKurz": "Probezeit 1–4 Monate (§ 20 BBiG); Azubi-Kündigung bei Berufsaufgabe 4 Wochen (§ 22 BBiG); Urlaub mit 15 Jahren mind. 30 Werktage (§ 19 JArbSchG).",
+  "erklaerungLang": "Nach BBiG: Probezeit (§ 20) 1–4 Monate. Kündigungsfrist (§ 22) nach Probezeit 4 Wochen. Urlaub (§ 19 JArbSchG) unter 16 Jahren mind. 30 Werktage.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-134",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "lueckentext",
+  "schwierigkeit": 1,
+  "frage": "Nach § 22 BBiG: In der Probezeit kann ___ gekündigt werden. Nach der Probezeit mit ___ Wochen Frist. Fristlos nur bei ___ Grund.",
+  "luecken": [
+   [
+    "fristlos",
+    "jederzeit"
+   ],
+   [
+    "4",
+    "vier"
+   ],
+   [
+    "wichtigem",
+    "wichtiger"
+   ]
+  ],
+  "erklaerungKurz": "Probezeit: fristlos. Nach Probezeit: 4 Wochen oder fristlos mit wichtigem Grund.",
+  "erklaerungLang": "§ 22 BBiG: Probezeit (Abs. 1) — jederzeit fristlos, ohne Grund. Nach Probezeit (Abs. 2) — 4 Wochen fristlos bei Aufgabe, oder fristlos aus wichtigem Grund.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ },
+ {
+  "id": "M09-135",
+  "pruefungsteil": "AP1",
+  "modul": "M09",
+  "thema": "Berufsausbildung (BBiG/JArbSchG)",
+  "typ": "mtf",
+  "schwierigkeit": 2,
+  "frage": "Bewerte Aussagen zum JArbSchG als wahr oder falsch:",
+  "aussagen": [
+   {
+    "text": "Nach § 8 JArbSchG darf ein Jugendlicher maximal 8 Stunden pro Tag und 40 Stunden pro Woche arbeiten.",
+    "wahr": true
+   },
+   {
+    "text": "Nach § 11 JArbSchG hat ein Jugendlicher nach 4 Stunden Arbeit Anspruch auf 30 Minuten Ruhepause.",
+    "wahr": false
+   },
+   {
+    "text": "Nach § 15/16 JArbSchG hat ein Jugendlicher Anspruch auf Sonntagsruhe.",
+    "wahr": true
+   },
+   {
+    "text": "Nach § 9 JArbSchG muss der Betrieb den Jugendlichen von Arbeit freistellen, wenn Berufsschule ganztägig stattfindet.",
+    "wahr": true
+   }
+  ],
+  "erklaerungKurz": "JArbSchG: max. 8h/Tag, 40h/Woche; Pausen ab 4,5h; Sonntagsruhe; Berufsschultag-Freistellung.",
+  "erklaerungLang": "JArbSchG schützt Jugendliche: (1) § 8: 8h/Tag max., 40h/Woche, (2) § 11: Pausen ab 4,5h mind. 30 min, über 6h mind. 60 min, (3) § 15/16: Sonntagsruhe grundsätzlich, (4) § 9: Freistellung für ganztägigen Berufsschultag.",
+  "verweis": "Unser Unterricht – Berufsausbildung (BBiG/JArbSchG)"
+ }
+]

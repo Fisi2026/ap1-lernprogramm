@@ -1,0 +1,295 @@
+{
+ "_zweck": "VERBINDLICHE ABGRENZUNG fuer Fachbegriffe, die im Pool schon einmal gegensaetzlich benutzt wurden. EINE Quelle fuer 'pool_query.js begriffe' und check.sh 4e6.",
+ "_anlass": "26.08.2026: 'Pay-per-Use' stand in M03-713/714 richtig (nutzungsabhaengig, die feste Monatspauschale ausdruecklich als GEGENbeispiel) und in M04-008/M04-120 genau umgekehrt fuer ein Abo mit Monatsgebuehr. Erster Widerspruch UEBER MODULGRENZEN - innerhalb eines Moduls faellt so etwas beim Lesen auf, ueber zwei Module hinweg nie.",
+ "_warnung": "DIESE DATEI IST KLEIN UND MUSS ES BLEIBEN. Am 27.08. wurden drei Suchwege ueber mehrere hundert Begriffe gefahren (zuordnung-Paare, Inline-Erklaerungen, Definitionssaetze): Pay-per-Use war der EINZIGE echte Widerspruch ueber Modulgrenzen. Ein Anker fuer 60-100 Begriffe waere eine Datei mit 95 ungenutzten Eintraegen - und was niemand braucht, pflegt niemand. Aufgenommen wird ein Begriff erst, wenn ein Widerspruch BELEGT ist oder die Verwechslung im Pool nachweislich naheliegt.",
+ "_grenze": "DER WAECHTER MISST KEINE BEDEUTUNG. 'Widerspricht' ist nicht mechanisch entscheidbar. Geprueft wird ausschliesslich, ob ein Begriff im selben Textfenster neben einem Wort steht, das seiner Definition widerspricht. Das faengt genau den Pay-per-Use-Fall - und sonst nichts. Ein Waechter, der vorgibt, Bedeutung zu pruefen, ist schlimmer als keiner.",
+ "_ausnahmen": "Statt ganze Fragen auszunehmen, erkennt die Probe den ABGRENZUNGSSATZ: steht im selben Fenster ein Satz, der die beiden Begriffe ausdruecklich auseinanderhaelt, ist der Nachbar erlaubt. ANLASS 27.08.2026: Die erste Fassung nahm M04-008 und M04-120 pauschal aus - also genau die zwei Fragen, in denen der Fehler gesessen hatte. Dort haette der Waechter nie wieder anschlagen koennen. ►► Eine Ausnahme, die die Fundstelle des Fehlers stillstellt, ist keine Ausnahme, sondern ein blinder Fleck.",
+ "begriffe": [
+  {
+   "begriff": "MTTR",
+   "definition": "Im SLA-Zusammenhang die LOESUNGSZEIT: Mean Time to Resolution - die Zeit, bis der Kunde wieder arbeiten kann.",
+   "abgrenzung": "Dieselbe Abkuerzung wird auch als Mean Time To Repair gefuehrt, die reine Instandsetzungszeit. Wer MTTR schreibt, loest die gemeinte Bedeutung im selben Satz auf - wie bei MAC.",
+   "verbotene_nachbarn": [],
+   "fenster": 0,
+   "belegt": "2026-08-31 - Etappe VI (B105): 07#22 und M07-006 schrieben 'Mean Time to Resolution', M07-309 'Mean Time To Repair'. Beides fachlich gebraeuchlich, beides im selben Modul, ohne Hinweis darauf. abkuerzungen.js fuehrt MTTR nicht.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Rechenwerk",
+   "definition": "Das Rechenwerk (ALU) ist der TEIL der CPU, der rechnet und vergleicht. Zusammen mit dem Steuerwerk (holt und entschluesselt Befehle) bildet es nach von Neumann die CPU.",
+   "abgrenzung": "Das Rechenwerk ist NICHT die CPU. 'Der Prozessor ist das Rechenwerk' setzt einen Teil mit dem Ganzen gleich - und laesst das Steuerwerk verschwinden, das im gesamten Bestand vorher NULL Mal vorkam.",
+   "verbotene_nachbarn": [
+    "Prozessor ist das Rechenwerk",
+    "CPU ist das Rechenwerk",
+    "Rechenwerk ist die CPU",
+    "Rechenwerk ist der Prozessor",
+    "Rechenwerk eines Computers und wird nach"
+   ],
+   "fenster": 140,
+   "belegt": "2026-08-31 - Etappe VI (B95): 03#32 der Lernunterlage und M03-018 sagten beide 'ist das Rechenwerk eines Computers'; 'Steuerwerk' kam im gesamten Bestand 0 Mal vor. Gegengeprobt am Ur-Zustand des Lehrtextes.",
+   "entwarnung": [
+    "Rechenwerk und Steuerwerk",
+    "Teil der CPU",
+    "TEIL der CPU"
+   ]
+  },
+  {
+   "begriff": "Pay-per-Use",
+   "definition": "Abrechnung nach tatsaechlicher Nutzung - Rechenzeit, Transaktionen, Datenmenge.",
+   "abgrenzung": "NICHT das Abo: dort steht der Betrag je Zeitraum vorab fest, unabhaengig von der Nutzungsmenge.",
+   "verbotene_nachbarn": [
+    "Niedrig (monatlich)",
+    "Monatspauschale",
+    "monatliche Gebühr",
+    "Monatliche/jährliche Gebühr",
+    "feste Gebühr je Monat"
+   ],
+   "fenster": 220,
+   "belegt": "2026-08-27 - Definition aus M03-713/714, dort mit Gegenbeispiel",
+   "entwarnung": [
+    "Nicht zu verwechseln mit Pay-per-Use",
+    "ist etwas anderes als Pay-per-Use",
+    "Davon zu unterscheiden ist Pay-per-Use"
+   ]
+  },
+  {
+   "begriff": "MAC",
+   "definition": "DREI Bedeutungen, je nach Zusammenhang: Media Access Control (Hardwareadresse), Message Authentication Code (Pruefwert), Mandatory Access Control (Zugriffskontrolle).",
+   "abgrenzung": "Wer MAC schreibt, muss die gemeinte Bedeutung im selben Satz aufloesen - das Glossar kann sie nicht raten.",
+   "verbotene_nachbarn": [],
+   "fenster": 0,
+   "belegt": "2026-08-27 - alle drei Bedeutungen im Pool belegt (M04-912, M06-102, M06-306), Glossar fuehrte nur eine",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Verfügbarkeit",
+   "definition": "Zwei Verwendungen: als Schutzziel der Informationssicherheit (Daten sind erreichbar, wenn man sie braucht) und als SLA-Kennzahl in Prozent der Servicezeit.",
+   "abgrenzung": "Beide sind richtig, aber nicht dasselbe. 99,9 Prozent ist eine Kennzahl, kein Schutzziel.",
+   "verbotene_nachbarn": [],
+   "fenster": 0,
+   "belegt": "2026-08-27 - M06-002/M06-103 (Schutzziel) gegen M07-930/M07-932 (SLA-Kennzahl), beide korrekt",
+   "entwarnung": []
+  },
+  {
+   "begriff": "BITV",
+   "definition": "Barrierefreie-Informationstechnik-Verordnung.",
+   "abgrenzung": "Der Kurztext 'Barrierefreiheit in der IT' ist eine Merkhilfe, KEINE Aufloesung. Mit Gleichheitszeichen geschrieben liest er sich als eine. ZWEITE FEHLVERWENDUNG (27.08.2026): Die BITV wird als Rechtsgrundlage fuer Bildschirmarbeitsplaetze, Ergonomie, Stuhl und Tisch zitiert. Sie regelt die Barrierefreiheit von Websites und IT-Anwendungen oeffentlicher Stellen des Bundes. Fuer Bildschirmarbeitsplaetze gelten ArbSchG und ArbStaettV (Anhang Nr. 6); fuer den behinderungsgerechten Arbeitsplatz eines Beschaeftigten im Privatunternehmen § 164 Abs. 4 SGB IX.",
+   "verbotene_nachbarn": [
+    "BITV = Barrierefreiheit",
+    "BITV = barrierefreie IT",
+    "Ergonomie",
+    "ergonomisch",
+    "Arbeitsstättenverordnung",
+    "ArbStättV",
+    "Arbeitsschutz",
+    "Bildschirmarbeitsplatz",
+    "Bildschirmarbeitsplätze"
+   ],
+   "fenster": 90,
+   "belegt": "2026-08-27 - M03-008 und M03-020 loesen korrekt auf, der Merksatz in M03-020 tat es nicht. 27.08. abends: zweite Fehlverwendung in FALL-02-t3 und M03-117 gefunden, nachdem pool_query.js die Faelle mitliest (B80/B84).",
+   "entwarnung": [
+    "bindet nur öffentliche Stellen"
+   ]
+  },
+  {
+   "begriff": "GPL",
+   "definition": "GNU General Public License. Copyleft: Wer eine geaenderte Fassung WEITERGIBT, legt den Quellcode unter derselben Lizenz offen.",
+   "abgrenzung": "Zwei Fehler treten regelmaessig zusammen auf. (1) Die Offenlegungspflicht wird OHNE die Bedingung der Weitergabe genannt - wer GPL-Software nur im eigenen Betrieb anpasst, muss nichts veroeffentlichen. (2) GPL wird mit 'kostenlos' gleichgesetzt - frei ist der Quellcode, nicht der Preis; GPL-Software darf verkauft werden.",
+   "verbotene_nachbarn": [
+    "Änderungen öffentlich machen",
+    "Änderungen ebenfalls unter GPL",
+    "Änderungen unter GPL veröffentlichen",
+    "zurückfließen",
+    "zurückfliessen",
+    "Änderungen müssen veröffentlicht werden",
+    "Änderungen müssen offengelegt werden",
+    "Kostenlos, Quellcode",
+    "kostenlos, Quellcode"
+   ],
+   "fenster": 160,
+   "belegt": "2026-08-27 - FALL-01 c) sagte 'Kostenlos, Quellcode einsehbar; Aenderungen muessen veroeffentlicht werden' und widersprach damit pool_m04 und abkuerzungen.js, die beide 'bei Weitergabe' sagen. Am selben Abend in 04_IT-Loesungen.md Z.449 wiedergefunden, nachdem pool_query.js den Lehrtext mitliest (B89).",
+   "entwarnung": [
+    "weitergeben",
+    "Weitergabe",
+    "weitergibt",
+    "weitergegeben",
+    "weiter gibt"
+   ]
+  },
+  {
+   "begriff": "Zurechenbarkeit",
+   "definition": "Eine Handlung laesst sich einer Person zuordnen. Mittel: Protokolle, persoenliche Konten, Zeitstempel.",
+   "abgrenzung": "Protokollierung wird regelmaessig der INTEGRITAET zugeschlagen. Integritaet heisst: die Daten sind unveraendert, nachweisbar ueber Hashwerte und Signaturen. Ein Protokoll sagt nicht, ob eine Datei veraendert wurde - es sagt, wer angemeldet war.",
+   "verbotene_nachbarn": [],
+   "fenster": 120,
+   "belegt": "2026-08-27 - FALL-03 b) ordnete 'Anomalie-Detection und Revision-Logs' der Integritaet zu; die Erklaerung wich mit 'gehoeren aber auch zum CIA-Kontext' selbst aus (B75).",
+   "entwarnung": []
+  },
+  {
+   "begriff": "nicht-funktionale Anforderung",
+   "definition": "Aussage darueber, WIE GUT ein System etwas tut: Leistung, Bedienbarkeit, Sicherheit, Portabilitaet, Verfuegbarkeit, Wartbarkeit.",
+   "abgrenzung": "Zwei Fehler: (1) Sicherheit und Skalierbarkeit werden als FUNKTIONALE Anforderungen aufgezaehlt - beides sind Musterbeispiele nicht-funktionaler. (2) Nicht-funktionale Anforderungen werden als 'in der Analyse irrelevant' bezeichnet - sie gehoeren ins Lastenheft und sind der haeufigste Streitpunkt bei der Abnahme.",
+   "verbotene_nachbarn": [],
+   "fenster": 160,
+   "belegt": "2026-08-27 - FALL-01 d) erklaerte beides vertauscht und nannte nicht-funktionale Anforderungen irrelevant (B66).",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Baustein",
+   "definition": "Ein Baustein des BSI IT-Grundschutz-Kompendiums (z. B. SYS.2.1 Allgemeiner Client) beschreibt Gefaehrdungslage und Anforderungen; die Anforderungen sind gegliedert in Basis-Anforderungen, Standard-Anforderungen und Anforderungen bei erhoehtem Schutzbedarf (BSI-Standard 200-2, Kap. 2.7).",
+   "abgrenzung": "Basis-, Kern- und Standard-Absicherung sind die drei VORGEHENSWEISEN nach BSI-Standard 200-2 (Kap. 3.3), keine Anforderungsstufen eines Bausteins; eine Stufe Zusatz gibt es nicht. Der Anker ist das Wort Baustein, weil der fehlerhafte Satz den Begriff Kern-Absicherung gar nicht nennt.",
+   "verbotene_nachbarn": [
+    "Kern, Zusatz",
+    "Kern-Anforderung",
+    "Kernanforderung",
+    "Zusatz-Anforderung"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-11 - Inhaltsrunde 3: 06_IT-Sicherheit_und_Datenschutz.md Z. 237 (06#228) nannte als Massnahmen eines Bausteins 'Standard, Kern, Zusatz'. Am Original belegt: BSI-Standard 200-2, Kap. 2.7 S. 17 und Kap. 3.3 S. 26-28. Gegengeprobt am Ur-Zustand des Lehrtextes.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Qualitätslenkung",
+   "definition": "Teil des Qualitaetsmanagements, der auf die Erfuellung von Qualitaetsanforderungen gerichtet ist; englisch quality control (ISO 9000). Qualitaetsplanung = quality planning, Qualitaetsverbesserung = quality improvement.",
+   "abgrenzung": "Steering und Optimization sind keine Normbegriffe; die englische Entsprechung von Qualitaetslenkung ist quality control, die von Qualitaetsverbesserung quality improvement.",
+   "verbotene_nachbarn": [
+    "Steering",
+    "Optimization"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-11 - Inhaltsrunde 7: 05_Qualitaetssicherung.md Z. 199/204 nannte 'Qualitaetslenkung (Steering)' und 'Qualitaetsverbesserung (Optimization)', waehrend M05-311 richtig 'Quality Control' fuehrt. Belegt: ISO 9000:2000/2015 Begriffe (NIST-Glossar ISO 9000:2015 'quality control'; UZH-Folien SE HS09 Kap. 19 mit den deutschen Definitionen). Gegengeprobt am Ur-Zustand des Lehrtextes.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Störung (Incident)",
+   "definition": "ITIL 4: Incident = ungeplante Unterbrechung eines Services oder Minderung seiner Qualitaet (das Symptom, auch bei nur einem betroffenen Nutzer); Problem = die Ursache oder moegliche Ursache einer oder mehrerer Incidents; Known Error = analysiertes, noch nicht behobenes Problem.",
+   "abgrenzung": "Eine Stoerung ist kein Sonderfall eines Fehlers mit Geschaeftsauswirkung, und ein Fehler ist keine harmlose Vorstufe mit geringer Prioritaet. Stoerungs-Management stellt den Betrieb wieder her, Fehlermanagement (Problem Management) beseitigt die Ursache. Anker ist 'Stoerung (Incident)', weil der fehlerhafte Satz direkt dahinter steht.",
+   "verbotene_nachbarn": [
+    "Ein Fehler, der",
+    "Gering, wird beobachtet"
+   ],
+   "fenster": 400,
+   "belegt": "2026-10-11 - BUILD_LOG 135: 01_Projektmanagement_und_Arbeitsorganisation.md (01#418) definierte die Stoerung als 'Ein Fehler, der Geschaeftsprozess unterbricht' und gab dem Fehler 'Gering, wird beobachtet' - gegen M01-956 und 07#572. Belegt: ITIL-4-Glossar (ManageEngine 'ITIL Jargon Explained'; Virima 'Guide to ITIL 4 Incident and Problem Management'). Gegengeprobt am Ur-Zustand des Lehrtextes.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Dringlichkeit (Urgency)",
+   "definition": "Dringlichkeit = wie schnell eine Loesung noetig ist (zeitkritisch); Auswirkung (Impact) = Reichweite und Schaden, also z. B. wie viele Nutzer betroffen sind. Prioritaet = Kombination beider.",
+   "abgrenzung": "Die Zahl der Betroffenen beschreibt die Auswirkung, nicht die Dringlichkeit (M01-015, M07-950).",
+   "verbotene_nachbarn": [
+    "alle Nutzer betroffen",
+    "Viele Nutzer, Gesch",
+    "Einige Nutzer, Workaround"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-11 - BUILD_LOG 135: 01_Projektmanagement_und_Arbeitsorganisation.md (01#439) beschrieb die Dringlichkeitsstufen ueber die Nutzerzahl ('Kritisch: System down, alle Nutzer betroffen'), waehrend M01-015 und M07-950 Dringlichkeit als zeitkritisch und die Nutzerzahl als Auswirkung fuehren. Gegengeprobt am Ur-Zustand des Lehrtextes.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "RAM",
+   "definition": "Arbeitsspeicher (DRAM): Zugriffszeit im Bereich von rund 10 bis 100 Nanosekunden – langsamer als Cache, aber um Groessenordnungen schneller als SSD (Mikrosekunden) und HDD (Millisekunden).",
+   "abgrenzung": "Mikrosekunden sind die Groessenordnung einer SSD, nicht des Arbeitsspeichers (M03-484).",
+   "verbotene_nachbarn": [
+    "µs-Zugriff",
+    "µs Zugriff"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-11 - BUILD_LOG 141 (N48 P5): M03-484 erklaerungKurz gab dem RAM 'µs-Zugriff'; DRAM-Latenz liegt im Nanosekundenbereich (CAS-Latenz ~10-15 ns, Gesamtzugriff ~50-100 ns), µs ist SSD. Gegenprobe am Ur-Zustand: 1 Treffer.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "ipconfig",
+   "definition": "Windows-Befehl fuer die IP-Konfiguration. Seine Optionen nehmen '/' UND '-' an: 'ipconfig -all' liefert dasselbe wie 'ipconfig /all'.",
+   "abgrenzung": "Ein Bindestrich vor der Option ist unter Windows bei ipconfig KEIN Fehler (M04-513).",
+   "verbotene_nachbarn": [
+    "nicht '-all'",
+    "-all' ist deshalb falsch"
+   ],
+   "fenster": 300,
+   "belegt": "2026-10-11 - BUILD_LOG 141 (N48 P5): gemessen auf dem Windows-PC des Nutzers - 'ipconfig.exe -all' rc 0, 44 Zeilen, gleich 'ipconfig /all'; eine unbekannte Option ('-xyz') meldet 'Nicht erkannte oder unvollstaendige Befehlszeile'. M04-513 erklaerte '-all' zum Fehler. Gegenprobe am Ur-Zustand: 1 Treffer.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "JArbSchG",
+   "definition": "Seit der BBiG-Novelle zum 01.01.2020 sind ALLE Auszubildenden an dem Arbeitstag freizustellen, der der schriftlichen Abschlussprüfung unmittelbar vorangeht (§ 15 Abs. 1 Satz 2 Nr. 5 BBiG) – bei gestreckter Prüfung vor Teil 1 und Teil 2. § 10 Abs. 1 Nr. 2 JArbSchG gilt daneben weiter für Jugendliche.",
+   "abgrenzung": "Der freie Tag vor der schriftlichen Abschlussprüfung ist kein reines Jugendlichen-Recht mehr (M08-110, M08-609).",
+   "verbotene_nachbarn": [
+    "nur für Jugendliche",
+    "noch JUGENDLICH",
+    "noch jugendlich, hat er",
+    "Zusatzschutz für Jugendliche"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-18 - N48 P5 (Phase 9): M08-110 nannte den Tag vor der schriftlichen AP1 'nur für Jugendliche (§ 10 JArbSchG)', M08-609 ebenso. Wortlaut § 15 Abs. 1 Satz 2 Nr. 5 BBiG und IHK-Aussagen (Duesseldorf, Elbe-Weser, Wuerzburg, Stuttgart: gilt fuer Teil 1 und Teil 2) per WebSearch-Auszug 17./18.10.2026; die Seiten selbst sperrte der Proxy (403). Gegenprobe am Ur-Zustand: 2 Treffer.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Formkaufmann",
+   "definition": "Formkaufmann (§ 6 Abs. 2 HGB) ist, wem das Gesetz die Kaufmannseigenschaft ohne Rücksicht auf den Gegenstand des Unternehmens beilegt: GmbH, AG, KGaA, eG. OHG und KG sind Handelsgesellschaften (§ 6 Abs. 1 HGB), aber keine Formkaufleute – sie setzen ein Handelsgewerbe voraus.",
+   "abgrenzung": "Eine OHG ist kein Formkaufmann; ein Formkaufmann braucht kein Handelsgewerbe (M08-323 gegen M08-324/M08-327).",
+   "verbotene_nachbarn": [
+    "OHG ist z.B. ein Formkaufmann",
+    "OHG ist z. B. ein Formkaufmann",
+    "OHG ist ein Formkaufmann",
+    "juristische Person mit Handelsgewerbe"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-18 - N48 P5 (Phase 9): M08-323 erklaerungLang nannte die 'Feuchtwanger Textilwerke OHG' als Formkaufmann und den Formkaufmann eine 'juristische Person mit Handelsgewerbe'; M08-324 (GmbH unabhaengig von der Geschaeftstaetigkeit Kaufmann) und M08-327 (KG als Formkaufmann = Fehlerzeile) sagen das Gegenteil. Gegenprobe am Ur-Zustand: 1 Treffer.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "offenlegt",
+   "definition": "Die GmbH legt ihren Jahresabschluss offen (§ 325 HGB). Geprüft werden muss er nur bei mittelgroßen und großen Kapitalgesellschaften (§ 316 Abs. 1 HGB); kleine GmbH legen ungeprüfte Zahlen offen.",
+   "abgrenzung": "Offenlegung ist nicht gleich Prüfung (M08-312).",
+   "verbotene_nachbarn": [
+    "geprüfte Zahlen"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-18 - N48 P5 (Phase 9): M08-312 begruendete das Vertrauen in die GmbH damit, dass sie 'geprüfte Zahlen offenlegt' - fuer die kleine GmbH (die meisten) falsch, keine Pruefungspflicht. Gegenprobe am Ur-Zustand: 1 Treffer.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Testumgebung",
+   "definition": "Kein Fachbegriff-Konflikt, sondern Drift: in M05-950 ist das vierte Element ein Protokolleintrag der Testumgebung ohne Sekunden (200 Testläufe pro Woche), kein Darstellungsfehler von Pixeln.",
+   "abgrenzung": "Die Erklärung muss das Element beschreiben, das in der Aufgabe steht (M05-950).",
+   "verbotene_nachbarn": [
+    "zwei Pixel"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-18 - N48 P5 (Phase 9): M05-950 erklaerungLang sprach von 'zwei Pixel in einer Testumgebung' und 'bei jedem Aufruf', das Element nennt einen Protokolleintrag bei jedem der 200 Testlaeufe pro Woche. Gegenprobe am Ur-Zustand: 1 Treffer.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Abnahme",
+   "definition": "Abnahme beim Werkvertrag (§ 640 BGB): die Billigung des Werks als im Wesentlichen vertragsgemäß. Sie ist nicht an eine Form gebunden – ausdrücklich, konkludent (z. B. durch Nutzung ohne Rüge) oder fiktiv (Fristablauf, § 640 Abs. 2 BGB). Eine förmliche Abnahme gibt es nur, wenn sie vereinbart ist.",
+   "abgrenzung": "„Abnahme“ statt „förmliche Abnahme“, wo die Abnahme schlechthin gemeint ist (M07-040 und M07-219 gegen M07-052, M07-202, M07-716). In Distraktoren, die gerade auf das Formerfordernis zielen (M07-201, M07-770), darf „förmlich“ stehen.",
+   "verbotene_nachbarn": [
+    "Eine förmliche Abnahme ist vorgesehen",
+    "Dazu gehören die förmliche Abnahme",
+    "Mit der förmlichen Abnahme",
+    "der förmlich abgenommen wird"
+   ],
+   "fenster": 200,
+   "belegt": "2026-10-18 - Nutzer-Entscheid zur P5-Befundliste (BUILD_LOG 221): Werkvertrag schuldet eine Abnahme, keine förmliche (§ 640 BGB; Pool selbst: M07-040 'muss nicht förmlich erfolgen'). Gegenprobe am Ur-Zustand: Treffer in M07-052, M07-202, M07-716.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "betroffenen Personen",
+   "definition": "Datenschutzverletzung: Meldung an die Aufsichtsbehörde nach Art. 33 DSGVO (binnen 72 Stunden, außer ein Risiko ist unwahrscheinlich); Benachrichtigung der betroffenen Personen nach Art. 34 DSGVO nur bei voraussichtlich hohem Risiko.",
+   "abgrenzung": "Die Benachrichtigung der Betroffenen stützt sich auf Art. 34, nicht auf Art. 33 (Lehrtext 06 Abschnitt Datenschutzverletzung; M06-704, M06-735).",
+   "verbotene_nachbarn": ["für deren Rechte besteht (Art. 33, 34"],
+   "fenster": 200,
+   "belegt": "2026-10-18 - N48 P5 B1: M06-017 erklaerungLang zog Art. 33 und 34 für die Benachrichtigung Betroffener zusammen. Gegenprobe am Ur-Zustand: Treffer in M06-017.",
+   "entwarnung": []
+  },
+  {
+   "begriff": "Domain Controller",
+   "definition": "Fällt der Domain Controller aus, melden sich Benutzer mit zwischengespeicherter Domänenanmeldung (Cached Logon, Windows-Standard 10) weiter am eigenen Rechner an; ohne Cache geht es nicht, Domänenressourcen sind nicht erreichbar.",
+   "abgrenzung": "Nicht absolut „können sich nicht anmelden“ – Abhängigkeit vom DC ja, darum mindestens zwei DCs (M03-115).",
+   "verbotene_nachbarn": ["können sich Benutzer nicht neu anmelden"],
+   "fenster": 200,
+   "belegt": "2026-10-18 - N48 P5 B1: M03-115 Musterlösung. Quelle: Microsoft Learn 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)'. Gegenprobe am Ur-Zustand: Treffer in M03-115.",
+   "entwarnung": []
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "_zweck": "Die Ausnahmen des P7-Waechters: rohe HTML-Bedienelemente in neu/src ausserhalb von components/ui und ausserhalb der Tests, die ABSICHTLICH roh bleiben. Jeder Eintrag nennt Datei, Element und Grund. Wer ein rohes Element neu einfuehrt, traegt es hier ein ODER baut es aus components/ui - beides bewusst, keines nebenbei.",
+ "_stand": "aufgenommen 21.09.2026 nach N25 P6b, gemessen mit _to_delete/helfer/rohe_messen.py (Gegenprobe: ein eingefuegtes rohes <input> wird bemerkt, dasselbe im Kommentar nicht). Bestand: 3. ⚠️ 22.09.2026: huelle/Schiene.tsx ist RAUS - ihr Grund war 'bis N25b', also eine Frist, kein sachlicher Grund; der Knopf ist jetzt ein Button-Baustein. Ein Eintrag 'bis Etappe X' wird hier nicht mehr aufgenommen.",
+ "_geprueft_kein_fund": [
+  "Die Hotspot-Klickzonen sind <rect role=\"button\"> in einem SVG, kein rohes HTML-Bedienelement - der Waechter sieht sie zu Recht nicht. KEIN Eintrag noetig (sonst steht hier eine Ausnahme fuer etwas, das nie gemeldet wird).",
+  "huelle/Kopf.tsx hat kein rohes <button> mehr.",
+  "huelle/Schiene.tsx: am 22.09.2026 auf `Button variant=ghost size=icon` gehoben - keine Ausnahme mehr noetig."
+ ],
+ "_grenze": "Der Waechter misst die SCHREIBWEISE, nicht die Bedeutung. Ein Baustein, der intern falsch bedient wird, bleibt ihm verborgen - dafuer sind der Schnappschuss und die Suiten da.",
+ "ausnahmen": [
+  {
+   "datei": "neu/src/fragetypen/Lueckentext.tsx",
+   "element": "input",
+   "grund": "Das Feld steht MITTEN IM SATZ. shadcns Input ist ein Block mit fester Hoehe und voller Breite - er wuerde die Zeile aufbrechen. Nur die Klassen folgen dem Baustein.",
+   "seit": "N25 P3"
+  },
+  {
+   "datei": "neu/src/fragetypen/Bildflaeche.tsx",
+   "element": "button",
+   "grund": "Eine unsichtbare Klickflaeche ueber dem Bild (tabIndex -1), kein Bedienelement: sie oeffnet die Lupe fuer die Maus, waehrend die Tastatur den echten Lupen-Knopf daneben benutzt. Ein Button-Baustein wuerde ihr Rand, Hoehe und Fokusring geben.",
+   "seit": "N25 P4"
+  },
+  {
+   "datei": "neu/src/schirme/Fragetext.tsx",
+   "element": "button",
+   "grund": "Der Ausloeser eines Begriffs-Tooltips steht IM FLIESSTEXT und haengt als `asChild` an Radix' Popover.Anchor. Wie beim Lueckentext wuerde der Block-Baustein die Zeile aufbrechen.",
+   "seit": "N23"
+  },
+  {
+   "datei": "neu/src/schirme/Einstellungen.tsx",
+   "element": "input",
+   "grund": "Die Dateiauswahl fuer „Lernstand laden“ (Audit AUD-B2). Sie ist VERSTECKT (`hidden`) und wird vom sichtbaren Button-Baustein geoeffnet; components/ui hat keinen Datei-Baustein, und der Browser-Dialog laesst sich nur ueber ein echtes <input type=file> oeffnen.",
+   "seit": "Audit 26.09.2026"
+  }
+ ]
+}

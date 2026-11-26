@@ -1,0 +1,315 @@
+[
+  {
+    "id": "M03-900",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Cloud & Virtualisierung",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Worin unterscheidet sich ein Container grundlegend von einer virtuellen Maschine?",
+    "optionen": [
+      "Container nutzen den Kernel des Host-Betriebssystems mit, während jede virtuelle Maschine ein eigenes vollständiges Betriebssystem enthält",
+      "Container laufen ausschließlich unter Linux, virtuelle Maschinen dagegen ausschließlich unter Windows",
+      "Container werden von einem Hypervisor verwaltet, virtuelle Maschinen dagegen von einer Container-Engine wie Docker",
+      "Container speichern ihre Daten grundsätzlich dauerhaft, virtuelle Maschinen dagegen grundsätzlich nur flüchtig im Arbeitsspeicher des Hosts"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Beide Techniken gibt es auf beiden Plattformen; die Bindung an ein bestimmtes Betriebssystem ist kein Unterscheidungsmerkmal.",
+      "Genau umgekehrt: Der Hypervisor verwaltet virtuelle Maschinen, die Container-Engine (z. B. Docker) die Container.",
+      "Die Dauerhaftigkeit hängt von der Konfiguration ab (Volumes bzw. virtuelle Festplatten), nicht von der Technik an sich – Container gelten sogar eher als flüchtig."
+    ],
+    "verweis": "Modul 03, Abschnitt 3.1 – Cloudlösungen und Virtualisierung",
+    "erklaerungKurz": "Der Kern des Unterschieds ist die Isolationsebene: Container teilen sich den Kernel des Hosts und kapseln nur die Anwendung samt ihren Abhängigkeiten – dadurch starten sie schnell und brauchen wenig Ressourcen. Eine virtuelle Maschine bringt über den Hypervisor virtuelle Hardware und ein eigenes komplettes Betriebssystem mit und ist dadurch stärker isoliert, aber schwergewichtiger.",
+    "erklaerungLang": "Container und virtuelle Maschinen lösen dasselbe Problem – Anwendungen voneinander trennen – auf zwei ganz verschiedenen Ebenen.\n• Die virtuelle Maschine virtualisiert die HARDWARE: Der Hypervisor gibt jeder VM eigene CPU, eigenen Arbeitsspeicher und eigene Platten, darauf läuft ein vollständiges Gastbetriebssystem mit eigenem Kernel.\n• Der Container virtualisiert das BETRIEBSSYSTEM: Er nutzt den Kernel des Hosts mit und kapselt nur die Anwendung samt Bibliotheken und Konfiguration.\n• Folge in der Praxis: Container starten in Sekunden und belegen Megabyte, eine VM braucht Minuten und Gigabyte.\n• Der Preis ist die schwächere Isolation – wer den Host-Kernel kompromittiert, erreicht alle Container. Fremde oder besonders kritische Lasten laufen deshalb weiter in VMs.\n• Zu den Distraktoren: Docker ist die Container-Engine, der Hypervisor gehört zur VM – nicht umgekehrt. Container laufen auch unter Windows, und Daten lassen sich in beiden Fällen über Volumes dauerhaft ablegen.\nMerke: Die VM bringt ein eigenes Betriebssystem mit, der Container leiht sich das des Hosts."
+  },
+  {
+    "id": "M03-901",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Cloud & Virtualisierung",
+    "gebiet": "A2",
+    "typ": "mtf",
+    "schwierigkeit": 2,
+    "frage": "Bewerte die folgenden Aussagen zu Cloud-Servicemodellen jeweils als wahr oder falsch.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Cloudlösungen und Virtualisierung",
+    "erklaerungKurz": "IaaS, PaaS und SaaS unterscheiden sich darin, wie viel der Anbieter übernimmt: bei IaaS nur die Infrastruktur (das Betriebssystem pflegt der Kunde), bei PaaS zusätzlich die Laufzeitumgebung, bei SaaS die fertige Anwendung. Unabhängig vom Modell bleibt der Kunde für seine Daten und die Vergabe von Zugriffsrechten verantwortlich – das ist der Kern der geteilten Verantwortung.",
+    "erklaerungLang": "Die drei Servicemodelle unterscheiden sich nur in einer Frage: Wo verläuft die Grenze zwischen Anbieter und Kunde?\n• IaaS liefert Rechenleistung, Speicher und Netz. Alles oberhalb – Betriebssystem, Patches, Laufzeitumgebung, Anwendung – bleibt Sache des Kunden.\n• PaaS liefert zusätzlich Betriebssystem und Laufzeitumgebung. Der Kunde bringt nur noch seinen eigenen Code mit und muss keine Updates einspielen.\n• SaaS liefert die fertige Anwendung. Der Kunde konfiguriert und benutzt sie, meist im Browser.\n• Die vierte Aussage ist der wichtigste Irrtum: Die geteilte Verantwortung endet NIE bei den Daten. Wer welche Zugriffsrechte bekommt und welche Daten überhaupt in die Cloud dürfen, entscheidet und verantwortet immer der Kunde – auch bei SaaS.\nMerke: Je höher das Modell, desto mehr macht der Anbieter – nur für die eigenen Daten und Rechte bleibt der Kunde in jedem Modell zuständig.",
+    "aussagen": [
+      {
+        "text": "Bei SaaS betreibt der Anbieter die Anwendung; der Kunde nutzt sie in der Regel über den Browser.",
+        "wahr": true
+      },
+      {
+        "text": "Bei IaaS ist der Kunde für das Betriebssystem der virtuellen Maschine und dessen Updates selbst verantwortlich.",
+        "wahr": true
+      },
+      {
+        "text": "Bei PaaS stellt der Anbieter eine fertige Entwicklungs- und Laufzeitumgebung bereit, um deren Wartung sich der Kunde nicht kümmern muss.",
+        "wahr": true
+      },
+      {
+        "text": "In einer Public Cloud geht die Verantwortung für die eigenen Daten und die Vergabe von Zugriffsrechten vollständig auf den Anbieter über.",
+        "wahr": false
+      }
+    ]
+  },
+  {
+    "id": "M03-902",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Cloud & Virtualisierung",
+    "gebiet": "A2",
+    "typ": "kreuztabelle",
+    "schwierigkeit": 3,
+    "frage": "Kreuze an, welche Aufgaben beim jeweiligen Servicemodell vom Cloud-Anbieter übernommen werden.",
+    "verweis": "Modul 03, Abschnitt 3.1 – Cloudlösungen und Virtualisierung",
+    "erklaerungKurz": "Die Verantwortung wandert mit steigendem Servicemodell zum Anbieter: Rechenzentrum und Hardware übernimmt er immer. Ab PaaS kommen Betriebssystem und Laufzeitumgebung dazu, erst bei SaaS auch die Anwendung selbst. Bei IaaS pflegt der Kunde das Betriebssystem, bei PaaS entwickelt und betreibt er noch seine eigene Anwendung.",
+    "erklaerungLang": "Die Tabelle bildet den sogenannten Verantwortungsstapel ab: Von unten nach oben wandert jede Schicht bei steigendem Servicemodell zum Anbieter.\n• Rechenzentrum und physische Server: in allen drei Modellen beim Anbieter. Genau das ist der Grundgedanke von Cloud – niemand kauft mehr eigene Bleche.\n• Betriebssystem der virtuellen Maschine: bei IaaS beim Kunden, ab PaaS beim Anbieter. Das ist die Grenze, an der Prüfungsaufgaben am häufigsten hängen.\n• Laufzeitumgebung und Middleware: ebenfalls ab PaaS beim Anbieter – also Datenbank-Engine, Webserver, Interpreter.\n• Anwendungssoftware: erst bei SaaS beim Anbieter. Bei PaaS entwickelt und betreibt der Kunde seine Anwendung selbst, auch wenn er den Unterbau nicht mehr pflegt.\nMerke: Eine Zeile wandert nie zurück – wer eine Schicht beim Anbieter hat, hat auch alle darunter bei ihm.",
+    "zeilen": [
+      "Rechenzentrum und physische Server",
+      "Betriebssystem der virtuellen Maschine",
+      "Laufzeitumgebung und Middleware",
+      "Anwendungssoftware"
+    ],
+    "spalten": [
+      "IaaS",
+      "PaaS",
+      "SaaS"
+    ],
+    "loesung": [
+      [
+        true,
+        true,
+        true
+      ],
+      [
+        false,
+        true,
+        true
+      ],
+      [
+        false,
+        true,
+        true
+      ],
+      [
+        false,
+        false,
+        true
+      ]
+    ]
+  },
+  {
+    "id": "M04-925",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "IP-Adressierung",
+    "gebiet": "A3",
+    "typ": "mc",
+    "schwierigkeit": 2,
+    "frage": "Wie ist eine IPv6-Adresse aufgebaut?",
+    "optionen": [
+      "128 Bit, notiert als acht durch Doppelpunkte getrennte Gruppen zu je vier Hexadezimalziffern",
+      "64 Bit, notiert als vier durch Punkte getrennte Dezimalzahlen im Bereich von 0 bis 255 je Gruppe",
+      "128 Bit, notiert als sechzehn durch Punkte getrennte Dezimalzahlen",
+      "256 Bit, notiert als acht durch Doppelpunkte getrennte Dezimalgruppen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Das beschreibt eher IPv4: 32 Bit in vier durch Punkte getrennten Dezimalzahlen. 64 Bit ist bei IPv6 nur die Länge der Interface-ID.",
+      "Die Länge stimmt, die Schreibweise nicht: IPv6 wird hexadezimal mit Doppelpunkten notiert, nicht dezimal mit Punkten.",
+      "IPv6 ist 128 Bit lang, nicht 256 Bit, und wird hexadezimal geschrieben."
+    ],
+    "erklaerungKurz": "IPv6 verwendet 128 Bit statt der 32 Bit von IPv4. Geschrieben wird die Adresse als acht Blöcke zu je 16 Bit, dargestellt durch vier Hexadezimalziffern und getrennt durch Doppelpunkte, zum Beispiel 2001:0db8:85a3:0000:0000:8a2e:0370:7334.",
+    "erklaerungLang": "IPv6 wurde entworfen, weil die 32 Bit von IPv4 nur rund 4,3 Milliarden Adressen ergeben – zu wenig für die Zahl der Geräte.\n• Länge: 128 Bit. Das sind 2 hoch 128 mögliche Adressen, also etwa 340 Sextillionen – praktisch unerschöpflich.\n• Notation: acht Gruppen zu je 16 Bit, jede Gruppe als vier Hexadezimalziffern, getrennt durch Doppelpunkte. Beispiel: 2001:0db8:85a3:0000:0000:8a2e:0370:7334.\n• Hexadezimal statt dezimal, weil 128 Bit in Dezimalschreibweise unlesbar lang würden – vier Hexziffern entsprechen genau 16 Bit.\n• Zur Abgrenzung von IPv4: vier durch Punkte getrennte Dezimalzahlen von 0 bis 255 sind IPv4 mit 32 Bit. Wer Punkte sieht, sieht IPv4; wer Doppelpunkte sieht, sieht IPv6.\nMerke: 128 Bit, acht Gruppen, Hexadezimal, Doppelpunkte – vier Merkmale, die zusammen immer IPv6 bedeuten.",
+    "verweis": "Modul 04, Abschnitt 4.1: Praxisbeispiel IPv6-Konfiguration"
+  },
+  {
+    "id": "M04-926",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "IP-Adressierung",
+    "gebiet": "A3",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Aussagen zu IPv6-Adressen treffen zu? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Für Endgeräte-Subnetze ist ein Präfix von /64 der Regelfall; die unteren 64 Bit bilden die Interface-ID",
+      "Adressen mit dem Präfix fe80::/10 sind Link-Local-Adressen und gelten nur innerhalb desselben Netzsegments",
+      "Führende Nullen innerhalb einer Gruppe dürfen weggelassen werden",
+      "Die Kurzschreibweise :: darf in einer Adresse nur ein einziges Mal vorkommen",
+      "IPv6 kennt weiterhin eine Broadcast-Adresse, mit der alle Geräte des Subnetzes gleichzeitig angesprochen werden"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "IPv6 hat den Broadcast abgeschafft. Diese Aufgabe übernehmen Multicast-Adressen (ff00::/8), zum Beispiel ff02::1 für alle Knoten im lokalen Segment."
+    ],
+    "erklaerungKurz": "Ein /64-Präfix trennt Netzanteil und Interface-ID sauber in zwei Hälften. fe80::/10 kennzeichnet Link-Local-Adressen, die nicht geroutet werden. Zur Verkürzung dürfen führende Nullen einer Gruppe entfallen; :: ersetzt zusammenhängende Nullgruppen und ist genau einmal erlaubt, weil die Adresse sonst nicht mehr eindeutig rekonstruierbar wäre. Einen Broadcast gibt es in IPv6 nicht mehr – dafür sorgt Multicast.",
+    "erklaerungLang": "Die vier richtigen Aussagen beschreiben Aufbau und Schreibweise, die fünfte behauptet ein Verfahren, das IPv6 abgeschafft hat.\n• /64 für Endgeräte-Subnetze: Die obere Hälfte ist Netzanteil, die untere die Interface-ID. Diese saubere Halbierung ist Voraussetzung für die zustandslose Autokonfiguration (SLAAC).\n• fe80::/10 sind Link-Local-Adressen. Jedes IPv6-Interface hat eine, sie werden von keinem Router weitergeleitet und dienen der Kommunikation im selben Segment, etwa für Neighbor Discovery.\n• Führende Nullen einer Gruppe dürfen entfallen: 0db8 wird db8, 0000 wird 0.\n• Das Kürzel :: ersetzt eine zusammenhängende Folge von Nullgruppen und ist genau EINMAL erlaubt. Käme es zweimal vor, wäre nicht mehr berechenbar, wie viele Nullgruppen auf welche Stelle fallen – die Adresse würde mehrdeutig.\n• Broadcast gibt es in IPv6 nicht mehr. Seine Aufgaben übernimmt Multicast, etwa ff02::1 für alle Knoten im Segment – gezielter und ohne alle Geräte zu belasten.\nMerke: IPv6 kennt Unicast, Multicast und Anycast – aber keinen Broadcast.",
+    "verweis": "Modul 04, Abschnitt 4.1: Praxisbeispiel IPv6-Konfiguration"
+  },
+  {
+    "id": "M04-927",
+    "pruefungsteil": "AP1",
+    "modul": "M04",
+    "thema": "IP-Adressierung",
+    "gebiet": "A3",
+    "typ": "dropdown",
+    "schwierigkeit": 2,
+    "frage": "Eine IPv6-Adresse ist ___ Bit lang. Die Kurzschreibweise :: ersetzt eine zusammenhängende Folge von Nullgruppen und darf pro Adresse ___ vorkommen.",
+    "luecken": [
+      {
+        "optionen": [
+          "32",
+          "64",
+          "128",
+          "256"
+        ],
+        "loesung": 2
+      },
+      {
+        "optionen": [
+          "beliebig oft",
+          "genau zweimal",
+          "höchstens einmal",
+          "nur am Ende"
+        ],
+        "loesung": 2
+      }
+    ],
+    "erklaerungKurz": "IPv6 nutzt 128 Bit. Das Doppel-Doppelpunkt-Kürzel :: steht für eine Folge von Nullgruppen und ist pro Adresse höchstens einmal zulässig: Käme es zweimal vor, ließe sich nicht mehr eindeutig berechnen, wie viele Nullgruppen auf welche Stelle entfallen.",
+    "erklaerungLang": "Beide Lücken prüfen genau die zwei Angaben, die man zu IPv6 auswendig können muss.\n• 128 Bit ist die Adresslänge – der Vergleichswert für IPv4 ist 32 Bit. 64 Bit ist nur die Hälfte einer IPv6-Adresse (der übliche Präfix eines Endgeräte-Subnetzes), 256 Bit gibt es nicht.\n• Das Kürzel :: ist höchstens EINMAL zulässig. Der Grund ist Eindeutigkeit: Aus 2001:db8::1 lässt sich rekonstruieren, dass fünf Nullgruppen fehlen. Bei 2001::db8::1 wäre unbestimmt, wie sich die fehlenden Gruppen auf die zwei Stellen verteilen.\n• Es ist ausdrücklich HÖCHSTENS einmal, nicht genau einmal: Eine vollständig ausgeschriebene Adresse ohne :: ist gültig.\n• Die Position ist frei – am Anfang (::1 für Loopback), in der Mitte oder am Ende (2001:db8::).\nMerke: 128 Bit lang, und der Doppel-Doppelpunkt genau deshalb nur einmal, weil die Adresse sonst mehrdeutig würde.",
+    "verweis": "Modul 04, Abschnitt 4.1: Praxisbeispiel IPv6-Konfiguration"
+  },
+  {
+    "id": "M03-903",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Ein Kollege bestellt für seinen Arbeitsplatz ein Dock, das ausdrücklich „mit USB4\" beworben wird. Im Betrieb ist die Datenrate deutlich niedriger als erwartet. Welche Erklärung trifft zu?",
+    "optionen": [
+      "USB4 schreibt nur eine Mindestrate von 20 Gbit/s vor; höhere Raten wie 40 oder 80 Gbit/s sind optional, weshalb die Bezeichnung allein wenig über das tatsächliche Tempo aussagt",
+      "USB4 ist auf 10 Gbit/s begrenzt; höhere Angaben der Hersteller beruhen auf der Bündelung mehrerer Kabel",
+      "Jedes USB4-Gerät durchläuft eine Zertifizierung und erreicht deshalb 40 Gbit/s – das Dock muss defekt sein",
+      "Die Datenrate hängt bei USB4 nur von der Kabellänge ab und nicht von der Ausstattung des Docks oder des Hosts; mit einem kürzeren Kabel erreicht das Dock deshalb die vollen 40 Gbit/s"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "USB4 sieht mindestens 20 Gbit/s vor, die Aussage ist falsch.",
+      "USB4 garantiert nur 20 Gbit/s Mindestrate; 40 Gbit/s sind nicht garantiert.",
+      "Die Rate hängt auch von Dock, Host und Kabelspezifikation ab."
+    ],
+    "verweis": "Modul 03, Abschnitt 3.1 – Hardwareprodukte und Kenngrößen",
+    "erklaerungKurz": "USB4 ist ein Rahmenstandard mit vielen optionalen Merkmalen: Pflicht sind lediglich 20 Gbit/s, während 40 Gbit/s (USB4 Version 1) und 80 Gbit/s (USB4 Version 2.0) freiwillig sind. Zwei Geräte mit identischem USB4-Logo können deshalb sehr unterschiedlich schnell sein – beim Einkauf zählt das konkrete Datenblatt, nicht die Bezeichnung.",
+    "erklaerungLang": "Der Fall zeigt eine Falle, die bei USB4 systematisch eingebaut ist: Der Name sagt weniger, als man erwartet.\n• USB4 ist ein Rahmenstandard. Verbindlich sind nur 20 Gbit/s; 40 Gbit/s (USB4 Version 1) und 80 Gbit/s (USB4 Version 2.0) sind ausdrücklich OPTIONAL.\n• Zwei Geräte mit demselben USB4-Logo können deshalb um den Faktor vier auseinanderliegen, ohne dass eines davon defekt oder falsch beworben ist.\n• Weitere optionale Merkmale: PCIe-Tunneling für externe Grafik oder NVMe, Thunderbolt-3-Kompatibilität und die Höhe der Ladeleistung.\n• Praktische Folge für den Einkauf: nicht auf das Logo schauen, sondern auf die konkrete Gbit/s-Angabe im Datenblatt – und zwar bei Dock, Kabel UND Host, denn die langsamste Komponente bestimmt das Tempo.\n• Zu den Distraktoren: 10 Gbit/s ist die USB-3.2-Gen-2-Rate, nicht die von USB4. Eine Zertifizierung auf 40 Gbit/s gibt es nicht, und die Kabellänge ist nur EIN Faktor unter mehreren.\nMerke: Bei USB4 ist die Zahl im Datenblatt die Zusage, nicht der Name auf der Packung."
+  },
+  {
+    "id": "M03-904",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "Hardware-Komponenten",
+    "gebiet": "A2",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Aussagen über Thunderbolt 5 treffen zu? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Thunderbolt 5 überträgt bidirektional mit 80 Gbit/s",
+      "Im asymmetrischen Modus (Bandwidth Boost) sind bis zu 120 Gbit/s in eine Richtung möglich",
+      "Intel gibt für Thunderbolt 5 verbindliche Mindestanforderungen vor, die jedes zertifizierte Gerät erfüllen muss",
+      "Technisch baut Thunderbolt 5 auf denselben Grundlagen auf wie USB4 Version 2.0",
+      "Thunderbolt 5 verwendet einen eigenen Steckertyp, der mechanisch nicht zu USB-C passt"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Thunderbolt nutzt seit Version 3 den USB-C-Steckverbinder; ein eigener Steckertyp existiert nicht."
+    ],
+    "verweis": "Modul 03, Abschnitt 3.1 – Hardwareprodukte und Kenngrößen",
+    "erklaerungKurz": "Thunderbolt 5 und USB4 Version 2.0 beruhen auf derselben Technik, unterscheiden sich aber in der Verbindlichkeit: Intel schreibt für Thunderbolt 5 unter anderem 80 Gbit/s bidirektional, den asymmetrischen 120-Gbit/s-Modus und vier PCIe-4.0-Lanes zwingend vor. Bei USB4 sind vergleichbare Merkmale optional. Der Stecker ist in beiden Fällen USB-C.",
+    "erklaerungLang": "Thunderbolt 5 und USB4 Version 2.0 sind technisch fast dasselbe – der Unterschied liegt nicht in der Physik, sondern in der Verbindlichkeit.\n• Gemeinsame Grundlage: beide nutzen USB-C als Stecker, dieselbe Signalcodierung (PAM-3) und dieselbe Tunneling-Architektur für PCIe und DisplayPort.\n• Bei Thunderbolt 5 schreibt Intel die Leistungsmerkmale ZWINGEND vor: 80 Gbit/s bidirektional, der asymmetrische Bandwidth-Boost auf bis zu 120 Gbit/s in eine Richtung und vier PCIe-4.0-Lanes.\n• Bei USB4 sind genau diese Merkmale optional – deshalb kann ein USB4-Gerät formal korrekt sein und trotzdem nur 20 Gbit/s liefern.\n• Der asymmetrische Modus ist für Bildschirme gedacht: 120 Gbit/s zum Monitor hin, 40 Gbit/s zurück, weil der Rückkanal bei Displays kaum Daten trägt.\n• Falsch ist allein der eigene Steckertyp: Thunderbolt nutzt seit Version 3 USB-C und ist mechanisch voll kompatibel.\nMerke: Thunderbolt 5 ist USB4 Version 2.0 mit Pflichtenheft – gleiche Technik, garantierte Werte."
+  },
+  {
+    "id": "M03-905",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "WLAN & Übertragungsstandards",
+    "gebiet": "A2",
+    "typ": "mc",
+    "schwierigkeit": 3,
+    "frage": "Welche Neuerung bringt Wi-Fi 7 (IEEE 802.11be) gegenüber Wi-Fi 6 und Wi-Fi 6E?",
+    "optionen": [
+      "Multi-Link Operation (MLO): ein Gerät kann mehrere Frequenzbänder gleichzeitig für dieselbe Verbindung nutzen",
+      "Die erstmalige Nutzung des 5-GHz-Bandes für WLAN-Verbindungen",
+      "Die erstmalige Einführung von MU-MIMO für mehrere Endgeräte gleichzeitig",
+      "Die erstmalige Nutzung des 6-GHz-Bandes für WLAN-Verbindungen, wodurch deutlich mehr breite Kanäle zur Verfügung stehen"
+    ],
+    "loesungIndex": 0,
+    "distraktorErklaerungen": [
+      "",
+      "Das 5-GHz-Band wird schon seit 802.11a genutzt; neu hinzugekommen war zuletzt das 6-GHz-Band mit Wi-Fi 6E.",
+      "MU-MIMO gibt es bereits seit Wi-Fi 5 (im Downlink) und Wi-Fi 6 (zusätzlich im Uplink).",
+      "Das 6-GHz-Band brachte bereits Wi-Fi 6E; Wi-Fi 7 nutzt es weiter, neu ist Multi-Link Operation."
+    ],
+    "verweis": "Modul 03, Abschnitt 3.3 – WLAN-Standards",
+    "erklaerungKurz": "Das eigentliche Kennzeichen von Wi-Fi 7 ist Multi-Link Operation: Ein Client kann 2,4-, 5- und 6-GHz-Verbindungen parallel für dieselbe Datenübertragung bündeln. Das erhöht nicht nur den Durchsatz, sondern senkt vor allem Latenz und Störanfälligkeit, weil bei Problemen auf ein anderes Band ausgewichen werden kann.",
+    "erklaerungLang": "Wi-Fi 7 bringt mehrere Verbesserungen, aber nur eine ist wirklich neu in der Art, wie eine Verbindung funktioniert.\n• Multi-Link Operation (MLO): Ein Client hält Verbindungen in 2,4, 5 und 6 GHz gleichzeitig und nutzt sie für DIESELBE Übertragung – entweder gebündelt für mehr Durchsatz oder umschaltend, wenn ein Band gestört ist.\n• Der eigentliche Gewinn ist deshalb nicht die Spitzenrate, sondern die Zuverlässigkeit: geringere Latenz und weniger Aussetzer, was für Videokonferenzen, VoIP und industrielle Anwendungen mehr zählt als Megabit.\n• Zur Abgrenzung: Das 5-GHz-Band gibt es seit 802.11a, MU-MIMO kam mit Wi-Fi 5 beziehungsweise Wi-Fi 6. Wi-Fi 6E hatte das 6-GHz-Band schon – aber nur EIN Band zur Zeit.\n• Verschlüsselung wird nicht abgeschafft, sondern verschärft: Für das 6-GHz-Band ist WPA3 zwingend.\nMerke: Wi-Fi 6E durfte ins 6-GHz-Band, Wi-Fi 7 darf in alle Bänder gleichzeitig."
+  },
+  {
+    "id": "M03-906",
+    "pruefungsteil": "AP1",
+    "modul": "M03",
+    "thema": "WLAN & Übertragungsstandards",
+    "gebiet": "A2",
+    "typ": "mehrfach",
+    "schwierigkeit": 3,
+    "frage": "Welche Merkmale gehören zu Wi-Fi 7 (IEEE 802.11be)? (Mehrere Antworten richtig)",
+    "optionen": [
+      "Kanalbreiten von bis zu 320 MHz",
+      "Modulation bis 4096-QAM (4K-QAM)",
+      "Nutzung der Frequenzbänder 2,4 GHz, 5 GHz und 6 GHz",
+      "Multi-Link Operation (MLO)",
+      "Kanalbreiten von bis zu 640 MHz"
+    ],
+    "loesungIndizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distraktorErklaerungen": [
+      "",
+      "",
+      "",
+      "",
+      "Wi-Fi 7 erlaubt hoechstens 320 MHz Kanalbreite."
+    ],
+    "verweis": "Modul 03, Abschnitt 3.3 – WLAN-Standards",
+    "erklaerungKurz": "Wi-Fi 7 verdoppelt die maximale Kanalbreite auf 320 MHz, hebt die Modulation auf 4096-QAM an, arbeitet in allen drei Bändern (2,4/5/6 GHz) und führt Multi-Link Operation ein. Die oft genannten Spitzenwerte von rund 46 Gbit/s sind theoretische Bruttoraten unter Idealbedingungen; reale Datenraten liegen wegen Störungen, Entfernung und Geräteausstattung erheblich niedriger.",
+    "erklaerungLang": "Die vier richtigen Merkmale sind die Kennzahlen von 802.11be, das fünfte ist eine Werbeaussage.\n• 320 MHz Kanalbreite: Verdopplung gegenüber Wi-Fi 6 – und nur im 6-GHz-Band überhaupt möglich, weil nur dort so viel zusammenhängendes Spektrum frei ist.\n• 4096-QAM: Jedes Symbol trägt 12 Bit statt 10 wie bei 1024-QAM. Das bringt rund 20 Prozent mehr Rate, verlangt aber ein sehr gutes Signal-Rausch-Verhältnis, also kurze Distanz.\n• Alle drei Bänder plus Multi-Link Operation: siehe die Nachbarfrage – das ist der strukturelle Sprung.\n• Die 46 Gbit/s sind eine theoretische BRUTTORATE unter Idealbedingungen: maximale Kanalbreite, höchste Modulation, volle Antennenzahl, kein Störer. Reale Werte liegen um ein Vielfaches darunter, und der Overhead des Protokolls ist noch nicht abgezogen.\nMerke: Bei WLAN-Angaben immer fragen, ob brutto oder netto und unter welchen Bedingungen – garantierte Raten gibt es im Funk nie."
+  }
+]

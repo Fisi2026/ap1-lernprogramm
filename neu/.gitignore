@@ -1,0 +1,28 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Coverage-Bericht (NB1, 28.09.2026) - Sicherheitsnetz, falls ein Lauf ihn doch hier ablegt:
+# Tailwind liest nicht ignorierte Dateien als Quelle.
+coverage

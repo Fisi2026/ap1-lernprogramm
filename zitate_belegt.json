@@ -1,0 +1,20 @@
+{
+  "_zweck": "EINE Quelle fuer zwei Waechter in check.sh (4e4): (A) woertliche Gesetzeszitate im Pool - jedes braucht einen Beleg mit Datum; (B) Vorschriften OHNE Absatzgliederung - eine Absatzangabe dazu ist immer falsch.",
+  "_anlass": "26.08.2026. Der Pool enthielt fuenf Stellen, die Gesetzestext in Anfuehrungszeichen wiedergeben - DREI davon waren keine Zitate, sondern Paraphrasen im Zitatgewand (Art. 32 DSGVO in M06-203, ein in § 14 BBiG nicht existierender Satz in M08-609, 'Die Schriftform wird nicht durch elektronische Form ersetzt' in M08-603). Ein viertes gab Art. 9 Abs. 3 GG mit 'zu beeintraechtigen' statt 'zu behindern' wieder. Ein Zitat ist eine Tatsachenbehauptung ueber den Wortlaut - es stimmt oder es stimmt nicht.",
+  "_regel": "Wer eine neue Stelle mit Gesetzestext in Anfuehrungszeichen schreibt, schlaegt den Wortlaut nach (WebFetch) und traegt die ID hier mit Fundstelle, Quelle und Datum ein. Ohne Eintrag meldet check.sh sie als FEHLER - nicht, weil sie falsch waere, sondern weil sie unbelegt ist.",
+  "_absatz_anlass": "M08-603 stand seit dem 28.07. mit der Korrektur '§ 623 BGB' im Pruefprotokoll - angekommen war sie nur in der Antwortoption, vier weitere Fundstellen trugen 'Abs. 1' und der verweis sogar einen erfundenen 'Abs. 2'. Eine Korrektur gilt erst, wenn sie im Pool gemessen ist.",
+
+  "belegte_zitate": [
+    { "id": "M06-108", "stelle": "Art. 4 Nr. 1 DSGVO", "zitat_beginnt": "Informationen, die sich auf eine identifizierte", "quelle": "dejure.org/gesetze/DSGVO/4.html", "geprueft": "2026-08-26" },
+    { "id": "M06-203", "stelle": "Art. 32 Abs. 1 Satz 1 DSGVO", "zitat_beginnt": "Unter Beruecksichtigung des Stands der Technik", "quelle": "dejure.org/gesetze/DSGVO/32.html", "geprueft": "2026-08-26", "hinweis": "am 26.08. korrigiert - vorher eine Paraphrase in Anfuehrungszeichen" },
+    { "id": "M08-603", "stelle": "§ 623 BGB", "zitat_beginnt": "Die Beendigung von Arbeitsverhaeltnissen durch Kuendigung", "quelle": "dejure.org/gesetze/BGB/623.html", "geprueft": "2026-08-26", "hinweis": "zweites, erfundenes Zitat in der Distraktorerklaerung am 26.08. ersetzt" },
+    { "id": "M08-609", "stelle": "§ 14 Abs. 3 BBiG", "zitat_beginnt": "Auszubildenden duerfen nur Aufgaben uebertragen werden", "quelle": "lxgesetze.de/bbig/14 und gesetze.legal/bund/bbig/14", "geprueft": "2026-08-26", "hinweis": "am 26.08. korrigiert - der vorherige Satz steht nirgends in § 14 BBiG" },
+    { "id": "M08-614", "stelle": "Art. 9 Abs. 3 GG", "zitat_beginnt": "Das Recht, zur Wahrung und Foerderung", "quelle": "dejure.org/gesetze/GG/9.html", "geprueft": "2026-08-26", "hinweis": "am 26.08. korrigiert - vorher 'zu beeintraechtigen suchen' statt 'zu behindern suchen'" }
+  ],
+
+  "absatzlose_vorschriften": [
+    { "vorschrift": "§ 623 BGB", "muster": "§ ?623 ?Abs", "beleg": "dejure.org/gesetze/BGB/623.html - ein einziger Satz, keine Absatzgliederung", "geprueft": "2026-08-26" },
+    { "vorschrift": "§ 20 BBiG", "muster": "§ ?20 ?Abs\\.? ?[0-9]? ?BBiG", "beleg": "M08_PRUEFLISTE_GESETZE.md Punkt 1 (gesetze-im-internet.de) - ein Absatz mit zwei Saetzen", "geprueft": "2026-07-28" },
+    { "vorschrift": "§ 13 BBiG", "muster": "§ ?13 ?Abs\\.? ?[0-9]? ?BBiG", "beleg": "M08_PRUEFLISTE_GESETZE.md Punkt 2 - Satz 1 und Satz 2 mit den Nummern 1 bis 7, keine Absaetze", "geprueft": "2026-07-28" }
+  ]
+}
