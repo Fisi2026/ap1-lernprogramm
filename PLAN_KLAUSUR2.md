@@ -1,6 +1,6 @@
 # PLAN_KLAUSUR2.md – Klausurvorbereitung „nächste Klausur“ (K2)
 
-Stand 14.10.2026 · Konto gmail · Status: GEPLANT, nichts gebaut (BUILD_LOG 180). Klausur ca. **Di. 20.10.2026**.
+Stand 14.10.2026 · Konto gmail · Status: DURCH – K2 Stufenmix bis Release v2.10.5 (BUILD_LOG 202–222, rotiert nach `BUILD_LOG_ARCHIV.md`; Beleg BUILD_LOG 248, nachgetragen 26.11.). Geplant ab BUILD_LOG 180. Klausur ca. **Di. 20.10.2026**.
 Spiegel im claude.ai-Projekt „Training“: `claude/Klausur-2_Planung.md` – maßgeblich ist DIESE Datei.
 
 ## 1. Themen (Nutzer, 14.10.)

@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► web.de: fisi 1.3.17 installieren (Nutzer; web.de stand noch auf 1.3.15), danach `tools/plugin/installiert.txt` · erste Sonnet-Etappe mit `/advisor opus` messen (Plan 299) · Schritt 14 auf den anderen zwei PCs · `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+**Damit offen:** ►► web.de: fisi 1.3.17 installieren (Nutzer), danach `tools/plugin/installiert.txt` · beim naechsten Plugin-Bump `projekt_einstieg.md:61` auf feste Agenten + Tiefensperre · erste Sonnet-Etappe mit `/advisor opus` messen (Plan 299) · Schritt 14 auf den anderen zwei PCs · `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
 
 ## 4. Die harten Grenzen der Bruecke
 
@@ -52,5 +52,5 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
   PFLICHT: einen Nutzer-Entscheid festhalten (ab E072 je eine Datei) → `entscheide/README.md`
   PFLICHT: ein Mess- oder Hilfsskript schreiben wollen → `WERKZEUGE.md` (es gibt es meist schon)
   PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `PLAN_NEUBAU.md`
-  PFLICHT: Agenten einsetzen, Ausgaben kürzen, Tooling-Fallstricke → `TASKLIST.md`
+  PFLICHT: Agenten einsetzen → Skill `fisi:agenten-orchestrierung`; Ausgaben kürzen, Tooling-Fallstricke → `TASKLIST.md`
   PFLICHT: eine Inhaltsrunde (Katalog-Luecken) planen oder fahren → `PLAN_INHALT.md`
