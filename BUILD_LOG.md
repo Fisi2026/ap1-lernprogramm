@@ -203,3 +203,9 @@
 **Minuten (Nachmessung 13:0x, billing usage):** neues Repo 57 min am 26.11. 10:19 (= die privaten Laeufe vor dem Umschalten), danach 0,004 min fuer alle oeffentlichen Laeufe -> **oeffentliche Standard-Runner sind frei** (gemessen, nicht mehr angenommen).
 **Modell:** Opus (Desktop, gmail) · 7T 39 % -> 40 %.
 **Damit offen:** ►► CodeQL-Funde sichten (7; Fix oder begruendet schliessen) · Scorecard (N41 S3) · Schritt 14 auf den anderen zwei PCs · 16.4 Cloud-Probe · `../Training_erstcommit` loeschen (Nutzer) · Bump 2.13.2 (zurueckgestellt) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+
+## 26.11.2026 (288) - CodeQL-Funde gesichtet: 1 behoben, 6 begruendet geschlossen; 287 LIVE belegt
+**287:** `e167605` = `refs/heads/main`, CI success (13:09).
+**Sichtung (Nutzer „Ja, sichten“, alle 7 Stellen gelesen):** Nr. 6 `js/double-escaping` `neu/src/kern/glossartip.gleichheit.test.ts:53` = echter Fehler im Test-Helfer (`&amp;` zuerst entschluesselt -> „&amp;lt;“ wuerde „<“) -> `&amp;` zuletzt; vitest der Datei 3/3 gruen. Per `gh api … code-scanning/alerts/<n>` mit Begruendung geschlossen: Nr. 1, 2 `won't fix` (`tools/pool_query.js` suche/kontext: lokales CLI, die Regex IST die Eingabe des Aufrufers) · Nr. 3, 4, 5 `used in tests` (`tests/test_entkommentiere.js`, `referenz/tests/test_pwa.js`: Textpruefungen, keine Sicherheitspruefung) · Nr. 7 `false positive` (`tools/archiv/t2_build.js:44`: Treffer enthaelt hoechstens ein ; oder {). Offen danach nur Nr. 6 – schliesst der CodeQL-Lauf dieses Pushs.
+**Modell:** Opus (Desktop, gmail) · 7T 40 % -> 40 %.
+**Damit offen:** ►► Nr. 6 nach dem CodeQL-Lauf `fixed` belegen · Scorecard (N41 S3) · Schritt 14 auf den anderen zwei PCs · 16.4 Cloud-Probe · `../Training_erstcommit` loeschen (Nutzer) · Bump 2.13.2 (zurueckgestellt) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).

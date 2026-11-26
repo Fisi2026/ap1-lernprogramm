@@ -51,7 +51,8 @@ const AUS = alteApp(false);
 function alteTerme(app: Record<string, any>, f: unknown): string[] {
   const html = String(app.glossarWrap(f));
   return [...html.matchAll(/data-term="([^"]*)"/g)].map((m) => m[1]
-    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'"));
+    // &amp; zuletzt: sonst wuerde aus "&amp;lt;" erst "&lt;" und dann "<" (CodeQL js/double-escaping, 26.11.2026).
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&"));
 }
 
 describe("Die alte App ist wirklich geladen", () => {
