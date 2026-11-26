@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► Nutzer-Entscheid normAntwort (Schluss-Leerraum mit abschneiden, z. B. `/[\s.,;:!?]+$/`) · Scorecard nach dem naechsten Lauf: SAST, Fuzzing messen · Schritt 14 auf den anderen zwei PCs · 16.4 Cloud-Probe · `../Training_erstcommit` loeschen (Nutzer) · Bump 2.13.2 (zurueckgestellt) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+**Damit offen:** ►► Bump 2.13.2 mit CHANGELOG fuer diesen Fix (Nutzer) · Schritt 14 auf den anderen zwei PCs · 16.4 Cloud-Probe · `../Training_erstcommit` loeschen (Nutzer) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
 
 ## 4. Die harten Grenzen der Bruecke
 

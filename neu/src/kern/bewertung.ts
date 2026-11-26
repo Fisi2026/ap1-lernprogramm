@@ -73,7 +73,9 @@ export function normAntwort(s: unknown): string {
   return String(s ?? "").trim().toLowerCase()
     .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
     .replace(/,/g, ".").replace(/\s+/g, " ")
-    .replace(/[.,;:!?]+$/, "")
+    // Leerraum VOR dem Schlusszeichen mit abschneiden (26.11.2026, BUILD_LOG 291, Nutzer-Entscheid):
+    // „Router ." ergab „router " und galt als falsch – gefunden per fast-check (eigenschaften.test.ts).
+    .replace(/[\s.,;:!?]+$/, "")
     .replace(/^([0-9]+)\.0+$/, "$1");
 }
 export function gradeLuecke(akzeptiert: readonly unknown[], eingabe: unknown): boolean {

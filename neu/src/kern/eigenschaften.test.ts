@@ -9,7 +9,7 @@ import * as fc from "fast-check";
 import { rechne } from "./rechner";
 import { ausDatei, alsDatei } from "./lernstanddatei";
 import { leererStand } from "./stand";
-import { normAntwort } from "./bewertung";
+import { gradeLuecke, normAntwort } from "./bewertung";
 import { normFreitext } from "./freitext";
 import { tipTeile } from "./glossartip";
 
@@ -64,16 +64,17 @@ describe("Normalisierung", () => {
       expect(normFreitext(n)).toBe(n);
     }));
   });
-  // ⚠️ BEKANNT (26.11.2026, BUILD_LOG 290): normAntwort("Router .") = "router " – das Satzzeichen am Ende
-  //    faellt, das Leerzeichen davor bleibt; gradeLuecke(["Router"], "Router .") ist darum false.
-  //    Die Regel zu aendern ist ein Bewertungs-Entscheid des Nutzers (bewertung.gleichheit.test.ts
-  //    vergleicht mit der alten App). Bis dahin steht der Test als `fails`: wird die Regel behoben,
-  //    wird er rot und muss zu `it` werden.
-  it.fails("normAntwort ist idempotent (bekannt: Leerzeichen vor Schlusspunkt)", () => {
+  // Gefunden 26.11.2026 (BUILD_LOG 290): „Router ." ergab „router " – behoben in BUILD_LOG 291.
+  it("normAntwort ist idempotent", () => {
     fc.assert(fc.property(knifflig, (s) => {
       const n = normAntwort(s);
       expect(normAntwort(n)).toBe(n);
     }));
+  });
+  it("Leerzeichen vor dem Schlusszeichen kippt die Antwort nicht", () => {
+    expect(gradeLuecke(["Router"], "Router .")).toBe(true);
+    expect(gradeLuecke(["Router"], "Router  !?")).toBe(true);
+    expect(normAntwort("1,0 .")).toBe("1");
   });
 });
 
