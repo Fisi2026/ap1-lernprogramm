@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► neue Sitzung: pruefen, ob `.claude/rules` beim Lesen von `pool/` geladen wird · web.de: fisi 1.3.16 installieren (Nutzer), danach `tools/plugin/installiert.txt` · Schritt 14 auf den anderen zwei PCs · `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+**Damit offen:** ►► Folgesitzung (Kontextschwelle): Tiefensperre proben (Haupt-Agent muss starten, sein Agent darf kein `Agent`-Werkzeug haben) und committen oder zuruecknehmen · Skill `agenten-orchestrierung` + `TASKLIST.md` 0 entdoppeln, 5.5-Familie mit Preisen, Effort je Agent, Plugin 1.3.17 · Advisor-Probe (`/advisor opus` bei Sonnet-Hauptchat) · web.de: fisi 1.3.16 installieren (Nutzer) · Schritt 14 auf den anderen zwei PCs · `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
 
 ## 4. Die harten Grenzen der Bruecke
 

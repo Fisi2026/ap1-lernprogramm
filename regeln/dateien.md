@@ -34,7 +34,8 @@
 #   `LEHREN.md` .............. **die teuren Lehren + Pool-Arbeitsregeln** (bis 17.09. Abschnitt 6 und Teile
 #                              von 2/3) – WANN Pflicht: Tabelle in Abschnitt 6
 #   `CLAUDE.md` .............. **Wegweiser, den Claude Code in JEDER Sitzung laedt** (seit 26.11.2026, BUILD_LOG 296) – kein Stand,
-#                              keine Regeln im Wortlaut; `.claude/rules/*.md` = pfadbezogene Erinnerungen an die Pflichtlektuere
+#                              keine Regeln im Wortlaut; `.claude/rules/*.md` = pfadbezogene Erinnerungen an die Pflichtlektuere;
+#                              `.claude/agents/*.md` = feste Projekt-Agenten mit Modell und Werkzeugen (BUILD_LOG 297)
 #   `WERKZEUGE.md` ........... **die Werkzeugliste** (bis 17.09. Abschnitt 8) – vor jedem neuen Skript lesen
 #   `SCHIENE_NEU.md` ......... **der Neubau `neu/`** – zehn Bereiche, wie dort gemessen wird · `PLAN_NEUBAU.md` = Entscheide + Restarbeit
 #   `PLAN_UMZUG_V3.md` ....... **Ablaufbuch N40 V3** (Umzug ins oeffentliche Repo): Schritte mit WER/Ort/Pruefbefehl/Rueckweg, Fundstellen des Repo-Namens, offene Nutzer-Fragen · Probe: `tools/umzug_v3_probe.sh`

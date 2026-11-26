@@ -33,8 +33,9 @@
 #   * SONNET 5.5: Code-Entwuerfe mit Kontextbedarf (`prompts/feature_draft.md`,
 #     `prompts/fragetyp_neu.md`) auf /tmp-Kopien, **NIE auf Projektdateien**.
 #   * OPUS / inherit: nur Gegenpruefung (unten) und echte Architekturfragen.
-#   ⚠️ Der eingebaute „Explore"-Agent laeuft NICHT auf Haiku, sondern auf dem Modell des Hauptchats –
-#   fuer Recherche `general-purpose` + `model: haiku` angeben.
+#   ►► SEIT 26.11.2026 (BUILD_LOG 297) feste Projekt-Agenten in `.claude/agents/`: `recherche` (Haiku, nur lesen+Web),
+#   `pruefer` (Opus, nur Read/Grep/Glob), `entwurf` (Sonnet, schreibt nur in die Kopie), `Explore` (ersetzt den eingebauten,
+#   der sonst das Modell des Hauptchats erbt – Doku sub-agents). Diese statt `general-purpose` + `model` verwenden.
 # - UMFANG SKALIEREN (Anthropic): Faktfrage = 0–1 Agent, 3–10 Aufrufe · Vergleich = 2–4 Agenten,
 #   je 10–15 Aufrufe · grosse Recherche = mehr, mit klar getrennten Zustaendigkeiten.
 #   Unabhaengige Agenten IN EINER NACHRICHT starten (laufen parallel).

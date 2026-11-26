@@ -24,6 +24,10 @@ Beim Arbeiten an passenden Pfaden erinnern die pfadbezogenen Regeln in `.claude/
 - Einen Version-Bump (Release) vorher beim Nutzer erfragen.
 - Vor jedem Commit `git log --oneline -3` lesen – ein fremder Commit heißt: ein zweiter Chat arbeitet mit.
 
+## Agenten
+Feste Projekt-Agenten in `.claude/agents/` (Modell und Werkzeuge stehen dort): `recherche` (Haiku), `pruefer` (Opus),
+`entwurf` (Sonnet, nur Kopien), `Explore` (Haiku). Regeln: Skill `fisi:agenten-orchestrierung`, `TASKLIST.md` Abschnitt 0.
+
 ## Arbeitsweise
 - Keine Aussage und keine Empfehlung ohne Messung (Befehl oder Datei nennen); Ungemessenes heißt „angenommen“.
 - Entscheidungen mit mehreren sinnvollen Wegen: erst fragen (AskUserQuestion), nie still ausweichen.
