@@ -101,3 +101,10 @@ steht deshalb auch im Skill `fisi-lernapp` (Plugin 1.3.15):** (1) **kein `tools/
 (gemessen: Vorlauf 121 s + check.sh 251 s ≈ 6 min je Runde) · (2) **größere Pakete:** 2–3 Aufträge je Prüf-/Push-Runde, das Paket vorher
 per Entwurf abstimmen · (3) **während `check.sh`/CI das nächste Paketstück bauen**, Commit erst bei Grün. Ausnahme nur, wenn ein Fix
 sofort zum Lerner muss (dann sagen, warum).
+
+### 26.11.2026 – Sichtpruefung der Live-Seite macht der Chat im eingebauten Browser (BUILD_LOG 296)
+⛔ **Anlass:** „Sichtpruefungen (Nutzer)“ stand seit Wochen in jedem „Damit offen“. Anthropic („Effective harnesses for long-running
+agents“, 26.11.2025) empfiehlt Ende-zu-Ende-Pruefung „as a human user would“ per Browser statt nur Unit-Tests; Nutzer-Entscheid 26.11.
+►► **Nach jedem Push, der beim Lerner ankommt (`python3 tools/ungepusht.py`), und nach jedem Release:** Live-Seite
+(`…/#<bereich>`, mit `?v=<commit>`) im eingebauten Browser oeffnen, die geaenderten Bereiche anklicken, Screenshot + `read_console_messages`
+(nur Fehler) lesen und im BUILD_LOG-Beleg nennen. Der Handy-Test bleibt beim Nutzer und wird nicht angeboten (START_PROMPT 4).

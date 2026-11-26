@@ -59,9 +59,10 @@ _to_delete/
 
 # Impeccable (10.09.2026, `npx impeccable install --project --providers=claude`).
 # 17 MB, darunter eine Windows-.exe - gehoert nicht ins Repo, wird bei Bedarf neu installiert.
-# Ausnahme seit 18.10.2026: .claude/settings.json (Postfach-Freigaben + Start-Haken, regeln/bruecke.md).
+# Ausnahmen: .claude/settings.json (seit 18.10.2026: Postfach-Freigaben, Start-Haken; seit 26.11.: Git-Riegel) und .claude/rules/ (seit 26.11.2026, BUILD_LOG 296).
 .claude/*
 !.claude/settings.json
+!.claude/rules/
 # Ablage der Cowork-App, kein Projektinhalt.
 Claude outputs/
 

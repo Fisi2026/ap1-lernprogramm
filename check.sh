@@ -189,6 +189,7 @@ billige_guards(){
     4e11_wache \
     4e12_skillpfade \
     4e15_limits \
+    4e17_gitriegel \
     4e13_geheimnisse \
     4e14_veroeffentlichung \
     4f_buildlog \

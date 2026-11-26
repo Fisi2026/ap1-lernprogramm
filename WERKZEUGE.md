@@ -278,3 +278,6 @@ Werkzeuge: `tools/requirements-werkzeuge.txt` (mit Hashes, `bash tools/einrichte
 `python3 tools/architektur.py` ....... **Schichtregeln der App** (N43 M2): dependency-cruiser aus `.tooling/` gegen `tools/architektur_regeln.cjs`.
                                      rc 0 keine Verstoesse · 1 Verstoesse (je Zeile `VERSTOSS regel: von -> nach`) · 2 stumm (< 200 Module, Werkzeug fehlt).
 `... --probe` ........................ `tools/architektur_probe/`: 6 Verstoesse muessen kommen, 3 erlaubte Faelle duerfen nicht (import type, Testdatei, server -> pruefe/route).
+`node tools/hooks/git_riegel.js` ....... **PreToolUse-Hook** (seit 26.11.2026, BUILD_LOG 296; eingetragen in `.claude/settings.json`, Matcher
+                                     `Bash|PowerShell|mcp__Training_Shell__run`): sperrt direktes `git commit` (nur `tools/gitc.sh`) und jeden Force-Push, rc 2.
+`... --probe` ........................ 18 Faelle, 7 muessen sperren (Commit-Texte in Anfuehrungszeichen und Heredocs bleiben frei); `check.sh` 4e17 faehrt sie.
