@@ -600,14 +600,14 @@ vorbehalten" des Katalog-Herausgebers (4 Commits), private Gmail-Adresse als Aut
 * ✅ **V1 + V2a (09.10., BUILD_LOG 113)** – 4e14, Katalog-Daten in `../Buch/katalog`. **V2b:** Teil 1 ✅ (BUILD_LOG 114: M09_FAKTEN, Benutzerpfade); Teil 2 (BUILD_LOG 115): `index.js` + Pfad-Sperre ✅, Konto-Notizen entschieden ✅; Shell 1.1.1 released ✅; Pool-Westermann ✅ (BUILD_LOG 116).
 * **V2 – Katalog raus.** `pruefungskatalog_ocr.txt` (und was nur aus ihm abgeleitet ist – Inventur entscheidet je Datei) nach `../Buch` (privat, wie das
   Lehrbuch); `tools/katalog/abdeckung.py` liest von dort, fehlt die Datei: klare Meldung statt Absturz. `einrichten.sh --pruefen` meldet sie wie die Buch-PDFs.
-* ✅ **V3 (26.11.2026, BUILD_LOG 285):** Erstcommit `1e98a44`, CI/Deploy/Herkunft gruen, oeffentlich, Alt-Repo `…-archiv` archiviert; offen nur die zwei anderen PCs (Schritt 14) und die Cloud-Probe (16.4).
+* ✅ **V3 (26.11.2026, BUILD_LOG 285):** Erstcommit `1e98a44`, CI/Deploy/Herkunft gruen, oeffentlich, Alt-Repo `…-archiv` archiviert; offen nur die zwei anderen PCs (Schritt 14); Cloud-Probe 16.4 ✅ (BUILD_LOG 294).
 * **V3 – Umzug.** Altes Repo → `ap1-lernprogramm-archiv` (privat, archiviert), neues `Fisi2026/ap1-lernprogramm` oeffentlich, EIN Erstcommit aus dem
   bereinigten Baum als `ap1`. Secrets `CLOUDFLARE_*` neu setzen (Nutzer gibt den Token ein), Remote auf beiden PCs, Dependabot/Actions an.
   Probe: CI gruen, Deploy laeuft, live liefert den neuen Bau. Doku: `DEPLOY.md`, Projekt-Dokument „Neuer Rechner", `fisi`-Skill falls Pfade.
 * **V4 – Oeffentliche Huelle.** `LICENSE` „Alle Rechte vorbehalten" (E66), `SECURITY.md` (Meldeweg), `README.md` fuer Fremde lesbar.
 * ~~**Release 2.3.3** (E69) – traegt ND1; erstes Tag im neuen Repo.~~ Ueberholt (O2): erstes Tag im neuen Repo ist `v2.13.1` (26.11.2026).
 
-### N41 — Repo-Schutz und Lieferkette (E70) · offen
+### N41 — Repo-Schutz und Lieferkette (E70) · ✅ umgesetzt (S2, S4, S5 schon vor dem Umzug in `ci.yml`; S1, S3 im neuen Repo BUILD_LOG 285–292; gemessen 26.11. per `gh api`; harden-runner aus S5 gestrichen, Nutzer-Entscheid 18.10.; Scorecard-Reste: CII-Plakette, Code-Review (E70), Maintained, Branch-Schutz)
 * **S1 – Regelsatz main:** Force-Push und Loeschen gesperrt; KEINE PR-Pflicht (E70: Push direkt auf main, `check.sh` vor jedem Commit bleibt der Riegel).
 * ✅ **S2 – Actions** (Einstellung 09.10., BUILD_LOG 117; Probe 10.10., BUILD_LOG 119; im neuen Repo nach V3 NEU setzen)**:** `sha_pinning_required: true`, erlaubte Actions = GitHub-eigene + benannte (ND3). Probe: ein Tag-Verweis in einem Probe-Zweig wird abgelehnt.
 * **S3 – GitHub-Sicherheit:** CodeQL Standard-Setup (JS/TS, Actions), Secret Scanning + Push-Schutz, Scorecard-Action woechentlich (`publish_results`).

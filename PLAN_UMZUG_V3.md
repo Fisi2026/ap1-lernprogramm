@@ -1,7 +1,7 @@
 # PLAN_UMZUG_V3.md – Ablaufbuch für N40 V3 (Umzug ins öffentliche Repo)
 
 **Wann lesen:** am Umzugstag (Entwurf für Mittwoch 21.10.2026, eine Sitzung) und vor jeder Änderung an N40 V3.
-**Stand:** Fassung V3 vom 18.10.2026 (Nutzer-Entscheide O1–O9 eingearbeitet, Zweig `n40-ablauf`), **nachgemessen 25.11.2026** (Abschnitt 1a, O10; Werte in den Schritten nachgezogen: `v2.13.1`, `fisi 1.3.15`, `ci.yml:409`), **Phase B ausgeführt 26.11.2026** (BUILD_LOG 283–285; offen: Schritt 14 auf den anderen zwei PCs, 16.4 Cloud-Probe). Der Umzug selbst ändert GitHub,
+**Stand:** Fassung V3 vom 18.10.2026 (Nutzer-Entscheide O1–O9 eingearbeitet, Zweig `n40-ablauf`), **nachgemessen 25.11.2026** (Abschnitt 1a, O10; Werte in den Schritten nachgezogen: `v2.13.1`, `fisi 1.3.15`, `ci.yml:409`), **Phase B ausgeführt 26.11.2026** (BUILD_LOG 283–285; 16.4 Cloud-Probe ✅ BUILD_LOG 294; offen: Schritt 14 auf den anderen zwei PCs). Der Umzug selbst ändert GitHub,
 Cloudflare und beide PCs – das macht der Nutzer mit dem Chat zusammen, Schritt für Schritt, mit Pause an jeder Prüfung.
 **Grundlage:** `PLAN_NEUBAU.md` N40 (E66, E70), `DEPLOY.md`, `regeln/git.md`, `regeln/bruecke.md`, BUILD_LOG 220–223.
 V1 (Wächter `4e14_veroeffentlichung`), V2 (Katalog nach `../Buch`) und V4 (`LICENSE`, `SECURITY.md`, `README.md`, seit `5791c05`) sind erledigt.

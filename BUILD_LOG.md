@@ -249,3 +249,12 @@
 **Beleg (gemessen 26.11. ~20:25, nicht gepusht):** `9b09c59` = `refs/heads/main`, CI success (20:21), Tag/Release `v2.13.2` da, live `ap1-app-2.13.2-74dd3037` = Bau (mit `?v=9b09c59`). `werkzeug_release.sh` startete den Workflow, `werkzeuge-fisi1.3.16-shell1.1.2` „ok (signiert)“, `.plugin` heruntergeladen, `gh attestation verify` rc 0.
 **Plugin gmail (gemessen 20:37):** Nutzer hat 1.3.16 installiert; installierte `fisi-lernapp/SKILL.md` sha1 `8f755288` = SOLL -> `installiert.txt` gmail 1.3.16.
 **Damit offen:** ►► web.de: fisi 1.3.16 installieren (Nutzer), danach `tools/plugin/installiert.txt` · Schritt 14 auf den anderen zwei PCs · 16.4 Cloud-Probe · `../Training_erstcommit` loeschen (Nutzer) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+
+## 26.11.2026 (294) - 16.4 Cloud-Probe: Push aus der Cloud ins neue Repo ok, Zweig loeschen gesperrt; Postfach lesbar
+**293:** `9344b3c` = `refs/heads/main`, CI + CodeQL success (gemessen 26.11., Desktop).
+**Probe (Cloud-Sitzung, Auftrag PLAN_UMZUG_V3 16.4):** `list_repos` nennt `Fisi2026/ap1-lernprogramm` (public, `can_push: true`); `add_repo … push` -> `already_present`; HEAD = `origin/main` = `9344b3c`. `git push origin HEAD:refs/heads/probe/cloud-zugriff` **ok** (rc 0). `git push origin --delete probe/cloud-zugriff` **abgelehnt**: HTTP 403 vom Sitzungs-Proxy, rc 1, nicht wiederholt. Nutzer hat den Zweig per Hand geloescht; Desktop `git ls-remote origin 'refs/heads/*'` = nur `9344b3c refs/heads/main`.
+**Lehre:** Cloud-Sitzungen legen in `ap1-lernprogramm` neue Zweige an, loeschen aber keine (allgemein fuer fremde Zweige *angenommen*). Probezweige raeumt der Nutzer auf, oder die Probe nimmt den eigenen Sitzungszweig.
+**Postfach:** ohne `add_repo` „could not read Username“; nach `add_repo Fisi2026/ap1-postfach access read` -> `git ls-remote` rc 0. Nichts geschrieben.
+**Nebenwirkung:** Fuer die Rueckmeldung gab der Nutzer der Cloud-Sitzung Zugriff auf seine anderen Sitzungen (`confirm_repository_trust`).
+**Modell:** Opus (Desktop, gmail; Probe Opus Cloud) · 7T 43 % -> 43 %.
+**Damit offen:** ►► web.de: fisi 1.3.16 installieren (Nutzer), danach `tools/plugin/installiert.txt` · Schritt 14 auf den anderen zwei PCs · `../Training_erstcommit` loeschen (Nutzer) · Sichtpruefungen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
