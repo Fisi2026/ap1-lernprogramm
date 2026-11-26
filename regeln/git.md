@@ -92,7 +92,7 @@ Actions baut und signiert – BUILD_LOG 292).
 ⛔ **Beleg:** privates Repo, 2.000 min/Monat; je Push auf main 12 Jobs ≈ 17 abgerechnete min (jeder Job auf volle Minuten aufgerundet,
 aus den Job-Dauern gemessen), auch bei reiner Doku. 11 Einzel-Pushes an einem Tag ≈ 190 min → Mail „90 % verbraucht“.
 ►► **Pushes bündeln:** Übernahmen lokal committen (je mit grünem `check.sh`), am Ende EINMAL pushen; Doku nie einzeln. Zweige der Arbeiter
-kosten nichts (CI nur bei `push: main` und PR gegen main). Nach dem Umzug ins öffentliche Repo sind Standard-Runner frei (angenommen, Doku).
+kosten nichts (CI nur bei `push: main` und PR gegen main). Seit dem Umzug ins öffentliche Repo (26.11.2026) sind Standard-Runner frei – *gemessen* 26.11.: `gh api …/actions/runs/<id>/timing` meldet `billable` 0 ms je Job (BUILD_LOG 295). Bündeln bleibt wegen der Wartezeit Pflicht.
 ►► **Weniger warten (Nutzer-Entscheid 25.11.2026, BUILD_LOG 278):** EIN `check.sh` je Runde (dazwischen nur die betroffenen
 vitest-Dateien) · Live- und CI-Belege kommen in den NÄCHSTEN echten Commit, kein eigener Doku-Push dafür · während `check.sh`
 oder CI laufen, weiterarbeiten statt warten.
