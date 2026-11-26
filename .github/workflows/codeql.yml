@@ -1,0 +1,44 @@
+name: CodeQL
+
+# 26.11.2026 (BUILD_LOG 290): eigener Workflow statt CodeQL-Standard-Setup.
+# Grund (gemessen): Scorecard „SAST“ blieb 0 – ohne PRs zaehlt nur `github/codeql-action` (analyze) in
+# einem Workflow; das Standard-Setup meldete zudem `languages: []` und analysierte Pushes erst nach Aus/Ein.
+# ⚠️ Standard-Setup muss AUS sein (`code-scanning/default-setup` = not-configured), sonst lehnt GitHub
+#    die Ergebnisse dieses Workflows ab.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "41 3 * * 1"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  analyse:
+    name: Analyse (${{ matrix.sprache }})
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read            # Workflows lesen (Sprache actions)
+      security-events: write   # Ergebnisse in Code Scanning
+    strategy:
+      fail-fast: false
+      matrix:
+        sprache: [actions, javascript-typescript, python]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: CodeQL vorbereiten
+        uses: github/codeql-action/init@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        with:
+          languages: ${{ matrix.sprache }}
+          build-mode: none
+      - name: CodeQL analysieren
+        uses: github/codeql-action/analyze@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        with:
+          category: /language:${{ matrix.sprache }}
