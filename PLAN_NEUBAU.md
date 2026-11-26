@@ -83,7 +83,7 @@ für dieselbe Sache driften immer; deshalb führt diese hier keine Häkchen.
 | E66 | Oeffentliches Repo (09.10.) | **Neues oeffentliches Repo mit frischer Historie, gleicher Name; das alte wird `…-archiv` (privat)** (AskUserQuestion, je wie empfohlen). Katalog-OCR (©-Vermerk des Katalog-Herausgebers) bleibt privat in `../Buch`. **Lizenz: keine – alle Rechte vorbehalten.** |
 | E67 | Code-Qualitaet 10 (09.10.) | **Umfang App UND Werkzeuge** (`neu/src` + `tools/` + `check.sh`) – Nutzer gegen die Empfehlung „nur App". Zielwerte: PLAN N43. |
 | E68 | Alarm (09.10.) | **Live-Fehler und Ausfaelle melden als GitHub-Issue** (taeglicher Zeitplan-Job), nicht per Cloudflare-Mail. |
-| E69 | Release ND1 (09.10.) | **Kein eigenes Release fuer ND1** – 2.3.3 mit der naechsten Etappe (N40). |
+| E69 | Release ND1 (09.10.) | **Kein eigenes Release fuer ND1** – 2.3.3 mit der naechsten Etappe (N40). **Ueberholt (O2, PLAN_UMZUG_V3):** `v2.3.3` kam am 10.10. (BUILD_LOG 124); das erste Tag im neuen Repo ist `v2.13.1` (26.11.2026). |
 | E70 | Push-Weg (09.10.) | **Weiter direkt auf main**; der Regelsatz sperrt nur Force-Push und Loeschen, keine PR-Pflicht. |
 | E71 | Mutationstest (09.10.) | **Stryker naechtlich + vor jedem Release**, Issue wenn der Wert sinkt; nicht bei jedem Push. |
 
@@ -590,7 +590,7 @@ Technikstand aufbessert“. Die Reihenfolge innerhalb folgt den Abhaengigkeiten,
    N40 V3 ohnehin neu gesetzt werden; N40 V3 braucht den Nutzer (Cloudflare-Token).
 6. Danach Inhalt: N48 P5-Rest (75 Fragen; Befunde M08-110, M03-115 in BUILD_LOG 141) · szenario2 · N50 · Inhaltsrunde 8.
 
-### N40 — Umzug ins oeffentliche Repo (E66, E70) · offen
+### N40 — Umzug ins oeffentliche Repo (E66, E70) · ✅ erledigt 26.11.2026 (BUILD_LOG 283–285; Ablauf `PLAN_UMZUG_V3.md`)
 Anlass: Komplettpruefung 09.10. abends (`BEFUNDE_AUDIT.md`), ND4/ND3: Branch-Schutz, CodeQL, Secret Scanning, Attestierung, Scorecard sind
 auf dem privaten Free-Repo gesperrt (gemessen 403/404). Gemessen im Weg: `tools/katalog/pruefungskatalog_ocr.txt` = ©-Vermerk „… – Alle Rechte
 vorbehalten" des Katalog-Herausgebers (4 Commits), private Gmail-Adresse als Autor in 33 Commits. Darum frische Historie statt Umschreiben (nie `--force`).
@@ -600,11 +600,12 @@ vorbehalten" des Katalog-Herausgebers (4 Commits), private Gmail-Adresse als Aut
 * ✅ **V1 + V2a (09.10., BUILD_LOG 113)** – 4e14, Katalog-Daten in `../Buch/katalog`. **V2b:** Teil 1 ✅ (BUILD_LOG 114: M09_FAKTEN, Benutzerpfade); Teil 2 (BUILD_LOG 115): `index.js` + Pfad-Sperre ✅, Konto-Notizen entschieden ✅; Shell 1.1.1 released ✅; Pool-Westermann ✅ (BUILD_LOG 116).
 * **V2 – Katalog raus.** `pruefungskatalog_ocr.txt` (und was nur aus ihm abgeleitet ist – Inventur entscheidet je Datei) nach `../Buch` (privat, wie das
   Lehrbuch); `tools/katalog/abdeckung.py` liest von dort, fehlt die Datei: klare Meldung statt Absturz. `einrichten.sh --pruefen` meldet sie wie die Buch-PDFs.
+* ✅ **V3 (26.11.2026, BUILD_LOG 285):** Erstcommit `1e98a44`, CI/Deploy/Herkunft gruen, oeffentlich, Alt-Repo `…-archiv` archiviert; offen nur die zwei anderen PCs (Schritt 14) und die Cloud-Probe (16.4).
 * **V3 – Umzug.** Altes Repo → `ap1-lernprogramm-archiv` (privat, archiviert), neues `Fisi2026/ap1-lernprogramm` oeffentlich, EIN Erstcommit aus dem
   bereinigten Baum als `ap1`. Secrets `CLOUDFLARE_*` neu setzen (Nutzer gibt den Token ein), Remote auf beiden PCs, Dependabot/Actions an.
   Probe: CI gruen, Deploy laeuft, live liefert den neuen Bau. Doku: `DEPLOY.md`, Projekt-Dokument „Neuer Rechner", `fisi`-Skill falls Pfade.
 * **V4 – Oeffentliche Huelle.** `LICENSE` „Alle Rechte vorbehalten" (E66), `SECURITY.md` (Meldeweg), `README.md` fuer Fremde lesbar.
-* **Release 2.3.3** (E69) – traegt ND1; erstes Tag im neuen Repo.
+* ~~**Release 2.3.3** (E69) – traegt ND1; erstes Tag im neuen Repo.~~ Ueberholt (O2): erstes Tag im neuen Repo ist `v2.13.1` (26.11.2026).
 
 ### N41 — Repo-Schutz und Lieferkette (E70) · offen
 * **S1 – Regelsatz main:** Force-Push und Loeschen gesperrt; KEINE PR-Pflicht (E70: Push direkt auf main, `check.sh` vor jedem Commit bleibt der Riegel).

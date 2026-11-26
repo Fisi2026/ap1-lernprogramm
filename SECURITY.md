@@ -9,10 +9,6 @@ Du hast eine Schwachstelle im AP1-Lernprogramm gefunden? Danke, dass du sie meld
 **Report a vulnerability**. Die Meldung sehen nur die Betreuenden des Repositories.
 Es gibt bewusst **keine E-Mail-Adresse** für Sicherheitsmeldungen.
 
-⚠️ **Der Weg ist erst aktiv, wenn das Projekt in das öffentliche Repository umgezogen ist** (Etappe
-N40 V3, siehe `PLAN_NEUBAU.md`) und die Funktion dort eingeschaltet wurde. Solange der Reiter
-„Security“ den Knopf „Report a vulnerability“ nicht zeigt, ist dieser Weg noch nicht offen.
-
 Bitte schreibe mit: was betroffen ist (Adresse, Pfad oder Datei), wie man es nachstellt, und was
 passieren kann. Keine echten Daten Dritter verwenden, nichts löschen oder verändern, keine
 Lasttests.

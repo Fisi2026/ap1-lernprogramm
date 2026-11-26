@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► AUF DEN ANDEREN ZWEI PCs: vor jeder Arbeit `git remote remove origin` (macht `tools/alt_klon_weiche.sh` beim Start selbst; Beleg `git remote -v` leer), dort NICHTS mehr pushen · Phase B ab 6.2 ([N] Actions aus, Umbenennen `…-archiv`, Schritt 7 neues privates Repo) · Release `werkzeuge-fisi1.3.15-shell1.1.2` erst im neuen Repo (Schritt 15) · Bump 2.13.2 (zurueckgestellt) · Sichtpruefungen „Kann ich schon“ und Vorlesen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+**Damit offen:** ►► Schritt 14 auf den anderen zwei PCs (frischer Klon an denselben Pfad; Weiche entfernt dort `origin`) · 16.4 Cloud-Probe bei erster Cloud-Arbeit · `../Training_erstcommit` loeschen (Nutzer) · Minuten-Messung (`gh auth refresh -h github.com -s user`) · Abschnitt-4 Nr. 31/10 Kommentare (optional) · Bump 2.13.2 (zurueckgestellt) · Sichtpruefungen „Kann ich schon“ und Vorlesen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
 
 ## 4. Die harten Grenzen der Bruecke
 

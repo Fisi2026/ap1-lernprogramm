@@ -1,7 +1,7 @@
 # PLAN_UMZUG_V3.md – Ablaufbuch für N40 V3 (Umzug ins öffentliche Repo)
 
 **Wann lesen:** am Umzugstag (Entwurf für Mittwoch 21.10.2026, eine Sitzung) und vor jeder Änderung an N40 V3.
-**Stand:** Fassung V3 vom 18.10.2026 (Nutzer-Entscheide O1–O9 eingearbeitet, Zweig `n40-ablauf`), **nachgemessen 25.11.2026** (Abschnitt 1a, O10; Werte in den Schritten nachgezogen: `v2.13.1`, `fisi 1.3.15`, `ci.yml:409`), **Phase B ist nicht ausgeführt.** Der Umzug selbst ändert GitHub,
+**Stand:** Fassung V3 vom 18.10.2026 (Nutzer-Entscheide O1–O9 eingearbeitet, Zweig `n40-ablauf`), **nachgemessen 25.11.2026** (Abschnitt 1a, O10; Werte in den Schritten nachgezogen: `v2.13.1`, `fisi 1.3.15`, `ci.yml:409`), **Phase B ausgeführt 26.11.2026** (BUILD_LOG 283–285; offen: Schritt 14 auf den anderen zwei PCs, 16.4 Cloud-Probe). Der Umzug selbst ändert GitHub,
 Cloudflare und beide PCs – das macht der Nutzer mit dem Chat zusammen, Schritt für Schritt, mit Pause an jeder Prüfung.
 **Grundlage:** `PLAN_NEUBAU.md` N40 (E66, E70), `DEPLOY.md`, `regeln/git.md`, `regeln/bruecke.md`, BUILD_LOG 220–223.
 V1 (Wächter `4e14_veroeffentlichung`), V2 (Katalog nach `../Buch`) und V4 (`LICENSE`, `SECURITY.md`, `README.md`, seit `5791c05`) sind erledigt.
@@ -167,7 +167,7 @@ den **Wert** des bisherigen `CLOUDFLARE_API_TOKEN` (Vorlage „Edit Cloudflare W
    Beides ist hier gewollt: nach Schritt 7 zeigt der alte Name auf das **neue** Repo.
 4. **Nicht archivieren** (O4: erst in Schritt 17 nach grüner Probe). Archiviert = schreibgeschützt (Doku: Issues, PRs, Code, Releases, Tags, Branches read-only); ein Rückweg
    per Umbenennen bräuchte erst *Unarchive*.
-- Prüfen: `gh repo view Fisi2026/ap1-lernprogramm-archiv --json name,isPrivate,isArchived` → `…-archiv`, `true`, `false`. `curl -sI https://github.com/Fisi2026/ap1-lernprogramm` → noch 301 auf `-archiv`.
+- Prüfen: `gh repo view Fisi2026/ap1-lernprogramm-archiv --json name,isPrivate,isArchived` → `…-archiv`, `true`, `false`. `curl -sI https://github.com/Fisi2026/ap1-lernprogramm` → noch 301 auf `-archiv`. *Gemessen 26.11.:* anonym **404** statt 301 – ein privates Repo leitet für Unangemeldete nicht um; die Prüfung gilt per `gh` (angemeldet).
 - Rückweg (solange das neue Repo noch nicht existiert): *Settings → General* → Name zurück auf `ap1-lernprogramm`; Actions wieder an; `git remote add origin https://github.com/Fisi2026/ap1-lernprogramm` auf den PCs.
 
 **Schritt 7 – Neues Repo PRIVAT anlegen und vorbereiten (VOR dem ersten Push)** · **[N]**
@@ -370,6 +370,7 @@ Suchbegriffe: `Fisi2026`, `ap1-lernprogramm`, `fisi2026lernapp`, `github.com/`, 
 | 41 | Pool/Set/Lehrtext/Doku mit Kennzeichnung der K3-Vorlage (neu 25.11.) | Kennzeichnung | **Ä** vor Schritt 6 – ✅ erledigt 26.11. (Schritt 4a, O10) |
 
 **Zahl der Fundstellen:** 41 Zeilen in der Tabelle (**Ä** 8: Nr. 1, 2, 3, 4, 8, 31, 33, 41 · **P** 13 · **–** 20; Stand 25.11., Zeilen 10–12 neu gezählt, 40–41 neu). Keine Datei im App-Code (`neu/src`) und kein Test setzt den Repo-Namen voraus.
+**✅ Umgesetzt 26.11.2026 (Schritt 18, BUILD_LOG 285):** **Ä** Nr. 1, 2, 3, 4, 8, 33 (41 schon in Schritt 4a). Offen bleibt nur Nr. 31 (Kommentar in `4e13_geheimnisse.sh`, optional) und der Kommentar „(nach N40 V3)“ zu Nr. 10.
 
 ## 5. Ergebnisse der Generalprobe (18.10.2026, Stand `1d523d0`, *gemessen*)
 **Nachtrag Fassung V3 (18.10.2026, Stand `14fb4f1` + Probe-Änderung, *gemessen*):** `--probe` jetzt **12/12** (2 grüne, 10 rote Fälle) – neu der Fall `settings_ohne_ignore_ausnahme`: in der Kopie fehlt die `.gitignore`-Zeile `!.claude/settings.json`, `git add -A` lässt die Datei still weg, die Probe meldet „Einstellungen: …". Der Normallauf zeigt zusätzlich „.claude/settings.json im Baum: ja"; Baum **881 Dateien, 16,4 MB, größte 2,7 MB**, Pack 5,32 MiB, Wächter 4e14 grün. Die unten stehenden Zahlen (870 Dateien, 11/11) sind der Stand vom Entwurf.

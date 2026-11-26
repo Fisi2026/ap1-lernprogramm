@@ -13,7 +13,8 @@ Alle Identifier sind namensfrei (kein Klarname), daher hier direkt notiert.
   Die alte App liegt nur noch als Referenz im Wurzelordner (N29 Teil 2: `referenz/`).
 
 ## GitHub
-- Privates Repo **`Fisi2026/ap1-lernprogramm`**, Branch `main`.
+- Öffentliches Repo **`Fisi2026/ap1-lernprogramm`**, Branch `main` – seit 26.11.2026 (N40 V3, BUILD_LOG 285) mit frischer
+  Historie ab dem Erstcommit `1e98a44`. Das alte Repo liegt privat und archiviert als `Fisi2026/ap1-lernprogramm-archiv`.
 - ⛔ **KEIN Token in `.git/config`** (gemessen 26.09.2026, Audit AUD-C6: seit dem neuen PC, BUILD_LOG 53, so –
   der Satz „PAT eingebettet“ hier war veraltet). Remote ist
   `https://github.com/Fisi2026/ap1-lernprogramm.git`; die Anmeldung hält der **Git Credential Manager**
@@ -52,6 +53,8 @@ Bei einem Version-Bump legt die Release-Action zusätzlich den Tag an.
    **trennen** (Disconnect). Bis dahin liefern beide Wege aus – harmlos, derselbe Stand.
 
 ✅ **Eingerichtet am 26.09.2026** (BUILD_LOG 55c): Secrets gesetzt, erster CI-Deploy gruen, Git-Anbindung getrennt.
+✅ **Neu eingerichtet am 26.11.2026 im neuen Repo** (N40 V3 Schritt 7–10, BUILD_LOG 285): beide Secrets neu gesetzt, erster Lauf
+45800170640 gruen inkl. Deploy; im Alt-Repo `…-archiv` sind die Secrets geloescht (Schritt 17).
 Von Hand ausliefern ohne Commit: `gh workflow run CI --ref main` (prueft zuerst, liefert nur bei Gruen).
 ⚠️ **Token-Pflege (Nachpruefung NP2):** Der Token hat die Rechte der Vorlage „Edit Cloudflare Workers" + D1 Edit auf
 diesem Konto – mehr, als der Deploy braucht, aber enger laesst Cloudflare es fuer Workers nicht zu. Deshalb **mit
@@ -69,7 +72,8 @@ Prüfen, dass ein Bau wirklich aus diesem Repo und diesem Workflow kommt (Datei 
 gh attestation verify v2/index.html --repo Fisi2026/ap1-lernprogramm --signer-workflow Fisi2026/ap1-lernprogramm/.github/workflows/ci.yml
 ```
 Ein Treffer nennt Commit und Lauf; ein Fehler heißt: Datei nicht vom Deploy-Job (oder verändert). Hinweis: Bescheinigungen für
-**private** Repos setzen GitHub Enterprise Cloud voraus – im öffentlichen Repo (nach N40 V3) ohne Zusatz verfügbar.
+**private** Repos setzen GitHub Enterprise Cloud voraus – im öffentlichen Repo ohne Zusatz verfügbar (seit 26.11.2026; gemessen
+26.11.: Lauf 45801828839, Schritt „Herkunft“ success, `gh attestation verify` rc 0, SLSA provenance v1).
 
 ## Cloudflare-Setup (bereits erledigt)
 - Workers Static Assets, Deploy-Command `npx wrangler deploy`, Output-Dir `.` – ⛔ **seit N29 ist
@@ -155,7 +159,8 @@ reicht den Rückgabewert durch. **Auf dem Windows-Rechner ist das nicht nötig**
 normal benutzbar.
 
 ## Datenschutz-Status (2026-07-17, erledigt)
-- Repo **privat**. Git-Commit-Identität anonym (Autor `ap1`, keine echte Mail).
+- Repo seit 26.11.2026 **öffentlich** (N40 V3: frische Historie ohne private Adresse und ohne Katalog-OCR; bis dahin privat).
+  Git-Commit-Identität anonym (Autor `ap1`, keine echte Mail).
 - GitHub-User auf **Fisi2026** umbenannt (alter, namenshaltiger User nur noch im Cowork-Memory).
 - Cloudflare-Konto-Subdomain auf **fisi2026lernapp** umbenannt (alte Subdomain nur noch im Cowork-Memory).
 - Damit enthält weder die öffentliche URL noch der GitHub-User den Klarnamen.
