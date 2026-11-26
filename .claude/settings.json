@@ -5,6 +5,7 @@
     "Bash(gh pr comment 2 --repo Fisi2026/ap1-postfach:*)",
     "Bash(bash tools/gitc.sh push origin main)"
   ] },
+  "env": { "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "1" },
   "hooks": {
     "SessionStart": [ { "hooks": [ { "type": "command",
       "command": "bash \"$CLAUDE_PROJECT_DIR/tools/postfach.sh\" start", "timeout": 30 } ] } ],

@@ -26,7 +26,7 @@ Beim Arbeiten an passenden Pfaden erinnern die pfadbezogenen Regeln in `.claude/
 
 ## Agenten
 Feste Projekt-Agenten in `.claude/agents/` (Modell und Werkzeuge stehen dort): `recherche` (Haiku), `pruefer` (Opus),
-`entwurf` (Sonnet, nur Kopien), `Explore` (Haiku). Regeln: Skill `fisi:agenten-orchestrierung`, `TASKLIST.md` Abschnitt 0.
+`entwurf` (Sonnet, nur Kopien), `Explore` (Haiku). Regeln: Skill `fisi:agenten-orchestrierung` (einzige Stelle); Belege `TASKLIST.md` Abschnitt 0.
 
 ## Arbeitsweise
 - Keine Aussage und keine Empfehlung ohne Messung (Befehl oder Datei nennen); Ungemessenes heißt „angenommen“.

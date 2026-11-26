@@ -11,49 +11,24 @@
 # Chronik (Blöcke A–F, „29 Ideen", G1–G5, FB-R1/R2/R3, M09-Projekt): **`TASKLIST_ARCHIV.md`**.
 #
 # ══════════════════════════════════════════════════════════════════════════════════════════════
-# 0. MODELL & AGENTEN (neu gefasst 08.10.2026 nach offizieller Doku – ersetzt die Fassung 15.07.)
+# 0. MODELL & AGENTEN – REGELN IM SKILL, HIER NUR DIE PROJEKTBELEGE (entdoppelt 26.11.2026, BUILD_LOG 298)
 # ══════════════════════════════════════════════════════════════════════════════════════════════
-# Quellen: code.claude.com/docs/en/sub-agents · code.claude.com/docs/en/best-practices ·
-#   platform.claude.com/docs/en/about-claude/models/choosing-a-model ·
-#   anthropic.com/engineering/multi-agent-research-system. Probe-Agent (Haiku) gemessen 08.10.
-# - HAUPTCHAT (Opus): Briefing, Agenten anleiten, Integration, fachliche Pruefung, Tests, Commit,
-#   Push. Code selbst bei Eingriffen <~50 Zeilen.
-# - WANN EIN AGENT (offizielle Faustregel): eine abgeschlossene Nebenaufgabe, die den Hauptkontext
-#   mit Suchtreffern, Logs oder Dateiinhalten fluten wuerde, die danach keiner mehr braucht, und die
-#   eine Zusammenfassung liefern kann. NICHT bei viel Hin-und-Her, geteiltem Kontext, kleinen
-#   gezielten Aenderungen oder wenn Wartezeit zaehlt. ►► Coding ist laut Anthropic schlecht
-#   parallelisierbar – Code-Arbeit bleibt im Hauptchat.
-# - ⚠️ KOSTEN: Mehr-Agenten-Arbeit braucht ~15× die Tokens eines Chats (Anthropic). Gemessen 08.10.:
-#   EIN Haiku-Agent mit 2 Werkzeugaufrufen = 83 534 Tokens Grundlast. ►► Kein Agent fuer etwas, das
-#   1–3 eigene Aufrufe erledigen.
-# - MODELL-MATRIX (billigstes ausreichendes Modell, `model`-Parameter JE AUFRUF setzen):
-#   * HAIKU 5.5 (offiziell empfohlen fuer „sub-agent tasks" und Massenarbeit): Web-Recherche,
-#     Doku-Abgleich, Fundstellensuche, Fragen-Batches nach `prompts/fragen_batch.md` (muss
-#     `tools/validate_batch.js` selbst gruen liefern; danach NUR fachlich pruefen).
-#   * SONNET 5.5: Code-Entwuerfe mit Kontextbedarf (`prompts/feature_draft.md`,
-#     `prompts/fragetyp_neu.md`) auf /tmp-Kopien, **NIE auf Projektdateien**.
-#   * OPUS / inherit: nur Gegenpruefung (unten) und echte Architekturfragen.
-#   ►► SEIT 26.11.2026 (BUILD_LOG 297) feste Projekt-Agenten in `.claude/agents/`: `recherche` (Haiku, nur lesen+Web),
-#   `pruefer` (Opus, nur Read/Grep/Glob), `entwurf` (Sonnet, schreibt nur in die Kopie), `Explore` (ersetzt den eingebauten,
-#   der sonst das Modell des Hauptchats erbt – Doku sub-agents). Diese statt `general-purpose` + `model` verwenden.
-# - UMFANG SKALIEREN (Anthropic): Faktfrage = 0–1 Agent, 3–10 Aufrufe · Vergleich = 2–4 Agenten,
-#   je 10–15 Aufrufe · grosse Recherche = mehr, mit klar getrennten Zustaendigkeiten.
-#   Unabhaengige Agenten IN EINER NACHRICHT starten (laufen parallel).
-# - AUFTRAG – vier Pflichtteile (sonst doppelte Suchen und Luecken): (1) Ziel, (2) Ausgabeformat MIT
-#   Deckel („max. 15 Zeilen Liste, je Befund Quelle + Datum"), (3) Quellen/Werkzeuge, (4) Grenzen:
-#   was NICHT. Der Agent sieht den Chat NICHT – der Auftrag muss allein verstaendlich sein.
-#   Recherche: erst kurz und breit suchen, dann eingrenzen; Primaerquellen (Hersteller-Doku,
-#   Gesetzestext, IHK) vor SEO-Seiten.
-# - ⛔⛔ RECHTE – GEMESSEN 08.10.: DER HAIKU-AGENT HAT `Training_Shell__run` UND `device_bash`, also
-#   Schreib- und Git-Zugriff auf den PC. Jeder Auftrag enthaelt woertlich: „nur lesen; keine Dateien
-#   im Projekt schreiben, kein git, keine Training Shell mit Schreibwirkung". Schreiben, Commit, Push
-#   macht NUR der Hauptchat. (14.10.: laut Doku duerfen Agenten seit v2.1.219 selbst Agenten starten, Tiefe 3 – darum steht „keine weiteren Agenten starten“ in jedem Auftrag, Skill agenten-orchestrierung.)
-# - GROSSE ERGEBNISSE: der Agent legt sie auf der Cloud-Seite unter /tmp/agent_<thema>.md ab und gibt
-#   nur Pfad + Kern (≤10 Zeilen) zurueck – nicht den Volltext durch den Hauptkontext reichen.
-# - ⛔ VERIFIKATION (START_PROMPT Regel 4, ergaenzt 08.10. per Nutzer-Entscheid): ein Agent-Ergebnis
-#   ist Entwurf oder Hinweis, NIE Beleg. ERLAUBT: ein Gegenpruef-Agent mit frischem Kontext sucht
-#   Luecken eines Diffs gegen den Plan („nur Luecken mit Wirkung auf Korrektheit oder Anforderung,
-#   keine Stilwuensche"). Jeder Fund wird SELBST nachgemessen (Suite, Diff, Rechnung), bevor er zaehlt.
+# ►► DIE REGELN (wann ein Agent, welcher Agent/welches Modell, Vorrang, Effort, Preise, Auftrag, Rechte, Pruefung)
+#   stehen an EINER Stelle: Skill `fisi:agenten-orchestrierung` (Quelle `tools/plugin/fisi/skills/agenten-orchestrierung/
+#   SKILL.md`). Feste Projekt-Agenten: `.claude/agents/{recherche,Explore,entwurf,pruefer}.md`. Hier nur datierte Belege.
+# - 08.10.: EIN Haiku-Agent mit 2 Werkzeugaufrufen = 83 534 Tokens Grundlast; der Haiku-Agent (general-purpose) hatte
+#   `Training_Shell__run` und `device_bash`, also Schreib- und Git-Zugriff auf den PC (Grund fuer feste Agenten mit `tools`).
+# - 14.10.: Sonnet-Agent fuer 108 Stellen ≈ 130 000 Tokens; Doku: Agenten duerfen seit v2.1.219 selbst Agenten starten (Tiefe 3).
+# - 08.10. Nutzer-Entscheid (START_PROMPT Regel 4): Agent-Ergebnis ist Entwurf, nie Beleg; Gegenpruef-Agent erlaubt.
+# - 14.10. Nutzer-Entscheid (BUILD_LOG 174/175): ab 80 % Wochenlimit vor jedem Agenten fragen.
+# - 26.11. (BUILD_LOG 297): feste Projekt-Agenten statt `general-purpose` + `model`; Explore ersetzt, sonst erbt er das Hauptmodell.
+# - 26.11. (BUILD_LOG 298): Tiefensperre `env.CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1` in `.claude/settings.json` – Probe in
+#   frisch gestarteter Sitzung: Haiku-Agent startet, meldet kein `Agent`-Werkzeug (57 112 Tokens, 0 Aufrufe). Gegenprobe der
+#   Vorsitzung ohne Sperre beim Start: Werkzeug da. ►► „Keine weiteren Agenten“ ist damit deterministisch; `env` wirkt erst
+#   beim Sitzungsstart.
+# - 26.11. (BUILD_LOG 298) Advisor: `claude -p --model sonnet --advisor opus` nimmt das Flag an, scheitert aber an
+#   „OAuth session expired“ der PATH-CLI 2.1.303 – Verfuegbarkeit im Abo nur per `/advisor` in der App messbar (Nutzer tippt).
+#   Doku: experimentell, Abo zaehlt aufs Planlimit, API zu den Raten des Beratermodells.
 #
 # ══════════════════════════════════════════════════════════════════════════════════════════════
 # 0b. VERFAHRENSLEHREN AUS DEM 28.07.2026 – TEUER BEZAHLT, DESHALB HIER
@@ -315,7 +290,7 @@
 # ══════════════════════════════════════════════════════════════════════════════════════════════
 # 1. **Neuer Chat pro Task-Block.** Frischstart mit START_PROMPT.md ist billiger als ein langer Chat,
 #    der den ganzen Verlauf mitschleppt.
-# 2. **Modellwahl je Agent: NUR Abschnitt 0** (Matrix, Umfang, Rechte, Auftrag).
+# 2. **Modellwahl je Agent: NUR Skill `fisi:agenten-orchestrierung`** (Agenten, Umfang, Rechte, Auftrag; Belege Abschnitt 0).
 # 3. **Entscheidungsfragen bündeln:** alle Vorab-Fragen eines Blocks in EINE AskUserQuestion-Runde.
 # 4. **Agenten-Selbstvalidierung:** Agent bekommt ein Prüfskript mit und muss es grün liefern.
 # 5. **grep statt Read** zum Lokalisieren (Anker in `ARCHITECTURE.md`); Read nur für den exakten
@@ -324,7 +299,7 @@
 #    (themen, typen, frage <id>, ohne <feld>, ids-frei <präfix>, duenn, stufe, suche <regex>, coverage).
 # 7. **Agent-Prompts über `prompts/`-Vorlagen**; Vorlagen + ARCHITECTURE.md + tools/ vorher nach /tmp.
 # 8. **Schema referenzieren statt zitieren.**
-# 9. **Web-Recherche: Haiku-Agent nach Abschnitt 0** – nur das Extrakt in den Hauptkontext.
+# 9. **Web-Recherche: Agent `recherche` (Haiku)** – nur das Extrakt in den Hauptkontext.
 # 10. **Checkpoint VOR großen Agenten-Aufrufen**, nicht nur danach.
 # 11. **Doku-Deckel:** BUILD_LOG nach jedem Release rotieren; START_PROMPT und TASKLIST werden
 #     ÜBERSCHRIEBEN, nicht ergänzt. Chronik gehört ins jeweilige `*_ARCHIV.md`.
