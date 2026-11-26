@@ -655,13 +655,13 @@ ruff 0, shellcheck 0, JS-Werkzeuge typgeprueft.
 * **M4 – Werkzeuge:** ruff (Python), shellcheck (sh), `// @ts-check` + tsc fuer `tools/*.js`; erst messen, Ratsche auf Ist. ✅ 13.10. (BUILD_LOG 152): ruff/shellcheck seit M1 in der Ratsche; tsc ueber `tools/tsconfig.tools.json` (checkJs, alle 34 JS-Dateien) – `tsc_tools` 23, `tsc_tools_streng` 789, Probe + Stumm bei TS5xxx/TS6xxx.
 
 ### N44 — App-Code auf 10 · offen
-* **C1** die fuenf komplexen Funktionen zerlegen (`api.ts` als Pfad-Tabelle, `validierung.ts` aus dem Schema ableiten statt von Hand) – Schnappschuss unveraendert.
+* ✅ **C1** (Ziel erreicht, gemessen 26.11.: `tools/qualitaet_ratsche.json` lizard CCN>15 = 0, CCN>20 = 0; BUILD_LOG 301) die fuenf komplexen Funktionen zerlegen (`api.ts` als Pfad-Tabelle, `validierung.ts` aus dem Schema ableiten statt von Hand) – Schnappschuss unveraendert.
 * ✅ **C2** knip auf 0 – erledigt 14.10. (BUILD_LOG 171): 76 → 0, `neu/knip.jsonc` (sw-Einstiege, Ausnahmeliste components/ui), 7 tote Symbole geloescht · **C3** TS-Schalter `exactOptionalPropertyTypes`, `noImplicitReturns`, `noImplicitOverride`, `noPropertyAccessFromIndexSignature` (je Schalter messen,
   dann an) ✅ 10.10. (BUILD_LOG 118, 120): drei Schalter an, `noPropertyAccessFromIndexSignature` verworfen (Nutzer-Entscheid: reiner Schreibstil, 477 Stellen) · ✅ **C4** oxlint-Kategorien + `jsx-a11y` + `import/no-cycle` – erledigt 14.10. (BUILD_LOG 172): correctness + suspicious + perf als Fehler, jsx-a11y und import an, 120 Befunde → 0 (10 begruendete Ausnahmen); pedantic: 9 Fehler-Regeln an, `prefer-nullish-coalescing` an (ignorePrimitives), `no-unsafe-*` als Ratsche `no_unsafe` 340 (BUILD_LOG 173) · **C5** Mutations-Luecken schliessen · ~~**C6** ND2 Admin-Schluessel nur `sessionStorage`~~ – gestrichen (Nutzer-Entscheid 09.10.: ND2 bleibt).
 * **Release** nach C1–C6 (vorher fragen).
 
 ### N45 — Werkzeuge auf 10 (E67) · offen
-* **W1** shellcheck 0 · **W2** ruff 0 – ⚠️ **erweitert 12.10. (BUILD_LOG 146):** zusaetzlich die Sicherheitsgruppe `S` (flake8-bandit).
+* ✅ **W1** shellcheck 0 · ✅ **W2** ruff 0 (beide erreicht, gemessen 26.11.: Ratsche shellcheck 0, ruff 0, ruff_s 0; BUILD_LOG 301) – ⚠️ **erweitert 12.10. (BUILD_LOG 146):** zusaetzlich die Sicherheitsgruppe `S` (flake8-bandit).
   Gemessen auf einer Kopie von `75f8a3b` (ruff 0.16.8, `ruff check tools --select S`): 41 Funde – S108 12 (`/tmp` fest),
   S607 7 + S603 6 (subprocess), S110 5 + S112 2 (`except: pass/continue`), S101 4, S324 4 (sha1/md5), S602 1 (`shell=True`,
   `tools/sabotage_vt.py:42`). Alles nur lokale Werkzeuge. Vorschlag beim Bau: S101 und S324 (Fingerabdruecke, keine Kryptografie)
