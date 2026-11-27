@@ -1,3 +1,3 @@
 # konto version datum - vom Chat nachgezogen, nachdem der Nutzer fisi.plugin installiert hat (soll.sh liest das)
-web.de 1.3.17 2026-11-27
+web.de 1.3.18 2026-11-27
 gmail 1.3.17 2026-11-26
