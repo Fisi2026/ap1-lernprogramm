@@ -87,7 +87,7 @@ else melde "einstieg.py --setze: $(printf '%s' "$EI" | tail -1)"; fi
 # 2+3) Waechter - Reihenfolge wie check.sh; 4e_versionen setzt AV fuer die Stand-Waechter.
 waechter_lauf(){
   waechter 4e_versionen 4e2_standzeile 4e2b_auslieferung 4e2b2_ungepusht 4e2b2c_ci 4e2d_bestandsids \
-           4f_buildlog 4g_startprompt 4g2_entscheide 4f_einstieg 4f_qualitaet 4f_architektur
+           4f_buildlog 4g_startprompt 4g2_entscheide 4h_aufgaben 4f_einstieg 4f_qualitaet 4f_architektur
 }
 waechter_lauf
 

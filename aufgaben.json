@@ -1,0 +1,89 @@
+{
+ "hinweis": "Einzige Quelle fuer die Schlusszeile 'Damit offen' im BUILD_LOG (Nutzer-Entscheid R7). Zeile erzeugen: python3 tools/offen.py zeile. check.sh 4h_aufgaben prueft Gleichheit mit dem letzten BUILD_LOG-Eintrag.",
+ "aufgaben": [
+  {
+   "id": "A01",
+   "titel": "►► Zweig `claude/optimistic-feynman-b8gtxx` (BUILD_LOG 302–304) vom PC pruefen und nach main uebernehmen, danach `gh workflow run Mutation` (erster Volllauf)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 303"
+  },
+  {
+   "id": "A02",
+   "titel": "jscpd-Ratsche (optional, `.tooling`)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 303"
+  },
+  {
+   "id": "A03",
+   "titel": "Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`; B3 Live-Waechter – Lese-Secret)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 302"
+  },
+  {
+   "id": "A04",
+   "titel": "Paket 1 (Opus, PC: `gh` angemeldet): PR-Ablauf, Ruleset, Auto-Merge",
+   "status": "offen",
+   "beleg": "BUILD_LOG 301 R5/R6"
+  },
+  {
+   "id": "A05",
+   "titel": "Paket 2 Schritt 2: Entscheide je Datei (E001–E071 aus `PLAN_NEUBAU.md`, README als Index)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 301 R9"
+  },
+  {
+   "id": "A06",
+   "titel": "Paket 2 Schritt 3: docs/-Struktur, erst frei verschiebbare Dateien, dann die mit Verweisen",
+   "status": "offen",
+   "beleg": "BUILD_LOG 304"
+  },
+  {
+   "id": "A07",
+   "titel": "Paket 2 Schritt 4: Steuerdateien kuerzen (CLAUDE.md-Kern < 200 Zeilen, Zuordnung laut BUILD_LOG 304)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 304"
+  },
+  {
+   "id": "A08",
+   "titel": "erste Sonnet-Etappe mit `/advisor opus` messen",
+   "status": "offen",
+   "beleg": "BUILD_LOG 299"
+  },
+  {
+   "id": "A09",
+   "titel": "Inhalt danach: AP1 komplett bis Fruehjahr 2027",
+   "status": "offen",
+   "beleg": "BUILD_LOG 301 R5"
+  },
+  {
+   "id": "A10",
+   "titel": "web.de: fisi 1.3.17 installieren (Nutzer; Release `werkzeuge-fisi1.3.17-shell1.1.2` fehlt, nur PC)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 300"
+  },
+  {
+   "id": "A11",
+   "titel": "beim naechsten Plugin-Bump `projekt_einstieg.md:61`",
+   "status": "offen",
+   "beleg": "BUILD_LOG 300"
+  },
+  {
+   "id": "A12",
+   "titel": "Schritt 14 auf den anderen zwei PCs",
+   "status": "offen",
+   "beleg": "PLAN_UMZUG_V3"
+  },
+  {
+   "id": "A13",
+   "titel": "`../srv2.pid`, `../Training_erstcommit` loeschen (Nutzer)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 301 R2"
+  },
+  {
+   "id": "A14",
+   "titel": "`../Buch/klausur_k3` committen (Nutzer)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 300"
+  }
+ ]
+}
