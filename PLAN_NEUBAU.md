@@ -640,7 +640,7 @@ vorbehalten" des Katalog-Herausgebers (4 Commits), private Gmail-Adresse als Aut
 * **B3 – Live-Waechter (ND7, E68):** Zeitplan-Job taeglich: Erreichbarkeit, Header, Version = main, neue Fehlerberichte (Lesezugang als Secret) →
   GitHub-Issue (eins je Ursache, nicht je Lauf).
 * **B4 – Kennzahlen:** DORA (Liefertempo, Haeufigkeit, Ausfallquote, Wiederherstellung, Nacharbeit) monatlich aus `gh` – Skript + Bericht.
-* **B5 – CI schneller:** `check.sh` in parallele Jobs (Ziel < 3 min statt ~5), Ausgabe und Urteil gleich.
+* ✅ **B5 – CI schneller** (= N51 A2, erledigt 12.10., BUILD_LOG 149; Stand 27.11. BUILD_LOG 302)**:** `check.sh` in parallele Jobs (Ziel < 3 min statt ~5), Ausgabe und Urteil gleich.
 
 ### N43 — Code-Qualitaet messbar machen (E67, E71) · offen
 Messung 09.10. (Kopie von `fa3252a`): jscpd 0,7 % · Komplexitaet > 20: 5 Funktionen (`validierung.ts` 140, `api.ts bearbeite` 49, `testhilfe/verderben.ts` 27,
@@ -651,13 +651,13 @@ Zweige 87,8 % · Mutation nie gemessen · `tools/` ~133 Dateien (py 47, js 33, s
 ruff 0, shellcheck 0, JS-Werkzeuge typgeprueft.
 * **M1 – Ratschen:** je Kennzahl ein Waechter in `check.sh` nach dem Muster der `as`-Ratsche (Zahl darf nur sinken), Selbsttest an einer Probe. ✅ 10.10. (BUILD_LOG 121): `tools/qualitaet_ratsche.py`, Waechter 4f_qualitaet.
 * **M2 – Architektur:** dependency-cruiser mit den Schichtregeln. ✅ 14.10. (BUILD_LOG 170): `tools/architektur_regeln.cjs` (keine Zyklen · kern ohne Oberflaeche · server nur kern/pruefe + kern/route), `tools/architektur.py` + `--probe`, Waechter 4f_architektur; dependency-cruiser 18.6 + typescript@6 in `.tooling/` (liest TS 7 noch nicht); ersetzt `kern/architektur.test.ts`.
-* **M3 – Mutation (E71):** Stryker 10 + vitest-runner nur fuer `kern/` + `server/`; Zeitplan-Job naechtlich und vor jedem Release, Issue wenn der Wert sinkt.
+* ✅ **M3 – Mutation (E71):** Stryker 10 + vitest-runner nur fuer `kern/` + `server/`; Zeitplan-Job naechtlich und vor jedem Release, Issue wenn der Wert sinkt. ✅ Wert 92,62 % kern+server (18.10., Archiv), `break` 88 · 27.11. gebaut, ERSTER LAUF OFFEN (Zeitplan laeuft erst auf main; BUILD_LOG 303): `.github/workflows/mutation.yml` (naechtlich + von Hand, inkrementelle Datei im Actions-Cache, EIN Issue „Mutationstest unter Schwelle“), Urteil `tools/stryker_wert.js` (`--probe` 6/6).
 * **M4 – Werkzeuge:** ruff (Python), shellcheck (sh), `// @ts-check` + tsc fuer `tools/*.js`; erst messen, Ratsche auf Ist. ✅ 13.10. (BUILD_LOG 152): ruff/shellcheck seit M1 in der Ratsche; tsc ueber `tools/tsconfig.tools.json` (checkJs, alle 34 JS-Dateien) – `tsc_tools` 23, `tsc_tools_streng` 789, Probe + Stumm bei TS5xxx/TS6xxx.
 
 ### N44 — App-Code auf 10 · offen
 * ✅ **C1** (Ziel erreicht, gemessen 26.11.: `tools/qualitaet_ratsche.json` lizard CCN>15 = 0, CCN>20 = 0; BUILD_LOG 301) die fuenf komplexen Funktionen zerlegen (`api.ts` als Pfad-Tabelle, `validierung.ts` aus dem Schema ableiten statt von Hand) – Schnappschuss unveraendert.
 * ✅ **C2** knip auf 0 – erledigt 14.10. (BUILD_LOG 171): 76 → 0, `neu/knip.jsonc` (sw-Einstiege, Ausnahmeliste components/ui), 7 tote Symbole geloescht · **C3** TS-Schalter `exactOptionalPropertyTypes`, `noImplicitReturns`, `noImplicitOverride`, `noPropertyAccessFromIndexSignature` (je Schalter messen,
-  dann an) ✅ 10.10. (BUILD_LOG 118, 120): drei Schalter an, `noPropertyAccessFromIndexSignature` verworfen (Nutzer-Entscheid: reiner Schreibstil, 477 Stellen) · ✅ **C4** oxlint-Kategorien + `jsx-a11y` + `import/no-cycle` – erledigt 14.10. (BUILD_LOG 172): correctness + suspicious + perf als Fehler, jsx-a11y und import an, 120 Befunde → 0 (10 begruendete Ausnahmen); pedantic: 9 Fehler-Regeln an, `prefer-nullish-coalescing` an (ignorePrimitives), `no-unsafe-*` als Ratsche `no_unsafe` 340 (BUILD_LOG 173) · **C5** Mutations-Luecken schliessen · ~~**C6** ND2 Admin-Schluessel nur `sessionStorage`~~ – gestrichen (Nutzer-Entscheid 09.10.: ND2 bleibt).
+  dann an) ✅ 10.10. (BUILD_LOG 118, 120): drei Schalter an, `noPropertyAccessFromIndexSignature` verworfen (Nutzer-Entscheid: reiner Schreibstil, 477 Stellen) · ✅ **C4** oxlint-Kategorien + `jsx-a11y` + `import/no-cycle` – erledigt 14.10. (BUILD_LOG 172): correctness + suspicious + perf als Fehler, jsx-a11y und import an, 120 Befunde → 0 (10 begruendete Ausnahmen); pedantic: 9 Fehler-Regeln an, `prefer-nullish-coalescing` an (ignorePrimitives), `no-unsafe-*` als Ratsche `no_unsafe` 340 (BUILD_LOG 173); 27.11. 338 → 3 (BUILD_LOG 303, Nutzer-Entscheid): `kern/validierung.ts` begruendet ausgenommen (`Roh = any`, Wurf-Meldungen im Gleichheitstest) · ✅ **C5** Mutations-Luecken schliessen (18.10., BUILD_LOG-Archiv: alle Dateien ≥ 80 %; Zweige 94,26 % am 27.11.) · ~~**C6** ND2 Admin-Schluessel nur `sessionStorage`~~ – gestrichen (Nutzer-Entscheid 09.10.: ND2 bleibt).
 * **Release** nach C1–C6 (vorher fragen).
 
 ### N45 — Werkzeuge auf 10 (E67) · offen
@@ -666,7 +666,7 @@ ruff 0, shellcheck 0, JS-Werkzeuge typgeprueft.
   S607 7 + S603 6 (subprocess), S110 5 + S112 2 (`except: pass/continue`), S101 4, S324 4 (sha1/md5), S602 1 (`shell=True`,
   `tools/sabotage_vt.py:42`). Alles nur lokale Werkzeuge. Vorschlag beim Bau: S101 und S324 (Fingerabdruecke, keine Kryptografie)
   begruendet ausnehmen, Rest beheben; eigene Zahl in der Ratsche (`ruff_s`), damit die Gruppe nicht in der 801er-Summe untergeht
-  · ✅ **W3** `tools/*.js` typgeprueft – erledigt 14.10. (BUILD_LOG 169): strict 779 → 0 (archiv/ ausgenommen), nur JSDoc/Casts, bewiesen mit `tools/js_gleich.js`; `tsc_tools` = strict, `tsc_tools_streng` aufgegangen · **W4** Werkzeuge ohne Aufrufer nach `tools/archiv/` (vorher Verweise 0 pruefen). ⚠️ **W4 vorgezogen 13.10. (BUILD_LOG 153, `BEFUNDE_WERKZEUGE.md` §13):** Inventur aller 146 Code-Dateien, 11 archiviert, 2 auf den Kern umgestellt; offen: die 11 Sichtpruef-Skripte (§13d) einzeln.
+  · ✅ **W3** `tools/*.js` typgeprueft – erledigt 14.10. (BUILD_LOG 169): strict 779 → 0 (archiv/ ausgenommen), nur JSDoc/Casts, bewiesen mit `tools/js_gleich.js`; `tsc_tools` = strict, `tsc_tools_streng` aufgegangen · **W4** Werkzeuge ohne Aufrufer nach `tools/archiv/` (vorher Verweise 0 pruefen). ⚠️ **W4 vorgezogen 13.10. (BUILD_LOG 153, `BEFUNDE_WERKZEUGE.md` §13):** Inventur aller 146 Code-Dateien, 11 archiviert, 2 auf den Kern umgestellt; offen: die 11 Sichtpruef-Skripte (§13d) einzeln. ✅ 27.11. (BUILD_LOG 303): breite, breite_probe, p6b, lupe3 nach `tools/archiv/sichtpruefung/`; p5 und rest bleiben (wiederverwendbar, R7).
   Massenkorrekturen nach festem Muster duerfen an einen Sonnet-Agenten auf einer Kopie (Pruefskript = 0, Diff liest der Hauptchat).
 
 

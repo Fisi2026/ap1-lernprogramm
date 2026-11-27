@@ -1,0 +1,82 @@
+name: Mutation
+
+# N43 M3 (E71, 27.11.2026, BUILD_LOG 303): Mutationstest (Stryker) fuer kern/ + server/ als Zeitplan-Job.
+# * Naechtlich und von Hand vor jedem Release (`gh workflow run Mutation --ref main`).
+# * Laeuft ueber `tools/stryker_lauf.sh` (heilt die inPlace-Umschreibungen) mit `neu/stryker.config.json`;
+#   die inkrementelle Datei wird im Actions-Cache gehalten - ohne Aenderung in kern/server ist der Lauf kurz,
+#   der erste Lauf ist voll (am PC 1,8-2,9 h mit 6 Arbeitern, BUILD_LOG-Archiv).
+# * Urteil per `tools/stryker_wert.js` gegen `thresholds.break`: darunter (oder ohne Wert) ist der Job rot und
+#   es gibt EIN offenes Issue „Mutationstest unter Schwelle“ - weitere rote Laeufe kommentieren dort, statt neue
+#   Issues anzulegen (eins je Ursache, nicht je Lauf).
+# * Rechte wie in ci.yml: Vorgabe keine, der Job nennt, was er braucht; Actions am vollen SHA.
+on:
+  schedule:
+    - cron: "37 2 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: mutation
+  cancel-in-progress: false
+
+jobs:
+  stryker:
+    name: Stryker kern/ + server/
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    permissions:
+      contents: read
+      issues: write   # ein Issue bei Abfall unter die Schwelle
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: neu/package-lock.json
+      - name: Install neu/ dependencies
+        working-directory: neu
+        run: npm ci --no-fund --no-audit --loglevel=error
+      - name: Inkrementelle Datei aus dem Cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: _to_delete/helfer/stryker/incremental.json
+          key: stryker-inc-${{ github.run_id }}
+          restore-keys: stryker-inc-
+
+      - name: Stryker
+        id: lauf
+        run: |
+          set +e
+          bash tools/stryker_lauf.sh --concurrency "$(nproc)"
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+      - name: Urteil
+        id: urteil
+        if: always()
+        run: |
+          schwelle=$(node -p "require('./neu/stryker.config.json').thresholds.break")
+          set +e
+          aus=$(node tools/stryker_wert.js _to_delete/helfer/stryker/mutation.json --schwelle "$schwelle")
+          rc=$?
+          echo "$aus"
+          { echo "### Mutationstest"; echo; echo "$aus"; echo; echo "Stryker rc ${{ steps.lauf.outputs.rc }} · Urteil rc $rc"; } >> "$GITHUB_STEP_SUMMARY"
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          { echo "zeile<<ENDE"; echo "$aus"; echo "ENDE"; } >> "$GITHUB_OUTPUT"
+          [ "$rc" = 0 ] && [ "${{ steps.lauf.outputs.rc }}" = 0 ]
+      - name: Issue bei Abfall
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ZEILE: ${{ steps.urteil.outputs.zeile }}
+          LAUF: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          titel="Mutationstest unter Schwelle"
+          text=$(printf '%s\n\nStryker rc %s · Lauf: %s\n' "${ZEILE:-kein Ergebnis}" "${{ steps.lauf.outputs.rc }}" "$LAUF")
+          nr=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$titel\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$nr" ]; then gh issue comment "$nr" --repo "$GITHUB_REPOSITORY" --body "$text"
+          else gh issue create --repo "$GITHUB_REPOSITORY" --title "$titel" --body "$text"; fi

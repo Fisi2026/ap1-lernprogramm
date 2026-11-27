@@ -23,6 +23,12 @@ gefunden hat — nur Erwähnungen in Protokollen und Archiven.
 
 Zusammen rund **237 KB**.
 
+**Nachtrag 27.11.2026 (N45 W4, BUILD_LOG 303):** nach `tools/archiv/sichtpruefung/` die Einmal-Messungen
+`breite.js`, `breite_probe.js` (N25b, Abnahme erledigt 22.09.), `p6b.js` (sieben Zustaende, Etappe abgeschlossen) und
+`lupe3.js` (Einzelmessung Zoom). Verweise vorher per `grep -rn` ueber das ganze Repo: nur `LIESMICH.md`, `WERKZEUGE.md`
+und Protokolle - kein Aufruf. Laufen von hier nicht mehr (relative Pfade auf `ids.json`/`dienst.py`); `p5.js` und
+`rest.js` bleiben bewusst in `tools/sichtpruefung/` (LIESMICH: wiederverwendbar, PLAN_NEUBAU R7).
+
 ## ⚠️ DREI KANDIDATEN SIND BEWUSST IN `tools/` GEBLIEBEN
 
 `BEFUNDE_WERKZEUGE.md` §5 hatte **dreizehn** Dateien vorgeschlagen. Die Liste war aus **Größe und
