@@ -91,7 +91,7 @@ Nie nur ins „Damit offen“ schreiben.
 | Pool, Frage, Verweis, Lehrtext, Spickzettel | `START_PROMPT.md` (Kern, < 200 Zeilen), `regeln/pool.md` und `regeln/messen.md`, alle ganz |
 | Brücke, Rechnerwechsel, Skript schreibt Projektdateien | zusätzlich `regeln/bruecke.md` |
 | Commit, Push, Release, Stand beim Lerner | zusätzlich `regeln/git.md` |
-| zusätzlich bei `neu/` | `SCHIENE_NEU.md`, `PLAN_NEUBAU.md`, letzter `BUILD_LOG.md`-Eintrag |
+| zusätzlich bei `neu/` | `SCHIENE_NEU.md`, `docs/plaene/PLAN_NEUBAU.md`, letzter `BUILD_LOG.md`-Eintrag |
 
 Einzelne Abschnitte: `python3 tools/abschnitt.py <datei> <marke>` ausführen (rc 2 = kein Treffer, mit
 Liste der Überschriften). `regeln/*.md` werden immer ganz gelesen; welche, sagt die Pflichttabelle in `START_PROMPT.md` Abschnitt 6. Im Zweifel lesen.

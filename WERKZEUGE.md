@@ -257,7 +257,9 @@ Fehlalarm: `// nosemgrep -- <Begruendung>` an der Zeile (Beispiel `tools/sichtpr
 `... --selbsttest` / `... --setze` ..... Probe `tools/ratsche_probe/` (bekannte Antwort) / Grenzen auf Ist setzen.
 Werkzeuge: `tools/requirements-werkzeuge.txt` (mit Hashes, `bash tools/einrichten.sh`), knip als devDependency in `neu/`.
 
-`tools/entscheide.py` (11.10.2026, N49 W3) – jede Entscheidungs-Nummer genau einmal (Tabelle E1–E71 in PLAN_NEUBAU + `entscheide/E0xx-*.md`), keine Luecke, Pflichtabschnitte. `--probe` = Gegenprobe mit drei Kaputt-Faellen. Waechter 4g2.
+`tools/entscheide.py` (11.10.2026, N49 W3) – jede Entscheidungs-Nummer genau einmal (`entscheide/E0xx-*.md`, E001–E071 seit BUILD_LOG 305 ebenfalls je Datei), keine Luecke, Pflichtabschnitte, jede Datei im Index von `entscheide/README.md` und kein Index-Eintrag ohne Datei (seit BUILD_LOG 311). `--probe` = echter Stand OK plus fuenf Kaputt-Faelle, jeder muss SEINEN Grund nennen. Waechter 4g2.
+
+`tools/offen.py` (27.11.2026, BUILD_LOG 304/311) – Schlusszeile „Damit offen“ aus `aufgaben.json` (`zeile`) und Pruefung (`--pruefe`): der LETZTE BUILD_LOG-Eintrag traegt genau eine solche Zeile als letzte Zeile, gleich der erzeugten; 0 gleich, 1 Abweichung, 2 stumm. `--probe` = elf bekannte Faelle. Waechter 4h (faehrt Probe und Pruefung).
 
 ### 11.10.2026 – Vorlauf vor dem vollen check.sh (N51 A1)
 `bash tools/vorlauf.sh` ............... vor JEDEM vollen `check.sh`: `einstieg.py --setze`, Stand-Waechter (4e_versionen,

@@ -69,7 +69,8 @@ Ebenfalls je Konto: **dieses Projekt-Dokument** (Quelle oben) und der Connector 
 | `START_PROMPT.md` | Stand, Übergabe, Arbeitsregeln, PFLICHT-Tabelle |
 | `EINSTIEG.md` | Kurzfassung (erzeugt) – genügt für Werkzeug- und Neubau-Arbeit |
 | `regeln/*.md` | die teuren Lehren nach Thema (pool, messen, git, bruecke, dateien) – welche Pflicht ist, sagt `START_PROMPT.md` Abschnitt 6 |
-| `PLAN_NEUBAU.md` | Neubau `neu/`, Entscheide E1–E62 |
+| `docs/plaene/PLAN_NEUBAU.md` | Neubau `neu/` (Etappen, Reihenfolge) |
+| `entscheide/README.md` | Index aller Entscheide, je eine Datei `entscheide/E0xx-*.md` |
 | `DEPLOY.md` | Auslieferung, Cloudflare-Worker, D1 `ap1-meldungen` |
 | `BUILD_LOG.md` | was zuletzt geschah („Damit offen: …" im letzten Eintrag) |
 

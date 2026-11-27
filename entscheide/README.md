@@ -97,3 +97,13 @@ Was sich dadurch aendert, was dafuer in Kauf genommen wird, wo es geprueft wird.
 | E069 | Release ND1 (09.10.) | `E069-release-nd1-09-10.md` |
 | E070 | Push-Weg (09.10.) | `E070-push-weg-09-10.md` |
 | E071 | Mutationstest (09.10.) | `E071-mutationstest-09-10.md` |
+| E072 | Erst Arbeitsweise und Technikstand, dann Inhalt | `E072-reihenfolge-technik-vor-inhalt.md` |
+| E073 | START_PROMPT als Kern, Lehren nach Thema in regeln/ | `E073-kern-und-themendateien.md` |
+| E074 | Hotspot-Zonen mindestens 24 px, auch wenn die Zeichnung dann rollt | `E074-hotspot-mindestbreite.md` |
+| E075 | Arbeitsweg schneller und billiger vor N43 | `E075-arbeitsweg-schneller.md` |
+| E076 | Arbeitsweg „Cloud baut, PC misst“ | `E076-arbeitsweg-cloud-baut-pc-misst.md` |
+| E077 | Verbrauch nur ueber den Hook; Skill token-wache entfaellt, wache.py nur Notfall | `E077-verbrauch-nur-ueber-den-hook.md` |
+| E078 | Standzeile vorab „PUSH DURCH“, Push-Fehlschlag setzt OFFEN | `E078-standzeile-vorab-durch.md` |
+| E079 | UP031-Rest: ruff schreibt um, Typ von Hand belegt, format_gleich.py beweist | `E079-up031-mischweg.md` |
+| E080 | Sicherheitsgruppe S als eigene Ratschen-Zahl `ruff_s`, begruendete Ausnahmen statt noqa | `E080-ruff-s-sicherheitsgruppe.md` |
+| E081 | „Kann ich schon“: Fragen ausblenden, als richtig gebucht, zurückholbar unter „Markierte Fragen“ | `E081-kann-ich-schon.md` |

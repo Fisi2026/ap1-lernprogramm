@@ -3,9 +3,9 @@
  "aufgaben": [
   {
    "id": "A01",
-   "titel": "►► Zweig `claude/optimistic-feynman-b8gtxx` (BUILD_LOG 302–304) vom PC pruefen und nach main uebernehmen, danach `gh workflow run Mutation` (erster Volllauf)",
+   "titel": "►► Zweig `claude/optimistic-feynman-b8gtxx` (BUILD_LOG 302–311) vom PC pruefen und nach main uebernehmen, danach `gh workflow run Mutation` (erster Volllauf)",
    "status": "offen",
-   "beleg": "BUILD_LOG 303"
+   "beleg": "BUILD_LOG 303, 311"
   },
   {
    "id": "A02",
@@ -57,15 +57,21 @@
   },
   {
    "id": "A10",
-   "titel": "web.de: fisi 1.3.17 installieren (Nutzer; Release `werkzeuge-fisi1.3.17-shell1.1.2` fehlt, nur PC)",
+   "titel": "Release `werkzeuge-fisi1.3.18-shell1.1.2` nach der Uebernahme nach main vom PC (`bash tools/werkzeug_release.sh`), dann fisi 1.3.18 in web.de und gmail installieren (Nutzer) und `tools/plugin/installiert.txt` nachziehen",
    "status": "offen",
-   "beleg": "BUILD_LOG 300"
+   "beleg": "BUILD_LOG 311"
   },
   {
    "id": "A11",
    "titel": "beim naechsten Plugin-Bump `projekt_einstieg.md:61` und die Wurzelpfade in `tools/plugin/**` (SKILL.md, projekt_einstieg.md: PLAN_NEUBAU/PLAENE/LEHREN/BEFUNDE_* liegen jetzt in docs/) nachziehen; zugleich Pfad-Kommentare in `pool/sets/*.json`, `zitate_belegt.json`, `set_bauen.py` (fliessen ins App-Buendel: nur mit Bau-Aenderung)",
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 311"
+  },
+  {
+   "id": "A15",
+   "titel": "Pfad-Kommentare in `pool/sets/*.json`, `zitate_belegt.json`, `tools/klausur_k*/set_bauen.py` auf `docs/plaene/` nachziehen (fliessen ins App-Buendel: nur zusammen mit einer Bau-Aenderung)",
    "status": "offen",
-   "beleg": "BUILD_LOG 300"
+   "beleg": "BUILD_LOG 311"
   },
   {
    "id": "A12",
