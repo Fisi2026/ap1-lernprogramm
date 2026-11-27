@@ -1476,8 +1476,8 @@ G2 Selbstbewertungs-Sim · G4 Altprüfungs-Analyse.
 #   M08 55) – NICHT nach den gleichnamigen Pool-Dateien. **Maßgeblich ist das `modul`-Feld.**
 #   Von 120 Tell-Treffern in diesen fünf Modulen sind **5 offen, alle Nutzer-Entscheide**.
 #   Verfahren, Reihenfolge-Entscheid und Zahlenhistorie: `START_PROMPT_ARCHIV.md`.
-#   ✅ **M07 UND M08 SIND DURCH (28.07.).** Protokolle: `ETAPPE3_M07_BEFUNDE.md`,
-#   `ETAPPE3_M08_BEFUNDE.md` – je mit Abschnitt H „was tatsächlich geändert wurde".
+#   ✅ **M07 UND M08 SIND DURCH (28.07.).** Protokolle: `docs/befunde/ETAPPE3_M07_BEFUNDE.md`,
+#   `docs/befunde/ETAPPE3_M08_BEFUNDE.md` – je mit Abschnitt H „was tatsächlich geändert wurde".
 #
 # ⚠️ **ZWEI LEHREN AUS DIESEN LÄUFEN, DIE WEITER GELTEN:**
 #   1. **NACH JEDEM LAUF DEN FREIGEGEBENEN UMFANG GEGEN DAS SKRIPT ABHAKEN** – M07-A1 fiel sonst
@@ -1512,7 +1512,7 @@ G2 Selbstbewertungs-Sim · G4 Altprüfungs-Analyse.
 # ⚠️ ALLES HIER IST ERLEDIGT. Nichts davon erneut vortragen.
 # ============================================================
 #   2. ✅ **ERLEDIGT: M07-Commits gepusht, CI grün** (Stand 30.07., siehe Abschnitt 2). Die
-#      Entscheide aus `ETAPPE3_M07_BEFUNDE.md` E sind getroffen. **Nicht erneut vortragen.**
+#      Entscheide aus `docs/befunde/ETAPPE3_M07_BEFUNDE.md` E sind getroffen. **Nicht erneut vortragen.**
 #   3. ✅ **ERLEDIGT: Ratsche gesenkt**, `test_didaktik.js:119-120` = Schwelle 8,0 · Ziel 5,0.
 #      **Wer einen Entscheid umsetzt, streicht ihn HIER** – dieser stand zwei Tage zu Unrecht offen.
 #   4. ✅ **ERLEDIGT 30.07.: ALLE 40 `verweis`-Felder nachgetragen** (Nutzer-Freigabe: alle 40).
@@ -1667,7 +1667,7 @@ G2 Selbstbewertungs-Sim · G4 Altprüfungs-Analyse.
 ```
 # ► **DER NÄCHSTE GRIFF – IN DIESER REIHENFOLGE, ERST NACH RÜCKFRAGE BEIM NUTZER:** ◄
 #   **(a)/(b) ✅ ERLEDIGT bzw. ÜBERHOLT** – M09-Tabu aufgehoben (30.07.), `verweis`-Fehlerklasse 1
-#       poolweit sauber (`VERWEISE_BEFUNDE.md`). ⛔ **Die alten Zahlen dort („38 %", „mehrere
+#       poolweit sauber (`docs/befunde/VERWEISE_BEFUNDE.md`). ⛔ **Die alten Zahlen dort („38 %", „mehrere
 #       hundert", „134 ohne Abschnitt") sind durch Punkt 4 unten ERSETZT – nicht mehr benutzen.**
 #   **(b2) ✅ ERLEDIGT 25.08.: DIE LERNUNTERLAGE HAT KEINE BELEGTE LÜCKE MEHR** – 34 von 34 belegt,
 #       0 offen; vier große Themen als eigene Abschnitte, 24 als Ergänzungen. Liste und
@@ -2063,7 +2063,7 @@ Zeilennummern der Fassung vom 03.09.2026 vor der Rotation; Original unveraendert
 #   | 0,1,2,3,4,5,6,E3 | Wächter · M09-Auflösung · Batch M01–M08 · A4 · Stufen · `verweis`-Ziele | ✅ **alle durch** (v1.9.0–v1.13.0, 24.08.). Protokolle `ETAPPE3_M0X_BEFUNDE.md`, `E3_M0X_VERWEISE.md` |
 #   | 7 | Startlast auf dem Gerät messen (kein Umbau) | 🔶 **Nutzlast und Rechenzeit gemessen (25.08.), offen bleibt nur der Gerätewert – wird NICHT nachgefragt** |
 #   | **I** | **M04/M05/M06 inhaltlich nachholen** | ✅ **DURCH (27.08.): 369 von 369 Fragen gelesen, 51 Befunde.** `BEFUNDE_M04-M06.md` |
-#   | **II–V** | **Q2: Begriffe · M05 · neun Fälle · 96 Grafiken** | ✅ **DURCH (28.08.): B60–B89, vier SVG-Wächter.** `BEFUNDE_BEGRIFFE.md`, `BEFUNDE_FAELLE.md` |
+#   | **II–V** | **Q2: Begriffe · M05 · neun Fälle · 96 Grafiken** | ✅ **DURCH (28.08.): B60–B89, vier SVG-Wächter.** `docs/befunde/BEFUNDE_BEGRIFFE.md`, `BEFUNDE_FAELLE.md` |
 #   | **VI** | **Q2: Lernunterlage – ALLE SIEBEN KURSDATEIEN** | ✅ **DURCH (31.08.): 4907 Zeilen gelesen, B90–B125, 35 von 36 korrigiert.** `BEFUNDE_LERNUNTERLAGE.md` mit Bilanz |
 #   | **VII** | **Q2: Lerner-Fluss** | ✅ **DURCH (31.08.): gemessen, nichts geändert.** Vier von fünf Fragen mit „funktioniert" beantwortet; L1 (M08 halb so oft gezogen) aufgeklärt: `THEMA_RELEVANZ` führt alle zwölf WiSo-Themen auf 1. Protokoll `BEFUNDE_LERNFLUSS.md`, Werkzeug `tools/probe_lernfluss.js` |
 ```
@@ -2521,7 +2521,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 99-117 der Ur-Fassung
 
 #   **SCHRITT 2: DIE QUALITÄTSRUNDE Q2 IST KOMPLETT DURCH (31.08.) – ES GIBT KEINE OFFENE ETAPPE.**
-#      ✅ Etappen II–VII alle abgeschlossen: `BEFUNDE_BEGRIFFE.md`, `BEFUNDE_M04-M06.md`,
+#      ✅ Etappen II–VII alle abgeschlossen: `docs/befunde/BEFUNDE_BEGRIFFE.md`, `BEFUNDE_M04-M06.md`,
 #      `BEFUNDE_FAELLE.md`, `BEFUNDE_LERNUNTERLAGE.md`, `BEFUNDE_LERNFLUSS.md`.
 #      **Nicht neu anfangen, nicht nachprüfen.**
 #      ✅ **B106, die M08-Stufung und N2 sind am 02.09. belegt und erledigt – nicht wieder
@@ -2664,7 +2664,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 
 #   | Etappe | Inhalt | Stand |
 #   |---|---|---|
-#   | 0–6, E3, I–VII | Wächter · M09-Auflösung · Batch M01–M08 · A4 · Stufen · `verweis`-Ziele · M04–M06 · Q2 (Begriffe, Fälle, Grafiken, Lernunterlage, Lerner-Fluss) | ✅ **alle durch.** Protokolle: `ETAPPE3_M0X_BEFUNDE.md`, `E3_M0X_VERWEISE.md`, `BEFUNDE_M04-M06.md`, `BEFUNDE_BEGRIFFE.md`, `BEFUNDE_FAELLE.md`, `BEFUNDE_LERNUNTERLAGE.md`, `BEFUNDE_LERNFLUSS.md`. Zeile für Zeile: Archiv 03.09. |
+#   | 0–6, E3, I–VII | Wächter · M09-Auflösung · Batch M01–M08 · A4 · Stufen · `verweis`-Ziele · M04–M06 · Q2 (Begriffe, Fälle, Grafiken, Lernunterlage, Lerner-Fluss) | ✅ **alle durch.** Protokolle: `ETAPPE3_M0X_BEFUNDE.md`, `E3_M0X_VERWEISE.md`, `BEFUNDE_M04-M06.md`, `docs/befunde/BEFUNDE_BEGRIFFE.md`, `BEFUNDE_FAELLE.md`, `BEFUNDE_LERNUNTERLAGE.md`, `BEFUNDE_LERNFLUSS.md`. Zeile für Zeile: Archiv 03.09. |
 #   | 7 | Startlast auf dem Gerät messen (kein Umbau) | 🔶 **Nutzlast und Rechenzeit gemessen (25.08.), offen bleibt nur der Gerätewert – wird NICHT nachgefragt** |
 #
 # ► **ERLEDIGT UND NICHT ERNEUT VORZUTRAGEN** (Volltext: `START_PROMPT_ARCHIV.md`): M09-Tabu

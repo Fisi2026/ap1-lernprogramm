@@ -82,7 +82,7 @@
 # 3) NÄCHSTER GRIFF
 # ============
 # ✅ **W1 „WERKZEUGE, WÄCHTER, AUFRÄUMEN" IST ABGESCHLOSSEN (10.09.).** A–E durch, **E1/E4 und
-#   F1/F2 GEMESSEN UND GESTRICHEN** – nicht erneut vorschlagen (`BEFUNDE_WERKZEUGE.md` §11).
+#   F1/F2 GEMESSEN UND GESTRICHEN** – nicht erneut vorschlagen (`docs/befunde/BEFUNDE_WERKZEUGE.md` §11).
 #   ⚠️ **Aus E blieb die ZUSICHERUNG, nicht die Form:** `check.sh` 4e10 verlangt von jedem
 #   Pool-Wächter einen **Werkzeug-stumm-** und einen **ok-Zweig** (`waechter_zusicherung.py`,
 #   Selbsttest läuft mit). ⛔ **Keine Ausnahmeliste.** ⚠️ **Zwei Prüfungen heißen beide `4e2`**

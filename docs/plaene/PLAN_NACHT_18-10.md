@@ -1,4 +1,4 @@
-# PLAN_NACHT_18-10.md – Nachtarbeit 17.10. 23:30 → 18.10. 10:00 (Leitung + Cloud-Arbeiter)
+# docs/plaene/PLAN_NACHT_18-10.md – Nachtarbeit 17.10. 23:30 → 18.10. 10:00 (Leitung + Cloud-Arbeiter)
 
 **Zweck:** Diese Datei reicht allein, um die Leitung zu übernehmen – aus einer neuen Cloud-Sitzung, einem Chat im Konto
 web.de oder am PC (Nutzer-Entscheid 17.10. ~23:30: „auch web.de/PC“). Sie ersetzt keine Regel aus `START_PROMPT.md`,

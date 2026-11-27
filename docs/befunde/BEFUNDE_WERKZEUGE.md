@@ -110,7 +110,7 @@ Suiten bei gesundem Code, wie am 26.07. schon einmal (35 rote Suiten mit „ENOE
 ## 4. ✅ ERLEDIGT 10.09.: `push.sh` LAG IM REPO, OBWOHL DIE DOKU VOR IHM WARNTE
 
 > **Nach `_to_delete/` verschoben (W1 Etappe B).**
-> ⛔⛔ **UND DIE WARNUNG WAR NICHT ÜBERALL ANGEKOMMEN:** `UNTERRICHT_PROJEKT.md` Zeile 144 wies
+> ⛔⛔ **UND DIE WARNUNG WAR NICHT ÜBERALL ANGEKOMMEN:** `docs/plaene/UNTERRICHT_PROJEKT.md` Zeile 144 wies
 > ausdrücklich an, `bash push.sh „…“` zu fahren — seit dem 28.07. gegen START_PROMPT und DEPLOY.
 > **Eine Datei, die es nicht gibt, schützt besser als eine Warnung, die man erst lesen muss.**
 

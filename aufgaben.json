@@ -33,9 +33,9 @@
   },
   {
    "id": "A06",
-   "titel": "Paket 2 Schritt 3: docs/-Struktur, erst frei verschiebbare Dateien, dann die mit Verweisen",
+   "titel": "Paket 2 Schritt 3b: docs/ – die Wurzeldateien mit Verweisen im Code (PLAN_NEUBAU, PLAN_KLAUSUR2/3, PLAN_UMZUG_V3, PLAENE_ARCHIV, LEHREN, uebrige BEFUNDE_*, E3_M01_VERWEISE, M08_PRUEFLISTE_GESETZE, UNTERRICHT_MATRIX, COVERAGE) mit Skripten umziehen",
    "status": "offen",
-   "beleg": "BUILD_LOG 304"
+   "beleg": "BUILD_LOG 306"
   },
   {
    "id": "A07",

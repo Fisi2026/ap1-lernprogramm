@@ -11,12 +11,12 @@ Projektregeln (CLAUDE.md, TASKLIST.md, PLAENE.md). Concise Mode: keine Floskeln.
 
 ## 0. PFLICHT-EINSTIEG (bevor irgendetwas anderes passiert)
 1. Lies das Übergabe-Briefing in TASKLIST.md (Kopfblock + Abschnitte 0, 1, 3, 4, 5-PLAN).
-2. Lies IDEEN_2026-07-18.md (Quelle des Arbeitspakets).
+2. Lies docs/plaene/IDEEN_2026-07-18.md (Quelle des Arbeitspakets).
 3. Lies BUILD_LOG.md nur die jüngsten Einträge (2026-07-16..18); Älteres nur bei Bedarf.
 4. Verifiziere den Ist-Stand SELBST: `bash check.sh` muss auf Sollwert
    grün sein, bevor du Änderungen beginnst. Ausgangsstand: Pool 810, 21 Typen, APP_VERSION 0.7.2.
 
-## 1. AUFTRAG (Umfang — genau diese 29 Ideen aus IDEEN_2026-07-18.md, NICHTS anderes)
+## 1. AUFTRAG (Umfang — genau diese 29 Ideen aus docs/plaene/IDEEN_2026-07-18.md, NICHTS anderes)
 Lernmotor/Funktion:
 - (1) Spaced-Repetition-Scheduler (Leitner/SM-2)
 - (4) Fehler bis „gemeistert" nacharbeiten

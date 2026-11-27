@@ -31,7 +31,7 @@ und Protokolle - kein Aufruf. Laufen von hier nicht mehr (relative Pfade auf `id
 
 ## ⚠️ DREI KANDIDATEN SIND BEWUSST IN `tools/` GEBLIEBEN
 
-`BEFUNDE_WERKZEUGE.md` §5 hatte **dreizehn** Dateien vorgeschlagen. Die Liste war aus **Größe und
+`docs/befunde/BEFUNDE_WERKZEUGE.md` §5 hatte **dreizehn** Dateien vorgeschlagen. Die Liste war aus **Größe und
 Änderungsdatum** gebaut — nicht daraus, ob jemand sie noch braucht. Der Abgleich mit der Doku hat
 drei zurückgeholt:
 
@@ -46,7 +46,7 @@ seine Aufgabe erfüllt, ändert sich nicht mehr — genau das sah in der Liste a
 ⚠️ **Offen für Etappe D:** ob `validate_batch.js` durch die zehn Prüfklassen von `apply_batch.py`
 abgelöst ist, ist **nicht gemessen**. Wer `README.md`/`ARCHITECTURE.md` auffrischt, misst es.
 
-## Verschoben am 2026-10-13 (Werkzeug-Inventur, BUILD_LOG 153, `BEFUNDE_WERKZEUGE.md` §13b, Nutzer-Entscheid)
+## Verschoben am 2026-10-13 (Werkzeug-Inventur, BUILD_LOG 153, `docs/befunde/BEFUNDE_WERKZEUGE.md` §13b, Nutzer-Entscheid)
 
 Vorher geprueft: `git grep` ohne Chronik (`*_ARCHIV.md`, BUILD_LOG, BEFUNDE_*, CHANGELOG) fand **keinen Code-Aufrufer**, nur Doku.
 ⚠️ Die Pfade IN den Skripten stimmen hier nicht mehr (z. B. `index.js` sucht `../referenz`) – sie sind Chronik, nicht Werkzeug.

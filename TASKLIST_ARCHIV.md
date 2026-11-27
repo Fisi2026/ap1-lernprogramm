@@ -59,7 +59,7 @@
 # 30 Suiten, Single Source sollwerte.env (2026-07-21: unterricht 28→62, a11y 25→38, freitext 11→27, engine 70).
 # PARALLEL-PROJEKT „Unser Unterricht" (M09, WiSo-Klausur 31.07.2026): PHASE 0–4 KOMPLETT
 #   (2026-07-20). 105 Fragen im Pool, gesamt 941. NICHT GEPUSHT. Rückfragen sind gestellt und
-#   beantwortet – NICHT erneut stellen. Entscheide/Messwerte: UNTERRICHT_PROJEKT.md (PHASENSTAND).
+#   beantwortet – NICHT erneut stellen. Entscheide/Messwerte: docs/plaene/UNTERRICHT_PROJEKT.md (PHASENSTAND).
 #   NEBENBEI: gesamter Pool auf indent=2 vereinheitlicht (fragen.js/faelle.js byte-identisch);
 #   L.M09_THEMEN in logik.js ist jetzt Single Source für validate_batch/validate_pool/validate_schema.
 # M09-AUSBAUSTUFE 2 (Nutzer wählte alle vier Punkte, 2026-07-20), danach AP1-Freitext Schritt 3:

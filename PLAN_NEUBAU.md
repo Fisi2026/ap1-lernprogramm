@@ -470,7 +470,7 @@ mitschleppen · `_to_delete/` (81 MB am 22.09.) sichten · `.claude/` in die Abl
 schon vor) als **ein Plugin, Quelle im Repo** (`tools/plugin/`), Version im Manifest. Ersetzt die Handpflege
 in `tools/skill_nachtraege.md`. ⚠️ Installieren muss der Nutzer in beiden Konten – der Chat baut die Datei.
 ### N37 — Code-Qualitaet & Architektur (E60) · Stand je Teilschritt: letzter BUILD_LOG-Eintrag
-Anlass: Neupruefung 27.09. (`BEFUNDE_AUDIT.md`), Note Code 8,5. Reihenfolge nach Abhaengigkeit, kleine sichere Schritte zuerst:
+Anlass: Neupruefung 27.09. (`docs/befunde/BEFUNDE_AUDIT.md`), Note Code 8,5. Reihenfolge nach Abhaengigkeit, kleine sichere Schritte zuerst:
 * **U1 – Kern-Grenze + Stufe-4-Fehler.** `Frage.schwierigkeit` ist `1 | 2 | 3`, der Pool hat 97 Fragen mit 4 und `validierung.ts` erlaubt 4 → Typ auf `1 | 2 | 3 | 4` samt Kommentar. `kern/useLernstand.ts` (React-Hook) nach `huelle/`. `kern/glossar.ts` und `kern/simulation.ts` bekommen den Pool als Parameter statt ihn beim Import zu laden. **Architekturtest:** `kern/**` importiert weder `react` noch `daten/laden|pooldaten|faelle` (Sabotage: je ein Import rein → rot).
 * **U2 – Referenz-Regel.** E60 in `SCHIENE_NEU.md` §5 und im Kopf von `testhilfe/altquelle.ts` – alle Gleichheitstests laden ueber `altQuelle`, die Regel steht damit an der Stelle, die jeder von ihnen importiert (statt 13 Kopien).
 * **U3 – Eine Quelle fuer das Schema.** `tools/build_schema.js` schreibt zusaetzlich `neu/src/daten/frage.generiert.ts` (json-schema-to-typescript); `check.sh` meldet, wenn die Datei nicht dem Schema entspricht. **Deckungstest:** Schema (ajv) und `validateFragen` urteilen gleich – ganzer Pool + die verdorbenen Fassungen aus `validierung.gleichheit.test.ts`. `SCHEMA.md` verweist auf das Schema statt Felder zu wiederholen (oder wird daraus erzeugt – Entscheid beim Bau, wenn beides moeglich ist).
@@ -494,7 +494,7 @@ Anlass: Neupruefung 28.09. (Noten Performance 7, Code 8,5). Messung vorher (Ligh
 ---
 
 ### N39 — Abhaengigkeiten, Barrierefreiheit, Aufraeumen (Neupruefung 09.10., NC1–NC7) · ✅ 09.10. (v2.3.2)
-Anlass: Neupruefung 09.10. (`BEFUNDE_AUDIT.md`), Nutzer-Auswahl alle Befunde. Reihenfolge: lokal und gefahrlos zuerst, Lernersichtbares gebuendelt vor einem Release.
+Anlass: Neupruefung 09.10. (`docs/befunde/BEFUNDE_AUDIT.md`), Nutzer-Auswahl alle Befunde. Reihenfolge: lokal und gefahrlos zuerst, Lernersichtbares gebuendelt vor einem Release.
 * **A1 – git aufraeumen (NC4).** `git gc --prune=now` ueber die Training Shell (nie `device_bash`). Vorher/nachher `git count-objects -vH`, danach `git fsck --no-dangling` rc 0. Kein Commit.
 * **A2 – Abhaengigkeiten auf Stand (NC1).** PRs #10–#13 nicht einzeln mergen, sondern lokal: `npm update` in `neu/` (innerhalb der Bereiche) und Wurzel (wrangler ≥ 4.149, behebt sharp/undici), shadcn-Kette pruefen (`npm audit` neu/ nur noch Entwicklungs-Reste, je Rest begruendet). `vite build`, `git add -A v2`, `check.sh` voll, Push; PRs schliessen sich danach (oder von Hand schliessen). Ziel: Dependabot-Alarme 0 bzw. jeder Rest begruendet.
 * **A3 – Dependabot-Weg dauerhaft (NC2).** Entscheid beim Bau (AskUserQuestion), Kandidaten: (a) CI-Job nur fuer Dependabot-PRs, der `vite build` faehrt und `v2/` in den PR-Zweig committet; (b) `check.sh` vergleicht `v2/` bei Dependabot-PRs nicht, der Bau entsteht erst beim Mergen lokal. Gegenprobe: ein kuenstlicher Dependabot-Fall muss gruen werden, ein echter Abweichungsfall weiter rot.
@@ -519,7 +519,7 @@ Technikstand aufbessert“. Die Reihenfolge innerhalb folgt den Abhaengigkeiten,
 6. Danach Inhalt: N48 P5-Rest (75 Fragen; Befunde M08-110, M03-115 in BUILD_LOG 141) · szenario2 · N50 · Inhaltsrunde 8.
 
 ### N40 — Umzug ins oeffentliche Repo (E66, E70) · ✅ erledigt 26.11.2026 (BUILD_LOG 283–285; Ablauf `PLAN_UMZUG_V3.md`)
-Anlass: Komplettpruefung 09.10. abends (`BEFUNDE_AUDIT.md`), ND4/ND3: Branch-Schutz, CodeQL, Secret Scanning, Attestierung, Scorecard sind
+Anlass: Komplettpruefung 09.10. abends (`docs/befunde/BEFUNDE_AUDIT.md`), ND4/ND3: Branch-Schutz, CodeQL, Secret Scanning, Attestierung, Scorecard sind
 auf dem privaten Free-Repo gesperrt (gemessen 403/404). Gemessen im Weg: `tools/katalog/pruefungskatalog_ocr.txt` = ©-Vermerk „… – Alle Rechte
 vorbehalten" des Katalog-Herausgebers (4 Commits), private Gmail-Adresse als Autor in 33 Commits. Darum frische Historie statt Umschreiben (nie `--force`).
 * **V1 – Inventur + Waechter.** Waechter `4e14_veroeffentlichung` in `check.sh`: kein ©-Fremdtext, keine private E-Mail, keine Dateien aus einer
@@ -551,7 +551,7 @@ vorbehalten" des Katalog-Herausgebers (4 Commits), private Gmail-Adresse als Aut
   ⚠️ **Wie S3 (12.10., BUILD_LOG 146):** `step-security/harden-runner` ist nicht GitHub-eigen → Eintrag `step-security/harden-runner@<voller SHA>`
   in der Erlaubt-Liste, sonst blockiert S2 den Lauf. Jeder SHA-Wechsel (Dependabot) braucht den Eintrag neu – oder ein Muster
   `step-security/harden-runner@*` (SHA-Pflicht aus S2 gilt weiter); Nutzer-Entscheid beim Bau.
-* ✅ **S6 – Aufraeumen (ND5)** (09.10., BUILD_LOG 117; `delete_branch_on_merge` im neuen Repo nach V3 neu setzen)**:** PR #15, alte Zweige, `delete_branch_on_merge`. Ziel: Scorecard ≥ 8 (Wert in `BEFUNDE_AUDIT.md`).
+* ✅ **S6 – Aufraeumen (ND5)** (09.10., BUILD_LOG 117; `delete_branch_on_merge` im neuen Repo nach V3 neu setzen)**:** PR #15, alte Zweige, `delete_branch_on_merge`. Ziel: Scorecard ≥ 8 (Wert in `docs/befunde/BEFUNDE_AUDIT.md`).
 
 ### N42 — Deploy und Betrieb (E68) · offen
 * **B1 – Probelauf vor Freigabe:** `wrangler versions upload` → Rauchtest gegen die Versions-Adresse → `wrangler versions deploy`. D1-Migrationen laufen
@@ -594,7 +594,7 @@ ruff 0, shellcheck 0, JS-Werkzeuge typgeprueft.
   S607 7 + S603 6 (subprocess), S110 5 + S112 2 (`except: pass/continue`), S101 4, S324 4 (sha1/md5), S602 1 (`shell=True`,
   `tools/sabotage_vt.py:42`). Alles nur lokale Werkzeuge. Vorschlag beim Bau: S101 und S324 (Fingerabdruecke, keine Kryptografie)
   begruendet ausnehmen, Rest beheben; eigene Zahl in der Ratsche (`ruff_s`), damit die Gruppe nicht in der 801er-Summe untergeht
-  · ✅ **W3** `tools/*.js` typgeprueft – erledigt 14.10. (BUILD_LOG 169): strict 779 → 0 (archiv/ ausgenommen), nur JSDoc/Casts, bewiesen mit `tools/js_gleich.js`; `tsc_tools` = strict, `tsc_tools_streng` aufgegangen · **W4** Werkzeuge ohne Aufrufer nach `tools/archiv/` (vorher Verweise 0 pruefen). ⚠️ **W4 vorgezogen 13.10. (BUILD_LOG 153, `BEFUNDE_WERKZEUGE.md` §13):** Inventur aller 146 Code-Dateien, 11 archiviert, 2 auf den Kern umgestellt; offen: die 11 Sichtpruef-Skripte (§13d) einzeln. ✅ 27.11. (BUILD_LOG 303): breite, breite_probe, p6b, lupe3 nach `tools/archiv/sichtpruefung/`; p5 und rest bleiben (wiederverwendbar, R7).
+  · ✅ **W3** `tools/*.js` typgeprueft – erledigt 14.10. (BUILD_LOG 169): strict 779 → 0 (archiv/ ausgenommen), nur JSDoc/Casts, bewiesen mit `tools/js_gleich.js`; `tsc_tools` = strict, `tsc_tools_streng` aufgegangen · **W4** Werkzeuge ohne Aufrufer nach `tools/archiv/` (vorher Verweise 0 pruefen). ⚠️ **W4 vorgezogen 13.10. (BUILD_LOG 153, `docs/befunde/BEFUNDE_WERKZEUGE.md` §13):** Inventur aller 146 Code-Dateien, 11 archiviert, 2 auf den Kern umgestellt; offen: die 11 Sichtpruef-Skripte (§13d) einzeln. ✅ 27.11. (BUILD_LOG 303): breite, breite_probe, p6b, lupe3 nach `tools/archiv/sichtpruefung/`; p5 und rest bleiben (wiederverwendbar, R7).
   Massenkorrekturen nach festem Muster duerfen an einen Sonnet-Agenten auf einer Kopie (Pruefskript = 0, Diff liest der Hauptchat).
 
 

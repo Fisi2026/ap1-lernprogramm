@@ -229,9 +229,9 @@ Grundlage: `PRUEFBERICHT_2026-07-26.md` (gitignoriert, liegt im Projektordner).
 > Nummerierung), 24 Inkonsistenzen, 17 Umlaut-Stellen, `verweis` in 20 Fragen, **33 von 36 Tells**.
 > **Tell-Zähler poolweit 124 → 102 → 80 → 47 (43,8 % → 16,5 %) bei konstantem Nenner 285** — die
 > erste echte Korrektur seit Etappe 1, ohne eine einzige neue Frage dafür zu schreiben.
-> Protokolle: `ETAPPE3_M01_BEFUNDE.md`, `ETAPPE3_M02_BEFUNDE.md`, `ETAPPE3_M03_BEFUNDE.md`.
+> Protokolle: `docs/befunde/ETAPPE3_M01_BEFUNDE.md`, `docs/befunde/ETAPPE3_M02_BEFUNDE.md`, `docs/befunde/ETAPPE3_M03_BEFUNDE.md`.
 > ✅ **M07 UND M08 SIND SEIT DEM 28.07.2026 DURCH** (Commits `12048bf`, `5507b36`; Protokolle
-> `ETAPPE3_M07_BEFUNDE.md`, `ETAPPE3_M08_BEFUNDE.md`). ⛔ **Hier stand bis zum 02.09. „OFFEN:
+> `docs/befunde/ETAPPE3_M07_BEFUNDE.md`, `docs/befunde/ETAPPE3_M08_BEFUNDE.md`). ⛔ **Hier stand bis zum 02.09. „OFFEN:
 > M07 · M08"** – fünf Wochen, nachdem beide erledigt waren. **Status gilt aus `START_PROMPT.md`.**
 > ⚠️ **Reihenfolge im Modul: erst Inhalt und Sprache, dann NEU MESSEN, dann Längen.** Inhaltliche
 > Korrekturen verschieben die Optionslängen — in M01 stimmte danach keine der vorab notierten
@@ -1958,7 +1958,7 @@ OFFEN NACH R3: TASKLIST-Punkt 4 (Aufräumen), Handy-Gesamttest, ggf. Push-Freiga
 
 ## 🚩 GESAMTPLAN „W1 – WERKZEUGE, WÄCHTER, AUFRÄUMEN" (aufgestellt 2026-09-10)
 
-> **Grundlage:** `BEFUNDE_WERKZEUGE.md` (10.09.2026). ⚠️ **Die Grundlage ist GELESEN, nicht
+> **Grundlage:** `docs/befunde/BEFUNDE_WERKZEUGE.md` (10.09.2026). ⚠️ **Die Grundlage ist GELESEN, nicht
 > GEMESSEN** — an dem Tag mountete die Linux-Shell den Projektordner nicht. **Etappe A holt die
 > Messung nach; ohne sie wird an der Laufzeit NICHTS umgebaut.**
 > ⛔ **Reihenfolge ist nicht Geschmack:** die risikoarmen Etappen liegen vorn, damit ein Abbruch
@@ -1990,7 +1990,7 @@ Aufrufe zusammen unter 1,5 s — **dann lohnt der Umbau aus Etappe F NICHT** und
 > ⛔ **Die `*_ARCHIV.md` bleiben unangetastet** — ein Archiv ist Chronik.
 > ⛔⛔ **B3 NUR ZEHN VON DREIZEHN.** `validate_batch.js`, `fakten_check.py` und `index.js` stehen
 > im **aktiven** Prüfprotokoll (TASKLIST) bzw. erzeugen `FUNCTIONS.md`. **Die Liste in
-> `BEFUNDE_WERKZEUGE.md` §5 war aus Größe und Änderungsdatum gebaut, nicht aus Referenzen** —
+> `docs/befunde/BEFUNDE_WERKZEUGE.md` §5 war aus Größe und Änderungsdatum gebaut, nicht aus Referenzen** —
 > „lange nicht geändert“ heißt nicht „wird nicht gebraucht“. Verschoben sind zehn (~237 KB),
 > `tools/archiv/README.md` nennt sie samt Grund.
 > **B4:** `check.sh` blieb ALLES GRÜN — keine Zahl hat sich bewegt.
@@ -2006,7 +2006,7 @@ Aufrufe zusammen unter 1,5 s — **dann lohnt der Umbau aus Etappe F NICHT** und
 * **B2 `push.sh` → `_to_delete/`.** Danach Arbeitsregel 2 in START_PROMPT anpassen: statt
   „`push.sh` NICHT benutzen" heißt es dann „Push nur vom Windows-Rechner; ein `push.sh` gibt es
   bewusst nicht mehr".
-* **B3 Einmal-Skripte → `tools/archiv/`** (13 Dateien, ~255 KB; Liste in `BEFUNDE_WERKZEUGE.md` §5).
+* **B3 Einmal-Skripte → `tools/archiv/`** (13 Dateien, ~255 KB; Liste in `docs/befunde/BEFUNDE_WERKZEUGE.md` §5).
   ⚠️ **Vor jedem Verschieben** `grep -rn "<datei>" check.sh verify.sh tests/ tools/ .github/` —
   was gesourct oder aufgerufen wird, bleibt.
 * **B4** Nach B1–B3: `bash check.sh` **muss ALLES GRÜN bleiben.** Ändert sich eine Zahl, war eine
@@ -2073,7 +2073,7 @@ Aufrufe zusammen unter 1,5 s — **dann lohnt der Umbau aus Etappe F NICHT** und
 > `check.sh` 4e10 — jeder Wächter braucht Werkzeug-stumm- und ok-Zweig, ohne Ausnahmeliste.
 > **Sie fand sofort B152** (4e8 meldete grün über ein stummes Werkzeug), die Gegenprobe fand
 > **B153** (Meldezweig sagte „Binary file matches"), das Schreiben fand **B154** (Backslash
-> verliert über die Brücke eine Ebene). Volltext: `BEFUNDE_WERKZEUGE.md` §11.
+> verliert über die Brücke eine Ebene). Volltext: `docs/befunde/BEFUNDE_WERKZEUGE.md` §11.
 
 ### ETAPPE E — DER URSPRÜNGLICHE PLAN (Chronik)
 

@@ -161,7 +161,7 @@
 #   PFLICHT: ein Mess- oder Hilfsskript schreiben wollen → `WERKZEUGE.md` (es gibt es meist schon)
 #   PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `PLAN_NEUBAU.md`
 #   PFLICHT: Agenten einsetzen → Skill `fisi:agenten-orchestrierung`; Ausgaben kürzen, Tooling-Fallstricke → `TASKLIST.md`
-#   PFLICHT: eine Inhaltsrunde (Katalog-Luecken) planen oder fahren → `PLAN_INHALT.md`
+#   PFLICHT: eine Inhaltsrunde (Katalog-Luecken) planen oder fahren → `docs/plaene/PLAN_INHALT.md`
 #   ⚠️ **Im Zweifel lesen.** Eine Lehre, die man nicht gelesen hat, wird wiederholt – belegt fünfmal.
 #
 # ============

@@ -305,7 +305,7 @@ Vollständige Liste mit Faktoren: siehe Vorabmessung
 * **12 M03-Fragen ohne `erklaerungLang`-Feld:** M03-900 … M03-906 und M03-930 … M03-934.
   Poolweit sind es **29** (M03 12 · M04 6 · M06 4 · M07 3 · M01 2 · M05 2).
   ⚠️ **Das ist derselbe Posten, der im M01-Lauf als „im Entscheid enthalten, aber noch nicht
-  geschrieben" vermerkt wurde** (`ETAPPE3_M01_BEFUNDE.md`, Abschnitt H.2) — er ist seither
+  geschrieben" vermerkt wurde** (`docs/befunde/ETAPPE3_M01_BEFUNDE.md`, Abschnitt H.2) — er ist seither
   unverändert offen. Die betroffenen Fragen haben durchweg eine gute, ausführliche
   `erklaerungKurz`; es fehlt die Vertiefung.
 * **18 Fragen mit fragilem Verweis auf Optionsnummern** (die Optionen werden beim Anzeigen

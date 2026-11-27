@@ -36,7 +36,7 @@ Werkzeuge-Release; das Alt-Repo wird erst nach grüner Probe archiviert. Die Rei
 | Tags | 98 (inkl. `alt-app-final`, `v0.8.0` … `v2.10.5`); **`v2.3.3` und `v2.10.5` existieren schon** | `git ls-remote --tags` *gemessen* |
 | Features | Issues an, Wiki/Pages/Discussions aus, `delete_branch_on_merge` **an**, `description` und `topics` leer | `gh api repos/…` *gemessen* |
 | Nicht lesbar von der Cloud-Seite (Proxy 403) | Actions-Einstellungen (`/actions/permissions`), Secret-Namen, Webhooks, Environments, Pages | *gemessen* – **[N] liest sie in Schritt 2 ab** |
-| Rulesets / Branch-Schutz | nicht verfügbar im privaten Free-Repo („Upgrade to GitHub Pro or make this repository public"), Branch-Schutz 403 | *gemessen* (deckt sich mit `BEFUNDE_AUDIT.md`) |
+| Rulesets / Branch-Schutz | nicht verfügbar im privaten Free-Repo („Upgrade to GitHub Pro or make this repository public"), Branch-Schutz 403 | *gemessen* (deckt sich mit `docs/befunde/BEFUNDE_AUDIT.md`) |
 | Baum des Erstcommits | **870 Dateien, 16,4 MB, größte Datei 2,7 MB** (`v2/assets/pooldaten-*.js`), Pack ~5,3 MiB | `tools/umzug_v3_probe.sh` *gemessen* |
 | Verwendete Actions in `ci.yml` | nur `actions/checkout`, `actions/setup-node`, `actions/attest-build-provenance` – **alle GitHub-eigen**, am vollen SHA | `grep uses: .github/workflows/ci.yml` *gemessen* |
 | Actions-Minuten des Kontos | Free-Konto: **2000 min/Monat** für **private** Repos; ein CI-Lauf ≈ **17 min** Runner-Zeit (Summe der parallelen Jobs); **heute ~1800 min verbraucht** → Rest ≈ 200 min = **höchstens ~11 Läufe**. Das Alt-Repo zählt zum selben Konto. Das neue private Repo zählt **bis zum Öffentlich-Schalten gegen dieselben 2000 min**; Standard-Runner in öffentlichen Repos sind laut Doku frei (*angenommen*) | Zahlen: Angabe der Leitung/des Kontos 18.10., hier nicht nachgemessen (Abrechnungsseiten sind von der Cloud-Sitzung nicht lesbar, *angenommen*); Doku-Aussage nicht gefahren |
@@ -322,7 +322,7 @@ Das Projekt-Dokument „Training" in beiden Konten (gmail, web.de) wird **nicht*
 
 ## 4. Stellen im Repo, die Namen oder Alt-Repo voraussetzen (grep über `tools/`, `tools/plugin/`, `.github/`, `*.md`, `neu/`, `wrangler.jsonc`, Training-Shell-Code; *gemessen* 18.10.2026)
 Suchbegriffe: `Fisi2026`, `ap1-lernprogramm`, `fisi2026lernapp`, `github.com/`, `releases/`, `--repo`, `gh release`, `gh run`, `gh api`, `add_repo`, „privat". Ohne Treffer: `neu/src`, `tests/`, `tools/training-shell/index.js`, `v2/_headers`,
-`neu/index.html` (kein Repo-Name, keine GitHub-Adresse). Ausgenommen sind Verlaufsdateien (`BUILD_LOG*.md`, `*ARCHIV*.md`, `referenz/`, `entscheide/`, `PLAN_NACHT_18-10.md`, `package-lock.json`-Fremdlinks).
+`neu/index.html` (kein Repo-Name, keine GitHub-Adresse). Ausgenommen sind Verlaufsdateien (`BUILD_LOG*.md`, `*ARCHIV*.md`, `referenz/`, `entscheide/`, `docs/plaene/PLAN_NACHT_18-10.md`, `package-lock.json`-Fremdlinks).
 **Ä** = nach dem Umzug zu ändern · **P** = prüfen/Voraussetzung · **–** = bleibt, weil der Name gleich bleibt.
 
 | # | Datei:Zeile | Inhalt | |
@@ -361,7 +361,7 @@ Suchbegriffe: `Fisi2026`, `ap1-lernprogramm`, `fisi2026lernapp`, `github.com/`, 
 | 32 | `tools/ci_b5_entwurf.md:49` | „ubuntu-latest hat in privaten Repos 2 Kerne" | **P** öffentliche Repos: laut Doku (Enterprise-Cloud-Fassung der Runner-Seite) 4 vCPU/16 GB, kostenlos – Chance für die offene Aufgabe `tests`-Job 6:17 (BUILD_LOG 222/223); Seitenfassungen widersprechen sich, *angenommen*; **nach** dem Öffentlich-Schalten (Schritt 12, zweiter Lauf) messen |
 | 33 | `PLAN_NEUBAU.md:593–607` (N40), `:83,86` (E66, E69), `:603` | Plan-Text V3, „Release 2.3.3" | **Ä** Status ✅ + Widerspruch E69 auflösen (O2) |
 | 34 | `PLAN_NEUBAU.md:609–626` (N41 S2/S3/S6) | „im neuen Repo nach V3 NEU setzen" | **P** S2 und S6 stehen in Schritt 7/12; S3 bleibt offen |
-| 35 | `BEFUNDE_AUDIT.md:157,199` | „Repo privat (Free) …" | – Befund-Protokoll, bleibt Geschichte |
+| 35 | `docs/befunde/BEFUNDE_AUDIT.md:157,199` | „Repo privat (Free) …" | – Befund-Protokoll, bleibt Geschichte |
 | 36 | `tools/s45_entwurf.md:11,24` | Entwurf mit Repo-Namen und harden-runner | – Geschichte (BUILD_LOG 223) |
 | 37 | `tools/plugin/installiert.txt` | Konto/Version/Datum | – unverändert (Versionen bleiben) |
 | 38 | `.claude/settings.json`, `.gitignore` (`.claude/*` + `!.claude/settings.json`) | Start-Haken `tools/postfach.sh start`, Freigaben; Ausnahme im Ignore | **P** wandert im Erstcommit mit (die Probe prüft es seit N40 V3); macht den Namen `ap1-postfach` öffentlich |

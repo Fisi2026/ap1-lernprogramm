@@ -14,7 +14,7 @@ eine steht als Schlusszeile („Damit offen: …") im **letzten** BUILD_LOG-Eint
 unten gelten bis zum Umschalten (N29) bzw. bis der Kern in TypeScript steht (N34); abgelöst werden sie dort, nicht vorher.
 
 **React 19 + TypeScript + Vite, Tests mit vitest (jsdom), Oberfläche shadcn/ui auf `neutral`, nur
-Dark** (Entscheid 10.09., Herleitung in `PLAN_DARSTELLUNG.md`). Es ist **kein Python**, und es ist
+Dark** (Entscheid 10.09., Herleitung in `docs/plaene/PLAN_DARSTELLUNG.md`). Es ist **kein Python**, und es ist
 kein zweites Programm neben der alten App: es ist **dieselbe App in neuer Darstellung**.
 
 ~~DIE ALTE APP BLEIBT DAS, WAS BEIM LERNER LÄUFT~~ – **abgelöst mit N29** (24.09.2026): beim Lerner läuft der
