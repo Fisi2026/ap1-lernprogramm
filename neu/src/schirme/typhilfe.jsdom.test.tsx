@@ -2,7 +2,7 @@
 /* ============================================================================
    N24b: DIE TYP-HILFE DURCH DIE APP
 
-   Abnahme laut PLAN_NEUBAU.md: die Hilfe erscheint je Typ, das Häkchen wirkt
+   Abnahme laut docs/plaene/PLAN_NEUBAU.md: die Hilfe erscheint je Typ, das Häkchen wirkt
    SOFORT und übersteht das Neuladen, der Knopf in den Einstellungen holt alle
    zurück. Nicht in der Simulation.
    ============================================================================ */

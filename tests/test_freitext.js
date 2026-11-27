@@ -56,7 +56,7 @@ const FLOSKELN = "Das ist ein wichtiger Aspekt im Unternehmen. Man muss das sorg
      wuerfelt hier nicht der Zufall, sondern das Einsortieren.
      ►► GEMESSEN am 08.09.: alle 15006 Paare kosten 1,8 s – die Vollstaendigkeit ist geschenkt.
      ⚠️ NUTZER-ENTSCHEID 08.09.: umstellen und ROT STEHEN LASSEN, bis die betroffenen Fragen
-     geschaerft sind. Datengrundlage: PLAENE.md, "DATENGRUNDLAGE TRENNSCHAERFE FREITEXT". */
+     geschaerft sind. Datengrundlage: docs/archiv/PLAENE.md, "DATENGRUNDLAGE TRENNSCHAERFE FREITEXT". */
   /* ⚠️⚠️ NUTZER-ENTSCHEID 09.09.2026: DIE PRUEFUNG HEISST "THEMENFREMD" UND MISST JETZT AUCH
      THEMENFREMD. Bis heute zaehlte sie ALLE Paare – auch zwei Fragen DESSELBEN Feinthemas, bei
      denen eine inhaltliche Ueberschneidung nicht nur erlaubt, sondern zu erwarten ist: eine

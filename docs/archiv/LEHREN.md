@@ -12,5 +12,5 @@ in Themendateien – verschoben mit `tools/rotiere.py`, Gegenprobe 0, Gesamt-Geg
 | `regeln/bruecke.md` | Training Shell, Rechnerwechsel, Dateien schreiben (CRLF, Backslash, `open(P,"w")`, tar) |
 
 Wann welche Pflicht ist, sagt die Tabelle in `START_PROMPT.md` Abschnitt 6. Die Fassung bis 11.10. steht in
-`git log -p LEHREN.md`.
+`git log -p docs/archiv/LEHREN.md`.
 ⛔ **Neue Lehren kommen ans Ende der passenden Themendatei**, mit Datum und Beleg – nicht hierher.

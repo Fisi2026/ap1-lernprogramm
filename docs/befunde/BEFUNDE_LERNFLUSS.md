@@ -1,7 +1,7 @@
 # BEFUNDE LERNFLUSS – Etappe VII (Qualitätsrunde Q2)
 
 **Gemessen:** 31.08.2026. **Werkzeug:** `tools/probe_lernfluss.js` (neu).
-**Verfahren:** `PLAENE.md`, „GESAMTPLAN QUALITÄTSRUNDE Q2", Etappe VII.
+**Verfahren:** `docs/archiv/PLAENE.md`, „GESAMTPLAN QUALITÄTSRUNDE Q2", Etappe VII.
 ⛔⛔ **NUR GEMESSEN. Keine Änderung an der Ziehungslogik** – Nutzer-Entscheid 10 vom 27.08.:
 „nichts ändern ohne Entscheid". An den Sperren hängen 38 Tests.
 

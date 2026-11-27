@@ -1,5 +1,5 @@
 /* ============================================================================
-   DER ORT DES LERNSTANDS - EINE QUELLE JE TAB (N31, E27/E28 in PLAN_NEUBAU.md)
+   DER ORT DES LERNSTANDS - EINE QUELLE JE TAB (N31, E27/E28 in docs/plaene/PLAN_NEUBAU.md)
 
    ⛔⛔ KEIN SEITENEFFEKT IM STATE-UPDATER (Lehre N6c). Bis N30 schrieb
       `useLernstand.aendere` INNERHALB von `setStand(alt => ...)`. Hier rechnet

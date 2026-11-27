@@ -3,7 +3,7 @@
 ⚠️ **WOZU DIESE DATEI.** Bis zum 17.09.2026 war das Abschnitt 8 von `START_PROMPT.md`. Er ist
 **verbatim** hierher verschoben (`tools/rotiere.py`, Gegenprobe 0). **Vor jedem neuen Mess- oder
 Hilfsskript hier nachsehen** – am 28.07. entstanden acht Wegwerf-Skripte, eines zählte falsch.
-⚠️ Verweise auf „Abschnitt 1/2/6" meinen `START_PROMPT.md`; die Lehren aus Abschnitt 6 stehen seit 11.10.2026 in `regeln/*.md` (`LEHREN.md` ist das Verzeichnis).
+⚠️ Verweise auf „Abschnitt 1/2/6" meinen `START_PROMPT.md`; die Lehren aus Abschnitt 6 stehen seit 11.10.2026 in `regeln/*.md` (`docs/archiv/LEHREN.md` ist das Verzeichnis).
 
 ## Ausgelagert aus START_PROMPT.md am 2026-09-17 (verbatim, rotiere.py)
 

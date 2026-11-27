@@ -1,6 +1,6 @@
 # Etappe 3 · Modul M01 – Befundliste (**vollständig: 110 von 110 Fragen geprüft**)
 
-> Verfahren nach PLAENE.md: je Frage (1) markierte Antwort verifizieren, (2) jeden Distraktor prüfen,
+> Verfahren nach docs/archiv/PLAENE.md: je Frage (1) markierte Antwort verifizieren, (2) jeden Distraktor prüfen,
 > (3) Distraktorlängen angleichen, (4) Erklärung gegenhalten. **Befunde werden gesammelt, nicht
 > einzeln korrigiert.** Diese Datei wird dem Nutzer vorgelegt; erst nach Freigabe wird geändert.
 

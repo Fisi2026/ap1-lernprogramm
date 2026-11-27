@@ -36,7 +36,7 @@
 #    im Baum. Der Satz stimmte, als er geschrieben wurde, und war am selben Abend falsch.
 #
 # ══════════ ✅ ETAPPE 0 DER QUALITÄTSRUNDE Q1 IST FERTIG (2026-07-27) ══════════
-# Umgesetzt und selbst nachgemessen (Details: BUILD_LOG ganz oben, Plan: PLAENE.md):
+# Umgesetzt und selbst nachgemessen (Details: BUILD_LOG ganz oben, Plan: docs/archiv/PLAENE.md):
 #   * **NEUE SUITE `tests/test_didaktik.js` (29, `sollwerte.env didaktik=29`)** mit vier RATSCHEN.
 #     Die Schwellen stehen als KONSTANTEN IM TEST, nicht in sollwerte.env (dort stehen Testanzahlen).
 #     - „längste Antwort ist die richtige": **209/274 = 76,3 %**, Schwelle **78**, Ziel **45**.
@@ -72,7 +72,7 @@
 # **347 Fragen** in drei Modulen. **Reihenfolge auf Nutzer-Entscheid 27.07.: M05 → M06 → M04**
 # (nicht wie im Plan notiert M04 zuerst – die drei hängen nicht voneinander ab, und das kleinste
 # zuerst bringt die erste Befundliste früh). Diese drei Module überhaupt zuerst, WEIL M09 sie
-# nicht berührt. Verfahren und Regeln: PLAENE.md, Etappe 1.
+# nicht berührt. Verfahren und Regeln: docs/archiv/PLAENE.md, Etappe 1.
 #   ✅ **M05 IST FERTIG (65 Fragen, 27.07.).** 2 Widersprüche, 1 Formulierung, 4 Sprachfehler
 #      korrigiert; Längenausgleich in 18 mc + 3 mehrfach. Poolweit **76,3 % → 69,7 %**,
 #      `SCHWELLE_LAENGSTE` 78 → **71**. „IT" ins Lexikon (112 → 113), `SCHWELLE_ABK` 196 → **124**.
@@ -197,7 +197,7 @@
 # ⛔ **FRÜHESTENS 01.08.2026** – die Klausur ist am 31.07. Vorher KEINE M09-Datei anfassen.
 # Katalogabgleich → Passendes in M01/M02/M03/M07/M08 eingliedern → Rest löschen (Liste vorher
 # VORLEGEN) → Menüpunkt bleibt, `pool_m09_unterricht.json` wird geleert, Termin/Countdown auf
-# „kein Termin gesetzt". Details: PLAENE.md, Etappe 2.
+# „kein Termin gesetzt". Details: docs/archiv/PLAENE.md, Etappe 2.
 # Je Frage: markierte Antwort verifizieren → jeden Distraktor prüfen → **Distraktorlängen
 # angleichen (NIEMALS die richtige Antwort kürzen)** → Erklärung gegenhalten.
 # Befunde je Modul SAMMELN und vorlegen, nicht einzeln korrigieren. Nach jedem Modul:
@@ -234,7 +234,7 @@
 # Der Nutzer hat am 26.07. eine komplette Analyse beauftragt, ALLE Rückfragen beantwortet und die
 # Umsetzung geplant. **ES IST NICHTS MEHR OFFEN. NICHT ERNEUT FRAGEN — ANFANGEN.**
 #
-#   ►►► DER PLAN STEHT IN: **PLAENE.md, Abschnitt „🚩 GESAMTPLAN QUALITÄTSRUNDE Q1"** ◄◄◄
+#   ►►► DER PLAN STEHT IN: **docs/archiv/PLAENE.md, Abschnitt „🚩 GESAMTPLAN QUALITÄTSRUNDE Q1"** ◄◄◄
 #       Dort stehen alle Nutzer-Entscheide in einer Tabelle, die Begründung der Reihenfolge und
 #       sieben Etappen mit Releases. Hintergrund/Messwerte: `PRUEFBERICHT_2026-07-26.md`.
 #
@@ -263,8 +263,8 @@
 #      (der Pool trägt keine Lernfeld-Tags, kein Gebiet ist leer). NICHT wieder aufwärmen.
 #   3. ✅ **„dünne Bereiche" IST BEANTWORTET UND EINGEPLANT.** 26 von 73 Feinthemen ohne Stufe-1-
 #      Frage; davon werden **22 (AP1-Gebiete A1–A5) mit je 2 Fragen** geschlossen = 44 Stück.
-#      Das ist **ETAPPE 4** des Gesamtplans. Datenbasis in PLAENE.md. **Keine offenen Fragen mehr.**
-#   4. 📌 **ZWEITER VORGEMERKTER PLAN: „STARTLAST"** (PLAENE.md). 2 548 KB roh / ~686 KB gzip beim
+#      Das ist **ETAPPE 4** des Gesamtplans. Datenbasis in docs/archiv/PLAENE.md. **Keine offenen Fragen mehr.**
+#   4. 📌 **ZWEITER VORGEMERKTER PLAN: „STARTLAST"** (docs/archiv/PLAENE.md). 2 548 KB roh / ~686 KB gzip beim
 #      Start, davon `erklaerungLang` 545 KB. **Nutzer-Entscheid 26.07.: nur planen, nicht anfassen.**
 #      Vor jedem Umbau dort zuerst die Startzeit AUF EINEM GERAET messen – bisher gibt es nur
 #      Dateigrößen.
@@ -654,7 +654,7 @@
 #    4 Gegenproben bissen. Alle 40 lokalen Suiten Sollwert, Drift 0, check.sh schnell grün.
 #    Render-Abzug: onboarding_preview.html. Details: BUILD_LOG oberster Eintrag.
 # ══════════ ►►► NÄCHSTER TASK: FB-R3 PUNKT 10 (ERKLÄRUNGEN ÜBERARBEITEN) ◄◄◄ ══════════
-# Detailplan: PLAENE.md → FB-R3 Punkt 10 (ausführliche Erklärungen gliedern, Abkürzungen einzeln
+# Detailplan: docs/archiv/PLAENE.md → FB-R3 Punkt 10 (ausführliche Erklärungen gliedern, Abkürzungen einzeln
 #   erklären/mit abkuerzungen.js abgleichen, leichte Verständlichkeit; Haiku-Batches je Modul auf
 #   /tmp, Opus prüft jede Änderung fachlich, KEINE Bedeutungsänderung).
 # Punkt 8 („ähnliche Fragen") braucht ZUERST eine Konzept-Rückfrage (Feature ja/nein, Definition
@@ -774,7 +774,7 @@
 #    (`WIRTSCHAFT_THEMEN` in app_pool.js, 172 Fragen, UND-verknüpft mit der Lernfeld-Auswahl).
 #    NEUE SUITE `tests/test_wirtschaft.js` (**32**) mit Tippfehler-Wächter, 3 Gegenproben bestanden.
 #    ⚠️ Abschreibung/AfA bewusst NICHT ergänzt – dünn, steht aber NICHT im AP1-Katalog. Nicht nachholen.
-#    ⚠️ Das nimmt Punkt 6 einen Teil vorweg; was dort offen bleibt, steht in PLAENE.md bei Punkt 6.
+#    ⚠️ Das nimmt Punkt 6 einen Teil vorweg; was dort offen bleibt, steht in docs/archiv/PLAENE.md bei Punkt 6.
 # ✅ **FB-R3 Punkt 12 ist ERLEDIGT** (22.07., KEIN Version-Bump – reines Prüfwerkzeug, nicht die App).
 #    NEU `tools/entkommentiere.js` + Dauersuite `tests/test_entkommentiere.js` (**46**).
 #    Die grep-Wächter durchsuchen jetzt nur noch ECHTEN Code; **vier** waren betroffen, nicht einer
@@ -782,7 +782,7 @@
 #    `check.sh schnell` (Nutzer-Entscheid) – die Lücke, durch die der v1.3.0-Fehlalarm erst in der
 #    CI auffiel, ist damit zu. 8 + 2 Gegenproben bestanden. Details im BUILD_LOG ganz oben.
 #
-# ►►► **NÄCHSTER TASK: FB-R3 Punkte 2–10** (PLAENE.md → „FB-R3").
+# ►►► **NÄCHSTER TASK: FB-R3 Punkte 2–10** (docs/archiv/PLAENE.md → „FB-R3").
 #     2 Gantt-Stufen · 3 Netzplan-Vereinheitlichung · 4 Liniensysteme · 5 Matrix-Bilder ·
 #     6 Themen-Auswahl (AP1/AP2-Clear-Cut) · 7 Onboarding · 8 „Ähnliche Fragen" · 9 Sortierung ·
 #     10 Erklärungen überarbeiten.
@@ -878,7 +878,7 @@
 #     pool-weiten Ersetzungen IMMER technische Tokens (.local/@/http/UNC) gesondert prüfen.
 #
 # ══════════ NÄCHSTER TASK: FB-R3 Punkte 2–10 (nach dem Handy-Test) ══════════
-#   Punkte 1 und 11 sind erledigt. Es bleiben die inhaltlichen R3-Punkte (PLAENE.md → „FB-R3"):
+#   Punkte 1 und 11 sind erledigt. Es bleiben die inhaltlichen R3-Punkte (docs/archiv/PLAENE.md → „FB-R3"):
 #   2 Gantt-Stufen, 3 Netzplan-Vereinheitlichung, 4 Liniensysteme, 5 Matrix-Bilder, 6 Themen-Auswahl,
 #   7 Onboarding, 8 „Ähnliche Fragen" (Konzept-Rückfrage), 9 Sortierung (Screenshot-Rückfrage),
 #   10 Erklärungen überarbeiten, 12 Anti-Pattern-Guard nachschärfen (mit Gegenprobe).
@@ -934,7 +934,7 @@
 #   ►►► **R3 BEGINNT MIT DEN PUNKTEN 1 UND 11** – den beiden pool-weiten Umbenennungen
 #       (Firmennamen „Rhaus" → passende Beispielfirmen, UNTERRICHT_MODUL). Beide fassen JEDE
 #       Frage an; zuerst abräumen, solange kein anderer Task im Pool arbeitet.
-#       Detailplan: PLAENE.md → „FB-R3". VORHER mit dem Nutzer abstimmen: die Mapping-Tabelle
+#       Detailplan: docs/archiv/PLAENE.md → „FB-R3". VORHER mit dem Nutzer abstimmen: die Mapping-Tabelle
 #       der Firmennamen und der neue Anzeigename für UNTERRICHT_MODUL.
 #   ⚠️ NICHT ERNEUT ANGEHEN: R2.2 (Drag&Drop) und die Antwort-Rotation aus R2.5 sind ERLEDIGT
 #      bzw. waren nie ein Problem – siehe BUILD_LOG-Eintrag zu FB-R2a, Abschnitt Bestandsabgleich.
@@ -996,18 +996,18 @@
 # ══════════ NEU ENTSCHIEDEN 2026-07-21 – NICHT ERNEUT FRAGEN ══════════
 #   * **GRUNDSATZFRAGE SIM-FORMATE (lag lange offen): MISCHFORM.** Die Simulation soll ungebundene
 #     Aufgaben zulassen UND mit auto-bewertbaren mischen. Die Vorbedingung („erst Freitext-
-#     Bewertung tauglich machen") ist mit R2a erfüllt. Detailplan: PLAENE.md → **„FB-R2c"**.
+#     Bewertung tauglich machen") ist mit R2a erfüllt. Detailplan: docs/archiv/PLAENE.md → **„FB-R2c"**.
 #     Der Punkt ist damit aus der OFFEN-Liste raus. Offene Rückfrage dort: Mischungsverhältnis.
 #   * **R3 BEGINNT MIT DEN PUNKTEN 1 UND 11** – den beiden pool-weiten Umbenennungen
 #     (Firmennamen, UNTERRICHT_MODUL). Beide fassen jede Frage an; zuerst abräumen, solange kein
-#     anderer Task im Pool arbeitet. Steht in PLAENE.md bei FB-R3 Punkt 11.
+#     anderer Task im Pool arbeitet. Steht in docs/archiv/PLAENE.md bei FB-R3 Punkt 11.
 #
 # ══════════ DIE ZWEI R1-FRAGEN SIND ENTSCHIEDEN (2026-07-21) – NICHT ERNEUT FRAGEN ══════════
 #   (a) ERLEDIGT in v1.1.1: Der Stand-Streifen der STARTSEITE ist zuklappbar, startet aber OFFEN.
 #       `statPanel(key, titel, standardOffen)` hat dafür einen dritten Parameter bekommen;
 #       `S.panelOffen` speichert weiterhin nur ABWEICHUNGEN vom jeweiligen Default.
 #   (b) ENTSCHIEDEN, VERTAGT: `UNTERRICHT_MODUL` wird VOLL umbenannt – als Pool-Task in **R3**
-#       (jetzt PLAENE.md „FB-R3" Punkt 11, mit gemessenem Umfang: 1 Code-Zeile + 105 `verweis`-
+#       (jetzt docs/archiv/PLAENE.md „FB-R3" Punkt 11, mit gemessenem Umfang: 1 Code-Zeile + 105 `verweis`-
 #       Felder). Nicht vorher anfassen. Anzeigenamen vorher mit dem Nutzer abstimmen.
 # OFFEN BEIM NUTZER: Handy-Test der Drag-Typen (seit v0.7.1) und des Unterrichtsbereichs.
 #   (Der Handy-Test von v1.2.0 ist am 21.07. per Nutzer-Entscheid ENTFALLEN – nicht erneut anbieten.)
@@ -1161,7 +1161,7 @@ in /tmp/w und sind weg. Sinnvoll erst nach Schritt 3, dann beide Messgleise nebe
 ## WO WIR STEHEN
 
 Der geplante Kern (Phasen T/L/R/C/F/S) ist abgeschlossen. Das Arbeitspaket „29 Ideen" läuft in fünf
-Gruppen: **G1 Infra/CI → G2 Inhalte → G3 Lernmotor → G4 Technik → G5 UX**. Detailpläne in PLAENE.md
+Gruppen: **G1 Infra/CI → G2 Inhalte → G3 Lernmotor → G4 Technik → G5 UX**. Detailpläne in docs/archiv/PLAENE.md
 („AP2-G1" bis „AP2-G4"; **AP2-G5 existiert noch NICHT** und ist bei Gruppenbeginn anzulegen).
 
 - **G1 → v0.8.0** komplett, getaggt (b22631a). CI, JSON-Schema, Render-Smoke, axe, PWA-Update, Auto-Tag.
@@ -2419,8 +2419,8 @@ Zeilennummern der Fassung vom 03.09.2026 vor der Rotation; Original unveraendert
 ### Zeilen 496-500 (alt 5 Zeilen, im Kopf jetzt 4)
 
 ```
-#   `PLAENE.md` .............. **nur noch die OFFENEN Etappen** (2, 3-Rest, 7) + Alt-Pläne.
-#                              Erledigte Etappen: `PLAENE_ARCHIV.md` (0, 1, 4, 5, 6, alle draußen).
+#   `docs/archiv/PLAENE.md` .............. **nur noch die OFFENEN Etappen** (2, 3-Rest, 7) + Alt-Pläne.
+#                              Erledigte Etappen: `docs/archiv/PLAENE_ARCHIV.md` (0, 1, 4, 5, 6, alle draußen).
 #                              ⚠️ **PLANUNGSZAHLEN DARIN SIND MESSWERTE VON DAMALS**, keine
 #                              Statusaussagen (z. B. „A4 bei 2,8 %, Wächter ROT" – der geltende
 #                              Wert steht im erzeugten Block in `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`).
@@ -2528,7 +2528,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #      aufmachen** (Volltext: `docs/befunde/BEFUNDE_LERNFLUSS.md`, BUILD_LOG 02.09.).
 #      ⚠️ **A4 liegt knapp über der Schwelle 4,8**: **noch rund 36 Nicht-A4-AP1-Fragen, dann reißt
 #      `test_didaktik`.** Geltende Zahl im erzeugten Block, nicht hier.
-#      ⚠️ **SEIT 04.09. GIBT ES WIEDER EINEN PLAN:** `PLAENE.md`, „RUNDE Q3 – EXTERNE MASSSTÄBE",
+#      ⚠️ **SEIT 04.09. GIBT ES WIEDER EINEN PLAN:** `docs/archiv/PLAENE.md`, „RUNDE Q3 – EXTERNE MASSSTÄBE",
 #      acht Etappen, gegen Messungen vom selben Tag gestellt. **Er ersetzt den Satz „es ist nichts
 #      offen", der vom 02.09. bis 04.09. galt.** Etappen mit Entscheidungsbedarf sind dort markiert
 #      – **wer eine davon anfasst, fragt vorher.** Keine Etappe dazuerfinden, die dort nicht steht.
@@ -2787,13 +2787,13 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 213-230 der Ur-Fassung
 
 # **RUNDE Q3 IST SEIT DEM 07.09. KOMPLETT DURCH – ALLE ZEHN ETAPPEN (A, A+, B, C, D, E, F, G1,
-# G2, H, I) SIND ABGESCHLOSSEN.** Der Nachweis steht in `PLAENE.md`, Abschnitt „🚩 RUNDE Q3 –
+# G2, H, I) SIND ABGESCHLOSSEN.** Der Nachweis steht in `docs/archiv/PLAENE.md`, Abschnitt „🚩 RUNDE Q3 –
 # EXTERNE MASSSTÄBE": jede Zeile durchgestrichen, mit Datum und Ergebnis. **Nicht neu anfangen,
 # nicht nachprüfen.** Q1 und Q2 stehen dort nur noch als Verfahrens-Vorlage.
 # ✅ **DIE STUFE-3/4-LÜCKEN SIND GESCHLOSSEN (08.09., v1.24.0):** sechs Fragen in M05 QM-Begriffe
 #   & Normen, M05 Audit & Prüfverfahren, M01 Projektmerkmale & Meilensteine. **Nachgemessen:**
 #   nur noch drei Feinthemen haben höchstens eine Frage auf Stufe 3/4 – **exakt die drei
-#   B3-Themen, die der Entscheid ausgenommen hat.** `PLAENE.md`, „DATENGRUNDLAGE STUFE-3/4".
+#   B3-Themen, die der Entscheid ausgenommen hat.** `docs/archiv/PLAENE.md`, „DATENGRUNDLAGE STUFE-3/4".
 #   ⚠️ **M01 hat für „Meilenstein" fast keinen Lehrtext** (1.1 nennt ihn in EINER Zeile): wer dort
 #   schreibt, schreibt auf **Projektmerkmale nach DIN 69901**, nicht auf die Formulierungsregel.
 # ⛔ **WAR DER GRIFF GETAN, GIBT ES WIEDER KEINEN PLAN.** Wer diesen Zustand vorfindet,
@@ -2808,7 +2808,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 245-248 der Ur-Fassung
 
 # ► **ALLE ETAPPEN SIND DURCH** (0–6, E3, I–VII, Q3 A–I) – Protokolle: `ETAPPE3_M0X_BEFUNDE.md`,
-#   `E3_M0X_VERWEISE.md`, `BEFUNDE_*.md`, `PLAENE.md`. **Nicht nachprüfen, nicht neu anfangen.**
+#   `E3_M0X_VERWEISE.md`, `BEFUNDE_*.md`, `docs/archiv/PLAENE.md`. **Nicht nachprüfen, nicht neu anfangen.**
 #   ⚠️ **M04-317 bleibt ein Fehlalarm** (DHCP-Option). ⛔ **„Lernunterlage ohne belegte Lücke
 #   (34/34)" galt den VERWEISZIELEN, nicht dem Inhalt. Eine Messung gilt für das Gemessene.**
 
@@ -2848,7 +2848,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 108-118 der Ur-Fassung
 
 #   **SCHRITT 2: Q1–Q3 SIND DURCH; DIE EINE OFFENE ETAPPE IST W1 (Abschnitt 3).** ✅ Q2 (31.08.),
-#      Q3 (07.09.), B106, M08-Stufung, N2 (02.09.) – Protokolle `BEFUNDE_*.md`, `PLAENE_ARCHIV.md`.
+#      Q3 (07.09.), B106, M08-Stufung, N2 (02.09.) – Protokolle `BEFUNDE_*.md`, `docs/archiv/PLAENE_ARCHIV.md`.
 #      **Nicht neu anfangen, nicht nachpruefen.**
 #      ⛔ **Der alte „eine Kandidat" – ein Waechter fuer den Widerspruch Lehrtext ↔ Pool – ist am
 #      06./07.09. als G2 GEMESSEN UND VERWORFEN.** Nicht erneut vorschlagen (Archiv, BEFUNDE).
@@ -3050,7 +3050,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 
 ### aus START_PROMPT.md, Zeilen 110-110 der Ur-Fassung
 
-# ►►► **ZWEITER STRANG SEIT 11.09.: DER NEUBAU `neu/` (React+TS) – `SCHIENE_NEU.md`, Plan+Entscheide `PLAN_NEUBAU.md`.** **N25 (shadcn) läuft in Teilschritten P0–P7; WIE jeder gebaut, geprüft und ausgeliefert wird, steht in der ARBEITSANLEITUNG unter N25 in `PLAN_NEUBAU.md`.** Ziel seit 16.09.: er soll die alte App abloesen. Die zwei Standzeilen oben gelten der ALTEN App. **Der nächste Griff im Neubau steht NUR in der Schlusszeile „Damit offen" des letzten BUILD_LOG-Eintrags.**
+# ►►► **ZWEITER STRANG SEIT 11.09.: DER NEUBAU `neu/` (React+TS) – `SCHIENE_NEU.md`, Plan+Entscheide `docs/plaene/PLAN_NEUBAU.md`.** **N25 (shadcn) läuft in Teilschritten P0–P7; WIE jeder gebaut, geprüft und ausgeliefert wird, steht in der ARBEITSANLEITUNG unter N25 in `docs/plaene/PLAN_NEUBAU.md`.** Ziel seit 16.09.: er soll die alte App abloesen. Die zwei Standzeilen oben gelten der ALTEN App. **Der nächste Griff im Neubau steht NUR in der Schlusszeile „Damit offen" des letzten BUILD_LOG-Eintrags.**
 
 ### aus START_PROMPT.md, Zeilen 156-157 der Ur-Fassung
 

@@ -159,12 +159,12 @@ Skript, das irgendwo gesourct wird, bleibt.
 
 ---
 
-## 6. ✅ ERLEDIGT 10.09.: `PLAENE.md` WAR MIT 183 KB / 2277 ZEILEN DER GRÖSSTE AKTIVE BROCKEN
+## 6. ✅ ERLEDIGT 10.09.: `docs/archiv/PLAENE.md` WAR MIT 183 KB / 2277 ZEILEN DER GRÖSSTE AKTIVE BROCKEN
 
 > **Rotiert am 10.09.: 2374 → 2054 Zeilen, 333 verbatim ins Archiv, Gegenprobe 0 Verluste.**
-> `PLAENE_ARCHIV.md` 11 KB → 37 KB. Ebenso `BUILD_LOG.md` 976 → 51 Zeilen (924 ins Archiv).
+> `docs/archiv/PLAENE_ARCHIV.md` 11 KB → 37 KB. Ebenso `BUILD_LOG.md` 976 → 51 Zeilen (924 ins Archiv).
 
-`PLAENE_ARCHIV.md` hat dagegen nur 11 KB — die Rotation hat dort praktisch nie stattgefunden.
+`docs/archiv/PLAENE_ARCHIV.md` hat dagegen nur 11 KB — die Rotation hat dort praktisch nie stattgefunden.
 Rotationsreif und **eindeutig als erledigt markiert**:
 
 | Block | Zeilen | Umfang | Marker |

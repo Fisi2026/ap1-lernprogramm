@@ -127,7 +127,7 @@ Auftrag: Nutzer, „vollstaendige Neupruefung". Jeder Wert gemessen (Befehl in K
 | Tests & Doku | 8,5 | 8 (Tests besser, Doku-Drift, NA1) |
 | DevOps | 9 | 9 |
 **Neue Befunde**
-- **NA1 (mittel, Doku) – `README.md` beschreibt die alte App:** „Doppelklick auf `lernprogramm_ap1.html`", `logik.js`, „45 Testsuiten", Version in `app_state.js` – alles seit N29/N34 falsch. Veraltete Suiten-Namen auch in `TASKLIST.md`, `PLAENE.md`, `docs/plaene/UNTERRICHT_PROJEKT.md`, `docs/befunde/VERWEISE_BEFUNDE.md`, `docs/plaene/PROMPT_IDEEN-PAKET.md`, `prompts/*.md` (`git grep test_logik|test_unterricht`).
+- **NA1 (mittel, Doku) – `README.md` beschreibt die alte App:** „Doppelklick auf `lernprogramm_ap1.html`", `logik.js`, „45 Testsuiten", Version in `app_state.js` – alles seit N29/N34 falsch. Veraltete Suiten-Namen auch in `TASKLIST.md`, `docs/archiv/PLAENE.md`, `docs/plaene/UNTERRICHT_PROJEKT.md`, `docs/befunde/VERWEISE_BEFUNDE.md`, `docs/plaene/PROMPT_IDEEN-PAKET.md`, `prompts/*.md` (`git grep test_logik|test_unterricht`).
 - **NA2 (niedrig, Werkzeug) – `tools/sabotage.sh`** nennt im Kopf `--datei logik.js --suite logik` (beides weg) und kann nur die 7 alten Suiten; Sabotagen am Kern laufen weiter als Einwegskripte (SCHIENE_NEU §3).
 - **NA3 (niedrig, Tests) – Coverage-Schwellen** (92/83/91/94) liegen 2–4 Punkte unter dem Ist – ein Rueckgang faellt erst spaet auf. → knapp unter das Ist nachziehen.
 - **NA4 (Hinweis)** vite 8.3.1 verfuegbar; Dependabot hebt am Montag an.
@@ -135,7 +135,7 @@ Auftrag: Nutzer, „vollstaendige Neupruefung". Jeder Wert gemessen (Befehl in K
 - **NA6 (Hinweis, Sicherheit)** Schreibwege lassen Anfragen ohne `Origin`/`Sec-Fetch-Site` zu (Werkzeuge): kein CSRF-Risiko, Spam begrenzt durch Ratenbremse + D1-Grenzen – keine Handlung.
 **Offen aus frueheren Pruefungen:** keine (AUD-B5 Hinweis, NP2/NP6 beim Nutzer erledigt).
 
-**Umsetzung der Neupruefung (27.09.2026, BUILD_LOG 68):** NA1 erledigt – `README.md` neu (Aufbau Neubau, Gebiete, Fragen ergaenzen, Pruefung, CI-Deploy; keine Zahlen), `ARCHITECTURE.md` neu als Landkarte des Neubaus (alte Fassung verbatim nach `referenz/ARCHITECTURE_ALT.md`), Veraltet-Vermerk in `prompts/feature_draft.md`, `prompts/fragetyp_neu.md`, `docs/plaene/PROMPT_IDEEN-PAKET.md`; Protokolle (`PLAENE.md`, `docs/plaene/UNTERRICHT_PROJEKT.md`, `docs/befunde/VERWEISE_BEFUNDE.md`, TASKLIST-Lehre) bleiben als Geschichte · NA2 erledigt (`sabotage.sh`-Kopf) · NA3 erledigt (Schwellen 94/86/93/96, Lauf mit `--coverage` rc 0 bei 94,73/87,36/93,68/96,42).
+**Umsetzung der Neupruefung (27.09.2026, BUILD_LOG 68):** NA1 erledigt – `README.md` neu (Aufbau Neubau, Gebiete, Fragen ergaenzen, Pruefung, CI-Deploy; keine Zahlen), `ARCHITECTURE.md` neu als Landkarte des Neubaus (alte Fassung verbatim nach `referenz/ARCHITECTURE_ALT.md`), Veraltet-Vermerk in `prompts/feature_draft.md`, `prompts/fragetyp_neu.md`, `docs/plaene/PROMPT_IDEEN-PAKET.md`; Protokolle (`docs/archiv/PLAENE.md`, `docs/plaene/UNTERRICHT_PROJEKT.md`, `docs/befunde/VERWEISE_BEFUNDE.md`, TASKLIST-Lehre) bleiben als Geschichte · NA2 erledigt (`sabotage.sh`-Kopf) · NA3 erledigt (Schwellen 94/86/93/96, Lauf mit `--coverage` rc 0 bei 94,73/87,36/93,68/96,42).
 
 ## Rest 28.09.2026 (BUILD_LOG 84)
 NA4 **erledigt** (vite 8.3.1 mit Dependabot #8, v2/ neu gebaut) · Actions checkout/setup-node v7 (#4) · NA5 bleibt Hinweis (kein Handlungsbedarf, solange keine Regel bewusst geaendert wird) · Dependabot-Sperren: Major fuer `typescript` (7.x ohne JS-Compiler-API) und `@types/node` (Laufzeit 24) · Deploy nur ueber CI nach dem Push neu gemessen (siehe unten).
@@ -181,7 +181,7 @@ Auftrag: Nutzer, „weiter" → naechster Plan-Abschnitt nach N38 fehlte → Neu
 - **NC5 (niedrig, Doku)** 3,4 MB Markdown getrackt (BUILD_LOG_ARCHIV 1,4 MB), 78 Dateien in der Wurzel, 6 Wurzel-`.md` ohne Verweis: E3_M03/M04/M07_VERWEISE, PRODUCT, T2_RESTLISTE, T3_TEXTE.
 - **NC6 (niedrig, Fehler)** `Kartenkopf.tsx:24` zeichnet 3 Punkte und „Schwierigkeit ${n} von 3" – die 97 Stufe-4-Fragen zeigen „4 von 3" (Typ seit N37 U1 `1|2|3|4`).
 - **NC7 (Hinweis)** `meta-description` fehlt (SEO 91) · Patches verfuegbar: vite 8.3.4, vitest/coverage-v8 5.0.3, oxlint 1.87, radix-ui 1.7.0, lucide-react 1.53, jsdom 30.1.2.
-**Offen aus frueheren Pruefungen:** keine (NA5 bleibt Hinweis). **Nutzer-Auswahl 09.10.:** alle (NC1–NC7) → **N39** in `PLAN_NEUBAU.md`.
+**Offen aus frueheren Pruefungen:** keine (NA5 bleibt Hinweis). **Nutzer-Auswahl 09.10.:** alle (NC1–NC7) → **N39** in `docs/plaene/PLAN_NEUBAU.md`.
 
 ## Komplettpruefung 09.10.2026 abends (Stand v2.3.2, Commit 1ab6554, neuer PC, Konto web.de)
 Auftrag: Nutzer, „kompletten Check des Projektes … online suchen, was der Standard ist". Pruefrahmen (gelesen 09.10.):

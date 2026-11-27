@@ -1,5 +1,5 @@
 /* ============================================================================
-   DER LERNSTAND DES NEUBAUS (N31, E17 + E25-E28 in PLAN_NEUBAU.md)
+   DER LERNSTAND DES NEUBAUS (N31, E17 + E25-E28 in docs/plaene/PLAN_NEUBAU.md)
 
    ⛔⛔ DAS IST DER EINZIGE TEIL DES PROGRAMMS, DEN MAN NICHT NEU BAUEN KANN.
       Fragen, Bewertung, Oberflaeche - alles liesse sich wiederherstellen. Was

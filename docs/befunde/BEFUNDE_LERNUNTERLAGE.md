@@ -2,7 +2,7 @@
 
 **Pilotdatei:** `03_IT-Systeme_Hardware_Wirtschaftlichkeit.md` (616 Zeilen, 34 Abschnitte)
 **Gelesen:** 31.08.2026, 616 von 616 Zeilen, alle Abschnitte einzeln.
-**Verfahren:** `PLAENE.md`, „GESAMTPLAN QUALITÄTSRUNDE Q2", Etappe VI. Nutzer-Entscheide 7–9.
+**Verfahren:** `docs/archiv/PLAENE.md`, „GESAMTPLAN QUALITÄTSRUNDE Q2", Etappe VI. Nutzer-Entscheide 7–9.
 **Nummernkreis:** fortlaufend nach `docs/befunde/BEFUNDE_FAELLE.md` (endete bei B89).
 
 ⚠️ **Als Stichprobe deklariert, nicht als Hochrechnung.** Über die restlichen sieben Kursdateien

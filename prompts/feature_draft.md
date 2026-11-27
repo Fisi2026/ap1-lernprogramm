@@ -1,4 +1,4 @@
-> ⛔ **VERALTET seit N29/N34 (Vermerk 27.09.2026):** Diese Vorlage beschreibt die ALTE App (`logik.js`, `app_*.js`, jsdom-Boot, alte Suiten). Fuer den Neubau gelten `SCHIENE_NEU.md`, `PLAN_NEUBAU.md` und `ARCHITECTURE.md`.
+> ⛔ **VERALTET seit N29/N34 (Vermerk 27.09.2026):** Diese Vorlage beschreibt die ALTE App (`logik.js`, `app_*.js`, jsdom-Boot, alte Suiten). Fuer den Neubau gelten `SCHIENE_NEU.md`, `docs/plaene/PLAN_NEUBAU.md` und `ARCHITECTURE.md`.
 
 # Agent-Vorlage: Feature-Entwurf am App-Code (für Sonnet-Subagenten)
 

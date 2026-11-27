@@ -156,7 +156,7 @@ Grundlage: Prüfungskatalog FIS 2024, Fragenkomplexe FK01-FK07.
 
 ⚠️ **Das sind INHALTLICHE Katalog-Lücken.** Die didaktischen Befunde des Prüfberichts (A4 zu klein,
 fehlende Stufe-1-Einstiege, fehlende Stufe 4) stehen NICHT hier, sondern als Etappen 4–6 im
-Q1-Gesamtplan in PLAENE.md. Beides nicht vermischen.
+Q1-Gesamtplan in docs/archiv/PLAENE.md. Beides nicht vermischen.
 
 | Prio | Katalogpunkt (FK) | Status | Empfehlung |
 |---|---|---|---|

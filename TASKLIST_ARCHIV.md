@@ -51,7 +51,7 @@
 #      NAECHSTER_CHAT.md/COVERAGE.md. ✅ 25.07. erledigt: NAECHSTER_CHAT.md geloescht, docs/befunde/COVERAGE.md
 #      auf die manuellen Analysen gekuerzt. Hinweis: Backups sind per .gitignore ausgeschlossen,
 #      belegen also nur lokal Platz. Löschen scheitert am Mount → per allow_cowork_file_delete.
-#   5. GRUPPE G5 UX → v1.0.0 … FERTIG 2026-07-21. Detailplan AP2-G5 in PLAENE.md angelegt;
+#   5. GRUPPE G5 UX → v1.0.0 … FERTIG 2026-07-21. Detailplan AP2-G5 in docs/archiv/PLAENE.md angelegt;
 #      Bestandsabgleich: #24/#28 waren gebaut, #26 gestrichen, #30/#31 am selben Tag fertig,
 #      real offen war nur #39 Landing-Page → index.html ist jetzt eine echte Einstiegsseite,
 #      manifest start_url auf lernprogramm_ap1.html, Offline-Audit deckt index/manifest/sw mit ab,
@@ -70,7 +70,7 @@
 #   4. Klausur-Simulation nur aus M09 … FERTIG v0.14.0 (loeseFrage statt renderFrage, opts.klausur,
 #      buildM09Klausur, eigener Verlauf; test_unterricht 45→62) → AUSBAUSTUFE 2 KOMPLETT
 # NEU 2026-07-21: TESTER-FEEDBACK eingegangen → Arbeitspaket „FEEDBACK-RUNDEN FB-R1–R3",
-#   Detailplan in PLAENE.md Abschnitt „FB". Nutzer-Entscheide (E1–E4) dort dokumentiert:
+#   Detailplan in docs/archiv/PLAENE.md Abschnitt „FB". Nutzer-Entscheide (E1–E4) dort dokumentiert:
 #   Feedback VOR Freitext-S3 (S3 wird in FB-R2 integriert); „Rhaus" → pro Aufgabe passende
 #   Beispielfirmen; Markieren nur ausblenden (Default AUS); Drag&Drop = echtes Drag + Klick-Fallback.
 #   Je Runde: voller Kontroll-Zyklus + Version-Bump + Checkpoint + PAUSE (Nutzer testet am Handy).
@@ -359,7 +359,7 @@
 #   983 Fragen + 9 Fällen. APP_VERSION 1.8.0, sw.js ap1-v1.8.0, CHANGELOG-Block v1.8.0.
 #   ✅ **GEPUSHT UND BESTÄTIGT 26.07.** („1.8 ist drauf"), Release-Commit 3cc5bdf, Baum sauber.
 #   🚩 **QUALITÄTSRUNDE Q1 IST GEPLANT UND FREIGEGEBEN (26.07.) — HIER GEHT ES WEITER.**
-#      Vollständiger Plan: **PLAENE.md → „🚩 GESAMTPLAN QUALITÄTSRUNDE Q1"**. Alle Rückfragen sind
+#      Vollständiger Plan: **docs/archiv/PLAENE.md → „🚩 GESAMTPLAN QUALITÄTSRUNDE Q1"**. Alle Rückfragen sind
 #      beantwortet, es ist NICHTS offen. Messwerte: PRUEFBERICHT_2026-07-26.md.
 #      Etappen: 0 Wächter+Kleinkram (v1.9.0) → 1 Batch M04/M05/M06 (v1.10.0) → 2 M09 eingliedern
 #      ab 01.08. (v1.11.0) → 3 Batch M01/M02/M03/M07/M08 (v1.12.0/v1.13.0) → 4 Stufe-1 44 Fragen
@@ -404,7 +404,7 @@
 # ►►► NÄCHSTER TASK: **Push von v1.10.0 durch den Nutzer** (Windows-Rechner) bestätigen lassen,
 #     dann Freigabe für die Etappe-4-Fragen (Release **v1.11.0**) einholen.
 #     Danach: **Etappe 5 (A4-Ausbau, +18 Fragen)** – ebenfalls ohne M09. **Etappe 2 (M09) bleibt
-#     bis 31.07. GESPERRT.** Verfahren steht in PLAENE.md: markierte Antwort
+#     bis 31.07. GESPERRT.** Verfahren steht in docs/archiv/PLAENE.md: markierte Antwort
 #     verifizieren · Distraktoren prüfen · **Distraktorlängen angleichen, NIE die richtige Antwort
 #     kürzen** · Erklärung gegenhalten. Befunde je Modul SAMMELN und vorlegen, nicht einzeln
 #     korrigieren. Nach jedem Modul die Schwelle des Längen-Wächters auf Istwert + 1 senken.
@@ -416,7 +416,7 @@ Dieses Briefing ist so geschrieben, dass JEDES Modell in einem NEUEN Chat nahtlo
 Einstieg: (1) diesen Block + Abschnitt **7-PLAN2** (verbindlicher Gesamtplan der 29 Ideen, G1–G5, alle Nutzer-Entscheide)
 + PLAENE **„AP2-G2"** (G2-Detailplan) lesen, (2) BUILD_LOG.md nur die jüngsten 2026-07-19er G2-Einträge
 (Älteres in BUILD_LOG_ARCHIV.md – NICHT lesen, außer gezielt nötig), (3) mit GRUPPE G3 in
-Abschnitt 7-PLAN2 weitermachen. Der alte 5-PLAN (T–F) ist erledigte Historie. Detailpläne: PLAENE.md – pro Task NUR
+Abschnitt 7-PLAN2 weitermachen. Der alte 5-PLAN (T–F) ist erledigte Historie. Detailpläne: docs/archiv/PLAENE.md – pro Task NUR
 den betreffenden Abschnitt; **AP2-G3 bis AP2-G5 existieren noch NICHT** und sind bei Gruppenbeginn anzulegen.
 ⚠️ INHALTE NIE DIREKT EDITIEREN: fragen.js UND faelle.js werden aus pool/*.json gebaut (`python3 build_fragen.py`);
 beide haben einen Drift-Guard in check.sh. ⚠️ TOOLING: .tooling/jsdom hängt beim require → jsdom-Suiten über frische /tmp/jt fahren
@@ -532,7 +532,7 @@ ENDGÜLTIG GESTRICHEN (nicht erneut anbieten). PWA = GitHub Pages, ganz am Ende 
 
 ## 5-PLAN. GESAMTPLAN ab 2026-07-15 (verbindlich, Nutzer-Entscheid: „Technik zuerst")
 Prüfung: Mi 24.02.2027 (~7,5 Monate) → voller Plan realistisch. Reihenfolge FIX, Detailpläne je Task
-in PLAENE.md (Abschnitte „T1"–„F3"). Je Task gilt: Agenten-Matrix (Abschn. 0), Prüfprotokoll (Abschn. 3),
+in docs/archiv/PLAENE.md (Abschnitte „T1"–„F3"). Je Task gilt: Agenten-Matrix (Abschn. 0), Prüfprotokoll (Abschn. 3),
 Checkpoint + Pause. Bei Refactorings (Phase T): Vorher/Nachher ALLE 20 Suiten identisch grün.
 
 **PHASE T – Technik / Block E-Rest** (sauberes Fundament, macht Phase C billiger)
@@ -876,7 +876,7 @@ Grundsatz-Entscheidungen des Nutzers (2026-07-12): Reihenfolge „Lernnutzen zue
   Zurück-Navigation (Session-Array uebenVerlauf) → #54 Swipe (braucht #52; Drag&Drop-Typen ausnehmen!) →
   #47 SVG-Zoom (Event-Delegation, 4 svgbox-Stellen) → #98 Abruf-Übung → #55 Fokus (S.fokus existiert) →
   #57 Melden (S.meldungen existiert) → #53 Tooltip-Glossar (Leak-Prüfung!) → #61 Abkürzungslexikon
-  (Gate >30) → #76 Teilpunkte (Vorab: Schwelle/Gewichtung fragen). Details je Feature: PLAENE.md.
+  (Gate >30) → #76 Teilpunkte (Vorab: Schwelle/Gewichtung fragen). Details je Feature: docs/archiv/PLAENE.md.
 - **C** Neue Fragetypen #101 mtf / #103 kreuztabelle / #102 lueckenkette / #50 szenario2: je Typ
   logik.js (TYPEN + Validierung + grade + Tests) + Renderer in loeseFrage (Registry existiert NICHT –
   klassisch einhängen) + Inhalte + gcheck. ENTSCHIEDEN (Nutzer 2026-07-12): Teilpunkte anteilig
@@ -1005,7 +1005,7 @@ Grundsatz-Entscheidungen des Nutzers (2026-07-12): Reihenfolge „Lernnutzen zue
    Selbstvalidierung via tools/validate_batch.js), prompts/feature_draft.md (Code-Entwürfe) und
    prompts/fragetyp_neu.md (Rezept für JEDEN neuen Fragetyp – Block C damit abarbeiten statt erkunden).
    Hauptprompt an Agenten = 3 Zeilen (Vorlage + Parameter); Vorlagen + ARCHITECTURE.md + tools/
-   vorher nach /tmp kopieren. Zukunfts-Feature-Ideen mit Baustein-Hinweisen: PLAENE.md „Ideenspeicher".
+   vorher nach /tmp kopieren. Zukunfts-Feature-Ideen mit Baustein-Hinweisen: docs/archiv/PLAENE.md „Ideenspeicher".
 9. **KEIN git im Projektordner:** Mount verbietet gits Lock-/Löschoperationen (2026-07-12 getestet,
    init scheitert). Es liegen harmlose .git-/.gitignore-Reste im Ordner – Nutzer kann sie im Explorer
    löschen. Versionierung stattdessen: Backup-Zip je Meilenstein (backup_JJJJ-MM-TT.zip via /tmp
@@ -1048,7 +1048,7 @@ Detail-Entscheide siehe PLAENE „AP2-G1".."AP2-G5".
 **G2 Inhalts-Batches → v0.9.0** (Ideen 10,9,7,16,33,35) — STAND: G2.1 FERTIG 2026-07-19 (Pool 810→820,
 pool/pool_m_g2.json, 10 Fragen Cloud/IPv6/USB4-TB/Wi-Fi 7; Nutzer-Entscheide: IPv6 unter „IP-Adressierung &
 Subnetting" mit AP1 (Thema jetzt gemischt 12 AP2 + 3 AP1), Verteilung 3/3/2/2, Formatmix inkl. mtf/
-kreuztabelle/dropdown. Detailplan „AP2-G2" in PLAENE.md nachgetragen).
+kreuztabelle/dropdown. Detailplan „AP2-G2" in docs/archiv/PLAENE.md nachgetragen).
 G2.2 #9 BATCH 1/2 FERTIG 2026-07-19: faelle.js wird jetzt WIRKLICH gebaut (build_fragen.py, byte-identisch
 verifiziert; faelle.js nie direkt editieren) + Fall-Guards (Drift in check.sh, Teilaufgaben-Validierung in
 validate_pool über L.validateFragen) + FALL-04 (M01), FALL-05 (M02), FALL-06 (M05) → 6 Fälle/30 Teilaufgaben.
@@ -1088,7 +1088,7 @@ nachgelesen (5 Zahlen-Kollisionen + 1 Altfehler in M02-540 korrigiert). Neue Sui
 (64) → sollwerte.env `rechnen=64`, jetzt 25 Suiten. Migrationsskripte in tools/migration/.
 → **GRUPPE G2 KOMPLETT UND VERÖFFENTLICHT 2026-07-19**: APP_VERSION 0.9.0, sw.js ap1-v0.9.0, CHANGELOG,
 alle 25 Suiten grün, Commit b66cdfd auf origin/main, refs/tags/v0.9.0 durch die CI erzeugt.
-NÄCHSTE GRUPPE: **G3 Lernmotor → v0.10.0**. Detailplan „AP2-G3" ist am 2026-07-19 in PLAENE.md ANGELEGT
+NÄCHSTE GRUPPE: **G3 Lernmotor → v0.10.0**. Detailplan „AP2-G3" ist am 2026-07-19 in docs/archiv/PLAENE.md ANGELEGT
 (Bestandsaufnahme + Task-Zerlegung G3.1–G3.6 + offene Entscheide E1–E3). Der Plan hat drei Kollisionen mit
 dem Bestand aufgedeckt: (1) es gibt bereits ein Wiedervorlage-System (Fehler-Deck mit Fälligkeiten), das
 sich mit Leitner überschneidet; (2) die Statistik ist THEMEN-, nicht fragebasiert → Leitner/Meisterung

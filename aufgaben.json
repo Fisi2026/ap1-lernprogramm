@@ -34,8 +34,8 @@
   {
    "id": "A06",
    "titel": "Paket 2 Schritt 3c: Rest der Wurzel – PLAN_NEUBAU, PLAENE(_ARCHIV), LEHREN nach docs/ (Steuer-/Rotationsskripte lesen sie per Pfad) und die Pfad-Kommentare in `pool/sets/*.json`/`zitate_belegt.json` (fliessen ins App-Buendel: nur mit Bau-Aenderung/Release)",
-   "status": "offen",
-   "beleg": "BUILD_LOG 307"
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 308"
   },
   {
    "id": "A07",
@@ -63,7 +63,7 @@
   },
   {
    "id": "A11",
-   "titel": "beim naechsten Plugin-Bump `projekt_einstieg.md:61`",
+   "titel": "beim naechsten Plugin-Bump `projekt_einstieg.md:61` und die Wurzelpfade in `tools/plugin/**` (SKILL.md, projekt_einstieg.md: PLAN_NEUBAU/PLAENE/LEHREN/BEFUNDE_* liegen jetzt in docs/) nachziehen; zugleich Pfad-Kommentare in `pool/sets/*.json`, `zitate_belegt.json`, `set_bauen.py` (fliessen ins App-Buendel: nur mit Bau-Aenderung)",
    "status": "offen",
    "beleg": "BUILD_LOG 300"
   },

@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► Zweig `claude/optimistic-feynman-b8gtxx` (BUILD_LOG 302–304) vom PC pruefen und nach main uebernehmen, danach `gh workflow run Mutation` (erster Volllauf) · jscpd-Ratsche (optional, `.tooling`) · Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`; B3 Live-Waechter – Lese-Secret) · Paket 1 (Opus, PC: `gh` angemeldet): PR-Ablauf, Ruleset, Auto-Merge · Paket 2 Schritt 3c: Rest der Wurzel – PLAN_NEUBAU, PLAENE(_ARCHIV), LEHREN nach docs/ (Steuer-/Rotationsskripte lesen sie per Pfad) und die Pfad-Kommentare in `pool/sets/*.json`/`zitate_belegt.json` (fliessen ins App-Buendel: nur mit Bau-Aenderung/Release) · Paket 2 Schritt 4: Steuerdateien kuerzen (CLAUDE.md-Kern < 200 Zeilen, Zuordnung laut BUILD_LOG 304) · erste Sonnet-Etappe mit `/advisor opus` messen · Inhalt danach: AP1 komplett bis Fruehjahr 2027 · web.de: fisi 1.3.17 installieren (Nutzer; Release `werkzeuge-fisi1.3.17-shell1.1.2` fehlt, nur PC) · beim naechsten Plugin-Bump `projekt_einstieg.md:61` · Schritt 14 auf den anderen zwei PCs · `../srv2.pid`, `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer)
+**Damit offen:** ►► Zweig `claude/optimistic-feynman-b8gtxx` (BUILD_LOG 302–304) vom PC pruefen und nach main uebernehmen, danach `gh workflow run Mutation` (erster Volllauf) · jscpd-Ratsche (optional, `.tooling`) · Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`; B3 Live-Waechter – Lese-Secret) · Paket 1 (Opus, PC: `gh` angemeldet): PR-Ablauf, Ruleset, Auto-Merge · Paket 2 Schritt 4: Steuerdateien kuerzen (CLAUDE.md-Kern < 200 Zeilen, Zuordnung laut BUILD_LOG 304) · erste Sonnet-Etappe mit `/advisor opus` messen · Inhalt danach: AP1 komplett bis Fruehjahr 2027 · web.de: fisi 1.3.17 installieren (Nutzer; Release `werkzeuge-fisi1.3.17-shell1.1.2` fehlt, nur PC) · beim naechsten Plugin-Bump `projekt_einstieg.md:61` und die Wurzelpfade in `tools/plugin/**` (SKILL.md, projekt_einstieg.md: PLAN_NEUBAU/PLAENE/LEHREN/BEFUNDE_* liegen jetzt in docs/) nachziehen; zugleich Pfad-Kommentare in `pool/sets/*.json`, `zitate_belegt.json`, `set_bauen.py` (fliessen ins App-Buendel: nur mit Bau-Aenderung) · Schritt 14 auf den anderen zwei PCs · `../srv2.pid`, `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer)
 
 ## 4. Die harten Grenzen der Bruecke
 
@@ -51,6 +51,6 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
   PFLICHT: eine Steuer- oder Protokolldatei suchen → `regeln/dateien.md`
   PFLICHT: einen Nutzer-Entscheid festhalten (ab E072 je eine Datei) → `entscheide/README.md`
   PFLICHT: ein Mess- oder Hilfsskript schreiben wollen → `WERKZEUGE.md` (es gibt es meist schon)
-  PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `PLAN_NEUBAU.md`
+  PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `docs/plaene/PLAN_NEUBAU.md`
   PFLICHT: Agenten einsetzen → Skill `fisi:agenten-orchestrierung`; Ausgaben kürzen, Tooling-Fallstricke → `TASKLIST.md`
   PFLICHT: eine Inhaltsrunde (Katalog-Luecken) planen oder fahren → `docs/plaene/PLAN_INHALT.md`

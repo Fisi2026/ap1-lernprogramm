@@ -4,7 +4,7 @@
    ⛔⛔ DIESE PROBE MISST NUR. Sie schreibt nichts ins Projekt und aendert kein
        Produktverhalten (Nutzer-Entscheid 10 vom 27.08.: "NUR MESSEN").
 
-   Anlass (PLAENE.md, Etappe VII): Die Waechter messen die Zusammensetzung des POOLS.
+   Anlass (docs/archiv/PLAENE.md, Etappe VII): Die Waechter messen die Zusammensetzung des POOLS.
    Was aus 50 gezogenen Fragen tatsaechlich wird, hat nie jemand gemessen.
 
    ⚠️ SIE WUERFELT NICHT. `Math.random` wird je Sitzung durch einen geseedeten PRNG

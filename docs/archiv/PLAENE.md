@@ -20,7 +20,7 @@ Pro Task NUR den betreffenden Abschnitt lesen (Token-Sparregel).
 ## ✅ RUNDE Q3 – EXTERNE MASSSTÄBE: KOMPLETT DURCH (04.–07.09.2026)
 Alle zehn Etappen (A, A+, B, C, D, E, F, G1, G2, H, I) sind abgeschlossen. **Der vollständige
 Nachweis – jede Etappe mit Datum und Ergebnis, die Entscheide und die Verfahrenslehren – steht
-verbatim in `PLAENE_ARCHIV.md`, Abschnitt „ROTATION 2026-09-10".**
+verbatim in `docs/archiv/PLAENE_ARCHIV.md`, Abschnitt „ROTATION 2026-09-10".**
 ⛔ **Nicht neu anfangen, nicht nachprüfen.** Was aus Q3 weiter gilt, steht in `START_PROMPT.md`
 Abschnitt 3 (die sechs gemessenen Punkte) und in `docs/befunde/BEFUNDE_BUCH_KATALOG.md`.
 
@@ -181,7 +181,7 @@ Grundlage: `PRUEFBERICHT_2026-07-26.md` (gitignoriert, liegt im Projektordner).
 > **Ein Tag v1.10.0 wird nie existieren.** Wer hier eine Nummer liest, prüft sie gegen
 > `git log` und `app_state.js`, nicht umgekehrt.
 
-> ⚠️ **ETAPPE 0, 1, 4, 5 UND 6 STEHEN SEIT DEM 28.07.2026 IN `PLAENE_ARCHIV.md`** – alle
+> ⚠️ **ETAPPE 0, 1, 4, 5 UND 6 STEHEN SEIT DEM 28.07.2026 IN `docs/archiv/PLAENE_ARCHIV.md`** – alle
 > ausgeliefert. Hier stehen nur noch die OFFENEN. Die Release-Angaben in den Überschriften unten
 > stammen aus der Planung vom 26.07. und **haben sich nicht bewahrheitet**: Etappe 3 lief komplett
 > ohne Version-Bump, v1.12.0 war Etappe 6. **Aktueller Stand: `START_PROMPT.md` Abschnitt 3.**
@@ -406,7 +406,7 @@ geschrieben wird (es misst die Azubi-Antworten aus `mess_freitext.js` mit); setz
 ## ✅ DATENGRUNDLAGE „STUFE-3/4-LÜCKEN" – ERHOBEN 07.09., ERLEDIGT 08.09.2026 (v1.24.0)
 Sechs Fragen geschrieben; nachgemessen haben nur noch die drei ausgenommenen B3-Themen höchstens
 eine Frage auf Stufe 3/4. **Tabelle, Begründung und der Hinweis zum M01-Lehrtext stehen verbatim
-in `PLAENE_ARCHIV.md`, Abschnitt „ROTATION 2026-09-10".**
+in `docs/archiv/PLAENE_ARCHIV.md`, Abschnitt „ROTATION 2026-09-10".**
 ⚠️ **Der geltende Wert wird gemessen, nicht gelesen:** `node tools/pool_query.js stufe 3|4`.
 
 ## 📌 DATENGRUNDLAGE „STUFE-1-LÜCKEN" (erhoben 2026-07-26)
@@ -2014,7 +2014,7 @@ Aufrufe zusammen unter 1,5 s — **dann lohnt der Umbau aus Etappe F NICHT** und
 
 ### ✅ ETAPPE C — ERLEDIGT 2026-09-10
 
-> **C1** `BUILD_LOG.md` 976 → 51 Zeilen, 924 verbatim ins Archiv · **C2** `PLAENE.md` 2374 → 2054
+> **C1** `BUILD_LOG.md` 976 → 51 Zeilen, 924 verbatim ins Archiv · **C2** `docs/archiv/PLAENE.md` 2374 → 2054
 > Zeilen, 333 verbatim · **beide Gegenproben 0 Verluste** · **C3** erledigt (Abschnitt 3 nennt
 > jetzt `*_ARCHIV.md`).
 > ⚠️ **Beide Specs waren ÄLTER als ihre Quelldateien** (100 s bzw. 196 s) — die Blockgrenzen wurden
@@ -2030,8 +2030,8 @@ Aufrufe zusammen unter 1,5 s — **dann lohnt der Umbau aus Etappe F NICHT** und
   Zeilen) und die erledigte Stufe-3/4-Grundlage (36 Zeilen) ins Archiv. **Spec liegt bereit.**
   ⚠️ **Die Zeilennummern der Spec gelten für die Datei OHNE diesen Plan-Block** — er steht
   bewusst am ENDE. Wer vorher etwas in PLAENE einfügt, misst die Grenzen neu.
-* **C3** Danach prüfen: nennt START_PROMPT Abschnitt 3 noch „`PLAENE.md`" als Q3-Nachweis? Dann
-  auf `PLAENE_ARCHIV.md` umstellen.
+* **C3** Danach prüfen: nennt START_PROMPT Abschnitt 3 noch „`docs/archiv/PLAENE.md`" als Q3-Nachweis? Dann
+  auf `docs/archiv/PLAENE_ARCHIV.md` umstellen.
 
 ### ✅ ETAPPE D — ERLEDIGT 2026-09-10
 

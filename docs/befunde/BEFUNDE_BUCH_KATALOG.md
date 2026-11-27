@@ -329,7 +329,7 @@ Byteanzahl in Kilobyte um (**dezimal, 1 KB = 1000 Byte**)"*, M03-761 in der Aufg
 wie viel Bit das sind"), M03-726, M03-533, M06-542. Dazu lehrt das Thema „Datenmengen & Präfixe"
 die Norm vollständig und korrekt, inklusive der Aussage, dass Übertragungsraten dezimal sind.
 
-►► **Kein Befund, keine Änderung.** Das Abbruchkriterium aus `PLAENE.md` Etappe A+ greift.
+►► **Kein Befund, keine Änderung.** Das Abbruchkriterium aus `docs/archiv/PLAENE.md` Etappe A+ greift.
 ⛔ **Der vierte grosse Verdacht in zwei Tagen, der sich aufgelöst hat** — und der grösste: er sah
 nach 26 betroffenen Fragen aus. **Die Substanzprüfung hat wieder alles entschieden.**
 

@@ -295,7 +295,7 @@ BUILD_LOG-Eintrags. Hier steht nur die Reihenfolge und warum.
 | 10 | **N36** Plugin | Nach N35, weil sich dort die Texte der Skills ändern; sonst zweimal bauen. |
 
 ### N30 — Werkzeuge für den Neubau (E18)
-⛔ **Vorher `WERKZEUGE.md` ganz lesen** – das Werkzeug gibt es meist schon (PFLICHT-Tabelle), und `LEHREN.md` (Messwerkzeug bauen).
+⛔ **Vorher `WERKZEUGE.md` ganz lesen** – das Werkzeug gibt es meist schon (PFLICHT-Tabelle), und `docs/archiv/LEHREN.md` (Messwerkzeug bauen).
 * **`tools/sabotage_vt.py --datei F --alt M [--neu E] --test PFAD`** – die Gegenprobe für vitest, die
   SCHIENE_NEU §3 als fehlend nennt. Muster **genau einmal** (sonst rc≠0 ohne Lauf), Datei **immer**
   wiederherstellen (`try/finally`, Prüfsumme davor = danach), vitest nur auf PFAD mit `--reporter=dot`,

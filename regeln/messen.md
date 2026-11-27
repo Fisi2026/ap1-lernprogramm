@@ -2,19 +2,19 @@
 
 **Wann lesen:** Pflicht vor jedem Waechter, jeder Pruefung, Gegenprobe oder jedem Messwerkzeug – und vor jeder Kennzahl, Quote oder Mengenaussage.
 
-⚠️ Entstanden am 11.10.2026 (N49 W1, Nutzer-Entscheid): die Bloecke unten stehen **verbatim** aus `START_PROMPT.md` und `LEHREN.md` (verschoben mit `tools/rotiere.py`, Gegenprobe 0) – nichts gekuerzt, nichts umformuliert. Abschnittsnummern und „siehe oben“ darin beziehen sich auf die Ur-Fassung (`git log -p START_PROMPT.md`, Stand vor N49 W1).
+⚠️ Entstanden am 11.10.2026 (N49 W1, Nutzer-Entscheid): die Bloecke unten stehen **verbatim** aus `START_PROMPT.md` und `docs/archiv/LEHREN.md` (verschoben mit `tools/rotiere.py`, Gegenprobe 0) – nichts gekuerzt, nichts umformuliert. Abschnittsnummern und „siehe oben“ darin beziehen sich auf die Ur-Fassung (`git log -p START_PROMPT.md`, Stand vor N49 W1).
 ⛔ Diese Datei traegt keinen Stand (der steht in den zwei Standzeilen von `START_PROMPT.md`). **Neue Lehren kommen ans Ende, mit Datum und Beleg.**
 
-## Aus LEHREN.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
+## Aus docs/archiv/LEHREN.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
 
-### aus LEHREN.md, Zeilen 14-17 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 14-17 der Ur-Fassung
 
 ### aus START_PROMPT.md, Zeilen 351-452 der Ur-Fassung
 
 # ⚠️ **EINE PRÜFUNG, DIE WÜRFELT, IST KEINE PRÜFUNG.** `test_axe` zog EINE Frage zufällig und hielt
 #   einen `aria-command-name`-Verstoß grün; deterministisch: acht weitere Fragetypen, fünf critical.
 
-### aus LEHREN.md, Zeilen 24-31 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 24-31 der Ur-Fassung
 
 # ⛔⛔ **WER DIE APP MISST, MISST IN DER APP.** Am 31.08. waren DREI Messungen falsch, alle weil
 #   außerhalb der laufenden App gemessen wurde (falscher Nenner · Endzustand statt Ziehungszeitpunkt ·
@@ -25,44 +25,44 @@
 #   `probe_lernfluss.js` und hielt M08 zehn Tage als offene Frage (B148). ►► **Wer eine Messung
 #   widerlegt, sucht ihren Wortlaut in den Werkzeugen.**
 
-### aus LEHREN.md, Zeilen 32-34 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 32-34 der Ur-Fassung
 
 # ⛔⛔ **EINE KENNZAHL, DIE INNERHALB EINER SITZUNG MITTELT, BEANTWORTET KEINE FRAGE ÜBER WOCHEN** –
 #   auch wenn die Überschrift darüber danach fragt (B149, 10.09.: „erste/letzte 10" flach bei
 #   +0,01, der Lernweg stieg 1,35 → 3,03). **Dritter Fall nach B147.** ►► **Erst prüfen, WORÜBER.**
 
-### aus LEHREN.md, Zeilen 41-43 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 41-43 der Ur-Fassung
 
 # ⚠️⚠️ **EIN WERKZEUG, DAS AM ERSTEN TAG GEBAUT WIRD, IST AM ERSTEN TAG NOCH NICHT GEPRÜFT** –
 #   `pool_query.js verweise` las „WCAG 2.1" als Abschnitt 2.1 und hätte neun richtige Verweise
 #   „repariert". **Ein neues Messwerkzeug erst an einem Fall prüfen, dessen Antwort man kennt.**
 
-### aus LEHREN.md, Zeilen 44-47 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 44-47 der Ur-Fassung
 
 # ⛔⛔ **EIN WERKZEUG, DAS IN DEN ORDNER SCHREIBT, DEN ES LIEST, WIRD ZWEIMAL GEFAHREN** – der erste
 #   Lauf misst eine Welt ohne seine Ausgabe. `befunde_index.py` las im zweiten `docs/befunde/BEFUNDE_INDEX.md`
 #   mit (0 → 145 „Mehrfach"), **und die Gegenprobe blieb grün: sie fragte nur, ob die erwartete
 #   Datei DABEI ist** (B151). ►► **Anwesenheit prüfen heißt nicht Menge prüfen.**
 
-### aus LEHREN.md, Zeilen 48-49 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 48-49 der Ur-Fassung
 
 # ⚠️ **EINE VERSIONSANGABE IN DER DOKU IST EIN MESSWERT VON DAMALS, KEIN ZUSTAND** – **vor dem
 #   Umsetzen eines notierten Versionssprungs die Release-Seite aufrufen** (`WebSearch`/`WebFetch`).
 
-### aus LEHREN.md, Zeilen 53-56 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 53-56 der Ur-Fassung
 
 # ⚠️ **DER GEBIETS-WÄCHTER MISST EINEN ANTEIL – JEDE NEUE FRAGE AUSSERHALB VON A4 SENKT IHN.**
 #   26 Fragen außerhalb A4 hätten A4 von 4,88 auf 4,73 % gedrückt und den Wächter (Schwelle 4,8)
 #   rot gemacht, ohne dass sich an A4 etwas verschlechtert hätte. **Gegenmittel ist Verteilung,
 #   nicht Schwellensenkung. Bei jedem größeren Zuwachs vorher nachrechnen.**
 
-### aus LEHREN.md, Zeilen 57-59 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 57-59 der Ur-Fassung
 
 # ⚠️ **EIN SINKENDER ANTEIL IST NOCH KEINE VERBESSERUNG – IMMER DEN ZÄHLER LESEN, NICHT DIE QUOTE.**
 #   Der Tell-Anteil fiel von 50,6 auf 43,8 %, während der Zähler unverändert bei 124 stand: gewachsen
 #   war allein der Nenner. **Das Ziel darf nicht durch Hinzufügen erreicht werden.**
 
-### aus LEHREN.md, Zeilen 112-118 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 112-118 der Ur-Fassung
 
 ### 26.09.2026, web.de – ein Audit-Befund „fehlt" ist eine Behauptung ueber das GANZE Repo
 ⛔ **Beleg:** Im Komplett-Audit standen zwei Befunde, die nicht stimmten. „SVG ohne Waechter" – gesucht nur in
@@ -72,7 +72,7 @@ in `.git/config`" – aus DEPLOY.md abgeschrieben; gemessen stand dort seit dem 
 aus der Doku meldet, misst ihn vorher.** Beide Fehler fielen erst beim Umsetzen auf, nicht beim Pruefen.
 
 
-### aus LEHREN.md, Zeilen 163-170 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 163-170 der Ur-Fassung
 
 ### 10.10.2026, web.de – eine Empfehlung aus Annahme drehte sich bei der ersten Messung um
 ⛔ **Beleg:** Zur Frage, ob die N43-Ratschen auch in der CI laufen, stand „Nur lokal (Empfohlen) – CI bleibt

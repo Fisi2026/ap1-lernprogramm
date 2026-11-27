@@ -3,7 +3,7 @@
 **Wann lesen:** am Umzugstag (Entwurf für Mittwoch 21.10.2026, eine Sitzung) und vor jeder Änderung an N40 V3.
 **Stand:** Fassung V3 vom 18.10.2026 (Nutzer-Entscheide O1–O9 eingearbeitet, Zweig `n40-ablauf`), **nachgemessen 25.11.2026** (Abschnitt 1a, O10; Werte in den Schritten nachgezogen: `v2.13.1`, `fisi 1.3.15`, `ci.yml:409`), **Phase B ausgeführt 26.11.2026** (BUILD_LOG 283–285; 16.4 Cloud-Probe ✅ BUILD_LOG 294; offen: Schritt 14 auf den anderen zwei PCs). Der Umzug selbst ändert GitHub,
 Cloudflare und beide PCs – das macht der Nutzer mit dem Chat zusammen, Schritt für Schritt, mit Pause an jeder Prüfung.
-**Grundlage:** `PLAN_NEUBAU.md` N40 (E66, E70), `DEPLOY.md`, `regeln/git.md`, `regeln/bruecke.md`, BUILD_LOG 220–223.
+**Grundlage:** `docs/plaene/PLAN_NEUBAU.md` N40 (E66, E70), `DEPLOY.md`, `regeln/git.md`, `regeln/bruecke.md`, BUILD_LOG 220–223.
 V1 (Wächter `4e14_veroeffentlichung`), V2 (Katalog nach `../Buch`) und V4 (`LICENSE`, `SECURITY.md`, `README.md`, seit `5791c05`) sind erledigt.
 **harden-runner kommt nirgends vor** (BUILD_LOG 223, Nutzer-Entscheid 18.10.).
 **Nicht gewählte Optionen stehen nicht mehr in den Schritten** (Abschnitt 6 nennt sie je Frage mit „✅ entschieden“).
@@ -316,7 +316,7 @@ Doku (code.claude.com, „Claude Code in the cloud", 18.10.2026): Über die Brow
 - Rückweg: *Unarchive*; Secrets neu tippen; Actions wieder an. Danach wäre nur noch das Zurückbenennen offen – möglich, solange das neue Repo gelöscht ist.
 
 **Schritt 18 – Doku nachziehen** · **[C]/[PC]** (ein Commit auf `main`, Stand-Guard beachten)
-`DEPLOY.md` (Zeilen 16, 54, 72, 158), `SECURITY.md` (12–14), `PLAN_NEUBAU.md` (N40-Zeilen, E69), `BUILD_LOG.md`-Eintrag, `START_PROMPT.md` Standzeile nur falls nötig; Liste in Abschnitt 4.
+`DEPLOY.md` (Zeilen 16, 54, 72, 158), `SECURITY.md` (12–14), `docs/plaene/PLAN_NEUBAU.md` (N40-Zeilen, E69), `BUILD_LOG.md`-Eintrag, `START_PROMPT.md` Standzeile nur falls nötig; Liste in Abschnitt 4.
 Ab hier ist das Repo öffentlich und Pushes kosten (angenommen) keine Konto-Minuten mehr; vorher gab es höchstens die Läufe aus Schritt 10 und 12.
 Das Projekt-Dokument „Training" in beiden Konten (gmail, web.de) wird **nicht** neu hochgeladen, solange sich `projekt_einstieg.md` nicht ändert.
 
@@ -359,8 +359,8 @@ Suchbegriffe: `Fisi2026`, `ap1-lernprogramm`, `fisi2026lernapp`, `github.com/`, 
 | 30 | `tools/buch_hochladen.sh:2,10,29`, `tools/einrichten.sh:123–142`, `tools/katalog/abdeckung.py:44,52`, `tools/katalog/katalog_parse.py:67,75`, `tools/plugin/projekt_einstieg.md:34,40` | `Fisi2026/ap1-buch` (**anderes**, privat bleibendes Repo) | – nicht betroffen |
 | 31 | `tools/waechter/4e13_geheimnisse.sh:5` | Kommentar „das Repo ist privat" | **Ä** (nur Kommentar, optional) |
 | 32 | `tools/ci_b5_entwurf.md:49` | „ubuntu-latest hat in privaten Repos 2 Kerne" | **P** öffentliche Repos: laut Doku (Enterprise-Cloud-Fassung der Runner-Seite) 4 vCPU/16 GB, kostenlos – Chance für die offene Aufgabe `tests`-Job 6:17 (BUILD_LOG 222/223); Seitenfassungen widersprechen sich, *angenommen*; **nach** dem Öffentlich-Schalten (Schritt 12, zweiter Lauf) messen |
-| 33 | `PLAN_NEUBAU.md:593–607` (N40), `:83,86` (E66, E69), `:603` | Plan-Text V3, „Release 2.3.3" | **Ä** Status ✅ + Widerspruch E69 auflösen (O2) |
-| 34 | `PLAN_NEUBAU.md:609–626` (N41 S2/S3/S6) | „im neuen Repo nach V3 NEU setzen" | **P** S2 und S6 stehen in Schritt 7/12; S3 bleibt offen |
+| 33 | `docs/plaene/PLAN_NEUBAU.md:593–607` (N40), `:83,86` (E66, E69), `:603` | Plan-Text V3, „Release 2.3.3" | **Ä** Status ✅ + Widerspruch E69 auflösen (O2) |
+| 34 | `docs/plaene/PLAN_NEUBAU.md:609–626` (N41 S2/S3/S6) | „im neuen Repo nach V3 NEU setzen" | **P** S2 und S6 stehen in Schritt 7/12; S3 bleibt offen |
 | 35 | `docs/befunde/BEFUNDE_AUDIT.md:157,199` | „Repo privat (Free) …" | – Befund-Protokoll, bleibt Geschichte |
 | 36 | `tools/s45_entwurf.md:11,24` | Entwurf mit Repo-Namen und harden-runner | – Geschichte (BUILD_LOG 223) |
 | 37 | `tools/plugin/installiert.txt` | Konto/Version/Datum | – unverändert (Versionen bleiben) |
@@ -385,14 +385,14 @@ Suchbegriffe: `Fisi2026`, `ap1-lernprogramm`, `fisi2026lernapp`, `github.com/`, 
 Jede Frage bleibt mit ihrem Fragetext stehen; „✅ entschieden“ nennt die Wahl und die Schritte, in denen sie wirkt. Die nicht gewählten Optionen stehen nur hier, nicht mehr in den Schritten.
 **O1 – Sichtbarkeit beim ersten Push.** (a) privat anlegen, pushen, CI und Probe messen, dann veröffentlichen · (b) gleich öffentlich anlegen.
 **✅ entschieden: (a) erst privat, nach grüner Probe öffentlich.** Wirkt in Schritt 7 (Private), 9/10 (ein Lauf, Minutenbudget), **12 (Öffentlich schalten, eigener Schritt)**, 13 (PVR/Ruleset/Dependabot erst danach); `ci.yml:409` läuft erst im zweiten Lauf (Schritt 12).
-**O2 – Erstes Tag im neuen Repo.** E69/N40 („Release 2.3.3 … erstes Tag", `PLAN_NEUBAU.md:86,607`) ist überholt – `v2.3.3` existiert seit 10.10. (BUILD_LOG 124, `git ls-remote --tags`, *gemessen*), der Stand ist **v2.10.5** (`neu/package.json`, *gemessen*).
+**O2 – Erstes Tag im neuen Repo.** E69/N40 („Release 2.3.3 … erstes Tag", `docs/plaene/PLAN_NEUBAU.md:86,607`) ist überholt – `v2.3.3` existiert seit 10.10. (BUILD_LOG 124, `git ls-remote --tags`, *gemessen*), der Stand ist **v2.10.5** (`neu/package.json`, *gemessen*).
 Ein Tag unter dem Stand hieße `neu/package.json` zurückzudrehen (Wächter `4e_versionen` und `app-sw` würden rot). Optionen: (a) `v2.10.5` automatisch · (b) zusätzlich Probe-Release 2.10.6 (O6) · (c) alte Tags nachbauen (O3).
-**✅ entschieden: (a) `v2.10.5` automatisch durch die CI, kein weiteres Release.** Gemessen im Code: der CI-Job `release` legt beim ersten Lauf automatisch `v2.10.5` an (`CHANGELOG.md` hat `## v2.10.5`). Wirkt in Schritt 10; `PLAN_NEUBAU.md` E69 ist in Schritt 18 nachzuziehen. (25.11.: sinngemäß `v2.13.1`, Abschnitt 1a.)
+**✅ entschieden: (a) `v2.10.5` automatisch durch die CI, kein weiteres Release.** Gemessen im Code: der CI-Job `release` legt beim ersten Lauf automatisch `v2.10.5` an (`CHANGELOG.md` hat `## v2.10.5`). Wirkt in Schritt 10; `docs/plaene/PLAN_NEUBAU.md` E69 ist in Schritt 18 nachzuziehen. (25.11.: sinngemäß `v2.13.1`, Abschnitt 1a.)
 **O3 – Alte Releases/Tags mitnehmen?** (a) nichts mitnehmen · (b) nur das jüngste Werkzeuge-Release · (c) alle Tags auf den Erstcommit.
 **✅ entschieden: (a) nichts mitnehmen** (die Historie ist der Zweck des Archivs; `CHANGELOG.md` erzählt die Versionen). Wirkt in Schritt 3 (nur noch Zugriffswege prüfen) und 15 (Werkzeuge-Release wird aus den Quellen neu gebaut).
 **O4 – Archivieren wann?** (a) erst nach grüner Probe · (b) sofort bei Schritt 6.
 **✅ entschieden: (a) erst nach grüner Probe (Schritt 17).** Der Rückweg per Umbenennen bleibt bis dahin offen; Actions im Alt-Repo sind ab Schritt 6 aus.
-**O5 – Name der Prüfungseinrichtung als Quellenname in 19 Dateien** (z. B. `PLAN_NEUBAU.md`, `tools/gebiete_stand.py`, `neu/src/kern/tabellen/gebiete.ts`, `referenz/*.js`): (a) so lassen · (b) neutral umschreiben · (c) einzeln entscheiden.
+**O5 – Name der Prüfungseinrichtung als Quellenname in 19 Dateien** (z. B. `docs/plaene/PLAN_NEUBAU.md`, `tools/gebiete_stand.py`, `neu/src/kern/tabellen/gebiete.ts`, `referenz/*.js`): (a) so lassen · (b) neutral umschreiben · (c) einzeln entscheiden.
 **✅ entschieden: (b) neutral umschreiben** (Kommentare/Doku; Suchmuster der Wächter `4e14_veroeffentlichung.sh` und `umzug_v3_probe.sh` bleiben; `referenz/` nur Kommentarzeilen, Regel geschärft – `SCHIENE_NEU.md` E60). Umgesetzt in eigenem Auftrag **vor** dem Umzug (Zweig `n40-o5`); die Probe zählt die Dateien als Hinweis ohne Urteil.
 **O6 – Probe-Release 2.10.6?** (a) nein, Deploy per Lauf-ID und `wrangler deployments list` belegen · (b) ja.
 **✅ entschieden: (a) kein Probe-Release.** Wirkt in Schritt 11 (Beleg über Lauf-ID, `wrangler deployments list`, Cloudflare-Oberfläche).

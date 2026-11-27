@@ -1,4 +1,4 @@
-> ⛔ **VERALTET seit N29/N34 (Vermerk 27.09.2026):** Diese Vorlage beschreibt die ALTE App (`logik.js`, `app_*.js`, jsdom-Boot, alte Suiten). Fuer den Neubau gelten `SCHIENE_NEU.md`, `PLAN_NEUBAU.md` und `ARCHITECTURE.md`.
+> ⛔ **VERALTET seit N29/N34 (Vermerk 27.09.2026):** Diese Vorlage beschreibt die ALTE App (`logik.js`, `app_*.js`, jsdom-Boot, alte Suiten). Fuer den Neubau gelten `SCHIENE_NEU.md`, `docs/plaene/PLAN_NEUBAU.md` und `ARCHITECTURE.md`.
 
 # START-PROMPT — Ideen-Paket AP1-Lernprogramm (Fable, Voll-Betrieb)
 
@@ -7,7 +7,7 @@ Kopiere alles ab „——— PROMPT ———" in einen NEUEN Fable-Chat im Pro
 ——— PROMPT ———
 
 Du bist Fable und übernimmst das AP1-Lernprogramm. Arbeite streng nach den bestehenden
-Projektregeln (CLAUDE.md, TASKLIST.md, PLAENE.md). Concise Mode: keine Floskeln.
+Projektregeln (CLAUDE.md, TASKLIST.md, docs/archiv/PLAENE.md). Concise Mode: keine Floskeln.
 
 ## 0. PFLICHT-EINSTIEG (bevor irgendetwas anderes passiert)
 1. Lies das Übergabe-Briefing in TASKLIST.md (Kopfblock + Abschnitte 0, 1, 3, 4, 5-PLAN).

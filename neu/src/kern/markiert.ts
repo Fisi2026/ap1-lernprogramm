@@ -1,5 +1,5 @@
 /* ============================================================================
-   LESEZEICHEN (★) UND „FRAGE MELDEN" — Etappe N20a (PLAN_NEUBAU.md, E3/E4)
+   LESEZEICHEN (★) UND „FRAGE MELDEN" — Etappe N20a (docs/plaene/PLAN_NEUBAU.md, E3/E4)
 
    Vorbild: `renderStern`, `renderMelden`, `meldungenText` (app_frage.js) und
    `markierteIds` (app_seiten.js). ⛔ DERSELBE LERNSTAND: `S.markiert[id] = 1`

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """tools/entscheide.py – N49 W3 (11.10.2026): jede Entscheidungs-Nummer GENAU EINMAL.
 Jeder Entscheid ist eine Datei entscheide/E072-<titel>.md (E001–E071 seit 27.11.2026 aus der Tabelle in
-PLAN_NEUBAU.md verschoben, BUILD_LOG 305) mit Status-Zeile und den Abschnitten Kontext, Entscheid, Folgen (ADR-Muster, unveraenderlich – ein Entscheid,
+docs/plaene/PLAN_NEUBAU.md verschoben, BUILD_LOG 305) mit Status-Zeile und den Abschnitten Kontext, Entscheid, Folgen (ADR-Muster, unveraenderlich – ein Entscheid,
 der einen alten ersetzt, bekommt eine NEUE Nummer und nennt „ersetzt E0xx“).
 Ausgabe (eine Zeile, liest check.sh 4g2):
   OK <anzahl> <hoechste>

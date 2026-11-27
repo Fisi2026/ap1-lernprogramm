@@ -6,7 +6,7 @@ Spart das Lesen ganzer Steuerdateien, wenn nur ein Abschnitt gebraucht wird.
 Beginnt an der ersten Zeile, die <marke> enthaelt; endet VOR der naechsten Ueberschrift
 derselben oder hoeheren Ebene (Markdown '#', oder '**X.' fuer Unterabschnitte wie in
 PLAN_NEUBAU), oder vor <marke2>. Kein Treffer -> rc=2 und die Liste der Ueberschriften.
-⛔ regeln/*.md (frueher LEHREN.md) sind davon AUSGENOMMEN: dort bleibt vollstaendiges Lesen Pflicht (START_PROMPT 6).
+⛔ regeln/*.md (frueher docs/archiv/LEHREN.md) sind davon AUSGENOMMEN: dort bleibt vollstaendiges Lesen Pflicht (START_PROMPT 6).
 """
 import re
 import sys

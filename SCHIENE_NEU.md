@@ -3,14 +3,14 @@
 ⚠️ **DIESE DATEI IST DER WEGWEISER, NICHT DER STAND.** Der laufende Stand des Neubaus steht im
 `BUILD_LOG.md` (Etappen `N…`), die Zahlen im Code und in `check.sh` Abschnitt 4f. **Was hier steht,
 ist am 15.09.2026 abgeschrieben; im Zweifel gilt die gemessene Quelle**, die je Punkt genannt ist.
-⚠️ **Was noch ansteht und was dazu entschieden ist, steht in `PLAN_NEUBAU.md`** (Nutzer-Entscheide
+⚠️ **Was noch ansteht und was dazu entschieden ist, steht in `docs/plaene/PLAN_NEUBAU.md`** (Nutzer-Entscheide
 vom 16.09.2026: der Neubau soll die alte App ablösen, erst parallel ausgeliefert).
 ⛔ **Keine zweite Liste offener Punkte hier** — zwei Listen für dieselbe Sache driften immer. Die
 eine steht als Schlusszeile („Damit offen: …") im **letzten** BUILD_LOG-Eintrag.
 
 ## 1. Was der Neubau ist — und was er nicht ist
 
-⚠️⚠️ **SEIT 22.09.2026 (E17 in `PLAN_NEUBAU.md`) IST DIE ALTE APP NUR NOCH REFERENZ.** Die beiden ⛔⛔-Sätze
+⚠️⚠️ **SEIT 22.09.2026 (E17 in `docs/plaene/PLAN_NEUBAU.md`) IST DIE ALTE APP NUR NOCH REFERENZ.** Die beiden ⛔⛔-Sätze
 unten gelten bis zum Umschalten (N29) bzw. bis der Kern in TypeScript steht (N34); abgelöst werden sie dort, nicht vorher.
 
 **React 19 + TypeScript + Vite, Tests mit vitest (jsdom), Oberfläche shadcn/ui auf `neutral`, nur

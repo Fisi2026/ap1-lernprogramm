@@ -1,5 +1,5 @@
 # PLAENE_ARCHIV – abgeschlossene Etappen der Qualitaetsrunde Q1 (ausgelagert 2026-07-28)
-# Aktiver Plan: PLAENE.md. Hier stehen die Etappen 0, 1, 4, 5 und 6 – alle ausgeliefert.
+# Aktiver Plan: docs/archiv/PLAENE.md. Hier stehen die Etappen 0, 1, 4, 5 und 6 – alle ausgeliefert.
 #
 # ⚠️ **STATUSAUSSAGEN UND ZAHLEN HIER SIND MESSWERTE VON DAMALS.** Sie waren richtig, als sie
 # geschrieben wurden, und sind es heute grossenteils nicht mehr (Beispiel aus Etappe 0:
@@ -135,7 +135,7 @@ Change Management (6). Inhaltliche Zielrichtung: Einweisungsgespräch, Schulungs
 
 ## ROTATION 2026-09-10 – Q3 komplett und die erledigte Stufe-3/4-Grundlage
 
-### aus PLAENE.md, Zeilen 20-316 der Ur-Fassung
+### aus docs/archiv/PLAENE.md, Zeilen 20-316 der Ur-Fassung
 
 ## ✅ GESAMTPLAN „RUNDE Q3 – EXTERNE MASSSTÄBE" (aufgestellt 2026-09-04, KOMPLETT DURCH 2026-09-07)
 # ⚠️ **ALLE ZEHN ETAPPEN SIND ABGESCHLOSSEN** – jede Zeile der Tabelle durchgestrichen, mit Datum
@@ -435,7 +435,7 @@ Dann **I** (klein, und es kann A+ und F beeinflussen), dann **D** (klein, sicher
 * **Das Lehrbuch als Korrektiv über dem Pool** — B127 hat gezeigt, dass es selbst falsch sein kann.
 
 
-### aus PLAENE.md, Zeilen 696-731 der Ur-Fassung
+### aus docs/archiv/PLAENE.md, Zeilen 696-731 der Ur-Fassung
 
 ## ✅ DATENGRUNDLAGE „STUFE-3/4-LÜCKEN" (erhoben 2026-09-07, ERLEDIGT 2026-09-08)
 > ✅ **NUTZER-ENTSCHEID 07.09.: schließen — je 2 Fragen für die drei AP1-Themen, AP2 ausgenommen
