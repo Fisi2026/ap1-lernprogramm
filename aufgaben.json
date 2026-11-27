@@ -40,8 +40,8 @@
   {
    "id": "A07",
    "titel": "Paket 2 Schritt 4: Steuerdateien kuerzen (CLAUDE.md-Kern < 200 Zeilen, Zuordnung laut BUILD_LOG 304)",
-   "status": "offen",
-   "beleg": "BUILD_LOG 304"
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 309"
   },
   {
    "id": "A08",
