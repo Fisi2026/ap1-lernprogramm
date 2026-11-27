@@ -28,7 +28,7 @@ __pycache__/
 
 # FB-R3/Sonder-Task „Sortierung nach Prüfungsordnung" (2026-07-23): Referenz-Artefakte im
 # Projektordner, damit sie ein neuer Chat findet. Binär/Vorschau NICHT ins Repo (die git-freundliche
-# Referenz ist SORTIERUNG_PRUEFUNGSORDNUNG.md; die Zuordnung selbst ist Single Source in logik.js).
+# Referenz ist docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md; die Zuordnung selbst ist Single Source in logik.js).
 *.xlsx
 themenauswahl_preview.html
 onboarding_preview.html

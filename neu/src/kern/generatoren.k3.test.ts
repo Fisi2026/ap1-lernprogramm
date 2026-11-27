@@ -1,5 +1,5 @@
 /* ============================================================================
-   K3 (PLAN_KLAUSUR3.md K3-E9/E38, 24.11.2026): DIE VIER NEUEN GENERATOR-ARTEN
+   K3 (docs/plaene/PLAN_KLAUSUR3.md K3-E9/E38, 24.11.2026): DIE VIER NEUEN GENERATOR-ARTEN
    Ohne Gegenstueck in `referenz/logik.js` – darum hier gegen eine UNABHAENGIG
    hingeschriebene Rechnung und ueber viele Samen geprueft: ganzzahlige Loesung,
    Loesungsweg, Felder, und die eigene Musterloesung wird als richtig bewertet.

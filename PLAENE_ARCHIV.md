@@ -35,7 +35,7 @@
    `abkuerzungen.js` steht, wird gemeldet.
 5. **M06-304 auf ECDHE umstellen.** Kernaussage hybrid bleibt; RSA-Transport als historischer
    Sonderfall benennen. `assert` auf den Ausgangstext, Gegenprobe.
-6. **COVERAGE.md Abschnitt 2 neu erheben** (FK01–FK07 gegen den heutigen Pool).
+6. **docs/befunde/COVERAGE.md Abschnitt 2 neu erheben** (FK01–FK07 gegen den heutigen Pool).
 7. Gegenprobe für JEDEN neuen Wächter, `sollwerte.env` nachziehen, `check.sh block`-Vollauf.
 
 ### ETAPPE 1 — Batch-Prüfung M04, M05, M06 → ✅ **v1.10.0 / ausgeliefert mit v1.10.1**  ⏱ groß
@@ -207,7 +207,7 @@ sind ohne eigenen Bump daraufgelaufen. **Der nächste Feature-Meilenstein brauch
 #### ✅ A+ — ERLEDIGT AM 04.09., KEIN BEFUND
 **Ergebnis vorweg: alle 26 Fragen einzeln angesehen, Klasse (a) ist LEER — nichts zu ändern.**
 Jede echte Rechenaufgabe nennt ihre Konvention ausdrücklich, und der Pool übt die Binärrechnung in
-vier Aufgaben (M03-953, M03-726, M03-533, M06-542). Volltext: `BEFUNDE_BUCH_KATALOG.md`, B130.
+vier Aufgaben (M03-953, M03-726, M03-533, M06-542). Volltext: `docs/befunde/BEFUNDE_BUCH_KATALOG.md`, B130.
 **Nicht wiederholen.** Der Maßstab selbst bleibt gültig und steht unten — für jede NEUE Frage mit
 Datenmengen: entweder Binärpräfix, oder die dezimale Konvention ausdrücklich benennen.
 
@@ -245,7 +245,7 @@ GB, wo GiB gemeint ist, und der Lerner sieht auf jeder Festplattenverpackung Dez
 **Die sechs leeren Verweise sind Wortform-Fehlalarme** (Lehrtext schreibt „OSI-Modell", Verweis
 „OSI-Referenzmodell"; bei M07-750 fehlen „Gestaltung/Bewertung/Klauseln" aus dem VERWEISTEXT).
 **Und „Zeilen Lehrtext je Frage" taugt bei tabellarischem Stoff nicht** — 3.2 trägt die volle
-7-Schichten-Tabelle. Volltext: `BEFUNDE_BUCH_KATALOG.md` §11. **Nicht wiederholen.**
+7-Schichten-Tabelle. Volltext: `docs/befunde/BEFUNDE_BUCH_KATALOG.md` §11. **Nicht wiederholen.**
 ⚠️ **Offen als Ermessensfrage:** 3.2 hat 101 Zeichen/Frage bei 28 OSI-Fragen — ein Ausbau wäre
 vertretbar, ist aber nicht belegt nötig. **Nutzer-Entscheid.**
 
@@ -283,7 +283,7 @@ Nebentext erklärt**. ⚠️ Kandidatenfilter — beim Überfliegen sind „Acce
 Point"), „Filesysteme" (wir: „Dateisysteme") und die OCR-Wörter „Kl-Software", „Kommandeozeile",
 „Befehissyntax" schon als Fehlalarm erkennbar.
 
-**✅ DURCHSICHT ERLEDIGT AM 06.09. — 3 von 137 bleiben stehen.** Volltext: `BEFUNDE_BUCH_KATALOG.md`
+**✅ DURCHSICHT ERLEDIGT AM 06.09. — 3 von 137 bleiben stehen.** Volltext: `docs/befunde/BEFUNDE_BUCH_KATALOG.md`
 §14. **Nicht wiederholen.**
 * **C1 Skriptsprachen als Sprachkategorie** (Themenkreis 04/06). Der Themenkreis nennt neun
   Merkmale von Programmiersprachen; **acht prüft der Pool, Skriptsprachen nicht.** Verweisziel

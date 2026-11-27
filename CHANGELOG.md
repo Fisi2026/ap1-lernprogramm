@@ -318,7 +318,7 @@ Stufe 4 wurde 2,5- bis 4,2-fach ueberzogen (je nach Trefferquote), Stufe 3 mit 4
 halb so oft gezogen wie ihr Pool-Anteil. `aufStufeFiltern` nimmt jetzt die Stufe darunter dazu,
 solange das Thema auf seiner Stufe weniger als drei Fragen hat - je Thema gemessen, nie global,
 und nie nach oben. Beim geuebten Lerner faellt Stufe 4 damit von 35,8 auf 12,2 %, Stufe 3
-steigt von 26,8 auf 46,6 %. Messreihe und Gegenproben: `BEFUNDE_LERNFLUSS.md`.
+steigt von 26,8 auf 46,6 %. Messreihe und Gegenproben: `docs/befunde/BEFUNDE_LERNFLUSS.md`.
 
 **Sechs neue Lueckentext-Aufgaben — freies Abrufen statt Wiedererkennen.**
 Der Aufgabentyp Lueckentext gab es bisher nur sechsmal, davon dreimal im AP1-Stoff. Acht

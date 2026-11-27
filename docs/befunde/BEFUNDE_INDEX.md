@@ -1,4 +1,4 @@
-# BEFUNDE_INDEX.md — welche B-Nummer steht in welcher Datei
+# docs/befunde/BEFUNDE_INDEX.md — welche B-Nummer steht in welcher Datei
 
 ⛔ **ERZEUGT, NICHT GEPFLEGT.** Diese Datei entsteht aus `python3 tools/befunde_index.py
 --setze`. **Hier von Hand zu schreiben ist sinnlos** – der naechste Lauf ueberschreibt es.
@@ -50,14 +50,14 @@ noch gilt, steht in der genannten Datei – und Entscheide dazu in `START_PROMPT
 | B39 | `BEFUNDE_M04-M06.md` | M04-120 – Visio-Zeichnungen sind keine CAD-Dateien (klein) |
 | B40 | `BEFUNDE_M04-M06.md` | M04-114 – SAP Fiori auf einem Odoo-Stack (klein) |
 | B41 | `BEFUNDE_M04-M06.md` | M04-117 – Tippfehler und alternde Jahreszahlen (klein) |
-| B42 | `docs/befunde/BEFUNDE_BEGRIFFE.md` | MAC hat drei Bedeutungen, das Glossar kannte eine (mittel) |
-| B43 | `docs/befunde/BEFUNDE_BEGRIFFE.md` | PIN und MFA: deutsch gegen englisch (klein) |
-| B44 | `docs/befunde/BEFUNDE_BEGRIFFE.md` | GPL heißt GNU General Public License (klein) |
-| B45 | `docs/befunde/BEFUNDE_BEGRIFFE.md` | BITV: ein Merksatz, der wie eine Auflösung aussieht (klein) |
-| B46 | `docs/befunde/BEFUNDE_BEGRIFFE.md` | 34 Abkürzungen im Pool erklärt, aber nicht im Glossar (mittel) |
-| B47 | `docs/befunde/BEFUNDE_BEGRIFFE.md` | M02-009 – das BSI als Quelle für Datenschutz (fachlich) |
-| B48 | `docs/befunde/BEFUNDE_BEGRIFFE.md` | M02-009 – ein Distraktor widersprach dem eigenen Szenario (mittel) |
-| B49 | `docs/befunde/BEFUNDE_BEGRIFFE.md` | Alternde Jahreszahlen in M02-009 (klein) |
+| B42 | `BEFUNDE_BEGRIFFE.md` | MAC hat drei Bedeutungen, das Glossar kannte eine (mittel) |
+| B43 | `BEFUNDE_BEGRIFFE.md` | PIN und MFA: deutsch gegen englisch (klein) |
+| B44 | `BEFUNDE_BEGRIFFE.md` | GPL heißt GNU General Public License (klein) |
+| B45 | `BEFUNDE_BEGRIFFE.md` | BITV: ein Merksatz, der wie eine Auflösung aussieht (klein) |
+| B46 | `BEFUNDE_BEGRIFFE.md` | 34 Abkürzungen im Pool erklärt, aber nicht im Glossar (mittel) |
+| B47 | `BEFUNDE_BEGRIFFE.md` | M02-009 – das BSI als Quelle für Datenschutz (fachlich) |
+| B48 | `BEFUNDE_BEGRIFFE.md` | M02-009 – ein Distraktor widersprach dem eigenen Szenario (mittel) |
+| B49 | `BEFUNDE_BEGRIFFE.md` | Alternde Jahreszahlen in M02-009 (klein) |
 | B50 | `BEFUNDE_M04-M06.md` | Die Zehnerregel steht im Pool in vier verschiedenen Zahlen (mittel) |
 | B51 | `BEFUNDE_M04-M06.md` | acht Kleinbefunde, alle korrigiert |
 | B52 | `BEFUNDE_M04-M06.md` | acht Kleinbefunde, alle korrigiert |
@@ -157,18 +157,18 @@ noch gilt, steht in der genannten Datei – und Entscheide dazu in `START_PROMPT
 | B148 | `BEFUNDE_LERNFLUSS.md` | die Modul-Abweichung der Probe war der SOLLWERT, nicht ein Befund |
 | B149 | `BEFUNDE_LERNFLUSS.md` | „die Stufung steigt nicht" war eine Aussage über das Zeitfenster der Kennzahl |
 | B150 | `BEFUNDE_LERNFLUSS.md` | pool_query.js ohne Argument kannte den Aufruf nicht, den START_PROMPT vorschr… |
-| B151 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | ein Werkzeug, das schreibt, ist erst nach dem ZWEITEN Lauf geprüft |
-| B152 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | 4e8 meldete grün über ein Werkzeug, das gar nichts gesagt hatte |
-| B153 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | der Meldezweig der neuen Zusicherung sagte im Fehlerfall „Binary file matches" |
-| B154 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | Backslashes verlieren eine Ebene (KORRIGIERTE URSACHE, 10.09. nachgemessen) |
-| B155 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | der Befehlskanal schneidet bei rund 8 KB ab, ohne es zu sagen |
-| B156 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | rotiere.py war auf dem Rechner des Nutzers gar nicht ausführbar |
-| B157 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | die Verbindung kann mitten in einer Sabotage abreißen |
-| B158 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | meine eigene Erfolgsmeldung brach mitten entzwei |
-| B159 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | meine erste Zusicherung konnte nie halten |
-| B160 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | der zweite Durchgang schrieb Radien falschen Zeilen zu |
-| B161 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | die Token-Regex hätte fremde Variablen getroffen |
-| B162 | `docs/befunde/BEFUNDE_WERKZEUGE.md` | fünf Utility-Klassen tragen ihren Wert im Namen |
+| B151 | `BEFUNDE_WERKZEUGE.md` | ein Werkzeug, das schreibt, ist erst nach dem ZWEITEN Lauf geprüft |
+| B152 | `BEFUNDE_WERKZEUGE.md` | 4e8 meldete grün über ein Werkzeug, das gar nichts gesagt hatte |
+| B153 | `BEFUNDE_WERKZEUGE.md` | der Meldezweig der neuen Zusicherung sagte im Fehlerfall „Binary file matches" |
+| B154 | `BEFUNDE_WERKZEUGE.md` | Backslashes verlieren eine Ebene (KORRIGIERTE URSACHE, 10.09. nachgemessen) |
+| B155 | `BEFUNDE_WERKZEUGE.md` | der Befehlskanal schneidet bei rund 8 KB ab, ohne es zu sagen |
+| B156 | `BEFUNDE_WERKZEUGE.md` | rotiere.py war auf dem Rechner des Nutzers gar nicht ausführbar |
+| B157 | `BEFUNDE_WERKZEUGE.md` | die Verbindung kann mitten in einer Sabotage abreißen |
+| B158 | `BEFUNDE_WERKZEUGE.md` | meine eigene Erfolgsmeldung brach mitten entzwei |
+| B159 | `BEFUNDE_WERKZEUGE.md` | meine erste Zusicherung konnte nie halten |
+| B160 | `BEFUNDE_WERKZEUGE.md` | der zweite Durchgang schrieb Radien falschen Zeilen zu |
+| B161 | `BEFUNDE_WERKZEUGE.md` | die Token-Regex hätte fremde Variablen getroffen |
+| B162 | `BEFUNDE_WERKZEUGE.md` | fünf Utility-Klassen tragen ihren Wert im Namen |
 
 ---
 

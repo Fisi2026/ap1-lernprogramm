@@ -84,7 +84,7 @@ Jede Frage trägt ein Feld `gebiet`. Grundlage ist der **Prüfungskatalog FISI 2
 | B3 | AP2 | Wirtschafts- und Sozialkunde |
 
 ⛔ **Die Fragenzahlen je Gebiet stehen hier bewusst NICHT.** `python3 tools/gebiete_stand.py`
-schreibt den gemessenen Block in `SORTIERUNG_PRUEFUNGSORDNUNG.md`, `check.sh` hält ihn nach.
+schreibt den gemessenen Block in `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`, `check.sh` hält ihn nach.
 
 ### Eigene Fragen ergänzen
 
@@ -123,7 +123,7 @@ Einzelheiten, Secrets und Token-Pflege: **`DEPLOY.md`**.
 | `SCHIENE_NEU.md` / `PLAN_NEUBAU.md` | Bereiche und Messwege / Entscheide (E1 …) und Etappen |
 | `SCHEMA.md` | Fragen-Schema, Feld für Feld, je Typ |
 | `DEPLOY.md` | GitHub, Cloudflare, CI-Deploy |
-| `SORTIERUNG_PRUEFUNGSORDNUNG.md` | Gebiets-Zuordnung A1–B3, gemessener Stand |
-| `BEFUNDE_*.md`, `BEFUNDE_INDEX.md` | Prüfprotokolle, Index der B-Nummern (erzeugt) |
+| `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md` | Gebiets-Zuordnung A1–B3, gemessener Stand |
+| `BEFUNDE_*.md`, `docs/befunde/BEFUNDE_INDEX.md` | Prüfprotokolle, Index der B-Nummern (erzeugt) |
 | `BUILD_LOG.md` | Bauprotokoll seit dem letzten Rotieren; älteres im `_ARCHIV` |
 | `START_PROMPT.md`, `EINSTIEG.md`, `LEHREN.md`, `regeln/` | Arbeitsanweisung für die KI-Sitzungen – **kein Einstieg für Menschen** |

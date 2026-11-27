@@ -87,7 +87,7 @@ Hilfsskript hier nachsehen** – am 28.07. entstanden acht Wegwerf-Skripte, eine
 #                              nicht leere Zeile muss im Archiv ODER im neuen Kopf stehen).
 #                              ⛔ **Schreibt nie bei Verlust.** Loest die Handarbeit vom 03./04.09. ab.
 #   `bash tools/umgebung.sh` . Umgebungsbefund (meldet auch, ob der Spiegel WARM oder KALT ist)
-#   `python3 tools/befunde_index.py --pruefe --setze` .. erzeugt `BEFUNDE_INDEX.md`; `waechter_zusicherung.py` prueft die Pool-Waechter
+#   `python3 tools/befunde_index.py --pruefe --setze` .. erzeugt `docs/befunde/BEFUNDE_INDEX.md`; `waechter_zusicherung.py` prueft die Pool-Waechter
 #   `bash tools/start.sh --neuer-chat <konto>` .. **DER CHAT-START IN EINEM AUFRUF:** Umgebung,
 #                              Baum, Log, Remote, ungepusht, CI-URTEIL, Wache, "Damit offen";
 #                              Waermen im Hintergrund. ⛔ **Ohne `--neuer-chat` startet er die
@@ -110,7 +110,7 @@ Hilfsskript hier nachsehen** – am 28.07. entstanden acht Wegwerf-Skripte, eine
 #                              Abfrage-Schleife. Fehlt die Datei, wartet er noch.
 #   `bash tools/umzug_v3_probe.sh [--probe|--voll|--arbeitsbaum|--ausgabe <dir>]` .. Generalprobe N40 V3 OHNE Netz: Baum aus `git archive HEAD`
 #                              als EIN Commit von ap1 in einem Temp-Repo, Pruefung (Autor, Sperrliste, Fremdtext, Gmail, Pfad, Token,
-#                              Groesse, Waechter 4e14); `--probe` = 11 Faelle mit bekannter Antwort. Nie pushen. Ablauf: `PLAN_UMZUG_V3.md`.
+#                              Groesse, Waechter 4e14); `--probe` = 11 Faelle mit bekannter Antwort. Nie pushen. Ablauf: `docs/plaene/PLAN_UMZUG_V3.md`.
 #   `python3 tools/einstieg.py --setze|--pruefe` .. erzeugt `EINSTIEG.md` (~3 KB) aus
 #                              START_PROMPT und BUILD_LOG; `check.sh` 4f-einstieg haelt es buendig.
 #   `python3 tools/rohe_elemente.py [--selbsttest]` .. **P7-Waechter des Neubaus** (`check.sh` 4f-roh):

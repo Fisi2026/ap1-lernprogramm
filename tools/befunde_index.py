@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""tools/befunde_index.py – erzeugt BEFUNDE_INDEX.md aus den BEFUNDE_*.md.
+"""tools/befunde_index.py – erzeugt docs/befunde/BEFUNDE_INDEX.md aus den BEFUNDE_*.md.
 
 WARUM ES DAS GIBT (W1 Etappe D, 10.09.2026): Neun BEFUNDE-Dateien mit ~290 KB, und die Doku
 zitiert durchgehend B-Nummern (B90, B106, B127, B136–B147), ohne dass eine Liste sagt, wo sie
@@ -39,7 +39,7 @@ stehen. Wer „B127" sucht, sucht in neun Dateien.
 
 BENUTZUNG
   python3 tools/befunde_index.py            # Trockenlauf: Zahlen + Auffaelligkeiten, schreibt NICHTS
-  python3 tools/befunde_index.py --setze    # schreibt BEFUNDE_INDEX.md
+  python3 tools/befunde_index.py --setze    # schreibt docs/befunde/BEFUNDE_INDEX.md
   python3 tools/befunde_index.py --pruefe   # Gegenprobe an Faellen mit BEKANNTER Antwort (rc!=0 bei Abweichung)
 """
 import glob
@@ -60,7 +60,7 @@ for _s in (sys.stdout, sys.stderr):  # cp1252-Konsole unter Windows (BUILD_LOG 1
 #       Tag gebaut, am ersten Tag nicht geprueft" (START_PROMPT Abschnitt 6).
 #    ⚠️ Und die Gegenprobe blieb dabei GRUEN, weil sie nur fragte "ist die erwartete Datei DABEI".
 #       Sie vergleicht seither die Fundstellen-Menge EXAKT.
-AUSGABE = "BEFUNDE_INDEX.md"
+AUSGABE = "docs/befunde/BEFUNDE_INDEX.md"
 
 # Eine "Definitionszeile" ist eine Ueberschrift, eine fette Zeile oder eine Tabellenzeile, deren
 # ERSTE Zelle nur die Nummer traegt. Aus ihrem KOPF (alles vor dem ersten Trenner) werden ALLE
@@ -143,10 +143,10 @@ def sammeln(dateien):
 def main():
     setze = "--setze" in sys.argv
     pruefe = "--pruefe" in sys.argv
-    dateien = sorted(p for p in glob.glob("BEFUNDE_*.md") if os.path.basename(p) != AUSGABE)
+    dateien = sorted(p for p in glob.glob("docs/befunde/BEFUNDE_*.md") if os.path.basename(p) != os.path.basename(AUSGABE))
     if not dateien:
         sys.exit("Keine BEFUNDE_*.md gefunden – im Wurzelordner aufrufen.")
-    if any(os.path.basename(p) == AUSGABE for p in dateien):   # Zusicherung, kein Kommentar
+    if any(os.path.basename(p) == os.path.basename(AUSGABE) for p in dateien):   # Zusicherung, kein Kommentar
         sys.exit(f"⛔ {AUSGABE!s} steht in der Quellliste – das Werkzeug wuerde sich selbst lesen.")
     treffer = sammeln(dateien)
 
@@ -183,7 +183,7 @@ def main():
         return 0
 
     zeilen = [
-        "# BEFUNDE_INDEX.md — welche B-Nummer steht in welcher Datei",
+        "# docs/befunde/BEFUNDE_INDEX.md — welche B-Nummer steht in welcher Datei",
         "",
         "⛔ **ERZEUGT, NICHT GEPFLEGT.** Diese Datei entsteht aus `python3 tools/befunde_index.py",
         "--setze`. **Hier von Hand zu schreiben ist sinnlos** – der naechste Lauf ueberschreibt es.",
@@ -226,7 +226,7 @@ def main():
                    "wurden im `BUILD_LOG` beschrieben und nie in ein `BEFUNDE_*.md` uebernommen.",
                    "Wer sie sucht, sucht dort. **Nummern ohne jeden Fundort wurden vergeben und",
                    "wieder verworfen** – ebenfalls kein Fehler."]
-    with open("BEFUNDE_INDEX.md", "w", encoding="utf-8", newline="\n") as f:
+    with open(AUSGABE, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(zeilen) + "\n")
     # ⚠️ 10.09.: hier stand `len(zeilen) + 1` – die Meldung war um eine Zeile zu hoch. Die Datei
     #    hat genau len(zeilen) Zeilen ("\n".join + Schluss-Newline). Kleiner Fehler, aber ein

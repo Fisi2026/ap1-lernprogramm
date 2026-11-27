@@ -518,7 +518,7 @@ Technikstand aufbessert“. Die Reihenfolge innerhalb folgt den Abhaengigkeiten,
    N40 V3 ohnehin neu gesetzt werden; N40 V3 braucht den Nutzer (Cloudflare-Token).
 6. Danach Inhalt: N48 P5-Rest (75 Fragen; Befunde M08-110, M03-115 in BUILD_LOG 141) · szenario2 · N50 · Inhaltsrunde 8.
 
-### N40 — Umzug ins oeffentliche Repo (E66, E70) · ✅ erledigt 26.11.2026 (BUILD_LOG 283–285; Ablauf `PLAN_UMZUG_V3.md`)
+### N40 — Umzug ins oeffentliche Repo (E66, E70) · ✅ erledigt 26.11.2026 (BUILD_LOG 283–285; Ablauf `docs/plaene/PLAN_UMZUG_V3.md`)
 Anlass: Komplettpruefung 09.10. abends (`docs/befunde/BEFUNDE_AUDIT.md`), ND4/ND3: Branch-Schutz, CodeQL, Secret Scanning, Attestierung, Scorecard sind
 auf dem privaten Free-Repo gesperrt (gemessen 403/404). Gemessen im Weg: `tools/katalog/pruefungskatalog_ocr.txt` = ©-Vermerk „… – Alle Rechte
 vorbehalten" des Katalog-Herausgebers (4 Commits), private Gmail-Adresse als Autor in 33 Commits. Darum frische Historie statt Umschreiben (nie `--force`).

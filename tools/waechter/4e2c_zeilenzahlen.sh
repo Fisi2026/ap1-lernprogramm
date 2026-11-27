@@ -9,7 +9,7 @@
   # ⚠️ ERWEITERT 02.09.2026 auf TASKLIST.md. Anlass: in PLAENE.md stand "(1821 Zeilen)", die Datei
   #    hatte 1849 - in genau der Datei, deren Kopf vor handgepflegten Zahlen warnt.
   # ⛔ GEMESSEN, WELCHE DATEIEN DAS MUSTER TRAGEN, BEVOR DER GUARD AUSGEWEITET WURDE:
-  #    BUILD_LOG.md (3), BUILD_LOG_ARCHIV.md (10), TASKLIST_ARCHIV.md (10), BEFUNDE_FAELLE.md (1),
+  #    BUILD_LOG.md (3), BUILD_LOG_ARCHIV.md (10), TASKLIST_ARCHIV.md (10), docs/befunde/BEFUNDE_FAELLE.md (1),
   #    ETAPPE3_M07/M08_BEFUNDE.md (je 1), PLAENE.md (4). ►► In einer CHRONIK ist eine Zeilenzahl
   #    ein Messwert von DAMALS und voellig richtig - dort waere der Guard eine Fessel, keine
   #    Sicherung. Bewacht werden nur die LEBENDEN Steuerdateien, in denen eine Zahl eine Aussage

@@ -1,4 +1,4 @@
-# BEFUNDE_MELDUNGEN.md – Lerner-Meldungen 6–20 je Klasse (L5b, PLAN_KLAUSUR3 §5, K3-E63..E67)
+# docs/befunde/BEFUNDE_MELDUNGEN.md – Lerner-Meldungen 6–20 je Klasse (L5b, PLAN_KLAUSUR3 §5, K3-E63..E67)
 
 Stand 24.11.2026 · nur K3-Set (268) · Pruefung ueber den ganzen Pool nach der Klausur.
 

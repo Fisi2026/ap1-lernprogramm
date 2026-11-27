@@ -26,7 +26,7 @@
 #      `BEFUNDE_*.md`, `PLAENE_ARCHIV.md`, Archiv. **Nicht neu anfangen, nicht nachpruefen.**
 #      ⛔ **Der Wächter für den Widerspruch Lehrtext ↔ Pool ist am 06./07.09. als G2 GEMESSEN UND
 #      VERWORFEN.** Nicht erneut vorschlagen. ⚠️ **A4 IST NICHT MEHR KNAPP** (09.09. nachgerechnet)
-#      – ⛔ **Zahl NICHT hier**: erzeugter Block in `SORTIERUNG_PRUEFUNGSORDNUNG.md`,
+#      – ⛔ **Zahl NICHT hier**: erzeugter Block in `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`,
 #      nachrechnen mit `tools/gebiete_stand.py`.
 #      ►► **Vor jeder neuen Lehrtext-Runde:** `python3 tools/e3_gegenprobe.py --streng` – aber
 #      **die Einzel-Kandidaten mitlesen, die es nur zaehlt** (B136, Abschnitt 3).
@@ -92,7 +92,7 @@
 # ⛔ **WAR DER GRIFF GETAN, GIBT ES WIEDER KEINEN PLAN.** Wer das vorfindet, **erfindet keine
 #   Etappe**, sondern MISST und legt vor: `pool_query.js duenn|typen|stufe <1-4>` · `gebiete_stand.py`
 #   · `probe_lernfluss.js <kopie> 60 50 --antworten 0.8 --kette` (misst IN der App, nicht daneben).
-# ✅ **AM 10.09. GEFAHREN** (B148–B150, `BEFUNDE_LERNFLUSS.md`): **kein Handlungsbedarf am Pool,
+# ✅ **AM 10.09. GEFAHREN** (B148–B150, `docs/befunde/BEFUNDE_LERNFLUSS.md`): **kein Handlungsbedarf am Pool,
 #   drei Fehler im MESSWERKZEUG**, behoben. **Der Lernweg steigt** (Sitzung 1 → 60: 1,35 → 3,03).
 #   ► **OFFEN, KEINE BEFUNDE:** die drei dünnsten A3-Feinthemen (je 6: M04 WLAN & VPN, M04
 #   GUI-Entwurf, M06 SbD) · M05 · Typ `konsole` (26 Poolfragen, 0,3 % der Ziehungen).
@@ -103,11 +103,11 @@
 #   **4.** ein Dubletten-Filter über Wortüberlappung (09.09. verworfen – **er misst Vokabular, nicht
 #   Aussage**; das kann nur `gradeTeilpunkte`, und `test_freitext` tut es an allen 15006 Paaren) ·
 #   **5.** „A4 ist knapp" (09.09. widerlegt) · **6.** der Stufe-4-Vorrat (09.09.: kein Ausbau nötig,
-#   `BEFUNDE_LERNFLUSS.md` 4b) · **7.** **die Modul-Abweichung der Lernfluss-Probe** (10.09.: M08
+#   `docs/befunde/BEFUNDE_LERNFLUSS.md` 4b) · **7.** **die Modul-Abweichung der Lernfluss-Probe** (10.09.: M08
 #   −5,9 Punkte sind der SOLLWERT der Relevanzgewichtung – Gegenprobe `--ohne-relevanz` → ±0,3).
 # ✅ **`lueckentext` AUSGEBAUT (09.09.): 6 → 12** – acht AP1-Themen standen auf null. **Nicht nachprüfen.**
 # ►►► **DIE FÜNF LEHREN DES 07.09. GELTEN WEITER – WORTLAUT UND HERLEITUNG: ARCHIV; Rezepte und
-#   Zahlen: `BEFUNDE_LERNUNTERLAGE.md` (B136–B138).** Kurz: **1.** Was ein Werkzeug nicht
+#   Zahlen: `docs/befunde/BEFUNDE_LERNUNTERLAGE.md` (B136–B138).** Kurz: **1.** Was ein Werkzeug nicht
 #   AUSDRUCKT, ist nicht geprüft – auch wenn es die Zahl nennt. **2.** Lehrtext gegen die
 #   MUSTERLÖSUNG schreiben, nicht gegen den Fragetext. **3.** Wer einen fehlenden Begriff nachträgt,
 #   prüft die Nachbarn desselben Themas mit. **4.** **Jeder neue Filter braucht Gegenproben mit
@@ -132,7 +132,7 @@
 
 #   ► **ALLE ENTSCHEIDE VOM 04./24./25.08. SIND GEFALLEN UND UMGESETZT** (Volltext im Archiv).
 #      **Nicht erneut vortragen.** (Der offene „Wiedereintritt" hing an `gotoSeite` der alten App – entfallen mit N29.)
-#   1. ✅ **ALLE 96 BILDFRAGEN GERENDERT UND ANGESEHEN (07.09.)** – `BEFUNDE_BILDFRAGEN.md` §3.
+#   1. ✅ **ALLE 96 BILDFRAGEN GERENDERT UND ANGESEHEN (07.09.)** – `docs/befunde/BEFUNDE_BILDFRAGEN.md` §3.
 #      ⛔⛔ **Alle vier SVG-Wächter waren dabei grün – sie prüfen nie, ob das Bild die Frage
 #      BEANTWORTET.** ►► **WER EINE BILDFRAGE PRÜFT, RENDERT SIE** (`tools/svg_bilder.py --id <ID>`).
 #   2.–9. ✅ **ALLE ERLEDIGT** → `START_PROMPT_ARCHIV.md`. ⚠️ **M08-335: der Aufgabentext steht
@@ -203,7 +203,7 @@
 #   ✅ **Startlast gemessen: drei Viertel sind `fragen.js`** – die Poolgröße kostet Übertragung,
 #      keine Rechenzeit. ⛔ Zahl NICHT hier; **der Gerätewert bleibt offen und wird NICHT
 #      nachgefragt** (27.07.). ✅ **GEBIETSVERTEILUNG: `tools/gebiete_stand.py`**, Block in
-#      `SORTIERUNG_PRUEFUNGSORDNUNG.md`, 4e2b3.
+#      `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`, 4e2b3.
 #
 # 📋 **DAS BEWÄHRTE VERFAHREN JE MODUL:**
 #   1. Vorabmessung (`node tools/pool_query.js`), 2. Batches von 8–12 Fragen VOLLSTÄNDIG ausgeben

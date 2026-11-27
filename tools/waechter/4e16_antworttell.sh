@@ -4,7 +4,7 @@
   # 4e16) ANTWORTEN VERRATEN SICH - HINWEIS, KEIN FEHLER (K3-E66, 24.11.2026, Lerner-Meldungen 14/17)
   # Kandidatenfilter `pool_query.js antworttell k3` (A Echo, B Klammer, D themenfremd) ueber das Set klausur_k3.
   # ⛔ Wie 4e8 bewusst kein 'melde' und keine Ausnahmeliste. A und D haben Fehlalarme; deshalb meldet der Hinweis
-  #    nur, was UEBER dem Stand liegt (STAND unten nach P5, 24.11.: A 4 und D 21 einzeln gelesen bzw. vom Agenten gelesen und nachgeprueft, BEFUNDE_MELDUNGEN.md P4/P5).
+  #    nur, was UEBER dem Stand liegt (STAND unten nach P5, 24.11.: A 4 und D 21 einzeln gelesen bzw. vom Agenten gelesen und nachgeprueft, docs/befunde/BEFUNDE_MELDUNGEN.md P4/P5).
   #    Wer einen neuen Treffer gelesen hat, behebt ihn oder hebt den Stand mit Begruendung im BUILD_LOG.
   # ⚠️ Ein stummes Werkzeug ist FEHLER (B152): der Hinweis ist verhandelbar, seine Messung nicht.
   if [ -f tools/pool_query.js ]; then

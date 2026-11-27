@@ -48,7 +48,7 @@
 #      data-schrift/data-seite am <html>; beforeprint-Hook, weil CSS <details> nicht sicher öffnet.
 #      test_a11y 25→38.
 #   4. Aufräumen: 7 Backup-ZIPs (18 MB, Stand 2026-07-21 nachgezählt), tote Level-Reste,
-#      NAECHSTER_CHAT.md/COVERAGE.md. ✅ 25.07. erledigt: NAECHSTER_CHAT.md geloescht, COVERAGE.md
+#      NAECHSTER_CHAT.md/COVERAGE.md. ✅ 25.07. erledigt: NAECHSTER_CHAT.md geloescht, docs/befunde/COVERAGE.md
 #      auf die manuellen Analysen gekuerzt. Hinweis: Backups sind per .gitignore ausgeschlossen,
 #      belegen also nur lokal Platz. Löschen scheitert am Mount → per allow_cowork_file_delete.
 #   5. GRUPPE G5 UX → v1.0.0 … FERTIG 2026-07-21. Detailplan AP2-G5 in PLAENE.md angelegt;
@@ -338,7 +338,7 @@
 #      AskUserQuestion). test_themenauswahl 60→75 (5 Gegenproben bissen), test_wirtschaft 32 /
 #      test_adaptiv 49 umgestellt. ALLE 39 Suiten Sollwert, Drift 0, check.sh schnell grün.
 #      Details: BUILD_LOG 2026-07-23 (oberster Eintrag). **SONDER-TASK DAMIT KOMPLETT.**
-#   ⚠️ Referenz im Projektordner (persistiert): SORTIERUNG_PRUEFUNGSORDNUNG.md (getrackt) +
+#   ⚠️ Referenz im Projektordner (persistiert): docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md (getrackt) +
 #      Aufstellung_Themen_nach_Pruefungsordnung.xlsx / themenauswahl_preview.html (.gitignore).
 #      Zuordnung ist über L.THEMA_GEBIET reproduzierbar. Lücke: LF 7/10b/11b/12b=0.
 # CHECKPOINT 2026-07-23 – **FB-R3 PUNKT 7 (ONBOARDING-TOUR) ERLEDIGT** (KEIN Bump, NICHT gepusht).
@@ -352,7 +352,7 @@
 #   Punkt 10 fertig (763/763 Erklärungen im Format Kernsatz + Stichpunkte + „Merke:"), Lexikon
 #   70 → 112 Einträge, **sieben Sachbefunde korrigiert**, Punkt 9 Teil 1 (Feinthemen sortiert nach
 #   Modul, darin alphabetisch, test_themenauswahl 75 → 81), Punkt 8 war bereits gebaut und wurde nur
-#   gehärtet (Filter jetzt thema UND modul). Aufräumen erledigt (NAECHSTER_CHAT.md weg, COVERAGE.md
+#   gehärtet (Filter jetzt thema UND modul). Aufräumen erledigt (NAECHSTER_CHAT.md weg, docs/befunde/COVERAGE.md
 #   21 → 12 KB). Neu: `tools/fakten_check.py` (12 harte Norm-/Rechtszahlen, 0 Verdachtsfälle).
 #   Voller Testlauf: **40 von 41 Suiten auf Sollwert, 0 Fehler** (nur test_axe fällt lokal aus,
 #   npm 403), Determinismus grün, **Drift 0 für fragen.js UND faelle.js**. Pool unverändert bei
@@ -373,7 +373,7 @@
 #      Neue Suite `tests/test_didaktik.js` (**29**, sollwerte.env `didaktik=29`) mit vier Ratschen:
 #      längste Antwort 76,3 % (Schwelle 78, Ziel 45) · Stufenlücken 4 (Ziel 0) · kleinstes AP1-Gebiet
 #      A4 2,75 % (Schwelle 2,5, nach Etappe 5 auf 5,0) · Abkürzungen ohne Lexikoneintrag 196
-#      (Schwelle 196). M06-304 auf ECDHE. COVERAGE.md Abschnitt 2+3 neu erhoben.
+#      (Schwelle 196). M06-304 auf ECDHE. docs/befunde/COVERAGE.md Abschnitt 2+3 neu erhoben.
 #      **41 von 42 Suiten grün** (nur test_axe, npm 403), Drift 0, Pool unverändert 983.
 #      ✅ **FREIGEGEBEN 27.07. – Release-Commit 6321d11 liegt LOKAL** (APP_VERSION 1.9.0,
 #      sw.js ap1-v1.9.0, CHANGELOG v1.9.0, 24 Dateien inkl. der 17 vom 26.07.). Baum danach sauber.
@@ -399,7 +399,7 @@
 #   ✅ **FREIGEGEBEN 27.07. – Release-Commit 61ced9a liegt LOKAL.** Baum sauber. NICHT GEPUSHT.
 #   ✅ **ETAPPE 4 ERLEDIGT (27.07., vorgezogen):** 44 Stufe-1-Einstiegsfragen für 22 Themen.
 #      Pool **983 → 1027**, Stufe 1 **132 → 176**, Feinthemen ohne Stufe-1-Einstieg **26 → 4**.
-#      Längen-Tell **50,6 % → 45,6 %**, `SCHWELLE_LAENGSTE` 52 → **47**. COVERAGE.md nachgezogen.
+#      Längen-Tell **50,6 % → 45,6 %**, `SCHWELLE_LAENGSTE` 52 → **47**. docs/befunde/COVERAGE.md nachgezogen.
 #      41 von 42 Suiten grün, Drift 0, KEINE Sollwert-Änderung nötig. **NICHT committet.**
 # ►►► NÄCHSTER TASK: **Push von v1.10.0 durch den Nutzer** (Windows-Rechner) bestätigen lassen,
 #     dann Freigabe für die Etappe-4-Fragen (Release **v1.11.0**) einholen.
@@ -717,10 +717,10 @@ Grundsatz-Entscheidungen des Nutzers (2026-07-12): Reihenfolge „Lernnutzen zue
   (schnell = nur test_logik), frisches `mktemp -d`-Workdir statt blankem /tmp (EACCES-fest gegen
   nobody-Reste), Inline-Check dort. Voll + schnell GRÜN, Dummy-Fail-Test wurde erkannt.
   4 Alt-Root-Tests via allow_cowork_file_delete gelöscht.]
-- **S3** COVERAGE.md durch `pool_query.js coverage` ersetzen  [FERTIG 2026-07-13: neues Kommando
+- **S3** docs/befunde/COVERAGE.md durch `pool_query.js coverage` ersetzen  [FERTIG 2026-07-13: neues Kommando
   `node tools/pool_query.js coverage` erzeugt Abschnitt-1-Matrix (Modul×Thema, Stufen 1/2/3/4, Formate,
   Bewertung DÜNN<5 / EINSEITIG=1 Format|1 Stufe) live aus fragen.js → Markdown, Redirect `> COVERAGE_GEN.md`.
-  Verifiziert: Per-Thema-Zahlen == `themen` (Diff leer), Summe 720. Alte COVERAGE.md nur mit VERALTET-
+  Verifiziert: Per-Thema-Zahlen == `themen` (Diff leer), Summe 720. Alte docs/befunde/COVERAGE.md nur mit VERALTET-
   Kopfhinweis versehen (Abschnitt 2/3 = manuelle Analysen bleiben). check.sh ALLES GRÜN.]
   (Nicht eingeplant, nur Idee: Fortschritts-Export/-Import im LocalStorage – bei Block B ggf. erneut anbieten.)
 

@@ -40,7 +40,7 @@
 ### aus LEHREN.md, Zeilen 44-47 der Ur-Fassung
 
 # ⛔⛔ **EIN WERKZEUG, DAS IN DEN ORDNER SCHREIBT, DEN ES LIEST, WIRD ZWEIMAL GEFAHREN** – der erste
-#   Lauf misst eine Welt ohne seine Ausgabe. `befunde_index.py` las im zweiten `BEFUNDE_INDEX.md`
+#   Lauf misst eine Welt ohne seine Ausgabe. `befunde_index.py` las im zweiten `docs/befunde/BEFUNDE_INDEX.md`
 #   mit (0 → 145 „Mehrfach"), **und die Gegenprobe blieb grün: sie fragte nur, ob die erwartete
 #   Datei DABEI ist** (B151). ►► **Anwesenheit prüfen heißt nicht Menge prüfen.**
 

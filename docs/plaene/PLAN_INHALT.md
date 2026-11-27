@@ -8,7 +8,7 @@ Pflicht vor jeder Runde: `START_PROMPT.md`, `regeln/pool.md` und `regeln/messen.
 * **Schwerpunkt:** Katalog-Luecken pruefen – nur ECHTE Luecken fuellen.
 * **Quellen:** keine neuen; Pruefungskatalog (`tools/katalog/`, massgeblich) und Lehrbuch wie bisher.
 * **Reihenfolge:** meiste Kandidaten zuerst. „Nach Pruefungsgewicht" war gewuenscht, ist aber nicht messbar:
-  die Pruefungsordnung nennt keine Soll-Gewichtung (`SORTIERUNG_PRUEFUNGSORDNUNG.md`), alte Pruefungen liegen
+  die Pruefungsordnung nennt keine Soll-Gewichtung (`docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`), alte Pruefungen liegen
   nicht vor. Kommen alte AP1-Pruefungen dazu, wird die Reihenfolge neu entschieden.
 * **Ablauf je Runde:** erst Liste, dann Entscheid, dann Fragen schreiben.
 * **Umfang:** ein Katalogbereich je Chat; umgesetzt wird erst nach dem Wochen-Reset des Kontingents.

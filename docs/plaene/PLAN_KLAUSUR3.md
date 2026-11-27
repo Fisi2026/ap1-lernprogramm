@@ -1,4 +1,4 @@
-# PLAN_KLAUSUR3.md – Klausurvorbereitung „nächste Klausur“ (K3)
+# docs/plaene/PLAN_KLAUSUR3.md – Klausurvorbereitung „nächste Klausur“ (K3)
 
 Stand 23.11.2026 · Konto web.de · Status: L1–L6 DURCH, v2.11.0 LIVE (BUILD_LOG 235–248; L5b Meldungs-Prüfung P1–P7 im K3-Set: 240–246). Klausur **Fr. 27.11.2026**.
 Eingrenzung der Themen folgt am **Di. 24.11.** (Aussage des Nutzers).
@@ -22,7 +22,7 @@ die zu einem der 7 Themen hier gehören (und nicht gestrichen sind).
 - Klausurform: offene Aufgaben mit Punkten („jede geforderte Aussage 1 Punkt“, 1 P ≈ 1 Min), Szenario je Aufgabe,
   Begründungen und Fachbegriffe werden verlangt. Entwurfsaufgaben können genau so vorkommen.
 
-## 2. Wiederverwendung aus K2 (PLAN_KLAUSUR2.md)
+## 2. Wiederverwendung aus K2 (docs/plaene/PLAN_KLAUSUR2.md)
 Set-Datei wie `pool/sets/klausur_k2.json` (Pool-IDs als Verweis + neue Fragen), Üben über dieselbe Komponente,
 Generator `genRaid`. K2 deckte schon Switch/Routing, RAID, Netzwerksicherheit, IDS, Hardware-Auswahl ab.
 

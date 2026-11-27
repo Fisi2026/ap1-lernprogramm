@@ -1,6 +1,6 @@
-# Arbeitsaufträge K3 – Cloud-Arbeiter A–D (Etappe L2, PLAN_KLAUSUR3.md §5)
+# Arbeitsaufträge K3 – Cloud-Arbeiter A–D (Etappe L2, docs/plaene/PLAN_KLAUSUR3.md §5)
 
-Stand 23.11.2026, Leitung (lokaler PC-Chat). Bindend: `PLAN_KLAUSUR3.md` §3 (K3-E1…E61, nicht neu fragen – Auto-Modus,
+Stand 23.11.2026, Leitung (lokaler PC-Chat). Bindend: `docs/plaene/PLAN_KLAUSUR3.md` §3 (K3-E1…E61, nicht neu fragen – Auto-Modus,
 keine Rückfragen an den Nutzer, K3-E31). Klausur Fr. 27.11.2026 – jedes fertige Thema zählt sofort.
 
 ## Für alle

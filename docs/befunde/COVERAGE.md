@@ -5,7 +5,7 @@
 >
 > **Aktuelle Abdeckung immer live erzeugen:** `node tools/pool_query.js coverage`
 > (optional `> COVERAGE_GEN.md`). Für die Sortierung nach Prüfungsordnung siehe
-> SORTIERUNG_PRUEFUNGSORDNUNG.md (Single Source: `L.THEMA_GEBIET` in logik.js).
+> docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md (Single Source: `L.THEMA_GEBIET` in logik.js).
 >
 > Was hier BLEIBT, weil es sich nicht automatisch erzeugen lässt:
 > Abschnitt 2 (Abgleich mit dem IHK-Prüfungskatalog AP1, FK01–FK07, mit Seitenverweisen) und

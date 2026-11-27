@@ -69,7 +69,7 @@ Alle 105 Fragen liegen fertig geprüft in **batches_m09/m09_alle105.json** (Einz
 m09_b1–b7.json daneben; b1–b7 sind die Quelle, alle105 die sortierte Gesamtdatei – beide synchron).
 
 ## PRÜFBERICHT PHASE 3 (Endkontrolle 2026-07-20, alles selbst verifiziert)
-- **Vollständigkeit:** 105/105 IDs exakt nach UNTERRICHT_MATRIX.md, keine Dubletten, kein
+- **Vollständigkeit:** 105/105 IDs exakt nach docs/befunde/UNTERRICHT_MATRIX.md, keine Dubletten, kein
   Überhang. Typen: 21 × exakt 5. Schwierigkeit exakt 42/32/21/10. validate_batch: 0 Fehler
   (jede Batch-Datei einzeln UND die Gesamtdatei).
 - **Feld-Hygiene:** erklaerungKurz/erklaerungLang/verweis überall; mc mit 4 distraktor-
@@ -155,7 +155,7 @@ m09_b1–b7.json daneben; b1–b7 sind die Quelle, alle105 die sortierte Gesamtd
   ⚠️ LEHRE: Routing hat DREI Stellen (routen-Tabelle app_seiten.js, SEITEN app_ui.js,
   ROUTEN_NAMEN app_ui.js) – ROUTEN_NAMEN fehlte im Plan, Testsuite hat es gefunden.
 - Phase 2 (Themen-Typ-Matrix): ✅ vorgelegt und freigegeben (inkl. Entscheide: konsole als
-  Kurzantwort; Themen-Bilanz-Abweichungen akzeptiert). UNTERRICHT_MATRIX.md = verbindlich.
+  Kurzantwort; Themen-Bilanz-Abweichungen akzeptiert). docs/befunde/UNTERRICHT_MATRIX.md = verbindlich.
 - Phase 3 (Generierung + Prüf-Loop): ✅ KOMPLETT 2026-07-20. 105/105 Fragen in
   batches_m09/ (7 Batches: b1 Grundtypen 25 · b2 Zuordnung/Matrix/Kreuz 20 · b3 freitext/
   erklaeren 10 · b4 rechnen/kalkulation/trace 15 · b5 SVG 15 · b6 szenario2/fehlersuche/

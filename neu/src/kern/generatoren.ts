@@ -411,7 +411,7 @@ export function genDatenmengen(rng?: Zufall): Generatoraufgabe {
 }
 
 /* =====================================================================
-   K3 (PLAN_KLAUSUR3.md K3-E9/E38/E56, 24.11.2026): VIER NEUE ARTEN – NICHT AUS logik.js.
+   K3 (docs/plaene/PLAN_KLAUSUR3.md K3-E9/E38/E56, 24.11.2026): VIER NEUE ARTEN – NICHT AUS logik.js.
    ⛔ `genRaid` bleibt wortgleich (Gleichheitstest gegen das eingefrorene `referenz/logik.js`);
       RAID 6 und 0+1 kommen als eigene Art `raidk3`. Die neuen Arten stehen in GENERATOREN HINTER
       den sechs alten; `generatoren.gleichheit.test.ts` prueft die alten als Praefix, `K3_ARTEN` die neuen.
@@ -578,7 +578,7 @@ export function genNetzteil(rng?: Zufall): Generatoraufgabe {
    Automatik-Modus DAUERHAFT 1 (geschrieben wird es nur ueber den Regler im manuellen Modus).
    Folge: **jede vierte Aufgabe trug beim Lerner das Tag „Anfaenger"** – auch fuer jemanden,
    der in allen Themen auf Stufe 4 steht. Und die Lernfluss-Probe zaehlte 26 % der Ziehungen
-   als Stufe 1, was jeden Stufenanteil am falschen Nenner rechnete (BEFUNDE_LERNFLUSS.md).
+   als Stufe 1, was jeden Stufenanteil am falschen Nenner rechnete (docs/befunde/BEFUNDE_LERNFLUSS.md).
    ⛔ Eine Themenstufe koennen die Generatoren NICHT erben: ihre Themen („Zahlensysteme",
    „RAID", „Netzplantechnik", „Datenuebertragung & Uebertragungszeit") stehen gar nicht im
    Pool – `stufeFuer` faellt dort auf S.level zurueck. Deshalb eine feste Stufe je Art.

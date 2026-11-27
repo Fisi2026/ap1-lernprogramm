@@ -1,4 +1,4 @@
-# tools/klausur_k3/kandidaten.py – Etappe L1 K3 (PLAN_KLAUSUR3.md §5). Aufruf aus der Repo-Wurzel: python3 tools/klausur_k3/kandidaten.py
+# tools/klausur_k3/kandidaten.py – Etappe L1 K3 (docs/plaene/PLAN_KLAUSUR3.md §5). Aufruf aus der Repo-Wurzel: python3 tools/klausur_k3/kandidaten.py
 # Kandidaten je Klausurthema aus dem Pool (nur lesen, Ausgabe nach _to_delete/helfer/k3_kandidaten.json).
 # Regexe aus K3-E8/E26 gegen titel+frage (nicht Erklaerung: dort stehen Begriffe nur am Rand, Lehre 10.10. „Kandidatenfilter").
 # Vorlage: tools/klausur_k2/kandidaten.py. --titel druckt je Treffer eine Zeile (ID, Typ, Titel) zum Durchsehen von Hand.

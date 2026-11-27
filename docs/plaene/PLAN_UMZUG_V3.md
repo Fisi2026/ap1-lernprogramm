@@ -1,4 +1,4 @@
-# PLAN_UMZUG_V3.md – Ablaufbuch für N40 V3 (Umzug ins öffentliche Repo)
+# docs/plaene/PLAN_UMZUG_V3.md – Ablaufbuch für N40 V3 (Umzug ins öffentliche Repo)
 
 **Wann lesen:** am Umzugstag (Entwurf für Mittwoch 21.10.2026, eine Sitzung) und vor jeder Änderung an N40 V3.
 **Stand:** Fassung V3 vom 18.10.2026 (Nutzer-Entscheide O1–O9 eingearbeitet, Zweig `n40-ablauf`), **nachgemessen 25.11.2026** (Abschnitt 1a, O10; Werte in den Schritten nachgezogen: `v2.13.1`, `fisi 1.3.15`, `ci.yml:409`), **Phase B ausgeführt 26.11.2026** (BUILD_LOG 283–285; 16.4 Cloud-Probe ✅ BUILD_LOG 294; offen: Schritt 14 auf den anderen zwei PCs). Der Umzug selbst ändert GitHub,
@@ -135,7 +135,7 @@ bash tools/umzug_v3_probe.sh --voll         # zusätzlich voller check.sh im Tem
 Der Wortlaut darf öffentlich werden, aber nirgends als Wortlaut der K3-Vorlage erkennbar sein. Umgeschrieben (gemessen 26.11.):
 - App-Inhalt: `pool/pool_m_k3_b.json` (Präfix „Klausuraufgabe … (…):“ ×11 → „Aufgabe 1A:“/„1B:“/„5:“, Zusatz-Zeile ×2), `pool/pool_m_k3_d.json` (×1), `pool/sets/klausur_k3.json` und
   `tools/klausur_k3/set_bauen.py` (Set-Name → „Klausur 3“), `03_IT-Systeme_Hardware_Wirtschaftlichkeit.md:191` (→ „Klausur 3 (LF3)“), Schnappschuss `neu/src/huelle/__schnappschuss__/bereich-unterricht.txt`, danach Bau `v2/`.
-- Doku: `PLAN_KLAUSUR3.md` (9 Stellen), `tools/klausur_k3/auftraege.md` (6), `tools/klausur_k3/musterfirma.md` (1), `CHANGELOG.md:24`, `BUILD_LOG_ARCHIV.md` (4), dieses Ablaufbuch – neutral „K3-Vorlage“; Dateiname der privaten Abschrift nur noch als Ordner `klausur_k3/`.
+- Doku: `docs/plaene/PLAN_KLAUSUR3.md` (9 Stellen), `tools/klausur_k3/auftraege.md` (6), `tools/klausur_k3/musterfirma.md` (1), `CHANGELOG.md:24`, `BUILD_LOG_ARCHIV.md` (4), dieses Ablaufbuch – neutral „K3-Vorlage“; Dateiname der privaten Abschrift nur noch als Ordner `klausur_k3/`.
 - **Nicht** gemeint (anderer Sinn): „Klassenlehrer"/„Berufsschullehrer" (`04_…md`, `pool_m08.json`), „handschriftliche Unterschrift" (`pool_m08.json`), „laut Lehrer" zur Probeklausur 30.07. (`gebiete.ts:82`, `referenz/logik.js:177`).
 - Regel für die Umschrift: neutral („Aufgabe 1A:", „Zusatz:", Set „Klausur 3"); Inhalt und Punkte bleiben. Die Quelle bleibt privat in `ap1-buch/klausur_k3/`.
 - Prüfen: `bash tools/umzug_v3_probe.sh` (Klasse „Vorlage“, Muster `M_VORLAGE`, Gegenprobe in `--probe`) meldet nichts – seit 26.11. Teil der Generalprobe (Schritt 4).
@@ -366,7 +366,7 @@ Suchbegriffe: `Fisi2026`, `ap1-lernprogramm`, `fisi2026lernapp`, `github.com/`, 
 | 37 | `tools/plugin/installiert.txt` | Konto/Version/Datum | – unverändert (Versionen bleiben) |
 | 38 | `.claude/settings.json`, `.gitignore` (`.claude/*` + `!.claude/settings.json`) | Start-Haken `tools/postfach.sh start`, Freigaben; Ausnahme im Ignore | **P** wandert im Erstcommit mit (die Probe prüft es seit N40 V3); macht den Namen `ap1-postfach` öffentlich |
 | 39 | `tools/postfach.sh:8,15,20`, `regeln/bruecke.md:248` | `REPO=Fisi2026/ap1-postfach` (privat, **zieht nicht um**) | – Name bleibt; **P** Zugriff aus dem neuen Klon und aus Cloud-Sitzungen (Schritt 14, 16) |
-| 40 | `PLAN_KLAUSUR3.md:63`, `tools/klausur_k3/auftraege.md:8` (neu 25.11.) | `Fisi2026/ap1-buch` (privat, bleibt) als Quelle der K3-Arbeiter | – nicht betroffen; Kennzeichnung dort: Schritt 4a (erledigt 26.11.) |
+| 40 | `docs/plaene/PLAN_KLAUSUR3.md:63`, `tools/klausur_k3/auftraege.md:8` (neu 25.11.) | `Fisi2026/ap1-buch` (privat, bleibt) als Quelle der K3-Arbeiter | – nicht betroffen; Kennzeichnung dort: Schritt 4a (erledigt 26.11.) |
 | 41 | Pool/Set/Lehrtext/Doku mit Kennzeichnung der K3-Vorlage (neu 25.11.) | Kennzeichnung | **Ä** vor Schritt 6 – ✅ erledigt 26.11. (Schritt 4a, O10) |
 
 **Zahl der Fundstellen:** 41 Zeilen in der Tabelle (**Ä** 8: Nr. 1, 2, 3, 4, 8, 31, 33, 41 · **P** 13 · **–** 20; Stand 25.11., Zeilen 10–12 neu gezählt, 40–41 neu). Keine Datei im App-Code (`neu/src`) und kein Test setzt den Repo-Namen voraus.

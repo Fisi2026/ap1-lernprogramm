@@ -50,7 +50,7 @@
 #       ⚠️ **„IT" allein sind 72 davon** – ob es ins Lexikon kommt, ist in ETAPPE 1 zu klären.
 #   * **M06-304 auf ECDHE umgestellt** (der einzige fachliche Befund des Prüfberichts). Optionen
 #     dabei auf gleiche Länge gebracht → Längen-Wächter 210 → 209.
-#   * **COVERAGE.md Abschnitt 2 UND 3 neu erhoben.** Nicht nur „Englische Fachtexte" war falsch,
+#   * **docs/befunde/COVERAGE.md Abschnitt 2 UND 3 neu erhoben.** Nicht nur „Englische Fachtexte" war falsch,
 #     sondern fünf Urteile (dazu Security by Design, Wertschöpfung, GUI-Maskenentwurf, KI).
 #   * **41 von 42 Suiten grün** (nur test_axe, npm 403 – seit v1.6.0 akzeptiert), Drift 0,
 #     Pool unverändert 983 Fragen + 9 Fälle.
@@ -152,7 +152,7 @@
 #   * Typen: 27 mc + 17 zuordnung. **Kein `erklaeren`** (speist das Glossar), **kein `lueckentext`**
 #     (laut Plan Restposten, nicht Teil der Runde).
 #   * Längen-Tell **50,6 % → 45,6 %**, `SCHWELLE_LAENGSTE` 52 → **47**. A4 2,75 → 2,85 %.
-#   * 41 von 42 Suiten grün, Drift 0, **keine Sollwert-Änderung nötig**. COVERAGE.md nachgezogen.
+#   * 41 von 42 Suiten grün, Drift 0, **keine Sollwert-Änderung nötig**. docs/befunde/COVERAGE.md nachgezogen.
 #   ⚠️ **LIEGT UNCOMMITTET IM BAUM** – Freigabe für Release v1.11.0 steht aus.
 #
 # ⚠️⚠️ **DIE WICHTIGSTE LEHRE AUS ETAPPE 4: DER LÄNGEN-TELL ENTSTEHT BEIM SCHREIBEN VON SELBST.**
@@ -375,7 +375,7 @@
 #      bewacht. **Bei „binary file matches" auf einer .js/.md NIE weiterarbeiten, erst prüfen:**
 #      `python3 -c "print(open(F,'rb').read().count(b'\x00'))"`.
 #      ⚠️ **PUNKT 9 TEIL 2 („Lücken") IST OFFEN – meine Rückfrage hatte eine falsche Prämisse:**
-#      Der Pool trägt KEINE Lernfeld-Tags (steht so in SORTIERUNG_PRUEFUNGSORDNUNG.md), die
+#      Der Pool trägt KEINE Lernfeld-Tags (steht so in docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md), die
 #      Auswahl ist gebiets-basiert, und KEIN Gebiet ist leer. Dem Nutzer korrigiert vorgelegt.
 #      ✅ **NUTZER-ENTSCHEID 25.07.: „Beispiel A war gemeint"** – gemeint ist also die
 #      **THEMEN-AUSWAHL IM ÜBEN-BEREICH** (`sUeben` in app_seiten.js, Gebiets-Blöcke A1–A5/B1–B3
@@ -417,7 +417,7 @@
 #      kein toter Level-Code (das, was noch „Level" heißt, ist die aktive Schwierigkeitsstufe:
 #      S.level/S.levelModus/LEVEL_NAMEN). OFFEN sind nur zwei getrackte Doku-Leichen, die sich
 #      SELBST als veraltet markierten. ✅ ERLEDIGT auf Nutzer-Entscheid 25.07.: NAECHSTER_CHAT.md
-#      GELÖSCHT (war nur ein Verweis auf START_PROMPT/TASKLIST); COVERAGE.md GEKÜRZT – die
+#      GELÖSCHT (war nur ein Verweis auf START_PROMPT/TASKLIST); docs/befunde/COVERAGE.md GEKÜRZT – die
 #      veraltete Matrix (Stand 579 Fragen, Pool hat 983) ist raus, die manuellen Analysen bleiben
 #      (Abschnitt 2 IHK-Katalog FK01–FK07, Abschnitt 3 Tiefencheck). 21 KB → 12 KB.
 #      **Aktuelle Abdeckung erzeugt `node tools/pool_query.js coverage`.**
@@ -532,7 +532,7 @@
 # Nutzer-Wunsch: Sortier-Kategorien komplett nach Prüfungsordnung, alle Fragen einsortieren, Zählung.
 # ✅ TEIL 1 (TAGGING): Feld `gebiet` (A1–A5 AP1, B1–B3 AP2, M9) an ALLEN 983 Fragen. `modul`/`id`/
 #    `thema` unangetastet. Single Source `L.GEBIETE`/`L.THEMA_GEBIET`/`L.gebietFuer` in logik.js;
-#    validate_pool-Wächter (f.gebiet==Soll); Schema-Pflicht. REFERENZ: SORTIERUNG_PRUEFUNGSORDNUNG.md.
+#    validate_pool-Wächter (f.gebiet==Soll); Schema-Pflicht. REFERENZ: docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md.
 #    ⚠️ Lücke: LF 7/10b/11b/12b = 0 Fragen. ⚠️ Zwei weiche Zuordnungen: Engl. Fachtexte→A1,
 #    Aufbauorganisation/Vollmachten→A5 (vertretbar, bleibt so).
 # ✅ TEIL 2 ETAPPE 1: Statistik / Bereitschaft / Serie laufen JE GEBIET (aus T:modul:thema abgeleitet,
@@ -990,7 +990,7 @@
 # → Version-Bump minor + CHANGELOG + BUILD_LOG + TASKLIST-Checkpoint → PAUSE: Nutzer testet am
 # Handy → erst nach Freigabe die nächste Runde.
 # ✅ (nach FB-R3) Aufräumen ist ERLEDIGT: keine Backup-ZIPs, kein toter Level-Code,
-#    .git_broken_old existiert nicht mehr, NAECHSTER_CHAT.md gelöscht, COVERAGE.md auf die
+#    .git_broken_old existiert nicht mehr, NAECHSTER_CHAT.md gelöscht, docs/befunde/COVERAGE.md auf die
 #    manuellen Analysen (FK01–FK07, Tiefencheck) gekürzt – die veraltete 579-Fragen-Matrix ist raus.
 #
 # ══════════ NEU ENTSCHIEDEN 2026-07-21 – NICHT ERNEUT FRAGEN ══════════
@@ -1470,7 +1470,7 @@ G2 Selbstbewertungs-Sim · G4 Altprüfungs-Analyse.
 # von START_PROMPT und in TASKLIST 0b – hier steht die Chronik.
 # ⚠️ ÜBERHOLT: Der Absatz „50 der 133 M07-verweis-Felder sind falsch" nennt eine Schätzung,
 #   die am 04.08. GEMESSEN wurde: M01 hatte 12 von 109 falsch (11,0 %), poolweit hochgerechnet
-#   rund 90 – nicht mehrere hundert. Siehe E3_M01_VERWEISE.md.
+#   rund 90 – nicht mehrere hundert. Siehe docs/befunde/E3_M01_VERWEISE.md.
 # ---- ARCHIV: wie Etappe 3 gelaufen ist (nicht mehr handlungsleitend) ----
 #   ⚠️ **UMFANG: 599 Fragen** nach dem `modul`-Feld (M01 110 · M02 109 · M03 192 · M07 133 ·
 #   M08 55) – NICHT nach den gleichnamigen Pool-Dateien. **Maßgeblich ist das `modul`-Feld.**
@@ -1771,7 +1771,7 @@ ihre Kursdatei gelesen.
 Quoten fehlerhafter Verweise je Modul:
 **M02 ~5 % · M06 ~9 % · M05 ~10 % · M01 11,0 % · M03 20,9 % · M07 21,2 % · M04 51,9 %.**
 
-Protokolle: `E3_M01_VERWEISE.md`, `E3_M03_VERWEISE.md`, `E3_M04_VERWEISE.md`,
+Protokolle: `docs/befunde/E3_M01_VERWEISE.md`, `E3_M03_VERWEISE.md`, `E3_M04_VERWEISE.md`,
 `E3_M07_VERWEISE.md`; M05, M06 und M02 im BUILD_LOG-Eintrag 24.08. (5).
 
 ✅ Die drei Nutzer-Entscheide vom 24.08. sind gefallen und umgesetzt (Abschnitt 4 des
@@ -1811,7 +1811,7 @@ ausgeliefert in v1.15.0. Messung, Gegenproben und `tools/probe_doppelziehung.js`
 
 ## Etappe VI – Pilot der Lernunterlage (31.08.2026)
 
-Volltext der Befunde: `BEFUNDE_LERNUNTERLAGE.md`. Hier nur, was den Verlauf erklärt:
+Volltext der Befunde: `docs/befunde/BEFUNDE_LERNUNTERLAGE.md`. Hier nur, was den Verlauf erklärt:
 Die Vorabmessung des Plans sagte, die teuerste Pool-Klasse (erfundene Gesetzeszitate) falle in den
 Kursdateien weitgehend aus – **sie hat gestimmt**: null erfundene Zitate, null falsche
 Absatzangaben, die drei Rechtsstellen der Datei sind richtig. Was stattdessen kam, war eine Klasse,
@@ -1929,7 +1929,7 @@ Zeilennummern der Fassung vom 03.09.2026 vor der Rotation; Original unveraendert
 
 ```
 #      ✅ **B106, die M08-Stufung und N2 sind am 02.09. belegt und erledigt – nicht wieder
-#      aufmachen** (Volltext: `BEFUNDE_LERNFLUSS.md`, BUILD_LOG 02.09.). M08 ist ganz AP2, die
+#      aufmachen** (Volltext: `docs/befunde/BEFUNDE_LERNFLUSS.md`, BUILD_LOG 02.09.). M08 ist ganz AP2, die
 #      Stufung 1 belegt richtig; N2 trennte `IP-Adressierung` (AP1/A3) von `Subnetting` (AP2/B2).
 #      ⚠️ **A4 fiel dabei auf 4,98 %** (Schwelle 4,8): **noch 36 Nicht-A4-AP1-Fragen, dann reißt
 #      `test_didaktik`.** Geltende Zahl im erzeugten Block, nicht hier.
@@ -2062,10 +2062,10 @@ Zeilennummern der Fassung vom 03.09.2026 vor der Rotation; Original unveraendert
 #   |---|---|---|
 #   | 0,1,2,3,4,5,6,E3 | Wächter · M09-Auflösung · Batch M01–M08 · A4 · Stufen · `verweis`-Ziele | ✅ **alle durch** (v1.9.0–v1.13.0, 24.08.). Protokolle `ETAPPE3_M0X_BEFUNDE.md`, `E3_M0X_VERWEISE.md` |
 #   | 7 | Startlast auf dem Gerät messen (kein Umbau) | 🔶 **Nutzlast und Rechenzeit gemessen (25.08.), offen bleibt nur der Gerätewert – wird NICHT nachgefragt** |
-#   | **I** | **M04/M05/M06 inhaltlich nachholen** | ✅ **DURCH (27.08.): 369 von 369 Fragen gelesen, 51 Befunde.** `BEFUNDE_M04-M06.md` |
-#   | **II–V** | **Q2: Begriffe · M05 · neun Fälle · 96 Grafiken** | ✅ **DURCH (28.08.): B60–B89, vier SVG-Wächter.** `docs/befunde/BEFUNDE_BEGRIFFE.md`, `BEFUNDE_FAELLE.md` |
-#   | **VI** | **Q2: Lernunterlage – ALLE SIEBEN KURSDATEIEN** | ✅ **DURCH (31.08.): 4907 Zeilen gelesen, B90–B125, 35 von 36 korrigiert.** `BEFUNDE_LERNUNTERLAGE.md` mit Bilanz |
-#   | **VII** | **Q2: Lerner-Fluss** | ✅ **DURCH (31.08.): gemessen, nichts geändert.** Vier von fünf Fragen mit „funktioniert" beantwortet; L1 (M08 halb so oft gezogen) aufgeklärt: `THEMA_RELEVANZ` führt alle zwölf WiSo-Themen auf 1. Protokoll `BEFUNDE_LERNFLUSS.md`, Werkzeug `tools/probe_lernfluss.js` |
+#   | **I** | **M04/M05/M06 inhaltlich nachholen** | ✅ **DURCH (27.08.): 369 von 369 Fragen gelesen, 51 Befunde.** `docs/befunde/BEFUNDE_M04-M06.md` |
+#   | **II–V** | **Q2: Begriffe · M05 · neun Fälle · 96 Grafiken** | ✅ **DURCH (28.08.): B60–B89, vier SVG-Wächter.** `docs/befunde/BEFUNDE_BEGRIFFE.md`, `docs/befunde/BEFUNDE_FAELLE.md` |
+#   | **VI** | **Q2: Lernunterlage – ALLE SIEBEN KURSDATEIEN** | ✅ **DURCH (31.08.): 4907 Zeilen gelesen, B90–B125, 35 von 36 korrigiert.** `docs/befunde/BEFUNDE_LERNUNTERLAGE.md` mit Bilanz |
+#   | **VII** | **Q2: Lerner-Fluss** | ✅ **DURCH (31.08.): gemessen, nichts geändert.** Vier von fünf Fragen mit „funktioniert" beantwortet; L1 (M08 halb so oft gezogen) aufgeklärt: `THEMA_RELEVANZ` führt alle zwölf WiSo-Themen auf 1. Protokoll `docs/befunde/BEFUNDE_LERNFLUSS.md`, Werkzeug `tools/probe_lernfluss.js` |
 ```
 
 ### Zeilen 240-244 (alt 5 Zeilen, im Kopf jetzt 4)
@@ -2097,7 +2097,7 @@ Zeilennummern der Fassung vom 03.09.2026 vor der Rotation; Original unveraendert
 #      Poolgröße kostet Übertragung, keine Rechenzeit.** ⛔ **Der Gerätewert bleibt offen und
 #      wird NICHT nachgefragt** (Entscheid 27.07.).
 #       ✅ **GEBIETSVERTEILUNG: NICHT MEHR HIER.** Sie wird seit 02.09. erzeugt und bewacht –
-#       `python3 tools/gebiete_stand.py`, Block in `SORTIERUNG_PRUEFUNGSORDNUNG.md`, Guard 4e2b3.
+#       `python3 tools/gebiete_stand.py`, Block in `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`, Guard 4e2b3.
 #       ⚠️ **A4 liegt knapp über der Schwelle 4,8** (`test_didaktik.js`) – Zahl im Block lesen.
 ```
 
@@ -2106,7 +2106,7 @@ Zeilennummern der Fassung vom 03.09.2026 vor der Rotation; Original unveraendert
 ```
 # ---- ARCHIV: Etappe 3, wie sie gelaufen ist → **`START_PROMPT_ARCHIV.md`** (ausgelagert 04.08.,
 #      diese Datei stand bei 599 von 600 Zeilen). Die Lehren daraus stehen unverändert in
-#      Abschnitt 6; die E3-Zahlen dort sind durch `E3_M01_VERWEISE.md` überholt. ----
+#      Abschnitt 6; die E3-Zahlen dort sind durch `docs/befunde/E3_M01_VERWEISE.md` überholt. ----
 ```
 
 ### Zeilen 274-279 (alt 6 Zeilen, im Kopf jetzt 4)
@@ -2423,7 +2423,7 @@ Zeilennummern der Fassung vom 03.09.2026 vor der Rotation; Original unveraendert
 #                              Erledigte Etappen: `PLAENE_ARCHIV.md` (0, 1, 4, 5, 6, alle draußen).
 #                              ⚠️ **PLANUNGSZAHLEN DARIN SIND MESSWERTE VON DAMALS**, keine
 #                              Statusaussagen (z. B. „A4 bei 2,8 %, Wächter ROT" – der geltende
-#                              Wert steht im erzeugten Block in `SORTIERUNG_PRUEFUNGSORDNUNG.md`).
+#                              Wert steht im erzeugten Block in `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`).
 ```
 
 ### Zeilen 514-519 (alt 6 Zeilen, im Kopf jetzt 5)
@@ -2521,11 +2521,11 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 99-117 der Ur-Fassung
 
 #   **SCHRITT 2: DIE QUALITÄTSRUNDE Q2 IST KOMPLETT DURCH (31.08.) – ES GIBT KEINE OFFENE ETAPPE.**
-#      ✅ Etappen II–VII alle abgeschlossen: `docs/befunde/BEFUNDE_BEGRIFFE.md`, `BEFUNDE_M04-M06.md`,
-#      `BEFUNDE_FAELLE.md`, `BEFUNDE_LERNUNTERLAGE.md`, `BEFUNDE_LERNFLUSS.md`.
+#      ✅ Etappen II–VII alle abgeschlossen: `docs/befunde/BEFUNDE_BEGRIFFE.md`, `docs/befunde/BEFUNDE_M04-M06.md`,
+#      `docs/befunde/BEFUNDE_FAELLE.md`, `docs/befunde/BEFUNDE_LERNUNTERLAGE.md`, `docs/befunde/BEFUNDE_LERNFLUSS.md`.
 #      **Nicht neu anfangen, nicht nachprüfen.**
 #      ✅ **B106, die M08-Stufung und N2 sind am 02.09. belegt und erledigt – nicht wieder
-#      aufmachen** (Volltext: `BEFUNDE_LERNFLUSS.md`, BUILD_LOG 02.09.).
+#      aufmachen** (Volltext: `docs/befunde/BEFUNDE_LERNFLUSS.md`, BUILD_LOG 02.09.).
 #      ⚠️ **A4 liegt knapp über der Schwelle 4,8**: **noch rund 36 Nicht-A4-AP1-Fragen, dann reißt
 #      `test_didaktik`.** Geltende Zahl im erzeugten Block, nicht hier.
 #      ⚠️ **SEIT 04.09. GIBT ES WIEDER EINEN PLAN:** `PLAENE.md`, „RUNDE Q3 – EXTERNE MASSSTÄBE",
@@ -2615,7 +2615,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #      entscheidet die SACHE, nicht die Quelle.** Ein ungeprueft uebernommener Buchsatz
 #      verschlechtert den Pool - das ist die groessere Gefahr, nicht das Uebersehen.
 #   ✅ **PROBE M06 GEGEN LF4 IST DURCH (03.09.): null Sachfehler, ein Befund (B126),
-#      zwei entkraeftete Verdachtsfaelle.** `BEFUNDE_BUCH_KATALOG.md`. **Nicht wiederholen.**
+#      zwei entkraeftete Verdachtsfaelle.** `docs/befunde/BEFUNDE_BUCH_KATALOG.md`. **Nicht wiederholen.**
 #      ✅ **ANKERLAUF M03 GEGEN LF2/LF3 DURCH (03.09.): B127 + B128.** Nicht wiederholen.
 #      ►► **Anker-Abgleich (Normen, Paragrafen, Fristen) traegt; Prosa-Abgleich nicht** -
 #      der OCR-Text erzeugt Scheinwidersprueche, beide Verdachtsfaelle waren solche.
@@ -2628,7 +2628,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 
 ⚠️ 592 von 600 Zeilen. Ausgelagert wurde die Chronik des 07.09. und drei erledigte Altblöcke;
 **die Lehren daraus stehen als Regelsatz weiter im Kopf.** Volltext der Befunde B132-B138:
-`BEFUNDE_LERNUNTERLAGE.md` und `BUILD_LOG_ARCHIV.md`, Eintraege vom 07.09.
+`docs/befunde/BEFUNDE_LERNUNTERLAGE.md` und `BUILD_LOG_ARCHIV.md`, Eintraege vom 07.09.
 ⛔ **STATUS-AUSSAGEN HIER SIND UEBERHOLT** — im Zweifel gilt START_PROMPT, gemessen wird am Code.
 
 ### aus START_PROMPT.md, Zeilen 207-232 der Ur-Fassung
@@ -2640,7 +2640,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #   B134 (exFAT fehlte in der Tabelle, die ihn versprach) · B135 (Verweis-Stichwort eine Tür
 #   weiter) · **B136: 17 Begriffe standen in der PRÜFSUBSTANZ und in KEINER Kursdatei** –
 #   Virtualisierung/Hypervisor/Container, elf Konsolenbefehle, Pönale, Johari, Sequenznummer,
-#   Zonendatei. Alle geschlossen. Volltext + Sieb-Rezept: `BEFUNDE_LERNUNTERLAGE.md`.
+#   Zonendatei. Alle geschlossen. Volltext + Sieb-Rezept: `docs/befunde/BEFUNDE_LERNUNTERLAGE.md`.
 #   ⛔⛔ **`--streng` MELDET NUR „FEHLT IM ZIEL-ABSCHNITT", NIE „FEHLT ÜBERALL"** – und **druckt
 #   die Einzel-Kandidaten gar nicht, es zählt sie nur** („nur einmal: 181"). Dort lag B136.
 #   ►► **WAS EIN WERKZEUG NICHT AUSDRUCKT, IST NICHT GEPRÜFT, AUCH WENN ES DIE ZAHL NENNT.**
@@ -2649,7 +2649,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #   ⚠️ **Ein Kandidatenfilter ist nach dem Aufräumen NICHT verbraucht.**
 #   ⚠️⚠️ **B138 – DER MUSTERLÖSUNGS-FILTER TRÄGT** (Pflichtbegriffe der Musterlösung gegen den
 #   Zielabschnitt): Klasse A 16 → 2, Klasse B 14 → 7, elf Ergänzungen. **Rezept und die DREI
-#   Kalibrierungsfallen: `BEFUNDE_LERNUNTERLAGE.md`.** ⛔ Ohne sie meldet er 152 statt 16:
+#   Kalibrierungsfallen: `docs/befunde/BEFUNDE_LERNUNTERLAGE.md`.** ⛔ Ohne sie meldet er 152 statt 16:
 #   **`abschnitte()` gibt KLEINGESCHRIEBENEN Text zurück, `trifft()` vergleicht case-sensitiv** ·
 #   Aufgabenwerte als Pflichtbegriff · **Markdown zerschneidet Wörter** (`**M**essbar`).
 #   ►► **Jeder Lauf fährt drei Gegenproben mit bekannter Antwort vorweg.**
@@ -2664,7 +2664,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 
 #   | Etappe | Inhalt | Stand |
 #   |---|---|---|
-#   | 0–6, E3, I–VII | Wächter · M09-Auflösung · Batch M01–M08 · A4 · Stufen · `verweis`-Ziele · M04–M06 · Q2 (Begriffe, Fälle, Grafiken, Lernunterlage, Lerner-Fluss) | ✅ **alle durch.** Protokolle: `ETAPPE3_M0X_BEFUNDE.md`, `E3_M0X_VERWEISE.md`, `BEFUNDE_M04-M06.md`, `docs/befunde/BEFUNDE_BEGRIFFE.md`, `BEFUNDE_FAELLE.md`, `BEFUNDE_LERNUNTERLAGE.md`, `BEFUNDE_LERNFLUSS.md`. Zeile für Zeile: Archiv 03.09. |
+#   | 0–6, E3, I–VII | Wächter · M09-Auflösung · Batch M01–M08 · A4 · Stufen · `verweis`-Ziele · M04–M06 · Q2 (Begriffe, Fälle, Grafiken, Lernunterlage, Lerner-Fluss) | ✅ **alle durch.** Protokolle: `ETAPPE3_M0X_BEFUNDE.md`, `E3_M0X_VERWEISE.md`, `docs/befunde/BEFUNDE_M04-M06.md`, `docs/befunde/BEFUNDE_BEGRIFFE.md`, `docs/befunde/BEFUNDE_FAELLE.md`, `docs/befunde/BEFUNDE_LERNUNTERLAGE.md`, `docs/befunde/BEFUNDE_LERNFLUSS.md`. Zeile für Zeile: Archiv 03.09. |
 #   | 7 | Startlast auf dem Gerät messen (kein Umbau) | 🔶 **Nutzlast und Rechenzeit gemessen (25.08.), offen bleibt nur der Gerätewert – wird NICHT nachgefragt** |
 #
 # ► **ERLEDIGT UND NICHT ERNEUT VORZUTRAGEN** (Volltext: `START_PROMPT_ARCHIV.md`): M09-Tabu
@@ -2678,10 +2678,10 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #   ✅ **Startlast ohne Gerät gemessen (25.08.):** 877 kB gzip, davon 600 kB `fragen.js` – **die
 #      Poolgröße kostet Übertragung, keine Rechenzeit.** ⛔ **Der Gerätewert bleibt offen und wird
 #      NICHT nachgefragt** (Entscheid 27.07.). ✅ **GEBIETSVERTEILUNG: NICHT MEHR HIER** –
-#      `tools/gebiete_stand.py`, Block in `SORTIERUNG_PRUEFUNGSORDNUNG.md`, Guard 4e2b3.
+#      `tools/gebiete_stand.py`, Block in `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`, Guard 4e2b3.
 #
 # ---- ARCHIV: Etappe 3, wie sie gelaufen ist → **`START_PROMPT_ARCHIV.md`**. Die Lehren daraus
-#      stehen in Abschnitt 6; die E3-Zahlen dort sind durch `E3_M01_VERWEISE.md` überholt. ----
+#      stehen in Abschnitt 6; die E3-Zahlen dort sind durch `docs/befunde/E3_M01_VERWEISE.md` überholt. ----
 
 ### aus START_PROMPT.md, Zeilen 282-283 der Ur-Fassung
 
@@ -2775,7 +2775,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #      `abschnitte()` gibt KLEINGESCHRIEBENEN Text, `trifft()` vergleicht case-sensitiv ·
 #      Aufgabenwerte als Pflichtbegriff · **Markdown zerschneidet Wörter** (`**M**essbar`).
 #   ⚠️ **5. „DER BEGRIFF STEHT IN EINEM ANDEREN ABSCHNITT" HEISST NICHT „DER VERWEIS IST FALSCH".**
-#   ►► **Rezepte und Zahlen: `BEFUNDE_LERNUNTERLAGE.md` (B136, B137, B138).**
+#   ►► **Rezepte und Zahlen: `docs/befunde/BEFUNDE_LERNUNTERLAGE.md` (B136, B137, B138).**
 #   ⛔⛔ **EIN WÄCHTER DARAUS IST AM 07.09. GEMESSEN UND VERWORFEN** – 192 Substanz-Kandidaten
 #   ohne Kurstext-Fundstelle, überwiegend Versalien-Betonung und M08; er bräuchte ~200
 #   Ausnahmen (`zitate_belegt` hat 5). **Nicht erneut vorschlagen.** ✅ Und **M08 hat
@@ -2800,7 +2800,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #   **erfindet keine Etappe dazu**, sondern MISST und legt vor: `pool_query.js duenn|typen|stufe`
 #   · `tools/katalog/abdeckung.py` · `e3_gegenprobe.py --streng` · `tools/gebiete_stand.py`.
 #   ⛔ **NICHT MEHR die `svg`-Fragen: alle 96 sind am 07.09. gerendert und angesehen**
-#   (B141–B144, `BEFUNDE_BILDFRAGEN.md`, Abschnitt 3 nennt die geprüften IDs).
+#   (B141–B144, `docs/befunde/BEFUNDE_BILDFRAGEN.md`, Abschnitt 3 nennt die geprüften IDs).
 #   ⛔ **UND NICHT MEHR Katalog-Abdeckung und `--streng`: am 07.09. NACH Q3 erneut gefahren,
 #   beide reproduzieren den bekannten Stand** (dieselben drei Fehlalarm-Klassen; die Fachbegriffe
 #   der 29er-Liste stehen im Kurstext, nur nicht im Zielabschnitt – Lehre 5). **Kein Befund.**
@@ -2855,7 +2855,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #      ⚠️ **A4 IST NICHT MEHR KNAPP** – hier stand bis 07.09. „noch rund 36 Nicht-A4-Fragen, dann
 #      reisst `test_didaktik`". **Nachgerechnet ist der Puffer eine Groessenordnung groesser**;
 #      der A4-Ausbau der Etappen D/F hat ihn erzeugt. ⛔ **Zahl NICHT hier** – erzeugter Block in
-#      `SORTIERUNG_PRUEFUNGSORDNUNG.md`, nachrechnen mit `tools/gebiete_stand.py`.
+#      `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`, nachrechnen mit `tools/gebiete_stand.py`.
 #      ►► **Eine Warnschwelle, die niemand nachrechnet, wird zur Denksperre:** sie haette
 #      Nicht-A4-Fragen verhindert, die laengst wieder unbedenklich sind.
 
@@ -2872,7 +2872,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 223-232 der Ur-Fassung
 
 # ⛔⛔ **DIESE SECHS SIND GEMESSEN – NICHT WIEDERHOLEN, NICHT ERNEUT VORSCHLAGEN:** **1.** die 96
-#   `svg`-Fragen (07.09., `BEFUNDE_BILDFRAGEN.md` §3) · **2.** Katalog-Abdeckung und `--streng`
+#   `svg`-Fragen (07.09., `docs/befunde/BEFUNDE_BILDFRAGEN.md` §3) · **2.** Katalog-Abdeckung und `--streng`
 #   (07.09. erneut, dieselben drei Fehlalarm-Klassen) · **3.** der Wächter Lehrtext↔Pool (07.09.
 #   verworfen, ~200 Ausnahmen nötig) · **4.** ein **Dubletten-Filter über Wortüberlappung** (09.09.
 #   verworfen: 0 Befunde auf 4 Fehlalarme, 2 von 3 bekannten Dubletten nicht gefunden – **er misst
@@ -2880,7 +2880,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #   15006 Paaren) · **5.** **„A4 ist knapp"** (09.09. nachgerechnet: Puffer rund **350** Nicht-A4-
 #   Fragen statt 26) · **6.** **der Stufe-4-Vorrat** (09.09.: Stufe 3 und 4 werden gleich oft
 #   wiederholt, 4,1x/4,2x, Stufe 4 sogar besser ausgeschöpft – **kein Ausbau nötig**,
-#   `BEFUNDE_LERNFLUSS.md` 4b).
+#   `docs/befunde/BEFUNDE_LERNFLUSS.md` 4b).
 
 ### aus START_PROMPT.md, Zeilen 233-235 der Ur-Fassung
 
@@ -2891,7 +2891,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 236-247 der Ur-Fassung
 
 # ►►► **DIE FÜNF LEHREN DES 07.09. GELTEN WEITER – WORTLAUT UND HERLEITUNG: ARCHIV, „ROTATION
-#   2026-09-09 (2)"; Rezepte und Zahlen: `BEFUNDE_LERNUNTERLAGE.md` (B136–B138).** Kurz:
+#   2026-09-09 (2)"; Rezepte und Zahlen: `docs/befunde/BEFUNDE_LERNUNTERLAGE.md` (B136–B138).** Kurz:
 #   **1.** Was ein Werkzeug nicht AUSDRUCKT, ist nicht geprüft – auch wenn es die Zahl nennt.
 #   **2.** Wer Lehrtext zu einer Frage schreibt, schreibt ihn gegen die MUSTERLÖSUNG, nicht gegen
 #   den Fragetext – kein Wächter prüft, ob der Abschnitt die Frage BEANTWORTET.
@@ -2906,7 +2906,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 294-298 der Ur-Fassung
 
 #   1. ✅ **SICHTPRÜFUNGEN ERLEDIGT (07.09.): ALLE 96 BILDFRAGEN GERENDERT UND ANGESEHEN** –
-#      B132/B133 (v1.23.1) und B141–B144 (v1.23.3) behoben. Protokoll: `BEFUNDE_BILDFRAGEN.md`,
+#      B132/B133 (v1.23.1) und B141–B144 (v1.23.3) behoben. Protokoll: `docs/befunde/BEFUNDE_BILDFRAGEN.md`,
 #      Abschnitt 3 nennt die geprüften IDs. ⛔⛔ **Alle vier SVG-Wächter waren dabei grün – sie
 #      prüfen nie, ob das Bild die Frage BEANTWORTET.** ►► **WER EINE BILDFRAGE PRÜFT, RENDERT
 #      SIE** (`python3 tools/svg_bilder.py --id <ID>`; ⚠️ ggf. `pip3 install cairosvg`).
@@ -2970,7 +2970,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 #   ✅ **Startlast ohne Gerät gemessen** – **drei Viertel sind `fragen.js`; die Poolgröße kostet
 #      Übertragung, keine Rechenzeit.** ⛔ Zahl NICHT hier (BUILD_LOG 07.09.), **der Gerätewert
 #      bleibt offen und wird NICHT nachgefragt** (Entscheid 27.07.). ✅ **GEBIETSVERTEILUNG: NICHT
-#      MEHR HIER** – `tools/gebiete_stand.py`, Block in `SORTIERUNG_PRUEFUNGSORDNUNG.md`, 4e2b3.
+#      MEHR HIER** – `tools/gebiete_stand.py`, Block in `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`, 4e2b3.
 
 ### aus START_PROMPT.md, Zeilen 396-398 der Ur-Fassung
 
@@ -3003,7 +3003,7 @@ HERLEITUNG kommt hierher.** Erstmals mit `tools/rotiere.py` statt von Hand; die 
 ### aus START_PROMPT.md, Zeilen 293-296 der Ur-Fassung
 
 #   1. ✅ **SICHTPRÜFUNGEN ERLEDIGT (07.09.): ALLE 96 BILDFRAGEN GERENDERT UND ANGESEHEN**
-#      (`BEFUNDE_BILDFRAGEN.md` §3). ⛔⛔ **Alle vier SVG-Wächter waren dabei grün – sie prüfen nie,
+#      (`docs/befunde/BEFUNDE_BILDFRAGEN.md` §3). ⛔⛔ **Alle vier SVG-Wächter waren dabei grün – sie prüfen nie,
 #      ob das Bild die Frage BEANTWORTET.** ►► **WER EINE BILDFRAGE PRÜFT, RENDERT SIE**
 #      (`python3 tools/svg_bilder.py --id <ID>`; ⚠️ ggf. `pip3 install cairosvg`).
 

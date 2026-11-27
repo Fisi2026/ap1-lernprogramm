@@ -208,7 +208,7 @@ Gegenprobe muss **0** melden).
 
 > **Einstiegspunkt:** `README.md` ist aufgefrischt (acht Gebiete, Wächter, Deployment, „wo steht
 > was"), `ARCHITECTURE.md` an den Zahlen — und mit einer Marke, was daran NICHT nachgemessen ist.
-> **Index:** `BEFUNDE_INDEX.md`, erzeugt aus `tools/befunde_index.py`, 145 von 147 B-Nummern.
+> **Index:** `docs/befunde/BEFUNDE_INDEX.md`, erzeugt aus `tools/befunde_index.py`, 145 von 147 B-Nummern.
 
 * **Kein Einstiegspunkt für „was ist dieses Projekt".** `README.md` (7 KB, zuletzt 2026-07-14)
   und `ARCHITECTURE.md` (10 KB, 2026-07-16) sind zwei Monate alt und kennen weder die Gebiete
@@ -286,7 +286,7 @@ Gegenprobe prüft Zeilen-VERLUST, nicht Zeilen-ZUSAMMENHANG. **Sie hat getan, wo
 dabei denkt", aber schärfer: hier misst das Werkzeug **sich selbst**.
 
 `dateien = sorted(glob.glob("BEFUNDE_*.md"))` nimmt seit dem ersten `--setze` auch
-`BEFUNDE_INDEX.md` mit. **Der erste Lauf konnte das nicht zeigen** — da gab es die Datei noch
+`docs/befunde/BEFUNDE_INDEX.md` mit. **Der erste Lauf konnte das nicht zeigen** — da gab es die Datei noch
 nicht. Der zweite Lauf las 9 statt 8 Dateien, und jede Tabellenzeile des Index (`| B90 | … |`)
 ist selbst eine gültige Fundstelle nach Form B.
 
@@ -294,7 +294,7 @@ ist selbst eine gültige Fundstelle nach Form B.
 |---|---:|---:|---:|
 | gelesene Dateien | 8 | **9** | 8 |
 | „Mehrfach in verschiedenen Dateien" | 0 | **145** | 0 |
-| Zeilen in `BEFUNDE_INDEX.md` | 171 | **315** | 173 |
+| Zeilen in `docs/befunde/BEFUNDE_INDEX.md` | 171 | **315** | 173 |
 
 ⛔⛔ **UND DIE GEGENPROBE BLIEB DABEI GRÜN.** Sie fragte `soll in ist` — „ist die erwartete Datei
 **dabei**". Als plötzlich jede Nummer zwei Fundstellen hatte, war die erwartete immer noch dabei.

@@ -21,11 +21,11 @@
                             M04-920). Sichtbar wird das nur, wenn man die Stellen nebeneinander
                             sieht - mit einer reinen ID-Liste nicht.
      coverage               Abdeckungsmatrix je Modul (Markdown) – live aus pool/*.json
-                            (Abschnitt 1 der alten COVERAGE.md). Umleiten: > COVERAGE_GEN.md
+                            (Abschnitt 1 der alten docs/befunde/COVERAGE.md). Umleiten: > COVERAGE_GEN.md
      verweise [modul]       E2-Zählung (Fragen ohne Abschnittsnummer) UND die Matrix
                             thema → Abschnitt mit Ausreißer-Liste. Grundlage des E3-Laufs.
                             ⚠️ Kandidatenfilter, kein Urteil – jeder Ausreißer wird einzeln
-                            gegen die Kursdatei gelesen (Lehre aus E3_M01_VERWEISE.md).
+                            gegen die Kursdatei gelesen (Lehre aus docs/befunde/E3_M01_VERWEISE.md).
      firmen [modul]         Firmen-Eigennamen im Pool: (A) Namen in ASCII-Umschrift, wo ein
                             Umlaut hingehört (Nutzer-Entscheid 27.07.: „Umlaute werden auch in
                             Firmen-Eigennamen korrigiert") und (B) dieselbe Firma in ZWEI
@@ -418,7 +418,7 @@ if (cmd === "themen") {
      eine Ausnahme oder drei Fehler. Diese Messung wurde bis heute jedes Mal als Wegwerf-
      Einzeiler nachgebaut – genau das verbietet TASKLIST Sparregel 6.
      ⚠️ Die Matrix ist ein KANDIDATENFILTER, kein Urteil. Jeder Ausreisser wird einzeln gegen
-     die Kursdatei gelesen, nie nach Mehrheit entschieden (Lehre aus E3_M01_VERWEISE.md). */
+     die Kursdatei gelesen, nie nach Mehrheit entschieden (Lehre aus docs/befunde/E3_M01_VERWEISE.md). */
   /* ⚠️ NACHGESCHAERFT 24.08.2026: Die erste Fassung las JEDE Zahl der Form n.m als Abschnitt –
      und fand deshalb in „WCAG 2.1, BITV 2.0" einen Abschnitt 2.1. Genau der Fehlertyp, vor dem
      START_PROMPT bei „(Option 42)" warnt. Es zaehlt nur, was hinter „Abschnitt(e)" steht.

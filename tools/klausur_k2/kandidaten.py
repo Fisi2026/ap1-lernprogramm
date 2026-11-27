@@ -1,4 +1,4 @@
-# tools/klausur_k2/kandidaten.py – Etappe 0a K2 (PLAN_KLAUSUR2.md). Aufruf aus der Repo-Wurzel: python3 tools/klausur_k2/kandidaten.py
+# tools/klausur_k2/kandidaten.py – Etappe 0a K2 (docs/plaene/PLAN_KLAUSUR2.md). Aufruf aus der Repo-Wurzel: python3 tools/klausur_k2/kandidaten.py
 # Etappe 0a K2: Kandidaten je Klausurthema aus dem Pool (nur lesen, Ausgabe nach _to_delete/helfer/)
 import collections
 import glob

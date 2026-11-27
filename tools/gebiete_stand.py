@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""tools/gebiete_stand.py - misst die Gebietsverteilung und haelt SORTIERUNG_PRUEFUNGSORDNUNG.md buendig.
+"""tools/gebiete_stand.py - misst die Gebietsverteilung und haelt docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md buendig.
 
 ══════════ WARUM ES DIESES SKRIPT GIBT (02.09.2026) ══════════
-`SORTIERUNG_PRUEFUNGSORDNUNG.md` fuehrte ZWEI von Hand gepflegte Tabellen mit Gebietszahlen.
+`docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md` fuehrte ZWEI von Hand gepflegte Tabellen mit Gebietszahlen.
 Beide waren veraltet - und sie widersprachen einander schon untereinander:
 
   Gebiet   Tabelle 1   Tabelle 2 (28.07.)   gemessen 02.09.
@@ -24,7 +24,7 @@ Beide waren veraltet - und sie widersprachen einander schon untereinander:
 Aufruf im Projektordner:
   python3 tools/gebiete_stand.py            # Messung lesbar ausgeben
   python3 tools/gebiete_stand.py --pruefe   # eine Zeile fuer check.sh (Bewertung macht check.sh)
-  python3 tools/gebiete_stand.py --setze    # den Block in SORTIERUNG_PRUEFUNGSORDNUNG.md ersetzen
+  python3 tools/gebiete_stand.py --setze    # den Block in docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md ersetzen
 
 Ausgabe von --pruefe:
   OK <n>                  Block steht und stimmt mit der Messung ueberein (<n> Gebiete)
@@ -57,7 +57,7 @@ import json
 import sys
 from pathlib import Path
 
-DATEI  = "SORTIERUNG_PRUEFUNGSORDNUNG.md"
+DATEI  = "docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md"
 ANFANG = "<!-- GEBIETE-BLOCK: erzeugt von tools/gebiete_stand.py - NICHT von Hand pflegen -->"
 ENDE   = "<!-- /GEBIETE-BLOCK -->"
 

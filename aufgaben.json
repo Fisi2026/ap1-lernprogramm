@@ -33,9 +33,9 @@
   },
   {
    "id": "A06",
-   "titel": "Paket 2 Schritt 3b: docs/ – die Wurzeldateien mit Verweisen im Code (PLAN_NEUBAU, PLAN_KLAUSUR2/3, PLAN_UMZUG_V3, PLAENE_ARCHIV, LEHREN, uebrige BEFUNDE_*, E3_M01_VERWEISE, M08_PRUEFLISTE_GESETZE, UNTERRICHT_MATRIX, COVERAGE) mit Skripten umziehen",
+   "titel": "Paket 2 Schritt 3c: Rest der Wurzel – PLAN_NEUBAU, PLAENE(_ARCHIV), LEHREN nach docs/ (Steuer-/Rotationsskripte lesen sie per Pfad) und die Pfad-Kommentare in `pool/sets/*.json`/`zitate_belegt.json` (fliessen ins App-Buendel: nur mit Bau-Aenderung/Release)",
    "status": "offen",
-   "beleg": "BUILD_LOG 306"
+   "beleg": "BUILD_LOG 307"
   },
   {
    "id": "A07",

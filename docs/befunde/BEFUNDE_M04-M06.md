@@ -103,7 +103,7 @@ Ausbildungsnachweis.
 Regel: jede Fundstelle einzeln.
 
 ### B7 · M08-603 – **eine Korrektur vom 28.07., die nur zur Hälfte angekommen ist** (schwer)
-`M08_PRUEFLISTE_GESETZE.md` Punkt 14 hält fest: § 623 BGB hat **keine Absätze**, Korrektur
+`docs/befunde/M08_PRUEFLISTE_GESETZE.md` Punkt 14 hält fest: § 623 BGB hat **keine Absätze**, Korrektur
 „§ 623 BGB". **Angekommen ist das nur in der Antwortoption.** Im Pool stehen weiterhin:
 * `distraktorErklaerungen[1]`: „§ 623 **Abs. 1** BGB schreibt Schriftform vor …"
 * `distraktorErklaerungen[2]`: „§ 623 **Abs. 1** BGB verlangt ausdrücklich: ‚**Die Schriftform wird
@@ -127,7 +127,7 @@ Alle 33 Fundstellen mit `Abs.` in M04/M05/M06 einzeln gelistet und geprüft: **k
 (Art. 5 Abs. 2, Art. 6 Abs. 1 lit. a/f, Art. 21 Abs. 2, Art. 25 Abs. 2 DSGVO · § 29 UrhG ·
 § 640 BGB · § 38 BDSG – alle korrekt.)
 ⚠️ **Die Fehler liegen in M08** – dort steht der Satz „die übrigen 23 Absatzangaben … habe ich
-einzeln durchgesehen und halte sie für korrekt" (`M08_PRUEFLISTE_GESETZE.md`, Abschnitt F).
+einzeln durchgesehen und halte sie für korrekt" (`docs/befunde/M08_PRUEFLISTE_GESETZE.md`, Abschnitt F).
 **Zwei davon sind falsch.** Durchsehen ist kein Nachschlagen.
 
 ---
@@ -177,7 +177,7 @@ aus dem falschen Grund. Alle Läufe mit `trap`-Wiederherstellung, Diff danach un
 Befunde in M08**, einem Modul, das Etappe 3 bereits gelesen hatte und dessen Gesetzesstellen im
 Juli eigens auf einer Prüfliste standen. **Schritt 3 des Verfahrens ist nicht die Kür.**
 ⚠️⚠️ **„EINZELN DURCHGESEHEN UND FÜR KORREKT GEHALTEN" IST KEINE MESSUNG.** Genau dieser Satz
-steht in `M08_PRUEFLISTE_GESETZE.md`, Abschnitt F, über 23 Absatzangaben. **Zwei davon waren
+steht in `docs/befunde/M08_PRUEFLISTE_GESETZE.md`, Abschnitt F, über 23 Absatzangaben. **Zwei davon waren
 falsch** – beide § 14 BBiG, beide durch die BBiG-Novelle 2020 verschoben (Abs. 2 → Abs. 3).
 ►► **Wer eine Absatzangabe prüft, ruft die Vorschrift auf. Ansehen ist nicht nachschlagen.**
 ⚠️ **UND DIE MEHRHEIT WAR WIEDER NICHT DIE FALSCHE SEITE:** M08-611 zitiert § 14 **Abs. 2** BBiG

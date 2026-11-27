@@ -16,7 +16,7 @@
 ✅ **Keine offenen Prüfpunkte mehr** — auch die beiden zuletzt markierten (§ 64 Abs. 1 BetrVG für
 die JAV-Amtszeit, § 21 Abs. 2 JArbSchG für den Ausgleichszeitraum) sind nachgeschlagen.
 
-✅✅ **ALLE 15 STRITTIGEN GESETZESSTELLEN SIND BELEGT** — `M08_PRUEFLISTE_GESETZE.md`.
+✅✅ **ALLE 15 STRITTIGEN GESETZESSTELLEN SIND BELEGT** — `docs/befunde/M08_PRUEFLISTE_GESETZE.md`.
 13 Annahmen bestätigt, **eine differenzierter als gedacht** (Bäckerhandwerk: über 16 ab 5 Uhr,
 über 17 ab 4 Uhr — die Pool-Aussage ist unvollständig, nicht falsch), **ein Verdacht entkräftet**
 („Name und Anschrift" IST Mindestinhalt des § 11 BBiG).
@@ -123,7 +123,7 @@ durchgehen, nicht nur das, in dem er aufgefallen ist.**
 § 12 ArbSchG, §§ 8 und 10 JArbSchG, §§ 1 und 4 TVG, § 626 BGB, §§ 49 HGB.
 
 ✅ **ALLE DREI FÄLLE SIND GEGEN DEN GESETZESTEXT BELEGT** (WebSearch, 28.07.) — Nachweise in
-**`M08_PRUEFLISTE_GESETZE.md`**, Punkte 1, 2 und 14. Bei § 13 BBiG wird die Fundstelle durch die
+**`docs/befunde/M08_PRUEFLISTE_GESETZE.md`**, Punkte 1, 2 und 14. Bei § 13 BBiG wird die Fundstelle durch die
 Korrektur sogar präziser: **„§ 13 Satz 2 Nr. 7 BBiG"** statt „§ 13 Abs. 1".
 
 ### A3 · M08-005 — die Frage fragt nach der Wählbarkeit, die Antwort beschreibt die vertretene Gruppe

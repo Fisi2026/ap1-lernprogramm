@@ -22,7 +22,7 @@ Alle zehn Etappen (A, A+, B, C, D, E, F, G1, G2, H, I) sind abgeschlossen. **Der
 Nachweis – jede Etappe mit Datum und Ergebnis, die Entscheide und die Verfahrenslehren – steht
 verbatim in `PLAENE_ARCHIV.md`, Abschnitt „ROTATION 2026-09-10".**
 ⛔ **Nicht neu anfangen, nicht nachprüfen.** Was aus Q3 weiter gilt, steht in `START_PROMPT.md`
-Abschnitt 3 (die sechs gemessenen Punkte) und in `BEFUNDE_BUCH_KATALOG.md`.
+Abschnitt 3 (die sechs gemessenen Punkte) und in `docs/befunde/BEFUNDE_BUCH_KATALOG.md`.
 
 ## 🚩 GESAMTPLAN „QUALITÄTSRUNDE Q2" (beschlossen 2026-08-27)
 
@@ -76,7 +76,7 @@ dann sehen, welche davon sich überhaupt in eine Probe übersetzen lassen.
 ### Etappe III — M05 LESEN (67 Fragen)
 Das letzte Modul der Runde I. **Verfahren unverändert:** Batches à 10–15 Fragen · jeden Sachbefund
 poolweit als Fehlerklasse nachscannen · Befunde vorlegen · Entscheide · EIN Lauf · `check.sh block`
-· Commit. Protokoll `BEFUNDE_M04-M06.md`, fortlaufend ab **B42**.
+· Commit. Protokoll `docs/befunde/BEFUNDE_M04-M06.md`, fortlaufend ab **B42**.
 ► **Nach Etappe II ist eine Fehlerklasse weniger zu suchen** – die Begriffe sind dann poolweit
 geprüft, also auch die von M05.
 
@@ -158,7 +158,7 @@ Grundlage: `PRUEFBERICHT_2026-07-26.md` (gitignoriert, liegt im Projektordner).
 | Stufe-1-Lücken | **nur AP1-Gebiete A1–A5**: 22 Themen × 2 = **44 Fragen** |
 | Stufe 4 | **alle neun Formate**, je 2 = **18 Fragen** |
 | Stufenlücken (4 Themen) | **schließen** (5 Fragen) |
-| COVERAGE.md Abschnitt 2 | **neu erheben** |
+| docs/befunde/COVERAGE.md Abschnitt 2 | **neu erheben** |
 | M06-304 (TLS) | **auf ECDHE umstellen** |
 
 ### ⚠️ WARUM DIE REIHENFOLGE SO IST (nicht umsortieren, ohne das zu lesen)
@@ -605,7 +605,7 @@ Suiten bleiben grün). Jede künftige Testdatei halbiert sich damit.
 
 ## S3 COVERAGE generieren statt pflegen
 Neues Kommando `node tools/pool_query.js coverage`: Matrix Modul × Thema × Typ × Schwierigkeit live
-aus fragen.js (Konsole, optional > COVERAGE_GEN.md). Alte COVERAGE.md bekommt Kopf-Hinweis
+aus fragen.js (Konsole, optional > COVERAGE_GEN.md). Alte docs/befunde/COVERAGE.md bekommt Kopf-Hinweis
 „VERALTET (Stand 612 Fragen) – aktuelle Zahlen: pool_query coverage" (Umbenennen am Mount evtl.
 gesperrt → Hinweis-Variante reicht). Verifikation: Stichproben gegen pool_query themen/typen.
 
@@ -1032,7 +1032,7 @@ dann P19 (Build+Tests) erneut ausführen.
 - [x] U4.2 L.trackAntwort/L.levelReif (letzte 10 pro Modul+Stufe), Dialog zeigeLevelDialog bei ≥8/10 – nur mit Zustimmung, gilt auch bei manueller Stufe; kein Auto-Hochstufen mehr (autoLevel senkt nur)
 
 ## Phase 5 – Inhaltliche Qualitätssicherung  ✅
-- [x] U5.1 COVERAGE.md erstellt (69→73 Themen, Matrix je Modul, FK01–FK07-Katalogabgleich, Kernthemen-Tiefencheck 10/10 bestanden); Top-5-Lücken + 2 DÜNN-Themen anschließend geschlossen (+24 Fragen, pool_m_luecken.json)
+- [x] U5.1 docs/befunde/COVERAGE.md erstellt (69→73 Themen, Matrix je Modul, FK01–FK07-Katalogabgleich, Kernthemen-Tiefencheck 10/10 bestanden); Top-5-Lücken + 2 DÜNN-Themen anschließend geschlossen (+24 Fragen, pool_m_luecken.json)
 - [x] U5.2 Gibibit/Präfixe: Bestand war 0 Fragen zu GiB/GB & IEC-Präfixen → +9 Fragen (pool_m03f.json, M03-72x, inkl. 2 rechenassistent MIT Varianten) + neuer Generator L.genDatenmengen (GiB↔GB, MiB↔KiB, Byte↔Bit, Gbit↔Gibit)
 - [x] U5.3 Simulationen: Fragen-Gedächtnis S.simUsedIds über MEHRERE Durchläufe (Reset erst bei ~70 % Poolverbrauch), mehr geeignete Formate (dropdown+mehrfach jetzt prüfbar), 1 Fallaufgabe je Sim mit Fall-Rotation → praktisch unbegrenzt viele nicht-wiederholende Klausuren
 - [x] U5.4 Alte IHK-Original-Klausuren liegen NICHT mehr im Projekt (uploads leer) → ersatzweise Prüfungskatalog S. 9–16 als Bilder analysiert (Subagent). Zuordnung/Tabellen/Diagramm-Formate weitgehend vorhanden; NOCH FEHLENDE Formate als Vorschlag (nicht implementiert):
@@ -1887,7 +1887,7 @@ VERIFIKATION R2b: alle Suiten, Render-Smoke je berührtem Typ, Offline-Audit, Mo
    Auswahl-Logik unberührt. test_themenauswahl 75 → 80, 3 Gegenproben.
    ⚠️ **TEIL 2 („Lücken sichtbar machen") OFFEN – Rückfrage hatte eine falsche Prämisse:** Der Pool
    trägt keine Lernfeld-Tags (die LF-Tabelle ist eine Handzuordnung in
-   SORTIERUNG_PRUEFUNGSORDNUNG.md), die Auswahl ist gebiets-basiert, und kein Gebiet ist leer.
+   docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md), die Auswahl ist gebiets-basiert, und kein Gebiet ist leer.
    Dem Nutzer korrigiert vorgelegt, nicht gebaut.
 10. Erklärungen inhaltlich überarbeiten (Feedback: schwer verständlich): ausführliche Erklärungen
    besser strukturieren (Gliederung statt Fließtext), Abkürzungen EINZELN und freistehend erklären
@@ -2035,7 +2035,7 @@ Aufrufe zusammen unter 1,5 s — **dann lohnt der Umbau aus Etappe F NICHT** und
 
 ### ✅ ETAPPE D — ERLEDIGT 2026-09-10
 
-> **D1** `BEFUNDE_INDEX.md` erzeugt aus `tools/befunde_index.py` — **145 von 147 B-Nummern**.
+> **D1** `docs/befunde/BEFUNDE_INDEX.md` erzeugt aus `tools/befunde_index.py` — **145 von 147 B-Nummern**.
 > ⛔⛔ **Das im Plan vorgeschlagene Muster `^#+ *B[0-9]+` fand 109 von 198.** Die Nummern stehen
 > in **sieben** Formen, darunter Bereiche (`B51–B55, B57–B59`). Drei Fassungen, jede mit
 > Gegenprobe; die zweite fand sechs dazu und **verlor fünf**, ohne dass die Gesamtzahl es
@@ -2049,7 +2049,7 @@ Aufrufe zusammen unter 1,5 s — **dann lohnt der Umbau aus Etappe F NICHT** und
 
 ### ETAPPE D — ORGANISATION FÜR NEUE CHATS
 
-* **D1 `BEFUNDE_INDEX.md`:** eine Tabelle B-Nummer → Datei → Stichwort. Neun `BEFUNDE_*.md` mit
+* **D1 `docs/befunde/BEFUNDE_INDEX.md`:** eine Tabelle B-Nummer → Datei → Stichwort. Neun `BEFUNDE_*.md` mit
   ~270 KB, und die Doku zitiert durchgehend B-Nummern (B90, B106, B127, B136–B147), ohne dass
   eine Liste sagt, wo sie stehen. **Erzeugen, nicht pflegen:** ein kleines Skript, das
   `grep -oE "^#+ *B[0-9]+"` über die Dateien laufen lässt — eine gepflegte Liste driftet.
