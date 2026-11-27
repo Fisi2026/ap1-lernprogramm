@@ -187,6 +187,24 @@ def no_unsafe(ziel: str):
     return aus
 
 
+JSCPD_AUSNAHMEN = "**/*.test.ts,**/*.test.tsx,**/testhilfe/**,**/*generiert*"   # wie bei no_unsafe: nur App-Code (BUILD_LOG 303: 14 Klone, 0,56 %)
+
+
+def jscpd(ziel: str, cwd=NEU, ausnahmen: str = JSCPD_AUSNAHMEN) -> int:
+    """Anzahl Klone (jscpd, ts+tsx, Standardschwellen 5 Zeilen / 50 Token). Werkzeug in .tooling (npm ci)."""
+    exe = WURZEL / ".tooling" / "node_modules" / "jscpd" / "bin" / "jscpd"
+    if not exe.exists():
+        raise Stumm("jscpd fehlt in .tooling (bash tools/einrichten.sh)")
+    import tempfile
+    with tempfile.TemporaryDirectory() as t:
+        lauf(["node", str(exe), ziel, "--format", "typescript,tsx", "--ignore", ausnahmen, "--reporters", "json",
+              "--output", t, "--silent"], cwd=cwd, ok=(0, 1))
+        try:
+            return int(json.loads((pathlib.Path(t) / "jscpd-report.json").read_text(encoding="utf-8"))["statistics"]["total"]["clones"])
+        except Exception as e:  # kein Bericht -> stumm, nie gruen
+            raise Stumm(f"jscpd lieferte keinen Bericht ({e})") from e
+
+
 def messen():
     f = lizard("src", cwd=NEU)
     k, _ = knip()
@@ -204,6 +222,7 @@ def messen():
         "shellcheck": len(shellcheck(sh_dateien())),
         "tsc_tools": len(tsc("tools/tsconfig.tools.json")),
         "no_unsafe": len(no_unsafe("src")),
+        "jscpd_klone": jscpd("src"),
     }
 
 
@@ -224,6 +243,8 @@ def selbsttest() -> int:
         soll = sorted([("no-unsafe-member-access", 6), ("no-unsafe-call", 7), ("no-unsafe-assignment", 8),
                        ("no-unsafe-return", 9), ("no-unsafe-argument", 10)])
         befunde.append(("no_unsafe", nu == soll, nu))
+        jk = jscpd("tools/ratsche_probe/klon", cwd=WURZEL, ausnahmen="nichts")
+        befunde.append(("jscpd", jk == 1, jk))
         _, kd = knip()
         befunde.append(("knip", KNIP_PROBE in kd, f"{len(kd)} Dateien"))
     except Stumm as e:
