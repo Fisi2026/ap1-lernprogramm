@@ -3,9 +3,9 @@
  "aufgaben": [
   {
    "id": "A01",
-   "titel": "►► Zweig `claude/optimistic-feynman-b8gtxx` (BUILD_LOG 302–312; 312 aendert v2/, liefert also beim Push auf main aus – danach Live-Sichtpruefung) vom PC pruefen und nach main uebernehmen, danach `gh workflow run Mutation` (erster Volllauf)",
+   "titel": "►► nach der Uebernahme nach main (BUILD_LOG 314): Live-Sichtpruefung, CI-Urteil, danach `gh workflow run Mutation` (erster Volllauf)",
    "status": "offen",
-   "beleg": "BUILD_LOG 303, 311"
+   "beleg": "BUILD_LOG 303, 311, 314"
   },
   {
    "id": "A02",
@@ -90,6 +90,12 @@
    "titel": "`../Buch/klausur_k3` committen (Nutzer)",
    "status": "offen",
    "beleg": "BUILD_LOG 300"
+  },
+  {
+   "id": "A16",
+   "titel": "PC: 3 Westermann-PDFs nach `../Buch` kopieren (Nutzer)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 314"
   }
  ]
 }
