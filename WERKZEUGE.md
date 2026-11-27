@@ -3,7 +3,7 @@
 ⚠️ **WOZU DIESE DATEI.** Bis zum 17.09.2026 war das Abschnitt 8 von `START_PROMPT.md`. Er ist
 **verbatim** hierher verschoben (`tools/rotiere.py`, Gegenprobe 0). **Vor jedem neuen Mess- oder
 Hilfsskript hier nachsehen** – am 28.07. entstanden acht Wegwerf-Skripte, eines zählte falsch.
-⚠️ Verweise auf „Abschnitt 1/2/6" meinen `START_PROMPT.md`; die Lehren aus Abschnitt 6 stehen seit 11.10.2026 in `regeln/*.md` (`LEHREN.md` ist das Verzeichnis).
+⚠️ Verweise auf „Abschnitt 1/2/6" meinen `START_PROMPT.md`; die Lehren aus Abschnitt 6 stehen seit 11.10.2026 in `regeln/*.md` (`docs/archiv/LEHREN.md` ist das Verzeichnis).
 
 ## Ausgelagert aus START_PROMPT.md am 2026-09-17 (verbatim, rotiere.py)
 
@@ -87,7 +87,7 @@ Hilfsskript hier nachsehen** – am 28.07. entstanden acht Wegwerf-Skripte, eine
 #                              nicht leere Zeile muss im Archiv ODER im neuen Kopf stehen).
 #                              ⛔ **Schreibt nie bei Verlust.** Loest die Handarbeit vom 03./04.09. ab.
 #   `bash tools/umgebung.sh` . Umgebungsbefund (meldet auch, ob der Spiegel WARM oder KALT ist)
-#   `python3 tools/befunde_index.py --pruefe --setze` .. erzeugt `BEFUNDE_INDEX.md`; `waechter_zusicherung.py` prueft die Pool-Waechter
+#   `python3 tools/befunde_index.py --pruefe --setze` .. erzeugt `docs/befunde/BEFUNDE_INDEX.md`; `waechter_zusicherung.py` prueft die Pool-Waechter
 #   `bash tools/start.sh --neuer-chat <konto>` .. **DER CHAT-START IN EINEM AUFRUF:** Umgebung,
 #                              Baum, Log, Remote, ungepusht, CI-URTEIL, Wache, "Damit offen";
 #                              Waermen im Hintergrund. ⛔ **Ohne `--neuer-chat` startet er die
@@ -110,7 +110,7 @@ Hilfsskript hier nachsehen** – am 28.07. entstanden acht Wegwerf-Skripte, eine
 #                              Abfrage-Schleife. Fehlt die Datei, wartet er noch.
 #   `bash tools/umzug_v3_probe.sh [--probe|--voll|--arbeitsbaum|--ausgabe <dir>]` .. Generalprobe N40 V3 OHNE Netz: Baum aus `git archive HEAD`
 #                              als EIN Commit von ap1 in einem Temp-Repo, Pruefung (Autor, Sperrliste, Fremdtext, Gmail, Pfad, Token,
-#                              Groesse, Waechter 4e14); `--probe` = 11 Faelle mit bekannter Antwort. Nie pushen. Ablauf: `PLAN_UMZUG_V3.md`.
+#                              Groesse, Waechter 4e14); `--probe` = 11 Faelle mit bekannter Antwort. Nie pushen. Ablauf: `docs/plaene/PLAN_UMZUG_V3.md`.
 #   `python3 tools/einstieg.py --setze|--pruefe` .. erzeugt `EINSTIEG.md` (~3 KB) aus
 #                              START_PROMPT und BUILD_LOG; `check.sh` 4f-einstieg haelt es buendig.
 #   `python3 tools/rohe_elemente.py [--selbsttest]` .. **P7-Waechter des Neubaus** (`check.sh` 4f-roh):
@@ -236,7 +236,7 @@ Hilfsskript hier nachsehen** – am 28.07. entstanden acht Wegwerf-Skripte, eine
 #                              `p4.js` (fünf Zustände der Karteikarte), `p5.js` (die drei Listen
 #                              und ihre Leerzustände, je gefüllt und leer), `p6.js` (Glossar und
 #                              Spickzettel; **misst `offen0`: hat ein AUFGEKLAPPTER Abschnitt
-#                              wirklich Höhe?**), `lupe3.js` (Zoom-Maße), `offline.js` (N33: offline je Bereich + Update-Fall, Port 8767), ~~`umschalten.js`~~ (N29, seit 13.10. in `tools/archiv/`), `dienst.py` (Testserver wie Cloudflare: no-cache + `_redirects` + seit 26.09. die Koepfe aus `_headers`, also SCHARFE CSP), **`rauch.js` (Audit AUD-B4, laeuft in der CI: jeder Bereich aus `kern/route.ts`, drei Bildfragen, offline, 0 CSP-/Trusted-Types-Verstoesse; Port 8769, `PW_KANAL=chrome|msedge`; playwright-core liegt seit 26.09. im Wurzel-`package.json`)**,
+#                              wirklich Höhe?**), ~~`lupe3.js`~~ (Zoom-Maße, seit 27.11. in `tools/archiv/sichtpruefung/`), `offline.js` (N33: offline je Bereich + Update-Fall, Port 8767), ~~`umschalten.js`~~ (N29, seit 13.10. in `tools/archiv/`), `dienst.py` (Testserver wie Cloudflare: no-cache + `_redirects` + seit 26.09. die Koepfe aus `_headers`, also SCHARFE CSP), **`rauch.js` (Audit AUD-B4, laeuft in der CI: jeder Bereich aus `kern/route.ts`, drei Bildfragen, offline, 0 CSP-/Trusted-Types-Verstoesse; Port 8769, `PW_KANAL=chrome|msedge`; playwright-core liegt seit 26.09. im Wurzel-`package.json`)**,
 #                              `ids.json`, **`LIESMICH.md` = Aufrufe, Fallen, Grenzen.**
 #                              ⛔⛔ **IN JSDOM IST JEDE GRÖSSE NULL** – „Element da, aber 0×0"
 #                              (die Lupe, seit N23, gefunden am 21.09.) kann NUR hier auffallen.
@@ -257,7 +257,9 @@ Fehlalarm: `// nosemgrep -- <Begruendung>` an der Zeile (Beispiel `tools/sichtpr
 `... --selbsttest` / `... --setze` ..... Probe `tools/ratsche_probe/` (bekannte Antwort) / Grenzen auf Ist setzen.
 Werkzeuge: `tools/requirements-werkzeuge.txt` (mit Hashes, `bash tools/einrichten.sh`), knip als devDependency in `neu/`.
 
-`tools/entscheide.py` (11.10.2026, N49 W3) – jede Entscheidungs-Nummer genau einmal (Tabelle E1–E71 in PLAN_NEUBAU + `entscheide/E0xx-*.md`), keine Luecke, Pflichtabschnitte. `--probe` = Gegenprobe mit drei Kaputt-Faellen. Waechter 4g2.
+`tools/entscheide.py` (11.10.2026, N49 W3) – jede Entscheidungs-Nummer genau einmal (`entscheide/E0xx-*.md`, E001–E071 seit BUILD_LOG 305 ebenfalls je Datei), keine Luecke, Pflichtabschnitte, jede Datei im Index von `entscheide/README.md` und kein Index-Eintrag ohne Datei (seit BUILD_LOG 311). `--probe` = echter Stand OK plus fuenf Kaputt-Faelle, jeder muss SEINEN Grund nennen. Waechter 4g2.
+
+`tools/offen.py` (27.11.2026, BUILD_LOG 304/311) – Schlusszeile „Damit offen“ aus `aufgaben.json` (`zeile`) und Pruefung (`--pruefe`): der LETZTE BUILD_LOG-Eintrag traegt genau eine solche Zeile als letzte Zeile, gleich der erzeugten; 0 gleich, 1 Abweichung, 2 stumm. `--probe` = elf bekannte Faelle. Waechter 4h (faehrt Probe und Pruefung).
 
 ### 11.10.2026 – Vorlauf vor dem vollen check.sh (N51 A1)
 `bash tools/vorlauf.sh` ............... vor JEDEM vollen `check.sh`: `einstieg.py --setze`, Stand-Waechter (4e_versionen,

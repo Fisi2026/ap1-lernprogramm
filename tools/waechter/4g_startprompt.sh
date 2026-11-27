@@ -6,7 +6,7 @@
   #    geworden war; sie wird in JEDEM neuen Chat vollstaendig gelesen.
   # ⛔ ANLASS 17.09.2026: Der alte Deckel zaehlte ZEILEN (600) – die Datei hielt ihn ein und war
   #    trotzdem 54 KB gross. Gemessen wird jetzt in Byte: ab 36 KB HINWEIS, ab 40 KB FEHLER.
-  #    Dazu die Tabelle "PFLICHT: … → `DATEI`" (Abschnitt 6), die einzige Bruecke zu LEHREN.md und
+  #    Dazu die Tabelle "PFLICHT: … → `DATEI`" (Abschnitt 6), die einzige Bruecke zu docs/archiv/LEHREN.md und
   #    WERKZEUGE.md: fehlt sie oder zeigt sie ins Leere, ist das ein FEHLER.
   #    Begruendung, Ausgabeformat und Gegenproben: tools/steuer_umfang.sh, BUILD_LOG 17.09.
   local SU
@@ -18,7 +18,7 @@
       case "$URTEIL $ART" in
         "OK UMFANG")      ok "START_PROMPT-Umfang ($A1 Byte, Hinweis ab $A2, Fehler ab $A3)" ;;
         "HINWEIS UMFANG") echo "[hinweis] START_PROMPT.md hat $A1 Byte (> $A2). Sie wird in JEDEM Chat gelesen -"
-                          echo "          Lehren nach LEHREN.md, Werkzeuge nach WERKZEUGE.md (tools/rotiere.py)." ;;
+                          echo "          Lehren nach docs/archiv/LEHREN.md, Werkzeuge nach WERKZEUGE.md (tools/rotiere.py)." ;;
         "FEHLER UMFANG")  melde "START_PROMPT-Umfang: $A1 Byte (Grenze $A3) - auslagern mit tools/rotiere.py" ;;
         "OK PFLICHT")     ok "START_PROMPT-Pflichttabelle ($A1 Zeilen, $A2 Zieldateien vorhanden)" ;;
         "FEHLER PFLICHT") melde "START_PROMPT-Pflichttabelle kaputt: $A1 Zeilen (mind. 5), fehlende Ziele:${A3:+ $A3}${REST:+ $REST}" ;;

@@ -21,7 +21,7 @@ for schluessel, (titel, gen) in TITEL.items():
     ids = sorted({k["id"] for k in kand[schluessel] if k["datei"].startswith("pool_m")})  # Faelle (pool_faelle) sind keine Fragen
     themen.append({"nr": int(schluessel[:2]), "titel": titel, "generator": gen, "ids": ids})
 out = {
-    "_kommentar": "Klausur-Set K2 (PLAN_KLAUSUR2.md). Nur Verweise auf Pool-IDs, keine Kopien (K2-E3). Gelesen von neu/src/kern/klausur.ts.",
+    "_kommentar": "Klausur-Set K2 (docs/plaene/PLAN_KLAUSUR2.md). Nur Verweise auf Pool-IDs, keine Kopien (K2-E3). Gelesen von neu/src/kern/klausur.ts.",
     "name": "Klausur 2 – Netzwerk & Beschaffung",
     "datum": "2026-10-20",
     "themen": themen,

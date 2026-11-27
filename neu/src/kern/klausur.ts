@@ -1,5 +1,5 @@
 /* ============================================================================
-   K2 (PLAN_KLAUSUR2.md, 14.10.2026) / K3 (PLAN_KLAUSUR3.md, 23.11.2026): DAS KLAUSUR-SET UND SEINE ZIEHUNG
+   K2 (docs/plaene/PLAN_KLAUSUR2.md, 14.10.2026) / K3 (docs/plaene/PLAN_KLAUSUR3.md, 23.11.2026): DAS KLAUSUR-SET UND SEINE ZIEHUNG
 
    Seit K3 (K3-E10) wird `pool/sets/klausur_k3.json` geuebt; `klausur_k2.json` bleibt nur im Repo.
    K3-E40/E54: jedes Thema traegt seine Klausurpunkte; im Regelfall (Deck) wird zuerst ein Thema nach

@@ -78,8 +78,8 @@ elif gh auth status >/dev/null 2>&1; then ok "gh-Anmeldung" "$(gh auth status 2>
 else offen "gh-Anmeldung" "PowerShell: gh auth login -h github.com -p https -w  (Browser, macht der Nutzer)"; fi
 
 # ---- 5. Node-Pakete - genau wie die CI (.github/workflows/ci.yml) ----
-if node -e "require('./.tooling/node_modules/jsdom');require('./.tooling/node_modules/ajv');require('./.tooling/node_modules/axe-core')" >/dev/null 2>&1; then
-  ok ".tooling" "jsdom, ajv, axe-core laden"
+if node -e "require('./.tooling/node_modules/jsdom');require('./.tooling/node_modules/ajv');require('./.tooling/node_modules/axe-core')" >/dev/null 2>&1 && [ -f .tooling/node_modules/jscpd/bin/jscpd ]; then
+  ok ".tooling" "jsdom, ajv, axe-core laden, jscpd da"
 elif [ $NUR_PRUEFEN = 1 ]; then offen ".tooling" "fehlt - bash tools/einrichten.sh"
 else
   if (cd .tooling && npm ci --no-fund --no-audit --loglevel=error) >/dev/null 2>&1; then gesetzt ".tooling" "jsdom, ajv, axe-core nach Lockfile"; else offen ".tooling" "npm ci scheiterte"; fi

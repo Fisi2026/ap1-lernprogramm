@@ -194,7 +194,8 @@ billige_guards(){
     4e14_veroeffentlichung \
     4f_buildlog \
     4g_startprompt \
-    4g2_entscheide
+    4g2_entscheide \
+    4h_aufgaben
 }
 
 # 2) Testsuiten – tests/ flach ins Arbeitsverzeichnis kopieren, dann Auto-Glob über tests/test_*.js

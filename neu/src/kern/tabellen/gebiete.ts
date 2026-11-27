@@ -74,7 +74,7 @@ export const THEMA_RELEVANZ: Record<string, number> = {
    und Bereitschafts-Score, von denen M09 ausgeschlossen ist (Sperre in passtAP()). Dies hier
    ist eine reine Vokabelliste für die Validierung; die beiden Mengen MÜSSEN disjunkt bleiben
    (bewacht durch tests/test_unterricht.js). Single Source für validate_batch.js,
-   validate_pool.js und tools/build_schema.js; MUSS mit UNTERRICHT_MATRIX.md übereinstimmen.
+   validate_pool.js und tools/build_schema.js; MUSS mit docs/befunde/UNTERRICHT_MATRIX.md übereinstimmen.
    ⚠️ GEÄNDERT 2026-07-30 nach der Probeklausur „Übungsfragen WiSo 31.07.2026 – FISI0126":
    NEU „Aufbau- & Ablauforganisation" (Klausuraufgaben 3, 4, 5, 19, 21 und der Abschnitt
    „Ablauforganisation"); ENTFERNT „Berufsausbildung (BBiG/JArbSchG)" – die 19 Fragen

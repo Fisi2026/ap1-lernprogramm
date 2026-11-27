@@ -3,7 +3,7 @@ JSON-RPC ueber stdin und prueft jeden Zweig an Faellen mit bekannter Antwort.
 
 WARUM: der Sentinel-Zweig entscheidet, ob ein Befehl ueberhaupt laeuft. Ein
 Werkzeug, das am ersten Tag gebaut wird, ist am ersten Tag nicht geprueft
-(LEHREN.md). Laeuft in einem eigenen TRAINING_DIR, ruehrt das Projekt nicht an.
+(docs/archiv/LEHREN.md). Laeuft in einem eigenen TRAINING_DIR, ruehrt das Projekt nicht an.
 
   python3 tools/training-shell/probe.py     ->  rc 0 = gruen
 
@@ -103,7 +103,7 @@ with tempfile.TemporaryDirectory() as t:
     print("6) DIE KLADDE: jeder Aufruf hinterlaesst GENAU EINE Zeile")
     # Der eigentliche Zweck: vollstaendig zaehlen, unabhaengig davon, wann
     # jemand nachsieht. Deshalb wird hier die ZAHL der Zeilen geprueft, nicht
-    # ihre Anwesenheit - "da ist was" ist keine Mengenaussage (LEHREN.md).
+    # ihre Anwesenheit - "da ist was" ist keine Mengenaussage (docs/archiv/LEHREN.md).
     zeilen = kladde_zeilen(t)
     pruefe("Kladde wurde angelegt", len(zeilen) > 0, True)
     # 4 Aufrufe + 1 Sabotage; die zwei abgelehnten laufen nicht und buchen nicht -> 3.

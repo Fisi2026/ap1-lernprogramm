@@ -1,5 +1,5 @@
 {
- "_kommentar": "Klausur-Set K3 (PLAN_KLAUSUR3.md). Nur Verweise auf Pool-IDs, keine Kopien. Erzeugt von tools/klausur_k3/set_bauen.py, gelesen von neu/src/kern/klausur.ts.",
+ "_kommentar": "Klausur-Set K3 (docs/plaene/PLAN_KLAUSUR3.md). Nur Verweise auf Pool-IDs, keine Kopien. Erzeugt von tools/klausur_k3/set_bauen.py, gelesen von neu/src/kern/klausur.ts.",
  "name": "Klausur 3",
  "datum": "2026-11-27",
  "themen": [

@@ -23,9 +23,15 @@ gefunden hat — nur Erwähnungen in Protokollen und Archiven.
 
 Zusammen rund **237 KB**.
 
+**Nachtrag 27.11.2026 (N45 W4, BUILD_LOG 303):** nach `tools/archiv/sichtpruefung/` die Einmal-Messungen
+`breite.js`, `breite_probe.js` (N25b, Abnahme erledigt 22.09.), `p6b.js` (sieben Zustaende, Etappe abgeschlossen) und
+`lupe3.js` (Einzelmessung Zoom). Verweise vorher per `grep -rn` ueber das ganze Repo: nur `LIESMICH.md`, `WERKZEUGE.md`
+und Protokolle - kein Aufruf. Laufen von hier nicht mehr (relative Pfade auf `ids.json`/`dienst.py`); `p5.js` und
+`rest.js` bleiben bewusst in `tools/sichtpruefung/` (LIESMICH: wiederverwendbar, PLAN_NEUBAU R7).
+
 ## ⚠️ DREI KANDIDATEN SIND BEWUSST IN `tools/` GEBLIEBEN
 
-`BEFUNDE_WERKZEUGE.md` §5 hatte **dreizehn** Dateien vorgeschlagen. Die Liste war aus **Größe und
+`docs/befunde/BEFUNDE_WERKZEUGE.md` §5 hatte **dreizehn** Dateien vorgeschlagen. Die Liste war aus **Größe und
 Änderungsdatum** gebaut — nicht daraus, ob jemand sie noch braucht. Der Abgleich mit der Doku hat
 drei zurückgeholt:
 
@@ -40,7 +46,7 @@ seine Aufgabe erfüllt, ändert sich nicht mehr — genau das sah in der Liste a
 ⚠️ **Offen für Etappe D:** ob `validate_batch.js` durch die zehn Prüfklassen von `apply_batch.py`
 abgelöst ist, ist **nicht gemessen**. Wer `README.md`/`ARCHITECTURE.md` auffrischt, misst es.
 
-## Verschoben am 2026-10-13 (Werkzeug-Inventur, BUILD_LOG 153, `BEFUNDE_WERKZEUGE.md` §13b, Nutzer-Entscheid)
+## Verschoben am 2026-10-13 (Werkzeug-Inventur, BUILD_LOG 153, `docs/befunde/BEFUNDE_WERKZEUGE.md` §13b, Nutzer-Entscheid)
 
 Vorher geprueft: `git grep` ohne Chronik (`*_ARCHIV.md`, BUILD_LOG, BEFUNDE_*, CHANGELOG) fand **keinen Code-Aufrufer**, nur Doku.
 ⚠️ Die Pfade IN den Skripten stimmen hier nicht mehr (z. B. `index.js` sucht `../referenz`) – sie sind Chronik, nicht Werkzeug.

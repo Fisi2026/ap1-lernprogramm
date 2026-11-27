@@ -748,7 +748,7 @@ def befehl_selbsttest(args):
     """GEGENPROBE MIT BEKANNTER ANTWORT - vor dem ersten Urteil.
 
     ⛔ Ein Messwerkzeug, das am ersten Tag gebaut wird, ist am ersten Tag noch
-       nicht geprueft (LEHREN.md). Hier sind alle Zahlen von Hand nachgerechnet:
+       nicht geprueft (docs/archiv/LEHREN.md). Hier sind alle Zahlen von Hand nachgerechnet:
        3600 Byte / 3.6 = 1000 Tokens. Wer den Kopf aendert, faehrt das hier."""
     import tempfile
     fehler = []
@@ -970,7 +970,7 @@ def befehl_selbsttest(args):
         # eines frischen Chats hat aber keine - und genau dort stand bis zum
         # 18.09.2026 noch die alte Form {"kurse": ...} statt {"konten": ...}.
         # Ein Werkzeug, das in einen Ordner schreibt, den es liest, wird zweimal
-        # gefahren (LEHREN.md) - hier: einmal ohne, einmal mit Datei.
+        # gefahren (docs/archiv/LEHREN.md) - hier: einmal ohne, einmal mit Datei.
         os.remove(os.environ["WACHE_KONTO"])
         d23 = leer(); d23["konto"] = "gmail"; d23["ablesungen"] = [ab(10000, woche=40.0)]
         pruefe("kein Kurs, aber auch kein Absturz", kurs_fuer(d23, "woche")[0], None)

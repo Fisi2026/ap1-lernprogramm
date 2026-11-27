@@ -20,7 +20,7 @@ export const CONFIG = {
   stufeMinKandidaten: 3,   // aufStufeFiltern: ab wie wenigen Fragen EINES THEMAS auf der
                            // aktuellen Stufe die Stufe darunter dazugenommen wird.
                            // ⚠️ GEMESSEN, NICHT GESETZT (09.09.2026) - Herleitung und
-                           // Messreihe: BEFUNDE_LERNFLUSS.md. Vor jeder Aenderung neu messen.
+                           // Messreihe: docs/befunde/BEFUNDE_LERNFLUSS.md. Vor jeder Aenderung neu messen.
   fdTageFehler: 1,         // L.fdOnWrong Tage bei Fehler (AP1)
   fdTageFehlerUnterricht: 0, // dito fuer M09 „Klausurvorbereitung": sofort wieder faellig,
                            // die Sperre der letzten 10 verhindert die direkte Wiederholung

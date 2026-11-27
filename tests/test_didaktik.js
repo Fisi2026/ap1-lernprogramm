@@ -1,6 +1,6 @@
 /* Test #42: DIDAKTIK-WAECHTER (Qualitaetsrunde Q1, Etappe 0, 2026-07-27).
    Vier Waechter ueber den POOL – kein jsdom, kein DOM. Grundlage: PRUEFBERICHT_2026-07-26.md,
-   Plan: PLAENE.md „GESAMTPLAN QUALITAETSRUNDE Q1", Etappe 0.
+   Plan: docs/archiv/PLAENE.md „GESAMTPLAN QUALITAETSRUNDE Q1", Etappe 0.
 
    ⚠️ WOZU DIESE SUITE DA IST: Sie prueft NICHT, ob der Code funktioniert, sondern ob der Pool
    didaktisch nicht schlechter wird. Alle vier Werte sind RATSCHEN: Die Schwelle steht auf dem

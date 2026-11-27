@@ -1,0 +1,101 @@
+{
+ "hinweis": "Einzige Quelle fuer die Schlusszeile 'Damit offen' im BUILD_LOG (Nutzer-Entscheid R7). Zeile erzeugen: python3 tools/offen.py zeile. check.sh 4h_aufgaben prueft Gleichheit mit dem letzten BUILD_LOG-Eintrag.",
+ "aufgaben": [
+  {
+   "id": "A01",
+   "titel": "►► nach der Uebernahme nach main (BUILD_LOG 314): Live-Sichtpruefung, CI-Urteil, danach `gh workflow run Mutation` (erster Volllauf)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 303, 311, 314"
+  },
+  {
+   "id": "A02",
+   "titel": "jscpd-Ratsche (optional, `.tooling`)",
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 310"
+  },
+  {
+   "id": "A03",
+   "titel": "Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`; B3 Live-Waechter – Lese-Secret)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 302"
+  },
+  {
+   "id": "A04",
+   "titel": "Paket 1 (Opus, PC: `gh` angemeldet): PR-Ablauf, Ruleset, Auto-Merge",
+   "status": "offen",
+   "beleg": "BUILD_LOG 301 R5/R6"
+  },
+  {
+   "id": "A05",
+   "titel": "Paket 2 Schritt 2: Entscheide je Datei (E001–E071 aus `docs/plaene/PLAN_NEUBAU.md`, README als Index)",
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 305"
+  },
+  {
+   "id": "A06",
+   "titel": "Paket 2 Schritt 3c: Rest der Wurzel – PLAN_NEUBAU, PLAENE(_ARCHIV), LEHREN nach docs/ (Steuer-/Rotationsskripte lesen sie per Pfad) und die Pfad-Kommentare in `pool/sets/*.json`/`zitate_belegt.json` (fliessen ins App-Buendel: nur mit Bau-Aenderung/Release)",
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 308"
+  },
+  {
+   "id": "A07",
+   "titel": "Paket 2 Schritt 4: Steuerdateien kuerzen (CLAUDE.md-Kern < 200 Zeilen, Zuordnung laut BUILD_LOG 304)",
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 309"
+  },
+  {
+   "id": "A08",
+   "titel": "erste Sonnet-Etappe mit `/advisor opus` messen",
+   "status": "offen",
+   "beleg": "BUILD_LOG 299"
+  },
+  {
+   "id": "A09",
+   "titel": "Inhalt danach: AP1 komplett bis Fruehjahr 2027",
+   "status": "offen",
+   "beleg": "BUILD_LOG 301 R5"
+  },
+  {
+   "id": "A10",
+   "titel": "Release `werkzeuge-fisi1.3.18-shell1.1.2` nach der Uebernahme nach main vom PC (`bash tools/werkzeug_release.sh`), dann fisi 1.3.18 in web.de und gmail installieren (Nutzer) und `tools/plugin/installiert.txt` nachziehen",
+   "status": "offen",
+   "beleg": "BUILD_LOG 311"
+  },
+  {
+   "id": "A11",
+   "titel": "beim naechsten Plugin-Bump `projekt_einstieg.md:61` und die Wurzelpfade in `tools/plugin/**` (SKILL.md, projekt_einstieg.md: PLAN_NEUBAU/PLAENE/LEHREN/BEFUNDE_* liegen jetzt in docs/) nachziehen; zugleich Pfad-Kommentare in `pool/sets/*.json`, `zitate_belegt.json`, `set_bauen.py` (fliessen ins App-Buendel: nur mit Bau-Aenderung)",
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 311"
+  },
+  {
+   "id": "A15",
+   "titel": "Pfad-Kommentare in `pool/sets/*.json`, `zitate_belegt.json`, `tools/klausur_k*/set_bauen.py` auf `docs/plaene/` nachziehen (fliessen ins App-Buendel: nur zusammen mit einer Bau-Aenderung)",
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 312"
+  },
+  {
+   "id": "A12",
+   "titel": "Schritt 14 auf den anderen zwei PCs",
+   "status": "offen",
+   "beleg": "docs/plaene/PLAN_UMZUG_V3.md"
+  },
+  {
+   "id": "A13",
+   "titel": "`../srv2.pid`, `../Training_erstcommit` loeschen (Nutzer)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 301 R2"
+  },
+  {
+   "id": "A14",
+   "titel": "`../Buch/klausur_k3` committen (Nutzer)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 300"
+  },
+  {
+   "id": "A16",
+   "titel": "PC: 3 Westermann-PDFs nach `../Buch` kopieren (Nutzer)",
+   "status": "offen",
+   "beleg": "BUILD_LOG 314"
+  }
+ ]
+}

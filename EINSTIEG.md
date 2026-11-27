@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► Paket 1 (Opus): PR-Ablauf – `gitc.sh` pusht Zweig + PR, `gh pr merge --auto --squash`, Repo: allow_auto_merge, nur Squash, Ruleset main + Status-Check CI + PR-Pflicht (Messung vorher/nachher, Rueckweg), Skill fisi-lernapp + `regeln/git.md` nachziehen, Scorecard BranchProtection pruefen · Paket 2: Plan-JSON + erzeugte Schlusszeile, docs/-Struktur, Entscheide je Datei, Steuerdatei-Zuordnung (erst vorlegen) · Paket 3: alle offenen N42–N45-Teile messen (u. a. `no_unsafe` 338, NLOC>50 2, M3 Mutation) und mit Aufwand vorlegen; erste Sonnet-Etappe mit `/advisor opus` messen · Inhalt danach: AP1 komplett bis Fruehjahr 2027 · web.de: fisi 1.3.17 installieren (Nutzer) · beim naechsten Plugin-Bump `projekt_einstieg.md:61` · Schritt 14 auf den anderen zwei PCs · `../srv2.pid`, `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer).
+**Damit offen:** ►► nach der Uebernahme nach main (BUILD_LOG 314): Live-Sichtpruefung, CI-Urteil, danach `gh workflow run Mutation` (erster Volllauf) · Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`; B3 Live-Waechter – Lese-Secret) · Paket 1 (Opus, PC: `gh` angemeldet): PR-Ablauf, Ruleset, Auto-Merge · erste Sonnet-Etappe mit `/advisor opus` messen · Inhalt danach: AP1 komplett bis Fruehjahr 2027 · Release `werkzeuge-fisi1.3.18-shell1.1.2` nach der Uebernahme nach main vom PC (`bash tools/werkzeug_release.sh`), dann fisi 1.3.18 in web.de und gmail installieren (Nutzer) und `tools/plugin/installiert.txt` nachziehen · Schritt 14 auf den anderen zwei PCs · `../srv2.pid`, `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer) · PC: 3 Westermann-PDFs nach `../Buch` kopieren (Nutzer)
 
 ## 4. Die harten Grenzen der Bruecke
 
@@ -51,6 +51,6 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
   PFLICHT: eine Steuer- oder Protokolldatei suchen → `regeln/dateien.md`
   PFLICHT: einen Nutzer-Entscheid festhalten (ab E072 je eine Datei) → `entscheide/README.md`
   PFLICHT: ein Mess- oder Hilfsskript schreiben wollen → `WERKZEUGE.md` (es gibt es meist schon)
-  PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `PLAN_NEUBAU.md`
+  PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `docs/plaene/PLAN_NEUBAU.md`
   PFLICHT: Agenten einsetzen → Skill `fisi:agenten-orchestrierung`; Ausgaben kürzen, Tooling-Fallstricke → `TASKLIST.md`
-  PFLICHT: eine Inhaltsrunde (Katalog-Luecken) planen oder fahren → `PLAN_INHALT.md`
+  PFLICHT: eine Inhaltsrunde (Katalog-Luecken) planen oder fahren → `docs/plaene/PLAN_INHALT.md`

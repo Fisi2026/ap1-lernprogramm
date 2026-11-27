@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""tools/rohe_elemente.py - der P7-Waechter des Neubaus (N25, Abschnitt D in PLAN_NEUBAU.md).
+"""tools/rohe_elemente.py - der P7-Waechter des Neubaus (N25, Abschnitt D in docs/plaene/PLAN_NEUBAU.md).
 
 Meldet jedes rohe HTML-Bedienelement <input|select|textarea|table|details|summary|button>
 in neu/src AUSSERHALB von components/ui/ und AUSSERHALB der Tests, das nicht in

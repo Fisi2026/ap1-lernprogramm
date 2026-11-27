@@ -1,4 +1,4 @@
-/* K2 Etappe A (PLAN_KLAUSUR2.md), seit K3 L1 (PLAN_KLAUSUR3.md) am Set K3: das Klausur-Set und seine Ziehung – gemessenes Verhalten. */
+/* K2 Etappe A (docs/plaene/PLAN_KLAUSUR2.md), seit K3 L1 (docs/plaene/PLAN_KLAUSUR3.md) am Set K3: das Klausur-Set und seine Ziehung – gemessenes Verhalten. */
 import { describe, it, expect } from "vitest";
 import { FRAGEN } from "@/daten/laden";
 import { leererStand } from "./stand";

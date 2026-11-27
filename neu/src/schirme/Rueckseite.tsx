@@ -1,5 +1,5 @@
 /* ============================================================================
-   DIE RUECKSEITE DER KARTEIKARTE — Etappe N19 (PLAN_NEUBAU.md, Entscheid E4)
+   DIE RUECKSEITE DER KARTEIKARTE — Etappe N19 (docs/plaene/PLAN_NEUBAU.md, Entscheid E4)
 
    Vorbild ist `zeigeErklaerung` in app_frage.js. Bis N19 zeigte der Neubau
    nur `erklaerungKurz` — der groesste inhaltliche Verlust gegenueber der

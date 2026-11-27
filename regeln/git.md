@@ -2,7 +2,7 @@
 
 **Wann lesen:** Pflicht vor jedem Commit, Push, Release oder jeder Aussage ueber den Stand beim Lerner.
 
-⚠️ Entstanden am 11.10.2026 (N49 W1, Nutzer-Entscheid): die Bloecke unten stehen **verbatim** aus `START_PROMPT.md` und `LEHREN.md` (verschoben mit `tools/rotiere.py`, Gegenprobe 0) – nichts gekuerzt, nichts umformuliert. Abschnittsnummern und „siehe oben“ darin beziehen sich auf die Ur-Fassung (`git log -p START_PROMPT.md`, Stand vor N49 W1).
+⚠️ Entstanden am 11.10.2026 (N49 W1, Nutzer-Entscheid): die Bloecke unten stehen **verbatim** aus `START_PROMPT.md` und `docs/archiv/LEHREN.md` (verschoben mit `tools/rotiere.py`, Gegenprobe 0) – nichts gekuerzt, nichts umformuliert. Abschnittsnummern und „siehe oben“ darin beziehen sich auf die Ur-Fassung (`git log -p START_PROMPT.md`, Stand vor N49 W1).
 ⛔ Diese Datei traegt keinen Stand (der steht in den zwei Standzeilen von `START_PROMPT.md`). **Neue Lehren kommen ans Ende, mit Datum und Beleg.**
 
 ## Aus START_PROMPT.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
@@ -64,9 +64,9 @@
 #   kann** – Nutzer-Anweisung 27.07.: selbst erledigen, nicht melden und liegen lassen.
 #
 
-## Aus LEHREN.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
+## Aus docs/archiv/LEHREN.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
 
-### aus LEHREN.md, Zeilen 20-25 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 20-25 der Ur-Fassung
 
 # ⛔⛔ **EIN WÄCHTER, DER VERSIONEN VERGLEICHT, SIEHT KEINEN INHALT** – nach dem Push von v1.19.0 lag
 #   der B106-Commit ungepusht auf main, beide Nummern gleich, und 4e2b hätte „PUSH DURCH" erzwungen.
@@ -75,7 +75,7 @@
 #   Wächter an einer Stelle, an der er nichts messen kann**, ist die Falle vom 27.07. und 31.08. –
 #   **vor dem Bauen an Fällen mit bekannter Antwort prüfen**, Meldezweig eingeschlossen.
 
-### aus LEHREN.md, Zeilen 26-28 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 26-28 der Ur-Fassung
 
 # ⚠️ **EIN REPORT, DESSEN URTEIL MAN SUCHEN MUSS, IST EIN HALBER REPORT.** `ci2.sh` zeigte einen
 #   grünen Bot-Lauf auf einem PR-Branch, während main rot war. **„Der letzte Lauf" ist nicht „der

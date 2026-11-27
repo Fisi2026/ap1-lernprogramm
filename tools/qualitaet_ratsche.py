@@ -23,6 +23,9 @@ Kennzahlen und Nenner:
              tsc_tools_streng ist darin aufgegangen (Fehler ohne strict sind eine Teilmenge, gemessen 14.10.).
   no_unsafe  oxlint typescript/no-unsafe-{member-access,call,assignment,return,argument} (typgestuetzt) im App-Code
              ohne Tests/testhilfe/generiert - N44 C4, BUILD_LOG 173 (Nutzer-Entscheid 14.10.: als Ratsche, nicht auf 0).
+             Ohne src/kern/validierung.ts (Nutzer-Entscheid 27.11.2026, BUILD_LOG 303): dort ist `Roh = any` begruendet -
+             der Eingang ist rohes JSON, und validierung.gleichheit.test.ts vergleicht auch die WURF-Meldungen mit
+             referenz/logik.js; jede Typverengung aendert deren Ausdruckstext (gemessen: Ersatztyp -> 73 tsc-Fehler).
              Probe: neu/werkzeug/as_probe/unsafe.ts, genau ein Befund je Regel in den Zeilen 6-10.
              Ein Konfigurationsfehler (TS5xxx/TS6xxx) bricht die Pruefung ab, ohne dass tsc Dateien prueft -
              gemessen 13.10. (3 statt 789 Fehler); er macht den Waechter darum STUMM, nicht gruen.
@@ -50,6 +53,7 @@ GRENZE = WURZEL / "tools" / "qualitaet_ratsche.json"
 PROBE = "tools/ratsche_probe"
 KNIP_PROBE = "werkzeug/as_probe/probe.ts"
 UNSAFE_PROBE = "werkzeug/as_probe/unsafe.ts"   # N44 C4 (BUILD_LOG 173): Probe der Zahl no_unsafe, ebenfalls unbenutzt
+UNSAFE_AUSNAHMEN = ("src/kern/validierung.ts",)   # BUILD_LOG 303: begruendetes `Roh = any`, siehe Kopf
 UNSAFE_REGELN = [f"typescript/no-unsafe-{r}" for r in ("member-access", "call", "assignment", "return", "argument")]
 SCHRAEG = chr(92)
 
@@ -177,10 +181,28 @@ def no_unsafe(ziel: str):
     for x in diag:
         datei = pfad(x["filename"])
         name = datei.rsplit("/", 1)[-1]
-        if ziel == "src" and (".test." in name or "generiert" in name or datei.startswith("src/testhilfe/")):
+        if ziel == "src" and (".test." in name or "generiert" in name or datei.startswith("src/testhilfe/") or datei in UNSAFE_AUSNAHMEN):
             continue
         aus.append((x["code"], datei, x["labels"][0]["span"]["line"] if x.get("labels") else 0))
     return aus
+
+
+JSCPD_AUSNAHMEN = "**/*.test.ts,**/*.test.tsx,**/testhilfe/**,**/*generiert*"   # wie bei no_unsafe: nur App-Code (BUILD_LOG 303: 14 Klone, 0,56 %)
+
+
+def jscpd(ziel: str, cwd=NEU, ausnahmen: str = JSCPD_AUSNAHMEN) -> int:
+    """Anzahl Klone (jscpd, ts+tsx, Standardschwellen 5 Zeilen / 50 Token). Werkzeug in .tooling (npm ci)."""
+    exe = WURZEL / ".tooling" / "node_modules" / "jscpd" / "bin" / "jscpd"
+    if not exe.exists():
+        raise Stumm("jscpd fehlt in .tooling (bash tools/einrichten.sh)")
+    import tempfile
+    with tempfile.TemporaryDirectory() as t:
+        lauf(["node", str(exe), ziel, "--format", "typescript,tsx", "--ignore", ausnahmen, "--reporters", "json",
+              "--output", t, "--silent"], cwd=cwd, ok=(0, 1))
+        try:
+            return int(json.loads((pathlib.Path(t) / "jscpd-report.json").read_text(encoding="utf-8"))["statistics"]["total"]["clones"])
+        except Exception as e:  # kein Bericht -> stumm, nie gruen
+            raise Stumm(f"jscpd lieferte keinen Bericht ({e})") from e
 
 
 def messen():
@@ -200,6 +222,7 @@ def messen():
         "shellcheck": len(shellcheck(sh_dateien())),
         "tsc_tools": len(tsc("tools/tsconfig.tools.json")),
         "no_unsafe": len(no_unsafe("src")),
+        "jscpd_klone": jscpd("src"),
     }
 
 
@@ -220,6 +243,8 @@ def selbsttest() -> int:
         soll = sorted([("no-unsafe-member-access", 6), ("no-unsafe-call", 7), ("no-unsafe-assignment", 8),
                        ("no-unsafe-return", 9), ("no-unsafe-argument", 10)])
         befunde.append(("no_unsafe", nu == soll, nu))
+        jk = jscpd("tools/ratsche_probe/klon", cwd=WURZEL, ausnahmen="nichts")
+        befunde.append(("jscpd", jk == 1, jk))
         _, kd = knip()
         befunde.append(("knip", KNIP_PROBE in kd, f"{len(kd)} Dateien"))
     except Stumm as e:

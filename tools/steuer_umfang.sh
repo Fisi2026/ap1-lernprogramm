@@ -4,7 +4,7 @@
 # WARUM: Bis zum 17.09. war der Deckel 600 ZEILEN. Die Datei hielt ihn ein – und war trotzdem
 #   54 KB gross (~15 000 Tokens in JEDEM Chat), weil die Zeilen immer laenger wurden. Die Kosten
 #   entstehen je ZEICHEN. ►► Gemessen wird deshalb in Byte.
-# UND: Seit dem 17.09. stehen Lehren und Werkzeuge in LEHREN.md / WERKZEUGE.md und werden nur
+# UND: Seit dem 17.09. stehen Lehren und Werkzeuge in docs/archiv/LEHREN.md / WERKZEUGE.md und werden nur
 #   noch VOR dem betroffenen Griff gelesen. Die Tabelle "PFLICHT: … → `DATEI`" in START_PROMPT
 #   Abschnitt 6 ist damit die einzige Bruecke dorthin. ⛔ Zeigt sie ins Leere oder fehlt sie, liest
 #   niemand die Lehren mehr – das waere dieselbe Falle wie die Rotationsregel, die sechs Releases

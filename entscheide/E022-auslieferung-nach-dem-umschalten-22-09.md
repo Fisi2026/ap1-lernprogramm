@@ -1,0 +1,11 @@
+# E022 – Auslieferung nach dem Umschalten (22.09.)
+**Status:** angenommen (Nutzer, 16.09.–09.10.2026; Datum je Zeile in der Frage, soweit genannt) · **Quelle:** Tabelle E1–E71 in PLAN_NEUBAU.md §1, am 27.11.2026 wortgleich hierher verschoben (BUILD_LOG 305)
+
+## Kontext
+Frage: Auslieferung nach dem Umschalten (22.09.). Die Tabellenform trug keinen eigenen Kontext; die Begründung steht im BUILD_LOG der jeweiligen Etappe und in `PLAN_NEUBAU.md` §2.
+
+## Entscheid
+**Nur noch das Bauergebnis des Neubaus, aus einem eigenen Ordner (Positivliste)** statt des Repo-Wurzelordners mit Sperrliste. Die alte `sw.js` bekommt eine **letzte Fassung, die sich abmeldet und ihre Caches leert** – sonst liefert sie Lernern nach dem Umschalten weiter die alte App (R9).
+
+## Folgen
+In der Tabellenform nicht gesondert erfasst; siehe die Etappen in `PLAN_NEUBAU.md` §2 und den BUILD_LOG.

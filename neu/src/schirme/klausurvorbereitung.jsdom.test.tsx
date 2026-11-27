@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-/* K2 (PLAN_KLAUSUR2.md), seit K3 L1 am Set K3: die Klausurvorbereitung uebt das Set – echte App, echter Klick, echter Speicher.
+/* K2 (docs/plaene/PLAN_KLAUSUR2.md), seit K3 L1 am Set K3: die Klausurvorbereitung uebt das Set – echte App, echter Klick, echter Speicher.
    Vorher (N28, E47) nur ein Zaehlschirm fuer M09; der M09-Waechter bleibt unten stehen. */
 import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, cleanup, within } from "@testing-library/react";

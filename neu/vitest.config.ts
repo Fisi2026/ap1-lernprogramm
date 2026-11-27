@@ -50,8 +50,9 @@ export default defineConfig({
       include: ["src/**/*.{ts,tsx}"],
       exclude: ["src/**/*.test.{ts,tsx}", "src/testhilfe/**", "src/huelle/__schnappschuss__/**"],
       /* Neupruefung 27.09.2026 (NA3): nachgezogen auf knapp unter das Ist 94,69 / 87,23 / 93,52 / 96,36.
-         branches 86 -> 89 (Nutzer-Entscheid 18.10.2026, BUILD_LOG 220/221): Ist 90,36 % (3744/4143, gemessen 18.10.). */
-      thresholds: { statements: 94, branches: 89, functions: 93, lines: 96 },
+         branches 86 -> 89 (Nutzer-Entscheid 18.10.2026, BUILD_LOG 220/221): Ist 90,36 % (3744/4143, gemessen 18.10.).
+         branches 89 -> 93 (Nutzer-Entscheid 27.11.2026, BUILD_LOG 303): Ist 94,26 % (gemessen 27.11., Cloud). */
+      thresholds: { statements: 94, branches: 93, functions: 93, lines: 96 },
     },
   },
 })

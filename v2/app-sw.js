@@ -15,20 +15,20 @@
    * `activate` raeumt NUR eigene alte Caches (`ap1-app-*`). */
 "use strict";
 
-var CACHE = "ap1-app-2.13.2-74dd3037";
+var CACHE = "ap1-app-2.13.2-e22d6882";
 var VORSATZ = "ap1-app-";
 var DATEIEN = [
   "./",
   "apple-touch-icon-180.png",
-  "assets/Einstellungen-C185QdsP.js",
-  "assets/Gantt-ClGR2AhI.js",
-  "assets/Glossar-DEKU3YD3.js",
-  "assets/Meldungsliste-C0Qr2VwV.js",
-  "assets/Netzplan-BuJssBvJ.js",
-  "assets/RechenGenerator-Q-gnYn-Y.js",
-  "assets/Simulation-F2B6reaf.js",
-  "assets/Spickzettel-C1CDfTV_.js",
-  "assets/accordion-MPqorhGH.js",
+  "assets/Einstellungen-D2fBa9-l.js",
+  "assets/Gantt-DO9NV--z.js",
+  "assets/Glossar-Cg6qkcKS.js",
+  "assets/Meldungsliste-ql4vikx9.js",
+  "assets/Netzplan-DZgEOjgS.js",
+  "assets/RechenGenerator-j-lJvqjC.js",
+  "assets/Simulation-Uc7GsuOx.js",
+  "assets/Spickzettel-DCJnLhSB.js",
+  "assets/accordion-CXxW82Fg.js",
   "assets/badge-BpvriCU-.js",
   "assets/da-CvYILz6e.js",
   "assets/dist--KlWTGLr.js",
@@ -37,13 +37,13 @@ var DATEIEN = [
   "assets/dist-hEVwlKWm.js",
   "assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2",
   "assets/geist-latin-wght-normal-BgDaEnEv.woff2",
-  "assets/index-msx3BafZ.js",
+  "assets/index-DNXvsp2W.js",
   "assets/index-pZEedhq7.css",
   "assets/input-IarGOL-0.js",
   "assets/pooldaten-CmcSGG2E.js",
   "assets/pruefe-CDyRw_2D.js",
   "assets/rolldown-runtime-hePW80VL.js",
-  "assets/search-Dpyupa8C.js",
+  "assets/search-C6LiXG7o.js",
   "icon-192.png",
   "icon-512.png",
   "index.html",

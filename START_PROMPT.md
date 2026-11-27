@@ -71,7 +71,7 @@
 # **LIVE beim Lerner: v2.13.2 · committet auf main: v2.13.2 · PUSH DURCH**
 # ►►► **TRAINING SHELL, `device_bash`, 60-s- und 8190-Zeichen-Deckel, Verknüpfung je Chat:** `regeln/bruecke.md`.
 #   ►► https://ap1-lernprogramm.fisi2026lernapp.workers.dev · Stand-Guard, Tag als Live-Beleg, Bump-Regel: `regeln/git.md`.
-# ►►► **DER NEUBAU `neu/` (React+TS) IST DIE APP** (seit N29, 24.09.; gerechnet wird seit N34 in `neu/src/kern`) – `SCHIENE_NEU.md`, Plan+Entscheide `PLAN_NEUBAU.md`; WIE gebaut, geprüft und ausgeliefert wird: ARBEITSANLEITUNG unter N25 in `PLAN_NEUBAU.md`. Die zwei Standzeilen oben gelten IHM; die alte App liegt nur als Referenz in `referenz/`. **Der nächste Griff steht NUR in der Schlusszeile „Damit offen" des letzten BUILD_LOG-Eintrags.**
+# ►►► **DER NEUBAU `neu/` (React+TS) IST DIE APP** (seit N29, 24.09.; gerechnet wird seit N34 in `neu/src/kern`) – `SCHIENE_NEU.md`, Plan+Entscheide `docs/plaene/PLAN_NEUBAU.md`; WIE gebaut, geprüft und ausgeliefert wird: ARBEITSANLEITUNG unter N25 in `docs/plaene/PLAN_NEUBAU.md`. Die zwei Standzeilen oben gelten IHM; die alte App liegt nur als Referenz in `referenz/`. **Der nächste Griff steht NUR in der Schlusszeile „Damit offen" des letzten BUILD_LOG-Eintrags.**
 # ►►► **ÜBERGABE: SCHRITT 1 IST DER PUSH-STAND** – Rezept, Belege und Verbote in `regeln/git.md`. Pool-Stand: `regeln/pool.md`.
 #
 # ► **ZWEI EXTERNE MASSSTÄBE (Prüfungskatalog vor Lehrbuch, Nenner benennen) → `regeln/pool.md`.**
@@ -80,7 +80,7 @@
 # 3) NÄCHSTER GRIFF
 # ============
 # ►► Steht NUR in der Schlusszeile „Damit offen“ des letzten `BUILD_LOG.md`-Eintrags; die Reihenfolge der Etappen in
-#    `PLAN_NEUBAU.md` „Reihenfolge ab 11.10.“. Was gemessen, verworfen oder durch ist (NICHT erneut vorschlagen): `regeln/pool.md`.
+#    `docs/plaene/PLAN_NEUBAU.md` „Reihenfolge ab 11.10.“. Was gemessen, verworfen oder durch ist (NICHT erneut vorschlagen): `regeln/pool.md`.
 # ============
 # 4) OFFEN BEIM NUTZER
 # ============
@@ -145,8 +145,8 @@
 # ============
 # 6) LEHREN, DIE TEUER WAREN – VOR JEDEM ÄHNLICHEN GRIFF LESEN
 # ============
-# ⛔⛔ **DIE LEHREN STEHEN VERBATIM IN DEN THEMENDATEIEN `regeln/*.md`** (17.09.2026 nach `LEHREN.md`,
-#   11.10.2026 nach Thema aufgeteilt – N49 W1, Nutzer-Entscheid; `LEHREN.md` ist nur noch das Verzeichnis).
+# ⛔⛔ **DIE LEHREN STEHEN VERBATIM IN DEN THEMENDATEIEN `regeln/*.md`** (17.09.2026 nach `docs/archiv/LEHREN.md`,
+#   11.10.2026 nach Thema aufgeteilt – N49 W1, Nutzer-Entscheid; `docs/archiv/LEHREN.md` ist nur noch das Verzeichnis).
 #   Sie gelten unverändert – sie werden nur nicht mehr in JEDEM Chat gelesen, sondern **vor dem
 #   Griff, den sie betreffen.** Diese Tabelle ist die Pflicht (`check.sh` 4g prüft: jede Datei existiert,
 #   jede `regeln/*.md` steht hier, dieser Kern bleibt unter 200 Zeilen):
@@ -159,9 +159,9 @@
 #   PFLICHT: eine Steuer- oder Protokolldatei suchen → `regeln/dateien.md`
 #   PFLICHT: einen Nutzer-Entscheid festhalten (ab E072 je eine Datei) → `entscheide/README.md`
 #   PFLICHT: ein Mess- oder Hilfsskript schreiben wollen → `WERKZEUGE.md` (es gibt es meist schon)
-#   PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `PLAN_NEUBAU.md`
+#   PFLICHT: am Neubau `neu/` arbeiten → `SCHIENE_NEU.md` und `docs/plaene/PLAN_NEUBAU.md`
 #   PFLICHT: Agenten einsetzen → Skill `fisi:agenten-orchestrierung`; Ausgaben kürzen, Tooling-Fallstricke → `TASKLIST.md`
-#   PFLICHT: eine Inhaltsrunde (Katalog-Luecken) planen oder fahren → `PLAN_INHALT.md`
+#   PFLICHT: eine Inhaltsrunde (Katalog-Luecken) planen oder fahren → `docs/plaene/PLAN_INHALT.md`
 #   ⚠️ **Im Zweifel lesen.** Eine Lehre, die man nicht gelesen hat, wird wiederholt – belegt fünfmal.
 #
 # ============

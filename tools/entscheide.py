@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """tools/entscheide.py – N49 W3 (11.10.2026): jede Entscheidungs-Nummer GENAU EINMAL.
-E1–E71 stehen als Tabelle in PLAN_NEUBAU.md („| E12 | …“); ab E072 je eine Datei entscheide/E072-<titel>.md
-mit Status-Zeile und den Abschnitten Kontext, Entscheid, Folgen (ADR-Muster, unveraenderlich – ein Entscheid,
+Jeder Entscheid ist eine Datei entscheide/E072-<titel>.md (E001–E071 seit 27.11.2026 aus der Tabelle in
+docs/plaene/PLAN_NEUBAU.md verschoben, BUILD_LOG 305) mit Status-Zeile und den Abschnitten Kontext, Entscheid, Folgen (ADR-Muster, unveraenderlich – ein Entscheid,
 der einen alten ersetzt, bekommt eine NEUE Nummer und nennt „ersetzt E0xx“).
 Ausgabe (eine Zeile, liest check.sh 4g2):
   OK <anzahl> <hoechste>
-  FEHLER <grund> …      doppelt, Luecke, Datei ohne Pflichtabschnitt, Dateiname ohne Muster
-  STUMM                 PLAN_NEUBAU.md fehlt oder keine Nummer gefunden
-Gegenprobe: python3 tools/entscheide.py --probe  (baut drei Kaputt-Faelle in einem Temp-Ordner, erwartet je FEHLER)."""
+  FEHLER <grund> …      doppelt, Luecke, Datei ohne Pflichtabschnitt, Dateiname ohne Muster,
+                        Datei fehlt im Index von entscheide/README.md, Index nennt fehlende Datei (seit BUILD_LOG 311)
+  STUMM                 entscheide/ fehlt oder keine Nummer gefunden
+Gegenprobe: python3 tools/entscheide.py --probe  (Temp-Ordner: echter Stand OK, fuenf Kaputt-Faelle je mit IHREM Grund)."""
 import os
 import re
 import shutil
@@ -20,13 +21,9 @@ for _s in (sys.stdout, sys.stderr):
 PFLICHT = ("## Kontext", "## Entscheid", "## Folgen")
 
 def pruefe(wurzel):
-    plan = os.path.join(wurzel, "PLAN_NEUBAU.md")
-    if not os.path.isfile(plan): return "STUMM"
     nummern = []
-    for z in Path(plan).read_text(encoding="utf-8").splitlines():
-        m = re.match(r"^\| \**E(\d+)\** \|", z)
-        if m: nummern.append(int(m.group(1)))
     ordner = os.path.join(wurzel, "entscheide")
+    if not os.path.isdir(ordner): return "STUMM"
     fehler = []
     for d in sorted(os.listdir(ordner)) if os.path.isdir(ordner) else []:
         if d == "README.md" or not d.endswith(".md"): continue
@@ -38,6 +35,11 @@ def pruefe(wurzel):
         if "**Status:**" not in t: fehlt.append("Status")
         if fehlt: fehler.append(d + " ohne " + "/".join(fehlt))
     if not nummern: return "STUMM"
+    readme = os.path.join(ordner, "README.md")
+    index = set(re.findall(r"`(E\d{3}-[a-z0-9-]+\.md)`", Path(readme).read_text(encoding="utf-8"))) if os.path.isfile(readme) else set()
+    dateien = {d for d in os.listdir(ordner) if re.match(r"^E\d{3}-[a-z0-9-]+\.md$", d)}
+    if dateien - index: fehler.append("nicht im Index " + ",".join(sorted(d[:4] for d in dateien - index)[:5]))
+    if index - dateien: fehler.append("Index ohne Datei " + ",".join(sorted(index - dateien)[:5]))
     doppelt = sorted({n for n in nummern if nummern.count(n) > 1})
     if doppelt: fehler.append("doppelt " + ",".join(f"E{n}" for n in doppelt))
     luecke = [n for n in range(1, max(nummern) + 1) if n not in nummern]
@@ -47,19 +49,28 @@ def pruefe(wurzel):
 def probe():
     w = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     erg = []
-    for fall in ("doppelt", "luecke", "abschnitt"):
+    gut = "**Status:** angenommen" + chr(10) + chr(10).join(PFLICHT) + chr(10)
+    # (fall, erwarteter Anfang bzw. Grund) - jeder Kaputt-Fall muss SEINEN Grund nennen, nicht irgendein FEHLER
+    for fall, soll in (("echt", "OK "), ("doppelt", "doppelt"), ("luecke", "Luecke"), ("abschnitt", "ohne"),
+                       ("index fehlt", "nicht im Index"), ("index tot", "Index ohne Datei")):
         t = tempfile.mkdtemp()
         try:
-            shutil.copy(os.path.join(w, "PLAN_NEUBAU.md"), t)
             shutil.copytree(os.path.join(w, "entscheide"), os.path.join(t, "entscheide"))
-            hoch = max(int(d[1:4]) for d in os.listdir(os.path.join(t, "entscheide")) if re.match(r"^E\d{3}-", d))
             ziel = os.path.join(t, "entscheide")
-            gut = "**Status:** angenommen" + chr(10) + chr(10).join(PFLICHT) + chr(10)
-            if fall == "doppelt": Path(ziel, f"E{hoch:03d}-doppelt.md").write_text(gut, encoding="utf-8")
-            if fall == "luecke": Path(ziel, f"E{hoch + 2:03d}-luecke.md").write_text(gut, encoding="utf-8")
-            if fall == "abschnitt": Path(ziel, f"E{hoch + 1:03d}-ohne.md").write_text("**Status:** angenommen" + chr(10), encoding="utf-8")
+            hoch = max(int(d[1:4]) for d in os.listdir(ziel) if re.match(r"^E\d{3}-", d))
+            neu = {"doppelt": (f"E{hoch:03d}-doppelt.md", gut), "luecke": (f"E{hoch + 2:03d}-luecke.md", gut),
+                   "abschnitt": (f"E{hoch + 1:03d}-ohne.md", "**Status:** angenommen" + chr(10)),
+                   "index fehlt": (f"E{hoch + 1:03d}-ohne-index.md", gut)}.get(fall)
+            index_zeile = ""
+            if neu:
+                Path(ziel, neu[0]).write_text(neu[1], encoding="utf-8")
+                if fall != "index fehlt": index_zeile = f"| x | x | `{neu[0]}` |" + chr(10)
+            if fall == "index tot": index_zeile = f"| x | x | `E{hoch + 1:03d}-gibt-es-nicht.md` |" + chr(10)
+            if index_zeile:
+                with open(os.path.join(ziel, "README.md"), "a", encoding="utf-8") as f: f.write(index_zeile)
             r = pruefe(t)
-            erg.append((fall, r.startswith("FEHLER"), r))
+            treffer = r.startswith(soll) if fall == "echt" else (r.startswith("FEHLER") and soll in r)
+            erg.append((fall, treffer, r))
         finally:
             shutil.rmtree(t, ignore_errors=True)
     for f, ok, r in erg: print(("ok    " if ok else "FALSCH") + " " + f + ": " + r)

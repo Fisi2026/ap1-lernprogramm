@@ -10,10 +10,10 @@
 #   bash tools/umzug_v3_probe.sh --ausgabe <neues-verzeichnis>
 #                                             der ECHTE Erstcommit-Baum: wie oben, aber im genannten (nicht vorhandenen oder
 #                                             leeren) Verzeichnis, das bleibt. Ist die Pruefung rot, wird es wieder geloescht.
-#                                             Auch dann: kein remote, kein push - das macht der Mensch (PLAN_UMZUG_V3.md, Schritt 8).
+#                                             Auch dann: kein remote, kein push - das macht der Mensch (docs/plaene/PLAN_UMZUG_V3.md, Schritt 8).
 #   rc 0 = alles gruen, 1 = Fund / Probe falsch, 2 = Aufruf oder Werkzeug kaputt.
 #
-# Was es misst: den Baum, den der spaetere Erstcommit tragen wuerde (PLAN_UMZUG_V3.md, Schritt 8) -
+# Was es misst: den Baum, den der spaetere Erstcommit tragen wuerde (docs/plaene/PLAN_UMZUG_V3.md, Schritt 8) -
 # `git archive HEAD` = genau die verfolgten Dateien, ohne .git, ohne Ignoriertes. In einem Temp-Verzeichnis
 # entsteht ein FRISCHES Repo mit einem Commit; Identitaet nur ueber Umgebungsvariablen (globale/System-
 # Konfiguration des Rechners wird ausgeschaltet - sie koennte die private Adresse tragen).
@@ -226,7 +226,7 @@ else
   echo "UMZUG: Baum gruen (1 Commit von $SOLL_NAME, Sperrliste/Fremdtext/Gmail/Pfad/Token/Vorlage leer, Waechter 4e14 gruen, Dateien <= ${MAXDATEI_MB} MB)"
 fi
 if [ -n "$AUSGABE" ]; then
-  if [ "$RC" = 0 ]; then echo "UMZUG: Erstcommit-Baum liegt in $AUSGABE (kein Remote, nichts gepusht). Naechster Schritt: PLAN_UMZUG_V3.md Schritt 8."
+  if [ "$RC" = 0 ]; then echo "UMZUG: Erstcommit-Baum liegt in $AUSGABE (kein Remote, nichts gepusht). Naechster Schritt: docs/plaene/PLAN_UMZUG_V3.md Schritt 8."
   else rm -rf "$AUSGABE"; echo "UMZUG: Pruefung rot - $AUSGABE wieder geloescht, NICHTS pushen."; fi
 fi
 if [ "$VOLL" = 1 ]; then

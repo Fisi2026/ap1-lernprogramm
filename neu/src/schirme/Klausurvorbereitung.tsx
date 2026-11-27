@@ -1,10 +1,10 @@
 /* ============================================================================
    DER BEREICH „KLAUSURVORBEREITUNG" (`unterricht`)
 
-   K3 (PLAN_KLAUSUR3.md, 23.11.2026): geuebt wird `pool/sets/klausur_k3.json` (K3-E10 ersetzt K2); je Thema
+   K3 (docs/plaene/PLAN_KLAUSUR3.md, 23.11.2026): geuebt wird `pool/sets/klausur_k3.json` (K3-E10 ersetzt K2); je Thema
    Klausurpunkte und Fortschritt im Durchgang (K3-E40), Ziehung nach Punkten gewichtet (K3-E54, in `kern/klausur.ts`),
    nach der Klausur blendet die Schiene den Bereich aus (K3-E41).
-   K2 (PLAN_KLAUSUR2.md, 14.10.2026): geuebt wird das Klausur-Set –
+   K2 (docs/plaene/PLAN_KLAUSUR2.md, 14.10.2026): geuebt wird das Klausur-Set –
    Verweise auf Pool-Fragen je Klausurthema, keine Kopien (K2-E3). Gezogen wird mit derselben Regel wie
    im Bereich Ueben (`kern/klausur.ts` → `ziehe`), gezeichnet mit denselben Teilen (`UebenKarte`,
    `Serienzeile`, `Fussleiste` aus Ueben.tsx) – kein Nachbau.

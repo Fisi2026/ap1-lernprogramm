@@ -2,7 +2,7 @@
 
 **Wann lesen:** Pflicht vor jedem Brueckenaufruf, der mehr als einen Einzeiler schickt, vor einem Rechnerwechsel und vor jedem Skript, das Projektdateien schreibt.
 
-⚠️ Entstanden am 11.10.2026 (N49 W1, Nutzer-Entscheid): die Bloecke unten stehen **verbatim** aus `START_PROMPT.md` und `LEHREN.md` (verschoben mit `tools/rotiere.py`, Gegenprobe 0) – nichts gekuerzt, nichts umformuliert. Abschnittsnummern und „siehe oben“ darin beziehen sich auf die Ur-Fassung (`git log -p START_PROMPT.md`, Stand vor N49 W1).
+⚠️ Entstanden am 11.10.2026 (N49 W1, Nutzer-Entscheid): die Bloecke unten stehen **verbatim** aus `START_PROMPT.md` und `docs/archiv/LEHREN.md` (verschoben mit `tools/rotiere.py`, Gegenprobe 0) – nichts gekuerzt, nichts umformuliert. Abschnittsnummern und „siehe oben“ darin beziehen sich auf die Ur-Fassung (`git log -p START_PROMPT.md`, Stand vor N49 W1).
 ⛔ Diese Datei traegt keinen Stand (der steht in den zwei Standzeilen von `START_PROMPT.md`). **Neue Lehren kommen ans Ende, mit Datum und Beleg.**
 
 ## Aus START_PROMPT.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
@@ -32,9 +32,9 @@
 #   ⛔ **Verknüpfung gilt JE CHAT:** erst „Link to this computer", auf „Verbunden" warten, DANN
 #   die erste Nachricht. Fehlt `get_device_info` trotzdem → neuer Chat, nicht warten (LEHREN 23.09.).
 
-## Aus LEHREN.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
+## Aus docs/archiv/LEHREN.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
 
-### aus LEHREN.md, Zeilen 14-19 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 14-19 der Ur-Fassung
 
 # ⛔⛔ **`open(P,"w").write(open(P).read().replace(...))` LEERT DIE DATEI** – Python wertet
 #   `open(P,"w")` VOR dem inneren `read()` aus. Am 24.08. standen `app_state.js` und `sw.js`
@@ -43,12 +43,12 @@
 #   soll.** ⚠️ **Zurückholen geht hier nur mit `git show HEAD:datei > datei`** (`git checkout --`
 #   scheitert, weil es die alte Datei entfernen will und `unlink` auf dem Mount nicht darf).
 
-### aus LEHREN.md, Zeilen 20-21 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 20-21 der Ur-Fassung
 
 # ⚠️ **Bei „binary file matches" auf einer .js/.md NIE weiterarbeiten** – erst auf NUL-Bytes prüfen.
 
 
-### aus LEHREN.md, Zeilen 24-34 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 24-34 der Ur-Fassung
 
 ### 23.09.2026, gmail – „Verbunden" heißt nicht, dass die Werkzeuge da sind
 ⛔ **Beleg:** Die Anzeige stand auf „FISI_12006826 Verbunden", aber `ToolSearch` fand nur
@@ -62,7 +62,7 @@ senden. **Fehlt `get_device_info` trotzdem: neuer Chat, nicht warten** (EIN `Too
 alle drei Stufen A–C da.
 
 
-### aus LEHREN.md, Zeilen 35-48 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 35-48 der Ur-Fassung
 
 ### 25.09.2026, gmail – `device_request_folder_access` und `enable__…` sind KEIN Zeichen für Stufe A
 ⛔ **Beleg (zwei Chats am selben Abend, beide in der Desktop-App gestartet):** ohne Verknüpfung fand
@@ -79,7 +79,7 @@ Ursache für das Fehlen von A **nicht gemessen** – der Nutzer war jedesmal in 
 und Lesen gehen vollständig über sie.
 
 
-### aus LEHREN.md, Zeilen 49-71 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 49-71 der Ur-Fassung
 
 ### 26.09.2026, gmail – frischer PC: fünf Annahmen, die gemessen falsch waren
 ⛔ **Existenz ist nicht Benutzbarkeit – fünfter Fall.** `command -v python3` fand auf dem neuen PC den
@@ -105,7 +105,7 @@ je Stück und fürs Ganze auf beiden Seiten (96-KB-Patch in 7 Aufrufen, alle Sum
 „Angekommen: 8813 Zeichen" abgelehnt. Eine Beobachtung, keine neue Regel – `#ENDE` bleibt Pflicht.
 
 
-### aus LEHREN.md, Zeilen 72-86 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 72-86 der Ur-Fassung
 
 ### 28.09.2026, gmail – ein Rechner-Name im Skill ist beim nächsten Rechner falsch
 ⛔ **Beleg:** `fisi-lernapp` 1.0.2 nannte für den „neuen PC seit 26.09." den Pfad `C:\Users\<benutzer2>\…`;
@@ -123,7 +123,7 @@ Nicht wiederholen: erst `winget uninstall OpenJS.NodeJS`. Geht über die Trainin
 die UAC-Abfrage bestätigt der Nutzer.
 
 
-### aus LEHREN.md, Zeilen 87-93 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 87-93 der Ur-Fassung
 
 ### 28.09.2026, gmail – der Rückweg per `tar` trägt den Schreibschutz mit
 ⛔ **Beleg:** Dateien aus `/mnt/user-data/uploads/` (Cloud-Seite) haben Modus 0444; kopiert, geändert und per
@@ -133,7 +133,7 @@ der nächste Schreibversuch: `Permission denied`. git sah nichts (kein Modus-Unt
 `for f in $(git ls-files); do [ -w "$f" ] || echo "$f"; done`, dass nichts schreibgeschützt blieb.
 
 
-### aus LEHREN.md, Zeilen 94-108 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 94-108 der Ur-Fassung
 
 ### 08.10.2026, web.de – Belege aus den fisi-Skills (bei fisi 1.2.0 hierher verlegt)
 Die Skills tragen seit 1.2.0 nur noch Regeln; die Anlässe stehen hier.
@@ -151,7 +151,7 @@ Die Skills tragen seit 1.2.0 nur noch Regeln; die Anlässe stehen hier.
 * **agenten-orchestrierung (08.10.):** Nutzer-Freigabe für Subagenten; ein Haiku-Agent mit 2 Aufrufen ≈ 84 000 Tokens Grundlast; Agenten erben die PC-Shell.
 
 
-### aus LEHREN.md, Zeilen 109-115 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 109-115 der Ur-Fassung
 
 ### 09.10.2026, web.de – ein doppelter Backslash im Befehl kommt nicht als doppelter an
 ⛔ **Beleg:** Ein Python-Heredoc mit `"...\n"` schrieb in zwei `.py` einen ECHTEN Zeilenumbruch ins Stringliteral
@@ -161,7 +161,7 @@ Kopfzeile zaehlte die Zeichen mit beiden Backslashes – wo sie verloren gehen, 
 danach die Datei per `python3 -c "import ast"`/Probelauf pruefen.
 
 
-### aus LEHREN.md, Zeilen 116-120 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 116-120 der Ur-Fassung
 
 ### 10.10.2026, gmail – `grep -c $'\r'` sieht unter Git Bash kein CRLF
 ⛔ **Beleg:** Nach `apply_batch.py --write` meldete `grep -c $'\r' pool/pool_m03.json` **0**, `git diff` warnte

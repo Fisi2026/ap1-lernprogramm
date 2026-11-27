@@ -2,7 +2,7 @@
 
 **Wann lesen:** Pflicht vor jedem Griff an `pool/*.json`, an eine Frage, einen Verweis, eine Kursdatei `0X_*.md` oder `99_Spickzettel.md`.
 
-⚠️ Entstanden am 11.10.2026 (N49 W1, Nutzer-Entscheid): die Bloecke unten stehen **verbatim** aus `START_PROMPT.md` und `LEHREN.md` (verschoben mit `tools/rotiere.py`, Gegenprobe 0) – nichts gekuerzt, nichts umformuliert. Abschnittsnummern und „siehe oben“ darin beziehen sich auf die Ur-Fassung (`git log -p START_PROMPT.md`, Stand vor N49 W1).
+⚠️ Entstanden am 11.10.2026 (N49 W1, Nutzer-Entscheid): die Bloecke unten stehen **verbatim** aus `START_PROMPT.md` und `docs/archiv/LEHREN.md` (verschoben mit `tools/rotiere.py`, Gegenprobe 0) – nichts gekuerzt, nichts umformuliert. Abschnittsnummern und „siehe oben“ darin beziehen sich auf die Ur-Fassung (`git log -p START_PROMPT.md`, Stand vor N49 W1).
 ⛔ Diese Datei traegt keinen Stand (der steht in den zwei Standzeilen von `START_PROMPT.md`). **Neue Lehren kommen ans Ende, mit Datum und Beleg.**
 
 ## Aus START_PROMPT.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
@@ -23,10 +23,10 @@
 ### aus START_PROMPT.md, Zeilen 125-155 der Ur-Fassung
 
 #   **SCHRITT 2: Q1–Q3 SIND DURCH; DIE EINE OFFENE ETAPPE IST W1 (Abschnitt 3).** Protokolle:
-#      `BEFUNDE_*.md`, `PLAENE_ARCHIV.md`, Archiv. **Nicht neu anfangen, nicht nachpruefen.**
+#      `BEFUNDE_*.md`, `docs/archiv/PLAENE_ARCHIV.md`, Archiv. **Nicht neu anfangen, nicht nachpruefen.**
 #      ⛔ **Der Wächter für den Widerspruch Lehrtext ↔ Pool ist am 06./07.09. als G2 GEMESSEN UND
 #      VERWORFEN.** Nicht erneut vorschlagen. ⚠️ **A4 IST NICHT MEHR KNAPP** (09.09. nachgerechnet)
-#      – ⛔ **Zahl NICHT hier**: erzeugter Block in `SORTIERUNG_PRUEFUNGSORDNUNG.md`,
+#      – ⛔ **Zahl NICHT hier**: erzeugter Block in `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`,
 #      nachrechnen mit `tools/gebiete_stand.py`.
 #      ►► **Vor jeder neuen Lehrtext-Runde:** `python3 tools/e3_gegenprobe.py --streng` – aber
 #      **die Einzel-Kandidaten mitlesen, die es nur zaehlt** (B136, Abschnitt 3).
@@ -73,7 +73,7 @@
 
 ### aus START_PROMPT.md, Zeilen 195-196 der Ur-Fassung
 
-# ► **ZWEI EXTERNE MASSSTÄBE (Prüfungskatalog vor Lehrbuch, Nenner benennen) → `LEHREN.md`.**
+# ► **ZWEI EXTERNE MASSSTÄBE (Prüfungskatalog vor Lehrbuch, Nenner benennen) → `docs/archiv/LEHREN.md`.**
 #   ⛔ Pflicht vor JEDER Ergänzung aus Katalog oder Buch und vor jeder Mengenaussage.
 
 ### aus START_PROMPT.md, Zeilen 198-241 der Ur-Fassung
@@ -82,7 +82,7 @@
 # 3) NÄCHSTER GRIFF
 # ============
 # ✅ **W1 „WERKZEUGE, WÄCHTER, AUFRÄUMEN" IST ABGESCHLOSSEN (10.09.).** A–E durch, **E1/E4 und
-#   F1/F2 GEMESSEN UND GESTRICHEN** – nicht erneut vorschlagen (`BEFUNDE_WERKZEUGE.md` §11).
+#   F1/F2 GEMESSEN UND GESTRICHEN** – nicht erneut vorschlagen (`docs/befunde/BEFUNDE_WERKZEUGE.md` §11).
 #   ⚠️ **Aus E blieb die ZUSICHERUNG, nicht die Form:** `check.sh` 4e10 verlangt von jedem
 #   Pool-Wächter einen **Werkzeug-stumm-** und einen **ok-Zweig** (`waechter_zusicherung.py`,
 #   Selbsttest läuft mit). ⛔ **Keine Ausnahmeliste.** ⚠️ **Zwei Prüfungen heißen beide `4e2`**
@@ -92,7 +92,7 @@
 # ⛔ **WAR DER GRIFF GETAN, GIBT ES WIEDER KEINEN PLAN.** Wer das vorfindet, **erfindet keine
 #   Etappe**, sondern MISST und legt vor: `pool_query.js duenn|typen|stufe <1-4>` · `gebiete_stand.py`
 #   · `probe_lernfluss.js <kopie> 60 50 --antworten 0.8 --kette` (misst IN der App, nicht daneben).
-# ✅ **AM 10.09. GEFAHREN** (B148–B150, `BEFUNDE_LERNFLUSS.md`): **kein Handlungsbedarf am Pool,
+# ✅ **AM 10.09. GEFAHREN** (B148–B150, `docs/befunde/BEFUNDE_LERNFLUSS.md`): **kein Handlungsbedarf am Pool,
 #   drei Fehler im MESSWERKZEUG**, behoben. **Der Lernweg steigt** (Sitzung 1 → 60: 1,35 → 3,03).
 #   ► **OFFEN, KEINE BEFUNDE:** die drei dünnsten A3-Feinthemen (je 6: M04 WLAN & VPN, M04
 #   GUI-Entwurf, M06 SbD) · M05 · Typ `konsole` (26 Poolfragen, 0,3 % der Ziehungen).
@@ -103,11 +103,11 @@
 #   **4.** ein Dubletten-Filter über Wortüberlappung (09.09. verworfen – **er misst Vokabular, nicht
 #   Aussage**; das kann nur `gradeTeilpunkte`, und `test_freitext` tut es an allen 15006 Paaren) ·
 #   **5.** „A4 ist knapp" (09.09. widerlegt) · **6.** der Stufe-4-Vorrat (09.09.: kein Ausbau nötig,
-#   `BEFUNDE_LERNFLUSS.md` 4b) · **7.** **die Modul-Abweichung der Lernfluss-Probe** (10.09.: M08
+#   `docs/befunde/BEFUNDE_LERNFLUSS.md` 4b) · **7.** **die Modul-Abweichung der Lernfluss-Probe** (10.09.: M08
 #   −5,9 Punkte sind der SOLLWERT der Relevanzgewichtung – Gegenprobe `--ohne-relevanz` → ±0,3).
 # ✅ **`lueckentext` AUSGEBAUT (09.09.): 6 → 12** – acht AP1-Themen standen auf null. **Nicht nachprüfen.**
 # ►►► **DIE FÜNF LEHREN DES 07.09. GELTEN WEITER – WORTLAUT UND HERLEITUNG: ARCHIV; Rezepte und
-#   Zahlen: `BEFUNDE_LERNUNTERLAGE.md` (B136–B138).** Kurz: **1.** Was ein Werkzeug nicht
+#   Zahlen: `docs/befunde/BEFUNDE_LERNUNTERLAGE.md` (B136–B138).** Kurz: **1.** Was ein Werkzeug nicht
 #   AUSDRUCKT, ist nicht geprüft – auch wenn es die Zahl nennt. **2.** Lehrtext gegen die
 #   MUSTERLÖSUNG schreiben, nicht gegen den Fragetext. **3.** Wer einen fehlenden Begriff nachträgt,
 #   prüft die Nachbarn desselben Themas mit. **4.** **Jeder neue Filter braucht Gegenproben mit
@@ -117,7 +117,7 @@
 #
 #   ⚠️ **M04-317 bleibt ein Fehlalarm** (DHCP-Option). ⛔⛔ **EINE MESSUNG GILT FÜR DAS GEMESSENE** –
 #   „Lernunterlage ohne belegte Lücke (34/34)" galt den VERWEISZIELEN, nicht dem Inhalt.
-# ► **POOL-ARBEIT: Verfahren je Modul, Korrekturskripte, Verweis- und Toleranzregeln → `LEHREN.md`.**
+# ► **POOL-ARBEIT: Verfahren je Modul, Korrekturskripte, Verweis- und Toleranzregeln → `docs/archiv/LEHREN.md`.**
 #   ⛔ Pflicht vor jeder Pool-Runde. Kurz: NIE `json.load`/`json.dump` auf Pool-Dateien.
 #
 # ✅ **M09-TABU ERLEDIGT (04.08.)**, die Kategorie bleibt.
@@ -132,7 +132,7 @@
 
 #   ► **ALLE ENTSCHEIDE VOM 04./24./25.08. SIND GEFALLEN UND UMGESETZT** (Volltext im Archiv).
 #      **Nicht erneut vortragen.** (Der offene „Wiedereintritt" hing an `gotoSeite` der alten App – entfallen mit N29.)
-#   1. ✅ **ALLE 96 BILDFRAGEN GERENDERT UND ANGESEHEN (07.09.)** – `BEFUNDE_BILDFRAGEN.md` §3.
+#   1. ✅ **ALLE 96 BILDFRAGEN GERENDERT UND ANGESEHEN (07.09.)** – `docs/befunde/BEFUNDE_BILDFRAGEN.md` §3.
 #      ⛔⛔ **Alle vier SVG-Wächter waren dabei grün – sie prüfen nie, ob das Bild die Frage
 #      BEANTWORTET.** ►► **WER EINE BILDFRAGE PRÜFT, RENDERT SIE** (`tools/svg_bilder.py --id <ID>`).
 #   2.–9. ✅ **ALLE ERLEDIGT** → `START_PROMPT_ARCHIV.md`. ⚠️ **M08-335: der Aufgabentext steht
@@ -154,9 +154,9 @@
 #   „IHK-Standard" = **DIN 69901** · Eisenhower im Feinthema Risiko & Stakeholder · Umlaute auch in
 #   Firmennamen · Längengriff abgeschlossen · CI auf `@v6` · Positionsverweise als Inhaltszitat.
 
-## Aus LEHREN.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
+## Aus docs/archiv/LEHREN.md verschoben am 11.10.2026 (N49 W1, verbatim, rotiere.py)
 
-### aus LEHREN.md, Zeilen 14-40 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 14-40 der Ur-Fassung
 
 ### aus START_PROMPT.md, Zeilen 185-208 der Ur-Fassung
 
@@ -186,7 +186,7 @@
 #      „Stufe 1" (beide 09.09., zwei Nenner in EINEM Bericht).
 
 
-### aus LEHREN.md, Zeilen 41-69 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 41-69 der Ur-Fassung
 
 ### aus START_PROMPT.md, Zeilen 249-274 der Ur-Fassung
 
@@ -203,7 +203,7 @@
 #   ✅ **Startlast gemessen: drei Viertel sind `fragen.js`** – die Poolgröße kostet Übertragung,
 #      keine Rechenzeit. ⛔ Zahl NICHT hier; **der Gerätewert bleibt offen und wird NICHT
 #      nachgefragt** (27.07.). ✅ **GEBIETSVERTEILUNG: `tools/gebiete_stand.py`**, Block in
-#      `SORTIERUNG_PRUEFUNGSORDNUNG.md`, 4e2b3.
+#      `docs/befunde/SORTIERUNG_PRUEFUNGSORDNUNG.md`, 4e2b3.
 #
 # 📋 **DAS BEWÄHRTE VERFAHREN JE MODUL:**
 #   1. Vorabmessung (`node tools/pool_query.js`), 2. Batches von 8–12 Fragen VOLLSTÄNDIG ausgeben
@@ -218,14 +218,14 @@
 #      ersetzt werden. `test_rechner` fängt das.
 
 
-### aus LEHREN.md, Zeilen 91-94 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 91-94 der Ur-Fassung
 
 # ⛔⛔ **EIN ANKER PRÜFT DEN WORTLAUT, DEN ER KENNT – NICHT DIE AUSSAGE.** Am 31.08. schwiegen
 #   `GPL` und `Pay-per-Use` bei drei Fundstellen genau ihrer Klasse. ►► **Nachbarlisten so kurz wie
 #   möglich** und **am Ur-Zustand gegenproben, BEVOR korrigiert wird.** ⚠️ **Ursache messen, nicht
 #   vermuten** – ein Sonderweg gegen eine vermutete Ursache meldete zwei RICHTIGE Stellen.
 
-### aus LEHREN.md, Zeilen 95-103 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 95-103 der Ur-Fassung
 
 # ⚠⚠ **EIN VERWEISZIEL KANN EXISTIEREN UND TROTZDEM LEER SEIN.** `verweis` prüft, **ob** ein
 #   Abschnitt existiert – nie, **ob der Begriff der Frage darin vorkommt.** Am 31.08.: `IaaS`/`PaaS`
@@ -237,26 +237,26 @@
 #   Fachsatz im Lehrtext anfasst, liest die Fragen dazu** (`pool_query.js suche`) **und sucht
 #   denselben Satz im Spickzettel** – dort stand die fünfte, zuerst übersehene Stelle.
 
-### aus LEHREN.md, Zeilen 110-112 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 110-112 der Ur-Fassung
 
 # ⚠️ **DER TITEL EINES ABSCHNITTS IST KEIN INHALTSVERZEICHNIS.** Modul 03: 3.2 „Typische
 #   IT-Systeme" führt **kein einziges Netzwerkgerät** (die stehen in 3.1), 3.3 enthält die
 #   802.11-Tabelle und LWL. **21 der 33 M03-Fehler kamen aus diesen zwei Verwechslungen.**
 
-### aus LEHREN.md, Zeilen 120-122 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 120-122 der Ur-Fassung
 
 # ⚠️ **EIN ABSCHNITT MIT DÜNNEM INHALT IST TROTZDEM DER RICHTIGE ABSCHNITT.** „Modul 07 hält für
 #   ‚Einweisung & Schulung' keinen Fundort vor" – **7.6 heißt wörtlich „… und Einweisungen".**
 #   15 Fragen lagen einen Monat falsch. **„kein Fundort" ≠ „zu wenig Inhalt".**
 
-### aus LEHREN.md, Zeilen 128-131 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 128-131 der Ur-Fassung
 
 # ⚠️ **DER LÄNGEN-TELL ENTSTEHT BEIM SCHREIBEN VON SELBST** – die richtige Antwort ist eben die
 #   vollständige (5 von 6 bzw. 4 von 12 neuen mc-Fragen). **VOR dem Einsortieren messen**;
 #   `tools/apply_batch.py` weist per `assert` jede Frage mit Tell zurück.
 #
 
-### aus LEHREN.md, Zeilen 132-150 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 132-150 der Ur-Fassung
 
 # ⚠️ **DIE WÄCHTER SIND KLÜGER ALS ICH – SIE HABEN AM 27.07. FÜNFMAL RECHT BEHALTEN.** Wer beim
 #   Schreiben neuer Fragen einen Wächter anschlagen sieht, **verdächtigt NICHT zuerst den Wächter**;
@@ -278,37 +278,37 @@
 #     (Nutzer-Entscheid nötig!) oder im Fragetext ausschreiben.
 #
 
-### aus LEHREN.md, Zeilen 158-161 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 158-161 der Ur-Fassung
 
 # ⚠️ **EINE KORREKTUR, DIE NUR DEN SCANNER ZUFRIEDENSTELLT, IST KEINE KORREKTUR.** M02-771 galt als
 #   erledigt, weil `Option \d` dort nichts mehr fand – die Positionsverweise waren nur zu „(0) … (1)
 #   …" umgeschrieben. **Die Gegenprüfung darf nicht dieselbe sein, an der die Korrektur sich
 #   orientiert hat**, und wer eine Fehlerklasse scannt, sucht nach der ZWEITEN Schreibweise.
 
-### aus LEHREN.md, Zeilen 162-163 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 162-163 der Ur-Fassung
 
 # ⚠️ **EIN SACHBEFUND IST EIN VERDACHT AUF EINE FEHLERKLASSE.** Der TLS-Befund galt als Einzelfall;
 #   im selben Modul lagen drei weitere. **Nach JEDEM fachlichen Befund poolweit nachscannen.**
 
-### aus LEHREN.md, Zeilen 164-167 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 164-167 der Ur-Fassung
 
 # ⚠️ **NICHT ÜBER DAS ZIEL HINAUSSCHIESSEN.** Angeglichene Distraktoren waren im ersten Entwurf fast
 #   doppelt so lang wie die richtige Antwort – **der Wächter meldet das NICHT**, er misst nur
 #   „richtige ist die längste". **Ziel: Gleichstand ±15 %, mit mindestens einem Distraktor über der
 #   richtigen Antwort.** ⚠️ **NIEMALS die richtige Antwort kürzen** – das kostet Präzision.
 
-### aus LEHREN.md, Zeilen 168-170 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 168-170 der Ur-Fassung
 
 # ⚠️ **Pool-Scans IMMER über das GANZE Frage-Objekt** (`json.dumps`): Fehler stecken auch in
 #   `verweis`, `optionen`, `distraktorErklaerungen`, `musterloesung`, `paare`. ⚠️ ABER: bei der
 #   BEWERTUNG nur prüfen, was der Pool als WAHR behauptet – falsche Optionen sind ABSICHTLICH falsch.
 
-### aus LEHREN.md, Zeilen 171-172 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 171-172 der Ur-Fassung
 
 # ⚠️ **Die Positionsverteilung der richtigen Antwort (71 % auf Platz 1) ist KEIN Problem** – die
 #   Optionen werden beim Anzeigen gemischt (`app_loeser.js:65`). Nicht „reparieren".
 
-### aus LEHREN.md, Zeilen 284-290 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 284-290 der Ur-Fassung
 
 ### 10.10.2026, gmail – der Kandidatenfilter uebersieht Luecken, nicht nur meldet er zu viele
 ⛔ **Beleg:** Inhaltsrunde 1 (03): `abdeckung.py` meldete 31 Kandidaten, 29 davon Fehlalarme. Zwei echte Luecken
@@ -318,7 +318,7 @@ Erklaerungen – der Wortabgleich zaehlte das als belegt. Kein einziger Fragetex
 `musterloesung` scannen. Ein Filter, der Fehlalarme hat, kann auch Treffer verschlucken – beide Richtungen pruefen.
 
 
-### aus LEHREN.md, Zeilen 296-302 der Ur-Fassung
+### aus docs/archiv/LEHREN.md, Zeilen 296-302 der Ur-Fassung
 
 ### 11.10.2026, gmail – ein Begriffsanker muss an der Fehlerstelle STEHEN
 ⛔ **Beleg:** Fuer den Fachfehler „Empfohlene Massnahmen (Standard, Kern, Zusatz)“ (Lehrtext 06#228) stand der erste
