@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """tools/entscheide.py – N49 W3 (11.10.2026): jede Entscheidungs-Nummer GENAU EINMAL.
-E1–E71 stehen als Tabelle in PLAN_NEUBAU.md („| E12 | …“); ab E072 je eine Datei entscheide/E072-<titel>.md
-mit Status-Zeile und den Abschnitten Kontext, Entscheid, Folgen (ADR-Muster, unveraenderlich – ein Entscheid,
+Jeder Entscheid ist eine Datei entscheide/E072-<titel>.md (E001–E071 seit 27.11.2026 aus der Tabelle in
+PLAN_NEUBAU.md verschoben, BUILD_LOG 305) mit Status-Zeile und den Abschnitten Kontext, Entscheid, Folgen (ADR-Muster, unveraenderlich – ein Entscheid,
 der einen alten ersetzt, bekommt eine NEUE Nummer und nennt „ersetzt E0xx“).
 Ausgabe (eine Zeile, liest check.sh 4g2):
   OK <anzahl> <hoechste>
   FEHLER <grund> …      doppelt, Luecke, Datei ohne Pflichtabschnitt, Dateiname ohne Muster
-  STUMM                 PLAN_NEUBAU.md fehlt oder keine Nummer gefunden
+  STUMM                 entscheide/ fehlt oder keine Nummer gefunden
 Gegenprobe: python3 tools/entscheide.py --probe  (baut drei Kaputt-Faelle in einem Temp-Ordner, erwartet je FEHLER)."""
 import os
 import re
@@ -20,13 +20,9 @@ for _s in (sys.stdout, sys.stderr):
 PFLICHT = ("## Kontext", "## Entscheid", "## Folgen")
 
 def pruefe(wurzel):
-    plan = os.path.join(wurzel, "PLAN_NEUBAU.md")
-    if not os.path.isfile(plan): return "STUMM"
     nummern = []
-    for z in Path(plan).read_text(encoding="utf-8").splitlines():
-        m = re.match(r"^\| \**E(\d+)\** \|", z)
-        if m: nummern.append(int(m.group(1)))
     ordner = os.path.join(wurzel, "entscheide")
+    if not os.path.isdir(ordner): return "STUMM"
     fehler = []
     for d in sorted(os.listdir(ordner)) if os.path.isdir(ordner) else []:
         if d == "README.md" or not d.endswith(".md"): continue
@@ -50,7 +46,6 @@ def probe():
     for fall in ("doppelt", "luecke", "abschnitt"):
         t = tempfile.mkdtemp()
         try:
-            shutil.copy(os.path.join(w, "PLAN_NEUBAU.md"), t)
             shutil.copytree(os.path.join(w, "entscheide"), os.path.join(t, "entscheide"))
             hoch = max(int(d[1:4]) for d in os.listdir(os.path.join(t, "entscheide")) if re.match(r"^E\d{3}-", d))
             ziel = os.path.join(t, "entscheide")

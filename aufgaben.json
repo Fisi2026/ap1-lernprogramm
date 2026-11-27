@@ -28,8 +28,8 @@
   {
    "id": "A05",
    "titel": "Paket 2 Schritt 2: Entscheide je Datei (E001–E071 aus `PLAN_NEUBAU.md`, README als Index)",
-   "status": "offen",
-   "beleg": "BUILD_LOG 301 R9"
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 305"
   },
   {
    "id": "A06",
