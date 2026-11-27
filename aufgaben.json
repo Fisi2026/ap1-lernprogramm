@@ -27,7 +27,7 @@
   },
   {
    "id": "A05",
-   "titel": "Paket 2 Schritt 2: Entscheide je Datei (E001–E071 aus `PLAN_NEUBAU.md`, README als Index)",
+   "titel": "Paket 2 Schritt 2: Entscheide je Datei (E001–E071 aus `docs/plaene/PLAN_NEUBAU.md`, README als Index)",
    "status": "erledigt",
    "beleg": "BUILD_LOG 305"
   },
@@ -77,7 +77,7 @@
    "id": "A12",
    "titel": "Schritt 14 auf den anderen zwei PCs",
    "status": "offen",
-   "beleg": "PLAN_UMZUG_V3"
+   "beleg": "docs/plaene/PLAN_UMZUG_V3.md"
   },
   {
    "id": "A13",

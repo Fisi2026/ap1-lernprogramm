@@ -1,6 +1,6 @@
 # entscheide/ – eine Datei je Entscheidung (ab E072, N49 W3, Nutzer-Entscheid 10.10.2026)
 
-Jeder Entscheid hat eine eigene Datei (E001–E071 am 27.11.2026 wortgleich aus der Tabelle in `PLAN_NEUBAU.md` verschoben, BUILD_LOG 305;
+Jeder Entscheid hat eine eigene Datei (E001–E071 am 27.11.2026 wortgleich aus der Tabelle in `docs/plaene/PLAN_NEUBAU.md` (damals im Wurzelordner) verschoben, BUILD_LOG 305;
 ab **E072** neu geschrieben). Jeder Nutzer-Entscheid bekommt eine Datei `E0xx-<kurztitel>.md` (Kleinbuchstaben, Ziffern, Bindestrich).
 ⛔ **Unveraenderlich:** wer einen Entscheid aendert, schreibt einen NEUEN mit „ersetzt E0xx“ und setzt beim alten nur
 den Status auf „ersetzt durch E0yy“. `tools/entscheide.py` (Waechter 4g2) prueft: jede Nummer genau einmal, keine
