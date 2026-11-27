@@ -3,7 +3,7 @@
  "aufgaben": [
   {
    "id": "A01",
-   "titel": "►► Zweig `claude/optimistic-feynman-b8gtxx` (BUILD_LOG 302–311) vom PC pruefen und nach main uebernehmen, danach `gh workflow run Mutation` (erster Volllauf)",
+   "titel": "►► Zweig `claude/optimistic-feynman-b8gtxx` (BUILD_LOG 302–312; 312 aendert v2/, liefert also beim Push auf main aus – danach Live-Sichtpruefung) vom PC pruefen und nach main uebernehmen, danach `gh workflow run Mutation` (erster Volllauf)",
    "status": "offen",
    "beleg": "BUILD_LOG 303, 311"
   },
@@ -70,8 +70,8 @@
   {
    "id": "A15",
    "titel": "Pfad-Kommentare in `pool/sets/*.json`, `zitate_belegt.json`, `tools/klausur_k*/set_bauen.py` auf `docs/plaene/` nachziehen (fliessen ins App-Buendel: nur zusammen mit einer Bau-Aenderung)",
-   "status": "offen",
-   "beleg": "BUILD_LOG 311"
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 312"
   },
   {
    "id": "A12",

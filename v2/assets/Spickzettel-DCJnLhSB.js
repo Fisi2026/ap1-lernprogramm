@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,n,v as r}from"./input-IarGOL-0.js";import{i,n as a,r as o,t as s}from"./accordion-MPqorhGH.js";import{t as c}from"./search-Dpyupa8C.js";import{A as l,D as u,F as d,M as f,N as p,O as m,P as h,j as g,k as _}from"./index-msx3BafZ.js";var v=e(r(),1),y=`# AP1-Spickzettel – Die wichtigsten Fakten, Formeln und Merksätze
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,n,v as r}from"./input-IarGOL-0.js";import{i,n as a,r as o,t as s}from"./accordion-CXxW82Fg.js";import{t as c}from"./search-C6LiXG7o.js";import{A as l,D as u,F as d,M as f,N as p,O as m,P as h,j as g,k as _}from"./index-DNXvsp2W.js";var v=e(r(),1),y=`# AP1-Spickzettel – Die wichtigsten Fakten, Formeln und Merksätze
 
 Kompakte Gesamtzusammenfassung aller Module. Prüfung: „Einrichten eines IT-gestützten Arbeitsplatzes", 90 Minuten, 4 ungebundene Aufgaben, 100 Punkte, 20 % der Gesamtprüfung. **Nicht in AP1:** SQL, RAID, Normalformen, Struktogramm/PAP, WiSo als eigener Bereich.
 

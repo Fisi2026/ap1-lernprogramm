@@ -1,4 +1,4 @@
-# tools/klausur_k3/set_bauen.py – K3 Etappe L1 (PLAN_KLAUSUR3.md §5): legt pool/sets/klausur_k3.json an. Aufruf aus der Repo-Wurzel.
+# tools/klausur_k3/set_bauen.py – K3 Etappe L1 (docs/plaene/PLAN_KLAUSUR3.md §5): legt pool/sets/klausur_k3.json an. Aufruf aus der Repo-Wurzel.
 # Grundlage: python3 tools/klausur_k3/kandidaten.py --titel (Treffer je Thema), von Hand gesichtet am 23.11.2026:
 # nur Fragen, die das Klausurthema wirklich treffen (lieber weniger als Fuellfragen, wie K2 auswahl_b.py),
 # keine ID in zwei Themen. Neue Fragen der Arbeiter A-D kommen in L4 dazu (Listen unten erweitern, nie Kopien).
@@ -72,7 +72,7 @@ for nr, _t, _p, _g, ids in THEMEN:
 if fehler:
     sys.exit(1)
 out = {
-    "_kommentar": "Klausur-Set K3 (PLAN_KLAUSUR3.md). Nur Verweise auf Pool-IDs, keine Kopien. Erzeugt von tools/klausur_k3/set_bauen.py, gelesen von neu/src/kern/klausur.ts.",
+    "_kommentar": "Klausur-Set K3 (docs/plaene/PLAN_KLAUSUR3.md). Nur Verweise auf Pool-IDs, keine Kopien. Erzeugt von tools/klausur_k3/set_bauen.py, gelesen von neu/src/kern/klausur.ts.",
     "name": "Klausur 3",
     "datum": "2026-11-27",
     "themen": [{"nr": nr, "titel": t, "punkte": p, "generator": g, "ids": sorted(ids)} for nr, t, p, g, ids in THEMEN],

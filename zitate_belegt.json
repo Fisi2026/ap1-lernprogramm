@@ -14,7 +14,7 @@
 
   "absatzlose_vorschriften": [
     { "vorschrift": "§ 623 BGB", "muster": "§ ?623 ?Abs", "beleg": "dejure.org/gesetze/BGB/623.html - ein einziger Satz, keine Absatzgliederung", "geprueft": "2026-08-26" },
-    { "vorschrift": "§ 20 BBiG", "muster": "§ ?20 ?Abs\\.? ?[0-9]? ?BBiG", "beleg": "M08_PRUEFLISTE_GESETZE.md Punkt 1 (gesetze-im-internet.de) - ein Absatz mit zwei Saetzen", "geprueft": "2026-07-28" },
-    { "vorschrift": "§ 13 BBiG", "muster": "§ ?13 ?Abs\\.? ?[0-9]? ?BBiG", "beleg": "M08_PRUEFLISTE_GESETZE.md Punkt 2 - Satz 1 und Satz 2 mit den Nummern 1 bis 7, keine Absaetze", "geprueft": "2026-07-28" }
+    { "vorschrift": "§ 20 BBiG", "muster": "§ ?20 ?Abs\\.? ?[0-9]? ?BBiG", "beleg": "docs/befunde/M08_PRUEFLISTE_GESETZE.md Punkt 1 (gesetze-im-internet.de) - ein Absatz mit zwei Saetzen", "geprueft": "2026-07-28" },
+    { "vorschrift": "§ 13 BBiG", "muster": "§ ?13 ?Abs\\.? ?[0-9]? ?BBiG", "beleg": "docs/befunde/M08_PRUEFLISTE_GESETZE.md Punkt 2 - Satz 1 und Satz 2 mit den Nummern 1 bis 7, keine Absaetze", "geprueft": "2026-07-28" }
   ]
 }
