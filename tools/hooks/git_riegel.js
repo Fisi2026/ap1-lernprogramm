@@ -5,6 +5,8 @@
 // (features-overview) ist eine Anweisung „a request, not a guarantee“ – dieser Hook macht sie deterministisch.
 // Eingabe: JSON auf stdin ({tool_name, tool_input:{command}}). Sperre: rc 2 + Grund auf stderr.
 // Force-Push auf main sperrt zusaetzlich der Ruleset „main“ auf GitHub (BUILD_LOG 285).
+// Paket 1 (27.11.2026, BUILD_LOG 316): main nimmt nur noch PRs an (Ruleset: Pflicht-Checks). Direktes `git push … main`
+// sperrt der Hook darum auch – der Weg ist `bash tools/gitc.sh push origin main` (PR-Zweig, gh pr create, Auto-Merge).
 // Selbsttest: node tools/hooks/git_riegel.js --probe   (regeln/messen.md: --probe vor dem Einsatz)
 "use strict";
 
@@ -27,6 +29,8 @@ function pruefe(befehl) {
     if (/(^|[\s(])(git(\.exe)?(\s+-[Cc]\s+\S+)*|bash\s+\S*gitc\.sh|\S*gitc\.sh)\s+push\b/.test(t)) {
       if (/\s(--force(-with-lease|-if-includes)?(=\S*)?|-[a-zA-Z]*f[a-zA-Z]*)(\s|$)/.test(t) || /\s\+\S+/.test(t))
         return "Force-Push ist gesperrt (Nutzer-Entscheid: nie --force; Ruleset main sperrt ihn auch auf GitHub).";
+      if (/^(git(\.exe)?)(\s+-[Cc]\s+\S+)*\s+push\b/.test(t) && /\s(\S*:)?(refs\/heads\/)?main(\s|$)/.test(t))
+        return "Push auf main direkt ist gesperrt (Ruleset verlangt PR + Checks) – Weg: `bash tools/gitc.sh push origin main` (PR, Auto-Merge Squash).";
     }
   }
   return "";
@@ -41,7 +45,15 @@ function probe() {
     ["echo 'git commit -m x' > notiz.txt", ""],
     ["git log --oneline -3; git status", ""],
     ["bash tools/gitc.sh push origin main", ""],
-    ["git push origin main", ""],
+    ["git push origin main", "PR"],
+    ["git push origin HEAD:main", "PR"],
+    ["git push origin HEAD:refs/heads/main", "PR"],
+    ["git -C neu push origin main", "PR"],
+    ["git push origin HEAD:refs/heads/pr/2026-11-27-abc1234", ""],
+    ["git push -u origin claude/sitzung-x", ""],
+    ["git push origin feature/main", ""],
+    ["git push origin main-alt", ""],
+    ["bash tools/gitc.sh nachziehen", ""],
     ["git push --force origin main", "Force"],
     ["git push -f origin main", "Force"],
     ["bash tools/gitc.sh push --force-with-lease origin main", "Force"],

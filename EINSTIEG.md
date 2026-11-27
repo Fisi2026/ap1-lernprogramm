@@ -21,7 +21,7 @@ naechsten Griff. Verbrauch: die `[limits]`-Zeilen des Plugin-Hooks (seit 12.10. 
 
 ## 3. Naechster Griff (letzter BUILD_LOG-Eintrag)
 
-**Damit offen:** ►► `gh workflow run Mutation` (erster Volllauf); Live-Sichtpruefung im Browser nach 314 (Datei-Abgleich `cc6d2765` steht) · Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`; B3 Live-Waechter – Lese-Secret) · Paket 1 (Opus, PC: `gh` angemeldet): PR-Ablauf, Ruleset, Auto-Merge · erste Sonnet-Etappe mit `/advisor opus` messen · Inhalt danach: AP1 komplett bis Fruehjahr 2027 · fisi 1.3.18 in gmail installieren (Nutzer; Release `werkzeuge-fisi1.3.18-shell1.1.2` steht, web.de erledigt) und `tools/plugin/installiert.txt` nachziehen · Schritt 14 auf den anderen zwei PCs · `../srv2.pid`, `../Training_erstcommit` loeschen (Nutzer) · `../Buch/klausur_k3` committen (Nutzer) · PC: 3 Westermann-PDFs nach `../Buch` kopieren (Nutzer)
+**Damit offen:** ►► Mutationslauf 46050560232 auswerten (lief noch um 18:50 UTC): Score, Schwelle, ueberlebende Mutanten, Testvorschlaege · Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`); B3 gebaut – erster Lauf `live.yml` per workflow_dispatch und D1-Zweig messen · erste Sonnet-Etappe mit `/advisor opus` messen · Inhalt danach: AP1 komplett bis Fruehjahr 2027 · fisi 1.3.19 in web.de und gmail installieren (Nutzer; Release per `bash tools/werkzeug_release.sh`) und `tools/plugin/installiert.txt` nachziehen · Schritt 14 auf den anderen zwei PCs (27.11. kein PC verbunden – nicht pruefbar) · `../srv2.pid`, `../Training_erstcommit` loeschen falls vorhanden (27.11. kein PC verbunden – nicht pruefbar) · PC: 3 Westermann-PDFs nach `../Buch` kopieren (Nutzer)
 
 ## 4. Die harten Grenzen der Bruecke
 

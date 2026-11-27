@@ -1,0 +1,49 @@
+name: Live-Waechter
+
+# N42 B3 (27.11.2026, BUILD_LOG 316): taeglich die Live-Seite gegen main pruefen (Erreichbarkeit, Sicherheits-Koepfe,
+# Version, neue Fehlerberichte aus D1) - tools/live_waechter.py. Je Ursache EIN Issue (Label live-waechter); ein
+# offenes Issue mit gleichem Titel wird nicht erneut angelegt. Nur lesend: D1 per CLOUDFLARE_D1_LESEN (Token
+# „D1 Read“, vom Nutzer angelegt 27.11.), fehlt es, prueft der Lauf D1 nicht und sagt es im Protokoll.
+on:
+  schedule:
+    - cron: "41 5 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  live:
+    name: Live-Seite pruefen
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      issues: write   # Befunde als Issues
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Pruefen
+        env:
+          CLOUDFLARE_D1_LESEN: ${{ secrets.CLOUDFLARE_D1_LESEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: python3 tools/live_waechter.py --aus befunde.json
+      - name: Issues je Ursache
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create live-waechter --color B60205 --description "Befund des Live-Waechters" 2>/dev/null || true
+          n=$(python3 -c "import json;print(len(json.load(open('befunde.json'))))")
+          echo "Befunde: $n"
+          for i in $(seq 0 $((n - 1))); do
+            titel=$(python3 -c "import json,sys;print(json.load(open('befunde.json'))[int(sys.argv[1])]['titel'])" "$i")
+            python3 -c "import json,sys;print(json.load(open('befunde.json'))[int(sys.argv[1])]['text'])" "$i" > text.md
+            offen=$(gh issue list --label live-waechter --state open --limit 100 --json title --jq '.[].title' | grep -Fxc -- "$titel" || true)
+            if [ "$offen" = "0" ]; then
+              gh issue create --title "$titel" --label live-waechter --body-file text.md
+            else
+              echo "schon offen: $titel"
+            fi
+          done
+          [ "$n" = "0" ]

@@ -108,3 +108,17 @@ agents“, 26.11.2025) empfiehlt Ende-zu-Ende-Pruefung „as a human user would�
 ►► **Nach jedem Push, der beim Lerner ankommt (`python3 tools/ungepusht.py`), und nach jedem Release:** Live-Seite
 (`…/#<bereich>`, mit `?v=<commit>`) im eingebauten Browser oeffnen, die geaenderten Bereiche anklicken, Screenshot + `read_console_messages`
 (nur Fehler) lesen und im BUILD_LOG-Beleg nennen. Der Handy-Test bleibt beim Nutzer und wird nicht angeboten (START_PROMPT 4).
+
+### 27.11.2026 – main nur noch per PR mit Squash; `gitc.sh push` legt den PR an, `gitc.sh nachziehen` holt den Squash (BUILD_LOG 316)
+⛔ **Beleg (gemessen 27.11. abends, Cloud):** Ruleset „main“ (id 28155914, aktiv seit 27.11. 07:59) mit deletion, non_fast_forward,
+pull_request (0 Reviews) und den Pflicht-Checks „check.sh (voll)“ + „Semgrep (statische Sicherheitsanalyse)“; Repo: Auto-Merge an,
+nur Squash (Merge-Commit = HTTP 405), Zweig nach dem Merge gelöscht. `bash tools/gitc.sh push origin main` scheiterte („2 of 2 required
+status checks are expected“) und legte danach einen „PUSH OFFEN“-Commit an. Nach dem Squash von PR #2 (30f0589) trug origin/main eine
+andere SHA als der lokale main: `ungepusht.py` (`rev-list origin/main..main`) zählte alles als ungepusht, der Stand-Guard war rot.
+►► **Regel (Nutzer-Entscheid 27.11., Paket 1):** `bash tools/gitc.sh push origin main` = Stempel → HEAD auf Zweig `pr/<JJJJ-MM-TT>-<sha7>`
+→ `gh pr create` (Titel = Commit-Betreff) → `gh pr merge --auto --squash`; es wartet nicht. Ohne gh-Login (Cloud: GraphQL 403) nur den
+Zweig pushen; PR und Auto-Merge macht der Chat über die GitHub-Werkzeuge. „PUSH OFFEN“ nur noch, wenn schon der Zweig-Push scheitert.
+`bash tools/gitc.sh nachziehen` (ruft `start.sh`) setzt main auf origin/main nur bei reinem Rückstand oder gleichem Baum und sauberem
+Arbeitsbaum; sonst rc 1 mit Hinweis (bei einem Commit mit dem Baum von origin/main: `git rebase --onto origin/main <der> main`).
+`ungepusht.py` zählt nur Commits an Pfaden, die sich zwischen origin/main und main unterscheiden (Selbsttest `FAELLE_INHALT`).
+Der Hook `git_riegel.js` sperrt direktes `git push … main`. Gegenprobe: 7 Fälle mit bekannter Antwort im Wegwerf-Repo (BUILD_LOG 316).

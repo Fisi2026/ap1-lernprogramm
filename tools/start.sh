@@ -18,17 +18,11 @@ echo "== BAUM";  git status --porcelain; echo "(Ende Baum)"
 echo "== LOG";   git log --oneline -3
 bash tools/alt_klon_weiche.sh   # Umzug Schritt 6.1 (BUILD_LOG 284): alter Klon -> origin weg
 echo "== REMOTE"; bash tools/gitc.sh fetch -q origin 2>&1 | tail -2; git log --oneline -1 origin/main
-# 14.10.2026 (BUILD_LOG 176): der PC lag beim Start 9 Commits hinter origin (die Cloud-Seite hatte gepusht), und
-#   `git pull` scheiterte am fehlenden Upstream. Sauberer Baum + reiner Rueckstand -> selbst vorspulen; sonst nur melden.
-_HINTER="$(git rev-list --count HEAD..origin/main 2>/dev/null || echo 0)"
-if [ "${_HINTER:-0}" -gt 0 ]; then
-  git branch -q --set-upstream-to=origin/main main 2>/dev/null || true
-  if [ -z "$(git status --porcelain --untracked-files=no)" ] && git merge-base --is-ancestor HEAD origin/main; then
-    bash tools/gitc.sh merge -q --ff-only origin/main && echo "[start] $_HINTER Commit(s) von origin/main vorgespult -> $(git log --oneline -1 | cut -c1-80)"
-  else
-    echo "⚠️ $_HINTER Commit(s) hinter origin/main, Baum nicht sauber oder abgezweigt - NICHT vorgespult, erst klaeren"
-  fi
-fi
+# 14.10.2026 (BUILD_LOG 176): reiner Rueckstand bei sauberem Baum -> selbst vorspulen. Seit Paket 1 (27.11.2026,
+#   BUILD_LOG 316) per `gitc.sh nachziehen`: das zieht main auch nach einem SQUASH-Merge nach (gleicher Baum, andere SHA)
+#   und bricht laut ab, wenn Inhalte verschieden sind oder der Baum nicht sauber ist.
+git branch -q --set-upstream-to=origin/main main 2>/dev/null || true
+bash tools/gitc.sh nachziehen 2>&1 | sed 's/^/[start] /'
 python3 tools/ungepusht.py 2>&1 | head -1
 echo "== CI"
 # ⛔ 26.09.2026: hier stand nur `grep -i URTEIL` - ci2.sh bricht ohne gh-Anmeldung mit
