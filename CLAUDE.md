@@ -19,8 +19,9 @@ Beim Arbeiten an passenden Pfaden erinnern die pfadbezogenen Regeln in `.claude/
 
 ## Riegel (deterministisch, nicht verhandelbar)
 - Vor jedem Commit `bash check.sh` grün (nur Doku: `bash check.sh doku`); committen nur über `bash tools/gitc.sh commit -F <datei>`.
-- Push nur über `bash tools/gitc.sh push origin main` (prüft den Stempel des grünen Laufs), nie `--force`.
-  Der Hook `tools/hooks/git_riegel.js` sperrt direktes `git commit` und jeden Force-Push.
+- Push nur über `bash tools/gitc.sh push origin main` (prüft den Stempel, pusht einen PR-Zweig, legt den PR an, Auto-Merge Squash), nie `--force`.
+  main nimmt nur PRs an (Ruleset); nach dem Merge `bash tools/gitc.sh nachziehen`. Der Hook `tools/hooks/git_riegel.js` sperrt
+  direktes `git commit`, direkten Push auf main und jeden Force-Push.
 - Einen Version-Bump (Release) vorher beim Nutzer erfragen.
 - Vor jedem Commit `git log --oneline -3` lesen – ein fremder Commit heißt: ein zweiter Chat arbeitet mit.
 

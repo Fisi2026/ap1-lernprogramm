@@ -139,7 +139,7 @@ Liste der Überschriften). `regeln/*.md` werden immer ganz gelesen; welche, sagt
 ```
 
 - Committet wird auf GENAU EINER Seite – sonst laufen zwei Stände auseinander. Vor jedem Commit
-  `git fetch` + `git rev-list --count HEAD..origin/main` (0 erwartet).
+  `bash tools/gitc.sh nachziehen` (rc 0 erwartet; zieht main auch nach einem Squash-Merge nach).
 - Etwas auf dem PC messen, bevor es committet ist: Dateien als `tar --mode=u+w` nach
   `/mnt/user-data/outputs/` → `device_commit_files` nach `_to_delete/helfer/` → auf dem PC `sha1sum`,
   `tar -xf`, messen, danach `git checkout -- <dateien>` (der PC bleibt sauber, `git pull` holt den Commit).
@@ -155,9 +155,16 @@ Liste der Überschriften). `regeln/*.md` werden immer ganz gelesen; welche, sagt
 - [ ] 3. Bei neu/: cd neu && npx vite build, dann git add -A v2
 - [ ] 4. Im Hintergrund: bash check.sh   (nur *.md oder tools/plugin/ geändert: bash check.sh doku)
 - [ ] 5. Nur bei „ALLES GRÜN“: bash tools/gitc.sh commit -F _to_delete/helfer/<nachricht>.txt
-- [ ] 6. bash tools/gitc.sh push origin main
-- [ ] 7. Im Hintergrund: bash tools/ci_warte.sh  → Urteil in _to_delete/helfer/ci.urteil
-- [ ] 8. git ls-remote origin refs/heads/main = eigener Commit (Beleg ist der Ref)
+- [ ] 6. bash tools/gitc.sh push origin main   → Zweig pr/<JJJJ-MM-TT>-<sha7>, PR, Auto-Merge (Squash); wartet nicht
+         (ohne gh-Login, z. B. Cloud: nur der Zweig – PR + enable_pr_auto_merge macht der Chat über die GitHub-Werkzeuge)
+- [ ] 7. Im Hintergrund: bash tools/ci_warte.sh  → Urteil des PR-Laufs in _to_delete/helfer/ci.urteil
+- [ ] 8. Beleg: git ls-remote origin refs/heads/pr/… = eigener Commit; nach dem Merge bash tools/gitc.sh nachziehen
+
+**main nur per PR (Paket 1, Nutzer-Entscheid 27.11.2026, BUILD_LOG 316):** Ruleset „main“ verlangt PR + Checks „check.sh (voll)“
+und „Semgrep“; nur Squash. Ein direkter Push auf main scheitert („required status checks are expected“) und ist im Hook
+`git_riegel.js` gesperrt. Nach dem Squash trägt origin/main eine andere SHA mit demselben Inhalt: `gitc.sh nachziehen`
+(ruft `start.sh` selbst) setzt main nur bei gleichem Baum oder reinem Rückstand und sauberem Arbeitsbaum, sonst laut;
+`ungepusht.py` vergleicht Inhalte, nicht SHAs.
 ```
 
 **Weniger warten – PFLICHT für jedes Konto (Nutzer-Entscheide 25.11.2026, BUILD_LOG 278/279; Wortlaut `regeln/git.md`):**
@@ -179,7 +186,8 @@ Liste der Überschriften). `regeln/*.md` werden immer ganz gelesen; welche, sagt
 - Push macht der Chat selbst (Nutzer-Entscheid), nie `--force`. Einen Version-Bump vorher erfragen.
 - Die Standzeile steht schon VOR `check.sh` auf „LIVE = committet · PUSH DURCH“ (`python3 tools/standzeile.py vorab`;
   `release.sh` setzt sie so). Ein Commit, der beim Lerner ankommt (`python3 tools/ungepusht.py`), wird
-  SOFORT gepusht. Scheitert der Push, setzt `tools/gitc.sh` per Folge-Commit „PUSH OFFEN“.
+  SOFORT gepusht. Scheitert schon der Push des PR-Zweigs, setzt `tools/gitc.sh` per Folge-Commit „PUSH OFFEN“
+  (ein gepushter Zweig mit Auto-Merge ist kein Fehlschlag).
 - `ci.urteil` nennt seinen Commit – prüfen, dass es der eigene ist; im Zweifel
   `gh run list --branch main --limit 3 --json headSha,status,conclusion`. Beleg ist der Ref, nicht eine Antwort.
 
@@ -223,9 +231,9 @@ arbeitet darum über die Training Shell des PCs. Ohne PC-Bedarf stattdessen eine
 
 ```
 - [ ] 1. Laufende Etappe abschließen; BUILD_LOG-Eintrag mit „Damit offen: …“ (nächster Griff + Modell-Empfehlung)
-- [ ] 2. voller bzw. Doku-check.sh GRÜN → Commit → Push; Beleg: git ls-remote origin refs/heads/main == HEAD
+- [ ] 2. voller bzw. Doku-check.sh GRÜN → Commit → Push (PR); nach dem Merge: gitc.sh nachziehen, git ls-remote origin refs/heads/main == HEAD
 - [ ] 3. Baum sauber auf BEIDEN Seiten: Cloud `git status --porcelain` leer; PC über die Training Shell
-         `git fetch && git merge --ff-only origin/main`, dann `git status --porcelain` leer
+         `bash tools/gitc.sh nachziehen`, dann `git status --porcelain` leer
 - [ ] 4. Offene Fragen an den Nutzer? Dann KEINE Übergabe – erst klären
 - [ ] 5. create_trigger: run_once_at = jetzt + 2 min · requires_local_device: true · initiation: human_request ·
          name „Übergabe <TT.MM. HH:MM>“ · permission_mode NICHT setzen · prompt (unten)

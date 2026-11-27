@@ -4,7 +4,9 @@
 # jeder Doku-Commit kostete 3-6 Brueckenaufrufe statt 2.
 # Nutzung: bash tools/hinter.sh dc 'bash tools/doku_commit.sh _to_delete/helfer/<msg>.txt <pfad>...'
 #          dann: bash tools/warte.sh dc 45   (bis "BELEG")
-# rc: 0 ok - 1 Doku-Check rot (FEHLER-Zeilen) - 2 einstieg.py - 3 origin/main voraus - 4 Push/Ref weicht ab - 5 Aufruf
+# rc: 0 ok - 1 Doku-Check rot (FEHLER-Zeilen) - 2 einstieg.py - 3 main nicht nachziehbar - 4 Push/Ref weicht ab - 5 Aufruf
+# Seit Paket 1 (27.11.2026, BUILD_LOG 316): main nur per PR. Vorher `gitc.sh nachziehen` (statt rev-list, das nach einem
+#   Squash falsch „voraus“ meldete); Beleg ist der PR-Zweig auf dem Remote, nicht main (der Auto-Merge folgt nach der CI).
 set -u
 cd "$(git rev-parse --show-toplevel)" || exit 9
 [ $# -ge 2 ] && [ -f "$1" ] || { echo "Aufruf: doku_commit.sh <nachricht.txt> <pfad>..."; exit 5; }
@@ -13,10 +15,10 @@ log=_to_delete/helfer/doku_commit.log
 python3 tools/einstieg.py --setze >/dev/null || exit 2
 bash tools/ci_warte.sh >/dev/null 2>&1
 bash check.sh doku >"$log" 2>&1 || { grep -a '\[FEHLER\]' "$log"; exit 1; }
-git fetch -q
-[ "$(git rev-list --count HEAD..origin/main)" = 0 ] || { echo "origin/main voraus"; exit 3; }
+bash tools/gitc.sh nachziehen || { echo "main nicht nachziehbar (siehe oben)"; exit 3; }
 git add EINSTIEG.md "$@"
 bash tools/gitc.sh commit -F "$msg" 2>&1 | tail -1
-bash tools/gitc.sh push origin main 2>&1 | tail -1
-h=$(git rev-parse --short HEAD); r=$(git ls-remote origin refs/heads/main | cut -c1-7)
-echo "BELEG HEAD $h REMOTE $r"; [ "$h" = "$r" ] || exit 4
+bash tools/gitc.sh push origin main 2>&1 | tail -3
+z=$(awk '{print $1}' _to_delete/helfer/pr_zweig.txt 2>/dev/null)
+h=$(git rev-parse --short HEAD); r=$(git ls-remote origin "refs/heads/${z:-?}" | cut -c1-7)
+echo "BELEG HEAD $h ZWEIG ${z:-?} REMOTE $r"; [ -n "$z" ] && [ "$h" = "$r" ] || exit 4

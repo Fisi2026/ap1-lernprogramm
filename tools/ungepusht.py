@@ -38,6 +38,14 @@ liesse sich sonst nie eintragen, weil das Eintragen selbst ein Commit ist.
 ⚠️ Im Zweifel zaehlt ein Pfad (auch `import type`): lieber einmal zu oft „PUSH OFFEN" als eine stille
    Auslieferung. `--selbsttest` prueft Faelle mit bekannter Antwort, `--commit <sha>` einen Commit.
 
+══════════ SEIT PAKET 1 (27.11.2026, BUILD_LOG 316): INHALT STATT SHA ══════════
+⛔ main laeuft nur noch per PR mit SQUASH: origin/main traegt danach einen NEUEN Commit mit demselben Inhalt.
+   `rev-list origin/main..main` zaehlte darum ALLES Gesquashte als ungepusht (Stand-Guard rot, gemessen 27.11.).
+►► Offen ist ein Commit nur noch, wenn er einen Pfad anfasst, der sich zwischen origin/main und main
+   UNTERSCHEIDET (`git diff --no-renames --name-only origin/main main`); zaehlend nur ueber genau diese Pfade.
+   Gleicher Baum -> 0 offen. Im Zweifel zaehlt ein Commit (ein alter Commit am selben Pfad wie ein neuer).
+   `--selbsttest` prueft auch diese Faelle (FAELLE_INHALT, bekannte Antworten).
+
 Aufruf im Projektordner:
   python3 tools/ungepusht.py            # lesbar: welcher Commit zaehlt und warum
   python3 tools/ungepusht.py --pruefe   # eine Zeile fuer check.sh
@@ -158,6 +166,25 @@ FAELLE = [   # (pfad, zaehlt?) - bekannte Antworten, gemessen am 24.09.2026
 ]
 
 
+def offene(commits, dateien, diff, grund):
+    """(offen, zaehlend) - nur Commits, deren Pfade sich zwischen origin/main und main noch unterscheiden.
+    commits: Liste der SHAs aus origin/main..main · dateien: sha -> Pfade · diff: Menge der unterschiedlichen Pfade."""
+    offen = [c for c in commits if any(d in diff for d in dateien[c])]
+    zaehlend = [c for c in offen if any(grund(d) for d in dateien[c] if d in diff)]
+    return offen, zaehlend
+
+
+FAELLE_INHALT = [   # (name, commits->pfade, diff, soll offen, soll zaehlend) - Paket 1, 27.11.2026
+    ("normal: 1 Commit vor origin, v2/", {"a": ["v2/index.html"]}, {"v2/index.html"}, 1, 1),
+    ("normal: Doku-Commit", {"a": ["BUILD_LOG.md"]}, {"BUILD_LOG.md"}, 1, 0),
+    ("gesquasht, Baum gleich", {"a": ["v2/index.html"], "b": ["BUILD_LOG.md"]}, set(), 0, 0),
+    ("gesquasht + neuer Doku-Commit", {"a": ["v2/x.js"], "b": ["START_PROMPT.md"]}, {"START_PROMPT.md"}, 1, 0),
+    ("gesquasht + neuer v2-Commit", {"a": ["BUILD_LOG.md"], "b": ["v2/x.js"]}, {"v2/x.js"}, 1, 1),
+    ("alter und neuer Commit am selben Pfad (im Zweifel zaehlen)", {"a": ["v2/x.js"], "b": ["v2/x.js"]}, {"v2/x.js"}, 2, 2),
+    ("Commit mit v2/ und Doku, nur Doku noch verschieden", {"a": ["v2/x.js", "BUILD_LOG.md"]}, {"BUILD_LOG.md"}, 1, 0),
+]
+
+
 def selbsttest():
     k, fehl = Kriterium(), 0
     for pfad, soll in FAELLE:
@@ -165,7 +192,13 @@ def selbsttest():
         if ist != soll:
             fehl += 1
             print(f"FALSCH  {pfad!s:<48} soll {soll!s}, ist {ist!s}")
-    print(f"SELBSTTEST {len(FAELLE) - fehl:d}/{len(FAELLE):d} richtig · Worker-Huelle {len(k.huelle):d} Dateien ab {k.main!s}")
+    for name, dat, diff, so, sz in FAELLE_INHALT:
+        o, z = offene(list(dat), dat, diff, k.grund)
+        if (len(o), len(z)) != (so, sz):
+            fehl += 1
+            print(f"FALSCH  {name!s}: soll {so:d}/{sz:d}, ist {len(o):d}/{len(z):d}")
+    n = len(FAELLE) + len(FAELLE_INHALT)
+    print(f"SELBSTTEST {n - fehl:d}/{n:d} richtig · Worker-Huelle {len(k.huelle):d} Dateien ab {k.main!s}")
     return 1 if fehl else 0
 
 
@@ -193,19 +226,23 @@ def main():
         print("KEINREF" if modus == "--pruefe" else "Kein lokaler Ref origin/main - nicht messbar.")
         return
     k = Kriterium()
-    commits = git("rev-list", "origin/main..main").split()
-    zaehlend = [c for c in commits if any(k.grund(d) for d in dateien_von(c))]
+    alle = git("rev-list", "origin/main..main").split()
+    diff = set(git("diff", "--no-renames", "--name-only", "origin/main", "main").split())
+    dateien = {c: dateien_von(c) for c in alle}
+    commits, zaehlend = offene(alle, dateien, diff, k.grund)
     if modus == "--pruefe":
         print(f"OK {len(zaehlend):d} {len(commits):d}")
         return
     print(f"Ungepusht: {len(commits):d} Commit(s), davon {len(zaehlend):d} mit Wirkung beim Lerner")
+    if len(alle) != len(commits):
+        print(f"  ({len(alle) - len(commits):d} weitere Commit(s) nicht auf origin/main, ihr Inhalt aber schon - gesquasht; bash tools/gitc.sh nachziehen)")
     print(f"Kriterium (E44): {k.ordner!s}/, wrangler.jsonc, Migrationen, Pakete, Worker-Huelle ({len(k.huelle):d} Dateien ab {k.main!s})")
     for c in commits:
         kopf = git("log", "-1", "--format=%s", c).strip()[:60]
         print("  {!s}  {!s:<8} {!s}".format(c[:7], "ZAEHLT" if c in zaehlend else "still", kopf))
-        for d in dateien_von(c):
-            g = k.grund(d)
-            print("      {!s:<40} {!s}".format(d, ("-> kommt an: " + g) if g else "-"))
+        for d in dateien[c]:
+            g = k.grund(d) if d in diff else None
+            print("      {!s:<40} {!s}".format(d, ("-> kommt an: " + g) if g else ("-" if d in diff else "- (Inhalt schon auf origin/main)")))
 
 
 main()

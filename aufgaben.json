@@ -3,9 +3,9 @@
  "aufgaben": [
   {
    "id": "A01",
-   "titel": "►► nach der Uebernahme nach main (BUILD_LOG 314): Live-Sichtpruefung, CI-Urteil, danach `gh workflow run Mutation` (erster Volllauf)",
+   "titel": "►► Mutationslauf 46050560232 auswerten (lief noch um 18:50 UTC): Score, Schwelle, ueberlebende Mutanten, Testvorschlaege",
    "status": "offen",
-   "beleg": "BUILD_LOG 303, 311, 314"
+   "beleg": "BUILD_LOG 303, 311, 314, 315, 316 (Live-Sichtpruefung erledigt)"
   },
   {
    "id": "A02",
@@ -15,15 +15,15 @@
   },
   {
    "id": "A03",
-   "titel": "Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`; B3 Live-Waechter – Lese-Secret)",
+   "titel": "Rest N42 (B1 Probelauf, B2 Rollback/Time Travel, B4 DORA – Cloudflare/`gh`); B3 gebaut – erster Lauf `live.yml` per workflow_dispatch und D1-Zweig messen",
    "status": "offen",
-   "beleg": "BUILD_LOG 302"
+   "beleg": "BUILD_LOG 316"
   },
   {
    "id": "A04",
    "titel": "Paket 1 (Opus, PC: `gh` angemeldet): PR-Ablauf, Ruleset, Auto-Merge",
-   "status": "offen",
-   "beleg": "BUILD_LOG 301 R5/R6"
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 316"
   },
   {
    "id": "A05",
@@ -57,9 +57,9 @@
   },
   {
    "id": "A10",
-   "titel": "Release `werkzeuge-fisi1.3.18-shell1.1.2` nach der Uebernahme nach main vom PC (`bash tools/werkzeug_release.sh`), dann fisi 1.3.18 in web.de und gmail installieren (Nutzer) und `tools/plugin/installiert.txt` nachziehen",
+   "titel": "fisi 1.3.19 in web.de und gmail installieren (Nutzer; Release per `bash tools/werkzeug_release.sh`) und `tools/plugin/installiert.txt` nachziehen",
    "status": "offen",
-   "beleg": "BUILD_LOG 311"
+   "beleg": "BUILD_LOG 315, 316"
   },
   {
    "id": "A11",
@@ -75,21 +75,21 @@
   },
   {
    "id": "A12",
-   "titel": "Schritt 14 auf den anderen zwei PCs",
+   "titel": "Schritt 14 auf den anderen zwei PCs (27.11. kein PC verbunden – nicht pruefbar)",
    "status": "offen",
    "beleg": "docs/plaene/PLAN_UMZUG_V3.md"
   },
   {
    "id": "A13",
-   "titel": "`../srv2.pid`, `../Training_erstcommit` loeschen (Nutzer)",
+   "titel": "`../srv2.pid`, `../Training_erstcommit` loeschen falls vorhanden (27.11. kein PC verbunden – nicht pruefbar)",
    "status": "offen",
    "beleg": "BUILD_LOG 301 R2"
   },
   {
    "id": "A14",
    "titel": "`../Buch/klausur_k3` committen (Nutzer)",
-   "status": "offen",
-   "beleg": "BUILD_LOG 300"
+   "status": "erledigt",
+   "beleg": "BUILD_LOG 316: klausur_k3 liegt auf origin/main von ap1-buch (762b216)"
   },
   {
    "id": "A16",
