@@ -1,4 +1,4 @@
-/* Werkzeugschiene links. VIERZEHN Bereiche: die Startseite oben (seit N22), sechs im nächsten Block
+/* Werkzeugschiene links. VIERZEHN Bereiche (dreizehn ab dem Tag nach der Klausur, K3-E41): die Startseite oben (seit N22), sechs im nächsten Block
    (seit N21 mit „Tagesserie", seit N28 mit „Klausurvorbereitung"), zwei Bloecke zu je drei, dazu Einstellungen unten (nachgezaehlt 17.09.2026 am Typ `Bereich`).
    Symbole aus lucide-react — gezeichnete SVG in einheitlicher Strichstaerke, keine Emoji. */
 import {
@@ -13,9 +13,14 @@ import { cn } from "cn";
    Nicht in der Schiene: `meldungen` (über die Einstellungen) und `frage` (über eine Kennung). */
 import type { Bereich } from "@/kern/route";
 export type { Bereich };
+import { useState } from "react";
 import { KLAUSUR_SET, klausurVorbei } from "@/kern/klausur";
-/** K3-E41: beim Laden der App einmal bestimmt (Date.now() im Zeichnen ist unrein – oxlint react/purity). */
-const OHNE_KLAUSUR = klausurVorbei(KLAUSUR_SET, Date.now());
+/* K3-E41: einmal je Einhängen der Schiene bestimmt – im useState-Initialisierer, nicht im Zeichnen
+   (Date.now() dort ist unrein – oxlint react/purity) und NICHT beim Laden des Moduls: dort lief es vor
+   jeder festen Uhr der Tests, und ab dem Tag nach der Klausur wurden 36 Tests rot (BUILD_LOG 318). */
+function ohneKlausurJetzt(): boolean {
+  return klausurVorbei(KLAUSUR_SET, Date.now());
+}
 
 const BLOECKE: Array<Array<{ id: Bereich; name: string; Symbol: typeof BookOpenCheck }>> = [
   [
@@ -82,6 +87,7 @@ export function Schiene({
   aktiv: Bereich;
   aufBereich: (b: Bereich) => void;
 }) {
+  const [ohneKlausur] = useState(ohneKlausurJetzt);
   return (
     <nav
       aria-label="Bereiche"
@@ -91,7 +97,7 @@ export function Schiene({
         A1
       </div>
       {/* K3-E41: nach der Klausur fehlt der Bereich Klausurvorbereitung (die Fragen bleiben im Pool). */}
-      {BLOECKE.map((b) => (OHNE_KLAUSUR ? b.filter((k) => k.id !== "unterricht") : b)).map((block, i) => (
+      {BLOECKE.map((b) => (ohneKlausur ? b.filter((k) => k.id !== "unterricht") : b)).map((block, i) => (
         // oxlint-disable-next-line react/no-array-index-key -- feste Bloecke der Schiene
         <div key={i} className="flex flex-col items-center gap-0.5">
           {i > 0 && <div className="my-1.5 h-px w-6 bg-sidebar-border" />}

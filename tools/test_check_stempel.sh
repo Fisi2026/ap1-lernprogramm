@@ -27,6 +27,12 @@ echo c > neu.txt; bash tools/check_stempel.sh schreibe voll >/dev/null
 erwarte 1 "Lauf ueber Ungecommittetes: Push verweigert"
 bash tools/check_stempel.sh schreibe schnell >/dev/null; git add -A; git commit -qm drei
 erwarte 0 "schnell stempelt nicht, alter Stempel gilt fuer den neuen Baum: Gegenprobe gruen"
+# BUILD_LOG 318: Ausfuehrungsrecht im Commit, Dateisystem ohne (Git fuer Windows, core.filemode=false)
+printf '#!/bin/sh\n' > ausf.sh; git add ausf.sh; git update-index --chmod=+x ausf.sh; git commit -qm vier
+git config core.filemode false; chmod -x ausf.sh 2>/dev/null
+bash tools/check_stempel.sh schreibe voll >/dev/null
+erwarte 0 "Modus 100755 im Commit bei core.filemode=false: Stempel passt zum Commit"
+git config core.filemode true
 if PUSH_OHNE_CHECK=1 bash tools/check_stempel.sh pruefe >/dev/null 2>&1; then echo "[ok] Notausgang des Nutzers wirkt"
 else echo "[FEHLER] Notausgang"; F=$((F+1)); fi
 if [ "$F" -eq 0 ]; then echo "ALLE FAELLE OK"; else echo "$F FEHLER"; fi
