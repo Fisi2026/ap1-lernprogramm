@@ -16,6 +16,10 @@ STEMPEL="_to_delete/helfer/check_stempel.txt"
 
 baum() {
   local idx; idx="$(mktemp)"; rm -f "$idx"
+  # BUILD_LOG 318: erst HEAD einlesen - ein LEERER Index verlor unter Git fuer Windows (core.filemode=false)
+  # die Ausfuehrungsrechte (100755 -> 100644), der Stempel passte nie zum Commit. Mit HEAD als Ausgang
+  # behaelt git den Modus bekannter Dateien. Ohne HEAD (leeres Repo) bleibt der leere Index.
+  GIT_INDEX_FILE="$idx" git read-tree HEAD 2>/dev/null || rm -f "$idx"
   GIT_INDEX_FILE="$idx" git add -A . 2>/dev/null
   GIT_INDEX_FILE="$idx" git write-tree
   local rc=$?; rm -f "$idx"; return $rc

@@ -1,7 +1,8 @@
 // @vitest-environment jsdom
 /* Mutationstest huelle: Kopf (Messwerte, Warnfarbe, Trenner, Fehler-Deck) und Schiene (aktiver Bereich,
    Trenner zwischen den Bloecken). Geprueft wird, was man sieht und was beim Klick hinausgeht. */
-import { describe, it, expect, beforeEach, vi } from "vitest"
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest"
+import { KLAUSUR_SET } from "@/kern/klausur"
 import { render, screen, cleanup, within } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { Kopf } from "./Kopf"
@@ -10,7 +11,14 @@ import { TooltipProvider } from "@/components/ui/tooltip"
 
 const Schiene = (p: React.ComponentProps<typeof SchieneRoh>) => <TooltipProvider><SchieneRoh {...p} /></TooltipProvider>
 
+/* Klausurtag aus dem Set selbst – ein neues Set mit anderem Datum bricht den Test nicht. */
+const [J, M, T] = KLAUSUR_SET.datum.split("-").map(Number)
+const VORHER = new Date(J, M - 1, T, 12, 0).getTime()
+const DANACH = new Date(J, M - 1, T + 1, 0, 0).getTime()
+function uhr(t: number) { vi.useFakeTimers({ toFake: ["Date"] }); vi.setSystemTime(t) }
+
 beforeEach(() => { cleanup() })
+afterEach(() => { vi.useRealTimers() })
 
 describe("Kopf", () => {
   const mw = [
@@ -59,6 +67,7 @@ describe("Kopf", () => {
 
 describe("Schiene", () => {
   it("nur der aktive Bereich traegt aria-current und die Hervorhebung", () => {
+    uhr(VORHER)
     render(<Schiene aktiv="sim" aufBereich={() => {}} />)
     const nav = screen.getByRole("navigation", { name: "Bereiche" })
     const knoepfe = within(nav).getAllByRole("button")
@@ -70,6 +79,19 @@ describe("Schiene", () => {
       expect(hervorgehoben).toBe(b === aktive[0])
       expect(b.classList.contains("text-sidebar-foreground")).toBe(b === aktive[0])
     }
+  })
+  /* K3-E41 / BUILD_LOG 318: die Uhr steht fest – sonst haengt die Knopfzahl am Tag des Testlaufs. */
+  it("am Klausurtag noch mit Klausurvorbereitung, ab 0 Uhr danach ohne (13 Knoepfe)", () => {
+    uhr(VORHER)
+    const { unmount } = render(<Schiene aktiv="start" aufBereich={() => {}} />)
+    expect(screen.getByRole("button", { name: "Klausurvorbereitung" })).toBeTruthy()
+    unmount()
+    uhr(DANACH)
+    render(<Schiene aktiv="start" aufBereich={() => {}} />)
+    const knoepfe = within(screen.getByRole("navigation", { name: "Bereiche" })).getAllByRole("button")
+    expect(knoepfe).toHaveLength(13)
+    expect(screen.queryByRole("button", { name: "Klausurvorbereitung" })).toBeNull()
+    expect(screen.getByRole("button", { name: "Üben" })).toBeTruthy()
   })
   it("Einstellungen unten ist aktivierbar", () => {
     render(<Schiene aktiv="einst" aufBereich={() => {}} />)
